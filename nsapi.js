@@ -1,23 +1,23 @@
 /**
-* @projectDescription 	SuiteScript JavaScript library summary.
-*
-* Note that there are some restrictions on API usage. Also note that the only 2 objects that can be
-* contructed are nlobjSearchFilter and nlobjSearchColumn. All other objects can only be created via
-* top-level function or method calls.
-*
-* The @governance tag refers to the usage governance for an API call
-* The @restricted tag refers to any known restrictions with a particular API call
-*
-* All Object arguments are Javascript Objects used as hash tables for specifying key-value pairs
-*
-* @since 	2005.0 Support scripting of current record in Client SuiteScript
-* @version	2007.0 Support scripting of records in user events, portlets, and scheduled scripts
-* @version	2008.1 Support scripting of web requests (Suitelets) and user interfaces (UI Object API)
-* @version	2009.1 Support scripting of file objects
-* @version	2009.2 Support scripting of setup records and assistant (multi-step) pages
-* @version	2009.2 converted JS template to use eclipse code completion friendly format
-* @version	2010.1 Suppport dynamic scripting
-*/
+ * @projectDescription 	SuiteScript JavaScript library summary.
+ *
+ * Note that there are some restrictions on API usage. Also note that the only 2 objects that can be
+ * contructed are nlobjSearchFilter and nlobjSearchColumn. All other objects can only be created via
+ * top-level function or method calls.
+ *
+ * The @governance tag refers to the usage governance for an API call
+ * The @restricted tag refers to any known restrictions with a particular API call
+ *
+ * All Object arguments are Javascript Objects used as hash tables for specifying key-value pairs
+ *
+ * @since 	2005.0 Support scripting of current record in Client SuiteScript
+ * @version	2007.0 Support scripting of records in user events, portlets, and scheduled scripts
+ * @version	2008.1 Support scripting of web requests (Suitelets) and user interfaces (UI Object API)
+ * @version	2009.1 Support scripting of file objects
+ * @version	2009.2 Support scripting of setup records and assistant (multi-step) pages
+ * @version	2009.2 converted JS template to use eclipse code completion friendly format
+ * @version	2010.1 Suppport dynamic scripting
+ */
 
 /**
  * Return a new record using values from an existing record.
@@ -169,6 +169,19 @@ function nlapiSearchDuplicate(type, fields, id) { ; }
  * @since	2007.0
  */
 function nlapiTransformRecord(type, id, transformType, transformValues) { ; }
+
+/**
+ * void a transaction based on type and id .
+ * @governance 10 units for transactions
+ *
+ * @param {string} 	type The transaction type name.
+ * @param {string} 	id The internal ID for the record.
+ * @return {string}  if accounting preference is reversing journal, then it is new journal id,
+ *                   otherwise, it is the input record id
+ *
+ * @since	2014.1
+ */
+function nlapiVoidTransaction (type, id) { }
 
 /**
  * Fetch the value of one or more fields on a record. This API uses search to look up the fields and is much
@@ -364,11 +377,14 @@ function nlapiGetRecordId() { ; }
  * @param {string, string[]} bcc blind copy email address(es)
  * @param {Object} 		records Object of base types -> internal IDs used to associate email to records. i.e. {entity: 100, record: 23, recordtype: customrecord_surveys}
  * @param {nlobjFile[]} files array of nlobjFile objects (files) to include as attachments
+ * @param {boolean}     notifySenderOnBounce controls whether or not the sender will receive email notification of bounced emails (defaults to false)
+ * @param {boolean}     internalOnly controls or not the resultingMmessage record will be visible to non-employees on the Communication tab of attached records (defaults to false)
+ * @param {string} 		replyTo email reply-to address
  * @return {void}
  *
  * @since	2007.0
  */
-function nlapiSendEmail(from, to, subject, body, cc, bcc, records, files) { ; }
+function nlapiSendEmail(from, to, subject, body, cc, bcc, records, files, notifySenderOnBounce, internalOnly, replyTo) { ; }
 
 /**
  * Sends a single on-demand campaign email to a specified recipient and returns a campaign response ID to track the email.
@@ -629,6 +645,31 @@ function nlapiGetLineItemMatrixValue(type, fldnam, linenum, column) { ; }
 function nlapiGetLineItemValue(type,fldnam,linenum) { ; }
 
 /**
+ * Return the value of a sublist field on the current record on a page.
+ * @restriction supported in client and user event scripts only.
+ * @param {string} 	type sublist name
+ * @param {string} 	fldnam sublist field name
+ * @param {int} 	linenum line number (1-based)
+ * @return {string}
+ *
+ * @since 2013.2
+ */
+function nlapiGetLineItemDateTimeValue(type,fldnam,linenum) { ; }
+
+/**
+ * Return the value of a sublist field on the current record on a page.
+ * @restriction supported in client and user event scripts only.
+ * @param {string} 	type sublist name
+ * @param {string} 	fldnam sublist field name
+ * @param {int} 	linenum line number (1-based)
+ * @param {string} 	timezone value
+ * @return {string}
+ *
+ * @since 2013.2
+ */
+function nlapiGetLineItemDateTimeValue(type,fldnam,linenum,timezone) { ; }
+
+/**
  * Set the value of a sublist field on the current record on a page.
  * @restriction supported in client and user event scripts only.
  * @param {string} 	type sublist name
@@ -640,6 +681,33 @@ function nlapiGetLineItemValue(type,fldnam,linenum) { ; }
  * @since 2005.0
  */
 function nlapiSetLineItemValue(type,fldnam,linenum,value) { ; }
+
+/**
+ * Set the value of a sublist field on the current record on a page.
+ * @restriction supported in client and user event scripts only.
+ * @param {string} 	type sublist name
+ * @param {string} 	fldnam sublist field name
+ * @param {int} 	linenum line number (1-based)
+ * @param {string} datetime value
+ * @retun {void}
+ *
+ * @since 2013.2
+ */
+function nlapiSetLineItemDateTimeValue(type,fldnam,linenum,value) { ; }
+
+/**
+ * Set the value of a sublist field on the current record on a page.
+ * @restriction supported in client and user event scripts only.
+ * @param {string} 	type sublist name
+ * @param {string} 	fldnam sublist field name
+ * @param {int} 	linenum line number (1-based)
+ * @param {string} datetime value
+ * @param {string} timezone value
+ * @retun {void}
+ *
+ * @since 2013.2
+ */
+function nlapiSetLineItemDateTimeValue(type,fldnam,linenum,value,timezone) { ; }
 
 /**
  * Return the label of a select field's current selection for a particular line.
@@ -737,6 +805,33 @@ function nlapiRemoveLineItem(type, line) { ; }
 function nlapiSetCurrentLineItemValue(type,fldnam,value,firefieldchanged,synchronous) { ; }
 
 /**
+ * Set the value of a field on the currently selected line.
+ * @restriction synchronous arg is only supported in client SuiteScript
+ *
+ * @param {string} type sublist name
+ * @param {string} fldnam sublist field name
+ * @param {string} value field value
+ * @return {void}
+ *
+ * @since 2013.2
+ */
+function nlapiSetCurrentLineItemDateTimeValue(type,fldnam,value) { ; }
+
+/**
+ * Set the value of a field on the currently selected line.
+ * @restriction synchronous arg is only supported in client SuiteScript
+ *
+ * @param {string} type sublist name
+ * @param {string} fldnam sublist field name
+ * @param {string} value field value
+ * @param {string} timezone value
+ * @return {void}
+ *
+ * @since 2013.2
+ */
+function nlapiSetCurrentLineItemDateTimeValue(type,fldnam,value,timezone) { ; }
+
+/**
  * Set the value of a field on the currently selected line using it's label.
  * @restriction synchronous arg is only supported in client SuiteScript
  *
@@ -761,6 +856,29 @@ function nlapiSetCurrentLineItemText(type,fldnam,txt,firefieldchanged,synchronou
  * @since 2005.0
  */
 function nlapiGetCurrentLineItemValue(type,fldnam) { ; }
+
+/**
+ * Return the value of a field on the currently selected line.
+ *
+ * @param {string} type sublist name
+ * @param {string} fldnam sublist field name
+ * @return {string}
+ *
+ * @since 2013.2
+ */
+function nlapiGetCurrentLineItemDateTimeValue(type,fldnam) { ; }
+
+/**
+ * Return the value of a field on the currently selected line.
+ *
+ * @param {string} type sublist name
+ * @param {string} fldnam sublist field name
+ * @param {string} timezone value
+ * @return {string}
+ *
+ * @since 2013.2
+ */
+function nlapiGetCurrentLineItemDateTimeValue(type,fldnam, timezone) { ; }
 
 /**
  * Return the label of a select field's current selection on the currently selected line.
@@ -1135,7 +1253,19 @@ function nlapiXMLToPDF(input) { ; }
  * @return {nlobjTemplateRenderer}
  *
  */
-function nlapiCreateTemplateRenderer(type, engineType) { ; }
+function nlapiCreateTemplateRenderer() { ; }
+
+/**
+ * Create an email merger used to assemble subject and body text of an email from a given
+ * FreeMarker template and a set of associated records.
+ * @restriction Server SuiteScript only
+ *
+ * @param {int} templateId	internal ID of the template
+ * @return {nlobjEmailMerger}
+ *
+ * @since 2015.1
+ */
+function nlapiCreateEmailMerger(id) { ; }
 
 /**
  * Create an entry in the script execution log (note that execution log entries are automatically purged after 30 days).
@@ -1296,6 +1426,19 @@ function nlapiStringToXML(str) { ; }
 function nlapiXMLToString(xml) { ; }
 
 /**
+ * Validate that a given XML document conforms to a given XML schema. XML Schema Definition (XSD) is the expected schema format.
+ *
+ * @param {document} xmlDocument xml to validate
+ * @param {document} schemaDocument schema to enforce
+ * @param {string} schemaFolderId if your schema utilizes <import> or <include> tags which refer to sub-schemas by file name (as opposed to URL),
+ *                 provide the Internal Id of File Cabinet folder containing these sub-schemas as the schemaFolderId argument
+ * @throws {nlobjError} error containsing validation failure message(s) - limited to first 10
+ *
+ * @since 2014.1
+ */
+function nlapiValidateXML(xmlDocument, schemaDocument, schemaFolderId) { ; }
+
+/**
  * select a value from an XML node using XPath. Supports custom namespaces (nodes in default namespace can be referenced using "nlapi" as the prefix)
  *
  * @param {node} node node being queried
@@ -1366,6 +1509,19 @@ function nlapiExchangeRate(fromCurrency, toCurrency, date) { ; }
 function nlapiInitiateWorkflow(recordtype, id, workflowid) { ; }
 
 /**
+ * Initiates a workflow on-demand and returns the workflow instance ID for the workflow-record combination.
+ * @governance 20 units
+ *
+ * @param {string} recordtype record type ID of the workflow base record
+ * @param {string, int} id internal ID of the base record
+ * @param {string, int} workflowid internal ID or script ID for the workflow definition
+ * @return {string}
+ *
+ * @since 2014.2
+ */
+function nlapiInitiateWorkflowAsync(recordType, id, workflowId, parameters){;}
+
+/**
  * Triggers a workflow on a record.
  * @governance 20 units
  *
@@ -1373,11 +1529,12 @@ function nlapiInitiateWorkflow(recordtype, id, workflowid) { ; }
  * @param {int} id internal ID of the base record
  * @param {string, int} workflowid internal ID or script ID for the workflow definition
  * @param {string, int} actionid internal ID or script ID of the action script
+ * @param {string, int} stateid internal ID or script ID of the state contains the referenced add button action
  * @return {int}
  *
  * @since 2010.1
  */
-function nlapiTriggerWorkflow(recordtype, id, workflowid, actionid) { ; }
+function nlapiTriggerWorkflow(recordtype, id, workflowid, actionid, stateid) { ; }
 
 /**
  * Create a subrecord on a sublist field on the current record on a page.
@@ -1436,6 +1593,16 @@ function nlapiViewCurrentLineItemSubrecord(type,fldnam) { ; }
  */
 function nlapiViewLineItemSubrecord(type,fldnam,linenum) { ; }
 
+
+/**
+ * get a cache object.
+ * @param {string} name of the cache
+ * @return {nlobjCache}
+ *
+ * @since 2013.2
+ */
+function nlapiGetCache(name){;}
+
 /**
  * create a subrecord on body field on the current record on a page.
  * @restriction supported in client and user event scripts only.
@@ -1476,7 +1643,7 @@ function removeSubrecord(fldnam) { ; }
  */
 function viewSubrecord(fldnam) { ; }
 
-function nlobjSubrecord() { ; }
+
 /**
  * Commit the subrecord after you finish modifying it.
  *
@@ -1791,6 +1958,37 @@ nlobjRecord.prototype.getAllLineItemFields = function( group ) { ; }
 nlobjRecord.prototype.setLineItemValue = function( group, name, line, value ) { ; }
 
 /**
+ * Set the value of a sublist field.
+ *
+ * @param {string} 	group sublist name
+ * @param {string} 	name sublist field name
+ * @param {int} 	line line number (1-based)
+ * @param {string} 	datetime value
+ *
+ * @method
+ * @memberOf nlobjRecord
+ *
+ * @since 2013.2
+ */
+nlobjRecord.prototype.setLineItemDateTimeValue = function( group, name, line, value ) { ; }
+
+/**
+ * Set the value of a sublist field.
+ *
+ * @param {string} 	group sublist name
+ * @param {string} 	name sublist field name
+ * @param {int} 	line line number (1-based)
+ * @param {string} 	datetime value
+ * @param {string} 	timezone value
+ *
+ * @method
+ * @memberOf nlobjRecord
+ *
+ * @since 2013.2
+ */
+nlobjRecord.prototype.setLineItemDateTimeValue = function( group, name, line, value, timezone ) { ; }
+
+/**
  * Return the value of a sublist field.
  *
  * @param {string} 	group sublist name
@@ -1803,6 +2001,35 @@ nlobjRecord.prototype.setLineItemValue = function( group, name, line, value ) { 
  * @since 2008.1
  */
 nlobjRecord.prototype.getLineItemValue = function( group, name, line ) { ; }
+
+/**
+ * Return the value of a sublist field.
+ *
+ * @param {string} 	group sublist name
+ * @param {string} 	name sublist field name
+ * @param {int} 	line line number (1-based)
+ *
+ * @method
+ * @memberOf nlobjRecord
+ *
+ * @since 2013.2
+ */
+nlobjRecord.prototype.getLineItemDateTimeValue = function( group, name, line ) { ; }
+
+/**
+ * Return the value of a sublist field.
+ *
+ * @param {string} 	group sublist name
+ * @param {string} 	name sublist field name
+ * @param {int} 	line line number (1-based)
+ * @param {string} 	timezone value
+ *
+ * @method
+ * @memberOf nlobjRecord
+ *
+ * @since 2013.2
+ */
+nlobjRecord.prototype.getLineItemDateTimeValue = function( group, name, line, timezone ) { ; }
 
 /**
  * Return the text value of a sublist field.
@@ -1834,6 +2061,35 @@ nlobjRecord.prototype.getLineItemText = function( group, name, line ) { ; }
 nlobjRecord.prototype.setCurrentLineItemValue = function( group, name, value ) { ; }
 
 /**
+ * Set the current value of a sublist field.
+ * @param {string} 	group sublist name
+ * @param {string} 	name sublist field name
+ * @param {string} 	value sublist field value
+ * @return {void}
+ *
+ * @method
+ * @memberOf nlobjRecord
+ *
+ * @since 2013.2
+ */
+nlobjRecord.prototype.setCurrentLineItemDateTimeValue = function( group, name, value ) { ; }
+
+/**
+ * Set the current value of a sublist field.
+ * @param {string} 	group sublist name
+ * @param {string} 	name sublist field name
+ * @param {string} 	value sublist field value
+ * @param {string} 	timezone value
+ * @return {void}
+ *
+ * @method
+ * @memberOf nlobjRecord
+ *
+ * @since 2013.2
+ */
+nlobjRecord.prototype.setCurrentLineItemDateTimeValue = function( group, name, value,timezone ) { ; }
+
+/**
  * Return the current value of a sublist field.
  *
  * @param {string} 	group sublist name
@@ -1846,6 +2102,35 @@ nlobjRecord.prototype.setCurrentLineItemValue = function( group, name, value ) {
  * @since 2009.2
  */
 nlobjRecord.prototype.getCurrentLineItemValue = function( group, name ) { ; }
+
+/**
+ * Return the current value of a sublist field.
+ *
+ * @param {string} 	group sublist name
+ * @param {string} 	name sublist field name
+ * @return {string}
+ *
+ * @method
+ * @memberOf nlobjRecord
+ *
+ * @since 2013.2
+ */
+nlobjRecord.prototype.getCurrentLineItemDateTimeValue = function( group, name ) { ; }
+
+/**
+ * Return the current value of a sublist field.
+ *
+ * @param {string} 	group sublist name
+ * @param {string} 	name sublist field name
+ * @param {string} 	timezone value
+ * @return {string}
+ *
+ * @method
+ * @memberOf nlobjRecord
+ *
+ * @since 2013.2
+ */
+nlobjRecord.prototype.getCurrentLineItemDateTimeValue = function( group, name, timezone ) { ; }
 
 /**
  * Return the current display value of a sublist field.
@@ -2014,6 +2299,56 @@ nlobjRecord.prototype.selectLineItem = function( group, line ) { ; }
  * @since 2009.2
  */
 nlobjRecord.prototype.commitLineItem = function( group ) { ; }
+
+/**
+ * set the value of a field.
+ *
+ * @param {string} name field name
+ * @param {string} value field value
+ * @param {string} timezone Olson value
+ * @return {void}
+ *
+ * @method
+ * @memberOf nlobjRecord
+ *
+ * @since 20013.2
+ */
+nlobjRecord.prototype.setDateTimeValue = function (name, value, timezone) { ; }
+
+/**
+ * set the value of a field.
+ *
+ * @param {string} name field name
+ * @param {string} value field value
+ * @return {void}
+ *
+ * @method
+ * @memberOf nlobjRecord
+ *
+ * @since 20013.2
+ */
+nlobjRecord.prototype.setDateTimeValue = function (name, value) { ; }
+
+/**
+ * Return the value of a field on the current record on a page.
+ * @restriction supported in client and user event scripts only.
+ * @param {string} fldnam the field name
+ * @return {string}
+ *
+ * @since	2013.2
+ */
+nlobjRecord.prototype.getDateTimeValue = function (fldnam) { ; }
+
+/**
+ * Return the value of a field on the current record on a page.
+ * @restriction supported in client and user event scripts only.
+ * @param {string} fldnam the field name
+ * @param {string} timezone Olson value
+ * @return {string}
+ *
+ * @since	2013.2
+ */
+nlobjRecord.prototype.getDateTimeValue = function (fldnam, timezone) { ; }
 
 /**
  * Return a new instance of nlobjConfiguration..
@@ -2906,6 +3241,18 @@ nlobjContext.prototype.setSetting = function( type, name, value ) { ; }
 nlobjContext.prototype.getColorPreferences = function() { ; }
 
 /**
+ * return the runtime version of SuiteScript, could be 1.0 or 2.0
+ * @return {Object}
+ *
+ * @method
+ * @memberOf nlobjContext
+ *
+ * @since 2014.1
+ */
+nlobjContext.prototype.getRuntimeVersion = function() { ; }
+
+
+/**
  * Return a new instance of nlobjError used system or user-defined error object.
  *
  * @classDescription Encapsulation of errors thrown during script execution.
@@ -3070,6 +3417,7 @@ nlobjServerResponse.prototype.getBody = function( ) { ; }
  */
 nlobjServerResponse.prototype.getError = function( ) { ; }
 
+
 function nlobjTemplateRenderer() { ; }
 
 /**
@@ -3114,7 +3462,76 @@ nlobjTemplateRenderer.prototype.setTemplate = function( xml ) { ; }
  *
  * @method
  * @memberOf nlobjTemplateRenderer
+ */
 nlobjTemplateRenderer.prototype.renderToResponse = function(nlobjResponse) { ; }
+
+/**
+ *
+ */
+function nlobjEmailMerger() { ; }
+
+ /**
+ * associate an entity to the merger
+ * @param  {string} entityType type of the entity (customer/contact/partner/vendor/employee)
+ * @param  {int} entityId ID of the entity to be associated with the merger
+ * @return {void}
+ *
+ * @method
+ * @memberOf nlobjEmailMerger
+ */
+nlobjEmailMerger.prototype.setEntity = function( entityType, entityId ) { ; }
+
+/**
+ * associate a second entity (recipient) to the merger
+ * @param  {string} recipientType type of the entity (customer/contact/partner/vendor/employee)
+ * @param  {int} recipientId ID of the entity to be associated with the merger
+ * @return {void}
+ *
+ * @method
+ * @memberOf nlobjEmailMerger
+ */
+nlobjEmailMerger.prototype.setRecipient = function( recipientType, recipientId ) { ; }
+
+/**
+ * associate a support case to the merger
+ * @param  {int} caseId ID of the support case to be associated with the merger
+ * @return {void}
+ *
+ * @method
+ * @memberOf nlobjEmailMerger
+ */
+nlobjEmailMerger.prototype.setSupportCase = function( caseId ) { ; }
+
+/**
+ * associate a transaction to the merger
+ * @param  {int} transactionId ID of the transaction to be associated with the merger
+ * @return {void}
+ *
+ * @method
+ * @memberOf nlobjEmailMerger
+ */
+nlobjEmailMerger.prototype.setTransaction = function( transactionId ) { ; }
+
+/**
+ * associate a custom record to the merger
+ * @param  {string} recordType type of the custom record
+ * @param  {int} recordId ID of the record to be associated with the merger
+ * @return {void}
+ *
+ * @method
+ * @memberOf nlobjEmailMerger
+ */
+nlobjEmailMerger.prototype.setCustomRecord = function( recordType, recordId ) { ; }
+
+/**
+ * perform the merge and return an object containing email subject and body
+ * @governance 20 units
+ * @return {object} pure javascript object with two properties: subject and body
+ *
+ * @method
+ * @memberOf nlobjEmailMerger
+ */
+nlobjEmailMerger.prototype.merge = function( ) { ; }
 
 /**
  * Return a new instance of nlobjResponse used for scripting web responses in Suitelets
@@ -4975,14 +5392,17 @@ nlobjSelectOption.prototype.getId = function( ) { ; }
 nlobjSelectOption.prototype.getText = function( ) { ; }
 
 /**
- * @param {string} currentPassword current Password.
  * @return nlobjLogin
  *
  * @since 2012.2
  */
 function nlapiGetLogin( )   { ; }
 
+ /**
+  *
+  */
 function nlobjLogin() { ; }
+
 /**
  * @param {string} newEmail new Email
  * @param {boolean} justThisAccount indicates whether to apply email change only to roles within this account or apply email change to its all NetSuite accounts and roles
@@ -4990,7 +5410,6 @@ function nlobjLogin() { ; }
  *
  * @since 2012.2
  */
-
 nlobjLogin.prototype.changeEmail = function (currentPassword, newEmail, justThisAccount)  { ; }
 
 /**
@@ -5001,3 +5420,201 @@ nlobjLogin.prototype.changeEmail = function (currentPassword, newEmail, justThis
  */
 nlobjLogin.prototype.changePassword = function (currentPassword, newPassword) { ; }
 
+
+/**
+ * @param {string} Job Type
+ * @return {nlobjJobManager}
+ *
+ * @since 2013.1
+ */
+function nlapiGetJobManager( jobType )   { ; }
+
+function nlobjJobManager() { ; }
+
+/**
+ * @return {nlobjJobRequest}
+ *
+ * @since 2013.1
+ */
+nlobjJobManager.prototype.createJobRequest = function ()  { ; }
+
+/**
+ * @param {nlobjJobRequest} Job request
+ * @return {String} Job Id
+ *
+ * @since 2013.1
+ */
+nlobjJobManager.prototype.submit = function (request)  { ; }
+
+/**
+ * @param {String} Job Id
+ * @return {nlobjFuture}
+ *
+ * @since 2013.1
+ */
+nlobjJobManager.prototype.getFuture = function (id)  { ; }
+
+function nlobjDuplicateJobRequest() { ; }
+
+/**
+ * Constant for Merge Duplicate recrods Entity Types
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.ENTITY_CUSTOMER = 'CUSTOMER';
+nlobjDuplicateJobRequest.prototype.ENTITY_CONTACT = 'CONTACT';
+nlobjDuplicateJobRequest.prototype.ENTITY_LEAD = 'LEAD';
+nlobjDuplicateJobRequest.prototype.ENTITY_PROSPECT = 'PROSPECT';
+nlobjDuplicateJobRequest.prototype.ENTITY_PARTNER = 'PARTNER';
+nlobjDuplicateJobRequest.prototype.ENTITY_VENDOR = 'VENDOR';
+
+/**
+ * Constant for Merge Duplicate recrods Merge MASTERSELECTIONMODE
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.MASTERSELECTIONMODE_CREATED_EARLIEST = 'CREATED_EARLIEST';
+nlobjDuplicateJobRequest.prototype.MASTERSELECTIONMODE_MOST_RECENT_ACTIVITY = 'MOST_RECENT_ACTIVITY';
+nlobjDuplicateJobRequest.prototype.MASTERSELECTIONMODE_MOST_POPULATED_FIELDS = 'MOST_POPULATED_FIELDS';
+nlobjDuplicateJobRequest.prototype.MASTERSELECTIONMODE_SELECT_BY_ID = 'SELECT_BY_ID';
+
+/**
+ * Constant for Merge Duplicate recrods Merge operation
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.OPERATION_MERGE = 'MERGE';
+nlobjDuplicateJobRequest.prototype.OPERATION_DELETE = 'DELETE';
+nlobjDuplicateJobRequest.prototype.OPERATION_MAKE_MASTER_PARENT = 'MAKE_MASTER_PARENT';
+nlobjDuplicateJobRequest.prototype.OPERATION_MARK_AS_NOT_DUPES = 'MARK_AS_NOT_DUPES';
+/**
+ * @param {String} Entity Type
+ * @return {void}
+ *
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.setEntityType = function( entityType ) { ; }
+
+/**
+ * @param {String} Master record ID
+ * @return {void}
+ *
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.setMasterId = function( masterID ) { ; }
+
+/**
+ * @param {String} Criteria
+ * @return {void}
+ *
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.setMasterSelectionMode = function( masterSelectionMode ) { ; }
+
+/**
+ * @param {String} Array of duplicate records IDs
+ * @return {void}
+ *
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.setRecords = function( dupeRecords ) { ; }
+
+/**
+ * @param {String} Operation
+ * @return {void}
+ *
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.setOperation = function( operation ) { ; }
+
+/**
+ * @return Entity Type
+ *
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.getEntityType = function( ) { ; }
+
+/**
+ * @return Master record ID
+ *
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.getMasterId = function( ) { ; }
+
+/**
+ * @return Master Selection Mode
+ *
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.getMasterSelectionMode = function( ) { ; }
+
+/**
+ * @return Array of duplicate records IDs
+ *
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.getRecords = function( ) { ; }
+
+/**
+ * @return Operation
+ *
+ * @since 2013.1
+ */
+nlobjDuplicateJobRequest.prototype.getOperation = function( ) { ; }
+
+function nlobjFuture() { ; }
+
+/**
+ * @return {boolean} status
+ *
+ * @since 2013.1
+ */
+nlobjFuture.prototype.isDone = function( ) { ; }
+
+/**
+ * @return {String} Job ID
+ *
+ * @since 2013.1
+ */
+nlobjFuture.prototype.getId = function( ) { ; }
+
+/**
+ * @return {boolean} cancelled or not
+ *
+ * @since 2013.1
+ */
+nlobjFuture.prototype.cancel = function( ) { ; }
+
+/**
+ * @return {boolean} is cancelled or not
+ *
+ * @since 2013.1
+ */
+nlobjFuture.prototype.isCancelled = function( ) { ; }
+
+function nlobjCache() { ; }
+
+/**
+ * @param {string} key
+ * @param {string} value
+ * @param {int} ttl, time to live in seconds.
+ * @return {Object} status.
+ *
+ * @since 2013.2
+ */
+nlobjCache.prototype.put = function (key, value, ttl) {;}
+
+
+/**
+ * @param {string} key
+ * @return {String}  value associate with that key.
+ *
+ * @since 2013.2
+ */
+nlobjCache.prototype.get = function (key) {;}
+
+
+/**
+ * @param {string} key
+ * @return {Object} status.
+ *
+ * @since 2013.2
+ */
+nlobjCache.prototype.remove = function (key) {;}
