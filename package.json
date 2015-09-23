@@ -1,6 +1,6 @@
 {
   "name": "nsmockup",
-  "version": "0.1.0",
+  "version": "0.1.0-pre",
   "description": "Netsuite API Mockup",
   "main": "nsapi.js",
   "scripts": {
@@ -22,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/suiteplus/nsmockup/issues"
   },
-  "homepage": "https://github.com/suiteplus/nsmockup#readme"
+  "homepage": "https://github.com/suiteplus/nsmockup#readme",
+  "engines": {
+    "node": "4.x.x",
+    "npm": "2.10.x"
+  },
+  "dependencies": {
+    "mongodb": "^2.0.43"
+  }
 }
