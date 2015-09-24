@@ -1643,6 +1643,7 @@ function removeSubrecord(fldnam) { ; }
  */
 function viewSubrecord(fldnam) { ; }
 
+function nlobjSubrecord() { ; }
 
 /**
  * Commit the subrecord after you finish modifying it.

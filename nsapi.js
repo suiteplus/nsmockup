@@ -4,7 +4,18 @@ var vm = require('vm'),
         vm.runInThisContext(code);
     }.bind(this);
 
+vmInclude('var window = {};');
+
+(function(fs){
+    vmInclude(fs.readFileSync(__dirname + '/nsapi-doc.js'));
+})(require('fs'));
+
 var scripts = [
+    './src/nlobj/error',
+    './src/nlobj/context',
+    './src/nlapi/create-error',
+    './src/nlapi/log-execution',
+    './src/nlapi/get-context',
     './src/nlapi/search-record'
 ];
 
@@ -23,6 +34,7 @@ function loadMongodb(cb) {
 
         for (let i = 0; i < scripts.length; i++) {
             let script = require(scripts[i])(db);
+            console.log(scripts[i], script);
             vmInclude('' + script);
         }
 
