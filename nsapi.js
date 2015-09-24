@@ -1,46 +1,41 @@
 'use strict';
-var vm = require('vm'),
-    vmInclude = function(code) {
-        vm.runInThisContext(code);
-    }.bind(this);
+var fs = require('fs'),
+    vm = require('vm'),
+    vmInclude = function(code, path) {
+        vm.runInThisContext(code, path);
+    },
+    vmAddFile = function(path) {
+        vmInclude(fs.readFileSync(path), path);
+    };
+
+// workaround to 'require' works in vm.runInThisContext
+global.require = require;
 
 vmInclude('var window = {};');
+vmAddFile(__dirname + '/nsapi-doc.js');
 
-(function(fs){
-    vmInclude(fs.readFileSync(__dirname + '/nsapi-doc.js'));
-})(require('fs'));
-
-var scripts = [
-    './src/nlobj/error',
-    './src/nlobj/context',
-    './src/nlapi/create-error',
-    './src/nlapi/log-execution',
-    './src/nlapi/get-context',
-    './src/nlapi/search-record'
-];
+// load Netsuite functions and objects
+var glob = require('glob'),
+    files = glob.sync(__dirname + '/src/**/*.js');
+for (let i=0; i<files.length; vmAddFile(files[i++]));
 
 var $db;
 
 function loadMongodb(cb) {
-    let MongoClient = require('mongodb').MongoClient;
+    'use strict';
+    let dbDir = '.lowdb',
+        dbPath = dbDir + '/db.json';
 
-    let dbName = process.env.NS_DB_NAME || 'nsmockup',
-        url = 'mongodb://localhost:27017/' + dbName;
+    if (!fs.existsSync(dbDir)) {
+        fs.mkdirSync(dbDir);
+    }
+    fs.writeFileSync(dbPath, '{}');
 
-    // Use connect method to connect to the Server
-    MongoClient.connect(url, function (err, db) {
-        if (err) return cb(err);
-        console.log('Connected correctly to server "'+dbName+'"');
+    let low = require('lowdb'),
+        db = low(dbPath);
 
-        for (let i = 0; i < scripts.length; i++) {
-            let script = require(scripts[i])(db);
-            console.log(scripts[i], script);
-            vmInclude('' + script);
-        }
-
-        return cb($db = db);
-    });
-};
+    cb(global.$db = db);
+}
 
 exports.initDB = function(records, cb) {
     function initDB (db) {
@@ -64,18 +59,19 @@ exports.initDB = function(records, cb) {
                 continue;
             }
 
-            let collection = db.collection(recName);
-            collection.drop(function(err) {
-                if (err) return cb(err);
-                collection.insertMany(recVal, function (err) {
-                    if (err) return cb(err);
-
-                    console.log('import record type "' + recName + '" - total: ' + recVal.length);
-                    verifyDone();
-                });
+            recVal = recVal.map((val,i) => {
+                if (!val.internalid) val.internalid = (i+1);
+                return val;
             });
+
+            // save record type data in lowdb database
+            db.object[recName] = recVal;
+            db.save();
+
+            console.log('import record type "' + recName + '" - total: ' + recVal.length);
+            verifyDone();
         }
-    };
+    }
     if ($db) initDB($db);
     else loadMongodb(initDB);
 };
@@ -99,7 +95,7 @@ exports.cleanDB = function(cb) {
                 });
             }
         });
-    };
+    }
     if ($db) cleanDB($db);
     else loadMongodb(cleanDB);
 };

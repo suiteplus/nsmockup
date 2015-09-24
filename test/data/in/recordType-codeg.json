@@ -1,0 +1,4978 @@
+[
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 616
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 209,
+    "custrecord_code_id": "A"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 23
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 23
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 20
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "ZA"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 111
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AM"
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 16
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HD"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AG"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BG"
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 66
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 66
+  },
+  {
+    "custrecord_type_id": 242,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 239,
+    "custrecord_code_id": 40
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 29
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "YF"
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 23
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 24
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 22
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 21
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 61
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 61
+  },
+  {
+    "custrecord_type_id": 239,
+    "custrecord_code_id": 19
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 40
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 44
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 49
+  },
+  {
+    "custrecord_type_id": 278,
+    "custrecord_code_id": 41
+  },
+  {
+    "custrecord_type_id": 278,
+    "custrecord_code_id": 42
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 30
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 30
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 42
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 278,
+    "custrecord_code_id": 31
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 31
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 16
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 278,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 239,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 239,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 18
+  },
+  {
+    "custrecord_type_id": 239,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 33
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BE"
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 22
+  },
+  {
+    "custrecord_type_id": 263,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 121
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "ZD"
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 20
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 106
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "PD"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HI"
+  },
+  {
+    "custrecord_type_id": 234,
+    "custrecord_code_id": "R"
+  },
+  {
+    "custrecord_type_id": 234,
+    "custrecord_code_id": "T"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "H1"
+  },
+  {
+    "custrecord_type_id": 258,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 253,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 224,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": "B1"
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AS"
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 115
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 210
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 214,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 207,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 206,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 206,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 206,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 207,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 207,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 15
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 206,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 206,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 206,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IN"
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DK"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DJ"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HO"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HS"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HP"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HQ"
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 16
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IE"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IF"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IJ"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "II"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IH"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IK"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IG"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IC"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IB"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "ID"
+  },
+  {
+    "custrecord_type_id": 227,
+    "custrecord_code_id": "SSR"
+  },
+  {
+    "custrecord_type_id": 280,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 264,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "BTN"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "D4"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 123
+  },
+  {
+    "custrecord_type_id": 278,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 287,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 211,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 278,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "H5"
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 24
+  },
+  {
+    "custrecord_type_id": 212,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 288,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 214,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 41
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 15
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 15
+  },
+  {
+    "custrecord_type_id": 268,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 268,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 268,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 31
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 261,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "D3"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 51
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 51
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 48
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 48
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 106
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 50
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 50
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 49
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 49
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AX"
+  },
+  {
+    "custrecord_type_id": 231,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 257,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 268,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 22
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 21
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 20
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 19
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 18
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 101
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 109
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AW"
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 21
+  },
+  {
+    "custrecord_type_id": 207,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 206,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 254,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 269,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 270,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CI"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BI"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CD"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 124
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 203,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 203,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 203,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 203,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 203,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 204,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 204,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IJ"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "YE"
+  },
+  {
+    "custrecord_type_id": 246,
+    "custrecord_code_id": "CDS"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 91
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 25
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 26
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 36
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IS"
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 278,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 36
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 36
+  },
+  {
+    "custrecord_type_id": 278,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 31
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 31
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 41
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 40
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 33
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 42
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 43
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 54
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 38
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "ZC"
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 39
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 36
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 48
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "EM"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CP"
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 55
+  },
+  {
+    "custrecord_type_id": 278,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 34
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 35
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 57
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 27
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 27
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 59
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 58
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 56
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 60
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 19
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 20
+  },
+  {
+    "custrecord_type_id": 259,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HF"
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AN"
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CN"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 95
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AA"
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HC"
+  },
+  {
+    "custrecord_type_id": 216,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 611
+  },
+  {
+    "custrecord_type_id": 270,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 231,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 109
+  },
+  {
+    "custrecord_type_id": 229,
+    "custrecord_code_id": "C"
+  },
+  {
+    "custrecord_type_id": 228,
+    "custrecord_code_id": "C"
+  },
+  {
+    "custrecord_type_id": 244,
+    "custrecord_code_id": "C"
+  },
+  {
+    "custrecord_type_id": 251,
+    "custrecord_code_id": "C"
+  },
+  {
+    "custrecord_type_id": 289,
+    "custrecord_code_id": "C"
+  },
+  {
+    "custrecord_type_id": 249,
+    "custrecord_code_id": "C"
+  },
+  {
+    "custrecord_type_id": 291,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 262,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IN"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 268,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 257,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 108
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 208
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 25
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 94
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AK"
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 44
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 44
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 57
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 57
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 122
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CE"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CB"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CA"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CC"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CD"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AF"
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 26
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 26
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "YD"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IL"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AI"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 56
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 56
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AL"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 65
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 65
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": "A6"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 28
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 28
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "NF"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IX"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "YC"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 42
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 42
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 93
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 37
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 37
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HK"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "ND"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BA"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AZ"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IO"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IP"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 67
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 67
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 24
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 24
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 25
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 25
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 58
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 58
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 125
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AE"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "LA"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 116
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CS"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 16
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 16
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "II"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 80
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 80
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "D8"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "D7"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 92
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 78
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 78
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "D6"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "D5"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 79
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 79
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AP"
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 24
+  },
+  {
+    "custrecord_type_id": 283,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 265,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 71
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 72
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 201
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 214
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 30
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 30
+  },
+  {
+    "custrecord_type_id": 230,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 229,
+    "custrecord_code_id": "D"
+  },
+  {
+    "custrecord_type_id": 244,
+    "custrecord_code_id": "D"
+  },
+  {
+    "custrecord_type_id": 228,
+    "custrecord_code_id": "D"
+  },
+  {
+    "custrecord_type_id": 251,
+    "custrecord_code_id": "D"
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 215
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 118
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 119
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 203
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "EX"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "D2"
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 15
+  },
+  {
+    "custrecord_type_id": 227,
+    "custrecord_code_id": "DPV"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "ZB"
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 211
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 274,
+    "custrecord_code_id": 700
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DV"
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 249,
+    "custrecord_code_id": "D"
+  },
+  {
+    "custrecord_type_id": 289,
+    "custrecord_code_id": "D"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 68
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 68
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 280,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 264,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 280,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 277,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 28
+  },
+  {
+    "custrecord_type_id": 283,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 277,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 50
+  },
+  {
+    "custrecord_type_id": 277,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 71
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 71
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 72
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 72
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 73
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 73
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 74
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 69
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 69
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 70
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 70
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 74
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 75
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 75
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 76
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 76
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 29
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 27
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 28
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IQ"
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "USD"
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 90
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DM"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 88
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 91
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 89
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 87
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 215,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 276,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 226,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 276,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 226,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 276,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 226,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 276,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 226,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 215,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 608
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BJ"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BK"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BH"
+  },
+  {
+    "custrecord_type_id": 258,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 207
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 107
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IM"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HY"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HX"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HZ"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IL"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IQ"
+  },
+  {
+    "custrecord_type_id": 258,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 102
+  },
+  {
+    "custrecord_type_id": 262,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 30
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 108
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 409
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 47
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 47
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 408
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 278,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 63
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 63
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 615
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 614
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 37
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 93
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HA"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HM"
+  },
+  {
+    "custrecord_type_id": 205,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "PTE"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 21
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 21
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 22
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 22
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 110
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 610
+  },
+  {
+    "custrecord_type_id": 254,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 239,
+    "custrecord_code_id": 33
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 204
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 103
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 239,
+    "custrecord_code_id": 99
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BF"
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 23
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "NC"
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 40
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 73
+  },
+  {
+    "custrecord_type_id": 234,
+    "custrecord_code_id": "E"
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 70
+  },
+  {
+    "custrecord_type_id": 234,
+    "custrecord_code_id": "G"
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BI"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 121
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 126
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 18
+  },
+  {
+    "custrecord_type_id": 273,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IP"
+  },
+  {
+    "custrecord_type_id": 245,
+    "custrecord_code_id": "F"
+  },
+  {
+    "custrecord_type_id": 252,
+    "custrecord_code_id": "F"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "D0"
+  },
+  {
+    "custrecord_type_id": 265,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 283,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 258,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 94
+  },
+  {
+    "custrecord_type_id": 281,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "X4"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AD"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DL"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "X1"
+  },
+  {
+    "custrecord_type_id": 240,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 240,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 257,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 15
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "FRF"
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "CHF"
+  },
+  {
+    "custrecord_type_id": 217,
+    "custrecord_code_id": "01 à 36"
+  },
+  {
+    "custrecord_type_id": 216,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 230,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 230,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 127
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "X3"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "YB"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 247,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BM"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "NB"
+  },
+  {
+    "custrecord_type_id": 242,
+    "custrecord_code_id": 52
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "JPY"
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 111
+  },
+  {
+    "custrecord_type_id": 253,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 239,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 239,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BD"
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 21
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 95
+  },
+  {
+    "custrecord_type_id": 238,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 238,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 238,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 238,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 238,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 238,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 242,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 242,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 242,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 242,
+    "custrecord_code_id": 50
+  },
+  {
+    "custrecord_type_id": 242,
+    "custrecord_code_id": 51
+  },
+  {
+    "custrecord_type_id": 234,
+    "custrecord_code_id": "I"
+  },
+  {
+    "custrecord_type_id": 242,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HB"
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 46
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 47
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 26
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 26
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 252,
+    "custrecord_code_id": "I"
+  },
+  {
+    "custrecord_type_id": 245,
+    "custrecord_code_id": "I"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 118
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 120
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HT"
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 110
+  },
+  {
+    "custrecord_type_id": 248,
+    "custrecord_code_id": "S"
+  },
+  {
+    "custrecord_type_id": 210,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 231,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 218,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 218,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 234,
+    "custrecord_code_id": "C"
+  },
+  {
+    "custrecord_type_id": 234,
+    "custrecord_code_id": "D"
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 104
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 205
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "GBP"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 83
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 113
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 83
+  },
+  {
+    "custrecord_type_id": 269,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 36
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 35
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 34
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 37
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 30
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 31
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 33
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 30
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 32
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "ITL"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AU"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "LC"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HG"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HH"
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HA"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "TA"
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 202
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 239,
+    "custrecord_code_id": 25
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "DEM"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "H7"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HW"
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 21
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 60
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 60
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "H9"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "H8"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HM"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "H2"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "D1"
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 19
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 45
+  },
+  {
+    "custrecord_type_id": 212,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 96
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 99
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 23
+  },
+  {
+    "custrecord_type_id": 284,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 284,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AH"
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 107
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AO"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 45
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 45
+  },
+  {
+    "custrecord_type_id": 218,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 218,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BC"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 55
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 55
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 16
+  },
+  {
+    "custrecord_type_id": 256,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 209,
+    "custrecord_code_id": "N"
+  },
+  {
+    "custrecord_type_id": 224,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": "A9"
+  },
+  {
+    "custrecord_type_id": 214,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "H3"
+  },
+  {
+    "custrecord_type_id": 226,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 276,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 215,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 407
+  },
+  {
+    "custrecord_type_id": 248,
+    "custrecord_code_id": "N"
+  },
+  {
+    "custrecord_type_id": 288,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 212,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 255,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 285,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 84
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 84
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 64
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 64
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "X2"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HU"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 96
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DA"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "D9"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DB"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IV"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AV"
+  },
+  {
+    "custrecord_type_id": 259,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 122
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 31
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 29
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 216
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BO"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BP"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BN"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BQ"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "NR"
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "NH"
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 104
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 99
+  },
+  {
+    "custrecord_type_id": 231,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 257,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 258,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "H6"
+  },
+  {
+    "custrecord_type_id": 291,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BD"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BE"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IR"
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 70
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 90
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CE"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "NA"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "SS"
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 20
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 75
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 291,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 33
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 16
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 22
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 291,
+    "custrecord_code_id": 8
+  },
+  {
+    "custrecord_type_id": 291,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 291,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 18
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 32
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 291,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 19
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 34
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 77
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 291,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 31
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 60
+  },
+  {
+    "custrecord_type_id": 239,
+    "custrecord_code_id": 23
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "RS"
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "FC"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "FD"
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 20
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 112
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 80
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 30
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 50
+  },
+  {
+    "custrecord_type_id": 280,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 280,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 291,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 291,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 98
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 218
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 217
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 113
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 219
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 97
+  },
+  {
+    "custrecord_type_id": 262,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 263,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 252,
+    "custrecord_code_id": "P"
+  },
+  {
+    "custrecord_type_id": 245,
+    "custrecord_code_id": "P"
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 22
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 278,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 34
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 41
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 41
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 35
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 39
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 39
+  },
+  {
+    "custrecord_type_id": 253,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 291,
+    "custrecord_code_id": 101
+  },
+  {
+    "custrecord_type_id": 243,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 222,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 287,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 211,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 261,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 211,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 211,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 287,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 287,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 231,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "NG"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 19
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 20
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 98
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 43
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 43
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 38
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 38
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 112
+  },
+  {
+    "custrecord_type_id": 263,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IA"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AI"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 25
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 288,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 212,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 212,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 288,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 212,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 212,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 285,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 260,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 285,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 260,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HR"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HV"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AQ"
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 87
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 25
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 26
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 27
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 28
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 29
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 30
+  },
+  {
+    "custrecord_type_id": 221,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "BRL"
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BR"
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 30
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 117
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "RJ"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": "A5"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 119
+  },
+  {
+    "custrecord_type_id": 230,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 230,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": "A1"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 99
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 97
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": "A2"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": "A3"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 98
+  },
+  {
+    "custrecord_type_id": 232,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 23
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 262,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 206
+  },
+  {
+    "custrecord_type_id": 239,
+    "custrecord_code_id": 27
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 24
+  },
+  {
+    "custrecord_type_id": 232,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "H4"
+  },
+  {
+    "custrecord_type_id": 263,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 303
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 204
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 203
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 205
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 102
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 103
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 105
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 108
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 106
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 104
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 107
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 603
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 109
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 208
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 201
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 101
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 207
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 202
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 206
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 301
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 304
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 501
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 406
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": "A4"
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 404
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 604
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 601
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 602
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 605
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 402
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 612
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 401
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 403
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 92
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 306
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 305
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 606
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 405
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 505
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 504
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 302
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 502
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 503
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 607
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 54
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 54
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DD"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DC"
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 114
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 212
+  },
+  {
+    "custrecord_type_id": 204,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 284,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 247,
+    "custrecord_code_id": 0
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 115
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BB"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 86
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 86
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 114
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 33
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AY"
+  },
+  {
+    "custrecord_type_id": 256,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 255,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 267,
+    "custrecord_code_id": 24
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 46
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CQ"
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 18
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 19
+  },
+  {
+    "custrecord_type_id": 227,
+    "custrecord_code_id": "SDS"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BS"
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 18
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 19
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 20
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 16
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 15
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 13
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 105
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 100
+  },
+  {
+    "custrecord_type_id": 210,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "TRD"
+  },
+  {
+    "custrecord_type_id": 274,
+    "custrecord_code_id": 18
+  },
+  {
+    "custrecord_type_id": 274,
+    "custrecord_code_id": 888
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 44
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 43
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 41
+  },
+  {
+    "custrecord_type_id": 254,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 81
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 81
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 82
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 82
+  },
+  {
+    "custrecord_type_id": 246,
+    "custrecord_code_id": "SSR"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 101
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 12
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 62
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 62
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CK"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "E0"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AJ"
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 102
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AB"
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HJ"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 88
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AC"
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 89
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HE"
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 246,
+    "custrecord_code_id": "DPV"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HN"
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 15
+  },
+  {
+    "custrecord_type_id": 246,
+    "custrecord_code_id": "SCR"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IM"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AT"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 46
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 46
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 53
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 53
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AE"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AQ"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "TI"
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 14
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 205,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 230,
+    "custrecord_code_id": 9
+  },
+  {
+    "custrecord_type_id": 230,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 202,
+    "custrecord_code_id": 43
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 117
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 213
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 209
+  },
+  {
+    "custrecord_type_id": 250,
+    "custrecord_code_id": 120
+  },
+  {
+    "custrecord_type_id": 225,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 275,
+    "custrecord_code_id": 10
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 77
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 77
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 16
+  },
+  {
+    "custrecord_type_id": 272,
+    "custrecord_code_id": 16
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 18
+  },
+  {
+    "custrecord_type_id": 272,
+    "custrecord_code_id": 18
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 35
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 23
+  },
+  {
+    "custrecord_type_id": 272,
+    "custrecord_code_id": 23
+  },
+  {
+    "custrecord_type_id": 272,
+    "custrecord_code_id": 22
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 22
+  },
+  {
+    "custrecord_type_id": 272,
+    "custrecord_code_id": 24
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 24
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 91
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 272,
+    "custrecord_code_id": 17
+  },
+  {
+    "custrecord_type_id": 272,
+    "custrecord_code_id": 19
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 19
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 25
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 26
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "NI"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IK"
+  },
+  {
+    "custrecord_type_id": 272,
+    "custrecord_code_id": 21
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 21
+  },
+  {
+    "custrecord_type_id": 272,
+    "custrecord_code_id": 27
+  },
+  {
+    "custrecord_type_id": 235,
+    "custrecord_code_id": 27
+  },
+  {
+    "custrecord_type_id": 272,
+    "custrecord_code_id": 25
+  },
+  {
+    "custrecord_type_id": 272,
+    "custrecord_code_id": 26
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 15
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IO"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 19
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 19
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 40
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 40
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 85
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 85
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 52
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 51
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 53
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 613
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 15
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 15
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 32
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 34
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": "A7"
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 23
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 22
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 45
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 44
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 50
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 609
+  },
+  {
+    "custrecord_type_id": 201,
+    "custrecord_code_id": 617
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "YA"
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 37
+  },
+  {
+    "custrecord_type_id": 219,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 279,
+    "custrecord_code_id": 38
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "NE"
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 6
+  },
+  {
+    "custrecord_type_id": 241,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 286,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 52
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 52
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "UFR"
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "XEU"
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "UPC"
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "UPF"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "E1"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "E2"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "E3"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "E4"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 35
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 35
+  },
+  {
+    "custrecord_type_id": 221,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IG"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IE"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CJ"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IF"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "BL"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IU"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CI"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CN"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CO"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CO"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CG"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 33
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IC"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 33
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": "A8"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 34
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 34
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IH"
+  },
+  {
+    "custrecord_type_id": 271,
+    "custrecord_code_id": 11
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CM"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CR"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CH"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "ID"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 29
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 29
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CF"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IB"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CL"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CP"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CM"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 32
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 32
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CK"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "CL"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "AR"
+  },
+  {
+    "custrecord_type_id": 223,
+    "custrecord_code_id": 5
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DI"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "IT"
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 20
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 20
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 103
+  },
+  {
+    "custrecord_type_id": 243,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 211,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 287,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DH"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DG"
+  },
+  {
+    "custrecord_type_id": 222,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 211,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 287,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 211,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 287,
+    "custrecord_code_id": 4
+  },
+  {
+    "custrecord_type_id": 210,
+    "custrecord_code_id": 1
+  },
+  {
+    "custrecord_type_id": 221,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DF"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "DE"
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 90
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 59
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 59
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 27
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 27
+  },
+  {
+    "custrecord_type_id": 261,
+    "custrecord_code_id": 3
+  },
+  {
+    "custrecord_type_id": 281,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 220,
+    "custrecord_code_id": 18
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 105
+  },
+  {
+    "custrecord_type_id": 282,
+    "custrecord_code_id": 18
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 40
+  },
+  {
+    "custrecord_type_id": 233,
+    "custrecord_code_id": 41
+  },
+  {
+    "custrecord_type_id": 216,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 217,
+    "custrecord_code_id": "01 à 24"
+  },
+  {
+    "custrecord_type_id": 237,
+    "custrecord_code_id": "HL"
+  },
+  {
+    "custrecord_type_id": 266,
+    "custrecord_code_id": 7
+  },
+  {
+    "custrecord_type_id": 227,
+    "custrecord_code_id": "SCR"
+  },
+  {
+    "custrecord_type_id": 259,
+    "custrecord_code_id": 2
+  },
+  {
+    "custrecord_type_id": 208,
+    "custrecord_code_id": 26
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "IGP"
+  },
+  {
+    "custrecord_type_id": 236,
+    "custrecord_code_id": "IGM"
+  }
+]

@@ -1,9 +1,7 @@
 # nsmockup
 Netsuite API Mockup
 
-
 ## Required
- * MongoDB 2+
  * node.js 4+
 
 ## Install
