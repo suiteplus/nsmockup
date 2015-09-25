@@ -1,5 +1,3 @@
-var sleep = require('sleep');
-
 /**
  * Perform a record search using an existing search or filters and columns.
  * @governance 10 units
@@ -25,8 +23,6 @@ var sleep = require('sleep');
 function nlapiSearchRecord(type, id, filters, columns) {
     'use strict';
 
-    console.log('$db', $db);
-
     let collection = $db(type),
         query = {};
 
@@ -45,16 +41,7 @@ function nlapiSearchRecord(type, id, filters, columns) {
         }
     }
 
-    let items;
-
-    //collection.count(function(err, count) {console.log(err, count);
-    //});
-
-    console.log('collection.find', type, query, select);
-    items = collection.find();
-
-    console.log('total items', items.length, collection.size());
-    //for (;!items; );
+    let items = collection.chain().where(query).value();
 
     return items.map(item => {
         let id = item.interalid;
