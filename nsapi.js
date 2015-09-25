@@ -29,21 +29,48 @@ function loadMongodb(cb) {
     if (!fs.existsSync(dbDir)) {
         fs.mkdirSync(dbDir);
     }
-    fs.writeFileSync(dbPath, '{}');
+    if (!fs.existsSync(dbPath)) {
+        fs.writeFileSync(dbPath, '{}');
+    }
 
     let low = require('lowdb'),
         db = low(dbPath);
 
+    // create metadata collection
+    if (!db.object.__metadata) {
+        db.object.__metadata = {};
+        db.save();
+    }
+
     cb(global.$db = db);
 }
 
-exports.initDB = function(records, cb) {
+exports.initDB = function(opts, cb) {
     function initDB (db) {
-        let recs = records;
-        if (typeof records === 'string') recs = require(records);
+        let metadatas = opts.metadatas;
+        if (typeof metadatas === 'string') metadatas = [require(opts.records)];
+        else if (!Array.isArray(metadatas)) metadatas = [metadatas];
 
-        if (!recs) return cb('empty records');
-        let recNames = Object.keys(recs);
+        if (metadatas && metadatas.length !== 0) {
+            let _metadata = db.object.__metadata;
+            for (let i = 0; i < metadatas.length; i++) {
+                let metadata = metadatas[i];
+                if (typeof metadata === 'string') metadata = require(metadata);
+
+                if (!metadata.code) continue;
+                else {
+                    console.log('import record-type metadata "' + metadata.code + '"');
+                    _metadata[metadata.code] = metadata;
+                }
+            }
+            db.save();
+        }
+
+        let records = opts.records;
+        if (typeof records === 'string') records = require(opts.records);
+
+        if (!records) return cb();
+        let recNames = Object.keys(records);
 
         let actual = 0,
             verifyDone = function () {
@@ -51,7 +78,7 @@ exports.initDB = function(records, cb) {
             };
         for (let i = 0; i < recNames.length; i++) {
             let recName = recNames[i],
-                recVal = recs[recName];
+                recVal = records[recName];
 
             if (typeof recVal === 'string') recVal = require(recVal);
             if (!recVal || !recVal.length) {
@@ -68,7 +95,7 @@ exports.initDB = function(records, cb) {
             db.object[recName] = recVal;
             db.save();
 
-            console.log('import record type "' + recName + '" - total: ' + recVal.length);
+            console.log('import record-type "' + recName + '" - total: ' + recVal.length);
             verifyDone();
         }
     }

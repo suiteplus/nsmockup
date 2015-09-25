@@ -14,13 +14,20 @@ Netsuite API Mockup
     var nsmockup = require('nsmockup');
 
     // map record types
-    var records = {
-        'customrecord_bacana': './record/bacana.json'
-    };
+
+    let metadatas = [
+            __dirname + '/record/meta/recordType-metaData-codeg.json',
+            __dirname + '/record/meta/recordType-metaData-codeg_ids.json'
+        ],
+        records = {
+            'customrecord_codeg': __dirname + '/record/data/recordType-codeg.json',
+            'customrecord_codeg_ids': __dirname + '/record/data/recordType-codeg_ids.json'
+        };
+
     // start database simulation
-    nsmockup.initDB(records, function(err) {
+    nsmockup.initDB({records, metadatas}, function(err) {
         if (err) throw err;
 
-        console.log('search record', nlapiSearchRecord('customrecord_bacana'));
+        console.log('search record', nlapiSearchRecord('customrecord_codeg'));
     });
 ```

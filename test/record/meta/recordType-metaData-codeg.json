@@ -1,0 +1,20 @@
+{
+  "code": "customrecord_codeg",
+  "name": "Code Generic",
+  "id": 1,
+  "fields": [
+    {
+      "code": "custrecord_type_id",
+      "desc": "Type",
+      "id": 1,
+      "type": "SELECT",
+      "recordType": "customrecord_codeg_ids"
+    },
+    {
+      "code": "custrecord_code_id",
+      "desc": "Code",
+      "id": 2,
+      "type": "TEXT"
+    }
+  ]
+}

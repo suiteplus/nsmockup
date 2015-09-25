@@ -9,10 +9,15 @@ var should = require('should'),
 describe('<Unit Test - Netsuite Search API>', function () {
     this.timeout(10000);
     before(function (done) {
-        let records = {
-            'customrecord_codeg': __dirname + '/data/in/recordType-codeg.json'
-        };
-        nsmockup.initDB(records, done);
+        let metadatas = [
+                __dirname + '/record/meta/recordType-metaData-codeg.json',
+                __dirname + '/record/meta/recordType-metaData-codeg_ids.json'
+            ],
+            records = {
+                'customrecord_codeg': __dirname + '/record/data/recordType-codeg.json',
+                'customrecord_codeg_ids': __dirname + '/record/data/recordType-codeg_ids.json'
+            };
+        nsmockup.initDB({records, metadatas}, done);
     });
     describe('SuiteScript API - nlapiSearchRecord:', function () {
         it('simple search', function (done) {
@@ -27,9 +32,6 @@ describe('<Unit Test - Netsuite Search API>', function () {
 
                 let cols = code.getAllColumns();
                 should(cols).have.length(3);
-                //should(cols).have.containEql('');
-                //should(cols).have.containEql('');
-                //should(cols).have.containEql('');
                 for(let j=0; j<3; j++) {
                    let col = cols[j];
                     should(col).have.instanceOf(nlobjSearchColumn);

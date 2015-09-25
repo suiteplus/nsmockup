@@ -48,4 +48,4 @@ function nlapiSearchRecord(type, id, filters, columns) {
         delete item.interalid;
         return new nlobjSearchResult(type, id, item, Object.keys(item));
     });
-};;
+};
