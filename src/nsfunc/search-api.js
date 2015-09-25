@@ -22,20 +22,40 @@
  */
 function nlapiSearchRecord(type, id, filters, columns) {
     'use strict';
+    let _ = require('lodash');
 
     let items = $db(type).chain(),
         query = {};
 
     if (id) {
         query.internalid = id;
-        items = collection.where(query);
+        items = items.where(query);
     } else if (filters) {
-        let filts = !Array.isArray(filters) ? [filters] : filters;
-        items = collection.filter(item => {
+        let filts = !Array.isArray(filters) ? [filters] : filters,
+            joinCache = {},
+            metaCache = {},
+            metaFieldCache = {};
+        items = items.filter(item => {
             for (let i = 0; i < filts.length; i++) {
                 let filt = filts[i];
-                if (!item[filt.name]) return false;
-                else if (item[filt.name] != filt.values[0]) return false;
+                if (filt.join) {
+                    let key = filt.join+'.'+filt.name+'='+item[filt.join];
+                    if (!joinCache[key]) {
+                        joinCache[key] = { result: false };
+
+                        let recordMeta = metaCache[type] || (metaCache[type]=$db('__metadata').chain().where({code: type}).value());
+                        let field = metaFieldCache[type+'.'+filt.join] || (metaFieldCache[type+'.'+filt.join]=_.where(recordMeta[0].fields, {code: filt.join}));
+                        if (!field || field.length === 0 || !field[0].recordType) return false;
+                        let ijoin = nlapiSearchRecord(field[0].recordType, null, new nlobjSearchFilter(filt.name, null, 'is', filt.values[0]), new nlobjSearchColumn(filt.name));
+
+                        if (!ijoin || ijoin.length === 0 || ijoin[0].id !== item[filt.join]) return false;
+                        else joinCache[key].result = true;
+                    }
+                    if (!joinCache[key].result) return false;
+                } else {
+                    if (!item[filt.name]) return false;
+                    else if (item[filt.name] != filt.values[0]) return false;
+                }
             }
             return true;
         });

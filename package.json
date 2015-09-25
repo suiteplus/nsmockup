@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "glob": "^5.0.14",
+    "lodash": "^3.10.1",
     "lowdb": "^0.10.2"
   },
   "devDependencies": {

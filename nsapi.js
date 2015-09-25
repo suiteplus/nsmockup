@@ -38,7 +38,7 @@ function loadMongodb(cb) {
 
     // create metadata collection
     if (!db.object.__metadata) {
-        db.object.__metadata = {};
+        db.object.__metadata = [];
         db.save();
     }
 
@@ -52,15 +52,16 @@ exports.initDB = function(opts, cb) {
         else if (!Array.isArray(metadatas)) metadatas = [metadatas];
 
         if (metadatas && metadatas.length !== 0) {
-            let _metadata = db.object.__metadata;
+            let _metadata = db('__metadata');
             for (let i = 0; i < metadatas.length; i++) {
                 let metadata = metadatas[i];
                 if (typeof metadata === 'string') metadata = require(metadata);
 
                 if (!metadata.code) continue;
                 else {
+                    _metadata.remove({code: metadata.code});
+                    _metadata.push(metadata);
                     console.log('import record-type metadata "' + metadata.code + '"');
-                    _metadata[metadata.code] = metadata;
                 }
             }
             db.save();

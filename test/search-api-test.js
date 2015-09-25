@@ -58,7 +58,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search by field', function(done) {
+        it('search one field', function(done) {
             let columns = [
                     'custrecord_type_id',
                     'custrecord_code_id'
@@ -69,6 +69,20 @@ describe('<Unit Test - Netsuite Search API>', function () {
 
             var codes = nlapiSearchRecord('customrecord_codeg', null, filters, columns);
             should(codes).have.length(224);
+            return done();
+        });
+
+        it('search one field + join', function(done) {
+            let columns = [
+                    'custrecord_type_id',
+                    'custrecord_code_id'
+                ].map(c => new nlobjSearchColumn(c)),
+                filters = [
+                    ['custrecord_id_title_id', 'custrecord_type_id', 'is', 'japo 266']
+                ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
+
+            var codes = nlapiSearchRecord('customrecord_codeg', null, filters, columns);
+            should(codes).have.length(15);
             return done();
         });
     });
