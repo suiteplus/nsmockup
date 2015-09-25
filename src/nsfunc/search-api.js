@@ -23,16 +23,25 @@
 function nlapiSearchRecord(type, id, filters, columns) {
     'use strict';
 
-    let collection = $db(type),
+    let items = $db(type).chain(),
         query = {};
 
-    if (id) query.interalid = id;
-    else if (filters) {
+    if (id) {
+        query.internalid = id;
+        items = collection.where(query);
+    } else if (filters) {
         let filts = !Array.isArray(filters) ? [filters] : filters;
-        //query = {};
+        items = collection.filter(item => {
+            for (let i = 0; i < filts.length; i++) {
+                let filt = filts[i];
+                if (!item[filt.name]) return false;
+                else if (item[filt.name] != filt.values[0]) return false;
+            }
+            return true;
+        });
     }
 
-    let select =  {interalid: 1};
+    let select =  {};
     if (columns) {
         let cols = !Array.isArray(columns) ? [columns] : columns;
         for (let i=0; i<cols.length; i++) {
@@ -41,11 +50,16 @@ function nlapiSearchRecord(type, id, filters, columns) {
         }
     }
 
-    let items = collection.chain().where(query).value();
+    return items.value().map(item => {
+        let id = item.internalid;
+        let columns = Object.keys(item).filter(c => select[c]),
+            values = {};
 
-    return items.map(item => {
-        let id = item.interalid;
-        delete item.interalid;
-        return new nlobjSearchResult(type, id, item, Object.keys(item));
+        for (let i=0; i<columns.length; i++) {
+            let col = columns[i];
+            values[col] = item[col];
+        }
+
+        return new nlobjSearchResult(type, id, values, columns);
     });
 };
