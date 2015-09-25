@@ -11,4 +11,4 @@ install:
   - 'time npm install'
 
 script:
-  - 'grunt'
+  - 'gulp'

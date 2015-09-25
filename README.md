@@ -1,4 +1,4 @@
-# nsmockup
+# nsmockup [![Build Status](https://travis-ci.org/suiteplus/nsmockup.svg?branch=master)](https://travis-ci.org/suiteplus/nsmockup)
 Netsuite API Mockup (unstable)
 
 ## Required
