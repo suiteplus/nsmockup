@@ -1,5 +1,5 @@
 # nsmockup
-Netsuite API Mockup
+Netsuite API Mockup (unstable)
 
 ## Required
  * node.js 4+
@@ -14,7 +14,6 @@ Netsuite API Mockup
     var nsmockup = require('nsmockup');
 
     // map record types
-
     let metadatas = [
             __dirname + '/record/meta/recordType-metaData-codeg.json',
             __dirname + '/record/meta/recordType-metaData-codeg_ids.json'
