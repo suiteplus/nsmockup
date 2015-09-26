@@ -1,4 +1,4 @@
-# nsmockup [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status][david-image]][david-url]
+# nsmockup [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status][david-image]][david-url]
 Netsuite API Mockup
 
 ## Required
@@ -6,7 +6,7 @@ Netsuite API Mockup
 
 ## Install
 ```bash
-    npm install suiteplus/nsmockup
+    npm install nsmockup
 ```
 
 ## Usage
@@ -30,6 +30,9 @@ Netsuite API Mockup
         console.log('search record', nlapiSearchRecord('customrecord_codeg'));
     });
 ```
+
+[npm-url]: https://npmjs.org/package/nsmockup
+[npm-image]: http://img.shields.io/npm/v/nsmockup.svg
 
 [travis-url]: https://travis-ci.org/suiteplus/nsmockup
 [travis-image]: https://img.shields.io/travis/suiteplus/nsmockup.svg
