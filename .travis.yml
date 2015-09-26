@@ -10,5 +10,8 @@ install:
   - 'npm config set loglevel http'
   - 'time npm install'
 
+after_script:
+  - 'npm run coveralls'
+
 script:
-  - 'gulp'
+  - 'gulp test'
