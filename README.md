@@ -1,5 +1,5 @@
 # nsmockup [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status][david-image]][david-url]
-Netsuite API Mockup (unstable)
+Netsuite API Mockup
 
 ## Required
  * node.js 4+
