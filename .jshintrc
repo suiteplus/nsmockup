@@ -72,16 +72,30 @@
 
     // Custom Globals
     "globals": {
-      "$db": true,
-      "nlapiCreateError":  true,
-      "nlapiLogExecution": true,
-      "nlapiSearchRecord": true,
+        // nsmockup
+        "$db": true,
+        "$NS_CONTECXT_OBJ": true,
 
-      "nlobjContext": true,
-      "nlobjError": true,
-      "nlobjSearchColumn": true,
-      "nlobjSearchFilter": true,
-      "nlobjSearchResult": true,
-      "window": true
+        // Netsuite Global Functions
+        "nlapiCreateError": true,
+        "nlapiGetContext": true,
+        "nlapiLogExecution": true,
+        "nlapiSearchRecord": true,
+
+        // Netsuite Global Objects
+        "nlobjContext": true,
+        "nlobjError": true,
+        "nlobjSearchColumn": true,
+        "nlobjSearchFilter": true,
+        "nlobjSearchResult": true,
+
+        // workaround
+        "window": true,
+
+        // mocha
+        "after": true,
+        "before": true,
+        "describe": true,
+        "it": true
     }
 }
