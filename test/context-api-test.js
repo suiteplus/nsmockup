@@ -7,10 +7,6 @@ var should = require('should'),
  * Test Suites
  */
 describe('<Unit Test - Netsuite Context API>', function () {
-    this.timeout(10000);
-    before(function (done) {
-        return done();
-    });
     describe('SuiteScript API - nlapiGetContext:', function () {
         it('just get context object', function (done) {
             var context = nlapiGetContext();
@@ -18,9 +14,24 @@ describe('<Unit Test - Netsuite Context API>', function () {
 
             return done();
         });
+        after(function (done) {
+            $NS_CONTECXT_OBJ = null;
+            return done();
+        });
     });
-    after(function (done) {
-        $NS_CONTECXT_OBJ = null;
-       return done();
+
+    describe('SuiteScript API - nlapiLogExecution:', function () {
+        it('just test netsuite log', function (done) {
+            nlapiLogExecution('DEBUG', 'oaiaia', 'oaooaoaas');
+            nlapiLogExecution('AUDIT', 'cuidaaa', new Date());
+            nlapiLogExecution('ERROR', 'errouuu', new Error());
+            nlapiLogExecution('EMERGENCY', 'ihhh agoraaa??', new nlapiCreateError());
+
+            return done();
+        });
+        after(function (done) {
+            $NS_CONTECXT_OBJ = null;
+            return done();
+        });
     });
 });
