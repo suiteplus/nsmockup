@@ -43,9 +43,7 @@
     "gulp-plumber": "^1.0.1",
     "gulp-util": "^3.0.6",
     "isparta": "^3.0.4",
-    "istanbul": "^0.3.21",
     "jshint-stylish": "^2.0.1",
-    "mocha": "^2.3.3",
     "require-dir": "^0.3.0",
     "should": "^7.1.0",
     "through": "^2.3.8"
