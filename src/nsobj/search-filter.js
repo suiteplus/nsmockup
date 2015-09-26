@@ -95,10 +95,10 @@ nlobjSearchFilter.prototype.setSummaryType = function (type) {
 nlobjSearchFilter.prototype.addValue = function (value) {
     if (Array.isArray(value)) {
         for (var i = 0; i < value.length; i++) {
-            if (value[i] != null)
+            if (value[i])
                 this.values.push(value[i].toString());
         }
     }
-    else if (value != null)
+    else if (value)
         this.values.push(value.toString());
 };

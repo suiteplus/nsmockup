@@ -40,7 +40,7 @@ function nlapiSearchRecord(type, id, filters, columns) {
             if (!(column_ instanceof nlobjSearchColumn)) throw 'SSS_TYPE_ARG_REQD';
 
             if (column_.join) {
-                select[column_.join] = column_.name
+                select[column_.join] = column_.name;
             } else {
                 select[column_.name] = 1;
             }
@@ -123,10 +123,7 @@ function nlapiSearchRecord(type, id, filters, columns) {
                 values[col][name] = data.getValue(name);
             }
         }
-        'custrecord_type_id.custrecord_id_title_id=9'
-        'custrecord_type_id.custrecord_id_title_id=9'
-
 
         return new nlobjSearchResult(type, id, values, columns);
     });
-};
+}

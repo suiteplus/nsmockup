@@ -16,4 +16,4 @@ function nlapiLogExecution(type, title, details) {
     } else {
         console.log('NS >>', type, title, details);
     }
-};
+}

@@ -22,11 +22,18 @@
                 appRoot + '/src/**/*.js'
             ]
         };
-    var defaultTasks = ['env:test'/*, 'jshint'*/, 'coverage'];
+    var defaultTasks = ['env:test', 'test:jshint', 'coverage'];
 
     gulp.task('env:test', function () {
         process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
         process.env.NODE_ENV = 'test';
+    });
+
+    gulp.task('test:jshint', function () {
+        return gulp.src(paths.js)
+            .pipe(plugins.jshint())
+            .pipe(plugins.jshint.reporter('jshint-stylish'))
+            .pipe(plugins.jshint.reporter('fail'));
     });
 
     gulp.task('coverage', function () {

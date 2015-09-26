@@ -22,7 +22,6 @@ for (let i=0; i<files.length; vmAddFile(files[i++]));
 var $db;
 
 function loadMongodb(cb) {
-    'use strict';
     let dbDir = '.lowdb',
         dbPath = dbDir + '/db.json';
 

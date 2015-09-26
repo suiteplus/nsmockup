@@ -10,4 +10,4 @@
 function nlapiStringToDate(str, format) {
     // TODO validate format - daniel.joppi - 9/24/2015
     return new Date(str);
-};
+}

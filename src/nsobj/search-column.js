@@ -137,7 +137,7 @@ nlobjSearchColumn.prototype.getSort = function () {
  * @since 2010.1
  */
 nlobjSearchColumn.prototype.setSort = function (descending) {
-    this.sortdir = descending ? "DESC" : "ASC";
+    this.sortdir = descending ? 'DESC' : 'ASC';
     return this;
 };
 

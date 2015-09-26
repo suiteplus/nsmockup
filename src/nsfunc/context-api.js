@@ -9,12 +9,10 @@ var $NS_CONTECXT_OBJ;
  */
 function nlapiGetContext() {
     try {
-        if ($NS_CONTECXT_OBJ == null)
-            $NS_CONTECXT_OBJ = new nlobjContext();
+        if (!$NS_CONTECXT_OBJ) $NS_CONTECXT_OBJ = new nlobjContext();
         return $NS_CONTECXT_OBJ;
     }
     catch (e) {
         throw nlapiCreateError(e);
     }
-};
-
+}

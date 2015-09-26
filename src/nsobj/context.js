@@ -395,17 +395,16 @@ nlobjContext.prototype.setRecordFailedCount = function (value) {
  */
 nlobjContext.prototype.getSetting = function (type, name) {
     switch (type.toLowerCase()) {
-        case "script" :
+        case 'script' :
             return this.getPreference(name);
-        case "feature" :
-            return this.getFeature(name) ? "T" : "F";
-        case "preference" :
+        case 'feature' :
+            return this.getFeature(name) ? 'T' : 'F';
+        case 'preference' :
             return this.getPreference(name);
-        case "permission" :
+        case 'permission' :
             return this.getPermission(name);
-        case "session" :
+        case 'session' :
             return this.getSessionObject(name);
-            throw nlapiCreateError('SSS_NOT_YET_SUPPORTED');
     }
     return null;
 };
