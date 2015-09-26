@@ -21,6 +21,7 @@
 
     gulp.task('dev:jshint', function () {
         return gulp.src(paths.js)
+            .pipe(plugins.plumber())
             .pipe(plugins.jshint())
             .pipe(plugins.jshint.reporter('jshint-stylish'));
     });
@@ -29,6 +30,7 @@
     gulp.task('dev:coverage', function () {
         let path = '/test/**/*-test.js';
         return gulp.src([appRoot + path])
+            .pipe(plugins.plumber())
             .pipe(plugins.mocha({
                 reporters: 'spec'
             }));

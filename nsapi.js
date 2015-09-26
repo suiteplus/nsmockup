@@ -105,23 +105,9 @@ exports.initDB = function(opts, cb) {
 
 exports.cleanDB = function(cb) {
     function cleanDB(db) {
-        db.collectionNames(function(err, names) {
-            if (err) return cb(err);
-
-            let actual = 0,
-                verifyDone = function () {
-                    if (++actual == names.length) return cb();
-                };
-
-            for (let i=0; i<names.length; i++) {
-                let name = names[i];
-                db.dropCollection(name, function() {
-                    if (err) console.log('fail drop record "'+name+'"');
-                    else console.log('record "'+name+'" dropped');
-                    verifyDone();
-                });
-            }
-        });
+        db.object = {};
+        db.save();
+        return cb();
     }
     if ($db) cleanDB($db);
     else loadMongodb(cleanDB);

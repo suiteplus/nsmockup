@@ -127,6 +127,6 @@ describe('<Unit Test - Netsuite Search API>', function () {
         });
     });
     after(function (done) {
-        done();
+        nsmockup.cleanDB(done);
     });
 });
