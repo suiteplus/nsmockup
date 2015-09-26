@@ -85,6 +85,46 @@ describe('<Unit Test - Netsuite Search API>', function () {
             should(codes).have.length(15);
             return done();
         });
+
+        it('search one field + join and column join (raw params)', function(done) {
+            let columns = [
+                    ['custrecord_type_id', 'custrecord_id_title_id'],
+                    ['custrecord_code_id']
+                ].map(c => new nlobjSearchColumn(c[0], c[1])),
+                filters = [
+                    ['custrecord_id_title_id', 'custrecord_type_id', 'is', 'japo 266']
+                ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
+
+            let codes = nlapiSearchRecord('customrecord_codeg', null, filters, columns);
+            should(codes).have.length(15);
+            let code = codes[0];
+            should(code).have.property('id', 11);
+            should(code).have.property('type', 'customrecord_codeg');
+            let code_id = code.getValue('custrecord_id_title_id', 'custrecord_type_id');
+            should(code_id).have.equal('japo 266');
+
+            return done();
+        });
+
+        it('search one field + join and column join (using nlobjSearchColumn)', function(done) {
+            let columns = [
+                    ['custrecord_type_id', 'custrecord_id_title_id'],
+                    ['custrecord_code_id']
+                ].map(c => new nlobjSearchColumn(c[0], c[1])),
+                filters = [
+                    ['custrecord_id_title_id', 'custrecord_type_id', 'is', 'japo 266']
+                ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
+
+            let codes = nlapiSearchRecord('customrecord_codeg', null, filters, columns);
+            should(codes).have.length(15);
+            let code = codes[0];
+            should(code).have.property('id', 11);
+            should(code).have.property('type', 'customrecord_codeg');
+            let code_id = code.getValue(new nlobjSearchColumn('custrecord_id_title_id', 'custrecord_type_id'));
+            should(code_id).have.equal('japo 266');
+
+            return done();
+        });
     });
     after(function (done) {
         done();

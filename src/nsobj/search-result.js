@@ -34,7 +34,7 @@ nlobjSearchResult.prototype.getRecordType = function () {
 
 /**
  * return the value for a return column specified by name, join ID, and summary type.
- * @param {string} name the name of the search column
+ * @param {string, nlobjSearchColumn} name the name of the search column
  * @param {string} join the join ID for the search column
  * @param {string} summary summary type specified for this column
  * @return {string}
@@ -45,13 +45,20 @@ nlobjSearchResult.prototype.getRecordType = function () {
  * @since 2008.1
  */
 nlobjSearchResult.prototype.getValue = function (name, join, summary) {
-    var cell = this.rawValues[name];
-    return cell
+    'use strict';
+    let isCol = name instanceof nlobjSearchColumn,
+        name_ = isCol ? name.name : name,
+        join_ = isCol ? name.join : join;
+    if (join_) {
+        return this.rawValues[join_][name_];
+    } else {
+        return this.rawValues[name_];
+    }
 };
 
 /**
  * return the text value of this return column if it's a select field.
- * @param {string} name the name of the search column
+ * @param {string, nlobjSearchColumn} name the name of the search column
  * @param {string} join the join ID for the search column
  * @param {string} summary summary type specified for this column
  * @return {string}
