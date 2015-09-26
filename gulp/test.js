@@ -30,22 +30,22 @@
     });
 
     gulp.task('coverage', function () {
-        //return gulp.src(paths.js)
-        //    .pipe(plugins.istanbul(/*{
-        //        includeUntested: true,
-        //        instrumenter: require('isparta').Instrumenter
-        //    }*/)) // Covering files
-        //    .pipe(plugins.istanbul.hookRequire()) // Force `require` to return covered files
-        //    .on('finish', function () {
+        return gulp.src(paths.js)
+            .pipe(plugins.istanbul({
+                includeUntested: true,
+                instrumenter: require('isparta').Instrumenter
+            })) // Covering files
+            .pipe(plugins.istanbul.hookRunInThisContext()) // Force `vm.runInThisContext` to return covered files
+            .on('finish', function () {
                 let path = '/test/**/*'+ (file ? file + '*' : '') + '-test.js';
                 gulp.src([appRoot + path])
                     .pipe(plugins.mocha({
                         reporters: 'spec'
-                    }));
-            //        .pipe(plugins.istanbul.writeReports({
-            //            reports: ['lcovonly']
-            //        })); // Creating the reports after tests runned
-            //});
+                    }))
+                    .pipe(plugins.istanbul.writeReports({
+                        reports: ['lcovonly']
+                    })); // Creating the reports after tests runned
+            });
     });
 
     gulp.task('test', defaultTasks);
