@@ -10,7 +10,8 @@
             js: [
                 appRoot + '/nsapi.js',
                 appRoot + '/src/**/*.js'
-            ]
+            ],
+            jsTests: [appRoot + '/test/**/*-test.js']
         };
 
     var defaultTasks = ['env:development', 'dev:jshint', 'dev:coverage', 'watch'];
@@ -20,7 +21,7 @@
     });
 
     gulp.task('dev:jshint', function () {
-        return gulp.src(paths.js)
+        return gulp.src(paths.js.concat(paths.jsTests))
             .pipe(plugins.plumber())
             .pipe(plugins.jshint())
             .pipe(plugins.jshint.reporter('jshint-stylish'));
@@ -28,8 +29,7 @@
 
 
     gulp.task('dev:coverage', function () {
-        let path = '/test/**/*-test.js';
-        return gulp.src([appRoot + path])
+        return gulp.src(paths.jsTests)
             .pipe(plugins.plumber())
             .pipe(plugins.mocha({
                 reporters: 'spec'
@@ -37,7 +37,8 @@
     });
 
     gulp.task('watch', function () {
-        gulp.watch(paths.js, ['dev:jshint', 'test:coverage']).on('error', e => console.error(e));
+        gulp.watch(paths.js.concat(paths.jsTests), ['dev:jshint', 'dev:coverage'])
+            .on('error', e => console.error(e));
     });
 
     gulp.task('development', defaultTasks);
