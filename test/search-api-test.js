@@ -40,7 +40,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                 for (let j = 0; j < cols.length; j++) {
                     let col = cols[j];
                     should(col).have.instanceOf(nlobjSearchColumn);
-                    should(col).have.property('name').have.equalOneOf(['custrecord_type_id', 'custrecord_code_id'])
+                    should(col).have.property('name').have.equalOneOf(['custrecord_type_id', 'custrecord_code_id']);
                 }
             }
 
@@ -58,7 +58,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field', function(done) {
+        it('search one field (using nlobjSearchFilter)', function(done) {
             let columns = [
                     'custrecord_type_id',
                     'custrecord_code_id'
@@ -66,6 +66,20 @@ describe('<Unit Test - Netsuite Search API>', function () {
                 filters = [
                     ['custrecord_type_id', null, 'is', 237]
                 ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
+
+            var codes = nlapiSearchRecord('customrecord_codeg', null, filters, columns);
+            should(codes).have.length(224);
+            return done();
+        });
+
+        it('search one field (using array filter)', function(done) {
+            let columns = [
+                    'custrecord_type_id',
+                    'custrecord_code_id'
+                ].map(c => new nlobjSearchColumn(c)),
+                filters = [
+                    ['custrecord_type_id', null, 'is', 237]
+                ];
 
             var codes = nlapiSearchRecord('customrecord_codeg', null, filters, columns);
             should(codes).have.length(224);

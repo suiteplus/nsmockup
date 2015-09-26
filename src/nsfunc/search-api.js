@@ -56,6 +56,10 @@ function nlapiSearchRecord(type, id, filters, columns) {
 
         for (let i = 0; i < filters_.length; i++) {
             let filter_ = filters_[i];
+            if (Array.isArray(filter_)) {
+                filter_ = new nlobjSearchFilter(filter_[0], filter_[1], filter_[2], filter_[3], filter_[4]);
+                filters_[i] = filter_;
+            }
             if (filter_.join) {
                 // add column
                 !select[filter_.join] && (select[filter_.join] = filter_.name);
