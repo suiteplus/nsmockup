@@ -13,7 +13,7 @@
             ]
         };
 
-    var defaultTasks = ['env:development', 'dev:jshint', 'watch'];
+    var defaultTasks = ['env:development', 'dev:jshint', 'dev:coverage', 'watch'];
 
     gulp.task('env:development', function () {
         process.env.NODE_ENV = 'development';
@@ -25,8 +25,17 @@
             .pipe(plugins.jshint.reporter('jshint-stylish'));
     });
 
+
+    gulp.task('dev:coverage', function () {
+        let path = '/test/**/*-test.js';
+        return gulp.src([appRoot + path])
+            .pipe(plugins.mocha({
+                reporters: 'spec'
+            }));
+    });
+
     gulp.task('watch', function () {
-        gulp.watch(paths.js, ['dev:jshint']).on('error', e => console.error(e));
+        gulp.watch(paths.js, ['dev:jshint', 'test:coverage']).on('error', e => console.error(e));
     });
 
     gulp.task('development', defaultTasks);
