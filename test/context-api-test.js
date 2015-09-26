@@ -12,7 +12,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
         return done();
     });
     describe('SuiteScript API - nlapiGetContext:', function () {
-        it('simple search', function (done) {
+        it('just get context object', function (done) {
             var context = nlapiGetContext();
             should(context).have.instanceOf(nlobjContext);
 
@@ -20,6 +20,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
         });
     });
     after(function (done) {
-        done();
+        $NS_CONTECXT_OBJ = null;
+       return done();
     });
 });

@@ -11,8 +11,7 @@ function nlapiGetContext() {
     try {
         if (!$NS_CONTECXT_OBJ) $NS_CONTECXT_OBJ = new nlobjContext();
         return $NS_CONTECXT_OBJ;
-    }
-    catch (e) {
+    } catch (e) {
         throw nlapiCreateError(e);
     }
 }
