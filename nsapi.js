@@ -21,16 +21,16 @@ for (let i=0; i<files.length; vmAddFile(files[i++]));
 
 var $db;
 
-function loadMongodb(cb) {
-    let dbDir = '.lowdb',
+function loadDatabase(cb) {
+    let base = '.nsmockup',
+        dbDir = base + '/db',
         dbPath = dbDir + '/db.json';
 
-    if (!fs.existsSync(dbDir)) {
-        fs.mkdirSync(dbDir);
-    }
-    if (!fs.existsSync(dbPath)) {
-        fs.writeFileSync(dbPath, '{}');
-    }
+    [base, dbDir].forEach(f => {
+        !fs.existsSync(f) && fs.mkdirSync(f);
+    });
+
+    !fs.existsSync(dbPath) && fs.writeFileSync(dbPath, '{}');
 
     let low = require('lowdb'),
         db = low(dbPath);
@@ -40,6 +40,7 @@ function loadMongodb(cb) {
         db.object.__metadata = [];
         db.save();
     }
+    db.$path = base+'/cabinet';
 
     cb(global.$db = db);
 }
@@ -56,7 +57,7 @@ exports.initDB = function(opts, cb) {
                 let metadata = metadatas[i];
                 if (typeof metadata === 'string') metadata = require(metadata);
 
-                if (!metadata.code) continue;
+                if (!metadata || !metadata.code) continue;
                 else {
                     _metadata.remove({code: metadata.code});
                     _metadata.push(metadata);
@@ -100,16 +101,34 @@ exports.initDB = function(opts, cb) {
         }
     }
     if ($db) initDB($db);
-    else loadMongodb(initDB);
+    else loadDatabase(initDB);
 };
 
 exports.cleanDB = function(cb) {
+    var rmAllDirs = function (path) {
+        if (fs.existsSync(path)) {
+            fs.readdirSync(path).forEach(function (file) {
+                var curPath = path + '/' + file;
+                if (fs.lstatSync(curPath).isDirectory()) { // recurse
+                    rmAllDirs(curPath);
+                } else { // delete file
+                    fs.unlinkSync(curPath);
+                }
+            });
+            fs.rmdirSync(path);
+        }
+    };
+
     function cleanDB(db) {
         db.object = {};
         db.save();
+
+        rmAllDirs(db.$path) && fs.mkdirSync(db.$path);
+
         return cb();
     }
+
     if ($db) cleanDB($db);
-    else loadMongodb(cleanDB);
+    else loadDatabase(cleanDB);
 };
 
