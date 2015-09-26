@@ -1,4 +1,4 @@
-# nsmockup [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
+# nsmockup [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status][david-image]][david-url]
 Netsuite API Mockup (unstable)
 
 ## Required
@@ -36,3 +36,6 @@ Netsuite API Mockup (unstable)
 
 [coveralls-url]: https://coveralls.io/r/suiteplus/nsmockup
 [coveralls-image]: http://img.shields.io/coveralls/suiteplus/nsmockup/master.svg
+
+[david-url]: https://david-dm.org/suiteplus/nsmockup
+[david-image]: https://david-dm.org/suiteplus/nsmockup.svg
