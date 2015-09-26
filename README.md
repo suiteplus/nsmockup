@@ -30,3 +30,6 @@ Netsuite API Mockup (unstable)
         console.log('search record', nlapiSearchRecord('customrecord_codeg'));
     });
 ```
+
+[travis-url]: https://travis-ci.org/suiteplus/nsmockup
+[travis-image]: https://img.shields.io/travis/suiteplus/nsmockup.svg
