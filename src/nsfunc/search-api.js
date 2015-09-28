@@ -27,7 +27,43 @@ function nlapiCopyRecord(type, id, initializeValues) { }
  *
  * @since	2007.0
  */
-function nlapiLoadRecord(type, id, initializeValues) { }
+function nlapiLoadRecord(type, id, initializeValues) {
+    'use strict';
+    if (!type) throw nlapiCreateError('SSS_TYPE_ARG_REQD');
+    if (!id) throw nlapiCreateError('SSS_ID_ARG_REQD');
+
+    let meta = $db('__metadata').chain().where({code: type}).value();
+    if (!meta || !meta.length) throw nlapiCreateError('SSS_INVALID_RECORD_TYPE');
+
+    let collection = $db(type);
+
+    var res = collection.chain().where({internalid: id}).value();
+    if (!res || !res.length) throw nlapiCreateError('SSS_INVALID_INTERNAL_ID');
+
+    let o = new nlobjRecord(type, id),
+        data = res[0];
+    delete data.internalid;
+
+    let dataFields = Object.keys(data),
+        initFields = initializeValues ? Object.keys(initializeValues) : [];
+
+    for (let i = 0; i < dataFields.length; i++) {
+        let dataField = dataFields[i];
+        o.setFieldValue(dataField, data[dataField]);
+
+        // remove same field from initializeValues
+        ((i) => initFields.splice(i,1))(initFields.indexOf(dataField));
+    }
+
+    for (let i = 0; i < initFields.length; i++) {
+        let initField = initFields[i];
+        if (o.getFieldValue())
+            continue;
+        else
+            o.setFieldValue(initField, initializeValues[initField]);
+    }
+    return o;
+}
 
 /**
  * Instantiate a new nlobjRecord object containing all the default field data for that record type.
@@ -83,8 +119,13 @@ function nlapiCreateRecord(type, initializeValues) {
  */
 function nlapiSubmitRecord(record, doSourcing, ignoreMandatoryFields) {
     'use strict';
+    if (!record) throw nlapiCreateError('SSS_RECORD_OBJ_REQD');
+
     let recType = record.getRecordType(),
-        collection = $db(recType),
+        meta = $db('__metadata').chain().where({code: recType}).value();
+    if (!meta || !meta.length) throw nlapiCreateError('SSS_INVALID_RECORD_OBJ');
+
+    let collection = $db(recType),
         fields = record.getAllFields();
 
     let data = {internalid: record.getId()};
@@ -123,6 +164,12 @@ function nlapiSubmitRecord(record, doSourcing, ignoreMandatoryFields) {
  */
 function nlapiDeleteRecord(type, id) {
     'use strict';
+    if (!type) throw nlapiCreateError('SSS_TYPE_ARG_REQD');
+    if (!id) throw nlapiCreateError('SSS_ID_ARG_REQD');
+
+    let meta = $db('__metadata').chain().where({code: type}).value();
+    if (!meta || !meta.length) throw nlapiCreateError('SSS_INVALID_RECORD_TYPE');
+
     let collection = $db(type),
         query = {internalid: id};
 
@@ -153,6 +200,11 @@ function nlapiDeleteRecord(type, id) {
  */
 function nlapiSearchRecord(type, id, filters, columns) {
     'use strict';
+    if (!type) throw nlapiCreateError('SSS_TYPE_ARG_REQD');
+
+    let meta = $db('__metadata').chain().where({code: type}).value();
+    if (!meta || !meta.length) throw nlapiCreateError('SSS_INVALID_RECORD_TYPE');
+
     let _ = require('lodash');
 
     let items = $db(type).chain(),
@@ -168,7 +220,7 @@ function nlapiSearchRecord(type, id, filters, columns) {
         let columns_ = !Array.isArray(columns) ? [columns] : columns;
         for (let i=0; i<columns_.length; i++) {
             let column_ = columns_[i];
-            if (!(column_ instanceof nlobjSearchColumn)) throw 'SSS_TYPE_ARG_REQD';
+            if (!(column_ instanceof nlobjSearchColumn)) throw nlapiCreateError('SSS_INVALID_SRCH_COL_NAME');
 
             if (column_.join) {
                 select[column_.join] = column_.name;
