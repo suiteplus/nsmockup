@@ -42,11 +42,12 @@ function nlapiLoadRecord(type, id, initializeValues) {
 
     let collection = $db(type);
 
+
     var res = collection.chain().where({internalid: id}).value();
     if (!res || !res.length) throw nlapiCreateError('SSS_INVALID_INTERNAL_ID');
 
     let o = new nlobjRecord(type, id),
-        data = res[0];
+        data = JSON.parse(JSON.stringify(res[0]));
     delete data.internalid;
 
     let dataFields = Object.keys(data),

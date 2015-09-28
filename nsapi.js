@@ -64,7 +64,7 @@ exports.init = function(opts, cb) {
                 else {
                     _metadata.remove({code: metadata.code});
                     _metadata.push(metadata);
-                    console.log('import record-type metadata "' + metadata.code + '"');
+                    //console.log('import record-type metadata "' + metadata.code + '"');
                 }
             }
             db.save();
@@ -99,7 +99,7 @@ exports.init = function(opts, cb) {
             db.object[recName] = recVal;
             db.save();
 
-            console.log('import record-type "' + recName + '" - total: ' + recVal.length);
+            //console.log('import record-type "' + recName + '" - total: ' + recVal.length);
             verifyDone();
         }
     }
