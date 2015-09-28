@@ -29,7 +29,7 @@ function nlapiSubmitFile(file) {
     let fs = require('fs'),
         cabinet = $db('__cabinet');
 
-    let folder = $db.$path + '/'+ file.folder,
+    let folder = $db.$pathCabinet + '/'+ file.folder,
         path = folder + '/' + file.name;
     if (!fs.existsSync(folder)) {
         let folders = folder.split('/'),

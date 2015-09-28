@@ -32,7 +32,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             should(fc).have.property('folder', file.folder);
             should(fc).have.property('encoding', file.encoding);
 
-            should(fc).have.property('path', $db.$path+'/'+file.folder+'/'+file.name);
+            should(fc).have.property('path', $db.$pathCabinet+'/'+file.folder+'/'+file.name);
             return done();
         });
     });
