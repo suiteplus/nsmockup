@@ -48,7 +48,7 @@ function loadDatabase(cb) {
     cb(global.$db = db);
 }
 
-exports.initDB = function(opts, cb) {
+exports.init = function(opts, cb) {
     function initDB (db) {
         let metadatas = opts.metadatas;
         if (typeof metadatas === 'string') metadatas = [require(opts.records)];
@@ -107,7 +107,7 @@ exports.initDB = function(opts, cb) {
     else loadDatabase(initDB);
 };
 
-exports.cleanDB = function(cb) {
+exports.destroy = function(cb) {
     var rmAllDirs = function (path) {
         if (fs.existsSync(path)) {
             fs.readdirSync(path).forEach(function (file) {

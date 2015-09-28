@@ -8,7 +8,7 @@ var should = require('should'),
  */
 describe('<Unit Test - Netsuite File API>', function () {
     before(function (done) {
-        nsmockup.initDB({}, done);
+        nsmockup.init({}, done);
     });
     describe('SuiteScript API - nlapiCreateFile and nlapiSubmitFile:', function () {
         it('create file', function (done) {
@@ -85,6 +85,6 @@ describe('<Unit Test - Netsuite File API>', function () {
         });
     });
     after(function (done) {
-        nsmockup.cleanDB(done);
+        nsmockup.destroy(done);
     });
 });

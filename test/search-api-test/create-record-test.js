@@ -8,7 +8,6 @@ var base = __dirname + '/../record-data';
  * Test Suites
  */
 describe('<Unit Test - Netsuite Search API>', function () {
-    this.timeout(10000);
     before(function (done) {
         let metadatas = [
                 base + '/meta/recordType-metaData-codeg.json',
@@ -18,7 +17,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                 'customrecord_codeg': base + '/data/recordType-codeg.json',
                 'customrecord_codeg_ids': base + '/data/recordType-codeg_ids.json'
             };
-        nsmockup.initDB({records, metadatas}, done);
+        nsmockup.init({records, metadatas}, done);
     });
     describe('SuiteScript API - nlapiCreateRecord:', function () {
         let recType = 'customrecord_codeg';
@@ -87,6 +86,6 @@ describe('<Unit Test - Netsuite Search API>', function () {
         });
     });
     after(function (done) {
-        nsmockup.cleanDB(done);
+        nsmockup.destroy(done);
     });
 });

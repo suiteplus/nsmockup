@@ -24,7 +24,7 @@ Netsuite API Mockup
         };
 
     // start database simulation
-    nsmockup.initDB({records, metadatas}, function(err) {
+    nsmockup.init({records, metadatas}, function(err) {
         if (err) throw err;
 
         console.log('search record', nlapiSearchRecord('customrecord_codeg'));
