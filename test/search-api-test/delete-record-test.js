@@ -51,6 +51,37 @@ describe('<Unit Test - Netsuite Search API>', function () {
 
             return done();
         });
+
+        it('delete missing record type', function (done) {
+            try {
+                nlapiDeleteRecord();
+                return done('missing record type');
+            } catch (e) {
+                should(e).have.property('code', 'SSS_TYPE_ARG_REQD');
+                return done();
+            }
+        });
+
+        it('delete missing id', function (done) {
+            try {
+                nlapiDeleteRecord(recType);
+                return done('missing id');
+            } catch (e) {
+                should(e).have.property('code', 'SSS_ID_ARG_REQD');
+                return done();
+            }
+        });
+
+        it('delete invalid record type', function (done) {
+            try {
+                let invalidRecType = recType + 'japois';
+                nlapiDeleteRecord(invalidRecType, 1);
+                return done('invalid record type: ' + invalidRecType);
+            } catch (e) {
+                should(e).have.property('code', 'SSS_INVALID_RECORD_TYPE');
+                return done();
+            }
+        });
     });
     after(function (done) {
         nsmockup.destroy(done);

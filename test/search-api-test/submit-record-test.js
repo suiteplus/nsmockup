@@ -91,6 +91,29 @@ describe('<Unit Test - Netsuite Search API>', function () {
 
             return done();
         });
+
+        it('submit missing record', function (done) {
+            try {
+                let o = nlapiSubmitRecord();
+                should(o).have.instanceOf(nlobjRecord);
+                return done('missing record type: '+o.getRecordType());
+            } catch (e) {
+                should(e).have.property('code', 'SSS_RECORD_OBJ_REQD');
+                return done();
+            }
+        });
+
+        it('submit missing record type', function (done) {
+            try {
+                let invalidRecType = recType+'japoooo',
+                    o = nlapiSubmitRecord(new nlobjRecord(invalidRecType));
+                should(o).have.instanceOf(nlobjRecord);
+                return done('missing record type: '+invalidRecType);
+            } catch (e) {
+                should(e).have.property('code', 'SSS_INVALID_RECORD_OBJ');
+                return done();
+            }
+        });
     });
     after(function (done) {
         nsmockup.destroy(done);

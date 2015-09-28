@@ -9,7 +9,12 @@
  *
  * @since	2007.0
  */
-function nlapiCopyRecord(type, id, initializeValues) { }
+function nlapiCopyRecord(type, id, initializeValues) {
+    'use strict';
+    let record = nlapiLoadRecord(type, id, initializeValues);
+    record.id = 0;
+    return record;
+}
 
 /**
  * Load an existing record from the system.
@@ -123,7 +128,7 @@ function nlapiSubmitRecord(record, doSourcing, ignoreMandatoryFields) {
 
     let recType = record.getRecordType(),
         meta = $db('__metadata').chain().where({code: recType}).value();
-    if (!meta || !meta.length) throw nlapiCreateError('SSS_INVALID_RECORD_OBJ');
+    if (!recType || !meta || !meta.length) throw nlapiCreateError('SSS_INVALID_RECORD_OBJ');
 
     let collection = $db(recType),
         fields = record.getAllFields();
