@@ -21,13 +21,15 @@ describe('<Unit Test - Netsuite Search API>', function () {
         nsmockup.initDB({records, metadatas}, done);
     });
     describe('SuiteScript API - nlapiSearchRecord:', function () {
+        let recType = 'customrecord_codeg';
+        
         it('search all', function (done) {
             var columns = [
                 'custrecord_type_id',
                 'custrecord_code_id'
             ].map(c => new nlobjSearchColumn(c));
 
-            let codes = nlapiSearchRecord('customrecord_codeg', null, null, columns);
+            let codes = nlapiSearchRecord(recType, null, null, columns);
             should(codes).have.length(1244);
             for (let i = 0; i < codes.length; i++) {
                 let code = codes[i];
@@ -54,7 +56,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                     'custrecord_code_id'
                 ].map(c => new nlobjSearchColumn(c));
 
-            var codes = nlapiSearchRecord('customrecord_codeg', 5, null, columns);
+            var codes = nlapiSearchRecord(recType, 5, null, columns);
             should(codes).have.length(1);
             return done();
         });
@@ -68,7 +70,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                     ['custrecord_type_id', null, 'is', 237]
                 ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
 
-            var codes = nlapiSearchRecord('customrecord_codeg', null, filters, columns);
+            var codes = nlapiSearchRecord(recType, null, filters, columns);
             should(codes).have.length(224);
             return done();
         });
@@ -82,7 +84,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                     ['custrecord_type_id', null, 'is', 237]
                 ];
 
-            var codes = nlapiSearchRecord('customrecord_codeg', null, filters, columns);
+            var codes = nlapiSearchRecord(recType, null, filters, columns);
             should(codes).have.length(224);
             return done();
         });
@@ -96,7 +98,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                     ['custrecord_id_title_id', 'custrecord_type_id', 'is', 'japo 266']
                 ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
 
-            var codes = nlapiSearchRecord('customrecord_codeg', null, filters, columns);
+            var codes = nlapiSearchRecord(recType, null, filters, columns);
             should(codes).have.length(15);
             return done();
         });
@@ -110,7 +112,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                     ['custrecord_id_title_id', 'custrecord_type_id', 'is', 'japo 266']
                 ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
 
-            let codes = nlapiSearchRecord('customrecord_codeg', null, filters, columns);
+            let codes = nlapiSearchRecord(recType, null, filters, columns);
             should(codes).have.length(15);
             let code = codes[0];
             should(code).have.property('id', 11);
@@ -130,7 +132,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                     ['custrecord_id_title_id', 'custrecord_type_id', 'is', 'japo 266']
                 ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
 
-            let codes = nlapiSearchRecord('customrecord_codeg', null, filters, columns);
+            let codes = nlapiSearchRecord(recType, null, filters, columns);
             should(codes).have.length(15);
             let code = codes[0];
             should(code).have.property('id', 11);

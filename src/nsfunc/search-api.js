@@ -42,7 +42,29 @@ function nlapiLoadRecord(type, id, initializeValues) { }
  *
  * @since	2007.0
  */
-function nlapiCreateRecord(type, initializeValues) { }
+function nlapiCreateRecord(type, initializeValues) {
+    'use strict';
+    if (!type) throw nlapiCreateError('SSS_TYPE_ARG_REQD');
+
+    let meta = $db('__metadata').chain().where({code: type}).value();
+    if (!meta || !meta.length) throw nlapiCreateError('SSS_INVALID_RECORD_TYPE');
+
+    let o = new nlobjRecord(type);
+    if (initializeValues) {
+        let fields = meta[0].fields.map(f => f.code),
+            initFields = Object.keys(initializeValues);
+
+        for(let i=0; i<initFields.length; i++) {
+            let initField = initFields[i];
+            if (!~fields.indexOf(initField)) {
+                throw nlapiCreateError('SSS_INVALID_INITIALIZE_DEFAULT_VALUE', 'invalid field:' +initField);
+            }
+            o.setFieldValue(initField, initializeValues[initField]);
+        }
+    }
+
+    return o;
+}
 
 /**
  * Submit a record to the system for creation or update.
@@ -59,7 +81,30 @@ function nlapiCreateRecord(type, initializeValues) { }
  *
  * @since	2007.0
  */
-function nlapiSubmitRecord(record, doSourcing, ignoreMandatoryFields) { }
+function nlapiSubmitRecord(record, doSourcing, ignoreMandatoryFields) {
+    'use strict';
+    let recType = record.getRecordType(),
+        collection = $db(recType),
+        fields = record.getAllFields();
+
+    let data = {internalid: record.getId()};
+    for (let i=0; i<fields.length; i++) {
+        let field = fields[i];
+        data[field] = record.getFieldValue(field);
+    }
+
+    if (data.internalid > 0) {
+        // Update Record
+        let query = {internalid: data.internalid};
+        collection.chain().find(query).assign(data).value();
+    } else {
+        // Insert New Record
+        data.internalid = collection.size() + 1;
+        collection.push(data);
+    }
+
+    return (record.id = data.internalid);
+}
 
 /**
  * Delete a record from the system.

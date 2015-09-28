@@ -22,6 +22,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
     });
     describe('SuiteScript API - nlapiDeleteRecord:', function () {
         let recType = 'customrecord_codeg';
+
         it('delete by id', function (done) {
             var filters = [
                 ['custrecord_type_id', null, 'is', 241]
