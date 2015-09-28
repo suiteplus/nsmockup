@@ -1,5 +1,22 @@
 # nsmockup ChangeLog
 
+## 2015-09-28, Version 0.2.0 (unstable),
+
+### Notable changes
+
+* **Netsuite API**: Mockup Netsuite Backend API:
+  * __Search APIs__:
+```javascript
+   function nlapiCopyRecord(type, id, filters, columns) { ; }
+   function nlapiCreateRecord(type, id, filters, columns) { ; }
+   function nlapiDeleteRecord(type, id, filters, columns) { ; }
+   function nlapiLoadRecord(type, id, filters, columns) { ; }
+   function nlapiSubmitRecord(type, id, filters, columns) { ; }
+   /** SuiteScript Objects */
+   function nlobjRecord() { ; }
+```
+
+
 ## 2015-09-26, Version 0.1.0 (unstable),
 
 ### Notable changes
