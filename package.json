@@ -4,7 +4,7 @@
   "description": "Netsuite API Mockup",
   "main": "nsapi.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "gulp test",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
@@ -13,9 +13,13 @@
   },
   "keywords": [
     "netsuite",
+    "suitecript",
+    "suitlet",
+    "restlet",
     "mock",
     "mockup",
     "suiteplus",
+    "suite",
     "s+"
   ],
   "author": "daniel.joppi@suiteplus.com",
