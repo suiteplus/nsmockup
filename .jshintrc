@@ -79,17 +79,23 @@
         // Netsuite Global Functions
         "nlapiCreateError": true,
         "nlapiCreateFile": true,
+        "nlapiCreateRecord": true,
+        "nlapiCopyRecord": true,
         "nlapiDeleteFile": true,
+        "nlapiDeleteRecord": true,
         "nlapiGetContext": true,
         "nlapiLoadFile": true,
+        "nlapiLoadRecord": true,
         "nlapiLogExecution": true,
         "nlapiSearchRecord": true,
         "nlapiSubmitFile": true,
+        "nlapiSubmitRecord": true,
 
         // Netsuite Global Objects
         "nlobjContext": true,
         "nlobjError": true,
         "nlobjFile": true,
+        "nlobjRecord": true,
         "nlobjSearchColumn": true,
         "nlobjSearchFilter": true,
         "nlobjSearchResult": true,

@@ -1,4 +1,90 @@
 /**
+ * Return a new record using values from an existing record.
+ * @governance 10 units for transactions, 2 for custom records, 4 for all other records
+ *
+ * @param {string} 	type The record type name.
+ * @param {int} 	id The internal ID for the record.
+ * @param {Object} 	initializeValues Contains an array of name/value pairs of defaults to be used during record initialization.
+ * @return {nlobjRecord}  Returns an nlobjRecord object of a copied record.
+ *
+ * @since	2007.0
+ */
+function nlapiCopyRecord(type, id, initializeValues) { }
+
+/**
+ * Load an existing record from the system.
+ * @governance 10 units for transactions, 2 for custom records, 4 for all other records
+ *
+ * @param {string} 	type The record type name.
+ * @param {int} 	id The internal ID for the record.
+ * @param {Object} 	initializeValues Contains an array of name/value pairs of defaults to be used during record initialization.
+ * @return {nlobjRecord}  Returns an nlobjRecord object of an existing NetSuite record.
+ *
+ * @exception {SSS_INVALID_RECORD_TYPE}
+ * @exception {SSS_TYPE_ARG_REQD}
+ * @exception {SSS_INVALID_INTERNAL_ID}
+ * @exception {SSS_ID_ARG_REQD}
+ *
+ * @since	2007.0
+ */
+function nlapiLoadRecord(type, id, initializeValues) { }
+
+/**
+ * Instantiate a new nlobjRecord object containing all the default field data for that record type.
+ * @governance 10 units for transactions, 2 for custom records, 4 for all other records
+ *
+ * @param {string} type record type ID.
+ * @param {Object} initializeValues Contains an array of name/value pairs of defaults to be used during record initialization.
+ * @return {nlobjRecord}   Returns an nlobjRecord object of a new record from the system.
+ *
+ * @exception {SSS_INVALID_RECORD_TYPE}
+ * @exception {SSS_TYPE_ARG_REQD}
+ *
+ * @since	2007.0
+ */
+function nlapiCreateRecord(type, initializeValues) { }
+
+/**
+ * Submit a record to the system for creation or update.
+ * @governance 20 units for transactions, 4 for custom records, 8 for all other records
+ *
+ * @param {nlobjRecord} record nlobjRecord object containing the data record.
+ * @param {boolean} 	[doSourcing] If not set, this argument defaults to false.
+ * @param {boolean} 	[ignoreMandatoryFields] Disables mandatory field validation for this submit operation.
+ * @return {string} internal ID for committed record.
+ *
+ * @exception {SSS_INVALID_RECORD_OBJ}
+ * @exception {SSS_RECORD_OBJ_REQD}
+ * @exception {SSS_INVALID_SOURCE_ARG}
+ *
+ * @since	2007.0
+ */
+function nlapiSubmitRecord(record, doSourcing, ignoreMandatoryFields) { }
+
+/**
+ * Delete a record from the system.
+ * @governance 20 units for transactions, 4 for custom records, 8 for all other records
+ *
+ * @param {string} 	type The record type name.
+ * @param {int} 	id The internal ID for the record.
+ * @return {void}
+ *
+ * @exception {SSS_INVALID_RECORD_TYPE}
+ * @exception {SSS_TYPE_ARG_REQD}
+ * @exception {SSS_INVALID_INTERNAL_ID}
+ * @exception {SSS_ID_ARG_REQD}
+ *
+ * @since	2007.0
+ */
+function nlapiDeleteRecord(type, id) {
+    'use strict';
+    let collection = $db(type),
+        query = {internalid: id};
+
+    collection.remove(query);
+}
+
+/**
  * Perform a record search using an existing search or filters and columns.
  * @governance 10 units
  * @restriction returns the first 1000 rows in the search
@@ -79,6 +165,8 @@ function nlapiSearchRecord(type, id, filters, columns) {
                     fkey = filter_.name + '=' + filter_.values[0];
 
                 recordCache[filter_.join][fkey] = records;
+            } else {
+                !select[filter_.name] && (select[filter_.name] = 1);
             }
         }
 

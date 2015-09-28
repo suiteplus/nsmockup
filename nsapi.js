@@ -23,10 +23,11 @@ var $db;
 
 function loadDatabase(cb) {
     let base = '.nsmockup',
-        dbDir = base + '/db',
+        tempDir = base + '/temp-'+(new Date().toJSON().replace(/[-:.Z]/g,'')),
+        dbDir = tempDir + '/db',
         dbPath = dbDir + '/db.json';
 
-    [base, dbDir].forEach(f => {
+    [base, tempDir, dbDir].forEach(f => {
         !fs.existsSync(f) && fs.mkdirSync(f);
     });
 
@@ -40,7 +41,9 @@ function loadDatabase(cb) {
         db.object.__metadata = [];
         db.save();
     }
-    db.$path = base+'/cabinet';
+    db.$path = tempDir;
+    db.$pathDB = dbDir;
+    db.$pathCabinet = tempDir+'/cabinet';
 
     cb(global.$db = db);
 }
@@ -123,7 +126,7 @@ exports.cleanDB = function(cb) {
         db.object = {};
         db.save();
 
-        rmAllDirs(db.$path) && fs.mkdirSync(db.$path);
+        rmAllDirs(db.$pathCabinet) && fs.mkdirSync(db.$pathCabinet);
 
         return cb();
     }

@@ -1,8 +1,9 @@
 'use strict';
 
 var should = require('should'),
-    nsmockup = require('../');
+    nsmockup = require('../../');
 
+var base = __dirname + '/../record-data';
 /**
  * Test Suites
  */
@@ -10,17 +11,17 @@ describe('<Unit Test - Netsuite Search API>', function () {
     this.timeout(10000);
     before(function (done) {
         let metadatas = [
-                __dirname + '/record/meta/recordType-metaData-codeg.json',
-                __dirname + '/record/meta/recordType-metaData-codeg_ids.json'
+                base + '/meta/recordType-metaData-codeg.json',
+                base + '/meta/recordType-metaData-codeg_ids.json'
             ],
             records = {
-                'customrecord_codeg': __dirname + '/record/data/recordType-codeg.json',
-                'customrecord_codeg_ids': __dirname + '/record/data/recordType-codeg_ids.json'
+                'customrecord_codeg': base + '/data/recordType-codeg.json',
+                'customrecord_codeg_ids': base + '/data/recordType-codeg_ids.json'
             };
         nsmockup.initDB({records, metadatas}, done);
     });
     describe('SuiteScript API - nlapiSearchRecord:', function () {
-        it('simple search', function (done) {
+        it('search all', function (done) {
             var columns = [
                 'custrecord_type_id',
                 'custrecord_code_id'
