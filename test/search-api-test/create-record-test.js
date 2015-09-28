@@ -8,6 +8,8 @@ var base = __dirname + '/../record-data';
  * Test Suites
  */
 describe('<Unit Test - Netsuite Search API>', function () {
+    this.timeout(5000);
+
     before(function (done) {
         let metadatas = [
                 base + '/meta/recordType-metaData-codeg.json',
