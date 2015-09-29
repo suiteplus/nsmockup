@@ -24,7 +24,8 @@
         return gulp.src(paths.js.concat(paths.jsTests))
             .pipe(plugins.plumber())
             .pipe(plugins.jshint())
-            .pipe(plugins.jshint.reporter('jshint-stylish'));
+            .pipe(plugins.jshint.reporter('jshint-stylish'))
+            .pipe(plugins.jshint.reporter('fail'));
     });
 
 

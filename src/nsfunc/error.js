@@ -9,6 +9,5 @@
  * @since 2008.2
  */
 function nlapiCreateError(code, details, suppressEmail) {
-    window.errorObj = new nlobjError(code, details, suppressEmail);
-    return window.errorObj;
+    return new nlobjError(code, details, suppressEmail);
 }

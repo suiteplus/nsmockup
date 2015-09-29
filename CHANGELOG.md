@@ -16,7 +16,6 @@
    function nlobjRecord() { ; }
 ```
 
-
 ## 2015-09-26, Version 0.1.0 (unstable),
 
 ### Notable changes

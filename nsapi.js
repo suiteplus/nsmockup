@@ -1,29 +1,35 @@
 'use strict';
 var fs = require('fs'),
     vm = require('vm'),
-    vmInclude = function(code, path) {
+    vmInclude = function (code, path) {
         vm.runInThisContext(code, path);
     },
-    vmAddFile = function(path) {
+    vmAddFile = function (path) {
         vmInclude(fs.readFileSync(path), path);
+    },
+    vmRmFile = function (path) {
+        vmInclude('', path);
     };
 
 // workaround to 'require' works in vm.runInThisContext
 global.require = require;
 
-vmInclude('var window = {};');
+vmInclude('var window = global;');
 vmAddFile(__dirname + '/nsapi-doc.js');
 
 // load Netsuite functions and objects
 var glob = require('glob'),
     files = glob.sync(__dirname + '/src/**/*.js');
-for (let i=0; i<files.length; vmAddFile(files[i++]));
+for (let i = 0; i < files.length; vmAddFile(files[i++]));
 
 var $db;
 
+var $GLOBAL_VARS = Object.keys(global).concat(['$GLOBAL_VARS', '$db', '$GLOBAL_REM']),
+    $GLOBAL_REM = [];
+
 function loadDatabase(cb) {
     let base = '.nsmockup',
-        tempDir = base + '/temp-'+(new Date().toJSON().replace(/[-:.Z]/g,'')),
+        tempDir = base + '/temp-' + (new Date().toJSON().replace(/[-:.Z]/g, '')),
         dbDir = tempDir + '/db',
         dbPath = dbDir + '/db.json';
 
@@ -43,13 +49,13 @@ function loadDatabase(cb) {
     }
     db.$path = tempDir;
     db.$pathDB = dbDir;
-    db.$pathCabinet = tempDir+'/cabinet';
+    db.$pathCabinet = tempDir + '/cabinet';
 
-    cb(global.$db = db);
+    cb($db = global.$db = db);
 }
 
-exports.init = function(opts, cb) {
-    function initDB (db) {
+exports.init = function (opts, cb) {
+    function init(db) {
         let metadatas = opts.metadatas;
         if (typeof metadatas === 'string') metadatas = [require(opts.records)];
         else if (!Array.isArray(metadatas)) metadatas = [metadatas];
@@ -90,8 +96,8 @@ exports.init = function(opts, cb) {
                 continue;
             }
 
-            recVal = recVal.map((val,i) => {
-                if (!val.internalid) val.internalid = (i+1);
+            recVal = recVal.map((val, i) => {
+                if (!val.internalid) val.internalid = (i + 1);
                 return val;
             });
 
@@ -103,11 +109,12 @@ exports.init = function(opts, cb) {
             verifyDone();
         }
     }
-    if ($db) initDB($db);
-    else loadDatabase(initDB);
+
+    if ($db) init($db);
+    else loadDatabase(init);
 };
 
-exports.destroy = function(cb) {
+exports.destroy = function (cb) {
     var rmAllDirs = function (path) {
         if (fs.existsSync(path)) {
             fs.readdirSync(path).forEach(function (file) {
@@ -122,16 +129,47 @@ exports.destroy = function(cb) {
         }
     };
 
-    function cleanDB(db) {
+    function destroy(db) {
         db.object = {};
         db.save();
 
-        rmAllDirs(db.$pathCabinet) && fs.mkdirSync(db.$pathCabinet);
+        rmAllDirs(db.$pathCabinet);
 
+        let globalVars = Object.keys(global);
+        for (let k = 0; k < globalVars.length; k++) {
+            let globalVar = globalVars[k];
+            if ((~$GLOBAL_REM.indexOf(globalVar) || !~$GLOBAL_VARS.indexOf(globalVar)) && global[globalVar]) {
+                global[globalVar] = undefined;
+                !~$GLOBAL_REM.indexOf(globalVar) && $GLOBAL_REM.push(globalVar);
+            }
+        }
         return cb();
     }
 
-    if ($db) cleanDB($db);
-    else loadDatabase(cleanDB);
+    if ($db) destroy($db);
+    else loadDatabase(destroy);
 };
 
+exports.addScript = vmAddFile;
+
+let scripts = {
+    suitelet: [],
+    restlet: []
+};
+exports.createSuitelet = function (opt) {
+    if (!opt || !opt.files || opt.files.length === 0) return;
+
+    scripts.suitelet.push(opt);
+    for (let i = 0; i < opt.files.length; i++) {
+        vmAddFile(opt.files[i]);
+    }
+};
+
+exports.createRestlet = function (opt) {
+    if (!opt || !opt.files || opt.files.length === 0) return;
+
+    scripts.restlet.push(opt);
+    for (let i = 0; i < opt.files.length; i++) {
+        vmAddFile(opt.files[i]);
+    }
+};
