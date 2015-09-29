@@ -1,7 +1,7 @@
 'use strict';
 
 var should = require('should'),
-    nsmockup = require('../');
+    nsmockup = require('../../');
 
 /**
  * Test Suites

@@ -3,7 +3,7 @@
 var should = require('should'),
     nsmockup = require('../../');
 
-var base = __dirname + '/../record-data';
+var base = __dirname + '/../_input-files/record-data';
 /**
  * Test Suites
  */
