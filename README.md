@@ -10,6 +10,21 @@ Netsuite API Mockup
 ```
 
 ## Usage
+
+#### nsmockup.init(opt, cb)
+ - opt {records: [String], metadatas: [String]}
+ - cb  {Function}
+
+#### nsmockup.createSuitelet(cfg)
+ - cfg {name: String, func: String, files: [String]}
+
+#### nsmockup.createReslet(cfg)
+ - cfg {name: String, func: String, files: [String]}
+
+#### nsmockup.destroy(cb)
+ - cb  {Function}
+
+## Example
 ```javascript
     var nsmockup = require('nsmockup');
 
