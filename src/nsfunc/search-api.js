@@ -214,7 +214,6 @@ function nlapiSearchRecord(type, id, filters, columns) {
     'use strict';
     if (!type) throw nlapiCreateError('SSS_TYPE_ARG_REQD');
     if (id && typeof id !== 'number') throw nlapiCreateError('SSS_INVALID_INTERNAL_ID');
-console.log('nlapiSearchRecord', filters && filters.length, columns && columns.length);
     let meta = $db('__metadata').chain().where({code: type}).value();
     if (!meta || !meta.length) throw nlapiCreateError('SSS_INVALID_RECORD_TYPE');
 
@@ -237,9 +236,33 @@ console.log('nlapiSearchRecord', filters && filters.length, columns && columns.l
             rawColumns.push([n]);
         } else if (f && !~select[n].indexOf(f)) {
             select[n].push(f);
-            rawColumns.push([n, f]);
+            rawColumns.push([f, n]);
         }
     }
+
+    // find join columns
+    let recordCache = {},
+        joinCache = {},
+        metaCache = {},
+        metaFieldCache = {};
+    function findJoinColumns(join, name, value, columns) {
+        if (!recordCache[join]) recordCache[join] = {};
+
+        let recordMeta = metaCache[type] ||
+            (metaCache[type] = $db('__metadata').chain().where({code: type}).value());
+        let field = metaFieldCache[type + '.' + join] ||
+            (metaFieldCache[type + '.' + join] = _.where(recordMeta[0].fields, {code: join}));
+        if (!field || field.length === 0 || !field[0].recordType) return false;
+
+        let nlFilter = new nlobjSearchFilter(name, null, 'is', value),
+            nlColumn = columns ? columns.map((n) => new nlobjSearchColumn(n)) : new nlobjSearchColumn(name),
+            recordName = field[0].recordType,
+            records = nlapiSearchRecord(recordName, null, nlFilter, nlColumn),
+            fkey = name + '=' + value;
+
+        return recordCache[join][fkey] = records;
+    }
+
 
     if (columns) {
         let columns_ = !Array.isArray(columns) ? [columns] : columns;
@@ -255,10 +278,6 @@ console.log('nlapiSearchRecord', filters && filters.length, columns && columns.l
         }
     }
 
-    let recordCache = {},
-        joinCache = {},
-        metaCache = {},
-        metaFieldCache = {};
     if (filters) {
         let filters_ = !Array.isArray(filters) ? [filters] : filters;
 
@@ -272,21 +291,7 @@ console.log('nlapiSearchRecord', filters && filters.length, columns && columns.l
                 // add column
                 addSelect(filter_.join, filter_.name);
                 
-                if (!recordCache[filter_.join]) recordCache[filter_.join] = {};
-
-                let recordMeta = metaCache[type] ||
-                    (metaCache[type] = $db('__metadata').chain().where({code: type}).value());
-                let field = metaFieldCache[type + '.' + filter_.join] ||
-                    (metaFieldCache[type + '.' + filter_.join] = _.where(recordMeta[0].fields, {code: filter_.join}));
-                if (!field || field.length === 0 || !field[0].recordType) continue;
-
-                let nlFilter = new nlobjSearchFilter(filter_.name, null, 'is', filter_.values[0]),
-                    nlColumn = new nlobjSearchColumn(filter_.name),
-                    recordName = field[0].recordType,
-                    records = nlapiSearchRecord(recordName, null, nlFilter, nlColumn),
-                    fkey = filter_.name + '=' + filter_.values[0];
-
-                recordCache[filter_.join][fkey] = records;
+                findJoinColumns(filter_.join, filter_.name, filter_.values[0])
             } else {
                 addSelect(filter_.name);
             }
@@ -338,14 +343,30 @@ console.log('nlapiSearchRecord', filters && filters.length, columns && columns.l
                         rawValues[col].id =  item[col];
                     }
                 } else {
-                    let key = col + '.' + name + '=' + item[col],
-                        data = joinCache[key] && joinCache[key].rs;
+                    let value = item[col],
+                        key = col + '.' + name + '=' + value;
+                    if (!joinCache[key]) {
+                        let records = findJoinColumns(col, 'internalid', value, [name]),
+                            results = _.where(records, {id: value});
+
+                        if (!results || !results.length) {
+                            console.log('>>>>>+++', key);
+                            continue;
+                        } else {
+                            joinCache[key] ={
+                                has: true,
+                                rs: results[0]
+                            };
+                        }
+                    }
+
+                    let data = joinCache[key] && joinCache[key].rs;
                     if (!data) {
                         console.log('>>>>>', key);
                         continue;
                     }
-                    if (!rawValues[col]) rawValues[col] = {id: item[col]};
-                    console.log(':::::>>', col, name, data.getValue(name), names, rawValues[col]);
+                    if (!rawValues[col]) rawValues[col] = {id: value};
+                    //console.log(':::::>>', col, name, data.getValue(name), names, rawValues[col]);
                     rawValues[col][name] = data.getValue(name);
                     //console.log(':::::>>', col, name, rawValues[col][name]);
                 }
