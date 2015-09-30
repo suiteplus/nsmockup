@@ -152,24 +152,26 @@ exports.destroy = function (cb) {
 
 exports.addScript = vmAddFile;
 
-let scripts = {
-    suitelet: [],
-    restlet: []
-};
-exports.createSuitelet = function (opt) {
+let scripts = [];
+function createScript(opt) {
     if (!opt || !opt.files || opt.files.length === 0) return;
 
-    scripts.suitelet.push(opt);
+    scripts.push(opt);
     for (let i = 0; i < opt.files.length; i++) {
         vmAddFile(opt.files[i]);
     }
-};
-
-exports.createRestlet = function (opt) {
-    if (!opt || !opt.files || opt.files.length === 0) return;
-
-    scripts.restlet.push(opt);
-    for (let i = 0; i < opt.files.length; i++) {
-        vmAddFile(opt.files[i]);
+    if (opt.params) {
+        let pref = nlapiGetContext().preference,
+            keys = Object.keys(opt.params);
+        for (let i=0; i<keys.length;i++) {
+            let param = keys[i];
+            pref[param] = opt.params[param];
+        }
     }
-};
+}
+
+exports.createSuitelet = createScript;
+
+exports.createRestlet = createScript;
+
+exports.createSchedule = createScript;
