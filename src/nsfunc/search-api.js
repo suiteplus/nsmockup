@@ -36,6 +36,7 @@ function nlapiLoadRecord(type, id, initializeValues) {
     'use strict';
     if (!type) throw nlapiCreateError('SSS_TYPE_ARG_REQD');
     if (!id) throw nlapiCreateError('SSS_ID_ARG_REQD');
+    else if (typeof id !== 'number') throw nlapiCreateError('SSS_INVALID_INTERNAL_ID');
 
     let meta = $db('__metadata').chain().where({code: type}).value();
     if (!meta || !meta.length) throw nlapiCreateError('SSS_INVALID_RECORD_TYPE');
@@ -172,6 +173,7 @@ function nlapiDeleteRecord(type, id) {
     'use strict';
     if (!type) throw nlapiCreateError('SSS_TYPE_ARG_REQD');
     if (!id) throw nlapiCreateError('SSS_ID_ARG_REQD');
+    else if (typeof id !== 'number') throw nlapiCreateError('SSS_INVALID_INTERNAL_ID');
 
     let meta = $db('__metadata').chain().where({code: type}).value();
     if (!meta || !meta.length) throw nlapiCreateError('SSS_INVALID_RECORD_TYPE');
@@ -180,6 +182,10 @@ function nlapiDeleteRecord(type, id) {
         query = {internalid: id};
 
     collection.remove(query);
+}
+
+function nlapiCreateSearch(type, filters, columns) {
+    return new nlobjSearch(type, null, filters, columns);
 }
 
 /**
@@ -207,7 +213,8 @@ function nlapiDeleteRecord(type, id) {
 function nlapiSearchRecord(type, id, filters, columns) {
     'use strict';
     if (!type) throw nlapiCreateError('SSS_TYPE_ARG_REQD');
-
+    if (id && typeof id !== 'number') throw nlapiCreateError('SSS_INVALID_INTERNAL_ID');
+console.log('nlapiSearchRecord', filters && filters.length, columns && columns.length);
     let meta = $db('__metadata').chain().where({code: type}).value();
     if (!meta || !meta.length) throw nlapiCreateError('SSS_INVALID_RECORD_TYPE');
 
@@ -221,7 +228,19 @@ function nlapiSearchRecord(type, id, filters, columns) {
         items = items.where(query);
     }
 
-    let select =  {};
+    let select =  {},
+        rawColumns = [];
+    function addSelect(n, f) {
+        !select[n] && (select[n] = []);
+        if (!f && select[n].length === 0) {
+            select[n].push('$val');
+            rawColumns.push([n]);
+        } else if (f && !~select[n].indexOf(f)) {
+            select[n].push(f);
+            rawColumns.push([n, f]);
+        }
+    }
+
     if (columns) {
         let columns_ = !Array.isArray(columns) ? [columns] : columns;
         for (let i=0; i<columns_.length; i++) {
@@ -229,9 +248,9 @@ function nlapiSearchRecord(type, id, filters, columns) {
             if (!(column_ instanceof nlobjSearchColumn)) throw nlapiCreateError('SSS_INVALID_SRCH_COL_NAME');
 
             if (column_.join) {
-                select[column_.join] = column_.name;
+                addSelect(column_.join, column_.name);
             } else {
-                select[column_.name] = 1;
+                addSelect(column_.name);
             }
         }
     }
@@ -251,7 +270,7 @@ function nlapiSearchRecord(type, id, filters, columns) {
             }
             if (filter_.join) {
                 // add column
-                !select[filter_.join] && (select[filter_.join] = filter_.name);
+                addSelect(filter_.join, filter_.name);
                 
                 if (!recordCache[filter_.join]) recordCache[filter_.join] = {};
 
@@ -269,7 +288,7 @@ function nlapiSearchRecord(type, id, filters, columns) {
 
                 recordCache[filter_.join][fkey] = records;
             } else {
-                !select[filter_.name] && (select[filter_.name] = 1);
+                addSelect(filter_.name);
             }
         }
 
@@ -300,25 +319,40 @@ function nlapiSearchRecord(type, id, filters, columns) {
             return true;
         });
     }
+    //console.log('search record', 'select: ', select);
 
     return items.value().map(item => {
         let id = item.internalid;
-        let columns = Object.keys(item).filter(c => select[c]),
-            values = {};
+        let columns_ = Object.keys(item).filter(c => select[c]),
+            rawValues = {};
 
-        for (let i=0; i<columns.length; i++) {
-            let col = columns[i];
-            if (select[col] === 1) {
-                values[col] = item[col];
-            } else {
-                let name = select[col],
-                    key = col+'.'+name+'='+item[col],
-                    data = joinCache[key].rs;
-                if (!values[col]) values[col] = {id: item[col]};
-                values[col][name] = data.getValue(name);
+        for (let i=0; i<columns_.length; i++) {
+            let col = columns_[i],
+                names = select[col];
+            if (names) for (let n = 0; n < names.length; n++) {
+                let name = names[n];
+                if (name === '$val') {
+                    if (names.length === 1) rawValues[col] = item[col];
+                    else {
+                        if (!rawValues[col]) rawValues[col] = {};
+                        rawValues[col].id =  item[col];
+                    }
+                } else {
+                    let key = col + '.' + name + '=' + item[col],
+                        data = joinCache[key] && joinCache[key].rs;
+                    if (!data) {
+                        console.log('>>>>>', key);
+                        continue;
+                    }
+                    if (!rawValues[col]) rawValues[col] = {id: item[col]};
+                    console.log(':::::>>', col, name, data.getValue(name), names, rawValues[col]);
+                    rawValues[col][name] = data.getValue(name);
+                    //console.log(':::::>>', col, name, rawValues[col][name]);
+                }
             }
         }
+        //console.log('*****', type, id, rawValues, rawColumns);
 
-        return new nlobjSearchResult(type, id, values, columns);
+        return new nlobjSearchResult(type, id, rawValues, rawColumns);
     });
 }

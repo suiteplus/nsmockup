@@ -82,5 +82,5 @@ nlobjSearchResult.prototype.getText = function (name, join, summary) {
  * @since 2009.2
  */
 nlobjSearchResult.prototype.getAllColumns = function () {
-    return this.rawColumns.map(col => new nlobjSearchColumn(col));
+    return this.rawColumns.map(col => new nlobjSearchColumn(col[0], col[1]));
 };
