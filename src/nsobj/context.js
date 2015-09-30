@@ -25,6 +25,7 @@ function nlobjContext() {
     this.subsidiary = jsContextObj.subsidiary;
     this.environment = jsContextObj.environment;
     this.executioncontext = jsContextObj.context;
+    this.preference = {};
     //this.scriptprefs = null;
     this.usage = {};
     this.internal = true;
@@ -281,7 +282,7 @@ nlobjContext.prototype.getFeature = function (name) {
  * @since 2009.2
  */
 nlobjContext.prototype.getPreference = function (name) {
-    return {};
+    return this.preference[name];
 };
 
 /**
