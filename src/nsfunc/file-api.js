@@ -40,7 +40,7 @@ function nlapiSubmitFile(file) {
         }
     }
 
-    fs.writeFileSync(path, file.content, {encoding: file.encoding});
+    fs.writeFileSync(path, file.content, {encoding: 'utf8' || file.encoding});
     cabinet.push({
         path: path,
         encoding: file.encoding,
@@ -82,7 +82,7 @@ function nlapiLoadFile(id) {
     let fc = $db.object.__cabinet[id-1],
         fs = require('fs');
 
-    let data = fs.readFileSync(fc.path, {encoding: fc.encoding});
+    let data = fs.readFileSync(fc.path, {encoding: 'utf8' || fc.encoding});
 
     let file = new nlobjFile(fc.name, fc.type, data);
     file.encoding = fc.encoding;
