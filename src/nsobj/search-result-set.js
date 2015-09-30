@@ -32,7 +32,7 @@ nlobjSearchResultSet.prototype.forEachResult = function(callback)
             break;
         for (var i=0; continueIteration && i<searchResults.length; ++i)
         {
-            continueIteration = callback(searchResults[i]);
+            continueIteration = callback(searchResults[i], i+start);
         }
         if (searchResults.length < PAGE_SIZE)
             break;
