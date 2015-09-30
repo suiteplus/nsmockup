@@ -109,6 +109,7 @@ describe('<Unit Test - Netsuite API Simulation>', function () {
     after(function (done) {
         nsmockup.destroy(done);
     });
+});
 ```
 
 [npm-url]: https://npmjs.org/package/nsmockup
