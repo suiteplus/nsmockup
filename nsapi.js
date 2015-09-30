@@ -24,8 +24,9 @@ for (let i = 0; i < files.length; vmAddFile(files[i++]));
 
 var $db;
 
-var $GLOBAL_VARS = Object.keys(global).concat(['$GLOBAL_VARS', '$db', '$GLOBAL_REM']),
-    $GLOBAL_REM = [];
+const $GLOBAL_VARS = Object.keys(global).concat(['$GLOBAL_VARS', '$db', '$GLOBAL_REM']);
+global.$GLOBAL_REM = global.$GLOBAL_REM || [];
+
 
 function loadDatabase(cb) {
     let base = '.nsmockup',
@@ -115,6 +116,7 @@ exports.init = function (opts, cb) {
 };
 
 exports.destroy = function (cb) {
+
     var rmAllDirs = function (path) {
         if (fs.existsSync(path)) {
             fs.readdirSync(path).forEach(function (file) {
@@ -135,12 +137,13 @@ exports.destroy = function (cb) {
 
         rmAllDirs(db.$pathCabinet);
 
-        let globalVars = Object.keys(global);
+        let globalVars = Object.keys(global),
+            globalRem = global.$GLOBAL_REM;
         for (let k = 0; k < globalVars.length; k++) {
             let globalVar = globalVars[k];
-            if ((~$GLOBAL_REM.indexOf(globalVar) || !~$GLOBAL_VARS.indexOf(globalVar)) && global[globalVar]) {
+            if ((~globalRem.indexOf(globalVar) || !~$GLOBAL_VARS.indexOf(globalVar)) && global[globalVar]) {
                 global[globalVar] = undefined;
-                !~$GLOBAL_REM.indexOf(globalVar) && $GLOBAL_REM.push(globalVar);
+                !~globalRem.indexOf(globalVar) && globalRem.push(globalVar);
             }
         }
         return cb();
