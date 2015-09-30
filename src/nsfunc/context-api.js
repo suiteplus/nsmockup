@@ -31,6 +31,6 @@ function nlapiLogExecution(type, title, details) {
     if (!type || !~$TYPES.indexOf(type.toLowerCase())) {
         throw 'SSS_MISSING_REQD_ARGUMENT';
     } else {
-        console.log('NS >>', type, title, details, (type.toLowerCase() === 'error' ? new Error().stack : undefined));
+        console.log('NS >>', type, title, details, (type.toLowerCase() === 'error' ? details.stack || new Error().stack : undefined));
     }
 }
