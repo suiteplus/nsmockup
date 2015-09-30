@@ -59,7 +59,7 @@ function nlapiLookupField(type, id, fields, text) {
 
 
     if (single) {
-        return data[fields];
+        return '' + data[fields];
     } else {
         let result = {};
         for (let i=0; i<fields.length; i++) {

@@ -1,9 +1,11 @@
 [
   {
+    "internalid": 1,
     "custrecord_type_id": 201,
     "custrecord_code_id": 616
   },
   {
+    "internalid": 2,
     "custrecord_type_id": 219,
     "custrecord_code_id": 14
   },

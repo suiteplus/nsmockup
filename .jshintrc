@@ -88,6 +88,7 @@
         "nlapiLoadFile": true,
         "nlapiLoadRecord": true,
         "nlapiLogExecution": true,
+        "nlapiLookupField":  true,
         "nlapiSearchRecord": true,
         "nlapiSubmitFile": true,
         "nlapiSubmitRecord": true,
