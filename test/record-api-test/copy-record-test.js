@@ -7,7 +7,7 @@ var base = __dirname + '/../_input-files/record-data';
 /**
  * Test Suites
  */
-describe('<Unit Test - Netsuite Search API>', function () {
+describe('<Unit Test - Netsuite Record API>', function () {
     this.timeout(5000);
 
     before(function (done) {
@@ -21,24 +21,32 @@ describe('<Unit Test - Netsuite Search API>', function () {
             };
         nsmockup.init({records, metadatas}, done);
     });
-    describe('SuiteScript API - nlapiLoadRecord:', function () {
+    describe('SuiteScript API - nlapiCopyRecord:', function () {
         let recType = 'customrecord_codeg';
 
-        it('load by id', function (done) {
-            let code = nlapiLoadRecord(recType, 1);
+        it('copy by id', function (done) {
+            let code = nlapiLoadRecord(recType, 2);
             should(code).have.instanceOf(nlobjRecord);
-            should(code.getAllFields()).have.length(2);
+            should(code).have.property('id', 2);
 
-            ['custrecord_type_id', 'custrecord_code_id'].forEach(f => {
-                should(code.getFieldValue(f)).be.ok();
-            });
+            let copy = nlapiCopyRecord(code.getRecordType(), code.getId());
+            should(copy).have.instanceOf(nlobjRecord);
+            should(copy).not.equal(code);
+            should(copy.getRecordType()).be.equal(code.getRecordType());
+            //should(copy.getAllFields()).be.equal(code.getAllFields());
+
+            let fields = copy.getAllFields();
+            for (let i=0; i<fields.length; i++) {
+                let field = fields[i];
+                should(copy.getFieldValue(field)).be.equal(code.getFieldValue(field));
+            }
 
             return done();
         });
 
-        it('load missing record type', function (done) {
+        it('copy missing record type', function (done) {
             try {
-                let o = nlapiLoadRecord();
+                let o = nlapiCopyRecord();
                 should(o).have.instanceOf(nlobjRecord);
                 return done('missing record type: '+o.getRecordType());
             } catch (e) {
@@ -47,9 +55,9 @@ describe('<Unit Test - Netsuite Search API>', function () {
             }
         });
 
-        it('load missing id', function (done) {
+        it('copy missing id', function (done) {
             try {
-                let o = nlapiLoadRecord(recType);
+                let o = nlapiCopyRecord(recType);
                 should(o).have.instanceOf(nlobjRecord);
                 return done('missing id: '+o.getId());
             } catch (e) {
@@ -58,10 +66,10 @@ describe('<Unit Test - Netsuite Search API>', function () {
             }
         });
 
-        it('load invalid record type', function (done) {
+        it('copy invalid record type', function (done) {
             try {
                 let invalidRecType = recType + 'japois';
-                let o = nlapiLoadRecord(invalidRecType, 1);
+                let o = nlapiCopyRecord(invalidRecType, 1);
                 should(o).have.instanceOf(nlobjRecord);
                 return done('invalid record type: '+o.getRecordType());
             } catch (e) {

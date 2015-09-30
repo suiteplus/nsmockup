@@ -14,8 +14,8 @@ function nlobjSearch(type, id, filters, columns)
     this.searchId = id;
     this.scriptId = null;
     // if array, make a copy of it; if single value, make it an array
-    this.filters = filters === null ? null : (Array.isArray(filters) ? filters.slice() : [filters]);
-    this.columns = columns === null ? null : (Array.isArray(columns) ? columns.slice() : [columns]);
+    this.filters = !filters ? null : (Array.isArray(filters) ? filters.slice() : [filters]);
+    this.columns = !columns ? null : (Array.isArray(columns) ? columns.slice() : [columns]);
     this.isPublic = false;
 }
 
@@ -41,13 +41,16 @@ function nlobjSearch(type, id, filters, columns)
 //    }
 //    return array;
 //};
-nlobjSearch.prototype._clone = function()
-{
+nlobjSearch.prototype._clone = function() {
     'use strict';
     var filtersCopy = [];
-    for (let i=0; this.filters && i<this.filters.length; ++i) { filtersCopy.push(this.filters[i]._clone()); }
+    for (let i = 0; this.filters && i < this.filters.length; i++) {
+        filtersCopy.push(this.filters[i]._clone());
+    }
     var columnsCopy = [];
-    for (let i=0; this.columns && i<this.columns.length; ++i) { columnsCopy.push(this.columns[i]._clone()); }
+    for (let i = 0; this.columns && i < this.columns.length; i++) {
+        columnsCopy.push(this.columns[i]._clone());
+    }
     var clone = new nlobjSearch(this.type, this.searchId, filtersCopy, columnsCopy);
     clone.scriptId = this.scriptId;
     clone.isPublic = this.isPublic;
@@ -104,7 +107,7 @@ nlobjSearch.prototype.addFilter = function(filter)
 };
 nlobjSearch.prototype.addFilters = function(filters)
 {
-    if (filters) for (var i=0; i<filters.length; ++i)
+    if (filters) for (var i=0; i<filters.length; i++)
         this.addFilter(filters[i]);
 };
 //nlobjSearch.prototype.getFilterExpression = function()
@@ -136,7 +139,7 @@ nlobjSearch.prototype.addColumn = function(column)
 };
 nlobjSearch.prototype.addColumns = function(columns)
 {
-    if (columns) for (var i=0; i<columns.length; ++i)
+    if (columns) for (var i=0; i<columns.length; i++)
         this.addColumn(columns[i]);
 };
 //nlobjSearch.prototype.setRedirectURLToSearch = function()
