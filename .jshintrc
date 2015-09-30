@@ -80,6 +80,7 @@
         "nlapiCreateError": true,
         "nlapiCreateFile": true,
         "nlapiCreateRecord": true,
+        "nlapiCreateSearch": true,
         "nlapiCopyRecord": true,
         "nlapiDeleteFile": true,
         "nlapiDeleteRecord": true,
@@ -96,9 +97,12 @@
         "nlobjError": true,
         "nlobjFile": true,
         "nlobjRecord": true,
+        "nlobjSearch": true,
+        "nlobjSearchResult": true,
         "nlobjSearchColumn": true,
         "nlobjSearchFilter": true,
         "nlobjSearchResult": true,
+        "nlobjSearchResultSet": true,
 
         // workaround
         "window": true,

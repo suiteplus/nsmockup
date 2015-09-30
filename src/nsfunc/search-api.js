@@ -238,6 +238,7 @@ function nlapiSearchRecord(type, id, filters, columns) {
             select[n].push(f);
             rawColumns.push([f, n]);
         }
+        return select[n];
     }
 
     // find join columns
@@ -260,7 +261,7 @@ function nlapiSearchRecord(type, id, filters, columns) {
             records = nlapiSearchRecord(recordName, null, nlFilter, nlColumn),
             fkey = name + '=' + value;
 
-        return recordCache[join][fkey] = records;
+        return (recordCache[join][fkey] = records);
     }
 
 
@@ -273,7 +274,10 @@ function nlapiSearchRecord(type, id, filters, columns) {
             if (column_.join) {
                 addSelect(column_.join, column_.name);
             } else {
-                addSelect(column_.name);
+                let r = addSelect(column_.name);
+                if (column_.name === 'formulatext') {
+                    r[0] = column_.formula;
+                }
             }
         }
     }
@@ -291,7 +295,7 @@ function nlapiSearchRecord(type, id, filters, columns) {
                 // add column
                 addSelect(filter_.join, filter_.name);
                 
-                findJoinColumns(filter_.join, filter_.name, filter_.values[0])
+                findJoinColumns(filter_.join, filter_.name, filter_.values[0]);
             } else {
                 addSelect(filter_.name);
             }
@@ -334,7 +338,7 @@ function nlapiSearchRecord(type, id, filters, columns) {
         for (let i=0; i<columns_.length; i++) {
             let col = columns_[i],
                 names = select[col];
-            if (names) for (let n = 0; n < names.length; n++) {
+            if (names) { for (let n = 0; n < names.length; n++) {
                 let name = names[n];
                 if (name === '$val') {
                     if (names.length === 1) rawValues[col] = item[col];
@@ -366,13 +370,20 @@ function nlapiSearchRecord(type, id, filters, columns) {
                         continue;
                     }
                     if (!rawValues[col]) rawValues[col] = {id: value};
-                    //console.log(':::::>>', col, name, data.getValue(name), names, rawValues[col]);
                     rawValues[col][name] = data.getValue(name);
-                    //console.log(':::::>>', col, name, rawValues[col][name]);
                 }
-            }
+            } }
         }
-        //console.log('*****', type, id, rawValues, rawColumns);
+        // eval formulatext
+        if (select.formulatext) {
+            //TODO .. implement formulatext parse
+            let fields = select.formulatext[0].match(/{[\w]*}/g);
+            rawValues.formulatext = '';
+            if (fields) { for (let i=0; i<fields.length; i++) {
+                let field = fields[i].replace('{','').replace('}','');
+                item[field] && (rawValues.formulatext += item[field]+ ' ');
+            } }
+        }
 
         return new nlobjSearchResult(type, id, rawValues, rawColumns);
     });

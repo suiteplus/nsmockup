@@ -14,8 +14,8 @@ function nlobjSearch(type, id, filters, columns)
     this.searchId = id;
     this.scriptId = null;
     // if array, make a copy of it; if single value, make it an array
-    this.filters = filters == null ? null : (Array.isArray(filters) ? filters.slice() : [filters]);
-    this.columns = columns == null ? null : (Array.isArray(columns) ? columns.slice() : [columns]);
+    this.filters = filters === null ? null : (Array.isArray(filters) ? filters.slice() : [filters]);
+    this.columns = columns === null ? null : (Array.isArray(columns) ? columns.slice() : [columns]);
     this.isPublic = false;
 }
 
@@ -93,7 +93,7 @@ nlobjSearch.prototype.getFilters = function()
 nlobjSearch.prototype.setFilters = function(filters)
 {
     // if array, make a copy of it; if single value, make it an array
-    this.filters = filters == null ? null : (Array.isArray(filters) ? filters.slice() : [filters]);
+    this.filters = !filters ? null : (Array.isArray(filters) ? filters.slice() : [filters]);
 };
 nlobjSearch.prototype.addFilter = function(filter)
 {
@@ -125,8 +125,7 @@ nlobjSearch.prototype.getColumns = function()
 };
 nlobjSearch.prototype.setColumns = function(columns)
 {
-    // if array, make a copy of it; if single value, make it an array
-    this.columns = columns == null ? null : (Array.isArray(columns) ? columns.slice() : [columns]);
+    this.columns = !columns? null : (Array.isArray(columns) ? columns.slice() : [columns]);
 };
 nlobjSearch.prototype.addColumn = function(column)
 {
@@ -198,7 +197,7 @@ nlobjSearch.prototype.getSearchType = function()
 //        var rowResults = nsapiExtractSearchResults( rawResults, this.columns );
 //
 //        nsapiLogUsage( 'nlapiSearchRecord', isValEmpty(this.searchId) && nsapiIsLookup(this.filters) ? type : null );
-//        return rowResults != null && rowResults.length > 0 ? rowResults : null;
+//        return rowResults && rowResults.length > 0 ? rowResults : null;
 //    }
 //    catch( e )
 //    {
