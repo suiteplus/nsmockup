@@ -35,7 +35,7 @@ function nlapiLookupField(type, id, fields, text) {
     if (Array.isArray(fields)) {
         let _ = require('lodash');
 
-        for (let i=0; i<fields.length; i++) {
+        for (let i = 0; i < fields.length; i++) {
             let field = fields[i];
             if (joinRegExp.test(field)) {
                 let ss = field.split('.'),
@@ -62,7 +62,7 @@ function nlapiLookupField(type, id, fields, text) {
         return '' + data[fields];
     } else {
         let result = {};
-        for (let i=0; i<fields.length; i++) {
+        for (let i = 0; i < fields.length; i++) {
             let field = fields[i];
             if (joinRegExp.test(field)) {
                 let ss = field.split('.'),

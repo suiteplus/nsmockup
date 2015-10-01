@@ -153,10 +153,10 @@ nlobjRecord.prototype.getAllLineItemFields = function (name) {
 /**
  * Set the value of a sublist field.
  *
- * @param {string} 	group sublist name
- * @param {string} 	name sublist field name
- * @param {int} 	line line number (1-based)
- * @param {string} 	value sublist field value
+ * @param {string}    group sublist name
+ * @param {string}    name sublist field name
+ * @param {int}    line line number (1-based)
+ * @param {string}    value sublist field value
  *
  * @method
  * @memberOf nlobjRecord
@@ -189,8 +189,8 @@ nlobjRecord.prototype.setAndCommitLineItemValue = function (group, name, line, v
 /**
  * Insert a new line into a sublist.
  *
- * @param {string} 	group sublist name
- * @param {int} 	[line] line index at which to insert line
+ * @param {string}    group sublist name
+ * @param {int}    [line] line index at which to insert line
  *
  * @method
  * @memberOf nlobjRecord
@@ -216,8 +216,8 @@ nlobjRecord.prototype.insertLineItem = function (type, line) {
 /**
  * Remove an existing line from a sublist.
  *
- * @param {string} 	group sublist name
- * @param {int} 	[line] line number to remove
+ * @param {string}    group sublist name
+ * @param {int}    [line] line number to remove
  *
  * @method
  * @memberOf nlobjRecord
@@ -246,9 +246,9 @@ nlobjRecord.prototype.removeLineItem = function (type, line) {
 /**
  * Return the value of a sublist field.
  *
- * @param {string} 	group sublist name
- * @param {string} 	name sublist field name
- * @param {int} 	line line number (1-based)
+ * @param {string}    group sublist name
+ * @param {string}    name sublist field name
+ * @param {int}    line line number (1-based)
  *
  * @method
  * @memberOf nlobjRecord
@@ -291,9 +291,9 @@ nlobjRecord.prototype.getLineItemMatrixValue = function (type, fldnam, linenum, 
 /**
  * Return line number for 1st occurence of field value in a sublist column.
  *
- * @param {string} group	sublist name
- * @param {string} fldnam	sublist field name
- * @param {string} value	sublist field value
+ * @param {string} group    sublist name
+ * @param {string} fldnam    sublist field name
+ * @param {string} value    sublist field value
  * @return {int}
  *
  * @method
@@ -310,10 +310,10 @@ nlobjRecord.prototype.findLineItemValue = function (type, fldnam, value) {
 /**
  * Return line number for 1st occurence of field value in a sublist column.
  *
- * @param {string} 	group	sublist name
- * @param {string} 	fldnam	sublist field name
- * @param {int} 	column  matrix column index (1-based)
- * @param {string} 	value 	matrix field value
+ * @param {string}    group    sublist name
+ * @param {string}    fldnam    sublist field name
+ * @param {int}    column  matrix column index (1-based)
+ * @param {string}    value    matrix field value
  * @return {int}
  *
  * @method
@@ -329,10 +329,10 @@ nlobjRecord.prototype.findLineItemMatrixValue = function (type, fldnam, column, 
 /**
  * Set the value of a matrix header field.
  *
- * @param {string} 	type matrix sublist name
- * @param {string} 	name	matrix field name
- * @param {int} 	column matrix column index (1-based)
- * @param {string} 	value field value
+ * @param {string}    type matrix sublist name
+ * @param {string}    name    matrix field name
+ * @param {int}    column matrix column index (1-based)
+ * @param {string}    value field value
  * @return {void}
  *
  * @method
@@ -350,7 +350,7 @@ nlobjRecord.prototype.setMatrixValue = function (type, name, column, value) {
  * Get the value of a matrix header field.
  *
  * @param {string} type matrix sublist name
- * @param {string} name	matrix field name
+ * @param {string} name    matrix field name
  * @param {int} column matrix column index (1-based)
  * @return {string}
  *
@@ -365,8 +365,8 @@ nlobjRecord.prototype.getMatrixValue = function (type, fldnam, column) {
 /**
  * Return the number of columns for a matrix field.
  *
- * @param {string} 	group matrix sublist name
- * @param {string} 	name matrix field name
+ * @param {string}    group matrix sublist name
+ * @param {string}    name matrix field name
  * @return {int}
  *
  * @method
@@ -380,8 +380,8 @@ nlobjRecord.prototype.getMatrixCount = function (type, fldnam) {
 /**
  * Select an existing line in a sublist.
  *
- * @param {string} 	group sublist name
- * @param {int} 	line  line number to select
+ * @param {string}    group sublist name
+ * @param {int}    line  line number to select
  * @return {void}
  *
  * @method
@@ -424,7 +424,7 @@ nlobjRecord.prototype.cancelLineItem = function (type) {
 /**
  * Commit the current line in a sublist.
  *
- * @param {string} 	group sublist name
+ * @param {string}    group sublist name
  * @return {void}
  *
  * @method
@@ -448,8 +448,8 @@ nlobjRecord.prototype.getCurrentLineItemIndex = function (type) {
 /**
  * Return the current value of a sublist field.
  *
- * @param {string} 	group sublist name
- * @param {string} 	name sublist field name
+ * @param {string}    group sublist name
+ * @param {string}    name sublist field name
  * @return {string}
  *
  * @method
@@ -463,9 +463,9 @@ nlobjRecord.prototype.getCurrentLineItemValue = function (type, name) {
 };
 /**
  * Set the current value of a sublist field.
- * @param {string} 	group sublist name
- * @param {string} 	name sublist field name
- * @param {string} 	value sublist field value
+ * @param {string}    group sublist name
+ * @param {string}    name sublist field name
+ * @param {string}    value sublist field value
  * @return {void}
  *
  * @method
@@ -481,10 +481,10 @@ nlobjRecord.prototype.setCurrentLineItemValue = function (type, name, value) {
 /**
  * Set the current value of a sublist matrix field.
  *
- * @param {string} 	group matrix sublist name
- * @param {string} 	name matrix field name
- * @param {int} 	column matrix field column index (1-based)
- * @param {string} 	value matrix field value
+ * @param {string}    group matrix sublist name
+ * @param {string}    name matrix field name
+ * @param {int}    column matrix field column index (1-based)
+ * @param {string}    value matrix field value
  * @return {void}
  *
  * @method
@@ -505,9 +505,9 @@ nlobjRecord.prototype.setCurrentLineItemMatrixValue = function (type, fldnam, co
 /**
  * Return the current value of a sublist matrix field.
  *
- * @param {string} 	group matrix sublist name
- * @param {string} 	name matrix field name
- * @param {int} 	column matrix field column index (1-based)
+ * @param {string}    group matrix sublist name
+ * @param {string}    name matrix field name
+ * @param {int}    column matrix field column index (1-based)
  * @return {string}
  *
  * @method
@@ -584,9 +584,9 @@ nlobjRecord.prototype.getFieldTexts = function (name) {
 /**
  * Return the text value of a sublist field.
  *
- * @param {string} 	group sublist name
- * @param {string} 	name sublist field name
- * @param {int} 	line line number (1-based)
+ * @param {string}    group sublist name
+ * @param {string}    name sublist field name
+ * @param {int}    line line number (1-based)
  * @return {string}
  *
  * @method
@@ -600,8 +600,8 @@ nlobjRecord.prototype.getLineItemText = function (type, name, line) {
 /**
  * Return the current display value of a sublist field.
  *
- * @param {string} 	group sublist name
- * @param {string} 	name sublist field name
+ * @param {string}    group sublist name
+ * @param {string}    name sublist field name
  * @return {string}
  *
  * @method
@@ -619,7 +619,7 @@ nlobjRecord.prototype.setCurrentLineItemText = function (type, name, text) {
  * Return field metadata for field.
  *
  * @param {string} fldnam field name
- * @return	{nlobjField}
+ * @return    {nlobjField}
  *
  * @method
  * @memberOf nlobjRecord
@@ -722,7 +722,7 @@ nlobjRecord.prototype.getDateTimeValue = function (fldname, timezone) {
         if (preferredTimeZone == timezone)
             return storedDateTime;
         else
-            //TODO calulate date time with timeZone - daniel - 9/26/2015
+        //TODO calulate date time with timeZone - daniel - 9/26/2015
             return this.getFieldValue(fldname);
     }
 };

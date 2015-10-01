@@ -191,7 +191,7 @@ nlobjContext.prototype.getEnvironment = function () {
  * return the logging level for the current script execution. Not supported in CLIENT scripts
  * @since 2008.2
  */
-nlobjContext.prototype.getLogLevel = function() {
+nlobjContext.prototype.getLogLevel = function () {
     throw nlapiCreateError('SSS_NOT_YET_SUPPORTED');
 };
 
@@ -461,6 +461,6 @@ nlobjContext.prototype.getColorPreferences = function () {
  *
  * @since 2014.1
  */
-nlobjContext.prototype.getRuntimeVersion = function() {
+nlobjContext.prototype.getRuntimeVersion = function () {
     return {};
 };

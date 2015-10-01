@@ -8,8 +8,7 @@
  * @param {nlobjSearchFilter, nlobjSearchFilter[], object[]} [filters] [optional] A single nlobjSearchFilter object - or - an array of nlobjSearchFilter objects.
  * @param {nlobjSearchColumn, nlobjSearchColumn[]} [columns] [optional] A single nlobjSearchColumn object - or - an array of nlobjSearchColumn objects.
  */
-function nlobjSearch(type, id, filters, columns)
-{
+function nlobjSearch(type, id, filters, columns) {
     this.type = type;
     this.searchId = id;
     this.scriptId = null;
@@ -41,7 +40,7 @@ function nlobjSearch(type, id, filters, columns)
 //    }
 //    return array;
 //};
-nlobjSearch.prototype._clone = function() {
+nlobjSearch.prototype._clone = function () {
     'use strict';
     var filtersCopy = [];
     for (let i = 0; this.filters && i < this.filters.length; i++) {
@@ -57,8 +56,7 @@ nlobjSearch.prototype._clone = function() {
     clone.type = this.type;
     return clone;
 };
-nlobjSearch.prototype.runSearch = function()
-{
+nlobjSearch.prototype.runSearch = function () {
     return new nlobjSearchResultSet(this._clone());
 };
 //nlobjSearch.prototype.saveSearch = function(title, scriptId)
@@ -89,25 +87,21 @@ nlobjSearch.prototype.runSearch = function()
 //        throw nlapiCreateError( e );
 //    }
 //};
-nlobjSearch.prototype.getFilters = function()
-{
+nlobjSearch.prototype.getFilters = function () {
     return this.filters;
 };
-nlobjSearch.prototype.setFilters = function(filters)
-{
+nlobjSearch.prototype.setFilters = function (filters) {
     // if array, make a copy of it; if single value, make it an array
     this.filters = !filters ? null : (Array.isArray(filters) ? filters.slice() : [filters]);
 };
-nlobjSearch.prototype.addFilter = function(filter)
-{
+nlobjSearch.prototype.addFilter = function (filter) {
     if (!this.filters)
         this.filters = [filter];
     else
         this.filters.push(filter);
 };
-nlobjSearch.prototype.addFilters = function(filters)
-{
-    if (filters) for (var i=0; i<filters.length; i++)
+nlobjSearch.prototype.addFilters = function (filters) {
+    if (filters) for (var i = 0; i < filters.length; i++)
         this.addFilter(filters[i]);
 };
 //nlobjSearch.prototype.getFilterExpression = function()
@@ -122,24 +116,20 @@ nlobjSearch.prototype.addFilters = function(filters)
 //    nsapiAssertTrue(!nsapiIsFlatSearchFilterList(filterExpression), 'SSS_INVALID_SRCH_FILTER_EXPR');
 //    this.filters = nsapiParseSearchFilterExpression(filterExpression);
 //};
-nlobjSearch.prototype.getColumns = function()
-{
+nlobjSearch.prototype.getColumns = function () {
     return this.columns;
 };
-nlobjSearch.prototype.setColumns = function(columns)
-{
-    this.columns = !columns? null : (Array.isArray(columns) ? columns.slice() : [columns]);
+nlobjSearch.prototype.setColumns = function (columns) {
+    this.columns = !columns ? null : (Array.isArray(columns) ? columns.slice() : [columns]);
 };
-nlobjSearch.prototype.addColumn = function(column)
-{
+nlobjSearch.prototype.addColumn = function (column) {
     if (!this.columns)
         this.columns = [column];
     else
         this.columns.push(column);
 };
-nlobjSearch.prototype.addColumns = function(columns)
-{
-    if (columns) for (var i=0; i<columns.length; i++)
+nlobjSearch.prototype.addColumns = function (columns) {
+    if (columns) for (var i = 0; i < columns.length; i++)
         this.addColumn(columns[i]);
 };
 //nlobjSearch.prototype.setRedirectURLToSearch = function()
@@ -170,16 +160,13 @@ nlobjSearch.prototype.addColumns = function(columns)
 //        throw nlapiCreateError( e );
 //    }
 //};
-nlobjSearch.prototype.getId = function()
-{
+nlobjSearch.prototype.getId = function () {
     return (!this.searchId || this.searchId == -1) ? null : this.searchId;
 };
-nlobjSearch.prototype.getScriptId = function()
-{
+nlobjSearch.prototype.getScriptId = function () {
     return this.scriptId;
 };
-nlobjSearch.prototype.getSearchType = function()
-{
+nlobjSearch.prototype.getSearchType = function () {
     return this.type;
 };
 //nlobjSearch.prototype.getIsPublic = function()

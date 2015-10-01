@@ -166,7 +166,7 @@ function createScript(opt) {
     if (opt.params) {
         let pref = nlapiGetContext().preference,
             keys = Object.keys(opt.params);
-        for (let i=0; i<keys.length;i++) {
+        for (let i = 0; i < keys.length; i++) {
             let param = keys[i];
             pref[param] = opt.params[param];
         }

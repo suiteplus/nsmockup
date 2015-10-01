@@ -29,14 +29,14 @@ function nlapiSubmitFile(file) {
     let fs = require('fs'),
         cabinet = $db('__cabinet');
 
-    let folder = $db.$pathCabinet + '/'+ file.folder,
+    let folder = $db.$pathCabinet + '/' + file.folder,
         path = folder + '/' + file.name;
     if (!fs.existsSync(folder)) {
         let folders = folder.split('/'),
             base = folders[0];
-        for (let i=0; i<folders.length; i++) {
+        for (let i = 0; i < folders.length; i++) {
             !fs.existsSync(base) && fs.mkdirSync(base);
-            base += '/' + folders[i+1];
+            base += '/' + folders[i + 1];
         }
     }
 
@@ -62,7 +62,7 @@ function nlapiSubmitFile(file) {
  * @since 2009.1
  */
 function nlapiDeleteFile(id) {
-    $db.object.__cabinet[id-1] = null;
+    $db.object.__cabinet[id - 1] = null;
     $db.save();
     return id;
 }
@@ -79,7 +79,7 @@ function nlapiDeleteFile(id) {
  */
 function nlapiLoadFile(id) {
     'use strict';
-    let fc = $db.object.__cabinet[id-1],
+    let fc = $db.object.__cabinet[id - 1],
         fs = require('fs');
 
     let data = fs.readFileSync(fc.path, {encoding: 'utf8' || fc.encoding});
