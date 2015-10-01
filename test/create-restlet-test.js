@@ -12,7 +12,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
     });
     describe('Create Script - Restlet', function () {
         it('create restlet', function (done) {
-            nsmockup.createRestlet({
+            nsmockup.createRESTlet({
                 name: '_add_restlet',
                 files: [
                     __dirname + '/_input-files/scripts/add.js'

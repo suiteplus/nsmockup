@@ -43,10 +43,10 @@ Netsuite API Mockup
     });
 ```
 
-#### nsmockup.createReslet(cfg)
+#### nsmockup.createRESTlet(cfg)
  - cfg {name: String, func: String, files: [String], params: Object}
 ```javascript
-    nsmockup.createReslet({
+    nsmockup.createRESTlet({
         name: 'my_restlet',
         func: 'MyRestlet.main',
         files: [

@@ -18,10 +18,14 @@
         paths = {
             js: [
                 appRoot + '/nsapi.js',
+                appRoot + '/lib/**/*.js',
                 appRoot + '/src/**/*.js'
             ],
-            jsRequire: [appRoot + '/nsapi.js'],
-            jsVMContext: [appRoot + '/src/**/*.js']
+            jsRequire: [
+                appRoot + '/nsapi.js',
+                appRoot + '/src/**/*.js'
+            ],
+            jsVMContext: [appRoot + '/lib/**/*.js']
         };
     var defaultTasks = ['env:test', 'test:jshint', 'test:coverage'];
 

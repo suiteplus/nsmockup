@@ -21,8 +21,8 @@
                                 //   "single" : require single quotes
                                 //   "double" : require double quotes
     "undef"         : true,     // true: Require all non-global variables to be declared (prevents global leaks)
-    "unused"        : false,    // true: Require all defined variables be used
-    "strict"        : false,    // true: Requires all functions run in ES5 Strict Mode
+    "unused"        : true,     // true: Require all defined variables be used
+    "strict"        : true,     // true: Requires all functions run in ES5 Strict Mode
     "maxparams"     : false,    // {int} Max number of formal params allowed per function
     "maxdepth"      : false,    // {int} Max depth of nested blocks (within functions)
     "maxstatements" : false,    // {int} Max number statements per function
@@ -70,6 +70,13 @@
     "wsh"           : false,    // Windows Scripting Host
     "yui"           : false,    // Yahoo User Interface
 
+    // Custom settings for Netsuite Functions
+    "overrides": {
+        "**/lib/**/*.js": {
+            "strict": false,
+            "unused": false
+        }
+    },
     // Custom Globals
     "globals": {
         // nsmockup
