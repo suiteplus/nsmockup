@@ -1,16 +1,15 @@
 (function() {
     'use strict';
 
-    var file;
+    var file, msg = '**/*-test.js';
     process.argv.forEach(function (val, index, array) {
-        let mm = '';
         if (val === '-file' || val === '--f') {
             let env_val = array[index + 1];
-            mm += 'load tests: **/*' + env_val+ '*-test.js';
+            msg = '**/*' + env_val+ '*-test.js';
             file = env_val;
         }
-        mm && console.log('use =>', mm);
     });
+    console.log('use => load tests: ', msg);
 
     var gulp = require('gulp'),
         gulpLoadPlugins = require('gulp-load-plugins'),
