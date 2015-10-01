@@ -1,10 +1,11 @@
-# nsmockup [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status][david-image]][david-url]
+# nsmockup [![NPM version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
 Netsuite API Mockup
 
 ## Required
  * node.js 4+
 
-## Install
+## Install [![Dependency Status][david-image]][david-url]
 ```bash
     npm install nsmockup
 ```

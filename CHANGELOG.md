@@ -50,7 +50,7 @@
     - function **nlobjSearchFilter()**
     - function **nlobjSearchResult()**
   * __Execution Context APIs__:
-    - function ** nlapiGetContext()**
+    - function **nlapiGetContext()**
     - function **nlapiLogExecution(type, title, details)**
     - function **nlobjContext()**
   * __Date APIs__:
