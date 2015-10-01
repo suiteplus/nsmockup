@@ -1,11 +1,12 @@
 # nsmockup [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
+
 Netsuite API Mockup
 
 ## Required
  * node.js 4+
 
-## Install [![Dependency Status][david-image]][david-url]
+## Install [![Dependency Status][david-image]][david-url] [![devDependency Status][david-image-dev]][david-url-dev]
 ```bash
     npm install nsmockup
 ```
@@ -124,3 +125,6 @@ describe('<Unit Test - Netsuite API Simulation>', function () {
 
 [david-url]: https://david-dm.org/suiteplus/nsmockup
 [david-image]: https://david-dm.org/suiteplus/nsmockup.svg
+
+[david-url-dev]: https://david-dm.org/suiteplus/nsmockup#info=devDependencies
+[david-image-dev]: https://david-dm.org/suiteplus/nsmockup/dev-status.svg
