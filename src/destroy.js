@@ -35,6 +35,7 @@ module.exports = (cb) => {
                 //delete global[globalVar];
             }
         }
+        global.$NS_CONTECXT_OBJ =  undefined;
         return cb();
     }
 

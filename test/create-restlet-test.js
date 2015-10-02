@@ -15,12 +15,20 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
             nsmockup.createRESTlet({
                 name: '_add_restlet',
                 files: [
+                    __dirname + '/_input-files/scripts/fake-restlet.js',
                     __dirname + '/_input-files/scripts/add.js'
                 ],
-                func: 'add'
+                func: {
+                    post: 'FakeRestlet.post'
+                },
+                params: {
+                    'fake-param': 12
+                }
             });
             should(addTest).be.ok();
 
+            var res = FakeRestlet.post();
+            should(res).be.equal(12);
             return done();
         });
     });

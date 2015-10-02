@@ -70,13 +70,28 @@
     "wsh"           : false,    // Windows Scripting Host
     "yui"           : false,    // Yahoo User Interface
 
-    // Custom settings for Netsuite Functions
     "overrides": {
+        // Custom settings for Netsuite Functions
         "**/lib/**/*.js": {
             "unused": false,
             "validthis": true
+        },
+        // Custom settings for tests
+        "**/test/**/*.js": {
+            "undef": false,
+            "globals" : {
+                // mocha
+                "after": true,
+                "before": true,
+                "describe": true,
+                "it": true,
+                // test nsmockup
+                "addTest": true,
+                "FakeRestlet": true
+            }
         }
     },
+
     // Custom Globals
     "globals": {
         // nsmockup
@@ -112,15 +127,6 @@
         "nlobjSearchResultSet": true,
 
         // workaround
-        "window": true,
-
-        // mocha
-        "after": true,
-        "before": true,
-        "describe": true,
-        "it": true,
-
-        // test nsmockup
-        "addTest": true
+        "window": true
     }
 }

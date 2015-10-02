@@ -17,7 +17,7 @@ describe('<Unit Test - Netsuite Create Suitelet>', function () {
                 files: [
                     __dirname + '/_input-files/scripts/add.js'
                 ],
-                func: 'add'
+                func: 'addTest'
             });
             should(addTest).be.ok();
 
