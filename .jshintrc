@@ -73,15 +73,14 @@
     // Custom settings for Netsuite Functions
     "overrides": {
         "**/lib/**/*.js": {
-            "strict": false,
-            "unused": false
+            "unused": false,
+            "validthis": true
         }
     },
     // Custom Globals
     "globals": {
         // nsmockup
         "$db": true,
-        "$NS_CONTECXT_OBJ": true,
 
         // Netsuite Global Functions
         "nlapiCreateError": true,

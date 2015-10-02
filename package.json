@@ -40,7 +40,7 @@
   "devDependencies": {
     "coveralls": "^2.11.4",
     "gulp": "^3.9.0",
-    "gulp-istanbul": "danieljoppi/gulp-istanbul",
+    "gulp-istanbul": "^0.10.1",
     "gulp-jshint": "^1.11.2",
     "gulp-load-plugins": "^0.10.0",
     "gulp-mocha": "^2.1.3",

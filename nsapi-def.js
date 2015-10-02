@@ -1,9 +1,11 @@
+'use strict';
+
 /**
  * @projectDescription 	SuiteScript JavaScript library summary.
  *
  * Note that there are some restrictions on API usage. Also note that the only 2 objects that can be
  * contructed are nlobjSearchFilter and nlobjSearchColumn. All other objects can only be created via
- * top-level function or method calls.
+ * top-level exports.or method calls.
  *
  * The @governance tag refers to the usage governance for an API call
  * The @restricted tag refers to any known restrictions with a particular API call
@@ -30,7 +32,7 @@
  *
  * @since	2007.0
  */
-function nlapiCopyRecord(type, id, initializeValues) { ; }
+exports.nlapiCopyRecord = (type, id, initializeValues) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Load an existing record from the system.
@@ -48,7 +50,7 @@ function nlapiCopyRecord(type, id, initializeValues) { ; }
  *
  * @since	2007.0
  */
-function nlapiLoadRecord(type, id, initializeValues) { ; }
+exports.nlapiLoadRecord = (type, id, initializeValues) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Instantiate a new nlobjRecord object containing all the default field data for that record type.
@@ -63,7 +65,7 @@ function nlapiLoadRecord(type, id, initializeValues) { ; }
  *
  * @since	2007.0
  */
-function nlapiCreateRecord(type, initializeValues) { ; }
+exports.nlapiCreateRecord = (type, initializeValues) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Submit a record to the system for creation or update.
@@ -80,7 +82,7 @@ function nlapiCreateRecord(type, initializeValues) { ; }
  *
  * @since	2007.0
  */
-function nlapiSubmitRecord(record, doSourcing, ignoreMandatoryFields) { ; }
+exports.nlapiSubmitRecord = (record, doSourcing, ignoreMandatoryFields) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Delete a record from the system.
@@ -97,7 +99,7 @@ function nlapiSubmitRecord(record, doSourcing, ignoreMandatoryFields) { ; }
  *
  * @since	2007.0
  */
-function nlapiDeleteRecord(type, id) { ; }
+exports.nlapiDeleteRecord = (type, id) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Perform a record search using an existing search or filters and columns.
@@ -121,7 +123,7 @@ function nlapiDeleteRecord(type, id) { ; }
  *
  * @since	2007.0
  */
-function nlapiSearchRecord(type, id, filters, columns) { ; }
+exports.nlapiSearchRecord = (type, id, filters, columns) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Perform a global record search across the system.
@@ -133,7 +135,7 @@ function nlapiSearchRecord(type, id, filters, columns) { ; }
  *
  * @since	2008.1
  */
-function nlapiSearchGlobal(keywords) { ; }
+exports.nlapiSearchGlobal = (keywords) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Perform a duplicate record search using Duplicate Detection criteria.
@@ -147,7 +149,7 @@ function nlapiSearchGlobal(keywords) { ; }
  *
  * @since	2008.1
  */
-function nlapiSearchDuplicate(type, fields, id) { ; }
+exports.nlapiSearchDuplicate = (type, fields, id) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Create a new record using values from an existing record of a different type.
@@ -168,7 +170,7 @@ function nlapiSearchDuplicate(type, fields, id) { ; }
  *
  * @since	2007.0
  */
-function nlapiTransformRecord(type, id, transformType, transformValues) { ; }
+exports.nlapiTransformRecord = (type, id, transformType, transformValues) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * void a transaction based on type and id .
@@ -181,7 +183,7 @@ function nlapiTransformRecord(type, id, transformType, transformValues) { ; }
  *
  * @since	2014.1
  */
-function nlapiVoidTransaction (type, id) { }
+exports.nlapiVoidTransaction = (type, id) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Fetch the value of one or more fields on a record. This API uses search to look up the fields and is much
@@ -196,7 +198,7 @@ function nlapiVoidTransaction (type, id) { }
  *
  * @since	2008.1
  */
-function nlapiLookupField(type,id,fields, text) { ; }
+exports.nlapiLookupField = (type,id,fields, text) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Submit the values of a field or set of fields for an existing record.
@@ -212,7 +214,7 @@ function nlapiLookupField(type,id,fields, text) { ; }
  *
  * @since	2008.1
  */
-function nlapiSubmitField(type,id,fields,values,doSourcing) { ; }
+exports.nlapiSubmitField = (type,id,fields,values,doSourcing) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Attach a single record to another with optional properties.
@@ -227,7 +229,7 @@ function nlapiSubmitField(type,id,fields,values,doSourcing) { ; }
  *
  * @since	2008.2
  */
-function nlapiAttachRecord(type1, id1, type2, id2, properties) { ; }
+exports.nlapiAttachRecord = (type1, id1, type2, id2, properties) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Detach a single record from another with optional properties.
@@ -242,7 +244,7 @@ function nlapiAttachRecord(type1, id1, type2, id2, properties) { ; }
  *
  * @since	2008.2
  */
-function nlapiDetachRecord(type1, id1, type2, id2, properties) { ; }
+exports.nlapiDetachRecord = (type1, id1, type2, id2, properties) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 
 /**
@@ -256,7 +258,7 @@ function nlapiDetachRecord(type1, id1, type2, id2, properties) { ; }
  *
  * @since	2007.0
  */
-function nlapiResolveURL(type, subtype, id, pagemode) { ; }
+exports.nlapiResolveURL = (type, subtype, id, pagemode) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Redirect the user to a page. Only valid in the UI on Suitelets and User Events. In Client scripts this will initialize the redirect URL used upon submit.
@@ -270,17 +272,17 @@ function nlapiResolveURL(type, subtype, id, pagemode) { ; }
  *
  * @since	2007.0
  */
-function nlapiSetRedirectURL(type, subtype, id, pagemode, parameters) { ; }
+exports.nlapiSetRedirectURL = (type, subtype, id, pagemode, parameters) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Request a URL to an external or internal resource.
  * @restriction NetSuite maintains a white list of CAs that are allowed for https requests. Please see the online documentation for the complete list.
  * @governance 10 units
  *
- * @param {string} url 		A fully qualified URL to an HTTP(s) resource
+ * @param {string} url 		A fully qualified URL to an HTTP = (s) resource
  * @param {string, Object} 	[postdata] - string, document, or Object containing POST payload
  * @param {Object} 			[headers] - Object containing request headers.
- * @param {function} 		[callback] - available on the Client to support asynchronous requests. function is passed an nlobjServerResponse with the results.
+ * @param {function} 		[callback] - available on the Client to support asynchronous requests. exports.is passed an nlobjServerResponse with the results.
  * @return {nlobjServerResponse}
  *
  * @exception {SSS_UNKNOWN_HOST}
@@ -289,7 +291,7 @@ function nlapiSetRedirectURL(type, subtype, id, pagemode, parameters) { ; }
  *
  * @since	2007.0
  */
-function nlapiRequestURL(url, postdata, headers, callback, method) { ; }
+exports.nlapiRequestURL = (url, postdata, headers, callback, method) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return context information about the current user/script.
@@ -298,7 +300,7 @@ function nlapiRequestURL(url, postdata, headers, callback, method) { ; }
  *
  * @since	2007.0
  */
-function nlapiGetContext() { ; }
+exports.nlapiGetContext = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the internal ID for the currently logged in user. Returns -4 when called from online forms or "Available without Login" Suitelets.
@@ -307,7 +309,7 @@ function nlapiGetContext() { ; }
  *
  * @since	2005.0
  */
-function nlapiGetUser() { ; }
+exports.nlapiGetUser = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the internal ID for the current user's role. Returns 31 (Online Form User) when called from online forms or "Available without Login" Suitelets.
@@ -316,7 +318,7 @@ function nlapiGetUser() { ; }
  *
  * @since	2005.0
  */
-function nlapiGetRole() { ; }
+exports.nlapiGetRole = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the internal ID for the current user's department.
@@ -325,7 +327,7 @@ function nlapiGetRole() { ; }
  *
  * @since	2005.0
  */
-function nlapiGetDepartment() { ; }
+exports.nlapiGetDepartment = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the internal ID for the current user's location.
@@ -334,7 +336,7 @@ function nlapiGetDepartment() { ; }
  *
  * @since	2005.0
  */
-function nlapiGetLocation() { ; }
+exports.nlapiGetLocation = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the internal ID for the current user's subsidiary.
@@ -343,7 +345,7 @@ function nlapiGetLocation() { ; }
  *
  * @since	2008.1
  */
-function nlapiGetSubsidiary() { ; }
+exports.nlapiGetSubsidiary = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the recordtype corresponding to the current page or userevent script.
@@ -352,7 +354,7 @@ function nlapiGetSubsidiary() { ; }
  *
  * @since	2007.0
  */
-function nlapiGetRecordType() { ; }
+exports.nlapiGetRecordType = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the internal ID corresponding to the current page or userevent script.
@@ -361,7 +363,7 @@ function nlapiGetRecordType() { ; }
  *
  * @since	2007.0
  */
-function nlapiGetRecordId() { ; }
+exports.nlapiGetRecordId = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Send out an email and associate it with records in the system.
@@ -373,8 +375,8 @@ function nlapiGetRecordId() { ; }
  * @param {string, int} to email address or internal ID of user that this email is being sent to
  * @param {string} 		subject email subject
  * @param {string} 		body email body
- * @param {string, string[]} cc copy email address(es)
- * @param {string, string[]} bcc blind copy email address(es)
+ * @param {string, string[]} cc copy email address = (es)
+ * @param {string, string[]} bcc blind copy email address = (es)
  * @param {Object} 		records Object of base types -> internal IDs used to associate email to records. i.e. {entity: 100, record: 23, recordtype: customrecord_surveys}
  * @param {nlobjFile[]} files array of nlobjFile objects (files) to include as attachments
  * @param {boolean}     notifySenderOnBounce controls whether or not the sender will receive email notification of bounced emails (defaults to false)
@@ -384,7 +386,7 @@ function nlapiGetRecordId() { ; }
  *
  * @since	2007.0
  */
-function nlapiSendEmail(from, to, subject, body, cc, bcc, records, files, notifySenderOnBounce, internalOnly, replyTo) { ; }
+exports.nlapiSendEmail = (from, to, subject, body, cc, bcc, records, files, notifySenderOnBounce, internalOnly, replyTo) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Sends a single on-demand campaign email to a specified recipient and returns a campaign response ID to track the email.
@@ -397,7 +399,7 @@ function nlapiSendEmail(from, to, subject, body, cc, bcc, records, files, notify
  *
  * @since	2010.1
  */
-function nlapiSendCampaignEmail(campaigneventid, recipientid) { ; }
+exports.nlapiSendCampaignEmail = (campaigneventid, recipientid) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Send out a fax and associate it with records in the system. This requires fax preferences to be configured.
@@ -414,7 +416,7 @@ function nlapiSendCampaignEmail(campaigneventid, recipientid) { ; }
  *
  * @since	2008.2
  */
-function nlapiSendFax(from, to, subject, body, records, files) { ; }
+exports.nlapiSendFax = (from, to, subject, body, records, files) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return field definition for a field.
@@ -424,7 +426,7 @@ function nlapiSendFax(from, to, subject, body, records, files) { ; }
  *
  * @since	2009.1
  */
-function nlapiGetField(fldnam) { ; }
+exports.nlapiGetField = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return field definition for a matrix field.
@@ -436,7 +438,7 @@ function nlapiGetField(fldnam) { ; }
  *
  * @since	2009.2
  */
-function nlapiGetMatrixField(type, fldnam, column) { ; }
+exports.nlapiGetMatrixField = (type, fldnam, column) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return field definition for a sublist field.
@@ -448,7 +450,7 @@ function nlapiGetMatrixField(type, fldnam, column) { ; }
  *
  * @since	2009.1
  */
-function nlapiGetLineItemField(type, fldnam, linenum) { ; }
+exports.nlapiGetLineItemField = (type, fldnam, linenum) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return an nlobjField containing sublist field metadata.
@@ -461,7 +463,7 @@ function nlapiGetLineItemField(type, fldnam, linenum) { ; }
  *
  * @since	2009.2
  */
-function nlapiGetLineItemMatrixField(type, fldnam, linenum, column) { ; }
+exports.nlapiGetLineItemMatrixField = (type, fldnam, linenum, column) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a field on the current record on a page.
@@ -471,7 +473,7 @@ function nlapiGetLineItemMatrixField(type, fldnam, linenum, column) { ; }
  *
  * @since	2005.0
  */
-function nlapiGetFieldValue(fldnam) { ; }
+exports.nlapiGetFieldValue = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a field on the current record on a page.
@@ -486,7 +488,7 @@ function nlapiGetFieldValue(fldnam) { ; }
  *
  * @since	2005.0
  */
-function nlapiSetFieldValue(fldnam,value,firefieldchanged,synchronous) { ; }
+exports.nlapiSetFieldValue = (fldnam,value,firefieldchanged,synchronous) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the display value of a select field's current selection on the current record on a page.
@@ -496,7 +498,7 @@ function nlapiSetFieldValue(fldnam,value,firefieldchanged,synchronous) { ; }
  *
  * @since	2005.0
  */
-function nlapiGetFieldText(fldnam) { ; }
+exports.nlapiGetFieldText = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a field on the current record on a page using it's label.
@@ -510,7 +512,7 @@ function nlapiGetFieldText(fldnam) { ; }
  *
  * @since	2005.0
  */
-function nlapiSetFieldText(fldnam,txt,firefieldchanged,synchronous)	{ ; }
+exports.nlapiSetFieldText = (fldnam,txt,firefieldchanged,synchronous) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the values of a multiselect field on the current record on a page.
@@ -520,7 +522,7 @@ function nlapiSetFieldText(fldnam,txt,firefieldchanged,synchronous)	{ ; }
  *
  * @since	2005.0
  */
-function nlapiGetFieldValues(fldnam) { ; }
+exports.nlapiGetFieldValues = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the values of a multiselect field on the current record on a page.
@@ -535,7 +537,7 @@ function nlapiGetFieldValues(fldnam) { ; }
  *
  * @since	2005.0
  */
-function nlapiSetFieldValues(fldnam,values,firefieldchanged,synchronous) { ; }
+exports.nlapiSetFieldValues = (fldnam,values,firefieldchanged,synchronous) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the values (via display text) of a multiselect field on the current record.
@@ -545,7 +547,7 @@ function nlapiSetFieldValues(fldnam,values,firefieldchanged,synchronous) { ; }
  *
  * @since	2009.1
  */
-function nlapiGetFieldTexts(fldnam) { ; }
+exports.nlapiGetFieldTexts = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the values (via display text) of a multiselect field on the current record on a page.
@@ -560,7 +562,7 @@ function nlapiGetFieldTexts(fldnam) { ; }
  *
  * @since	2009.1
  */
-function nlapiSetFieldTexts(fldnam,texts,firefieldchanged,synchronous) { ; }
+exports.nlapiSetFieldTexts = (fldnam,texts,firefieldchanged,synchronous) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Get the value of a matrix header field
@@ -572,7 +574,7 @@ function nlapiSetFieldTexts(fldnam,texts,firefieldchanged,synchronous) { ; }
  *
  * @since	2009.2
  */
-function nlapiGetMatrixValue(type, fldnam, column) { ; }
+exports.nlapiGetMatrixValue = (type, fldnam, column) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a matrix header field
@@ -588,7 +590,7 @@ function nlapiGetMatrixValue(type, fldnam, column) { ; }
  *
  * @since	2009.2
  */
-function nlapiSetMatrixValue(type, fldnam, column, value, firefieldchanged, synchronous) { ; }
+exports.nlapiSetMatrixValue = (type, fldnam, column, value, firefieldchanged, synchronous) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Get the current value of a sublist field on the current record on a page.
@@ -600,7 +602,7 @@ function nlapiSetMatrixValue(type, fldnam, column, value, firefieldchanged, sync
  *
  * @since	2009.2
  */
-function nlapiGetCurrentLineItemMatrixValue(type, fldnam, column) { ; }
+exports.nlapiGetCurrentLineItemMatrixValue = (type, fldnam, column) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the current value of a sublist field on the current record on a page.
@@ -617,7 +619,7 @@ function nlapiGetCurrentLineItemMatrixValue(type, fldnam, column) { ; }
  *
  * @since	2009.2
  */
-function nlapiSetCurrentLineItemMatrixValue(type, fldnam, column, value, firefieldchanged, synchronous) { ; }
+exports.nlapiSetCurrentLineItemMatrixValue = (type, fldnam, column, value, firefieldchanged, synchronous) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a sublist matrix field on the current record on a page.
@@ -630,7 +632,7 @@ function nlapiSetCurrentLineItemMatrixValue(type, fldnam, column, value, firefie
  *
  * @since	2009.2
  */
-function nlapiGetLineItemMatrixValue(type, fldnam, linenum, column) { ; }
+exports.nlapiGetLineItemMatrixValue = (type, fldnam, linenum, column) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a sublist field on the current record on a page.
@@ -642,7 +644,7 @@ function nlapiGetLineItemMatrixValue(type, fldnam, linenum, column) { ; }
  *
  * @since 2005.0
  */
-function nlapiGetLineItemValue(type,fldnam,linenum) { ; }
+exports.nlapiGetLineItemValue = (type,fldnam,linenum) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a sublist field on the current record on a page.
@@ -654,7 +656,7 @@ function nlapiGetLineItemValue(type,fldnam,linenum) { ; }
  *
  * @since 2013.2
  */
-function nlapiGetLineItemDateTimeValue(type,fldnam,linenum) { ; }
+exports.nlapiGetLineItemDateTimeValue = (type,fldnam,linenum) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a sublist field on the current record on a page.
@@ -667,7 +669,7 @@ function nlapiGetLineItemDateTimeValue(type,fldnam,linenum) { ; }
  *
  * @since 2013.2
  */
-function nlapiGetLineItemDateTimeValue(type,fldnam,linenum,timezone) { ; }
+exports.nlapiGetLineItemDateTimeValue = (type,fldnam,linenum,timezone) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a sublist field on the current record on a page.
@@ -680,7 +682,7 @@ function nlapiGetLineItemDateTimeValue(type,fldnam,linenum,timezone) { ; }
  *
  * @since 2005.0
  */
-function nlapiSetLineItemValue(type,fldnam,linenum,value) { ; }
+exports.nlapiSetLineItemValue = (type,fldnam,linenum,value) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a sublist field on the current record on a page.
@@ -693,7 +695,7 @@ function nlapiSetLineItemValue(type,fldnam,linenum,value) { ; }
  *
  * @since 2013.2
  */
-function nlapiSetLineItemDateTimeValue(type,fldnam,linenum,value) { ; }
+exports.nlapiSetLineItemDateTimeValue = (type,fldnam,linenum,value) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a sublist field on the current record on a page.
@@ -707,7 +709,7 @@ function nlapiSetLineItemDateTimeValue(type,fldnam,linenum,value) { ; }
  *
  * @since 2013.2
  */
-function nlapiSetLineItemDateTimeValue(type,fldnam,linenum,value,timezone) { ; }
+exports.nlapiSetLineItemDateTimeValue = (type,fldnam,linenum,value,timezone) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the label of a select field's current selection for a particular line.
@@ -719,7 +721,7 @@ function nlapiSetLineItemDateTimeValue(type,fldnam,linenum,value,timezone) { ; }
  *
  * @since 2005.0
  */
-function nlapiGetLineItemText(type,fldnam,linenum) { ; }
+exports.nlapiGetLineItemText = (type,fldnam,linenum) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the 1st line number that a sublist field value appears in
@@ -731,7 +733,7 @@ function nlapiGetLineItemText(type,fldnam,linenum) { ; }
  *
  * @since 2009.2
  */
-function nlapiFindLineItemValue(type, fldnam, val) { ; }
+exports.nlapiFindLineItemValue = (type, fldnam, val) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the 1st line number that a matrix field value appears in
@@ -744,7 +746,7 @@ function nlapiFindLineItemValue(type, fldnam, val) { ; }
  *
  * @since 2009.2
  */
-function nlapiFindLineItemMatrixValue(type, fldnam, column, val) { ; }
+exports.nlapiFindLineItemMatrixValue = (type, fldnam, column, val) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the number of columns for a matrix field
@@ -755,7 +757,7 @@ function nlapiFindLineItemMatrixValue(type, fldnam, column, val) { ; }
  *
  * @since 2009.2
  */
-function nlapiGetMatrixCount(type, fldnam) { ; }
+exports.nlapiGetMatrixCount = (type, fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the number of sublists in a sublist on the current record on a page.
@@ -765,7 +767,7 @@ function nlapiGetMatrixCount(type, fldnam) { ; }
  *
  * @since 2005.0
  */
-function nlapiGetLineItemCount(type) { ; }
+exports.nlapiGetLineItemCount = (type) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Insert and select a new line into the sublist on a page or userevent.
@@ -776,7 +778,7 @@ function nlapiGetLineItemCount(type) { ; }
  *
  * @since 2005.0
  */
-function nlapiInsertLineItem(type, line) { ; }
+exports.nlapiInsertLineItem = (type, line) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Remove the currently selected line from the sublist on a page or userevent.
@@ -787,7 +789,7 @@ function nlapiInsertLineItem(type, line) { ; }
  *
  * @since 2005.0
  */
-function nlapiRemoveLineItem(type, line) { ; }
+exports.nlapiRemoveLineItem = (type, line) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a field on the currently selected line.
@@ -802,7 +804,7 @@ function nlapiRemoveLineItem(type, line) { ; }
  *
  * @since 2005.0
  */
-function nlapiSetCurrentLineItemValue(type,fldnam,value,firefieldchanged,synchronous) { ; }
+exports.nlapiSetCurrentLineItemValue = (type,fldnam,value,firefieldchanged,synchronous) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a field on the currently selected line.
@@ -815,7 +817,7 @@ function nlapiSetCurrentLineItemValue(type,fldnam,value,firefieldchanged,synchro
  *
  * @since 2013.2
  */
-function nlapiSetCurrentLineItemDateTimeValue(type,fldnam,value) { ; }
+exports.nlapiSetCurrentLineItemDateTimeValue = (type,fldnam,value) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a field on the currently selected line.
@@ -829,7 +831,7 @@ function nlapiSetCurrentLineItemDateTimeValue(type,fldnam,value) { ; }
  *
  * @since 2013.2
  */
-function nlapiSetCurrentLineItemDateTimeValue(type,fldnam,value,timezone) { ; }
+exports.nlapiSetCurrentLineItemDateTimeValue = (type,fldnam,value,timezone) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a field on the currently selected line using it's label.
@@ -844,7 +846,7 @@ function nlapiSetCurrentLineItemDateTimeValue(type,fldnam,value,timezone) { ; }
  *
  * @since 2005.0
  */
-function nlapiSetCurrentLineItemText(type,fldnam,txt,firefieldchanged,synchronous) { ; }
+exports.nlapiSetCurrentLineItemText = (type,fldnam,txt,firefieldchanged,synchronous) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a field on the currently selected line.
@@ -855,7 +857,7 @@ function nlapiSetCurrentLineItemText(type,fldnam,txt,firefieldchanged,synchronou
  *
  * @since 2005.0
  */
-function nlapiGetCurrentLineItemValue(type,fldnam) { ; }
+exports.nlapiGetCurrentLineItemValue = (type,fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a field on the currently selected line.
@@ -866,7 +868,7 @@ function nlapiGetCurrentLineItemValue(type,fldnam) { ; }
  *
  * @since 2013.2
  */
-function nlapiGetCurrentLineItemDateTimeValue(type,fldnam) { ; }
+exports.nlapiGetCurrentLineItemDateTimeValue = (type,fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a field on the currently selected line.
@@ -878,7 +880,7 @@ function nlapiGetCurrentLineItemDateTimeValue(type,fldnam) { ; }
  *
  * @since 2013.2
  */
-function nlapiGetCurrentLineItemDateTimeValue(type,fldnam, timezone) { ; }
+exports.nlapiGetCurrentLineItemDateTimeValue = (type,fldnam, timezone) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the label of a select field's current selection on the currently selected line.
@@ -889,7 +891,7 @@ function nlapiGetCurrentLineItemDateTimeValue(type,fldnam, timezone) { ; }
  *
  * @since 2005.0
  */
-function nlapiGetCurrentLineItemText(type,fldnam) { ; }
+exports.nlapiGetCurrentLineItemText = (type,fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the line number for the currently selected line.
@@ -899,7 +901,7 @@ function nlapiGetCurrentLineItemText(type,fldnam) { ; }
  *
  * @since 2005.0
  */
-function nlapiGetCurrentLineItemIndex(type) { ; }
+exports.nlapiGetCurrentLineItemIndex = (type) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Disable a sublist field.
@@ -913,7 +915,7 @@ function nlapiGetCurrentLineItemIndex(type) { ; }
  *
  * @since 2009.1
  */
-function nlapiSetLineItemDisabled(type,fldnam,disable, linenum) { ; }
+exports.nlapiSetLineItemDisabled = (type,fldnam,disable, linenum) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return field mandatoriness.
@@ -923,7 +925,7 @@ function nlapiSetLineItemDisabled(type,fldnam,disable, linenum) { ; }
  *
  * @since 2009.1
  */
-function nlapiGetFieldMandatory(fldnam) { ; }
+exports.nlapiGetFieldMandatory = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return sublist field mandatoriness.
@@ -935,7 +937,7 @@ function nlapiGetFieldMandatory(fldnam) { ; }
  *
  * @since 2009.1
  */
-function nlapiGetLineItemMandatory(type,fldnam) { ; }
+exports.nlapiGetLineItemMandatory = (type,fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Make a field mandatory.
@@ -946,7 +948,7 @@ function nlapiGetLineItemMandatory(type,fldnam) { ; }
  *
  * @since 2009.1
  */
-function nlapiSetFieldMandatory(fldnam,mandatory) { ; }
+exports.nlapiSetFieldMandatory = (fldnam,mandatory) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Make a sublist field mandatory.
@@ -959,7 +961,7 @@ function nlapiSetFieldMandatory(fldnam,mandatory) { ; }
  *
  * @since 2009.2
  */
-function nlapiSetLineItemMandatory(type,fldnam,mandatory) { ; }
+exports.nlapiSetLineItemMandatory = (type,fldnam,mandatory) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Select an existing line in a sublist.
@@ -970,7 +972,7 @@ function nlapiSetLineItemMandatory(type,fldnam,mandatory) { ; }
  *
  * @since 2005.0
  */
-function nlapiSelectLineItem(type, linenum) { ; }
+exports.nlapiSelectLineItem = (type, linenum) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Save changes made on the currently selected line to the sublist.
@@ -980,7 +982,7 @@ function nlapiSelectLineItem(type, linenum) { ; }
  *
  * @since 2005.0
  */
-function nlapiCommitLineItem(type) { ; }
+exports.nlapiCommitLineItem = (type) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Cancel any changes made on the currently selected line.
@@ -991,7 +993,7 @@ function nlapiCommitLineItem(type) { ; }
  *
  * @since 2005.0
  */
-function nlapiCancelLineItem(type) { ; }
+exports.nlapiCancelLineItem = (type) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Select a new line in a sublist.
@@ -1002,7 +1004,7 @@ function nlapiCancelLineItem(type) { ; }
  *
  * @since 2005.0
  */
-function nlapiSelectNewLineItem(type) { ; }
+exports.nlapiSelectNewLineItem = (type) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Refresh the sublist table.
@@ -1014,7 +1016,7 @@ function nlapiSelectNewLineItem(type) { ; }
  *
  * @since 2005.0
  */
-function nlapiRefreshLineItems(type) { ; }
+exports.nlapiRefreshLineItems = (type) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Adds a select option to a scripted select or multiselect field.
@@ -1028,7 +1030,7 @@ function nlapiRefreshLineItems(type) { ; }
  *
  * @since 2008.2
  */
-function nlapiInsertSelectOption(fldnam, value, text, selected) { ; }
+exports.nlapiInsertSelectOption = (fldnam, value, text, selected) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Removes a select option (or all if value is null) from a scripted select or multiselect field.
@@ -1040,7 +1042,7 @@ function nlapiInsertSelectOption(fldnam, value, text, selected) { ; }
  *
  * @since 2008.2
  */
-function nlapiRemoveSelectOption(fldnam, value) { ; }
+exports.nlapiRemoveSelectOption = (fldnam, value) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Adds a select option to a scripted select or multiselect sublist field.
@@ -1055,7 +1057,7 @@ function nlapiRemoveSelectOption(fldnam, value) { ; }
  *
  * @since 2008.2
  */
-function nlapiInsertLineItemOption(type, fldnam, value, text, selected) { ; }
+exports.nlapiInsertLineItemOption = (type, fldnam, value, text, selected) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Removes a select option (or all if value is null) from a scripted select or multiselect sublist field.
@@ -1068,7 +1070,7 @@ function nlapiInsertLineItemOption(type, fldnam, value, text, selected) { ; }
  *
  * @since 2008.2
  */
-function nlapiRemoveLineItemOption(type, fldnam, value) { ; }
+exports.nlapiRemoveLineItemOption = (type, fldnam, value) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Returns true if any changes have been made to a sublist.
@@ -1079,7 +1081,7 @@ function nlapiRemoveLineItemOption(type, fldnam, value) { ; }
  *
  * @since 2005.0
  */
-function nlapiIsLineItemChanged(type) { ; }
+exports.nlapiIsLineItemChanged = (type) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return an record object containing the data being submitted to the system for the currenr record.
@@ -1089,7 +1091,7 @@ function nlapiIsLineItemChanged(type) { ; }
  *
  * @since 2008.1
  */
-function nlapiGetNewRecord() { ; }
+exports.nlapiGetNewRecord = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return an record object containing the current record's data prior to the write operation.
@@ -1099,7 +1101,7 @@ function nlapiGetNewRecord() { ; }
  *
  * @since 2008.1
  */
-function nlapiGetOldRecord() { ; }
+exports.nlapiGetOldRecord = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Create an nlobjError object that can be used to abort script execution and configure error notification
@@ -1111,7 +1113,7 @@ function nlapiGetOldRecord() { ; }
  *
  * @since 2008.2
  */
-function nlapiCreateError(code,details,suppressEmail) { ; }
+exports.nlapiCreateError = (code,details,suppressEmail) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new entry form page.
@@ -1123,7 +1125,7 @@ function nlapiCreateError(code,details,suppressEmail) { ; }
  *
  * @since 2008.2
  */
-function nlapiCreateForm(title, hideHeader) { ; }
+exports.nlapiCreateForm = (title, hideHeader) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new list page.
@@ -1135,7 +1137,7 @@ function nlapiCreateForm(title, hideHeader) { ; }
  *
  * @since 2008.2
  */
-function nlapiCreateList(title, hideHeader) { ; }
+exports.nlapiCreateList = (title, hideHeader) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new assistant page.
@@ -1147,7 +1149,7 @@ function nlapiCreateList(title, hideHeader) { ; }
  *
  * @since 2009.2
  */
-function nlapiCreateAssistant(title, hideHeader) { ; }
+exports.nlapiCreateAssistant = (title, hideHeader) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Load a file from the file cabinet (via its internal ID or path).
@@ -1159,7 +1161,7 @@ function nlapiCreateAssistant(title, hideHeader) { ; }
  *
  * @since 2008.2
  */
-function nlapiLoadFile(id) { ; }
+exports.nlapiLoadFile = (id) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Add/update a file in the file cabinet.
@@ -1171,7 +1173,7 @@ function nlapiLoadFile(id) { ; }
  *
  * @since 2009.1
  */
-function nlapiSubmitFile(file) { ; }
+exports.nlapiSubmitFile = (file) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Delete a file from the file cabinet.
@@ -1183,7 +1185,7 @@ function nlapiSubmitFile(file) { ; }
  *
  * @since 2009.1
  */
-function nlapiDeleteFile(id) { ; }
+exports.nlapiDeleteFile = (id) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Instantiate a file object (specifying the name, type, and contents which are base-64 encoded for binary types.)
@@ -1196,7 +1198,7 @@ function nlapiDeleteFile(id) { ; }
  *
  * @since 2009.1
  */
-function nlapiCreateFile(name, type, contents) { ; }
+exports.nlapiCreateFile = (name, type, contents) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Perform a mail merge operation using any template and up to 2 records and returns an nlobjFile with the results.
@@ -1214,7 +1216,7 @@ function nlapiCreateFile(name, type, contents) { ; }
  *
  * @since 2008.2
  */
-function nlapiMergeRecord(id, baseType, baseId, altType, altId, fields) { ; }
+exports.nlapiMergeRecord = (id, baseType, baseId, altType, altId, fields) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Print a record (transaction) gievn its type, id, and output format.
@@ -1229,7 +1231,7 @@ function nlapiMergeRecord(id, baseType, baseId, altType, altId, fields) { ; }
  *
  * @since 2008.2
  */
-function nlapiPrintRecord(type, id, format, properties) { ; }
+exports.nlapiPrintRecord = (type, id, format, properties) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Generate a PDF from XML using the BFO report writer (see http://big.faceless.org/products/report/).
@@ -1241,7 +1243,7 @@ function nlapiPrintRecord(type, id, format, properties) { ; }
  *
  * @since 2009.1
  */
-function nlapiXMLToPDF(input) { ; }
+exports.nlapiXMLToPDF = (input) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Create a template renderer used to generate various outputs based on a template.
@@ -1253,7 +1255,7 @@ function nlapiXMLToPDF(input) { ; }
  * @return {nlobjTemplateRenderer}
  *
  */
-function nlapiCreateTemplateRenderer() { ; }
+exports.nlapiCreateTemplateRenderer = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Create an email merger used to assemble subject and body text of an email from a given
@@ -1265,7 +1267,7 @@ function nlapiCreateTemplateRenderer() { ; }
  *
  * @since 2015.1
  */
-function nlapiCreateEmailMerger(id) { ; }
+exports.nlapiCreateEmailMerger = (id) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Create an entry in the script execution log (note that execution log entries are automatically purged after 30 days).
@@ -1277,7 +1279,7 @@ function nlapiCreateEmailMerger(id) { ; }
  *
  * @since 2008.1
  */
-function nlapiLogExecution(type, title, details) { ; }
+exports.nlapiLogExecution = (type, title, details) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Queue a scheduled script for immediate execution and return the status QUEUED if successfull.
@@ -1291,7 +1293,7 @@ function nlapiLogExecution(type, title, details) { ; }
  *
  * @since 2008.1
  */
-function nlapiScheduleScript(script, deployment, parameters) { ; }
+exports.nlapiScheduleScript = (script, deployment, parameters) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a URL with a generated OAuth token.
@@ -1303,7 +1305,7 @@ function nlapiScheduleScript(script, deployment, parameters) { ; }
  *
  * @since 2009.2
  */
-function nlapiOutboundSSO(ssoAppKey) { ; }
+exports.nlapiOutboundSSO = (ssoAppKey) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Loads a configuration record
@@ -1315,7 +1317,7 @@ function nlapiOutboundSSO(ssoAppKey) { ; }
  *
  * @since 2009.2
  */
-function nlapiLoadConfiguration(type) { ; }
+exports.nlapiLoadConfiguration = (type) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Commits all changes to a configuration record.
@@ -1327,7 +1329,7 @@ function nlapiLoadConfiguration(type) { ; }
  *
  * @since 2009.2
  */
-function nlapiSubmitConfiguration(setup) { ; }
+exports.nlapiSubmitConfiguration = (setup) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Convert a String into a Date object.
@@ -1338,7 +1340,7 @@ function nlapiSubmitConfiguration(setup) { ; }
  *
  * @since 2005.0
  */
-function nlapiStringToDate(str, format) { ; }
+exports.nlapiStringToDate = (str, format) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Convert a Date object into a String
@@ -1349,7 +1351,7 @@ function nlapiStringToDate(str, format) { ; }
  *
  * @since 2005.0
  */
-function nlapiDateToString(d, formattype) { ; }
+exports.nlapiDateToString = (d, formattype) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Add days to a Date object and returns a new Date
@@ -1360,7 +1362,7 @@ function nlapiDateToString(d, formattype) { ; }
  *
  * @since 2008.1
  */
-function nlapiAddDays(d, days) { ; }
+exports.nlapiAddDays = (d, days) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Add months to a Date object and returns a new Date.
@@ -1371,7 +1373,7 @@ function nlapiAddDays(d, days) { ; }
  *
  * @since 2008.1
  */
-function nlapiAddMonths(d, months) { ; }
+exports.nlapiAddMonths = (d, months) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Format a number for data entry into a currency field.
@@ -1381,7 +1383,7 @@ function nlapiAddMonths(d, months) { ; }
  *
  * @since 2008.1
  */
-function nlapiFormatCurrency(str) { ; }
+exports.nlapiFormatCurrency = (str) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Encrypt a String using a SHA-1 hash function
@@ -1391,7 +1393,7 @@ function nlapiFormatCurrency(str) { ; }
  *
  * @since 2009.2
  */
-function nlapiEncrypt(s) { ; }
+exports.nlapiEncrypt = (s) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Escape a String for use in an XML document.
@@ -1401,7 +1403,7 @@ function nlapiEncrypt(s) { ; }
  *
  * @since 2008.1
  */
-function nlapiEscapeXML(text) { ; }
+exports.nlapiEscapeXML = (text) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Convert a String into an XML document. Note that in Server SuiteScript XML is supported natively by the JS runtime using the e4x standard (http://en.wikipedia.org/wiki/E4X)
@@ -1412,7 +1414,7 @@ function nlapiEscapeXML(text) { ; }
  *
  * @since 2008.1
  */
-function nlapiStringToXML(str) { ; }
+exports.nlapiStringToXML = (str) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Convert an XML document into a String.  Note that in Server SuiteScript XML is supported natively by the JS runtime using the e4x standard (http://en.wikipedia.org/wiki/E4X)
@@ -1423,7 +1425,7 @@ function nlapiStringToXML(str) { ; }
  *
  * @since 2008.1
  */
-function nlapiXMLToString(xml) { ; }
+exports.nlapiXMLToString = (xml) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Validate that a given XML document conforms to a given XML schema. XML Schema Definition (XSD) is the expected schema format.
@@ -1432,11 +1434,11 @@ function nlapiXMLToString(xml) { ; }
  * @param {document} schemaDocument schema to enforce
  * @param {string} schemaFolderId if your schema utilizes <import> or <include> tags which refer to sub-schemas by file name (as opposed to URL),
  *                 provide the Internal Id of File Cabinet folder containing these sub-schemas as the schemaFolderId argument
- * @throws {nlobjError} error containsing validation failure message(s) - limited to first 10
+ * @throws {nlobjError} error containsing validation failure message = (s) - limited to first 10
  *
  * @since 2014.1
  */
-function nlapiValidateXML(xmlDocument, schemaDocument, schemaFolderId) { ; }
+exports.nlapiValidateXML = (xmlDocument, schemaDocument, schemaFolderId) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * select a value from an XML node using XPath. Supports custom namespaces (nodes in default namespace can be referenced using "nlapi" as the prefix)
@@ -1447,7 +1449,7 @@ function nlapiValidateXML(xmlDocument, schemaDocument, schemaFolderId) { ; }
  *
  * @since 2008.2
  */
-function nlapiSelectValue(node, xpath) { ; }
+exports.nlapiSelectValue = (node, xpath) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Select an array of values from an XML node using XPath. Supports custom namespaces (nodes in default namespace can be referenced using "nlapi" as the prefix)
@@ -1458,7 +1460,7 @@ function nlapiSelectValue(node, xpath) { ; }
  *
  * @since 2008.1
  */
-function nlapiSelectValues(node, xpath) { ; }
+exports.nlapiSelectValues = (node, xpath) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Select a node from an XML node using XPath. Supports custom namespaces (nodes in default namespace can be referenced using "nlapi" as the prefix)
@@ -1469,7 +1471,7 @@ function nlapiSelectValues(node, xpath) { ; }
  *
  * @since 2008.1
  */
-function nlapiSelectNode(node, xpath) { ; }
+exports.nlapiSelectNode = (node, xpath) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Select an array of nodes from an XML node using XPath. Supports custom namespaces (nodes in default namespace can be referenced using "nlapi" as the prefix)
@@ -1480,7 +1482,7 @@ function nlapiSelectNode(node, xpath) { ; }
  *
  * @since 2008.1
  */
-function nlapiSelectNodes(node, xpath) { ; }
+exports.nlapiSelectNodes = (node, xpath) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Calculate exchange rate between two currencies as of today or an optional effective date.
@@ -1493,7 +1495,7 @@ function nlapiSelectNodes(node, xpath) { ; }
  *
  * @since 2009.1
  */
-function nlapiExchangeRate(fromCurrency, toCurrency, date) { ; }
+exports.nlapiExchangeRate = (fromCurrency, toCurrency, date) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Initiates a workflow on-demand and returns the workflow instance ID for the workflow-record combination.
@@ -1506,7 +1508,7 @@ function nlapiExchangeRate(fromCurrency, toCurrency, date) { ; }
  *
  * @since 2010.1
  */
-function nlapiInitiateWorkflow(recordtype, id, workflowid) { ; }
+exports.nlapiInitiateWorkflow = (recordtype, id, workflowid) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Initiates a workflow on-demand and returns the workflow instance ID for the workflow-record combination.
@@ -1519,7 +1521,7 @@ function nlapiInitiateWorkflow(recordtype, id, workflowid) { ; }
  *
  * @since 2014.2
  */
-function nlapiInitiateWorkflowAsync(recordType, id, workflowId, parameters){;}
+exports.nlapiInitiateWorkflowAsync = (recordType, id, workflowId, parameters) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Triggers a workflow on a record.
@@ -1534,7 +1536,7 @@ function nlapiInitiateWorkflowAsync(recordType, id, workflowId, parameters){;}
  *
  * @since 2010.1
  */
-function nlapiTriggerWorkflow(recordtype, id, workflowid, actionid, stateid) { ; }
+exports.nlapiTriggerWorkflow = (recordtype, id, workflowid, actionid, stateid) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Create a subrecord on a sublist field on the current record on a page.
@@ -1545,7 +1547,7 @@ function nlapiTriggerWorkflow(recordtype, id, workflowid, actionid, stateid) { ;
  *
  * @since 2011.2
  */
-function nlapiCreateCurrentLineSubrecord(type,fldnam) { ; }
+exports.nlapiCreateCurrentLineSubrecord = (type,fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * edit a subrecord on a sublist field on the current record on a page.
@@ -1556,7 +1558,7 @@ function nlapiCreateCurrentLineSubrecord(type,fldnam) { ; }
  *
  * @since 2011.2
  */
-function nlapiEditCurrentLineItemSubrecord(type,fldnam) { ; }
+exports.nlapiEditCurrentLineItemSubrecord = (type,fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * remove a subrecord on a sublist field on the current record on a page.
@@ -1567,7 +1569,7 @@ function nlapiEditCurrentLineItemSubrecord(type,fldnam) { ; }
  *
  * @since 2011.2
  */
-function nlapiRemoveCurrentLineItemSubrecord(type,fldnam) { ; }
+exports.nlapiRemoveCurrentLineItemSubrecord = (type,fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 
 /**
@@ -1579,7 +1581,7 @@ function nlapiRemoveCurrentLineItemSubrecord(type,fldnam) { ; }
  *
  * @since 2011.2
  */
-function nlapiViewCurrentLineItemSubrecord(type,fldnam) { ; }
+exports.nlapiViewCurrentLineItemSubrecord = (type,fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 
 /**
@@ -1591,7 +1593,7 @@ function nlapiViewCurrentLineItemSubrecord(type,fldnam) { ; }
  *
  * @since 2011.2
  */
-function nlapiViewLineItemSubrecord(type,fldnam,linenum) { ; }
+exports.nlapiViewLineItemSubrecord = (type,fldnam,linenum) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 
 /**
@@ -1601,7 +1603,7 @@ function nlapiViewLineItemSubrecord(type,fldnam,linenum) { ; }
  *
  * @since 2013.2
  */
-function nlapiGetCache(name){;}
+exports.nlapiGetCache = (name) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * create a subrecord on body field on the current record on a page.
@@ -1611,7 +1613,7 @@ function nlapiGetCache(name){;}
  *
  * @since 2011.2
  */
-function createSubrecord(fldnam) { ; }
+exports.createSubrecord = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * edit a subrecord on body field on the current record on a page.
@@ -1621,7 +1623,7 @@ function createSubrecord(fldnam) { ; }
  *
  * @since 2011.2
  */
-function editSubrecord(fldnam) { ; }
+exports.editSubrecord = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * remove a subrecord on body field on the current record on a page.
@@ -1631,7 +1633,7 @@ function editSubrecord(fldnam) { ; }
  *
  * @since 2011.2
  */
-function removeSubrecord(fldnam) { ; }
+exports.removeSubrecord = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * view a subrecord on body field on the current record on a page.
@@ -1641,9 +1643,10 @@ function removeSubrecord(fldnam) { ; }
  *
  * @since 2011.2
  */
-function viewSubrecord(fldnam) { ; }
+exports.viewSubrecord = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
-function nlobjSubrecord() { ; }
+function nlobjSubrecord() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjSubrecord = nlobjSubrecord;
 
 /**
  * Commit the subrecord after you finish modifying it.
@@ -1655,7 +1658,7 @@ function nlobjSubrecord() { ; }
  *
  * @since 2008.1
  */
-nlobjSubrecord.prototype.commit = function() { ; }
+nlobjSubrecord.prototype.commit = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Cancel the any modification on subrecord.
@@ -1667,7 +1670,7 @@ nlobjSubrecord.prototype.commit = function() { ; }
  *
  * @since 2008.1
  */
-nlobjSubrecord.prototype.cancel = function() { ; }
+nlobjSubrecord.prototype.cancel = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjRecord used for accessing and manipulating record objects.
@@ -1678,7 +1681,8 @@ nlobjSubrecord.prototype.cancel = function() { ; }
  *
  * @since 2008.2
  */
-function nlobjRecord() { ; }
+function nlobjRecord() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjRecord = nlobjRecord;
 
 /**
  * Return the internalId of the record or NULL for new records.
@@ -1690,7 +1694,7 @@ function nlobjRecord() { ; }
  *
  * @since 2008.1
  */
-nlobjRecord.prototype.getId = function() { ; }
+nlobjRecord.prototype.getId = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the recordType corresponding to this record.
@@ -1702,7 +1706,7 @@ nlobjRecord.prototype.getId = function() { ; }
  *
  * @since 2008.1
  */
-nlobjRecord.prototype.getRecordType = function( ) { ; }
+nlobjRecord.prototype.getRecordType = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return field metadata for field.
@@ -1715,7 +1719,7 @@ nlobjRecord.prototype.getRecordType = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjRecord.prototype.getField = function(fldnam) { ; }
+nlobjRecord.prototype.getField = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return sublist metadata for sublist.
@@ -1728,7 +1732,7 @@ nlobjRecord.prototype.getField = function(fldnam) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.getSubList = function(type) { ; }
+nlobjRecord.prototype.getSubList = (type) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return field metadata for field.
@@ -1743,7 +1747,7 @@ nlobjRecord.prototype.getSubList = function(type) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.getMatrixField = function(type, fldnam, column) { ; }
+nlobjRecord.prototype.getMatrixField = (type, fldnam, column) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return metadata for sublist field.
@@ -1758,7 +1762,7 @@ nlobjRecord.prototype.getMatrixField = function(type, fldnam, column) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.getLineItemField = function(type, fldnam, linenum) { ; }
+nlobjRecord.prototype.getLineItemField = (type, fldnam, linenum) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return metadata for sublist field.
@@ -1774,7 +1778,7 @@ nlobjRecord.prototype.getLineItemField = function(type, fldnam, linenum) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.getLineItemMatrixField = function(type, fldnam, linenum, column) { ; }
+nlobjRecord.prototype.getLineItemMatrixField = (type, fldnam, linenum, column) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a field.
@@ -1788,7 +1792,7 @@ nlobjRecord.prototype.getLineItemMatrixField = function(type, fldnam, linenum, c
  *
  * @since 2008.1
  */
-nlobjRecord.prototype.setFieldValue = function( name, value ) { ; }
+nlobjRecord.prototype.setFieldValue = ( name, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the values of a multi-select field.
@@ -1801,7 +1805,7 @@ nlobjRecord.prototype.setFieldValue = function( name, value ) { ; }
  *
  * @since 2008.1
  */
-nlobjRecord.prototype.setFieldValues = function( name, values ) { ; }
+nlobjRecord.prototype.setFieldValues = ( name, values ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a field.
@@ -1814,7 +1818,7 @@ nlobjRecord.prototype.setFieldValues = function( name, values ) { ; }
  *
  * @since 2008.1
  */
-nlobjRecord.prototype.getFieldValue = function( name ) { ; }
+nlobjRecord.prototype.getFieldValue = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the selected values of a multi-select field as an Array.
@@ -1827,7 +1831,7 @@ nlobjRecord.prototype.getFieldValue = function( name ) { ; }
  *
  * @since 2008.1
  */
-nlobjRecord.prototype.getFieldValues = function( name ) { ; }
+nlobjRecord.prototype.getFieldValues = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value (via display value) of a select field.
@@ -1842,7 +1846,7 @@ nlobjRecord.prototype.getFieldValues = function( name ) { ; }
  *
  * @since 2008.2
  */
-nlobjRecord.prototype.setFieldText = function( name, text ) { ; }
+nlobjRecord.prototype.setFieldText = ( name, text ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the values (via display values) of a multi-select field.
@@ -1857,7 +1861,7 @@ nlobjRecord.prototype.setFieldText = function( name, text ) { ; }
  *
  * @since 2008.2
  */
-nlobjRecord.prototype.setFieldTexts = function( name, texts ) { ; }
+nlobjRecord.prototype.setFieldTexts = ( name, texts ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the display value for a select field.
@@ -1871,7 +1875,7 @@ nlobjRecord.prototype.setFieldTexts = function( name, texts ) { ; }
  *
  * @since 2008.2
  */
-nlobjRecord.prototype.getFieldText = function( name ) { ; }
+nlobjRecord.prototype.getFieldText = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the selected display values of a multi-select field as an Array.
@@ -1885,7 +1889,7 @@ nlobjRecord.prototype.getFieldText = function( name ) { ; }
  *
  * @since 2008.2
  */
-nlobjRecord.prototype.getFieldTexts = function( name ) { ; }
+nlobjRecord.prototype.getFieldTexts = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Get the value of a matrix header field.
@@ -1900,7 +1904,7 @@ nlobjRecord.prototype.getFieldTexts = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.getMatrixValue = function( type, name, column ) { ; }
+nlobjRecord.prototype.getMatrixValue = ( type, name, column ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a matrix header field.
@@ -1916,7 +1920,7 @@ nlobjRecord.prototype.getMatrixValue = function( type, name, column ) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.setMatrixValue = function( type, name, column, value ) { ; }
+nlobjRecord.prototype.setMatrixValue = ( type, name, column, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return an Array of all field names on the record.
@@ -1928,7 +1932,7 @@ nlobjRecord.prototype.setMatrixValue = function( type, name, column, value ) { ;
  *
  * @since 2008.1
  */
-nlobjRecord.prototype.getAllFields = function( ) { ; }
+nlobjRecord.prototype.getAllFields = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return an Array of all field names on a record for a particular sublist.
@@ -1941,7 +1945,7 @@ nlobjRecord.prototype.getAllFields = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjRecord.prototype.getAllLineItemFields = function( group ) { ; }
+nlobjRecord.prototype.getAllLineItemFields = ( group ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a sublist field.
@@ -1956,7 +1960,7 @@ nlobjRecord.prototype.getAllLineItemFields = function( group ) { ; }
  *
  * @since 2008.1
  */
-nlobjRecord.prototype.setLineItemValue = function( group, name, line, value ) { ; }
+nlobjRecord.prototype.setLineItemValue = ( group, name, line, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a sublist field.
@@ -1971,7 +1975,7 @@ nlobjRecord.prototype.setLineItemValue = function( group, name, line, value ) { 
  *
  * @since 2013.2
  */
-nlobjRecord.prototype.setLineItemDateTimeValue = function( group, name, line, value ) { ; }
+nlobjRecord.prototype.setLineItemDateTimeValue = ( group, name, line, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the value of a sublist field.
@@ -1987,7 +1991,7 @@ nlobjRecord.prototype.setLineItemDateTimeValue = function( group, name, line, va
  *
  * @since 2013.2
  */
-nlobjRecord.prototype.setLineItemDateTimeValue = function( group, name, line, value, timezone ) { ; }
+nlobjRecord.prototype.setLineItemDateTimeValue = ( group, name, line, value, timezone ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a sublist field.
@@ -2001,7 +2005,7 @@ nlobjRecord.prototype.setLineItemDateTimeValue = function( group, name, line, va
  *
  * @since 2008.1
  */
-nlobjRecord.prototype.getLineItemValue = function( group, name, line ) { ; }
+nlobjRecord.prototype.getLineItemValue = ( group, name, line ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a sublist field.
@@ -2015,7 +2019,7 @@ nlobjRecord.prototype.getLineItemValue = function( group, name, line ) { ; }
  *
  * @since 2013.2
  */
-nlobjRecord.prototype.getLineItemDateTimeValue = function( group, name, line ) { ; }
+nlobjRecord.prototype.getLineItemDateTimeValue = ( group, name, line ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a sublist field.
@@ -2030,7 +2034,7 @@ nlobjRecord.prototype.getLineItemDateTimeValue = function( group, name, line ) {
  *
  * @since 2013.2
  */
-nlobjRecord.prototype.getLineItemDateTimeValue = function( group, name, line, timezone ) { ; }
+nlobjRecord.prototype.getLineItemDateTimeValue = ( group, name, line, timezone ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the text value of a sublist field.
@@ -2045,7 +2049,7 @@ nlobjRecord.prototype.getLineItemDateTimeValue = function( group, name, line, ti
  *
  * @since 2008.2
  */
-nlobjRecord.prototype.getLineItemText = function( group, name, line ) { ; }
+nlobjRecord.prototype.getLineItemText = ( group, name, line ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the current value of a sublist field.
@@ -2059,7 +2063,7 @@ nlobjRecord.prototype.getLineItemText = function( group, name, line ) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.setCurrentLineItemValue = function( group, name, value ) { ; }
+nlobjRecord.prototype.setCurrentLineItemValue = ( group, name, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the current value of a sublist field.
@@ -2073,7 +2077,7 @@ nlobjRecord.prototype.setCurrentLineItemValue = function( group, name, value ) {
  *
  * @since 2013.2
  */
-nlobjRecord.prototype.setCurrentLineItemDateTimeValue = function( group, name, value ) { ; }
+nlobjRecord.prototype.setCurrentLineItemDateTimeValue = ( group, name, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the current value of a sublist field.
@@ -2088,7 +2092,7 @@ nlobjRecord.prototype.setCurrentLineItemDateTimeValue = function( group, name, v
  *
  * @since 2013.2
  */
-nlobjRecord.prototype.setCurrentLineItemDateTimeValue = function( group, name, value,timezone ) { ; }
+nlobjRecord.prototype.setCurrentLineItemDateTimeValue = ( group, name, value,timezone ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the current value of a sublist field.
@@ -2102,7 +2106,7 @@ nlobjRecord.prototype.setCurrentLineItemDateTimeValue = function( group, name, v
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.getCurrentLineItemValue = function( group, name ) { ; }
+nlobjRecord.prototype.getCurrentLineItemValue = ( group, name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the current value of a sublist field.
@@ -2116,7 +2120,7 @@ nlobjRecord.prototype.getCurrentLineItemValue = function( group, name ) { ; }
  *
  * @since 2013.2
  */
-nlobjRecord.prototype.getCurrentLineItemDateTimeValue = function( group, name ) { ; }
+nlobjRecord.prototype.getCurrentLineItemDateTimeValue = ( group, name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the current value of a sublist field.
@@ -2131,7 +2135,7 @@ nlobjRecord.prototype.getCurrentLineItemDateTimeValue = function( group, name ) 
  *
  * @since 2013.2
  */
-nlobjRecord.prototype.getCurrentLineItemDateTimeValue = function( group, name, timezone ) { ; }
+nlobjRecord.prototype.getCurrentLineItemDateTimeValue = ( group, name, timezone ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the current display value of a sublist field.
@@ -2145,7 +2149,7 @@ nlobjRecord.prototype.getCurrentLineItemDateTimeValue = function( group, name, t
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.getCurrentLineItemText = function( group, name ) { ; }
+nlobjRecord.prototype.getCurrentLineItemText = ( group, name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the current value of a sublist matrix field.
@@ -2161,7 +2165,7 @@ nlobjRecord.prototype.getCurrentLineItemText = function( group, name ) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.setCurrentLineItemMatrixValue = function( group, name, column, value ) { ; }
+nlobjRecord.prototype.setCurrentLineItemMatrixValue = ( group, name, column, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the current value of a sublist matrix field.
@@ -2176,7 +2180,7 @@ nlobjRecord.prototype.setCurrentLineItemMatrixValue = function( group, name, col
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.getCurrentLineItemMatrixValue = function( group, name, column ) { ; }
+nlobjRecord.prototype.getCurrentLineItemMatrixValue = ( group, name, column ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the number of columns for a matrix field.
@@ -2190,7 +2194,7 @@ nlobjRecord.prototype.getCurrentLineItemMatrixValue = function( group, name, col
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.getMatrixCount = function( group, name ) { ; }
+nlobjRecord.prototype.getMatrixCount = ( group, name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the number of lines in a sublist.
@@ -2202,7 +2206,7 @@ nlobjRecord.prototype.getMatrixCount = function( group, name ) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.getLineItemCount = function( group ) { ; }
+nlobjRecord.prototype.getLineItemCount = ( group ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return line number for 1st occurence of field value in a sublist column.
@@ -2217,7 +2221,7 @@ nlobjRecord.prototype.getLineItemCount = function( group ) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.findLineItemValue = function( group, fldnam, value ) { ; }
+nlobjRecord.prototype.findLineItemValue = ( group, fldnam, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return line number for 1st occurence of field value in a sublist column.
@@ -2233,7 +2237,7 @@ nlobjRecord.prototype.findLineItemValue = function( group, fldnam, value ) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.findLineItemMatrixValue = function( group, fldnam, column, value ) { ; }
+nlobjRecord.prototype.findLineItemMatrixValue = ( group, fldnam, column, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Insert a new line into a sublist.
@@ -2246,7 +2250,7 @@ nlobjRecord.prototype.findLineItemMatrixValue = function( group, fldnam, column,
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.insertLineItem = function( group, line ) { ; }
+nlobjRecord.prototype.insertLineItem = ( group, line ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Remove an existing line from a sublist.
@@ -2259,7 +2263,7 @@ nlobjRecord.prototype.insertLineItem = function( group, line ) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.removeLineItem = function( group, line ) { ; }
+nlobjRecord.prototype.removeLineItem = ( group, line ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Insert and select a new line in a sublist.
@@ -2272,7 +2276,7 @@ nlobjRecord.prototype.removeLineItem = function( group, line ) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.selectNewLineItem = function( group ) { ; }
+nlobjRecord.prototype.selectNewLineItem = ( group ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Select an existing line in a sublist.
@@ -2286,7 +2290,7 @@ nlobjRecord.prototype.selectNewLineItem = function( group ) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.selectLineItem = function( group, line ) { ; }
+nlobjRecord.prototype.selectLineItem = ( group, line ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Commit the current line in a sublist.
@@ -2299,7 +2303,7 @@ nlobjRecord.prototype.selectLineItem = function( group, line ) { ; }
  *
  * @since 2009.2
  */
-nlobjRecord.prototype.commitLineItem = function( group ) { ; }
+nlobjRecord.prototype.commitLineItem = ( group ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the value of a field.
@@ -2314,7 +2318,7 @@ nlobjRecord.prototype.commitLineItem = function( group ) { ; }
  *
  * @since 20013.2
  */
-nlobjRecord.prototype.setDateTimeValue = function (name, value, timezone) { ; }
+nlobjRecord.prototype.setDateTimeValue = (name, value, timezone) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the value of a field.
@@ -2328,7 +2332,7 @@ nlobjRecord.prototype.setDateTimeValue = function (name, value, timezone) { ; }
  *
  * @since 20013.2
  */
-nlobjRecord.prototype.setDateTimeValue = function (name, value) { ; }
+nlobjRecord.prototype.setDateTimeValue = (name, value) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a field on the current record on a page.
@@ -2338,7 +2342,7 @@ nlobjRecord.prototype.setDateTimeValue = function (name, value) { ; }
  *
  * @since	2013.2
  */
-nlobjRecord.prototype.getDateTimeValue = function (fldnam) { ; }
+nlobjRecord.prototype.getDateTimeValue = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value of a field on the current record on a page.
@@ -2349,7 +2353,7 @@ nlobjRecord.prototype.getDateTimeValue = function (fldnam) { ; }
  *
  * @since	2013.2
  */
-nlobjRecord.prototype.getDateTimeValue = function (fldnam, timezone) { ; }
+nlobjRecord.prototype.getDateTimeValue = (fldnam, timezone) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjConfiguration..
@@ -2360,7 +2364,8 @@ nlobjRecord.prototype.getDateTimeValue = function (fldnam, timezone) { ; }
  *
  * @since 2009.2
  */
-function nlobjConfiguration( ) { ; }
+function nlobjConfiguration() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjConfiguration = nlobjConfiguration;
 
 /**
  * return the type corresponding to this setup record.
@@ -2372,7 +2377,7 @@ function nlobjConfiguration( ) { ; }
  *
  * @since 2009.2
  */
-nlobjConfiguration.prototype.getType = function( ) { ; }
+nlobjConfiguration.prototype.getType = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return field metadata for field.
@@ -2385,7 +2390,7 @@ nlobjConfiguration.prototype.getType = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjConfiguration.prototype.getField = function(fldnam) { ; }
+nlobjConfiguration.prototype.getField = (fldnam) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the value of a field.
@@ -2399,7 +2404,7 @@ nlobjConfiguration.prototype.getField = function(fldnam) { ; }
  *
  * @since 2009.2
  */
-nlobjConfiguration.prototype.setFieldValue = function( name, value ) { ; }
+nlobjConfiguration.prototype.setFieldValue = ( name, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Set the values of a multi-select field.
@@ -2414,7 +2419,7 @@ nlobjConfiguration.prototype.setFieldValue = function( name, value ) { ; }
  *
  * @since 2009.2
  */
-nlobjConfiguration.prototype.setFieldValues = function( name, value ) { ; }
+nlobjConfiguration.prototype.setFieldValues = ( name, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the value of a field.
@@ -2427,7 +2432,7 @@ nlobjConfiguration.prototype.setFieldValues = function( name, value ) { ; }
  *
  * @since 2009.2
  */
-nlobjConfiguration.prototype.getFieldValue = function( name ) { ; }
+nlobjConfiguration.prototype.getFieldValue = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the selected values of a multi-select field as an Array.
@@ -2441,7 +2446,7 @@ nlobjConfiguration.prototype.getFieldValue = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjConfiguration.prototype.getFieldValues = function( name ) { ; }
+nlobjConfiguration.prototype.getFieldValues = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the value (via display value) of a field.
@@ -2456,7 +2461,7 @@ nlobjConfiguration.prototype.getFieldValues = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjConfiguration.prototype.setFieldText = function( name, text ) { ; }
+nlobjConfiguration.prototype.setFieldText = ( name, text ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the values (via display values) of a multi-select field.
@@ -2471,7 +2476,7 @@ nlobjConfiguration.prototype.setFieldText = function( name, text ) { ; }
  *
  * @since 2009.2
  */
-nlobjConfiguration.prototype.setFieldTexts = function( name, texts ) { ; }
+nlobjConfiguration.prototype.setFieldTexts = ( name, texts ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the text value of a field.
@@ -2485,7 +2490,7 @@ nlobjConfiguration.prototype.setFieldTexts = function( name, texts ) { ; }
  *
  * @since 2009.2
  */
-nlobjConfiguration.prototype.getFieldText = function( name ) { ; }
+nlobjConfiguration.prototype.getFieldText = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the selected text values of a multi-select field as an Array.
@@ -2497,7 +2502,7 @@ nlobjConfiguration.prototype.getFieldText = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjConfiguration.prototype.getFieldTexts = function( name ) { ; }
+nlobjConfiguration.prototype.getFieldTexts = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an Array of all field names on the record.
@@ -2508,7 +2513,7 @@ nlobjConfiguration.prototype.getFieldTexts = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjConfiguration.prototype.getAllFields = function( ) { ; }
+nlobjConfiguration.prototype.getAllFields = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjFile used for accessing and manipulating files in the file cabinet.
@@ -2519,7 +2524,8 @@ nlobjConfiguration.prototype.getAllFields = function( ) { ; }
  *
  * @since 2009.1
  */
-function nlobjFile( ) { ; }
+function nlobjFile() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjFile = nlobjFile;
 
 /**
  * Return the name of the file.
@@ -2530,7 +2536,7 @@ function nlobjFile( ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.getName = function( ) { ; }
+nlobjFile.prototype.getName = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Sets the name of a file.
@@ -2542,7 +2548,7 @@ nlobjFile.prototype.getName = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.setName = function( name ) { ; }
+nlobjFile.prototype.setName = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the internal ID of the folder that this file is in.
@@ -2553,7 +2559,7 @@ nlobjFile.prototype.setName = function( name ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.getFolder = function( ) { ; }
+nlobjFile.prototype.getFolder = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * sets the internal ID of the folder that this file is in.
@@ -2565,7 +2571,7 @@ nlobjFile.prototype.getFolder = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.setFolder = function( folder ) { ; }
+nlobjFile.prototype.setFolder = ( folder ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * sets the character encoding for the file.
@@ -2577,7 +2583,7 @@ nlobjFile.prototype.setFolder = function( folder ) { ; }
  *
  * @since 2010.2
  */
-nlobjFile.prototype.setEncoding = function( encoding ) { ; }
+nlobjFile.prototype.setEncoding = ( encoding ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return true if the file is "Available without Login".
@@ -2588,7 +2594,7 @@ nlobjFile.prototype.setEncoding = function( encoding ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.isOnline = function( ) { ; }
+nlobjFile.prototype.isOnline = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * sets the file's "Available without Login" status.
@@ -2600,7 +2606,7 @@ nlobjFile.prototype.isOnline = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.setIsOnline = function( online ) { ; }
+nlobjFile.prototype.setIsOnline = ( online ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return true if the file is inactive.
@@ -2611,7 +2617,7 @@ nlobjFile.prototype.setIsOnline = function( online ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.isInactive = function( ) { ; }
+nlobjFile.prototype.isInactive = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * sets the file's inactive status.
@@ -2623,7 +2629,7 @@ nlobjFile.prototype.isInactive = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.setIsInactive = function( inactive ) { ; }
+nlobjFile.prototype.setIsInactive = ( inactive ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the file description.
@@ -2634,7 +2640,7 @@ nlobjFile.prototype.setIsInactive = function( inactive ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.getDescription = function( ) { ; }
+nlobjFile.prototype.getDescription = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * sets the file's description.
@@ -2646,7 +2652,7 @@ nlobjFile.prototype.getDescription = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.setDescription = function( descr ) { ; }
+nlobjFile.prototype.setDescription = ( descr ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the id of the file (if stored in the FC).
@@ -2657,7 +2663,7 @@ nlobjFile.prototype.setDescription = function( descr ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.getId = function( ) { ; }
+nlobjFile.prototype.getId = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the size of the file in bytes.
@@ -2668,7 +2674,7 @@ nlobjFile.prototype.getId = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.getSize = function( ) { ; }
+nlobjFile.prototype.getSize = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the URL of the file (if stored in the FC).
@@ -2679,7 +2685,7 @@ nlobjFile.prototype.getSize = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.getURL = function( ) { ; }
+nlobjFile.prototype.getURL = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the type of the file.
@@ -2690,7 +2696,7 @@ nlobjFile.prototype.getURL = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.getType = function( ) { ; }
+nlobjFile.prototype.getType = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the value (base64 encoded for binary types) of the file.
@@ -2701,7 +2707,7 @@ nlobjFile.prototype.getType = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjFile.prototype.getValue = function( ) { ; }
+nlobjFile.prototype.getValue = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjSearchFilter filter objects used to define search criteria.
@@ -2717,7 +2723,8 @@ nlobjFile.prototype.getValue = function( ) { ; }
  *
  * @since 2007.0
  */
-function nlobjSearchFilter( name, join, operator, value, value2 ) { ; }
+function nlobjSearchFilter( name, join, operator, value, value2 ) { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjSearchFilter = nlobjSearchFilter;
 
 /**
  * Return the name of this search filter.
@@ -2728,7 +2735,7 @@ function nlobjSearchFilter( name, join, operator, value, value2 ) { ; }
  *
  * @since 2007.0
  */
-nlobjSearchFilter.prototype.getName = function( ) { ; }
+nlobjSearchFilter.prototype.getName = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the join id for this search filter.
@@ -2739,7 +2746,7 @@ nlobjSearchFilter.prototype.getName = function( ) { ; }
  *
  * @since 2008.1
  */
-nlobjSearchFilter.prototype.getJoin = function( ) { ; }
+nlobjSearchFilter.prototype.getJoin = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the filter operator used.
@@ -2750,7 +2757,7 @@ nlobjSearchFilter.prototype.getJoin = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjSearchFilter.prototype.getOperator = function( ) { ; }
+nlobjSearchFilter.prototype.getOperator = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjSearchColumn used for column objects used to define search return columns.
@@ -2764,7 +2771,8 @@ nlobjSearchFilter.prototype.getOperator = function( ) { ; }
  *
  * @since 2007.0
  */
-function nlobjSearchColumn( name, join, summary ) { ; }
+function nlobjSearchColumn( name, join, summary ) { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjSearchColumn = nlobjSearchColumn;
 
 /**
  * return the name of this search column.
@@ -2774,7 +2782,7 @@ function nlobjSearchColumn( name, join, summary ) { ; }
  * @memberOf nlobjSearchColumn
  * @since 2008.1
  */
-nlobjSearchColumn.prototype.getName = function( ) { ; }
+nlobjSearchColumn.prototype.getName = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the join id for this search column.
@@ -2784,7 +2792,7 @@ nlobjSearchColumn.prototype.getName = function( ) { ; }
  * @memberOf nlobjSearchColumn
  * @since 2008.1
  */
-nlobjSearchColumn.prototype.getJoin = function( ) { ; }
+nlobjSearchColumn.prototype.getJoin = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the label of this search column.
@@ -2795,7 +2803,7 @@ nlobjSearchColumn.prototype.getJoin = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjSearchColumn.prototype.getLabel = function( ) { ; }
+nlobjSearchColumn.prototype.getLabel = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the summary type (avg,group,sum,count) of this search column.
@@ -2805,7 +2813,7 @@ nlobjSearchColumn.prototype.getLabel = function( ) { ; }
  * @memberOf nlobjSearchColumn
  * @since 2008.1
  */
-nlobjSearchColumn.prototype.getSummary = function( ) { ; }
+nlobjSearchColumn.prototype.getSummary = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return formula for this search column.
@@ -2816,7 +2824,7 @@ nlobjSearchColumn.prototype.getSummary = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjSearchColumn.prototype.getFormula = function( ) { ; }
+nlobjSearchColumn.prototype.getFormula = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return nlobjSearchColumn sorted in either ascending or descending order.
@@ -2828,7 +2836,7 @@ nlobjSearchColumn.prototype.getFormula = function( ) { ; }
  *
  * @since 2010.1
  */
-nlobjSearchColumn.prototype.setSort = function( order ) { ; }
+nlobjSearchColumn.prototype.setSort = ( order ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjSearchResult used for search result row object.
@@ -2837,7 +2845,8 @@ nlobjSearchColumn.prototype.setSort = function( order ) { ; }
  * @return {nlobjSearchResult}
  * @constructor
  */
-function nlobjSearchResult( ) { ; }
+function nlobjSearchResult() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjSearchResult = nlobjSearchResult;
 
 /**
  * return the internalId for the record returned in this row.
@@ -2845,7 +2854,7 @@ function nlobjSearchResult( ) { ; }
  * @memberOf nlobjSearchResult
  * @return {int}
  */
-nlobjSearchResult.prototype.getId = function( ) { ; }
+nlobjSearchResult.prototype.getId = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the recordtype for the record returned in this row.
@@ -2853,7 +2862,7 @@ nlobjSearchResult.prototype.getId = function( ) { ; }
  * @memberOf nlobjSearchResult
  * @return {string}
  */
-nlobjSearchResult.prototype.getRecordType = function( ) { ; }
+nlobjSearchResult.prototype.getRecordType = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the value for this nlobjSearchColumn.
@@ -2865,7 +2874,7 @@ nlobjSearchResult.prototype.getRecordType = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjSearchResult.prototype.getValue = function( column ) { ; }
+nlobjSearchResult.prototype.getValue = ( column ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the value for a return column specified by name, join ID, and summary type.
@@ -2879,7 +2888,7 @@ nlobjSearchResult.prototype.getValue = function( column ) { ; }
  *
  * @since 2008.1
  */
-nlobjSearchResult.prototype.getValue = function( name, join, summary ) { ; }
+nlobjSearchResult.prototype.getValue = ( name, join, summary ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the text value for this nlobjSearchColumn if it's a select field.
@@ -2891,7 +2900,7 @@ nlobjSearchResult.prototype.getValue = function( name, join, summary ) { ; }
  *
  * @since 2009.1
  */
-nlobjSearchResult.prototype.getText = function( column ) { ; }
+nlobjSearchResult.prototype.getText = ( column ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the text value of this return column if it's a select field.
@@ -2905,7 +2914,7 @@ nlobjSearchResult.prototype.getText = function( column ) { ; }
  *
  * @since 2008.1
  */
-nlobjSearchResult.prototype.getText = function( name, join, summary ) { ; }
+nlobjSearchResult.prototype.getText = ( name, join, summary ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an array of all nlobjSearchColumn objects returned in this search.
@@ -2916,7 +2925,7 @@ nlobjSearchResult.prototype.getText = function( name, join, summary ) { ; }
  *
  * @since 2009.2
  */
-nlobjSearchResult.prototype.getAllColumns = function( ) { ; }
+nlobjSearchResult.prototype.getAllColumns = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjContext used for user and script context information.
@@ -2925,7 +2934,9 @@ nlobjSearchResult.prototype.getAllColumns = function( ) { ; }
  * @return {nlobjContext}
  * @constructor
  */
-function nlobjContext( ) { ; }
+function nlobjContext() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjContext = nlobjContext;
+
 /**
  * return the name of the current user.
  * @return {string}
@@ -2935,7 +2946,7 @@ function nlobjContext( ) { ; }
  *
  * @since 2007.0
  */
-nlobjContext.prototype.getName = function( ) { ; }
+nlobjContext.prototype.getName = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the internalId of the current user.
@@ -2946,7 +2957,7 @@ nlobjContext.prototype.getName = function( ) { ; }
  *
  * @since 2007.0
  */
-nlobjContext.prototype.getUser = function( ) { ; }
+nlobjContext.prototype.getUser = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the internalId of the current user's role.
@@ -2957,7 +2968,7 @@ nlobjContext.prototype.getUser = function( ) { ; }
  *
  * @since 2007.0
  */
-nlobjContext.prototype.getRole = function( ) { ; }
+nlobjContext.prototype.getRole = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the script ID of the current user's role.
@@ -2968,7 +2979,7 @@ nlobjContext.prototype.getRole = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjContext.prototype.getRoleId = function( ) { ; }
+nlobjContext.prototype.getRoleId = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the internalId of the current user's center type.
@@ -2979,7 +2990,7 @@ nlobjContext.prototype.getRoleId = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjContext.prototype.getRoleCenter = function( ) { ; }
+nlobjContext.prototype.getRoleCenter = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the email address of the current user.
@@ -2990,7 +3001,7 @@ nlobjContext.prototype.getRoleCenter = function( ) { ; }
  *
  * @since 2007.0
  */
-nlobjContext.prototype.getEmail = function( ) { ; }
+nlobjContext.prototype.getEmail = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the internal ID of the contact logged in on behalf of a customer, vendor, or partner. It returns -1 for non-contact logins
@@ -3001,7 +3012,7 @@ nlobjContext.prototype.getEmail = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjContext.prototype.getContact = function( ) { ; }
+nlobjContext.prototype.getContact = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the account ID of the current user.
@@ -3012,7 +3023,7 @@ nlobjContext.prototype.getContact = function( ) { ; }
  *
  * @since 2007.0
  */
-nlobjContext.prototype.getCompany = function( ) { ; }
+nlobjContext.prototype.getCompany = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the internalId of the current user's department.
@@ -3023,7 +3034,7 @@ nlobjContext.prototype.getCompany = function( ) { ; }
  *
  * @since 2007.0
  */
-nlobjContext.prototype.getDepartment = function( ) { ; }
+nlobjContext.prototype.getDepartment = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the internalId of the current user's location.
@@ -3034,7 +3045,7 @@ nlobjContext.prototype.getDepartment = function( ) { ; }
  *
  * @since 2007.0
  */
-nlobjContext.prototype.getLocation = function( ) { ; }
+nlobjContext.prototype.getLocation = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the internalId of the current user's subsidiary.
@@ -3045,7 +3056,7 @@ nlobjContext.prototype.getLocation = function( ) { ; }
  *
  * @since 2007.0
  */
-nlobjContext.prototype.getSubsidiary = function( ) { ; }
+nlobjContext.prototype.getSubsidiary = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the execution context for this script: webServices|csvImport|client|userInterface|scheduledScript|portlet|suitelet|debugger|custommassupdate
@@ -3056,7 +3067,7 @@ nlobjContext.prototype.getSubsidiary = function( ) { ; }
  *
  * @since 2007.0
  */
-nlobjContext.prototype.getExecutionContext = function( ) { ; }
+nlobjContext.prototype.getExecutionContext = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the amount of usage units remaining for this script.
@@ -3067,7 +3078,7 @@ nlobjContext.prototype.getExecutionContext = function( ) { ; }
  *
  * @since 2007.0
  */
-nlobjContext.prototype.getRemainingUsage = function( ) { ; }
+nlobjContext.prototype.getRemainingUsage = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return true if feature is enabled, false otherwise
@@ -3079,7 +3090,7 @@ nlobjContext.prototype.getRemainingUsage = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjContext.prototype.getFeature = function( name ) { ; }
+nlobjContext.prototype.getFeature = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return current user's permission level (0-4) for this permission
@@ -3091,7 +3102,7 @@ nlobjContext.prototype.getFeature = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjContext.prototype.getPermission = function( name ) { ; }
+nlobjContext.prototype.getPermission = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return system or script preference selection for current user
@@ -3103,7 +3114,7 @@ nlobjContext.prototype.getPermission = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjContext.prototype.getPreference = function( name ) { ; }
+nlobjContext.prototype.getPreference = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return value of session object set by script
@@ -3115,7 +3126,7 @@ nlobjContext.prototype.getPreference = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjContext.prototype.getSessionObject = function( name ) { ; }
+nlobjContext.prototype.getSessionObject = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the value of a session object using a key.
@@ -3128,7 +3139,7 @@ nlobjContext.prototype.getSessionObject = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjContext.prototype.setSessionObject = function( name, value ) { ; }
+nlobjContext.prototype.setSessionObject = ( name, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an array containing the names of all keys used to set session objects
@@ -3139,7 +3150,7 @@ nlobjContext.prototype.setSessionObject = function( name, value ) { ; }
  *
  * @since 2009.2
  */
-nlobjContext.prototype.getAllSessionObjects = function() { ; }
+nlobjContext.prototype.getAllSessionObjects = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the NetSuite version for the current account
@@ -3150,19 +3161,19 @@ nlobjContext.prototype.getAllSessionObjects = function() { ; }
  *
  * @since 2009.2
  */
-nlobjContext.prototype.getVersion = function(  ) { ; }
+nlobjContext.prototype.getVersion = (  ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the environment that the script is executing in: SANDBOX, PRODUCTION, BETA, INTERNAL
  * @since 2008.2
  */
-nlobjContext.prototype.getEnvironment = function(  ) { ; }
+nlobjContext.prototype.getEnvironment = (  ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the logging level for the current script execution. Not supported in CLIENT scripts
  * @since 2008.2
  */
-nlobjContext.prototype.getLogLevel = function(  ) { ; }
+nlobjContext.prototype.getLogLevel = (  ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the script ID for the current script
@@ -3173,7 +3184,7 @@ nlobjContext.prototype.getLogLevel = function(  ) { ; }
  *
  * @since 2009.2
  */
-nlobjContext.prototype.getScriptId = function(  ) { ; }
+nlobjContext.prototype.getScriptId = (  ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the deployment ID for the current script
@@ -3184,7 +3195,7 @@ nlobjContext.prototype.getScriptId = function(  ) { ; }
  *
  * @since 2009.2
  */
-nlobjContext.prototype.getDeploymentId = function(  ) { ; }
+nlobjContext.prototype.getDeploymentId = (  ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the % complete specified for the current scheduled script execution
@@ -3195,7 +3206,7 @@ nlobjContext.prototype.getDeploymentId = function(  ) { ; }
  *
  * @since 2009.2
  */
-nlobjContext.prototype.getPercentComplete = function(  ) { ; }
+nlobjContext.prototype.getPercentComplete = (  ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the % complete for the current scheduled script execution
@@ -3207,7 +3218,7 @@ nlobjContext.prototype.getPercentComplete = function(  ) { ; }
  *
  * @since 2009.2
  */
-nlobjContext.prototype.setPercentComplete = function( pct ) { ; }
+nlobjContext.prototype.setPercentComplete = ( pct ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return a system/script setting. Types are SCRIPT, SESSION, FEATURE, PERMISSION
@@ -3217,7 +3228,7 @@ nlobjContext.prototype.setPercentComplete = function( pct ) { ; }
  * @since 2007.0
  * @deprecated
  */
-nlobjContext.prototype.getSetting = function( type, name ) { ; }
+nlobjContext.prototype.getSetting = ( type, name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set a system/script setting. Only supported type is SESSION
@@ -3228,7 +3239,7 @@ nlobjContext.prototype.getSetting = function( type, name ) { ; }
  * @since 2007.0
  * @deprecated
  */
-nlobjContext.prototype.setSetting = function( type, name, value ) { ; }
+nlobjContext.prototype.setSetting = ( type, name, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an Object containing name/value pairs of color groups to their corresponding RGB hex color based on the currenly logged in user's color them preferences.
@@ -3239,7 +3250,7 @@ nlobjContext.prototype.setSetting = function( type, name, value ) { ; }
  *
  * @since 2010.1
  */
-nlobjContext.prototype.getColorPreferences = function() { ; }
+nlobjContext.prototype.getColorPreferences = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the runtime version of SuiteScript, could be 1.0 or 2.0
@@ -3250,7 +3261,7 @@ nlobjContext.prototype.getColorPreferences = function() { ; }
  *
  * @since 2014.1
  */
-nlobjContext.prototype.getRuntimeVersion = function() { ; }
+nlobjContext.prototype.getRuntimeVersion = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 
 /**
@@ -3260,7 +3271,8 @@ nlobjContext.prototype.getRuntimeVersion = function() { ; }
  * @return {nlobjError}
  * @constructor
  */
-function nlobjError( ) { ; }
+function nlobjError() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjError = nlobjError;
 
 /**
  * return the error db ID for this error (if it was an unhandled unexpected error).
@@ -3271,7 +3283,7 @@ function nlobjError( ) { ; }
  *
  * @since 2008.2
  */
-nlobjError.prototype.getId = function( ) { ; }
+nlobjError.prototype.getId = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the error code for this system or user-defined error.
@@ -3282,7 +3294,7 @@ nlobjError.prototype.getId = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjError.prototype.getCode = function( ) { ; }
+nlobjError.prototype.getCode = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the error description for this error.
@@ -3293,7 +3305,7 @@ nlobjError.prototype.getCode = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjError.prototype.getDetails = function( ) { ; }
+nlobjError.prototype.getDetails = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return a stacktrace containing the location of the error.
@@ -3304,7 +3316,7 @@ nlobjError.prototype.getDetails = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjError.prototype.getStackTrace = function( ) { ; }
+nlobjError.prototype.getStackTrace = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the userevent script name where this error was thrown.
@@ -3315,7 +3327,7 @@ nlobjError.prototype.getStackTrace = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjError.prototype.getUserEvent = function( ) { ; }
+nlobjError.prototype.getUserEvent = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the internalid of the record if this error was thrown in an aftersubmit script.
@@ -3326,18 +3338,19 @@ nlobjError.prototype.getUserEvent = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjError.prototype.getInternalId = function( ) { ; }
+nlobjError.prototype.getInternalId = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjServerResponse..
  *
- * @classDescription Contains the results of a server response to an outbound Http(s) call.
+ * @classDescription Contains the results of a server response to an outbound Http = (s) call.
  * @return {nlobjServerResponse}
  * @constructor
  *
  * @since 2008.1
  */
-function nlobjServerResponse( ) { ; }
+function nlobjServerResponse() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjServerResponse = nlobjServerResponse;
 
 /**
  * return the Content-Type header in response
@@ -3348,7 +3361,7 @@ function nlobjServerResponse( ) { ; }
  *
  * @since 2008.1
  */
-nlobjServerResponse.prototype.getContentType = function( ) { ; }
+nlobjServerResponse.prototype.getContentType = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the value of a header returned.
@@ -3360,7 +3373,7 @@ nlobjServerResponse.prototype.getContentType = function( ) { ; }
  *
  * @since 2008.1
  */
-nlobjServerResponse.prototype.getHeader = function(name) { ; }
+nlobjServerResponse.prototype.getHeader = (name) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return all the values of a header returned.
@@ -3372,7 +3385,7 @@ nlobjServerResponse.prototype.getHeader = function(name) { ; }
  *
  * @since 2008.1
  */
-nlobjServerResponse.prototype.getHeaders = function(name) { ; }
+nlobjServerResponse.prototype.getHeaders = (name) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an Array of all headers returned.
@@ -3383,7 +3396,7 @@ nlobjServerResponse.prototype.getHeaders = function(name) { ; }
  *
  * @since 2008.1
  */
-nlobjServerResponse.prototype.getAllHeaders = function( ) { ; }
+nlobjServerResponse.prototype.getAllHeaders = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the response code returned.
@@ -3394,7 +3407,7 @@ nlobjServerResponse.prototype.getAllHeaders = function( ) { ; }
  *
  * @since 2008.1
  */
-nlobjServerResponse.prototype.getCode = function( ) { ; }
+nlobjServerResponse.prototype.getCode = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the response body returned.
@@ -3405,7 +3418,7 @@ nlobjServerResponse.prototype.getCode = function( ) { ; }
  *
  * @since 2008.1
  */
-nlobjServerResponse.prototype.getBody = function( ) { ; }
+nlobjServerResponse.prototype.getBody = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the nlobjError thrown via a client call to nlapiRequestURL.
@@ -3416,10 +3429,11 @@ nlobjServerResponse.prototype.getBody = function( ) { ; }
  *
  * @since 2008.1
  */
-nlobjServerResponse.prototype.getError = function( ) { ; }
+nlobjServerResponse.prototype.getError = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 
-function nlobjTemplateRenderer() { ; }
+function nlobjTemplateRenderer() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjTemplateRenderer = nlobjTemplateRenderer;
 
 /**
  * add a record for to a template engine
@@ -3431,7 +3445,7 @@ function nlobjTemplateRenderer() { ; }
  * @memberOf nlobjTemplateRenderer
  *
  */
-nlobjTemplateRenderer.prototype.addRecord = function( record ) { ; }
+nlobjTemplateRenderer.prototype.addRecord = ( record ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add search results to a template engine
@@ -3443,7 +3457,7 @@ nlobjTemplateRenderer.prototype.addRecord = function( record ) { ; }
  * @memberOf nlobjTemplateRenderer
  *
  */
-nlobjTemplateRenderer.prototype.addSearchResults = function( searchName, results ) { ; }
+nlobjTemplateRenderer.prototype.addSearchResults = ( searchName, results ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the template xml in the template engine
@@ -3454,7 +3468,7 @@ nlobjTemplateRenderer.prototype.addSearchResults = function( searchName, results
  * @memberOf nlobjTemplateRenderer
  *
  */
-nlobjTemplateRenderer.prototype.setTemplate = function( xml ) { ; }
+nlobjTemplateRenderer.prototype.setTemplate = ( xml ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * render the output of the template engine into the response
@@ -3464,14 +3478,15 @@ nlobjTemplateRenderer.prototype.setTemplate = function( xml ) { ; }
  * @method
  * @memberOf nlobjTemplateRenderer
  */
-nlobjTemplateRenderer.prototype.renderToResponse = function(nlobjResponse) { ; }
+nlobjTemplateRenderer.prototype.renderToResponse = (nlobjResponse) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  *
  */
-function nlobjEmailMerger() { ; }
+function nlobjEmailMerger() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjEmailMerger = nlobjEmailMerger;
 
- /**
+/**
  * associate an entity to the merger
  * @param  {string} entityType type of the entity (customer/contact/partner/vendor/employee)
  * @param  {int} entityId ID of the entity to be associated with the merger
@@ -3480,7 +3495,7 @@ function nlobjEmailMerger() { ; }
  * @method
  * @memberOf nlobjEmailMerger
  */
-nlobjEmailMerger.prototype.setEntity = function( entityType, entityId ) { ; }
+nlobjEmailMerger.prototype.setEntity = ( entityType, entityId ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * associate a second entity (recipient) to the merger
@@ -3491,7 +3506,7 @@ nlobjEmailMerger.prototype.setEntity = function( entityType, entityId ) { ; }
  * @method
  * @memberOf nlobjEmailMerger
  */
-nlobjEmailMerger.prototype.setRecipient = function( recipientType, recipientId ) { ; }
+nlobjEmailMerger.prototype.setRecipient = ( recipientType, recipientId ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * associate a support case to the merger
@@ -3501,7 +3516,7 @@ nlobjEmailMerger.prototype.setRecipient = function( recipientType, recipientId )
  * @method
  * @memberOf nlobjEmailMerger
  */
-nlobjEmailMerger.prototype.setSupportCase = function( caseId ) { ; }
+nlobjEmailMerger.prototype.setSupportCase = ( caseId ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * associate a transaction to the merger
@@ -3511,7 +3526,7 @@ nlobjEmailMerger.prototype.setSupportCase = function( caseId ) { ; }
  * @method
  * @memberOf nlobjEmailMerger
  */
-nlobjEmailMerger.prototype.setTransaction = function( transactionId ) { ; }
+nlobjEmailMerger.prototype.setTransaction = ( transactionId ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * associate a custom record to the merger
@@ -3522,7 +3537,7 @@ nlobjEmailMerger.prototype.setTransaction = function( transactionId ) { ; }
  * @method
  * @memberOf nlobjEmailMerger
  */
-nlobjEmailMerger.prototype.setCustomRecord = function( recordType, recordId ) { ; }
+nlobjEmailMerger.prototype.setCustomRecord = ( recordType, recordId ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * perform the merge and return an object containing email subject and body
@@ -3532,7 +3547,7 @@ nlobjEmailMerger.prototype.setCustomRecord = function( recordType, recordId ) { 
  * @method
  * @memberOf nlobjEmailMerger
  */
-nlobjEmailMerger.prototype.merge = function( ) { ; }
+nlobjEmailMerger.prototype.merge = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjResponse used for scripting web responses in Suitelets
@@ -3541,7 +3556,8 @@ nlobjEmailMerger.prototype.merge = function( ) { ; }
  * @return {nlobjResponse}
  * @constructor
  */
-function nlobjResponse( ) { ; }
+function nlobjResponse() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjResponse = nlobjResponse;
 
 /**
  * add a value for a response header.
@@ -3554,7 +3570,7 @@ function nlobjResponse( ) { ; }
  *
  * @since 2008.2
  */
-nlobjResponse.prototype.addHeader = function( name, value ) { ; }
+nlobjResponse.prototype.addHeader = ( name, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the value of a response header.
@@ -3567,7 +3583,7 @@ nlobjResponse.prototype.addHeader = function( name, value ) { ; }
  *
  * @since 2008.2
  */
-nlobjResponse.prototype.setHeader = function( name, value ) { ; }
+nlobjResponse.prototype.setHeader = ( name, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the value of a response header.
@@ -3579,7 +3595,7 @@ nlobjResponse.prototype.setHeader = function( name, value ) { ; }
  *
  * @since 2008.2
  */
-nlobjResponse.prototype.getHeader = function( ) { ; }
+nlobjResponse.prototype.getHeader = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an Array of all response header values for a header
@@ -3591,7 +3607,7 @@ nlobjResponse.prototype.getHeader = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjResponse.prototype.getHeaders = function( name ) { ; }
+nlobjResponse.prototype.getHeaders = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an Array of all response headers
@@ -3602,7 +3618,7 @@ nlobjResponse.prototype.getHeaders = function( name ) { ; }
  *
  * @since 2008.2
  */
-nlobjResponse.prototype.getAllHeaders = function( ) { ; }
+nlobjResponse.prototype.getAllHeaders = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * suppress caching for this response.
@@ -3613,7 +3629,7 @@ nlobjResponse.prototype.getAllHeaders = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjResponse.prototype.sendNoCache = function( ) { ; }
+nlobjResponse.prototype.sendNoCache = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * sets the content type for the response (and an optional filename for binary output).
@@ -3627,7 +3643,7 @@ nlobjResponse.prototype.sendNoCache = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjResponse.prototype.setContentType = function( type, filename, disposition ) { ; }
+nlobjResponse.prototype.setContentType = ( type, filename, disposition ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * sets the redirect URL for the response. all URLs must be internal unless the Suitelet is being executed in an "Available without Login" context
@@ -3644,7 +3660,7 @@ nlobjResponse.prototype.setContentType = function( type, filename, disposition )
  *
  * @since 2008.2
  */
-nlobjResponse.prototype.sendRedirect = function( type, subtype, id, pagemode, parameters ) { ; }
+nlobjResponse.prototype.sendRedirect = ( type, subtype, id, pagemode, parameters ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * write information (text/xml/html) to the response.
@@ -3656,7 +3672,7 @@ nlobjResponse.prototype.sendRedirect = function( type, subtype, id, pagemode, pa
  *
  * @since 2008.2
  */
-nlobjResponse.prototype.write = function( output ) { ; }
+nlobjResponse.prototype.write = ( output ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * write line information (text/xml/html) to the response.
@@ -3668,7 +3684,7 @@ nlobjResponse.prototype.write = function( output ) { ; }
  *
  * @since 2008.2
  */
-nlobjResponse.prototype.writeLine = function( output ) { ; }
+nlobjResponse.prototype.writeLine = ( output ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * write a UI object page.
@@ -3680,7 +3696,7 @@ nlobjResponse.prototype.writeLine = function( output ) { ; }
  *
  * @since 2008.2
  */
-nlobjResponse.prototype.writePage = function( pageobject ) { ; }
+nlobjResponse.prototype.writePage = ( pageobject ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * sets the character encoding for the response.
@@ -3691,7 +3707,7 @@ nlobjResponse.prototype.writePage = function( pageobject ) { ; }
  *
  * @since 2012.2
  */
-nlobjResponse.prototype.setEncoding = function( encoding ) { ; }
+nlobjResponse.prototype.setEncoding = ( encoding ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 
 /**
@@ -3701,7 +3717,8 @@ nlobjResponse.prototype.setEncoding = function( encoding ) { ; }
  * @return {nlobjRequest}
  * @constructor
  */
-function nlobjRequest( ) { ; }
+function nlobjRequest() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjRequest = nlobjRequest;
 
 /**
  * return the value of a request parameter.
@@ -3713,7 +3730,7 @@ function nlobjRequest( ) { ; }
  *
  * @since 2008.2
  */
-nlobjRequest.prototype.getParameter = function( name ) { ; }
+nlobjRequest.prototype.getParameter = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the values of a request parameter as an Array.
@@ -3725,7 +3742,7 @@ nlobjRequest.prototype.getParameter = function( name ) { ; }
  *
  * @since 2008.2
  */
-nlobjRequest.prototype.getParameterValues = function( name ) { ; }
+nlobjRequest.prototype.getParameterValues = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an Object containing all the request parameters and their values.
@@ -3735,7 +3752,7 @@ nlobjRequest.prototype.getParameterValues = function( name ) { ; }
  *
  * @since 2008.2
  */
-nlobjRequest.prototype.getAllParameters = function( ) { ; }
+nlobjRequest.prototype.getAllParameters = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the value of a sublist value.
@@ -3749,7 +3766,7 @@ nlobjRequest.prototype.getAllParameters = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjRequest.prototype.getLineItemValue = function( group, name, line ) { ; }
+nlobjRequest.prototype.getLineItemValue = ( group, name, line ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the number of lines in a sublist.
@@ -3761,7 +3778,7 @@ nlobjRequest.prototype.getLineItemValue = function( group, name, line ) { ; }
  *
  * @since 2008.2
  */
-nlobjRequest.prototype.getLineItemCount = function( group ) { ; }
+nlobjRequest.prototype.getLineItemCount = ( group ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the value of a request header.
@@ -3773,7 +3790,7 @@ nlobjRequest.prototype.getLineItemCount = function( group ) { ; }
  *
  * @since 2008.2
  */
-nlobjRequest.prototype.getHeader = function( name ) { ; }
+nlobjRequest.prototype.getHeader = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an Object containing all the request headers and their values.
@@ -3784,7 +3801,7 @@ nlobjRequest.prototype.getHeader = function( name ) { ; }
  *
  * @since 2008.2
  */
-nlobjRequest.prototype.getAllHeaders = function( ) { ; }
+nlobjRequest.prototype.getAllHeaders = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the value of an uploaded file.
@@ -3796,7 +3813,7 @@ nlobjRequest.prototype.getAllHeaders = function( ) { ; }
  *
  * @since 2009.1
  */
-nlobjRequest.prototype.getFile = function( name ) { ; }
+nlobjRequest.prototype.getFile = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an Object containing field names to file objects for all uploaded files.
@@ -3807,7 +3824,7 @@ nlobjRequest.prototype.getFile = function( name ) { ; }
  *
  * @since 2009.1
  */
-nlobjRequest.prototype.getAllFiles = function( ) { ; }
+nlobjRequest.prototype.getAllFiles = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the body of the POST request
@@ -3817,7 +3834,7 @@ nlobjRequest.prototype.getAllFiles = function( ) { ; }
  * @memberOf nlobjRequest
  * @since 2008.1
  */
-nlobjRequest.prototype.getBody = function( ) { ; }
+nlobjRequest.prototype.getBody = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the URL of the request
@@ -3827,7 +3844,7 @@ nlobjRequest.prototype.getBody = function( ) { ; }
  * @memberOf nlobjRequest
  * @since 2008.1
  */
-nlobjRequest.prototype.getURL = function( ) { ; }
+nlobjRequest.prototype.getURL = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the METHOD of the request
@@ -3837,7 +3854,7 @@ nlobjRequest.prototype.getURL = function( ) { ; }
  * @memberOf nlobjRequest
  * @since 2008.1
  */
-nlobjRequest.prototype.getMethod = function( ) { ; }
+nlobjRequest.prototype.getMethod = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjPortlet used for scriptable dashboard portlet.
@@ -3846,7 +3863,8 @@ nlobjRequest.prototype.getMethod = function( ) { ; }
  * @return {nlobjPortlet}
  * @constructor
  */
-function nlobjPortlet( ) { ; }
+function nlobjPortlet() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjPortlet = nlobjPortlet;
 
 /**
  * set the portlet title.
@@ -3854,7 +3872,7 @@ function nlobjPortlet( ) { ; }
  * @param {string} title
  * @since 2008.2
  */
-nlobjPortlet.prototype.setTitle = function( title ) { ; }
+nlobjPortlet.prototype.setTitle = ( title ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the entire contents of the HTML portlet (will be placed inside a <TD>...</TD>).
@@ -3862,7 +3880,7 @@ nlobjPortlet.prototype.setTitle = function( title ) { ; }
  * @param {string} html
  * @since 2008.2
  */
-nlobjPortlet.prototype.setHtml = function( html ) { ; }
+nlobjPortlet.prototype.setHtml = ( html ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a column (nlobjColumn) to this LIST portlet and return it.
@@ -3873,7 +3891,7 @@ nlobjPortlet.prototype.setHtml = function( html ) { ; }
  * @param {string} [align] column alignment
  * @since 2008.2
  */
-nlobjPortlet.prototype.addColumn = function( name, type, label, align ) { ; }
+nlobjPortlet.prototype.addColumn = ( name, type, label, align ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add an Edit column (nlobjColumn) to the left of the column specified (supported on LIST portlets only).
@@ -3885,7 +3903,7 @@ nlobjPortlet.prototype.addColumn = function( name, type, label, align ) { ; }
  *
  * @since 2008.2
  */
-nlobjPortlet.prototype.addEditColumn = function( column, showView, showHref ) { ; }
+nlobjPortlet.prototype.addEditColumn = ( column, showView, showHref ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a row (nlobjSearchResult or Array of name-value pairs) to this LIST portlet.
@@ -3893,7 +3911,7 @@ nlobjPortlet.prototype.addEditColumn = function( column, showView, showHref ) { 
  * @param {string[]|nlobjSearchResult} row
  * @since 2008.2
  */
-nlobjPortlet.prototype.addRow = function( row ) { ; }
+nlobjPortlet.prototype.addRow = ( row ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add multiple rows (Array of nlobjSearchResults or name-value pair Arrays) to this LIST portlet.
@@ -3901,7 +3919,7 @@ nlobjPortlet.prototype.addRow = function( row ) { ; }
  * @param {string[][]|nlobjSearchResult[]} rows
  * @since 2008.2
  */
-nlobjPortlet.prototype.addRows = function( rows ) { ; }
+nlobjPortlet.prototype.addRows = ( rows ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a field (nlobjField) to this FORM portlet and return it.
@@ -3914,7 +3932,7 @@ nlobjPortlet.prototype.addRows = function( rows ) { ; }
  *
  * @since 2008.2
  */
-nlobjPortlet.prototype.addField = function( name,type,label,source ) { ; }
+nlobjPortlet.prototype.addField = ( name,type,label,source ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a FORM submit button to this FORM portlet.
@@ -3923,7 +3941,7 @@ nlobjPortlet.prototype.addField = function( name,type,label,source ) { ; }
  * @param {string} [label] label for submit button (defaults to Save)
  * @since 2008.2
  */
-nlobjPortlet.prototype.setSubmitButton = function( url, label ) { ; }
+nlobjPortlet.prototype.setSubmitButton = ( url, label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a line (containing text or simple HTML) with optional indenting and URL to this LINKS portlet.
@@ -3933,7 +3951,7 @@ nlobjPortlet.prototype.setSubmitButton = function( url, label ) { ; }
  * @param {int} 	indent # of indents to insert before text
  * @since 2008.2
  */
-nlobjPortlet.prototype.addLine = function( text, url, indent ) { ; }
+nlobjPortlet.prototype.addLine = ( text, url, indent ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjList used for scriptable list page.
@@ -3942,7 +3960,8 @@ nlobjPortlet.prototype.addLine = function( text, url, indent ) { ; }
  * @return {nlobjList}
  * @constructor
  */
-function nlobjList( ) { ; }
+function nlobjList() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjList = nlobjList;
 
 /**
  * set the page title.
@@ -3950,7 +3969,7 @@ function nlobjList( ) { ; }
  * @param {string} title
  * @since 2008.2
  */
-nlobjList.prototype.setTitle = function( title ) { ; }
+nlobjList.prototype.setTitle = ( title ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the global style for this list: grid|report|plain|normal.
@@ -3958,7 +3977,7 @@ nlobjList.prototype.setTitle = function( title ) { ; }
  * @param {string} style overall style used to render list
  * @since 2008.2
  */
-nlobjList.prototype.setStyle = function( style ) { ; }
+nlobjList.prototype.setStyle = ( style ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the Client SuiteScript used for this page.
@@ -3966,7 +3985,7 @@ nlobjList.prototype.setStyle = function( style ) { ; }
  * @param {string, int} script script ID or internal ID for global client script used to enable Client SuiteScript on page
  * @since 2008.2
  */
-nlobjList.prototype.setScript = function( script ) { ; }
+nlobjList.prototype.setScript = ( script ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a column (nlobjColumn) to this list and return it.
@@ -3979,7 +3998,7 @@ nlobjList.prototype.setScript = function( script ) { ; }
  *
  * @since 2008.2
  */
-nlobjList.prototype.addColumn = function( name, type, label, align ) { ; }
+nlobjList.prototype.addColumn = ( name, type, label, align ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add an Edit column (nlobjColumn) to the left of the column specified.
@@ -3991,7 +4010,7 @@ nlobjList.prototype.addColumn = function( name, type, label, align ) { ; }
  *
  * @since 2008.2
  */
-nlobjList.prototype.addEditColumn = function( column, showView, showHref ) { ; }
+nlobjList.prototype.addEditColumn = ( column, showView, showHref ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a row (Array of name-value pairs or nlobjSearchResult) to this portlet.
@@ -3999,7 +4018,7 @@ nlobjList.prototype.addEditColumn = function( column, showView, showHref ) { ; }
  * @param {string[], nlobjSearchResult} row data used to add a single row
  * @since 2008.2
  */
-nlobjList.prototype.addRow = function( row ) { ; }
+nlobjList.prototype.addRow = ( row ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add multiple rows (Array of nlobjSearchResults or name-value pair Arrays) to this portlet.
@@ -4007,17 +4026,17 @@ nlobjList.prototype.addRow = function( row ) { ; }
  * @param {string[][], nlobjSearchResult[]} rows data used to add multiple rows
  * @since 2008.2
  */
-nlobjList.prototype.addRows = function( rows ) { ; }
+nlobjList.prototype.addRows = ( rows ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a button (nlobjButton) to the footer of this page.
  *
  * @param {string} name button name
  * @param {string} label button label
- * @param {string} script button script (function name)
+ * @param {string} script button script (exports.name)
  * @since 2008.2
  */
-nlobjList.prototype.addButton = function( name, label, script ) { ; }
+nlobjList.prototype.addButton = ( name, label, script ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a navigation cross-link to the page.
@@ -4027,7 +4046,7 @@ nlobjList.prototype.addButton = function( name, label, script ) { ; }
  * @param {string} url URL for page link
  * @since 2008.2
  */
-nlobjList.prototype.addPageLink = function( type, title, url ) { ; }
+nlobjList.prototype.addPageLink = ( type, title, url ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjForm used for scriptable form page.
@@ -4036,7 +4055,8 @@ nlobjList.prototype.addPageLink = function( type, title, url ) { ; }
  * @return {nlobjForm}
  * @constructor
  */
-function nlobjForm( ) { ; }
+function nlobjForm() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjForm = nlobjForm;
 
 /**
  * set the page title.
@@ -4044,7 +4064,7 @@ function nlobjForm( ) { ; }
  * @param {string} title
  * @since 2008.2
  */
-nlobjForm.prototype.setTitle = function( title ) { ; }
+nlobjForm.prototype.setTitle = ( title ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set additional title Html. INTERNAL ONLY
@@ -4052,7 +4072,7 @@ nlobjForm.prototype.setTitle = function( title ) { ; }
  * @param {string} title
  * @since 2008.2
  */
-nlobjForm.prototype.addTitleHtml = function( html ) { ; }
+nlobjForm.prototype.addTitleHtml = ( html ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the Client Script definition used for this page.
@@ -4060,7 +4080,7 @@ nlobjForm.prototype.addTitleHtml = function( html ) { ; }
  * @param {string, int} script script ID or internal ID for global client script used to enable Client SuiteScript on page
  * @since 2008.2
  */
-nlobjForm.prototype.setScript = function( script ) { ; }
+nlobjForm.prototype.setScript = ( script ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the values for all the fields on this form.
@@ -4068,7 +4088,7 @@ nlobjForm.prototype.setScript = function( script ) { ; }
  * @param {Object} values Object containing field name/value pairs
  * @since 2008.2
  */
-nlobjForm.prototype.setFieldValues = function( values ) { ; }
+nlobjForm.prototype.setFieldValues = ( values ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a navigation cross-link to the page.
@@ -4078,19 +4098,19 @@ nlobjForm.prototype.setFieldValues = function( values ) { ; }
  * @param {string} url URL for page link
  * @since 2008.2
  */
-nlobjForm.prototype.addPageLink = function( type, title, url ) { ; }
+nlobjForm.prototype.addPageLink = ( type, title, url ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a button to this form.
  *
  * @param {string} name button name
  * @param {string} label button label
- * @param {string} script button script (function name)
+ * @param {string} script button script (exports.name)
  * @return {nlobjButton}
  *
  * @since 2008.2
  */
-nlobjForm.prototype.addButton = function( name, label, script ) { ; }
+nlobjForm.prototype.addButton = ( name, label, script ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * get a button from this form by name.
@@ -4102,7 +4122,7 @@ nlobjForm.prototype.addButton = function( name, label, script ) { ; }
  *
  * @since 2009.2                                                                           add
  */
-nlobjForm.prototype.getButton = function( name ) { ; }
+nlobjForm.prototype.getButton = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a reset button to this form.
@@ -4112,7 +4132,7 @@ nlobjForm.prototype.getButton = function( name ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.addResetButton = function( label ) { ; }
+nlobjForm.prototype.addResetButton = ( label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a submit button to this form.
@@ -4122,7 +4142,7 @@ nlobjForm.prototype.addResetButton = function( label ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.addSubmitButton = function( label ) { ; }
+nlobjForm.prototype.addSubmitButton = ( label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a tab (nlobjTab) to this form and return it.
@@ -4133,7 +4153,7 @@ nlobjForm.prototype.addSubmitButton = function( label ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.addTab = function( name, label ) { ; }
+nlobjForm.prototype.addTab = ( name, label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a field (nlobjField) to this form and return it.
@@ -4147,11 +4167,11 @@ nlobjForm.prototype.addTab = function( name, label ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.addField = function( name,type,label,sourceOrRadio,tab ) { ; }
+nlobjForm.prototype.addField = ( name,type,label,sourceOrRadio,tab ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
-nlobjForm.prototype.addCredentialField = function( name,label,domain,scriptId,value,entityMatch,tab ) { ; }
-nlobjForm.prototype.addCredentialField = function( name,label,domain,scriptId,value,entityMatch ) { ; }
-nlobjForm.prototype.addCredentialField = function( name,label,domain,scriptId,value ) { ; }
+nlobjForm.prototype.addCredentialField = ( name,label,domain,scriptId,value,entityMatch,tab ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
+nlobjForm.prototype.addCredentialField = ( name,label,domain,scriptId,value,entityMatch ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
+nlobjForm.prototype.addCredentialField = ( name,label,domain,scriptId,value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a subtab (nlobjTab) to this form and return it.
@@ -4163,7 +4183,7 @@ nlobjForm.prototype.addCredentialField = function( name,label,domain,scriptId,va
  *
  * @since 2008.2
  */
-nlobjForm.prototype.addSubTab = function( name,label,tab ) { ; }
+nlobjForm.prototype.addSubTab = ( name,label,tab ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a sublist (nlobjSubList) to this form and return it.
@@ -4176,7 +4196,7 @@ nlobjForm.prototype.addSubTab = function( name,label,tab ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.addSubList = function( name,type,label,tab ) { ; }
+nlobjForm.prototype.addSubList = ( name,type,label,tab ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * insert a tab (nlobjTab) before another tab (name).
@@ -4187,7 +4207,7 @@ nlobjForm.prototype.addSubList = function( name,type,label,tab ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.insertTab = function( tab, nexttab ) { ; }
+nlobjForm.prototype.insertTab = ( tab, nexttab ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * insert a field (nlobjField) before another field (name).
@@ -4198,7 +4218,7 @@ nlobjForm.prototype.insertTab = function( tab, nexttab ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.insertField = function( field, nextfld ) { ; }
+nlobjForm.prototype.insertField = ( field, nextfld ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * insert a subtab (nlobjTab) before another subtab or sublist (name).
@@ -4209,7 +4229,7 @@ nlobjForm.prototype.insertField = function( field, nextfld ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.insertSubTab = function( subtab, nextsubtab ) { ; }
+nlobjForm.prototype.insertSubTab = ( subtab, nextsubtab ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * insert a sublist (nlobjSubList) before another subtab or sublist (name).
@@ -4220,7 +4240,7 @@ nlobjForm.prototype.insertSubTab = function( subtab, nextsubtab ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.insertSubList = function( sublist, nextsublist ) { ; }
+nlobjForm.prototype.insertSubList = ( sublist, nextsublist ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return a tab (nlobjTab) on this form.
@@ -4230,7 +4250,7 @@ nlobjForm.prototype.insertSubList = function( sublist, nextsublist ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.getTab = function( name ) { ; }
+nlobjForm.prototype.getTab = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return a field (nlobjField) on this form.
@@ -4241,7 +4261,7 @@ nlobjForm.prototype.getTab = function( name ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.getField = function( name, radio ) { ; }
+nlobjForm.prototype.getField = ( name, radio ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return a subtab (nlobjTab) on this form.
@@ -4251,7 +4271,7 @@ nlobjForm.prototype.getField = function( name, radio ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.getSubTab = function( name ) { ; }
+nlobjForm.prototype.getSubTab = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return a sublist (nlobjSubList) on this form.
@@ -4261,7 +4281,7 @@ nlobjForm.prototype.getSubTab = function( name ) { ; }
  *
  * @since 2008.2
  */
-nlobjForm.prototype.getSubList = function( name ) { ; }
+nlobjForm.prototype.getSubList = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a field group to the form.
@@ -4275,7 +4295,7 @@ nlobjForm.prototype.getSubList = function( name ) { ; }
  *
  * @since 2011.1
  */
-nlobjForm.prototype.addFieldGroup = function( name, label, tab ) { ; }
+nlobjForm.prototype.addFieldGroup = ( name, label, tab ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * get a list of all tabs.
@@ -4286,7 +4306,7 @@ nlobjForm.prototype.addFieldGroup = function( name, label, tab ) { ; }
  *
  * @since 2012.2
  */
-nlobjForm.prototype.getTabs = function( ) { ; }
+nlobjForm.prototype.getTabs = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjAssistant.
@@ -4299,7 +4319,9 @@ nlobjForm.prototype.getTabs = function( ) { ; }
  *
  * @since 2009.2
  */
-function nlobjAssistant( ) { ; }
+function nlobjAssistant() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjAssistant = nlobjAssistant;
+
 /**
  * set the page title.
  * @param {string} title
@@ -4310,7 +4332,7 @@ function nlobjAssistant( ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.setTitle = function( title ) { ; }
+nlobjAssistant.prototype.setTitle = ( title ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the script ID for Client Script used for this form.
@@ -4322,7 +4344,7 @@ nlobjAssistant.prototype.setTitle = function( title ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.setScript = function( script ) { ; }
+nlobjAssistant.prototype.setScript = ( script ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the splash screen used for this page.
@@ -4336,7 +4358,7 @@ nlobjAssistant.prototype.setScript = function( script ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.setSplash = function( title, text1, text2 ) { ; }
+nlobjAssistant.prototype.setSplash = ( title, text1, text2 ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * show/hide shortcut link. Always hidden on external pages
@@ -4348,7 +4370,7 @@ nlobjAssistant.prototype.setSplash = function( title, text1, text2 ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.setShortcut = function(show) { ; }
+nlobjAssistant.prototype.setShortcut = (show) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the values for all the fields on this page.
@@ -4360,7 +4382,7 @@ nlobjAssistant.prototype.setShortcut = function(show) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.setFieldValues = function( values ) { ; }
+nlobjAssistant.prototype.setFieldValues = ( values ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * if ordered, steps are show on left and must be completed sequentially, otherwise steps are shown on top and can be done in any order
@@ -4373,7 +4395,7 @@ nlobjAssistant.prototype.setFieldValues = function( values ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.setOrdered = function(ordered) { ; }
+nlobjAssistant.prototype.setOrdered = (ordered) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * if numbered, step numbers are displayed next to the step's label in the navigation area
@@ -4385,7 +4407,7 @@ nlobjAssistant.prototype.setOrdered = function(ordered) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.setNumbered = function(numbered) { ; }
+nlobjAssistant.prototype.setNumbered = (numbered) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return true if all the steps have been completed.
@@ -4396,7 +4418,7 @@ nlobjAssistant.prototype.setNumbered = function(numbered) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.isFinished = function( ) { ; }
+nlobjAssistant.prototype.isFinished = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * mark assistant page as completed and optionally set the rich text to display on completed page.
@@ -4408,7 +4430,7 @@ nlobjAssistant.prototype.isFinished = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.setFinished = function( html ) { ; }
+nlobjAssistant.prototype.setFinished = ( html ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return true if the assistant has an error message to display for the current step.
@@ -4419,7 +4441,7 @@ nlobjAssistant.prototype.setFinished = function( html ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.hasError = function( ) { ; }
+nlobjAssistant.prototype.hasError = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the error message for the currrent step.
@@ -4431,7 +4453,7 @@ nlobjAssistant.prototype.hasError = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.setError = function( html ) { ; }
+nlobjAssistant.prototype.setError = ( html ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * mark a step as current. It will be highlighted accordingly when the page is displayed
@@ -4443,7 +4465,7 @@ nlobjAssistant.prototype.setError = function( html ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.setCurrentStep = function( step ) { ; }
+nlobjAssistant.prototype.setCurrentStep = ( step ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a step to the assistant.
@@ -4456,7 +4478,7 @@ nlobjAssistant.prototype.setCurrentStep = function( step ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.addStep = function( name, label ) { ; }
+nlobjAssistant.prototype.addStep = ( name, label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a field to this page and return it.
@@ -4472,7 +4494,7 @@ nlobjAssistant.prototype.addStep = function( name, label ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.addField = function( name,type,label,source, group ) { ; }
+nlobjAssistant.prototype.addField = ( name,type,label,source, group ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a sublist to this page and return it. For now only sublists of type inlineeditor are supported
@@ -4486,7 +4508,7 @@ nlobjAssistant.prototype.addField = function( name,type,label,source, group ) { 
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.addSubList = function( name,type,label ) { ; }
+nlobjAssistant.prototype.addSubList = ( name,type,label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a field group to the page.
@@ -4499,7 +4521,7 @@ nlobjAssistant.prototype.addSubList = function( name,type,label ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.addFieldGroup = function( name, label ) { ; }
+nlobjAssistant.prototype.addFieldGroup = ( name, label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an assistant step on this page.
@@ -4511,7 +4533,7 @@ nlobjAssistant.prototype.addFieldGroup = function( name, label ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getStep = function( name ) { ; }
+nlobjAssistant.prototype.getStep = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return a field on this page.
@@ -4523,7 +4545,7 @@ nlobjAssistant.prototype.getStep = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getField = function( name ) { ; }
+nlobjAssistant.prototype.getField = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return a sublist on this page.
@@ -4535,7 +4557,7 @@ nlobjAssistant.prototype.getField = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getSubList = function( name ) { ; }
+nlobjAssistant.prototype.getSubList = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return a field group on this page.
@@ -4547,7 +4569,7 @@ nlobjAssistant.prototype.getSubList = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getFieldGroup = function( name ) { ; }
+nlobjAssistant.prototype.getFieldGroup = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an array of all the assistant steps for this assistant.
@@ -4558,7 +4580,7 @@ nlobjAssistant.prototype.getFieldGroup = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getAllSteps = function( ) { ; }
+nlobjAssistant.prototype.getAllSteps = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an array of the names of all fields on this page.
@@ -4569,7 +4591,7 @@ nlobjAssistant.prototype.getAllSteps = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getAllFields = function( ) { ; }
+nlobjAssistant.prototype.getAllFields = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  *  return an array of the names of all sublists on this page .
@@ -4580,7 +4602,7 @@ nlobjAssistant.prototype.getAllFields = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getAllSubLists = function( ) { ; }
+nlobjAssistant.prototype.getAllSubLists = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an array of the names of all field groups on this page.
@@ -4591,7 +4613,7 @@ nlobjAssistant.prototype.getAllSubLists = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getAllFieldGroups = function( ) { ; }
+nlobjAssistant.prototype.getAllFieldGroups = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the last submitted action by the user: next|back|cancel|finish|jump
@@ -4602,7 +4624,7 @@ nlobjAssistant.prototype.getAllFieldGroups = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getLastAction = function() { ; }
+nlobjAssistant.prototype.getLastAction = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return step from which the last submitted action came from
@@ -4613,7 +4635,7 @@ nlobjAssistant.prototype.getLastAction = function() { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getLastStep = function() { ; }
+nlobjAssistant.prototype.getLastStep = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the next logical step corresponding to the user's last submitted action. You should only call this after
@@ -4627,10 +4649,10 @@ nlobjAssistant.prototype.getLastStep = function() { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getNextStep = function() { ; }
+nlobjAssistant.prototype.getNextStep = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
- * return current step set via nlobjAssistant.setCurrentStep(step)
+ * return current step set via nlobjAssistant.setCurrentStep = (step)
  * @return {nlobjAssistantStep}
  *
  * @method
@@ -4638,7 +4660,7 @@ nlobjAssistant.prototype.getNextStep = function() { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getCurrentStep = function() { ; }
+nlobjAssistant.prototype.getCurrentStep = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the total number of steps in the assistant
@@ -4649,7 +4671,7 @@ nlobjAssistant.prototype.getCurrentStep = function() { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.getStepCount = function() { ; }
+nlobjAssistant.prototype.getStepCount = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * redirect the user following a user submit operation. Use this to automatically redirect the user to the next logical step.
@@ -4661,7 +4683,7 @@ nlobjAssistant.prototype.getStepCount = function() { ; }
  *
  * @since 2009.2
  */
-nlobjAssistant.prototype.sendRedirect = function(response) { ; }
+nlobjAssistant.prototype.sendRedirect = (response) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjField used for scriptable form/sublist field.
@@ -4671,7 +4693,8 @@ nlobjAssistant.prototype.sendRedirect = function(response) { ; }
  * @return {nlobjField}
  * @constructor
  */
-function nlobjField( ) { ; }
+function nlobjField() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjField = nlobjField;
 
 /**
  *  return field name.
@@ -4682,7 +4705,7 @@ function nlobjField( ) { ; }
  *
  * @since 2009.2
  */
-nlobjField.prototype.getName = function( ) { ; }
+nlobjField.prototype.getName = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return field label.
@@ -4693,7 +4716,7 @@ nlobjField.prototype.getName = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjField.prototype.getLabel = function( ) { ; }
+nlobjField.prototype.getLabel = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return field type.
@@ -4704,7 +4727,7 @@ nlobjField.prototype.getLabel = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjField.prototype.getType = function( ) { ; }
+nlobjField.prototype.getType = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return true if field is hidden.
@@ -4715,7 +4738,7 @@ nlobjField.prototype.getType = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjField.prototype.isHidden = function( ) { ; }
+nlobjField.prototype.isHidden = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return true if field is mandatory.
@@ -4726,7 +4749,7 @@ nlobjField.prototype.isHidden = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjField.prototype.isMandatory = function( ) { ; }
+nlobjField.prototype.isMandatory = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return true if field is disabled.
@@ -4737,7 +4760,7 @@ nlobjField.prototype.isMandatory = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjField.prototype.isDisabled = function( ) { ; }
+nlobjField.prototype.isDisabled = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the label for this field.
@@ -4748,7 +4771,7 @@ nlobjField.prototype.isDisabled = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjField.prototype.setLabel = function( label ) { ; }
+nlobjField.prototype.setLabel = ( label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the alias used to set the value for this field. Defaults to field name.
@@ -4759,7 +4782,7 @@ nlobjField.prototype.setLabel = function( label ) { ; }
  *
  * @since 2008.2
  */
-nlobjField.prototype.setAlias = function( alias ) { ; }
+nlobjField.prototype.setAlias = ( alias ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the default value for this field.
@@ -4770,7 +4793,7 @@ nlobjField.prototype.setAlias = function( alias ) { ; }
  *
  * @since 2008.2
  */
-nlobjField.prototype.setDefaultValue = function( value ) { ; }
+nlobjField.prototype.setDefaultValue = ( value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Disable field via field metadata.
@@ -4783,7 +4806,7 @@ nlobjField.prototype.setDefaultValue = function( value ) { ; }
  *
  * @since 2009.2
  */
-nlobjField.prototype.setDisabled = function( disabled ) { ; }
+nlobjField.prototype.setDisabled = ( disabled ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * make this field mandatory.
@@ -4794,7 +4817,7 @@ nlobjField.prototype.setDisabled = function( disabled ) { ; }
  *
  * @since 2008.2
  */
-nlobjField.prototype.setMandatory = function( mandatory ) { ; }
+nlobjField.prototype.setMandatory = ( mandatory ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the maxlength for this field (only valid for certain field types).
@@ -4805,7 +4828,7 @@ nlobjField.prototype.setMandatory = function( mandatory ) { ; }
  *
  * @since 2008.2
  */
-nlobjField.prototype.setMaxLength = function( maxlength ) { ; }
+nlobjField.prototype.setMaxLength = ( maxlength ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the display type for this field.
@@ -4816,7 +4839,7 @@ nlobjField.prototype.setMaxLength = function( maxlength ) { ; }
  *
  * @since 2008.2
  */
-nlobjField.prototype.setDisplayType = function( type ) { ; }
+nlobjField.prototype.setDisplayType = ( type ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the break type (startcol|startrow|none) for this field. startrow is only used for fields with a layout type of outside
@@ -4830,7 +4853,7 @@ nlobjField.prototype.setDisplayType = function( type ) { ; }
  *
  * @since 2009.2
  */
-nlobjField.prototype.setBreakType = function( breaktype ) { ; }
+nlobjField.prototype.setBreakType = ( breaktype ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 
 /**
@@ -4843,7 +4866,7 @@ nlobjField.prototype.setBreakType = function( breaktype ) { ; }
  *
  * @since 2008.2
  */
-nlobjField.prototype.setLayoutType = function( type, breaktype ) { ; }
+nlobjField.prototype.setLayoutType = ( type, breaktype ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the text that gets displayed in lieu of the field value for URL fields.
@@ -4853,7 +4876,7 @@ nlobjField.prototype.setLayoutType = function( type, breaktype ) { ; }
  *
  * @since 2008.2
  */
-nlobjField.prototype.setLinkText = function( text ) { ; }
+nlobjField.prototype.setLinkText = ( text ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the width and height for this field.
@@ -4865,7 +4888,7 @@ nlobjField.prototype.setLinkText = function( text ) { ; }
  *
  * @since 2008.2
  */
-nlobjField.prototype.setDisplaySize = function( width, height ) { ; }
+nlobjField.prototype.setDisplaySize = ( width, height ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the amount of emppty vertical space (rows) between this field and the previous field.
@@ -4876,7 +4899,7 @@ nlobjField.prototype.setDisplaySize = function( width, height ) { ; }
  *
  * @since 2008.2
  */
-nlobjField.prototype.setPadding = function( padding ) { ; }
+nlobjField.prototype.setPadding = ( padding ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set help text for this field. If inline is set on assistant pages, help is displayed inline below field
@@ -4891,7 +4914,7 @@ nlobjField.prototype.setPadding = function( padding ) { ; }
  *
  * @since 2009.2
  */
-nlobjField.prototype.setHelpText = function( help, inline ) { ; }
+nlobjField.prototype.setHelpText = ( help, inline ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a select option to this field (valid for select/multiselect fields).
@@ -4902,7 +4925,7 @@ nlobjField.prototype.setHelpText = function( help, inline ) { ; }
  * @param {boolean} [selected] if true then this select option will be selected by default
  * @since 2008.2
  */
-nlobjField.prototype.addSelectOption = function( value, text, selected ) { ; }
+nlobjField.prototype.addSelectOption = ( value, text, selected ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjSubList used for scriptable sublist (sublist).
@@ -4912,7 +4935,8 @@ nlobjField.prototype.addSelectOption = function( value, text, selected ) { ; }
  * @return {nlobjSubList}
  * @constructor
  */
-function nlobjSubList( ) { ; }
+function nlobjSubList() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjSubList = nlobjSubList;
 
 /**
  * set the label for this sublist.
@@ -4921,7 +4945,7 @@ function nlobjSubList( ) { ; }
  * @param {string} label
  * @since 2008.2
  */
-nlobjSubList.prototype.setLabel = function( label ) { ; }
+nlobjSubList.prototype.setLabel = ( label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set helper text for this sublist.
@@ -4930,7 +4954,7 @@ nlobjSubList.prototype.setLabel = function( label ) { ; }
  * @param {string} help
  * @since 2008.2
  */
-nlobjSubList.prototype.setHelpText = function( help ) { ; }
+nlobjSubList.prototype.setHelpText = ( help ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the displaytype for this sublist: hidden|normal.
@@ -4939,7 +4963,7 @@ nlobjSubList.prototype.setHelpText = function( help ) { ; }
  * @param {string} type
  * @since 2008.2
  */
-nlobjSubList.prototype.setDisplayType = function( type ) { ; }
+nlobjSubList.prototype.setDisplayType = ( type ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the value of a cell in this sublist.
@@ -4953,7 +4977,7 @@ nlobjSubList.prototype.setDisplayType = function( type ) { ; }
  *
  * @since 2008.2
  */
-nlobjSubList.prototype.setLineItemValue = function( field, line, value ) { ; }
+nlobjSubList.prototype.setLineItemValue = ( field, line, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the value of a matrix cell in this sublist.
@@ -4968,7 +4992,7 @@ nlobjSubList.prototype.setLineItemValue = function( field, line, value ) { ; }
  *
  * @since 2009.2
  */
-nlobjSubList.prototype.setLineItemMatrixValue = function( field, line, column, value ) { ; }
+nlobjSubList.prototype.setLineItemMatrixValue = ( field, line, column, value ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set values for multiple lines (Array of nlobjSearchResults or name-value pair Arrays) in this sublist.
@@ -4977,7 +5001,7 @@ nlobjSubList.prototype.setLineItemMatrixValue = function( field, line, column, v
  * @param {string[][], nlobjSearchResult[]} values
  * @since 2008.2
  */
-nlobjSubList.prototype.setLineItemValues = function( values ) { ; }
+nlobjSubList.prototype.setLineItemValues = ( values ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return the number of lines in a sublist.
@@ -4988,7 +5012,7 @@ nlobjSubList.prototype.setLineItemValues = function( values ) { ; }
  * @memberOf nlobjSubList
  * @since 2010.1
  */
-nlobjSubList.prototype.getLineItemCount = function( group ) { ; }
+nlobjSubList.prototype.getLineItemCount = ( group ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a field (column) to this sublist.
@@ -5004,7 +5028,7 @@ nlobjSubList.prototype.getLineItemCount = function( group ) { ; }
  *
  * @since 2008.2
  */
-nlobjSubList.prototype.addField = function( name,type,label,source ) { ; }
+nlobjSubList.prototype.addField = ( name,type,label,source ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * designate a field on sublist that must be unique across all lines (only supported on sublists of type inlineeditor, editor).
@@ -5016,14 +5040,14 @@ nlobjSubList.prototype.addField = function( name,type,label,source ) { ; }
  *
  * @since 2009.2
  */
-nlobjSubList.prototype.setUniqueField = function( fldnam ) { ; }
+nlobjSubList.prototype.setUniqueField = ( fldnam ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a button to this sublist.
  *
  * @param {string} name button name
  * @param {string} label button label
- * @param {string} script button script (function name)
+ * @param {string} script button script (exports.name)
  * @return {nlobjButton}
  *
  * @method
@@ -5031,7 +5055,7 @@ nlobjSubList.prototype.setUniqueField = function( fldnam ) { ; }
  *
  * @since 2008.2
  */
-nlobjSubList.prototype.addButton = function( name, label, script ) { ; }
+nlobjSubList.prototype.addButton = ( name, label, script ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add "Refresh" button to sublists of type "staticlist" to support manual refreshing of the sublist (without entire page reloads) if it's contents are very volatile
@@ -5042,7 +5066,7 @@ nlobjSubList.prototype.addButton = function( name, label, script ) { ; }
  *
  * @since 2009.2
  */
-nlobjSubList.prototype.addRefreshButton = function( ) { ; }
+nlobjSubList.prototype.addRefreshButton = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add "Mark All" and "Unmark All" buttons to this sublist of type "list".
@@ -5052,7 +5076,7 @@ nlobjSubList.prototype.addRefreshButton = function( ) { ; }
  *
  * @since 2008.2
  */
-nlobjSubList.prototype.addMarkAllButtons = function( ) { ; }
+nlobjSubList.prototype.addMarkAllButtons = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjColumn used for scriptable list column.
@@ -5061,7 +5085,8 @@ nlobjSubList.prototype.addMarkAllButtons = function( ) { ; }
  * @return {nlobjColumn}
  * @constructor
  */
-function nlobjColumn( ) { ; }
+function nlobjColumn() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjColumn = nlobjColumn;
 
 /**
  * set the header name for this column.
@@ -5073,7 +5098,7 @@ function nlobjColumn( ) { ; }
  *
  * @since 2008.2
  */
-nlobjColumn.prototype.setLabel = function( label ) { ; }
+nlobjColumn.prototype.setLabel = ( label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the base URL (optionally defined per row) for this column.
@@ -5086,7 +5111,7 @@ nlobjColumn.prototype.setLabel = function( label ) { ; }
  *
  * @since 2008.2
  */
-nlobjColumn.prototype.setURL = function( value, perRow ) { ; }
+nlobjColumn.prototype.setURL = ( value, perRow ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * add a URL parameter (optionally defined per row) to this column's URL.
@@ -5100,7 +5125,7 @@ nlobjColumn.prototype.setURL = function( value, perRow ) { ; }
  *
  * @since 2008.2
  */
-nlobjColumn.prototype.addParamToURL = function( param, value, perRow ) { ; }
+nlobjColumn.prototype.addParamToURL = ( param, value, perRow ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjTab used for scriptable tab or subtab.
@@ -5109,7 +5134,8 @@ nlobjColumn.prototype.addParamToURL = function( param, value, perRow ) { ; }
  * @return {nlobjTab}
  * @constructor
  */
-function nlobjTab( ) { ; }
+function nlobjTab() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjTab = nlobjTab;
 
 /**
  * set the label for this tab or subtab.
@@ -5119,7 +5145,7 @@ function nlobjTab( ) { ; }
  *
  * @since 2008.2
  */
-nlobjTab.prototype.setLabel = function( label ) { ; }
+nlobjTab.prototype.setLabel = ( label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set helper text for this tab or subtab.
@@ -5129,7 +5155,7 @@ nlobjTab.prototype.setLabel = function( label ) { ; }
  *
  * @since 2008.2
  */
-nlobjTab.prototype.setHelpText = function( help ) { ; }
+nlobjTab.prototype.setHelpText = ( help ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjAssistantStep.
@@ -5140,7 +5166,8 @@ nlobjTab.prototype.setHelpText = function( help ) { ; }
  *
  * @since 2009.2
  */
-function nlobjAssistantStep( ) { ; }
+function nlobjAssistantStep() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjAssistantStep = nlobjAssistantStep;
 
 /**
  * set the label for this assistant step.
@@ -5152,7 +5179,7 @@ function nlobjAssistantStep( ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistantStep.prototype.setLabel = function( label ) { ; }
+nlobjAssistantStep.prototype.setLabel = ( label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set helper text for this assistant step.
@@ -5164,7 +5191,7 @@ nlobjAssistantStep.prototype.setLabel = function( label ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistantStep.prototype.setHelpText = function( help ) { ; }
+nlobjAssistantStep.prototype.setHelpText = ( help ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the index of this step in the assistant page (1-based)
@@ -5175,7 +5202,7 @@ nlobjAssistantStep.prototype.setHelpText = function( help ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistantStep.prototype.getStepNumber = function( ) { ; }
+nlobjAssistantStep.prototype.getStepNumber = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the value of a field entered by the user during this step.
@@ -5187,7 +5214,7 @@ nlobjAssistantStep.prototype.getStepNumber = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistantStep.prototype.getFieldValue = function( name ) { ; }
+nlobjAssistantStep.prototype.getFieldValue = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the selected values of a multi-select field as an Array entered by the user during this step.
@@ -5199,7 +5226,7 @@ nlobjAssistantStep.prototype.getFieldValue = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistantStep.prototype.getFieldValues = function( name ) { ; }
+nlobjAssistantStep.prototype.getFieldValues = ( name ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the number of lines previously entered by the user in this step (or -1 if the sublist does not exist).
@@ -5211,7 +5238,7 @@ nlobjAssistantStep.prototype.getFieldValues = function( name ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistantStep.prototype.getLineItemCount = function( group ) { ; }
+nlobjAssistantStep.prototype.getLineItemCount = ( group ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return the value of a sublist field entered by the user during this step.
@@ -5225,7 +5252,7 @@ nlobjAssistantStep.prototype.getLineItemCount = function( group ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistantStep.prototype.getLineItemValue = function(group, name, line) { ; }
+nlobjAssistantStep.prototype.getLineItemValue = (group, name, line) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an array of the names of all fields entered by the user during this step.
@@ -5236,7 +5263,7 @@ nlobjAssistantStep.prototype.getLineItemValue = function(group, name, line) { ; 
  *
  * @since 2009.2
  */
-nlobjAssistantStep.prototype.getAllFields = function( ) { ; }
+nlobjAssistantStep.prototype.getAllFields = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an array of the names of all sublists entered by the user during this step.
@@ -5247,7 +5274,7 @@ nlobjAssistantStep.prototype.getAllFields = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistantStep.prototype.getAllLineItems = function( ) { ; }
+nlobjAssistantStep.prototype.getAllLineItems = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return an array of the names of all sublist fields entered by the user during this step
@@ -5259,7 +5286,7 @@ nlobjAssistantStep.prototype.getAllLineItems = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjAssistantStep.prototype.getAllLineItemFields = function( group ) { ; }
+nlobjAssistantStep.prototype.getAllLineItemFields = ( group ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjFieldGroup (currently only supported on nlobjAssistant pages)
@@ -5270,7 +5297,8 @@ nlobjAssistantStep.prototype.getAllLineItemFields = function( group ) { ; }
  *
  * @since 2009.2
  */
-function nlobjFieldGroup( ) { ; }
+function nlobjFieldGroup() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjFieldGroup = nlobjFieldGroup;
 
 /**
  * set the label for this field group.
@@ -5282,7 +5310,7 @@ function nlobjFieldGroup( ) { ; }
  *
  * @since 2009.2
  */
-nlobjFieldGroup.prototype.setLabel = function( label ) { ; }
+nlobjFieldGroup.prototype.setLabel = ( label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set collapsibility property for this field group.
@@ -5296,7 +5324,7 @@ nlobjFieldGroup.prototype.setLabel = function( label ) { ; }
  *
  * @since 2009.2
  */
-nlobjFieldGroup.prototype.setCollapsible = function( collapsible, defaultcollapsed ) { ; }
+nlobjFieldGroup.prototype.setCollapsible = ( collapsible, defaultcollapsed ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set singleColumn property for this field group.
@@ -5309,7 +5337,7 @@ nlobjFieldGroup.prototype.setCollapsible = function( collapsible, defaultcollaps
  *
  * @since 2011.1
  */
-nlobjFieldGroup.prototype.setSingleColumn = function( singleColumn ) { ; }
+nlobjFieldGroup.prototype.setSingleColumn = ( singleColumn ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set showBorder property for this field group.
@@ -5322,18 +5350,7 @@ nlobjFieldGroup.prototype.setSingleColumn = function( singleColumn ) { ; }
  *
  * @since 2011.1
  */
-nlobjFieldGroup.prototype.setShowBorder = function( showBorder ) { ; }
-
-/**
- * Return a new instance of nlobjButton.
- *
- * @classDescription buttons used for triggering custom behaviors on pages.
- * @return {nlobjButton}
- * @constructor
- *
- * @since 2009.2
- */
-function nlobjButton( ) { ; }
+nlobjFieldGroup.prototype.setShowBorder = ( showBorder ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * set the label for this button.
@@ -5345,7 +5362,19 @@ function nlobjButton( ) { ; }
  *
  * @since 2008.2
  */
-nlobjButton.prototype.setLabel = function( label ) { ; }
+nlobjButton.prototype.setLabel = ( label ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
+
+/**
+ * Return a new instance of nlobjButton.
+ *
+ * @classDescription buttons used for triggering custom behaviors on pages.
+ * @return {nlobjButton}
+ * @constructor
+ *
+ * @since 2009.2
+ */
+function nlobjButton() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjButton = nlobjButton;
 
 /**
  * disable or enable button.
@@ -5357,7 +5386,7 @@ nlobjButton.prototype.setLabel = function( label ) { ; }
  *
  * @since 2008.2
  */
-nlobjButton.prototype.setDisabled = function( disabled ) { ; }
+nlobjButton.prototype.setDisabled = ( disabled ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * Return a new instance of nlobjSelectOption.
@@ -5368,7 +5397,8 @@ nlobjButton.prototype.setDisabled = function( disabled ) { ; }
  *
  * @since 2009.2
  */
-function nlobjSelectOption( ) { ; }
+function nlobjSelectOption() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
+exports.nlobjSelectOption = nlobjSelectOption;
 
 /**
  * return internal ID for select option
@@ -5379,7 +5409,7 @@ function nlobjSelectOption( ) { ; }
  *
  * @since 2009.2
  */
-nlobjSelectOption.prototype.getId = function( ) { ; }
+nlobjSelectOption.prototype.getId = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * return display value for select option.
@@ -5390,19 +5420,20 @@ nlobjSelectOption.prototype.getId = function( ) { ; }
  *
  * @since 2009.2
  */
-nlobjSelectOption.prototype.getText = function( ) { ; }
+nlobjSelectOption.prototype.getText = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @return nlobjLogin
  *
  * @since 2012.2
  */
-function nlapiGetLogin( )   { ; }
+exports.nlapiGetLogin = () =>  { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
  /**
   *
   */
-function nlobjLogin() { ; }
+function nlobjLogin() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjLogin = nlobjLogin;
 
 /**
  * @param {string} newEmail new Email
@@ -5411,7 +5442,7 @@ function nlobjLogin() { ; }
  *
  * @since 2012.2
  */
-nlobjLogin.prototype.changeEmail = function (currentPassword, newEmail, justThisAccount)  { ; }
+nlobjLogin.prototype.changeEmail = (currentPassword, newEmail, justThisAccount) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @param {string} newPassword new Password.
@@ -5419,7 +5450,7 @@ nlobjLogin.prototype.changeEmail = function (currentPassword, newEmail, justThis
  *
  * @since 2012.2
  */
-nlobjLogin.prototype.changePassword = function (currentPassword, newPassword) { ; }
+nlobjLogin.prototype.changePassword = (currentPassword, newPassword) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 
 /**
@@ -5428,16 +5459,17 @@ nlobjLogin.prototype.changePassword = function (currentPassword, newPassword) { 
  *
  * @since 2013.1
  */
-function nlapiGetJobManager( jobType )   { ; }
+exports.nlapiGetJobManager = ( jobType ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
-function nlobjJobManager() { ; }
+function nlobjJobManager() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjJobManager = nlobjJobManager;
 
 /**
  * @return {nlobjJobRequest}
  *
  * @since 2013.1
  */
-nlobjJobManager.prototype.createJobRequest = function ()  { ; }
+nlobjJobManager.prototype.createJobRequest = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @param {nlobjJobRequest} Job request
@@ -5445,7 +5477,7 @@ nlobjJobManager.prototype.createJobRequest = function ()  { ; }
  *
  * @since 2013.1
  */
-nlobjJobManager.prototype.submit = function (request)  { ; }
+nlobjJobManager.prototype.submit = (request) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @param {String} Job Id
@@ -5453,9 +5485,10 @@ nlobjJobManager.prototype.submit = function (request)  { ; }
  *
  * @since 2013.1
  */
-nlobjJobManager.prototype.getFuture = function (id)  { ; }
+nlobjJobManager.prototype.getFuture = (id) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
-function nlobjDuplicateJobRequest() { ; }
+function nlobjDuplicateJobRequest() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjDuplicateJobRequest = nlobjDuplicateJobRequest;
 
 /**
  * Constant for Merge Duplicate recrods Entity Types
@@ -5491,7 +5524,7 @@ nlobjDuplicateJobRequest.prototype.OPERATION_MARK_AS_NOT_DUPES = 'MARK_AS_NOT_DU
  *
  * @since 2013.1
  */
-nlobjDuplicateJobRequest.prototype.setEntityType = function( entityType ) { ; }
+nlobjDuplicateJobRequest.prototype.setEntityType = ( entityType ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @param {String} Master record ID
@@ -5499,7 +5532,7 @@ nlobjDuplicateJobRequest.prototype.setEntityType = function( entityType ) { ; }
  *
  * @since 2013.1
  */
-nlobjDuplicateJobRequest.prototype.setMasterId = function( masterID ) { ; }
+nlobjDuplicateJobRequest.prototype.setMasterId = ( masterID ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @param {String} Criteria
@@ -5507,7 +5540,7 @@ nlobjDuplicateJobRequest.prototype.setMasterId = function( masterID ) { ; }
  *
  * @since 2013.1
  */
-nlobjDuplicateJobRequest.prototype.setMasterSelectionMode = function( masterSelectionMode ) { ; }
+nlobjDuplicateJobRequest.prototype.setMasterSelectionMode = ( masterSelectionMode ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @param {String} Array of duplicate records IDs
@@ -5515,7 +5548,7 @@ nlobjDuplicateJobRequest.prototype.setMasterSelectionMode = function( masterSele
  *
  * @since 2013.1
  */
-nlobjDuplicateJobRequest.prototype.setRecords = function( dupeRecords ) { ; }
+nlobjDuplicateJobRequest.prototype.setRecords = ( dupeRecords ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @param {String} Operation
@@ -5523,74 +5556,76 @@ nlobjDuplicateJobRequest.prototype.setRecords = function( dupeRecords ) { ; }
  *
  * @since 2013.1
  */
-nlobjDuplicateJobRequest.prototype.setOperation = function( operation ) { ; }
+nlobjDuplicateJobRequest.prototype.setOperation = ( operation ) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @return Entity Type
  *
  * @since 2013.1
  */
-nlobjDuplicateJobRequest.prototype.getEntityType = function( ) { ; }
+nlobjDuplicateJobRequest.prototype.getEntityType = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @return Master record ID
  *
  * @since 2013.1
  */
-nlobjDuplicateJobRequest.prototype.getMasterId = function( ) { ; }
+nlobjDuplicateJobRequest.prototype.getMasterId = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @return Master Selection Mode
  *
  * @since 2013.1
  */
-nlobjDuplicateJobRequest.prototype.getMasterSelectionMode = function( ) { ; }
+nlobjDuplicateJobRequest.prototype.getMasterSelectionMode = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @return Array of duplicate records IDs
  *
  * @since 2013.1
  */
-nlobjDuplicateJobRequest.prototype.getRecords = function( ) { ; }
+nlobjDuplicateJobRequest.prototype.getRecords = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @return Operation
  *
  * @since 2013.1
  */
-nlobjDuplicateJobRequest.prototype.getOperation = function( ) { ; }
+nlobjDuplicateJobRequest.prototype.getOperation = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
-function nlobjFuture() { ; }
+function nlobjFuture() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjFuture = nlobjFuture;
 
 /**
  * @return {boolean} status
  *
  * @since 2013.1
  */
-nlobjFuture.prototype.isDone = function( ) { ; }
+nlobjFuture.prototype.isDone = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @return {String} Job ID
  *
  * @since 2013.1
  */
-nlobjFuture.prototype.getId = function( ) { ; }
+nlobjFuture.prototype.getId = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @return {boolean} cancelled or not
  *
  * @since 2013.1
  */
-nlobjFuture.prototype.cancel = function( ) { ; }
+nlobjFuture.prototype.cancel = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 /**
  * @return {boolean} is cancelled or not
  *
  * @since 2013.1
  */
-nlobjFuture.prototype.isCancelled = function( ) { ; }
+nlobjFuture.prototype.isCancelled = () => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
-function nlobjCache() { ; }
+function nlobjCache() { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); }
+exports.nlobjCache = nlobjCache;
 
 /**
  * @param {string} key
@@ -5600,7 +5635,7 @@ function nlobjCache() { ; }
  *
  * @since 2013.2
  */
-nlobjCache.prototype.put = function (key, value, ttl) {;}
+nlobjCache.prototype.put = (key, value, ttl) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 
 /**
@@ -5609,7 +5644,7 @@ nlobjCache.prototype.put = function (key, value, ttl) {;}
  *
  * @since 2013.2
  */
-nlobjCache.prototype.get = function (key) {;}
+nlobjCache.prototype.get = (key) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };
 
 
 /**
@@ -5618,4 +5653,4 @@ nlobjCache.prototype.get = function (key) {;}
  *
  * @since 2013.2
  */
-nlobjCache.prototype.remove = function (key) {;}
+nlobjCache.prototype.remove = (key) => { throw nlapiCreateError('SSS_NOT_YET_SUPPORTED'); };

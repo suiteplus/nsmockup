@@ -26,11 +26,13 @@ module.exports = (cb) => {
 
         let globalVars = Object.keys(global),
             globalRem = global.$GLOBAL_REM;
+        //console.log('>>>', globalVars);
         for (let k = 0; k < globalVars.length; k++) {
             let globalVar = globalVars[k];
             if ((~globalRem.indexOf(globalVar) || !~$globalVars.indexOf(globalVar)) && global[globalVar]) {
                 global[globalVar] = undefined;
                 !~globalRem.indexOf(globalVar) && globalRem.push(globalVar);
+                //delete global[globalVar];
             }
         }
         return cb();

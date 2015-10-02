@@ -1,11 +1,11 @@
 # nsmockup ChangeLog
 
-## 2015-09-30, Version 0.3.0 (unstable),
+## 2015-09-30, Version 0.3.0 => 0.3.1 (unstable),
 
 ### Notable changes
 
 #### Record API:
-   * [[` ee6d52c`](https://github.com/suiteplus/nsmockup/commit/ee6d52c89f84af6aed9666faf7ce61ba781b4118)] fix columns join
+   * [[`ee6d52c`](https://github.com/suiteplus/nsmockup/commit/ee6d52c89f84af6aed9666faf7ce61ba781b4118)] fix columns join
    * [[`9252f19`](https://github.com/suiteplus/nsmockup/commit/9252f19c32f798b48ea6a88d3f759a40767234df)] fix order columns in nlobjSearchResult
    * [[`3eecfca`](https://github.com/suiteplus/nsmockup/commit/3eecfca10d801eee0a42ca841923e3e6d5acca8b)] include stack on error log 
 

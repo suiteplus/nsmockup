@@ -13,10 +13,6 @@ describe('<Unit Test - Netsuite Context API>', function () {
 
             return done();
         });
-        after(function (done) {
-            $NS_CONTECXT_OBJ = null;
-            return done();
-        });
     });
 
     describe('SuiteScript API - nlapiLogExecution:', function () {
@@ -24,12 +20,8 @@ describe('<Unit Test - Netsuite Context API>', function () {
             nlapiLogExecution('DEBUG', 'oaiaia', 'oaooaoaas');
             nlapiLogExecution('AUDIT', 'cuidaaa', new Date());
             nlapiLogExecution('ERROR', 'errouuu', new Error());
-            nlapiLogExecution('EMERGENCY', 'ihhh agoraaa??', new nlapiCreateError());
+            nlapiLogExecution('EMERGENCY', 'ihhh agoraaa??', nlapiCreateError());
 
-            return done();
-        });
-        after(function (done) {
-            $NS_CONTECXT_OBJ = null;
             return done();
         });
     });

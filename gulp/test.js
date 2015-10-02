@@ -19,12 +19,7 @@ var gulp = require('gulp'),
             appRoot + '/nsapi.js',
             appRoot + '/lib/**/*.js',
             appRoot + '/src/**/*.js'
-        ],
-        jsRequire: [
-            appRoot + '/nsapi.js',
-            appRoot + '/src/**/*.js'
-        ],
-        jsVMContext: [appRoot + '/lib/**/*.js']
+        ]
     };
 var defaultTasks = ['env:test', 'test:jshint', 'test:coverage'];
 
@@ -52,27 +47,16 @@ gulp.task('test:coverage', function () {
             })); // Creating the reports after tests runned
     };
 
-    let actual = 0, verifyInstrument = () => { (++actual === 2) && executeTests(); };
-
     // instrumentation nsapi.js
-    gulp.src(paths.jsRequire)
+    gulp.src(paths.js)
         .pipe(plugins.istanbul({
             includeUntested: true,
             instrumenter: require('isparta').Instrumenter
 
         })) // Covering files
         .pipe(plugins.istanbul.hookRequire())// Force `require` to return covered files
-        .on('finish', () => verifyInstrument());
+        .on('finish', () => executeTests());
 
-    // instrumentation other js
-    gulp.src(paths.jsVMContext)
-        .pipe(plugins.istanbul({
-            includeUntested: true,
-            instrumenter: require('isparta').Instrumenter
-
-        })) // Covering files
-        .pipe(plugins.istanbul.hookRunInThisContext()) // Force `vm.runInThisContext` to return covered files
-        .on('finish', () => verifyInstrument());
 });
 
 gulp.task('test', defaultTasks);

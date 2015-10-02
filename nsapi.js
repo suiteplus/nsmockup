@@ -1,5 +1,6 @@
 'use strict';
-var vmAddFile = require('./src/add-file');
+var path = require('path'),
+    vmSim = require('./src/vm-sim');
 
 // workaround to 'require' works in vm.runInThisContext
 global.require = require;
@@ -7,12 +8,14 @@ global.require = require;
 global.window = {
     console: global.console
 };
-vmAddFile(__dirname + '/nsapi-doc.js');
 
 // load Netsuite functions and objects
 var glob = require('glob'),
     files = glob.sync(__dirname + '/lib/**/*.js');
-for (let i = 0; i < files.length; vmAddFile(files[i++]));
+for (let i = 0; i < files.length; i++) {
+    vmSim.import(path.resolve(files[i]));
+}
+vmSim.import(path.resolve(__dirname + '/nsapi-def.js'));
 
 global.$GLOBAL_VARS = global.$GLOBAL_VARS || Object.keys(global).concat(['$GLOBAL_VARS', '$db', '$GLOBAL_REM']);
 global.$GLOBAL_REM = global.$GLOBAL_REM || [];
@@ -30,7 +33,7 @@ exports.destroy = require('./src/destroy');
 /**
  *
  */
-exports.addScript = vmAddFile;
+exports.addScript = vmSim;
 
 /**
  * Suitelets are extensions of the SuiteScript API that give developers the ability to build custom NetSuite pages and backend logic. Suitelets are server-side scripts that operate in a request-response model. They are invoked by HTTP GET or POST requests to system generated URLs.
