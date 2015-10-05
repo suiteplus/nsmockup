@@ -1,8 +1,7 @@
 'use strict';
 var vmSim = require('./vm-sim'),
     ssParams = require('./utils/ss-params'),
-    ssValidate = require('./utils/ss-validate'),
-    should = require('should');
+    ssValidate = require('./utils/ss-validate');
 
 /**
  * Suitelet Function idea from Netsuite API.

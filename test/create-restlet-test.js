@@ -18,7 +18,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
                     __dirname + '/_input-files/scripts/fake-restlet.js',
                     __dirname + '/_input-files/scripts/add.js'
                 ],
-                func: {
+                funcs: {
                     post: 'FakeRestlet.post'
                 },
                 params: {

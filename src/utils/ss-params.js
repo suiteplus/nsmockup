@@ -1,4 +1,4 @@
-'se strict';
+'use strict';
 var nlapiGetContext = require('../../lib/nsfunc/context-api').nlapiGetContext;
 
 exports.load = (params) => {

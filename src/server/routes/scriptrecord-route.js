@@ -14,6 +14,7 @@ module.exports = (app) => {
     // Include Routes
     // ####################
 
-    // default scriptrecord.nl
     app.route(uri).get(ctrl.get);
+
+    app.route(uri).get(ctrl.post);
 };

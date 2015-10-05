@@ -1,4 +1,5 @@
 'use strict';
+var should = require('should');
 
 exports.principalFunction = (func, method) => {
     if (!func) {
