@@ -1,5 +1,15 @@
 'use strict';
+var server = require('./server');
 
+/**
+ *
+ * @param opts {{
+ *   [metadatas]: String || [String],
+ *   [records]: Object,
+ *   [server]: Boolean
+ * }}
+ * @param cb Function
+ */
 module.exports = (opts, cb) => {
     function init(db) {
         let metadatas = opts.metadatas;
@@ -22,15 +32,37 @@ module.exports = (opts, cb) => {
             db.save();
         }
 
+        // ##############################
+        // Execute all steps before tests
+        // ##############################
+        let step = 0,
+            verifySteps = () => {
+                if (++step === 2) {
+                    return cb();
+                }
+            };
+
+        // ##############################
+        // Start nsmockup server
+        // ##############################
+        if (opts.server === true && !server.isStarted()) {
+            server.start(verifySteps);
+        } else {
+            verifySteps();
+        }
+
+        // ##############################
+        // Load Records
+        // ##############################
         let records = opts.records;
         if (typeof records === 'string') records = require(opts.records);
 
-        if (!records) return cb();
+        if (!records) return verifySteps();
         let recNames = Object.keys(records);
 
         let actual = 0,
-            verifyDone = function () {
-                if (++actual == recNames.length) return cb();
+            verifyDone = () => {
+                if (++actual == recNames.length) return verifySteps();
             };
         for (let i = 0; i < recNames.length; i++) {
             let recName = recNames[i],

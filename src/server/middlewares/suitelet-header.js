@@ -2,7 +2,7 @@
 
 module.exports = (opts) => {
     let options = opts || {},
-        methods = ['GET'];
+        methods = ['GET', 'POST'];
     if (!Array.isArray(methods)) methods = [methods];
 
     var methods_allow = methods.concat('OPTIONS').join(', '),

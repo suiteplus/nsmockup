@@ -1,5 +1,6 @@
 'use strict';
-var fs = require('fs');
+var fs = require('fs'),
+    server = require('./server');
 
 module.exports = (cb) => {
     const $globalVars = global.$GLOBAL_VARS;
@@ -19,11 +20,20 @@ module.exports = (cb) => {
     };
 
     function destroy(db) {
+        // ##############################
+        // Drop All Records and Metadadatas
+        // ##############################
         db.object = {};
         db.save();
 
+        // ##############################
+        // Remove all files from Cabinet
+        // ##############################
         rmAllDirs(db.$pathCabinet);
 
+        // ##############################
+        // Drop All Thridparty Variables
+        // ##############################
         let globalVars = Object.keys(global),
             globalRem = global.$GLOBAL_REM;
         //console.log('>>>', globalVars);
@@ -36,7 +46,15 @@ module.exports = (cb) => {
             }
         }
         global.$NS_CONTECXT_OBJ =  undefined;
-        return cb();
+
+        // ##############################
+        // Stop nsmockup server
+        // ##############################
+        if (server.isStarted()) {
+            server.stop(cb);
+        } else {
+            cb();
+        }
     }
 
     if (global.$db) destroy(global.$db);

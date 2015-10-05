@@ -13,8 +13,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+var started = false;
+exports.isStarted = () => started;
+
 exports.start = (cb) => {
     server = app.listen($port, () => {
+        started = true;
         console.log('nsmockup server started');
         return cb && cb();
     });
@@ -22,6 +26,7 @@ exports.start = (cb) => {
 
 exports.stop = (cb) => {
     server.close(() => {
+        started = false;
         console.log('nsmockup server stopped');
         return cb && cb();
     });

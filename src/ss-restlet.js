@@ -1,7 +1,8 @@
 'use strict';
 var vmSim = require('./vm-sim'),
     ssParams = require('./utils/ss-params'),
-    ssValidate = require('./utils/ss-validate');
+    ssValidate = require('./utils/ss-validate'),
+    should = require('should');
 
 /**
  * RESTlet Function idea from Netsuite API.
