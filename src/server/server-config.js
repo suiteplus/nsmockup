@@ -3,6 +3,7 @@
 var uri = '/app/common/scripting/scriptrecord.nl';
 
 exports.URI = {
+    scriptrecord: uri,
     suitelet: uri,
     restlet: uri
 };

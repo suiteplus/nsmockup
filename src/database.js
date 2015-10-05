@@ -67,7 +67,7 @@ exports.createScript = (data) => {
 
     data.uri = URI[data.type];
     if (data.uri) {
-        data.url = `http://localhost:${srvconf.port}${data.uri}?id=${data.id}`;
+        data.url = `http://localhost:${srvconf.port}${data.uri}?script=${data.id}`;
     }
 
     scripts.push(data);
