@@ -1,5 +1,6 @@
 'use strict';
-var server = require('./server');
+var server = require('./server'),
+    database = require('./database');
 
 /**
  *
@@ -89,5 +90,5 @@ module.exports = (opts, cb) => {
     }
 
     if (global.$db) init(global.$db);
-    else require('./load-database')(init);
+    else database.load(init);
 };

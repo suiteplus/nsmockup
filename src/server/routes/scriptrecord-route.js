@@ -1,8 +1,9 @@
 'use strict';
-var header = require('../middlewares/suitelet-header'),
+var URI = require('../server-config').URI,
+    header = require('../middlewares/suitelet-header'),
     ctrl = require('../controllers/scriptrecord-ctrl');
 
-var uri = 'app/common/scripting/scriptrecord.nl';
+const uri = URI.suitelet;
 
 module.exports = (app) => {
     // ####################

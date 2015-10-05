@@ -4,7 +4,7 @@ var glob = require('glob'),
     express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
-    $port = process.env.PORT || 9394,
+    srvconf = require('./server-config'),
     server;
 
 // parse application/x-www-form-urlencoded
@@ -17,9 +17,9 @@ var started = false;
 exports.isStarted = () => started;
 
 exports.start = (cb) => {
-    server = app.listen($port, () => {
+    server = app.listen(srvconf.port, () => {
         started = true;
-        console.log('nsmockup server started');
+        console.log('nsmockup server started', srvconf.port);
         return cb && cb();
     });
 };
@@ -27,7 +27,7 @@ exports.start = (cb) => {
 exports.stop = (cb) => {
     server.close(() => {
         started = false;
-        console.log('nsmockup server stopped');
+        console.log('nsmockup server stopped', srvconf.port);
         return cb && cb();
     });
 };

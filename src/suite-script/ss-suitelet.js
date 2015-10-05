@@ -1,5 +1,6 @@
 'use strict';
 var vmSim = require('../vm-sim'),
+    database = require('../database'),
     ssParams = require('./utils/ss-params'),
     ssValidate = require('./utils/ss-validate');
 
@@ -33,4 +34,13 @@ module.exports = (opt) => {
 
     // load params configurations
     ssParams.load(opt.params);
+
+    // save reference
+    database.createScript({
+        type: 'suitelet',
+        name: opt.name,
+        func: opt.func,
+        files: opt.files,
+        params: opt.params
+    });
 };

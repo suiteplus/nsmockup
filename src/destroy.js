@@ -1,6 +1,7 @@
 'use strict';
 var fs = require('fs'),
-    server = require('./server');
+    server = require('./server'),
+    database = require('./database');
 
 module.exports = (cb) => {
     const $globalVars = global.$GLOBAL_VARS;
@@ -58,5 +59,5 @@ module.exports = (cb) => {
     }
 
     if (global.$db) destroy(global.$db);
-    else require('./load-database')(destroy);
+    else database.load(destroy);
 };
