@@ -39,20 +39,20 @@ exports.addScript = vmSim;
  * Suitelets are extensions of the SuiteScript API that give developers the ability to build custom NetSuite pages and backend logic. Suitelets are server-side scripts that operate in a request-response model. They are invoked by HTTP GET or POST requests to system generated URLs.
  *
  */
-exports.createSuitelet = require('./src/ss-basic');
+exports.createSuitelet = require('./src/ss-suitelet');
 
 /**
  * You can invoke a RESTlet via an HTTP request to a system-generated URL. RESTlets send and receive content in a request-response model using HTTP verbs, HTTP headers, HTTP status codes, URLs, and standard data formats.
  *
  * @type {createScript}
  */
-exports.createRESTlet = require('./src/ss-basic');
+exports.createRESTlet = require('./src/ss-restlet');
 
 /**
  * Scheduled scripts run on the NetSuite server.
  *
  */
-exports.createSchedule = require('./src/ss-basic');
+exports.createSchedule = require('./src/ss-schedule');
 
 /**
  * User event scripts are executed on the NetSuite server. They are executed when users perform certain actions on records, such as create, load, update, copy, delete, or submit. Most standard NetSuite records and custom record types support user event scripts.
