@@ -51,11 +51,14 @@ module.exports = (cb) => {
         // ##############################
         // Stop nsmockup server
         // ##############################
+        console.log('destroy server >>>', server.isStarted());
         if (server.isStarted()) {
-            server.stop(cb);
+            server.exec('stop', cb);
         } else {
             cb();
         }
+
+        global.$db = null;
     }
 
     if (global.$db) destroy(global.$db);

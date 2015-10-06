@@ -1,17 +1,23 @@
 'use strict';
-var URI = require('../server-config').URI,
-    header = require('../middlewares/header'),
-    ctrl = require('../controllers/scriptrecord-ctrl');
+var URI = require('../server-config').URI;
 
 const uri = URI.scriptrecord;
 
 module.exports = (app) => {
-    let methods = ['GET', 'POST', 'PUT', 'DELETE'];
+    let methods = ['GET', 'POST', 'PUT', 'DELETE'],
+        route = app.route(uri);
+
+    // middlewares
+    let header = require('../middlewares/header'),
+        loadDB = require('../middlewares/load-db');
+
+    // controllers
+    let ctrl = require('../controllers/scriptrecord-ctrl');
 
     // ####################
     // Include Headers
     // ####################
-    app.route(uri).all(header(methods));
+    route.all(header(methods));
 
     // ####################
     // Include Routes
@@ -19,6 +25,10 @@ module.exports = (app) => {
 
     methods.forEach(method => {
         let method_ = method.toLowerCase();
-        app.route(uri)[method_](ctrl.exec);
+
+        route[method_](
+            loadDB,
+            ctrl.exec
+        );
     });
 };

@@ -1,39 +1,28 @@
 'use strict';
-var glob = require('glob'),
-    path = require('path'),
-    express = require('express'),
-    app = express(),
-    bodyParser = require('body-parser'),
-    srvconf = require('./server-config'),
-    server;
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// parse application/json
-app.use(bodyParser.json());
-
-var started = false;
-exports.isStarted = () => started;
-
-exports.start = (cb) => {
-    server = app.listen(srvconf.port, () => {
-        started = true;
-        console.log('nsmockup server started', srvconf.port);
-        return cb && cb();
+//var fork = require('child_process').fork,
+//    server = fork(__dirname+ '/fake-server');
+var cluster = require('cluster');
+if (cluster.isMaster) {
+    cluster.setupMaster({
+        exec: __dirname + '/fake-server.js'
     });
-};
 
-exports.stop = (cb) => {
-    server.close(() => {
+    var server,
         started = false;
-        console.log('nsmockup server stopped', srvconf.port);
-        return cb && cb();
-    });
-};
+    exports.isStarted = () => started;
 
-// Import Routes
-let routes = glob.sync(__dirname + '/routes/*-route.js');
-for (let i = 0; i < routes.length; i++) {
-    require(path.resolve(routes[i]));
+    exports.exec = (step, cb) => {
+        if (step === 'start') server = cluster.fork();
+        server.on('message', function (m) {
+            console.log('SERVER', m);
+            if (typeof m === 'object') {
+                server.send({res: 1});
+            } else {
+                started = m === 'started';
+                cb && cb();
+            }
+        });
+
+        server.send(step);
+    };
 }

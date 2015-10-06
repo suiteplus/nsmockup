@@ -39,7 +39,7 @@ module.exports = (opts, cb) => {
         let step = 0,
             verifySteps = () => {
                 if (++step === 2) {
-                    return cb();
+                    return cb && cb();
                 }
             };
 
@@ -47,7 +47,7 @@ module.exports = (opts, cb) => {
         // Start nsmockup server
         // ##############################
         if (opts.server === true && !server.isStarted()) {
-            server.start(verifySteps);
+            server.exec('start', verifySteps);
         } else {
             verifySteps();
         }

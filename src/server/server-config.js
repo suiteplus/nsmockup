@@ -8,4 +8,4 @@ exports.URI = {
     restlet: uri
 };
 
-exports.port = process.env.PORT || 9394;
+exports.port = process.env.PORT || 3030;

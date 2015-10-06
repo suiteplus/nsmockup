@@ -26,19 +26,26 @@ exports.load = (cb) => {
     let low = require('lowdb'),
         db = low(dbFile);
 
+    let cluster = require('cluster');
     let change = false;
     // create default collections
     ['__metadata', '__scripts'].forEach(c => {
         if (!db.object[c]) {
             db.object[c] = [];
+            cluster.isWorker && console.log('===++ change', c);
             !change && (change = true);
         }
     });
+    cluster.isWorker && console.log('>>>> data pre ', Object.keys(db.object));
     change && db.save();
+    cluster.isWorker && console.log('>>>> data pos ', Object.keys(db.object));
 
     db.$path = baseDir;
     db.$pathDB = dbDir;
     db.$pathCabinet = cabinetDir;
+
+    // HashMap for SuiteScripts
+    db.$scripts = {};
 
     cb(global.$db = db);
 };

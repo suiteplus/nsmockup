@@ -7,8 +7,9 @@ var should = require('should'),
  * Test Suites
  */
 describe('<Unit Test - Netsuite Create Suitelet>', function () {
+    this.timeout(5000);
     before(function (done) {
-        nsmockup.init({}, done);
+        nsmockup.init({server: false}, done);
     });
     describe('Create Script - Suitelet', function () {
         it('create suitelet', function (done) {

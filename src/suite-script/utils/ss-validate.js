@@ -22,6 +22,8 @@ exports.principalFunction = (func, method) => {
         test = test[field];
         should(test).not.eql(undefined, `function not found: "${execFunc}"`);
     }
+    should(test).be.type('function', `${execFunc} is not a Function`);
+    global.$db.$scripts[execFunc] = test;
 };
 
 exports.throwError = (msg) => {
