@@ -33,9 +33,12 @@
     "npm": "2.10.x"
   },
   "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
     "glob": "^5.0.14",
     "lodash": "^3.10.1",
     "lowdb": "^0.10.2",
+    "morgan": "^1.6.1",
     "sync-request": "^2.0.1"
   },
   "devDependencies": {
