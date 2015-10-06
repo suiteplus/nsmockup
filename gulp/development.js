@@ -1,4 +1,13 @@
 'use strict';
+var file, msg = '**/*-test.js';
+process.argv.forEach(function (val, index, array) {
+    if (val === '-file' || val === '--f') {
+        let env_val = array[index + 1];
+        msg = '**/*' + env_val+ '*-test.js';
+        file = env_val;
+    }
+});
+console.log('use => load tests: ', msg);
 
 var gulp = require('gulp'),
     gulpLoadPlugins = require('gulp-load-plugins'),
@@ -29,7 +38,8 @@ gulp.task('dev:jshint', function () {
 
 
 gulp.task('dev:coverage', function () {
-    return gulp.src(paths.jsTests)
+    let jsTests = '/test/**/' + (file ? '*'+file : '' ) +  '*-test.js';
+    return gulp.src(appRoot + jsTests)
         .pipe(plugins.plumber())
         .pipe(plugins.mocha({
             reporters: 'spec'

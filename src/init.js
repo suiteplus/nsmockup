@@ -30,7 +30,11 @@ module.exports = (opts, cb) => {
                     //console.log('import record-type metadata "' + metadata.code + '"');
                 }
             }
-            db.save();
+            try {
+                db.saveSync();
+            } catch(e) {
+                console.error(e);
+            }
         }
 
         // ##############################
@@ -82,7 +86,11 @@ module.exports = (opts, cb) => {
 
             // save record type data in lowdb database
             db.object[recName] = recVal;
-            db.save();
+            try {
+                db.saveSync();
+            } catch(e) {
+                console.error(e);
+            }
 
             //console.log('import record-type "' + recName + '" - total: ' + recVal.length);
             verifyDone();

@@ -3,9 +3,9 @@ var low = require('lowdb');
 
 module.exports = (req, res, next) => {
     // reload $db
-    let db = global.$db;
-    global.$db = low(db.$pathDB + '/db.json');
+    let db = global.$db,
+        dbFile = db.$pathDB + '/db.json';
 
-    console.log('load $db', req.method, req.path);
+    global.$db = low(dbFile, {autosave: false, async: false});
     return next();
 };

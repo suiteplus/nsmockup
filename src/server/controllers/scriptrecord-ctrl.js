@@ -1,9 +1,12 @@
 'use strict';
+var vmSim = require('../../vm-sim'),
+    ssParams = require('../../suite-script/utils/ss-params');
+
+// NetSuite Libs
 var nlobjRequest = require('../../../lib/nsobj/request').nlobjRequest,
     nlobjResponse = require('../../../lib/nsobj/response').nlobjResponse;
 
 exports.exec = (req, res) => {
-    console.log('opaaaaa', global.$db('__scripts').value());
     let db = global.$db,
         id = req.query.script,
         script = db.object.__scripts[id - 1];
@@ -28,6 +31,14 @@ exports.exec = (req, res) => {
         } else {
             execFunc = script.func;
         }
+        // load libs
+        for (let i = 0; i < script.files.length; i++) {
+            vmSim.addScript(script.files[i]);
+        }
+
+        // load params configurations
+        ssParams.load(script.params);
+
         let ff = execFunc.split('.'),
             func = global[ff[0]],
             nsreq = new nlobjRequest(req),

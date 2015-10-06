@@ -24,8 +24,12 @@ module.exports = (cb) => {
         // ##############################
         // Drop All Records and Metadadatas
         // ##############################
-        db.object = {};
-        db.save();
+        try {
+            db.object = {}; // reset db object
+            db.saveSync(); // save reset
+        } catch (e) {
+            console.error(e);
+        }
 
         // ##############################
         // Remove all files from Cabinet
@@ -51,11 +55,10 @@ module.exports = (cb) => {
         // ##############################
         // Stop nsmockup server
         // ##############################
-        console.log('destroy server >>>', server.isStarted());
         if (server.isStarted()) {
             server.exec('stop', cb);
         } else {
-            cb();
+            cb && cb();
         }
 
         global.$db = null;

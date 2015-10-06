@@ -27,7 +27,7 @@ for (let i = 0; i < routes.length; i++) {
 }
 
 process.on('message', function (m) {
-    console.log('NSFAKE SERVER', m);
+    //console.log('NSFAKE SERVER', m);
     if (m === 'start') {
         server = app.listen(srvconf.port, function () {
             console.log('nsmockup server started', srvconf.port);

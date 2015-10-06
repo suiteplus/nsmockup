@@ -1,28 +1,26 @@
 'use strict';
-//var fork = require('child_process').fork,
-//    server = fork(__dirname+ '/fake-server');
-var cluster = require('cluster');
-if (cluster.isMaster) {
-    cluster.setupMaster({
-        exec: __dirname + '/fake-server.js'
-    });
+var fork = require('child_process').fork;
 
-    var server,
-        started = false;
-    exports.isStarted = () => started;
+var started = false;
+
+exports.isStarted = () => started;
+
+if (!global.$NS_SERVER) {
+    let server;
 
     exports.exec = (step, cb) => {
-        if (step === 'start') server = cluster.fork();
+        if (step === 'start') server = fork(__dirname+ '/fake-server');
         server.on('message', function (m) {
-            console.log('SERVER', m);
-            if (typeof m === 'object') {
-                server.send({res: 1});
-            } else {
-                started = m === 'started';
-                cb && cb();
-            }
+            //console.log('SERVER', m);
+            started = m === 'started';
+            cb && cb();
         });
 
         server.send(step);
+    };
+} else {
+    exports.exec = (step, cb) => {
+        console.log('invalid step', step);
+        cb && cb();
     };
 }

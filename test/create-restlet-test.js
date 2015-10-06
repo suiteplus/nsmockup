@@ -9,7 +9,7 @@ var should = require('should'),
 describe('<Unit Test - Netsuite Create Restlet>', function () {
     this.timeout(5000);
     before(function (done) {
-        nsmockup.init({server: false}, done);
+        nsmockup.init({server: true}, done);
     });
     describe('Create Script - Restlet', function () {
         it('create restlet', function (done) {
@@ -30,11 +30,12 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
 
             let url = nlapiResolveURL('RESTLET', opts.name);
             should(url).be.ok();
-            //console.log('>>>', url);
-            //let res = nlapiRequestURL(url, null, null, 'GET');
-            //should(res).be.ok();
-            //let body = res.getBody();
-            //should(body).be.equal('12');
+
+            let res = nlapiRequestURL(url, null, null, 'GET');
+            should(res).be.ok();
+
+            let body = res.getBody();
+            should(body).be.equal('12');
             return done();
         });
     });

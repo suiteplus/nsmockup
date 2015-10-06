@@ -24,21 +24,21 @@ exports.load = (cb) => {
     !fs.existsSync(dbFile) && fs.writeFileSync(dbFile, '{}');
 
     let low = require('lowdb'),
-        db = low(dbFile);
+        db = low(dbFile, {autosave: false, async: false});
 
-    let cluster = require('cluster');
     let change = false;
     // create default collections
     ['__metadata', '__scripts'].forEach(c => {
         if (!db.object[c]) {
             db.object[c] = [];
-            cluster.isWorker && console.log('===++ change', c);
             !change && (change = true);
         }
     });
-    cluster.isWorker && console.log('>>>> data pre ', Object.keys(db.object));
-    change && db.save();
-    cluster.isWorker && console.log('>>>> data pos ', Object.keys(db.object));
+    try {
+        change && db.saveSync();
+    } catch(e) {
+        console.error(e);
+    }
 
     db.$path = baseDir;
     db.$pathDB = dbDir;
@@ -58,8 +58,6 @@ exports.load = (cb) => {
  * }}
  */
 exports.createScript = (data) => {
-    let db = global.$db;
-
     if (!data || !data.type) {
         throw new Error('Not found type of SuiteScript');
     }
@@ -69,7 +67,7 @@ exports.createScript = (data) => {
         data.type = data.type.toLocaleLowerCase();
     }
 
-    let scripts = db('__scripts');
+    let scripts = $db('__scripts');
     if (!data.id) data.id = (scripts.size() + 1);
 
     data.uri = URI[data.type];
@@ -78,4 +76,9 @@ exports.createScript = (data) => {
     }
 
     scripts.push(data);
+    try {
+        $db.saveSync();
+    } catch (e) {
+        console.error(e);
+    }
 };
