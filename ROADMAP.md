@@ -1,14 +1,5 @@
 # nsmockup Roadmap
 
-## Version 0.4.x
-
-### Work with currency simulation
-
-### Netsuite API:
-  * __Currency APIs__:
-    - function **nlapiExchangeRate(sourceCurrency, targetCurrency, effectiveDate)**
-    - function **nlapiFormatCurrency(str)**
-
 ## Version 0.5.x
 
 ### Simulate User Events
@@ -33,9 +24,18 @@
 
 ## Version 0.6.x
 
-### Improvements on Suitelet, Restlet and Schedule Simulations
+### Work with currency simulation
+
+### Netsuite API:
+  * __Currency APIs__:
+    - function **nlapiExchangeRate(sourceCurrency, targetCurrency, effectiveDate)**
+    - function **nlapiFormatCurrency(str)**
 
 ## Version 0.7.x
+
+### Improvements on Suitelet, Restlet and Schedule Simulations
+
+## Version 0.8.x
 
 ### Implement Mock of NetSuite tools APIs
 
@@ -45,9 +45,6 @@
     - function **nlapiAddMonths(d, months)**
     - function **nlapiDateToString(d, format)**
     - function **nlapiStringToDate(str, format)**
-
-## Version 0.8.x
-...
 
 ## Version 0.9.x
 ...
