@@ -7,6 +7,8 @@ var glob = require('glob'),
     srvconf = require('./server-config'),
     server;
 
+process.env.$NS_SERVER = true;
+
 let app = express(),
     nsmockup = require('../../');
 

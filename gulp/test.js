@@ -26,6 +26,7 @@ var defaultTasks = ['env:test', 'test:jshint', 'test:coverage'];
 gulp.task('env:test', function () {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
     process.env.NODE_ENV = 'test';
+    process.env.running_under_istanbul = true;
 });
 
 gulp.task('test:jshint', function () {
@@ -48,7 +49,7 @@ gulp.task('test:coverage', function () {
     };
 
     // instrumentation nsapi.js
-    gulp.src(paths.js)
+    gulp.src(paths.js.concat(['!'+ appRoot + '/src/server/**/*.js']))
         .pipe(plugins.istanbul({
             includeUntested: true,
             instrumenter: require('isparta').Instrumenter
