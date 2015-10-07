@@ -20,7 +20,7 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
     });
     describe('Create Script - Schedule', function () {
         it('create schedule', function (done) {
-            nsmockup.createSuitelet({
+            nsmockup.createSchedule({
                 name: 'customscript_my_schedule',
                 files: [
                     __dirname + '/_input-files/scripts/fake-schedule.js'
