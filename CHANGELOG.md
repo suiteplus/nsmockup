@@ -1,5 +1,27 @@
 # nsmockup ChangeLog
 
+## 2015-10-07, Version 0.4.0 (unstable),
+
+### Notable changes
+
+#### nsmock server:
+  * add **server** configuration, example: **nsmockup.init({server: true})**
+  * this servers use **express** to start on port **3030**
+  * you can test **Suitelet** and **RESTlet** using **nlapiResolveURL** and **nlapiRequestURL**
+
+#### Mockup news - Netsuite API:
+  * __Application Navigation APIs__:
+    - function **nlapiRequestURL(url, postdata, headers, method)**
+    - function **nlapiResolveRUL(type, identifier, id, displayMode)**
+    - function **nlobjRequest()**
+    - function **nlobjResponse()**
+  * __Communication APIs__:
+    - function **nlapiSendCampaignEmail(campaigneventid, recipientid)**
+    - function **nlapiSendEmail(from, to, subject, body, cc, bcc, records, files, notifySenderOnBounce, internalOnly, replyTo)**
+    - function **nlapiSendFax(from, to, subject, body, records, files)**
+  * __Field APIs__:
+    - function **nlapiSubmitField(type,id,fields,values,doSourcing)**
+
 ## 2015-09-30, Version 0.3.0 => 0.3.1 (unstable),
 
 ### Notable changes
