@@ -1,5 +1,6 @@
 'use strict';
-var srvconf = require('./server/server-config'),
+var vmSim = require('./vm-sim'),
+    srvconf = require('./server/server-config'),
     URI = srvconf.URI,
     fs = require('fs');
 
@@ -51,10 +52,14 @@ exports.load = (cb) => {
 };
 
 /**
+ * Create a SuiteScript in new context and add his reference in database.
  *
  * @param data {{
- *    id: Number,
- *    type: String
+ *    id: number,
+ *    name: string
+ *    type: string,
+ *    files: [string],
+ *    params: {}
  * }}
  */
 exports.createScript = (data) => {
@@ -75,10 +80,20 @@ exports.createScript = (data) => {
         data.url = `http://localhost:${srvconf.port}${data.uri}?script=${data.id}`;
     }
 
+    // create script in other context
+    let context = vmSim.createScript({
+        name: data.name,
+        files: data.files,
+        params: data.params
+    });
+
+    // save script reference in database
     scripts.push(data);
     try {
         $db.saveSync();
+        return context;
     } catch (e) {
         console.error(e);
+        return null;
     }
 };

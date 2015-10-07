@@ -84,10 +84,7 @@
                 "after": true,
                 "before": true,
                 "describe": true,
-                "it": true,
-                // test nsmockup
-                "addTest": true,
-                "FakeRestlet": true
+                "it": true
             }
         }
     },

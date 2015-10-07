@@ -19,15 +19,14 @@ describe('<Unit Test - Netsuite Create Suitelet>', function () {
                     __dirname + '/_input-files/scripts/add.js'
                 ],
                 func: 'addTest'
-            });
-            should(addTest).be.ok();
+            }, (ctx) => {
+                should(ctx.addTest).be.ok();
 
-            return done();
+                return done();
+            });
         });
     });
     after(function (done) {
         nsmockup.destroy(done);
-
-        should(addTest).equal(undefined);
     });
 });

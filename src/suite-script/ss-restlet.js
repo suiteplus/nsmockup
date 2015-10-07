@@ -1,7 +1,5 @@
 'use strict';
-var vmSim = require('../vm-sim'),
-    database = require('../database'),
-    ssParams = require('./utils/ss-params'),
+var database = require('../database'),
     ssValidate = require('./utils/ss-validate'),
     should = require('should');
 
@@ -20,13 +18,8 @@ var vmSim = require('../vm-sim'),
   *   }
  * }}
  */
-module.exports = (opt) => {
+module.exports = (opt, cb) => {
     if (!opt || !opt.files || opt.files.length === 0) return;
-
-    // load Libraries
-    for (let i = 0; i < opt.files.length; i++) {
-        vmSim.addScript(opt.files[i]);
-    }
 
     if (!opt.funcs) {
         return ssValidate.throwError('principal functions not def: "opt.funcs"');
@@ -37,24 +30,23 @@ module.exports = (opt) => {
         return ssValidate.throwError('principal functions was empty: "opt.funcs"');
     }
 
-    for (let i=0; i<funcs.length; i++) {
-        let method = funcs[i].toLowerCase();
-        if (~['post', 'get', 'delete', 'put'].indexOf(method)) {
-            ssValidate.principalFunction(opt.funcs, method);
-        } else {
-            should(method).be.equal(null, `invalid method ${method}}`);
-        }
-    }
-
-    // load params configurations
-    ssParams.load(opt.params);
-
     // save reference
-    database.createScript({
+    let context = database.createScript({
         type: 'restlet',
         name: opt.name,
         funcs: opt.funcs,
         files: opt.files,
         params: opt.params
     });
+
+    for (let i=0; i<funcs.length; i++) {
+        let method = funcs[i].toLowerCase();
+        if (~['post', 'get', 'delete', 'put'].indexOf(method)) {
+            ssValidate.principalFunction(opt.funcs, method, context);
+        } else {
+            should(method).be.equal(null, `invalid method ${method}}`);
+        }
+    }
+
+    return cb && cb(context);
 };

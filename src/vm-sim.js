@@ -3,10 +3,10 @@ var fs = require('fs'),
     path = require('path'),
     vm = require('vm'),
     ssParams = require('./suite-script/utils/ss-params'),
-    context = vm.createContext(global), // default context to nsmockup
+    $context = vm.createContext(global), // default context to nsmockup
     vmInclude = function (code, path, ctx) {
         let script = vm.createScript(code, path);
-        script.runInContext(ctx || context);
+        script.runInContext(ctx || $context);
     };
 
 var NS_IMPORTS = [];
@@ -19,15 +19,17 @@ var NS_IMPORTS = [];
  */
 exports.import = (path) => {
     let lib = require(path);
-    Object.keys(lib).forEach(f => {
-        let desc = Object.getOwnPropertyDescriptor(context, f);
+    Object.keys(lib).forEach(nsFunc => {
+        // add import reference
+        !~NS_IMPORTS.indexOf(nsFunc) && NS_IMPORTS.push(nsFunc);
+        // verify if this function was imported before
+        let desc = Object.getOwnPropertyDescriptor($context, nsFunc);
         if (desc) return;
 
-        NS_IMPORTS.push(f);
-        Object.defineProperty(context, f, {
+        Object.defineProperty($context, nsFunc, {
             enumerable: false,
             configurable: false,
-            value: lib[f]
+            value: lib[nsFunc]
         });
     });
 };
@@ -39,14 +41,14 @@ exports.import = (path) => {
  * @returns {{context: {}, files: [string]}}
  */
 exports.loadScriptConfig = (scriptName) => {
-    let $scripts = global.$db.$scripts;
+    let $scripts = $context.$db.$scripts;
     if (!$scripts[scriptName]) {
         let nsFuncDefaults = NS_IMPORTS.concat(['$db']),
             context = {console, require, module, exports};
-        // create context from global
+        // create context from $context
         for (let n=0; n<nsFuncDefaults.length; n++) {
             let nsFunc = nsFuncDefaults[n];
-            context[nsFunc] = global[nsFunc];
+            context[nsFunc] = $context[nsFunc];
         }
         // create Script Configuration in new context
         $scripts[scriptName] = {

@@ -1,7 +1,7 @@
 'use strict';
 var should = require('should');
 
-exports.principalFunction = (func, method) => {
+exports.principalFunction = (func, method, ctx) => {
     if (!func) {
         return exports.throwError('principal function not def', method ? `for method ${method}` : '');
     }
@@ -16,7 +16,7 @@ exports.principalFunction = (func, method) => {
     }
 
     let ff = execFunc.split('.'),
-        test = global;
+        test = ctx || global;
     for (let i = 0; i < ff.length; i++) {
         let field = ff[i];
         test = test[field];

@@ -25,18 +25,19 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
                     'fake-param': 12
                 }
             };
-            nsmockup.createRESTlet(opts);
-            should(FakeRestlet).be.ok();
+            nsmockup.createRESTlet(opts, (ctx) => {
+                should(ctx.FakeRestlet).be.ok();
 
-            let url = nlapiResolveURL('RESTLET', opts.name);
-            should(url).be.ok();
+                let url = nlapiResolveURL('RESTLET', opts.name);
+                should(url).be.ok();
 
-            let res = nlapiRequestURL(url, null, null, 'GET');
-            should(res).be.ok();
+                let res = nlapiRequestURL(url, null, null, 'GET');
+                should(res).be.ok();
 
-            let body = res.getBody();
-            should(body).be.equal('12');
-            return done();
+                let body = res.getBody();
+                should(body).be.equal('12');
+                return done();
+            });
         });
     });
     after(function (done) {
