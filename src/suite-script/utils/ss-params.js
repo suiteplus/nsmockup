@@ -1,10 +1,10 @@
 'use strict';
-var nlapiGetContext = require('../../../lib/nsfunc/context-api').nlapiGetContext;
 
-exports.load = (params) => {
+exports.load = (params, ctx) => {
     if (!params) return;
 
-    let pref = nlapiGetContext().preference,
+    let context = ctx || global,
+        pref = context.nlapiGetContext().preference,
         keys = Object.keys(params);
     for (let i = 0; i < keys.length; i++) {
         let param = keys[i];

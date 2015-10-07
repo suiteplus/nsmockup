@@ -1,12 +1,5 @@
 'use strict';
-var vmSim = require('../../vm-sim'),
-    ssParams = require('../../suite-script/utils/ss-params');
-
-// NetSuite Libs
-var nlobjRequest = require('../../../lib/nsobj/request').nlobjRequest,
-    nlobjResponse = require('../../../lib/nsobj/response').nlobjResponse;
-
-var cacheFiles = [];
+var vmSim = require('../../vm-sim');
 
 exports.exec = (req, res) => {
     let db = global.$db,
@@ -33,22 +26,13 @@ exports.exec = (req, res) => {
         } else {
             execFunc = script.func;
         }
-        // load libs
-        for (let i = 0; i < script.files.length; i++) {
-            let file = script.files[i];
-            if (!~cacheFiles.indexOf(file)) {
-                vmSim.addScript(file);
-                cacheFiles.push(file);
-            }
-        }
-
-        // load params configurations
-        ssParams.load(script.params);
+        // load libs in specific context
+        let context = vmSim.createScript(script);
 
         let ff = execFunc.split('.'),
-            func = global[ff[0]],
-            nsreq = new nlobjRequest(req),
-            nsres = new nlobjResponse(res);
+            func = context[ff[0]],
+            nsreq = new context.nlobjRequest(req),
+            nsres = new context.nlobjResponse(res);
         // workaround
         if (ff.length === 1)
             func(nsreq, nsres);
