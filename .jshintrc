@@ -113,6 +113,9 @@
         "nlapiRequestURL": true,
         "nlapiResolveURL": true,
         "nlapiSearchRecord": true,
+        "nlapiSendCampaignEmail": true,
+        "nlapiSendEmail": true,
+        "nlapiSendFax": true,
         "nlapiSubmitFile": true,
         "nlapiSubmitRecord": true,
 

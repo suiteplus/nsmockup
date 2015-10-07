@@ -1,6 +1,7 @@
 'use strict';
 
 var fs = require('fs'),
+    path = require('path'),
     vm = require('vm'),
     context = vm.createContext(global),
     vmInclude = function (code, path) {
@@ -14,8 +15,9 @@ var fs = require('fs'),
 //    context = vm.createContext(global);
 //};
 
-exports.addScript = (path) => {
-    vmInclude(fs.readFileSync(path), path);
+exports.addScript = (file) => {
+    let file_ = path.resolve(file);
+    vmInclude(fs.readFileSync(file_), file_);
 };
 
 exports.import = (path) => {

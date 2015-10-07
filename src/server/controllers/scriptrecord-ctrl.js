@@ -6,6 +6,8 @@ var vmSim = require('../../vm-sim'),
 var nlobjRequest = require('../../../lib/nsobj/request').nlobjRequest,
     nlobjResponse = require('../../../lib/nsobj/response').nlobjResponse;
 
+var cacheFiles = [];
+
 exports.exec = (req, res) => {
     let db = global.$db,
         id = req.query.script,
@@ -33,7 +35,11 @@ exports.exec = (req, res) => {
         }
         // load libs
         for (let i = 0; i < script.files.length; i++) {
-            vmSim.addScript(script.files[i]);
+            let file = script.files[i];
+            if (!~cacheFiles.indexOf(file)) {
+                vmSim.addScript(file);
+                cacheFiles.push(file);
+            }
         }
 
         // load params configurations
