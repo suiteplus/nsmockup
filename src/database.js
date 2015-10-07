@@ -75,7 +75,7 @@ exports.createSuiteScript = (data) => {
     let scripts = $db('__scripts');
     if (!data.id) data.id = (scripts.size() + 1);
 
-    data.uri = URI[data.type];
+    data.uri = URI[data.type]; // only suitelet and restlet
     if (data.uri) {
         data.url = `http://localhost:${srvconf.port}${data.uri}?script=${data.id}`;
     }
