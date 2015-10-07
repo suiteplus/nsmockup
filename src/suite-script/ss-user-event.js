@@ -23,6 +23,9 @@ module.exports = (opt, cb) => {
     if (!opt || !opt.files || opt.files.length === 0) {
         return ssValidate.throwError('script needs libraries: "opt.files"');
     }
+    if (!opt.record) {
+        return ssValidate.throwError('user event needs one Record Type: "opt.record"');
+    }
 
     let funcs = Object.keys(opt.funcs);
     if (!funcs || funcs.length === 0) {
@@ -35,7 +38,13 @@ module.exports = (opt, cb) => {
         name: opt.name,
         funcs: opt.funcs,
         files: opt.files,
-        params: opt.params
+        params: opt.params,
+        events: {
+            beforeLoad: !!funcs.beforeLoad,
+            beforeSubmit: !!funcs.beforeSubmit,
+            afterSubmit: !!funcs.afterSubmit
+        },
+        record: opt.record
     });
 
     for (let i=0; i<funcs.length; i++) {
@@ -43,7 +52,7 @@ module.exports = (opt, cb) => {
         if (~['beforeLoad', 'beforeSubmit', 'afterSubmit'].indexOf(step)) {
             ssValidate.principalFunction(opt.funcs, step, context);
         } else {
-            should(step).be.equal(null, `invalid step ${step}}`);
+            should(step).be.equal(null, `invalid step ${step}`);
         }
     }
 

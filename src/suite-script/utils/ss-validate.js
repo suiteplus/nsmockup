@@ -23,7 +23,6 @@ exports.principalFunction = (func, method, ctx) => {
         should(test).not.eql(undefined, `function not found: "${func}" ${method ? `[${method}]` : ''}`);
     }
     should(test).be.type('function', `${execFunc} is not a Function`);
-    global.$db.$scripts[execFunc] = test;
 };
 
 exports.throwError = (msg) => {

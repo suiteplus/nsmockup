@@ -111,7 +111,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
                 should(o).have.instanceOf(nlobjRecord);
                 return done('missing record type: '+invalidRecType);
             } catch (e) {
-                should(e).have.property('code', 'SSS_INVALID_RECORD_OBJ');
+                should(e).have.property('code', 'SSS_INVALID_RECORD_TYPE');
                 return done();
             }
         });

@@ -86,7 +86,6 @@ exports.importSuiteScript = (script) => {
             exports.addScript(file, context);
             cfg.files.push(file);
         }
-
     }
 
     // load params configurations
