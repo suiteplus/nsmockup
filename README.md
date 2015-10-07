@@ -159,19 +159,34 @@ describe('<Unit Test - Netsuite API Simulation>', function () {
             };
 
         // start database simulation
-        nsmockup.init({records, metadatas}, done);
+        nsmockup.init({records, metadatas, server: true}, done);
     });
 
     it('simple load lib and execute function', function (done) {
         nsmockup.createReslet({
             name: 'my_restlet',
-            func: 'MyRestlet.main',
+            funcs: {
+                get: 'MyRestlet.get',
+                post: 'MyRestlet.post'
+            },
             files: [
-                __dirname + '/lib/my-restlet.js'
+                __drname + '/lib/my-restlet.js'
             ]
+        }, (ctx, exec) => {
+             // verify if function 'MyRestlet' was loaded
+             if (!ctx.MyRestlet) throw 'not found MyRestlet'
+
+             // invoke my RESTlet
+             let url = nlapiResolveURL('RESTLET', 'my_restlet'),
+                 res = nlapiRequestURL(url, {message: 'live?'}, null, 'POST');
+
+             if (res && res.getBody() === 'yeap!') {
+                console.log('Finish RESTlet');
+             } else {
+                throw new Error('invalid result');
+             }
          });
-         MyRestlet.main();
-    });
+     });
 
     after(function (done) {
         nsmockup.destroy(done);
