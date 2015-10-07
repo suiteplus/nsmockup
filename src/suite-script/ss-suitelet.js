@@ -1,5 +1,6 @@
 'use strict';
 var database = require('../database'),
+    vmSim = require('../vm-sim'),
     ssValidate = require('./utils/ss-validate');
 
 /**
@@ -35,5 +36,5 @@ module.exports = (opt, cb) => {
         return ssValidate.throwError('invalid type of principal function, string only: "opt.func"');
     }
 
-    return cb && cb(context);
+    return cb && cb(context, vmSim.createInvokeFunction(context));
 };

@@ -14,7 +14,11 @@ Netsuite API Mockup
 ## Usage
 
 #### nsmockup.init(opt, cb)
- - opt {records: [String], metadatas: [String]}
+ - opt {
+    records: [String],
+    metadatas: [String],
+    server: Boolean
+ }
  - cb  {Function}
 ```javascript
     var opt = {
@@ -23,7 +27,8 @@ Netsuite API Mockup
         },
         metadatas: [
             __dirname + '/meta/metaData-customrecord_my-record.json'
-        ]
+        ],
+        server: true
     };
     nsmockup.init(opt, function(err) {
         if (err) console.log('ERROR', err);
@@ -31,8 +36,14 @@ Netsuite API Mockup
     });
 ```
 
-#### nsmockup.createSuitelet(cfg)
- - cfg {name: String, func: String, files: [String], params: Object}
+#### nsmockup.createSuitelet(cfg, cb)
+ - cfg {
+    name: String,
+    func: String,
+    files: [String],
+    params: Object
+ }
+ - cb (ctx, exec) => {} -- **callback**
 ```javascript
     nsmockup.createSuitelet({
         name: 'my_suitelet',
@@ -40,30 +51,84 @@ Netsuite API Mockup
         files: [
             __dirname + '/lib/my-suitelet.js'
         ]
+    }, (ctx, exec) => {
+        // verify if function 'MySuitelet' was loaded
+        if (!ctx.MySuitelet) throw 'not found MySuitelet'
+
+        // invoke my RESTlet
+        let url = nlapiResolveURL('SUTELET', 'my_suitelet'),
+          res = nlapiRequestURL(url + 'message=hi');
+
+        if (res.getBody() === 'hello') {
+         console.log('Finish Suitelet');
+        }
     });
 ```
 
-#### nsmockup.createRESTlet(cfg)
- - cfg {name: String, func: String, files: [String], params: Object}
+#### nsmockup.createRESTlet(cfg, cb)
+ - cfg {
+    name: String,
+    funcs: {
+        get: String,
+        post: String,
+        put: String,
+        delete: String
+    },
+    files: [String],
+    params: Object
+ }
+ - cb (ctx, exec) => {} -- **callback**
 ```javascript
     nsmockup.createRESTlet({
         name: 'my_restlet',
-        func: 'MyRestlet.main',
+        funcs: {
+            get: 'MyRestlet.get',
+            post: 'MyRestlet.post'
+        },
         files: [
-            __dirname + '/lib/my-restlet.js'
+            __drname + '/lib/my-restlet.js'
         ]
-    });
+    }, (ctx, exec) => {
+         // verify if function 'MyRestlet' was loaded
+         if (!ctx.MyRestlet) throw 'not found MyRestlet'
+
+         // invoke my RESTlet
+         let url = nlapiResolveURL('RESTLET', 'my_restlet'),
+             res = nlapiRequestURL(url, {message: 'live?'}, null, 'POST');
+
+         if (res.getBody() === 'yeap!') {
+            console.log('Finish RESTlet');
+         }
+     });
 ```
 
-#### nsmockup.createSchedule(cfg)
- - cfg {name: String, func: String, files: [String], params: Object}
+#### nsmockup.createSchedule(cfg, cb)
+ - cfg {
+    name: String,
+    func: String,
+    files: [String],
+    params: Object,
+    exec: Boolean
+ }
+ - cb (ctx, exec) => {} -- **callback**
 ```javascript
     nsmockup.createSchedule({
         name: 'my_schedule',
         func: 'MySchedule.main',
         files: [
             __dirname + '/lib/my-schedule.js'
-        ]
+        ],
+        exec: false
+    }, (ctx, exec) => {
+        // verify if function 'MySchedule' was loaded
+        if (!ctx.MySchedule) throw 'not found MySchedule'
+        // execute 'MyOtherFunc.getJapo'
+        // you can execute any function present in file '/lib/my-schedule.js'
+        let japo = exec('MyOtherFunc.getJapo');
+
+        if (japo.verifyFinishSchedule()) {
+            console.log('Finished Schedule');
+        }
     });
 ```
 

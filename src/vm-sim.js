@@ -91,3 +91,37 @@ exports.addScript = (file, ctx) => {
         code = fs.readFileSync(file_);
     vmInclude(code, file_, ctx);
 };
+
+var execCount = 0;
+/**
+ * Execute a function in specific context.
+ *
+ * @param code {string} simple function.
+ * @param [ctx] {object} context. If null, use the global context.
+ */
+exports.evalContext = (code, ctx) => {
+    if (!code) {
+        throw new Error('code cannot be empty');
+    }
+    vmInclude(code, `executeScript-${execCount}.js`, ctx || $context);
+};
+
+exports.createInvokeFunction = (ctx) => {
+    ctx.$$RESULT = null;
+    return (name, args) => {
+        args = args ? Array.isArray(args) ? args : [args] : [];
+        let codeArgs = [];
+        for (let a=0; a<args.length; a++) {
+            let codeArg = `$$ARG$${a}`;
+            ctx[codeArg] = args[a];
+            codeArgs.push(codeArg);
+        }
+        let code = `$$RESULT = ${name}(${codeArgs.join(',')})`;
+
+        console.log(code);
+
+        // execute function
+        exports.evalContext(code, ctx);
+        return ctx.$$RESULT
+    };
+};

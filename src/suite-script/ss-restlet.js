@@ -1,5 +1,6 @@
 'use strict';
 var database = require('../database'),
+    vmSim = require('../vm-sim'),
     ssValidate = require('./utils/ss-validate'),
     should = require('should');
 
@@ -48,5 +49,5 @@ module.exports = (opt, cb) => {
         }
     }
 
-    return cb && cb(context);
+    return cb && cb(context, vmSim.createInvokeFunction(context));
 };

@@ -1,5 +1,6 @@
 'use strict';
 var database = require('../database'),
+    vmSim = require('../vm-sim'),
     ssValidate = require('./utils/ss-validate');
 
 /**
@@ -9,7 +10,8 @@ var database = require('../database'),
  *    name: String,
   *   files: [String],
   *   params: Object,
-  *   func: String
+  *   func: String,
+  *   exec: Boolean
  * }}
  */
 module.exports = (opt, cb) => {
@@ -35,5 +37,10 @@ module.exports = (opt, cb) => {
         return ssValidate.throwError('invalid type of principal function, string only: "opt.func"');
     }
 
-    return cb && cb(context);
+    if (opt.exec) {
+        // execute script on his context
+        vmSim.evalContext(func + '()', context);
+    }
+
+    return cb && cb(context, vmSim.createInvokeFunction(context));
 };

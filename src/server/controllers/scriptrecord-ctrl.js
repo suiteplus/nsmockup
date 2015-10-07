@@ -29,16 +29,11 @@ exports.exec = (req, res) => {
         // load libs in specific context
         let context = vmSim.createScript(script);
 
-        let ff = execFunc.split('.'),
-            func = context[ff[0]],
-            nsreq = new context.nlobjRequest(req),
-            nsres = new context.nlobjResponse(res);
-        // workaround
-        if (ff.length === 1)
-            func(nsreq, nsres);
-        else if (ff.length === 2)
-            func[ff[1]](nsreq, nsres);
-        else if (ff.length === 3)
-            func[ff[1]][ff[2]](nsreq, nsres);
+        // init request and response variables in context
+        context.$NS_REQ = new context.nlobjRequest(req);
+        context.$NS_RES = new context.nlobjResponse(res);
+
+        // execute script on his context
+        vmSim.evalContext(execFunc + '($NS_REQ, $NS_RES)', context);
     }
 };
