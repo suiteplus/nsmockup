@@ -13,9 +13,9 @@ global.window = {
 var glob = require('glob'),
     files = glob.sync(__dirname + '/lib/**/*.js');
 for (let i = 0; i < files.length; i++) {
-    vmSim.import(path.resolve(files[i]));
+    vmSim.importNsApi(path.resolve(files[i]));
 }
-vmSim.import(path.resolve(__dirname + '/nsapi-def.js'));
+vmSim.importNsApi(path.resolve(__dirname + '/nsapi-def.js'));
 
 global.$GLOBAL_VARS = global.$GLOBAL_VARS || Object.keys(global).concat(['$GLOBAL_VARS', '$db', '$GLOBAL_REM']);
 global.$GLOBAL_REM = global.$GLOBAL_REM || [];
@@ -44,7 +44,6 @@ exports.createSuitelet = require('./src/suite-script/ss-suitelet');
 /**
  * You can invoke a RESTlet via an HTTP request to a system-generated URL. RESTlets send and receive content in a request-response model using HTTP verbs, HTTP headers, HTTP status codes, URLs, and standard data formats.
  *
- * @type {createScript}
  */
 exports.createRESTlet = require('./src/suite-script/ss-restlet');
 

@@ -62,7 +62,7 @@ exports.load = (cb) => {
  *    params: {}
  * }}
  */
-exports.createScript = (data) => {
+exports.createSuiteScript = (data) => {
     if (!data || !data.type) {
         throw new Error('Not found type of SuiteScript');
     }
@@ -81,7 +81,7 @@ exports.createScript = (data) => {
     }
 
     // create script in other context
-    let context = vmSim.createScript({
+    let context = vmSim.importSuiteScript({
         name: data.name,
         files: data.files,
         params: data.params

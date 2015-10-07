@@ -4,25 +4,27 @@ var database = require('../database'),
     ssValidate = require('./utils/ss-validate');
 
 /**
- * Schedule Function idea from Netsuite API.
+ * NetSuite: Schedule mockup.
  *
  * @param opt {{
  *    name: String,
-  *   files: [String],
-  *   params: Object,
-  *   func: String,
-  *   exec: Boolean
+ *    files: [String],
+ *    params: Object,
+ *    func: String,
+ *    exec: Boolean
  * }}
  */
 module.exports = (opt, cb) => {
-    if (!opt || !opt.files || opt.files.length === 0) return;
+    if (!opt || !opt.files || opt.files.length === 0) {
+        return ssValidate.throwError('script needs libraries: "opt.files"');
+    }
 
     if (!opt.func) {
         return ssValidate.throwError('principal function not def: "opt.func"');
     }
 
     // save reference
-    let context = database.createScript({
+    let context = database.createSuiteScript({
         type: 'schedule',
         name: opt.name,
         func: opt.func,

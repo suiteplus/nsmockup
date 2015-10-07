@@ -4,24 +4,26 @@ var database = require('../database'),
     ssValidate = require('./utils/ss-validate');
 
 /**
- * Suitelet Function idea from Netsuite API.
+ * NetSuite: Suitelet mockup.
  *
  * @param opt {{
  *    name: String,
-  *   files: [String],
-  *   params: Object,
-  *   func: String
+ *    files: [String],
+ *    params: Object,
+ *    func: String
  * }}
  */
 module.exports = (opt, cb) => {
-    if (!opt || !opt.files || opt.files.length === 0) return;
+    if (!opt || !opt.files || opt.files.length === 0) {
+        return ssValidate.throwError('script needs libraries: "opt.files"');
+    }
 
     if (!opt.func) {
         return ssValidate.throwError('principal function not def: "opt.func"');
     }
 
     // save reference and get new context
-    let context = database.createScript({
+    let context = database.createSuiteScript({
         type: 'suitelet',
         name: opt.name,
         func: opt.func,

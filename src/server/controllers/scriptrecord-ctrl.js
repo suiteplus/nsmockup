@@ -27,7 +27,7 @@ exports.exec = (req, res) => {
             execFunc = script.func;
         }
         // load libs in specific context
-        let context = vmSim.createScript(script);
+        let context = vmSim.importSuiteScript(script);
 
         // init request and response variables in context
         context.$NS_REQ = new context.nlobjRequest(req);

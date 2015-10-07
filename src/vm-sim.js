@@ -17,7 +17,7 @@ var NS_IMPORTS = [];
  * @param path {string} file path of nsmockup implementation.
  * @return {void}
  */
-exports.import = (path) => {
+exports.importNsApi = (path) => {
     let lib = require(path);
     Object.keys(lib).forEach(nsFunc => {
         // add import reference
@@ -59,8 +59,17 @@ exports.loadScriptConfig = (scriptName) => {
     return $scripts[scriptName];
 };
 
-
-exports.createScript = (script) => {
+/**
+ * Import script code on speficic context in VM.
+ *
+ * @param script {{
+ *    name: String,
+ *    files: [String],
+ *    params: {}
+ * }}
+ * @returns {} his context.
+ */
+exports.importSuiteScript = (script) => {
     if (!script && !script.name) {
         throw new Error('invalid script ... I liked scripts with a name!!!');
     }
@@ -118,10 +127,8 @@ exports.createInvokeFunction = (ctx) => {
         }
         let code = `$$RESULT = ${name}(${codeArgs.join(',')})`;
 
-        console.log(code);
-
         // execute function
         exports.evalContext(code, ctx);
-        return ctx.$$RESULT
+        return ctx.$$RESULT;
     };
 };

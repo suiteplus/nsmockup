@@ -5,22 +5,24 @@ var database = require('../database'),
     should = require('should');
 
 /**
- * RESTlet Function idea from Netsuite API.
+ * NetSuite: RESTlet mockup.
  *
  * @param opt {{
  *    name: String,
-  *   files: [String],
-  *   params: Object,
-  *   funcs: {
-  *     [post]: String,
-  *     [get]: String,
-  *     [delete]: String,
-  *     [put]: String
-  *   }
+ *    files: [String],
+ *    params: Object,
+ *    funcs: {
+ *      [post]: String,
+ *      [get]: String,
+ *      [delete]: String,
+ *      [put]: String
+ *    }
  * }}
  */
 module.exports = (opt, cb) => {
-    if (!opt || !opt.files || opt.files.length === 0) return;
+    if (!opt || !opt.files || opt.files.length === 0) {
+        return ssValidate.throwError('script needs libraries: "opt.files"');
+    }
 
     if (!opt.funcs) {
         return ssValidate.throwError('principal functions not def: "opt.funcs"');
@@ -32,7 +34,7 @@ module.exports = (opt, cb) => {
     }
 
     // save reference
-    let context = database.createScript({
+    let context = database.createSuiteScript({
         type: 'restlet',
         name: opt.name,
         funcs: opt.funcs,
