@@ -124,9 +124,9 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('lookup invalid id - "2"', function (done) {
+        it('lookup invalid id - "opa"', function (done) {
             try {
-                nlapiLookupField(recType, '2');
+                nlapiLookupField(recType, 'opa');
                 return done('missing id ');
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_INTERNAL_ID');
