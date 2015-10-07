@@ -8,7 +8,7 @@ Netsuite API Mockup
 
 ## Install [![Dependency Status][david-image]][david-url] [![devDependency Status][david-image-dev]][david-url-dev]
 ```bash
-    npm install nsmockup
+    npm install nsmockup -save-dev
 ```
 
 ## Usage
