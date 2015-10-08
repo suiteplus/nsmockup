@@ -1,5 +1,20 @@
 # nsmockup ChangeLog
 
+## 2015-10-08, Version 0.5.0 (unstable),
+
+### Notable changes
+  * simulate User Events: **nsmockup.createUserEvent(opt)**
+  * remove cache from load JSON database
+  * User Event triggers in: **nlapiSubmitRecord => ('beforeSubmit', 'afterSubmit')** and **nlapiLoadRecord => ('beforeLoad')**
+  * Manager Context: one context for each Suite Script loaded
+
+### Netsuite API:
+  * __Record APIs__:
+    - function **nlapiGetNewRecord()**
+    - function **nlapiGetOldRecord()**
+    - function **nlapiGetRecordId()**
+    - function **nlapiGetRecordType()**
+
 ## 2015-10-07, Version 0.4.0 (unstable),
 
 ### Notable changes

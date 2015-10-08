@@ -1,27 +1,5 @@
 # nsmockup Roadmap
 
-## Version 0.5.x
-
-### Simulate User Events
- - **nsmockup.createUserEvent(opt)**
-
-### Netsuite API:
-  * __Record APIs__:
-    - function **nlapiGetNewRecord()**
-    - function **nlapiGetOldRecord()**
-    - function **nlapiGetRecordId()**
-    - function **nlapiGetRecordType()**
-  * __Field APIs__
-    - function **nlapiGetField(fldnam)**
-    - function **nlapiGetFieldText(fldnam)**
-    - function **nlapiGetFieldtexts(fldnam)**
-    - function **nlapiGetFieldValue(fldnam)**
-    - function **nlapiGetFieldValues(fldnam)**
-    - function **nlapiSetFieldText(fldnam)**
-    - function **nlapiSetFieldtexts(fldnam)**
-    - function **nlapiSetFieldValue(fldnam)**
-    - function **nlapiSetFieldValues(fldnam)**
-
 ## Version 0.6.x
 
 ### Work with currency simulation
@@ -47,7 +25,21 @@
     - function **nlapiStringToDate(str, format)**
 
 ## Version 0.9.x
-...
+
+### Simulate Client Script
+ - **nsmockup.createClient(opt)**
+
+### Netsuite API:
+  * __Field APIs__
+    - function **nlapiGetField(fldnam)**
+    - function **nlapiGetFieldText(fldnam)**
+    - function **nlapiGetFieldtexts(fldnam)**
+    - function **nlapiGetFieldValue(fldnam)**
+    - function **nlapiGetFieldValues(fldnam)**
+    - function **nlapiSetFieldText(fldnam)**
+    - function **nlapiSetFieldtexts(fldnam)**
+    - function **nlapiSetFieldValue(fldnam)**
+    - function **nlapiSetFieldValues(fldnam)**
 
 ## Version 0.1x.x
 ...
