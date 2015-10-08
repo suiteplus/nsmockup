@@ -95,6 +95,21 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
                 let context = ctx.nlapiGetContext();
                 should(context).be.ok();
 
+                let beforeLoadType = context.getSessionObject('before-load-type'),
+                    beforeLoadParam = context.getSessionObject('before-load-param');
+                should(beforeLoadType).be.equal('view');
+                should(beforeLoadParam).be.equal('23');
+
+                let beforeLoadOldCode = context.getSessionObject('before-load-old-code'),
+                    beforeLoadNewCode = context.getSessionObject('before-load-new-code'),
+                    beforeLoadRecId = context.getSessionObject('before-load-rec-id'),
+                    beforeLoadRecType = context.getSessionObject('before-load-rec-type');
+
+                should(beforeLoadOldCode).be.equal('219');
+                should(beforeLoadNewCode).be.equal('219');
+                should(beforeLoadRecId).be.equal('219');
+                should(beforeLoadRecType).be.equal('customrecord_codeg_ids');
+
                 let beforeSubmitType = context.getSessionObject('before-submit-type'),
                     beforeSubmitParam = context.getSessionObject('before-submit-param');
                 should(beforeSubmitType).be.equal('edit');

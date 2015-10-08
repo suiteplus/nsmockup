@@ -82,7 +82,7 @@ module.exports = (opts, cb) => {
             verifyDone = () => {
                 if (++actual == recNames.length) return verifySteps();
             };
-        console.log('init db ', Object.keys(db.object), db.object.__scripts);
+
         for (let i = 0; i < recNames.length; i++) {
             let recName = recNames[i],
                 recVal = records[recName];
