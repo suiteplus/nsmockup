@@ -1,6 +1,5 @@
 'use strict';
-var path = require('path'),
-    vmSim = require('./src/vm-sim');
+var vmSim = require('./src/vm-sim');
 
 // workaround to 'require' works in vm.runInThisContext
 global.require = require;
@@ -10,15 +9,7 @@ global.window = {
 };
 
 // load Netsuite functions and objects
-var glob = require('glob'),
-    files = glob.sync(__dirname + '/lib/ns*/**/*.js');
-for (let i = 0; i < files.length; i++) {
-    vmSim.importNsApi(path.resolve(files[i]));
-}
-vmSim.importNsApi(path.resolve(__dirname + '/nsapi-def.js'));
-
-global.$GLOBAL_VARS = global.$GLOBAL_VARS || Object.keys(global).concat(['$GLOBAL_VARS', '$db', '$GLOBAL_REM']);
-global.$GLOBAL_REM = global.$GLOBAL_REM || [];
+vmSim.importAllNsApi();
 
 /**
  *

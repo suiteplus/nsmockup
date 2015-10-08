@@ -40,15 +40,15 @@ module.exports = (opt, cb) => {
         files: opt.files,
         params: opt.params,
         events: {
-            beforeLoad: !!funcs.beforeLoad,
-            beforeSubmit: !!funcs.beforeSubmit,
-            afterSubmit: !!funcs.afterSubmit
+            beforeLoad: !!opt.funcs.beforeLoad,
+            beforeSubmit: !!opt.funcs.beforeSubmit,
+            afterSubmit: !!opt.funcs.afterSubmit
         },
         record: opt.record
     });
 
     for (let i=0; i<funcs.length; i++) {
-        let step = funcs[i].toLowerCase();
+        let step = funcs[i];
         if (~['beforeLoad', 'beforeSubmit', 'afterSubmit'].indexOf(step)) {
             ssValidate.principalFunction(opt.funcs, step, context);
         } else {

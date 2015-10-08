@@ -1,6 +1,18 @@
 'use strict';
 var server = require('./server'),
-    database = require('./database');
+    database = require('./database'),
+    fs = require('fs'),
+    path = require('path');
+
+/**
+ * Alternative a cache created by 'require(path)'.
+ * @param path
+ */
+var readJSON = (json) => {
+    let jPath = path.resolve(json),
+        code = fs.readFileSync(jPath, 'utf8');
+    return JSON.parse(code);
+};
 
 /**
  *
@@ -14,17 +26,18 @@ var server = require('./server'),
 module.exports = (opts, cb) => {
     function init(db) {
         let metadatas = opts.metadatas;
-        if (typeof metadatas === 'string') metadatas = [require(opts.records)];
+        if (typeof metadatas === 'string') metadatas = [readJSON(opts.records)];
         else if (!Array.isArray(metadatas)) metadatas = [metadatas];
 
         if (metadatas && metadatas.length !== 0) {
             let _metadata = db('__metadata');
             for (let i = 0; i < metadatas.length; i++) {
                 let metadata = metadatas[i];
-                if (typeof metadata === 'string') metadata = require(metadata);
+                if (typeof metadata === 'string') metadata = readJSON(metadata);
 
-                if (!metadata || !metadata.code) continue;
-                else {
+                if (!metadata || !metadata.code) {
+                    continue;
+                } else {
                     _metadata.remove({code: metadata.code});
                     _metadata.push(metadata);
                     //console.log('import record-type metadata "' + metadata.code + '"');
@@ -60,7 +73,7 @@ module.exports = (opts, cb) => {
         // Load Records
         // ##############################
         let records = opts.records;
-        if (typeof records === 'string') records = require(opts.records);
+        if (typeof records === 'string') records = readJSON(opts.records);
 
         if (!records) return verifySteps();
         let recNames = Object.keys(records);
@@ -69,11 +82,12 @@ module.exports = (opts, cb) => {
             verifyDone = () => {
                 if (++actual == recNames.length) return verifySteps();
             };
+        console.log('init db ', Object.keys(db.object), db.object.__scripts);
         for (let i = 0; i < recNames.length; i++) {
             let recName = recNames[i],
                 recVal = records[recName];
 
-            if (typeof recVal === 'string') recVal = require(recVal);
+            if (typeof recVal === 'string') recVal = readJSON(recVal);
             if (!recVal || !recVal.length) {
                 verifyDone();
                 continue;
@@ -97,6 +111,7 @@ module.exports = (opts, cb) => {
         }
     }
 
-    if (global.$db) init(global.$db);
-    else database.load(init);
+    //if (global.$db) init(global.$db);
+    //else database.load(init);
+    database.load(init);
 };

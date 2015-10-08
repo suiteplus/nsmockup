@@ -82,7 +82,9 @@
             "globals" : {
                 // mocha
                 "after": true,
+                "afterEach": true,
                 "before": true,
+                "beforeEach": true,
                 "describe": true,
                 "it": true
             }
@@ -93,6 +95,8 @@
     "globals": {
         // nsmockup
         "$db": true,
+        "$$THIS_RECORD": true,
+        "$$THIS_CONTEXT": true,
 
         // Netsuite Global Functions
         "nlapiCreateError": true,

@@ -48,7 +48,9 @@ exports.load = (cb) => {
     // HashMap for SuiteScripts
     db.$scripts = {};
 
-    cb(global.$db = db);
+    global.$db = db;
+    if (cb) return cb(db);
+    else return db;
 };
 
 /**
