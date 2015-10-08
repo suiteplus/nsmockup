@@ -11,7 +11,7 @@ global.window = {
 
 // load Netsuite functions and objects
 var glob = require('glob'),
-    files = glob.sync(__dirname + '/lib/ns*/*.js');
+    files = glob.sync(__dirname + '/lib/ns*/**/*.js');
 for (let i = 0; i < files.length; i++) {
     vmSim.importNsApi(path.resolve(files[i]));
 }

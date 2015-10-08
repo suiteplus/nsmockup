@@ -50,7 +50,8 @@ module.exports = (cb) => {
                 //delete global[globalVar];
             }
         }
-        global.$NS_CONTECXT_OBJ =  undefined;
+        // reset nlapiGetContext next time
+        global.$NS_RESET_CONTEXT = true;
 
         // ##############################
         // Stop nsmockup server

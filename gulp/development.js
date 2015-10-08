@@ -17,6 +17,7 @@ var gulp = require('gulp'),
     paths = {
         js: [
             appRoot + '/nsapi.js',
+            appRoot + '/lib/**/*.js',
             appRoot + '/src/**/*.js'
         ],
         jsTests: [appRoot + '/test/**/*-test.js']
