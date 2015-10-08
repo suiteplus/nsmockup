@@ -160,7 +160,7 @@ Netsuite API Mockup
     }, (ctx, exec) => {
         // verify if function 'MyUserEvent' was loaded
         if (!ctx.MyUserEvent) throw 'not found MySchedule'
-        var var should = require('should')
+        var should = require('should')
 
         let record = nlapiLoadRecord('customer', 219);
         record.setFieldValue('name', 'Muito Legal');
