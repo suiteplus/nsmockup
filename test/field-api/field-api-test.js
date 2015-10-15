@@ -32,8 +32,8 @@ describe('<Unit Test - Netsuite Field API>', function () {
 
             let code = nlapiLookupField(recType, 2, fields);
             should(code).have.instanceOf(Object);
-            should(code).have.property('custrecord_type_id', 219);
-            should(code).have.property('custrecord_code_id', 14);
+            should(code).have.property('custrecord_type_id', '219');
+            should(code).have.property('custrecord_code_id', '14');
 
             return done();
         });
@@ -57,8 +57,8 @@ describe('<Unit Test - Netsuite Field API>', function () {
             let code = nlapiLookupField(recType, 2, fields);
             should(code).have.instanceOf(Object);
             should(code).have.property('custrecord_type_id.custrecord_id_title_id', 'japo 219');
-            should(code).have.property('custrecord_type_id.custrecord_id_code_id', 219);
-            should(code).have.property('custrecord_code_id', 14);
+            should(code).have.property('custrecord_type_id.custrecord_id_code_id', '219');
+            should(code).have.property('custrecord_code_id', '14');
 
             return done();
         });

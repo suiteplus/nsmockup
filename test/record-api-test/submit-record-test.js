@@ -25,8 +25,8 @@ describe('<Unit Test - Netsuite Record API>', function () {
 
         it('submit new record', function (done) {
             let initValues = {
-                    custrecord_type_id: 111,
-                    custrecord_code_id: 194
+                    custrecord_type_id: '111',
+                    custrecord_code_id: '194'
                 },
                 o = nlapiCreateRecord(recType, initValues);
 
@@ -59,8 +59,8 @@ describe('<Unit Test - Netsuite Record API>', function () {
 
         it('submit update record', function (done) {
             let initValues = {
-                    custrecord_type_id: 111,
-                    custrecord_code_id: 194
+                    custrecord_type_id: '111',
+                    custrecord_code_id: '194'
                 },
                 o = nlapiCreateRecord(recType, initValues);
 

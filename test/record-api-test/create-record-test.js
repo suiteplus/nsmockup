@@ -33,8 +33,8 @@ describe('<Unit Test - Netsuite Record API>', function () {
 
         it('create new object + initializeValues', function (done) {
             let iniValues = {
-                    custrecord_type_id: 239,
-                    custrecord_code_id: 19
+                    custrecord_type_id: '239',
+                    custrecord_code_id: '19'
                 },
                 o = nlapiCreateRecord(recType, iniValues);
             should(o).have.instanceOf(nlobjRecord);

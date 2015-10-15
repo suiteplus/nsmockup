@@ -106,7 +106,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
 
         it('search one field + join and column join (raw params)', function(done) {
             let columns = [
-                    ['custrecord_type_id', 'custrecord_id_title_id'],
+                    ['custrecord_id_title_id', 'custrecord_type_id'],
                     ['custrecord_code_id']
                 ].map(c => new nlobjSearchColumn(c[0], c[1])),
                 filters = [
@@ -126,7 +126,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
 
         it('search one field + join and column join (using nlobjSearchColumn)', function(done) {
             let columns = [
-                    ['custrecord_type_id', 'custrecord_id_title_id'],
+                    ['custrecord_id_title_id', 'custrecord_type_id'],
                     ['custrecord_code_id']
                 ].map(c => new nlobjSearchColumn(c[0], c[1])),
                 filters = [

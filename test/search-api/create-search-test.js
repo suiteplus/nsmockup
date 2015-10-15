@@ -72,7 +72,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                 should(item).be.instanceOf(nlobjSearchResult);
                 should(item.getRecordType()).be.equal(recType);
                 should(item.getId()).be.equal(219);
-                should(item.getValue('custrecord_id_code_id')).be.equal(219);
+                should(item.getValue('custrecord_id_code_id')).be.equal('219');
                 should(item.getValue('custrecord_id_title_id')).be.equal('japo 219');
             });
             return done();
