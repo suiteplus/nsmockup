@@ -5,7 +5,7 @@
 
 **nsmockup** is a tool to create NetSuite Suite Scripts unit tests.
 
-You can test your code before to upload to your NetSuite account.
+You can test your code before deploy it to your NetSuite account.
 Do you develop NetSuite Suite Scripts? Well, then you know how complicated is to test your code! You need to upload it, configure your script, start the debbuger and, maybe, you can test that! 
 
 This further complicates in larger projects, where you reuse your code in several Suite Scripts.
