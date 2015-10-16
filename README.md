@@ -1,7 +1,7 @@
 # nsmockup [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
 
-Netsuite API Mockup
+*You can test yours Suite Scripts, before upload in NetSuite.*
 
 ## Required
  * node.js 4+
