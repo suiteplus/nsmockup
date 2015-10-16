@@ -2,7 +2,8 @@
 var server = require('./server'),
     database = require('./database'),
     fs = require('fs'),
-    path = require('path');
+    path = require('path'),
+    _ = require('lodash');
 
 /**
  * Alternative a cache created by 'require(path)'.
@@ -16,14 +17,28 @@ var readJSON = (json) => {
 
 /**
  *
- * @param opts {{
+ * @param [opts] {{
  *   [metadatas]: String || [String],
  *   [records]: Object,
- *   [server]: Boolean
+ *   [server]: Boolean,
+ *   [general]: {
+ *      [dateFormat]: String || 'MM/DD/YYYY',
+ *      [timeFormat]: String || 'hh:mm A',
+ *      [lang]: String || 'en'
+ *   }
  * }}
  * @param cb Function
  */
 module.exports = (opts, cb) => {
+    if (typeof opts === 'function') {
+        cb = opts;
+        opts = {};
+    } else if (!opts) {
+        opts = {};
+    }
+
+    _.merge(global.$$GENERAL_PREFS, opts.general || {});
+
     function init(db) {
         let metadatas = opts.metadatas;
         if (typeof metadatas === 'string') metadatas = [readJSON(opts.records)];

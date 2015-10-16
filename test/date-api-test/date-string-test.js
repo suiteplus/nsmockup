@@ -1,11 +1,22 @@
 'use strict';
 
-var should = require('should');
+var should = require('should'),
+    nsmockup = require('../../');
 
 /**
  * Test Suites
  */
 describe('<Unit Test - Netsuite Date API>', function () {
+    before(function (done) {
+        let localPrefs = {
+                dateFormat: 'DD-MM-YYYY',
+                timeFormat: 'HH:mm:ss'
+            },
+            opts = {
+                general: localPrefs
+            };
+        nsmockup.init(opts, done);
+    });
     describe('SuiteScript API - nlapiDateToString:', function () {
         it('date no format', function (done) {
             let date = new Date('2015-09-15T08:58:12+0000'),
@@ -71,5 +82,8 @@ describe('<Unit Test - Netsuite Date API>', function () {
                 return done();
             }
         });
+    });
+    after(function (done) {
+        nsmockup.destroy(done);
     });
 });

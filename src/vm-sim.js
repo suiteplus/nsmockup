@@ -12,6 +12,11 @@ var fs = require('fs'),
 $context.$$THIS_CONTEXT = 'global';
 $context.$$THIS_RECORD = null;
 $context.$db = null;
+$context.$$GENERAL_PREFS = {
+    dateFormat: 'MM/DD/YYYY',
+    timeFormat: 'hh:mm A',
+    lang: 'en'
+};
 
 /**
  * Import NetSuite functions and add in global context.
@@ -58,6 +63,7 @@ exports.loadScriptConfig = (scriptName) => {
         context.$db = $context.$db;
         context.global = context;
         context.$$THIS_CONTEXT = scriptName;
+        context.$$GENERAL_PREFS = $context.$$GENERAL_PREFS;
 
         //let database = require('./database');
         //database.load(db => context.$db = db);
