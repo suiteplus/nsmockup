@@ -2,15 +2,13 @@
 [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
 
 *Test your Suite Script before to upload to NetSuite.*
-
-nsmockup ia a tool to create Netsuite Suite Scripts unit tests.
-
-You can test your code before to upload to your Netsuite account.
-Do you develop Netsuite Suite Scripts? Well, then you know how complicated is to test your code! You need to upload it, configure your script, start the debbuger and, maybe, you can test that! 
-This further complicates in larger projects, where you reuse your code in several Suite Scripts.
-To improve our development process Suiteplus idealized the nsmockup, so developers can:
-1) Simulate Netsuite environment locally.
-2) Create automated tests for your projects in a controlled environment.
+<br>nsmockup ia a tool to create Netsuite Suite Scripts unit tests.
+<br>You can test your code before to upload to your Netsuite account.
+<br>Do you develop Netsuite Suite Scripts? Well, then you know how complicated is to test your code! You need to upload it, configure your script, start the debbuger and, maybe, you can test that! 
+<br>This further complicates in larger projects, where you reuse your code in several Suite Scripts.
+<br>To improve our development process Suiteplus idealized the nsmockup, so developers can:
+- Simulate Netsuite environment locally.
+- Create automated tests for your projects in a controlled environment.
 
 
 ## Required
