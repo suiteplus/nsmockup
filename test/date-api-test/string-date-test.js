@@ -99,16 +99,6 @@ describe('<Unit Test - Netsuite Date API>', function () {
             }
         });
 
-        it('date missing format', function (done) {
-            try {
-                nlapiStringToDate('10-10-2015');
-                return done('missing format');
-            } catch (e) {
-                should(e).have.property('code', 'SSS_TYPE_FORMAT_REQD');
-                return done();
-            }
-        });
-
         it('date invalid format', function (done) {
             try {
                 nlapiStringToDate('10-10-2015', 'japo');
