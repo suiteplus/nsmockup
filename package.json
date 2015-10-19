@@ -36,12 +36,13 @@
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "glob": "^5.0.14",
-    "libxmljs": "^0.15.0",
     "lodash": "^3.10.1",
     "lowdb": "^0.10.2",
     "moment": "^2.10.6",
     "morgan": "^1.6.1",
-    "sync-request": "^2.0.1"
+    "sync-request": "^2.0.1",
+    "xmldom": "^0.1.19",
+    "xpath": "0.0.9"
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
