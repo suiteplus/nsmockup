@@ -26,7 +26,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             should(file).have.property('encoding', 'utf8');
 
             let id = nlapiSubmitFile(file),
-                fc = $db.object.__cabinet[id-1];
+                fc = $db.object.__file[id-1];
 
             should(fc).have.property('name', file.name);
             should(fc).have.property('folder', file.folder);
@@ -76,7 +76,7 @@ describe('<Unit Test - Netsuite File API>', function () {
         });
         it('delete file', function (done) {
             let id_ = nlapiDeleteFile(id),
-                fc = $db.object.__cabinet[id-1];
+                fc = $db.object.__file[id-1];
 
             should(id_).be.equal(id);
             should(fc).be.equal(null);
