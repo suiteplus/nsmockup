@@ -41,28 +41,36 @@ module.exports = (opts, cb) => {
 
     function init(db) {
         let metadatas = opts.metadatas;
-        if (typeof metadatas === 'string') metadatas = [readJSON(opts.records)];
-        else if (!Array.isArray(metadatas)) metadatas = [metadatas];
+        if (typeof metadatas === 'string') {
+            metadatas = [readJSON(opts.records)];
+        } else if (metadatas && !Array.isArray(metadatas)) {
+            metadatas = [metadatas];
+        } else if (!metadatas) {
+            metadatas = [];
+        }
 
-        if (metadatas && metadatas.length !== 0) {
-            let _metadata = db('__metadata');
-            for (let i = 0; i < metadatas.length; i++) {
-                let metadata = metadatas[i];
-                if (typeof metadata === 'string') metadata = readJSON(metadata);
+        // add default metadatadas
+        metadatas.push(require('./metadatas/metadata-file'));
 
-                if (!metadata || !metadata.code) {
-                    continue;
-                } else {
-                    _metadata.remove({code: metadata.code});
-                    _metadata.push(metadata);
-                    //console.log('import record-type metadata "' + metadata.code + '"');
-                }
+        let _metadata = db('__metadata');
+        for (let i = 0; i < metadatas.length; i++) {
+            let metadata = metadatas[i];
+            if (typeof metadata === 'string') {
+                metadata = readJSON(metadata);
             }
-            try {
-                db.saveSync();
-            } catch(e) {
-                console.error(e);
+
+            if (!metadata || !metadata.code) {
+                continue;
+            } else {
+                _metadata.remove({code: metadata.code});
+                _metadata.push(metadata);
+                //console.log('import record-type metadata "' + metadata.code + '"');
             }
+        }
+        try {
+            db.saveSync();
+        } catch(e) {
+            console.error(e);
         }
 
         // ##############################
@@ -104,6 +112,8 @@ module.exports = (opts, cb) => {
 
             if (typeof recVal === 'string') recVal = readJSON(recVal);
             if (!recVal || !recVal.length) {
+                // save record type data in lowdb database
+                db.object[recName] = [];
                 verifyDone();
                 continue;
             }

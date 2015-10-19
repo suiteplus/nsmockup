@@ -29,7 +29,7 @@ exports.load = (cb) => {
 
     let change = false;
     // create default collections
-    ['__metadata', '__scripts'].forEach(c => {
+    ['__metadata', '__scripts', '__file'].forEach(c => {
         if (!db.object[c]) {
             db.object[c] = [];
             !change && (change = true);
