@@ -106,6 +106,7 @@
         "nlapiCreateRecord": true,
         "nlapiCreateSearch": true,
         "nlapiCopyRecord": true,
+        "nlapiDateToString": true,
         "nlapiDeleteFile": true,
         "nlapiDeleteRecord": true,
         "nlapiGetContext": true,
