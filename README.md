@@ -32,6 +32,10 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
 | ------ | ------------------- | ------------|
 | opt.records | <code>[string]</code> | Data list of Records, generate that with [ns-export][nsexport-url]. | 
 | opt.metadatas | <code>[string]</code> | List of Records Types Metadatas, generate that with [ns-export][nsexport-url]. |
+| opt.general.dateFormat | <code>string</code> | Global Preferences: `dateformat`, default `"MM/DD/YYYY"`. |
+| opt.general.timeFormat | <code>string</code> | Global Preferences: `timeFormat`, default `"hh:mm A"`. |
+| opt.general.dateFormat | <code>string</code> | Global Preferences: `lang`, default `"en"`. |
+| opt.server | <code>boolean</code> | Set `true` and start server on port `3030`. Used for Suitelet and RESTlet simulations. |
 | cb   | <code>function</code> | Callback Function. |
 
 ```javascript
