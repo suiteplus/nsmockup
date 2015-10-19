@@ -28,38 +28,37 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
 
 <a name="nsmockup.init"></a>
 #### nsmockup.init(opt, cb)
- - opt {
-    records: [String],
-    metadatas: [String],
-    server: Boolean
- }
- - cb  {Function}
+| Param  | Type                |Description  | 
+| ------ | ------------------- | ------------|
+| opt.records | <code>[string]</code> | Data list of Records, generate that with [ns-export][nsexport-url]. | 
+| opt.metadatas | <code>[string]</code> | List of Records Types Metadatas, generate that with [ns-export][nsexport-url]. |
+| cb   | <code>function</code> | Callback Function. |
 
 ```javascript
-    var opt = {
-        records: {
-            "customrecord_my-record": __dirname + '/data/customrecord_my-record.json'
-        },
-        metadatas: [
-            __dirname + '/meta/metaData-customrecord_my-record.json'
-        ],
-        server: true
-    };
-    nsmockup.init(opt, function(err) {
-        if (err) console.log('ERROR', err);
-        else console.log('start Netsuite API simulation')
-    });
+var opt = {
+    records: {
+        "customrecord_my-record": __dirname + '/data/customrecord_my-record.json'
+    },
+    metadatas: [
+        __dirname + '/meta/metaData-customrecord_my-record.json'
+    ],
+    server: true
+};
+nsmockup.init(opt, function(err) {
+    if (err) console.log('ERROR', err);
+    else console.log('start Netsuite API simulation')
+});
 ```
 
 <a name="nsmockup.createSuitelet"></a>
 #### nsmockup.createSuitelet(cfg, cb)
- - cfg {
-    name: String,
-    func: String,
-    files: [String],
-    params: Object
- }
- - cb (ctx, exec) => {} -- **callback**
+| Param  | Type                |Description  | 
+| ------ | ------------------- | ------------|
+| cfg.name | <code>string</code> | Custom ID of Suitelet. |
+| cfg.func | <code>string</code> | Defines the function that should be called from the selected script file. |
+| cfg.files | <code>[string]</code> | Path to JavaScripts files that contains your implementation. |
+| cfg.params | <code>object</code> | Default parameters to run your implementation. |
+| cb   | <code>function</code> | Callback Function sent `ctx` (type: <code>object</code>) - the context *and* `exec` (type: <code>function</code>) invoke your code in side the context. |
 
 ```javascript
     nsmockup.createSuitelet({
@@ -84,18 +83,16 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
 
 <a name="nsmockup.createRESTlet"></a>
 #### nsmockup.createRESTlet(cfg, cb)
- - cfg {
-    name: String,
-    funcs: {
-        get: String,
-        post: String,
-        put: String,
-        delete: String
-    },
-    files: [String],
-    params: Object
- }
- - cb (ctx, exec) => {} -- **callback**
+| Param  | Type                |Description  | 
+| ------ | ------------------- | ------------|
+| cfg.name | <code>string</code> | Custom ID of Suitelet. |
+| cfg.funcs.get | <code>string</code> | Sets the script function that should execute as the HTTP GET method. |
+| cfg.funcs.post | <code>string</code> | Sets the script function that should execute as the HTTP POST method. |
+| cfg.funcs.put | <code>string</code> | Sets the script function that should execute as the HTTP PUT method. |
+| cfg.funcs.delete | <code>string</code> | Sets the script function that should execute as the HTTP DELETE method. |
+| cfg.files | <code>[string]</code> | Path to JavaScripts files that contains your implementation. |
+| cfg.params | <code>object</code> | Default parameters to run your implementation. |
+| cb   | <code>function</code> | Callback Function sent `ctx` (type: <code>object</code>) - the context *and* `exec` (type: <code>function</code>) invoke your code in side the context. |
 
 ```javascript
     nsmockup.createRESTlet({
@@ -123,14 +120,14 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
 
 <a name="nsmockup.createSchedule"></a>
 #### nsmockup.createSchedule(cfg, cb)
- - cfg {
-    name: String,
-    func: String,
-    files: [String],
-    params: Object,
-    exec: Boolean
- }
- - cb (ctx, exec) => {} -- **callback**
+| Param  | Type                |Description  | 
+| ------ | ------------------- | ------------|
+| cfg.name | <code>string</code> | Custom ID of Suitelet. |
+| cfg.func | <code>string</code> | Defines the function that should be called from the selected script file. |
+| cfg.files | <code>[string]</code> | Path to JavaScripts files that contains your implementation. |
+| cfg.params | <code>object</code> | Default parameters to run your implementation. |
+| cfg.exec | <code>boolean</code> | If `true`, **nsmockup** will run de ScheduleScript before the callback function was called. |
+| cb   | <code>function</code> | Callback Function sent `ctx` (type: <code>object</code>) - the context *and* `exec` (type: <code>function</code>) invoke your code in side the context. |
 
 ```javascript
     nsmockup.createSchedule({
@@ -155,18 +152,16 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
 
 <a name="nsmockup.createUserEvent"></a>
 #### nsmockup.createUserEvent(cfg, cb)
- - cfg {
-    name: String,
-    funcs: {
-        beforeLoad: String,
-        beforeSubmit: String,
-        afterSubmit: String
-    },
-    files: [String],
-    params: Object,
-    record: String
- }
- - cb (ctx, exec) => {} -- **callback**
+| Param  | Type                |Description  | 
+| ------ | ------------------- | ------------|
+| cfg.name | <code>string</code> | Custom ID of Suitelet. |
+| cfg.funcs.beforeLoad | <code>string</code> | Sets the script function that should execute whenever a read operation on a record occurs. |
+| cfg.funcs.beforeSubmit | <code>string</code> | Sets the function that should execute before the associated record is submitted |
+| cfg.funcs.afterSubmit | <code>string</code> | Sets the function that should execute after the associated record is submitted. |
+| cfg.files | <code>[string]</code> | Path to JavaScripts files that contains your implementation. |
+| cfg.params | <code>object</code> | Default parameters to run your implementation. |
+| cfg.record | <code>string</code> | Apply this event in this record. |
+| cb   | <code>function</code> | Callback Function sent `ctx` (type: <code>object</code>) - the context *and* `exec` (type: <code>function</code>) invoke your code in side the context. |
 
 ```javascript
     nsmockup.createUserEvent({
@@ -206,7 +201,9 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
 
 <a name="nsmockup.destroy"></a>
 #### nsmockup.destroy(cb)
- - cb  {Function}
+| Param  | Type                |Description  | 
+| ------ | ------------------- | ------------|
+| cb   | <code>function</code> | Callback Function. |
 
 ```javascript
     nsmockup.destroy(function(err) {
@@ -283,3 +280,5 @@ describe('<Unit Test - Netsuite API Simulation>', function () {
 
 [david-url-dev]: https://david-dm.org/suiteplus/nsmockup#info=devDependencies
 [david-image-dev]: https://david-dm.org/suiteplus/nsmockup/dev-status.svg
+
+[nsexport-url]: https://github.com/suiteplus/ns-export
