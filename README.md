@@ -26,6 +26,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
 
 ## Usage
 
+<a name="nsmockup.init"></a>
 #### nsmockup.init(opt, cb)
  - opt {
     records: [String],
@@ -33,6 +34,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
     server: Boolean
  }
  - cb  {Function}
+
 ```javascript
     var opt = {
         records: {
@@ -49,6 +51,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
     });
 ```
 
+<a name="nsmockup.createSuitelet"></a>
 #### nsmockup.createSuitelet(cfg, cb)
  - cfg {
     name: String,
@@ -57,6 +60,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
     params: Object
  }
  - cb (ctx, exec) => {} -- **callback**
+
 ```javascript
     nsmockup.createSuitelet({
         name: 'my_suitelet',
@@ -78,6 +82,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
     });
 ```
 
+<a name="nsmockup.createRESTlet"></a>
 #### nsmockup.createRESTlet(cfg, cb)
  - cfg {
     name: String,
@@ -91,6 +96,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
     params: Object
  }
  - cb (ctx, exec) => {} -- **callback**
+
 ```javascript
     nsmockup.createRESTlet({
         name: 'my_restlet',
@@ -115,6 +121,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
      });
 ```
 
+<a name="nsmockup.createSchedule"></a>
 #### nsmockup.createSchedule(cfg, cb)
  - cfg {
     name: String,
@@ -124,6 +131,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
     exec: Boolean
  }
  - cb (ctx, exec) => {} -- **callback**
+
 ```javascript
     nsmockup.createSchedule({
         name: 'my_schedule',
@@ -145,6 +153,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
     });
 ```
 
+<a name="nsmockup.createUserEvent"></a>
 #### nsmockup.createUserEvent(cfg, cb)
  - cfg {
     name: String,
@@ -158,6 +167,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
     record: String
  }
  - cb (ctx, exec) => {} -- **callback**
+
 ```javascript
     nsmockup.createUserEvent({
         name: 'my_user-event',
@@ -194,8 +204,10 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
     });
 ```
 
+<a name="nsmockup.destroy"></a>
 #### nsmockup.destroy(cb)
  - cb  {Function}
+
 ```javascript
     nsmockup.destroy(function(err) {
         if (err) console.log('ERROR', err);
@@ -204,6 +216,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
 ```
 
 ## Example with Mocha
+
 ```javascript
 'use strict';
 var nsmockup = require('nsmockup');
@@ -232,7 +245,7 @@ describe('<Unit Test - Netsuite API Simulation>', function () {
                 post: 'MyRestlet.post'
             },
             files: [
-                __drname + '/lib/my-restlet.js'
+                __dirname + '/lib/my-restlet.js'
             ]
         }, (ctx, exec) => {
              // verify if function 'MyRestlet' was loaded
