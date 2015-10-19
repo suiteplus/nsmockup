@@ -135,7 +135,6 @@
         "nlobjRequest": true,
         "nlobjResponse": true,
         "nlobjSearch": true,
-        "nlobjSearchResult": true,
         "nlobjSearchColumn": true,
         "nlobjSearchFilter": true,
         "nlobjSearchResult": true,
