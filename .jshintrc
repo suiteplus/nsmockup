@@ -99,6 +99,8 @@
         "$$THIS_CONTEXT": true,
 
         // Netsuite Global Functions
+        "nlapiAddDays": true,
+        "nlapiAddMonths": true,
         "nlapiCreateError": true,
         "nlapiCreateFile": true,
         "nlapiCreateRecord": true,
@@ -113,12 +115,16 @@
         "nlapiLookupField":  true,
         "nlapiRequestURL": true,
         "nlapiResolveURL": true,
+        "nlapiScheduleScript": true,
         "nlapiSearchRecord": true,
         "nlapiSendCampaignEmail": true,
         "nlapiSendEmail": true,
         "nlapiSendFax": true,
+        "nlapiSetRecoveryPoint": true,
+        "nlapiStringToDate": true,
         "nlapiSubmitFile": true,
         "nlapiSubmitRecord": true,
+        "nlapiYieldScript": true,
 
         // Netsuite Global Objects
         "nlobjContext": true,
