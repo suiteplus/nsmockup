@@ -21,34 +21,11 @@ describe('<Unit Test - Netsuite Field API>', function () {
             };
         nsmockup.init({records, metadatas}, done);
     });
-    describe('SuiteScript API - nlapiLookupField:', function () {
+    describe('SuiteScript API - nlapiSubmitField:', function () {
         let recType = 'customrecord_codeg';
 
-        it('lookup all fields', function (done) {
-            var fields = [
-                'custrecord_type_id',
-                'custrecord_code_id'
-            ];
-
-            let code = nlapiLookupField(recType, 2, fields);
-            should(code).have.instanceOf(Object);
-            should(code).have.property('custrecord_type_id', '219');
-            should(code).have.property('custrecord_code_id', '14');
-
-            return done();
-        });
-
-        it('lookup one field', function (done) {
-            var field = 'custrecord_code_id';
-
-            let code = nlapiLookupField(recType, 2, field);
-            should(code).have.instanceOf(String);
-
-            return done();
-        });
-
-        it('lookup all fields + join', function (done) {
-            var fields = [
+        it('submit array fields', function (done) {
+            let fields = [
                 'custrecord_type_id.custrecord_id_title_id',
                 'custrecord_type_id.custrecord_id_code_id',
                 'custrecord_code_id'
@@ -60,12 +37,26 @@ describe('<Unit Test - Netsuite Field API>', function () {
             should(code).have.property('custrecord_type_id.custrecord_id_code_id', '219');
             should(code).have.property('custrecord_code_id', '14');
 
+            let values = [
+                'legal 123',
+                '342',
+                '666'
+            ];
+
+            nlapiSubmitField(recType, 2, fields[2], values[2]);
+
+            code = nlapiLookupField(recType, 2, fields);
+            should(code).have.instanceOf(Object);
+            should(code).have.property('custrecord_type_id.custrecord_id_title_id', 'japo 219');
+            should(code).have.property('custrecord_type_id.custrecord_id_code_id', '219');
+            should(code).have.property('custrecord_code_id', values[2]);
+
             return done();
         });
 
-        it('lookup missing record type', function (done) {
+        it('submit missing record type', function (done) {
             try {
-                nlapiLookupField();
+                nlapiSubmitField();
                 return done('missing record type ');
             } catch (e) {
                 should(e).have.property('code', 'SSS_TYPE_ARG_REQD');
@@ -73,9 +64,9 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('lookup missing id', function (done) {
+        it('submit missing id', function (done) {
             try {
-                nlapiLookupField(recType);
+                nlapiSubmitField(recType);
                 return done('missing id ');
             } catch (e) {
                 should(e).have.property('code', 'SSS_ID_ARG_REQD');
@@ -83,9 +74,9 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('lookup missing fields', function (done) {
+        it('submit missing fields', function (done) {
             try {
-                nlapiLookupField(recType, 5);
+                nlapiSubmitField(recType, 5);
                 return done('missing id ');
             } catch (e) {
                 should(e).have.property('code', 'SSS_FIELDS_ARG_REQD');
@@ -93,9 +84,9 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('lookup missing fields - []', function (done) {
+        it('submit missing fields - []', function (done) {
             try {
-                nlapiLookupField(recType, 5, []);
+                nlapiSubmitField(recType, 5, []);
                 return done('missing id ');
             } catch (e) {
                 should(e).have.property('code', 'SSS_FIELDS_ARG_REQD');
@@ -103,10 +94,30 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('lookup invalid record type', function (done) {
+        it('submit missing values', function (done) {
+            try {
+                nlapiSubmitField(recType, 5, 'opa');
+                return done('missing id ');
+            } catch (e) {
+                should(e).have.property('code', 'SSS_VALUES_ARG_REQD');
+                return done();
+            }
+        });
+
+        it('submit missing values - []', function (done) {
+            try {
+                nlapiSubmitField(recType, 5, 'opa', []);
+                return done('missing id ');
+            } catch (e) {
+                should(e).have.property('code', 'SSS_VALUES_ARG_REQD');
+                return done();
+            }
+        });
+
+        it('submit invalid record type', function (done) {
             try {
                 let invalidRecType = recType + 'japois';
-                nlapiLookupField(invalidRecType, 1, 'custrecord_code_id');
+                nlapiSubmitField(invalidRecType, 1, 'custrecord_code_id', 'opa', 'legal');
                 return done('invalid record type: '+invalidRecType);
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_RECORD_TYPE');
@@ -114,30 +125,30 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('lookup invalid id - {}', function (done) {
+        it('submit invalid id - {}', function (done) {
             try {
-                nlapiLookupField(recType, {});
-                return done('missing id ');
+                nlapiSubmitField(recType, {}, 'opa', 'legal');
+                return done('invalid id ');
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_INTERNAL_ID');
                 return done();
             }
         });
 
-        it('lookup invalid id - "opa"', function (done) {
+        it('submit invalid id - "opa"', function (done) {
             try {
-                nlapiLookupField(recType, 'opa');
-                return done('missing id ');
+                nlapiSubmitField(recType, 'opa', 'opa', 'legal');
+                return done('invalid id ');
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_INTERNAL_ID');
                 return done();
             }
         });
 
-        it('lookup id not found', function (done) {
+        it('submit invalid id - 10000', function (done) {
             try {
-                nlapiLookupField(recType, -1, 'custrecord_code_id');
-                return done('missing id ');
+                nlapiSubmitField(recType, '10000', 'custrecord_code_id', '14');
+                return done('invalid id ');
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_INTERNAL_ID');
                 return done();

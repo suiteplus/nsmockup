@@ -1,5 +1,25 @@
 # nsmockup ChangeLog
 
+## 2015-10-18, Version 0.6.0 (unstable),
+
+### Notable changes
+  * improvements on Suitelet, Restlet and Schedule Simulations
+  * improve stack errors in `nlapiLogExecution`
+  * implement global date format
+  * implement function to find parent joins
+  * fix bugs in `nlapiSubmitField` and `nlapiSearchRecord`
+  * fix `nlobjFile.getValue` to return the original file
+
+### Netsuite API:
+  * __Date APIs__:
+    - `function nlapiStringToDate(str, format)`
+    - `function nlapiAddDays(d, days)`
+    - `function nlapiAddMonths(d, months)`
+  * __Scheduling APIs__:
+    - `function nlapiScheduleScript(id, deployment, parameters)`
+    - `function nlapiSetRecoveryPoint()`
+    - `function nlapiYieldScript()`
+
 ## 2015-10-08, Version 0.5.0 (unstable),
 
 ### Notable changes
@@ -10,10 +30,10 @@
 
 ### Netsuite API:
   * __Record APIs__:
-    - function **nlapiGetNewRecord()**
-    - function **nlapiGetOldRecord()**
-    - function **nlapiGetRecordId()**
-    - function **nlapiGetRecordType()**
+    - `function nlapiGetNewRecord()`
+    - `function nlapiGetOldRecord()`
+    - `function nlapiGetRecordId()`
+    - `function nlapiGetRecordType()`
 
 ## 2015-10-07, Version 0.4.0 (unstable),
 
@@ -26,16 +46,16 @@
 
 #### Mockup news - Netsuite API:
   * __Application Navigation APIs__:
-    - function **nlapiRequestURL(url, postdata, headers, method)**
-    - function **nlapiResolveRUL(type, identifier, id, displayMode)**
-    - function **nlobjRequest()**
-    - function **nlobjResponse()**
+    - `function nlapiRequestURL(url, postdata, headers, method)`
+    - `function nlapiResolveRUL(type, identifier, id, displayMode)`
+    - `function nlobjRequest()`
+    - `function nlobjResponse()`
   * __Communication APIs__:
-    - function **nlapiSendCampaignEmail(campaigneventid, recipientid)**
-    - function **nlapiSendEmail(from, to, subject, body, cc, bcc, records, files, notifySenderOnBounce, internalOnly, replyTo)**
-    - function **nlapiSendFax(from, to, subject, body, records, files)**
+    - `function nlapiSendCampaignEmail(campaigneventid, recipientid)`
+    - `function nlapiSendEmail(from, to, subject, body, cc, bcc, records, files, notifySenderOnBounce, internalOnly, replyTo)`
+    - `function nlapiSendFax(from, to, subject, body, records, files)`
   * __Field APIs__:
-    - function **nlapiSubmitField(type,id,fields,values,doSourcing)**
+    - `function nlapiSubmitField(type,id,fields,values,doSourcing)`
 
 ## 2015-09-30, Version 0.3.0 => 0.3.1 (unstable),
 
@@ -48,11 +68,11 @@
 
 #### Mockup news - Netsuite API:
   * __Search APIs__:
-    - function **nlapiCreateSearch(type, filters, columns)**
-    - function **nlobjSearch(type, id, filters, columns)**
-    - function **nlobjSearchResultSet(search)**
+    - `function nlapiCreateSearch(type, filters, columns)`
+    - `function nlobjSearch(type, id, filters, columns)`
+    - `function nlobjSearchResultSet(search)`
   * __Field APIs__:
-    - function **nlapiLookupField(type, id, fields, text)**
+    - `function nlapiLookupField(type, id, fields, text)`
 
 ## 2015-09-28, Version 0.2.0 (unstable),
 
@@ -60,12 +80,12 @@
 
 #### Mockup news - Netsuite API:
   * __Record APIs__:
-    - function **nlapiCopyRecord(type, id, filters, columns)**
-    - function **nlapiCreateRecord(type, id, filters, columns)**
-    - function **nlapiDeleteRecord(type, id, filters, columns)**
-    - function **nlapiLoadRecord(type, id, filters, columns)**
-    - function **nlapiSubmitRecord(type, id, filters, columns)**
-    - function **nlobjRecord()**
+    - `function nlapiCopyRecord(type, id, filters, columns)`
+    - `function nlapiCreateRecord(type, id, filters, columns)`
+    - `function nlapiDeleteRecord(type, id, filters, columns)`
+    - `function nlapiLoadRecord(type, id, filters, columns)`
+    - `function nlapiSubmitRecord(type, id, filters, columns)`
+    - `function nlobjRecord()`
 
 ## 2015-09-26, Version 0.1.0 (unstable),
 
@@ -76,19 +96,19 @@
 
 #### Mockup news - Netsuite API:
   * __File APIs__:
-    - function **nlapiCreateFile(name, type, contents)**
-    - function **nlapiDeleteFile(id)**
-    - function **nlapiLoadFile(id)**
-    - function **nlapiSubmitFile f(file)**
-    - function **nlobjFile()**
+    - `function nlapiCreateFile(name, type, contents)`
+    - `function nlapiDeleteFile(id)`
+    - `function nlapiLoadFile(id)`
+    - `function nlapiSubmitFile f(file)`
+    - `function nlobjFile()`
   * __Record APIs__:
-    - function **nlapiSearchRecord(type, id, filters, columns)**
-    - function **nlobjSearchColumn()**
-    - function **nlobjSearchFilter()**
-    - function **nlobjSearchResult()**
+    - `function nlapiSearchRecord(type, id, filters, columns)`
+    - `function nlobjSearchColumn()`
+    - `function nlobjSearchFilter()`
+    - `function nlobjSearchResult()`
   * __Execution Context APIs__:
-    - function **nlapiGetContext()**
-    - function **nlapiLogExecution(type, title, details)**
-    - function **nlobjContext()**
+    - `function nlapiGetContext()`
+    - `function nlapiLogExecution(type, title, details)`
+    - `function nlobjContext()`
   * __Date APIs__:
-    - function **nlapiDateToString(d, format)**
+    - `function nlapiDateToString(d, format)`

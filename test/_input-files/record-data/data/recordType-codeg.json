@@ -10,12 +10,28 @@
     "custrecord_code_id": 14
   },
   {
+    "internalid": 3,
     "custrecord_type_id": 209,
     "custrecord_code_id": "A"
   },
   {
+    "internalid": 4,
     "custrecord_type_id": 220,
-    "custrecord_code_id": 23
+    "custrecord_code_id": 23,
+    "$$sublists": {
+      "item_code": [
+        {
+          "item-id": 98,
+          "item-title": "legal 98",
+          "item-value": "value 98"
+        },
+        {
+          "item-id": 96,
+          "item-title": "legal 96",
+          "item-value": "value 96"
+        }
+      ]
+    }
   },
   {
     "custrecord_type_id": 282,

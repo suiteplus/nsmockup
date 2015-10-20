@@ -1,6 +1,6 @@
 {
   "name": "nsmockup",
-  "version": "0.6.0-pre",
+  "version": "0.7.0-pre",
   "description": "Netsuite API Mockup",
   "main": "nsapi.js",
   "scripts": {
@@ -38,15 +38,18 @@
     "glob": "^5.0.14",
     "lodash": "^3.10.1",
     "lowdb": "^0.10.2",
+    "moment": "^2.10.6",
     "morgan": "^1.6.1",
-    "sync-request": "^2.0.1"
+    "sync-request": "^2.0.1",
+    "xmldom": "^0.1.19",
+    "xpath": "0.0.9"
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
     "gulp": "^3.9.0",
     "gulp-istanbul": "^0.10.1",
     "gulp-jshint": "^1.11.2",
-    "gulp-load-plugins": "^0.10.0",
+    "gulp-load-plugins": "^1.0.0",
     "gulp-mocha": "^2.1.3",
     "gulp-plumber": "^1.0.1",
     "gulp-util": "^3.0.6",

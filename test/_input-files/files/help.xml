@@ -1,0 +1,73 @@
+<div id="helpcenter_content" class="nshelp_helpcenter_content" style="visibility: visible; width: 864px;">
+    <div align="center" id="helpcenter_feedback" style="padding-top: 20px; padding-bottom: 10px;">
+        <table id="outerfeedback" cellpadding="0" cellspacing="0" border="0" style="font-family: Open Sans,Helvetica,sans-serif; font-size: 14px;" width="620">
+            <tbody>
+                <tr>
+                    <td id="innerfeedback">
+                        <table class="nshelp_feedback" cellpadding="2" cellspacing="0" border="0" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td class="nshelp_feedback_title" colspan="5" align="left">
+                                        <b>How helpful was this topic?</b>
+                                    </td>
+                                </tr>
+                                <tr class="nshelp_feedback_stars">
+                                    <td class="nshelp_feedback_star" align="center" nowrap="">
+                                        <input type="radio" name="scores" id="helpscore4" value="4" style="border:0px;"/>
+                                        <label for="helpscore4">Five Stars</label>
+                                    </td>
+                                    <td class="nshelp_feedback_star" align="center" nowrap="">
+                                        <input type="radio" name="scores" id="helpscore3" value="3" style="border:0px;"/>
+                                        <label for="helpscore3">Four Stars</label>
+                                    </td>
+                                    <td class="nshelp_feedback_star" align="center" nowrap="">
+                                        <input type="radio" name="scores" id="helpscore2" value="2" style="border:0px;"/>
+                                        <label for="helpscore2">Three Stars</label>
+                                    </td>
+                                    <td class="nshelp_feedback_star" align="center" nowrap="">
+                                        <input type="radio" name="scores" id="helpscore1" value="1" style="border:0px;"/>
+                                        <label for="helpscore1">Two Stars</label>
+                                    </td>
+                                    <td class="nshelp_feedback_star" align="center" nowrap="">
+                                        <input type="radio" name="scores" id="helpscore0" value="0" style="border:0px;"/>
+                                        <label for="helpscore0">One Star</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nshelp_feedback_comments" colspan="5">
+                                        <br/>
+                                        <textarea id="nshelp_feedback_comments" name="nshelp_feedback_comments" cols="60" rows="3">
+                                            Please provide suggestions to improve this help topic.
+                                        </textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="button" colspan="5" align="left">
+                                        <table id="tbl_submit_feedback" cellpadding="0" cellspacing="0" border="0" class="uir-button" style="margin-right:6px; cursor:hand;">
+                                            <tbody>
+                                                <tr id="tr_submit_feedback" class="pgBntG">
+                                                    <td id="tdleftcap_feedback">
+                                                        <img src="/images/nav/ns_x.gif" class="bntLT" border="0" height="50%" width="3"/>
+                                                        <img src="/images/nav/ns_x.gif" class="bntLB" border="0" height="50%" width="3"/>
+                                                    </td>
+                                                    <td id="nshelp_tdbody_feedback" height="20" valign="top" nowrap="" class="bntBgB">
+                                                        <input type="button" style="" class="rndbuttoninpt bntBgT" value="Submit Feedback" id="go" name="submit_feedback"/>
+                                                    </td>
+                                                    <td id="tdrightcap_go">
+                                                        <img src="/images/nav/ns_x.gif" height="50%" class="bntRT" border="0" width="3"/>
+                                                        <img src="/images/nav/ns_x.gif" height="50%" class="bntRB" border="0" width="3"/>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <span>legal</span>
+</div>

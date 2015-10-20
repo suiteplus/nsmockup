@@ -1,0 +1,44 @@
+{
+  "code": "__file",
+  "id": -0,
+  "name": "File",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "name",
+      "id": 0,
+      "desc": "Name",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "path",
+      "id": 0,
+      "desc": "Path",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "folder",
+      "id": 0,
+      "desc": "Folder",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "encoding",
+      "id": 0,
+      "desc": "Encoding",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "isinactive",
+      "id": 0,
+      "desc": "Inactive",
+      "type": "CHECKBOX",
+      "mandatory": false,
+      "default": true
+    }
+  ]
+}

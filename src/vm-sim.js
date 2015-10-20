@@ -12,6 +12,11 @@ var fs = require('fs'),
 $context.$$THIS_CONTEXT = 'global';
 $context.$$THIS_RECORD = null;
 $context.$db = null;
+$context.$$GENERAL_PREFS = {
+    dateFormat: 'MM/DD/YYYY',
+    timeFormat: 'hh:mm A',
+    lang: 'en'
+};
 
 /**
  * Import NetSuite functions and add in global context.
@@ -20,17 +25,23 @@ $context.$db = null;
  * @return {void}
  */
 exports.importNsApi = (path, ctx) => {
+    //console.log(Object.keys(require.cache));
     let context = ctx || $context,
-        lib = require(path);
+        lib = context.require(path),
+        hookFn = lib.$$hook === true;
+
     Object.keys(lib).forEach(nsFunc => {
+        if (nsFunc === '$$hook') return;
+
         // verify if this function was imported before
         let desc = Object.getOwnPropertyDescriptor(context, nsFunc);
         if (desc) return;
 
+        let fn = lib[nsFunc];
         Object.defineProperty(context, nsFunc, {
             enumerable: false,
             configurable: false,
-            value: lib[nsFunc]
+            value: (hookFn ? fn(context) : fn)
         });
     });
 };
@@ -38,6 +49,7 @@ exports.importNsApi = (path, ctx) => {
 exports.importAllNsApi = (ctx) => {
     var glob = require('glob'),
         files = glob.sync(__dirname + '/../lib/ns*/**/*.js');
+
     for (let i = 0; i < files.length; i++) {
         let file = path.resolve(files[i]);
         exports.importNsApi(file, ctx);
@@ -58,6 +70,7 @@ exports.loadScriptConfig = (scriptName) => {
         context.$db = $context.$db;
         context.global = context;
         context.$$THIS_CONTEXT = scriptName;
+        context.$$GENERAL_PREFS = $context.$$GENERAL_PREFS;
 
         //let database = require('./database');
         //database.load(db => context.$db = db);
