@@ -25,17 +25,23 @@ $context.$$GENERAL_PREFS = {
  * @return {void}
  */
 exports.importNsApi = (path, ctx) => {
+    //console.log(Object.keys(require.cache));
     let context = ctx || $context,
-        lib = require(path);
+        lib = context.require(path),
+        hookFn = lib.$$hook === true;
+
     Object.keys(lib).forEach(nsFunc => {
+        if (nsFunc === '$$hook') return;
+
         // verify if this function was imported before
         let desc = Object.getOwnPropertyDescriptor(context, nsFunc);
         if (desc) return;
 
+        let fn = lib[nsFunc];
         Object.defineProperty(context, nsFunc, {
             enumerable: false,
             configurable: false,
-            value: lib[nsFunc]
+            value: (hookFn ? fn(context) : fn)
         });
     });
 };
@@ -43,6 +49,7 @@ exports.importNsApi = (path, ctx) => {
 exports.importAllNsApi = (ctx) => {
     var glob = require('glob'),
         files = glob.sync(__dirname + '/../lib/ns*/**/*.js');
+
     for (let i = 0; i < files.length; i++) {
         let file = path.resolve(files[i]);
         exports.importNsApi(file, ctx);
