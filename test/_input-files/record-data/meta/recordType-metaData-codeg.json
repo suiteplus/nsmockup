@@ -16,5 +16,27 @@
       "id": 2,
       "type": "TEXT"
     }
-  ]
+  ],
+  "sublists": {
+    "item_code": [
+      {
+        "code": "item-id",
+        "desc": "Code",
+        "id": 2,
+        "type": "INTEGER"
+      },
+      {
+        "code": "item-title",
+        "desc": "Code",
+        "id": 2,
+        "type": "TEXT"
+      },
+      {
+        "code": "item-value",
+        "desc": "Code",
+        "id": 2,
+        "type": "TEXT"
+      }
+    ]
+  }
 }
