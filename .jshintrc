@@ -129,6 +129,7 @@
         "nlapiSetRecoveryPoint": true,
         "nlapiStringToDate": true,
         "nlapiStringToXML": true,
+        "nlapiSubmitField": true,
         "nlapiSubmitFile": true,
         "nlapiSubmitRecord": true,
         "nlapiValidateXML": true,
