@@ -23,7 +23,7 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
         let recType = 'customrecord_codeg',
             item = 'item_code';
 
-        it('record work in new line', function (done) {
+        it('record new line and commit', function (done) {
             let o = nlapiLoadRecord(recType, 4);
             should(o).have.instanceOf(nlobjRecord);
             o.selectNewLineItem(item);
@@ -40,9 +40,35 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             should(currentTitle).be.equal('item legal');
             should(currentValue).be.equal('902193');
 
+            let index = o.getCurrentLineItemIndex(item);
+            should(index).be.equal(3);
+
             o.commitLineItem(item);
 
             return done();
+        });
+
+        it('record new line and commit', function (done) {
+            let o = nlapiLoadRecord(recType, 4);
+            should(o).have.instanceOf(nlobjRecord);
+            o.selectNewLineItem(item);
+
+            o.setCurrentLineItemValue(item, 'item-id', 12);
+            o.setCurrentLineItemValue(item, 'item-title', 'item legal');
+            o.setCurrentLineItemValue(item, 'item-value', '902193');
+
+            o.cancelLineItem(item);
+
+            let index = o.getCurrentLineItemIndex(item);
+            should(index).be.equal(-1);
+
+            try {
+                o.getCurrentLineItemValue(item, 'item-id');
+                return done(`invalid current item`);
+            } catch(e) {
+                should(e).have.property('code', 'SSS_INVALID_CURRENT_LINE_ITEM');
+                return done();
+            }
         });
     });
     after(function (done) {
