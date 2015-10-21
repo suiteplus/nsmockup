@@ -3,7 +3,8 @@ var server = require('./server'),
     database = require('./database'),
     fs = require('fs'),
     path = require('path'),
-    _ = require('lodash');
+    _ = require('lodash'),
+    uuid = require('node-uuid');
 
 /**
  * Alternative a cache created by 'require(path)'.
@@ -101,9 +102,21 @@ module.exports = (opts, cb) => {
         if (!records) return verifySteps();
         let recNames = Object.keys(records);
 
-        let actual = 0,
+        let recSubLists = {},
+            actual = 0,
             verifyDone = () => {
-                if (++actual == recNames.length) return verifySteps();
+                if (++actual == recNames.length) {
+                    let recSubTypes = Object.keys(recSubLists);
+                    if (recSubTypes.length) {
+                        for (let s = 0; s < recSubTypes.length; s++) {
+                            let recSubType = recSubTypes[s];
+                            db.object[recSubType] = recSubLists[recSubType];
+                        }
+                        db.saveSync();
+                    }
+
+                    return verifySteps();
+                }
             };
 
         for (let i = 0; i < recNames.length; i++) {
@@ -119,17 +132,27 @@ module.exports = (opts, cb) => {
             }
 
             recVal = recVal.map((val, i) => {
-                if (!val.internalid) val.internalid = (i + 1);
+                if (!val.internalid) {
+                    val.internalid = (i + 1);
+                }
+                if (!val._uuid) {
+                    val._uuid = uuid.v4();
+                }
+                if (val.$$subLists) {
+                    let subTypes = Object.keys(val.$$subLists);
+                    for (let s=0; s<subTypes.length; s++) {
+                        let subType = subTypes[s],
+                            recSubType = `$$sl-${recName}-${subType}-${val._uuid}`;
+
+                        recSubLists[recSubType] = val.$$subLists[subType];
+                    }
+                }
                 return val;
             });
 
             // save record type data in lowdb database
             db.object[recName] = recVal;
-            try {
-                db.saveSync();
-            } catch(e) {
-                console.error(e);
-            }
+            db.saveSync();
 
             //console.log('import record-type "' + recName + '" - total: ' + recVal.length);
             verifyDone();

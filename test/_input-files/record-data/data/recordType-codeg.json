@@ -18,7 +18,7 @@
     "internalid": 4,
     "custrecord_type_id": 220,
     "custrecord_code_id": 23,
-    "$$sublists": {
+    "$$subLists": {
       "item_code": [
         {
           "item-id": 98,

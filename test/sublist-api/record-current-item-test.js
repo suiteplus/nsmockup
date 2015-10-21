@@ -10,7 +10,7 @@ var base = __dirname + '/../_input-files/record-data';
 describe('<Unit Test - Netsuite Sublist API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
+    beforeEach(function (done) {
         let metadatas = [
                 base + '/meta/recordType-metaData-codeg.json'
             ],
@@ -48,7 +48,7 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             return done();
         });
 
-        it('record new line and commit', function (done) {
+        it('record new line and cancel', function (done) {
             let o = nlapiLoadRecord(recType, 4);
             should(o).have.instanceOf(nlobjRecord);
             o.selectNewLineItem(item);
@@ -70,8 +70,31 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
                 return done();
             }
         });
+
+        it('record new line and commit', function (done) {
+            let o = nlapiLoadRecord(recType, 4);
+            should(o).have.instanceOf(nlobjRecord);
+            o.selectLineItem(item, 1);
+
+            o.setCurrentLineItemValue(item, 'item-id', 23);
+            o.setCurrentLineItemValue(item, 'item-title', 'item super legal');
+            o.setCurrentLineItemValue(item, 'item-value', '111');
+
+            let index = o.getCurrentLineItemIndex(item);
+            should(index).be.equal(1);
+
+            o.commitLineItem(item);
+
+            try {
+                o.getCurrentLineItemValue(item, 'item-id');
+                return done(`invalid current item`);
+            } catch(e) {
+                should(e).have.property('code', 'SSS_INVALID_CURRENT_LINE_ITEM');
+                return done();
+            }
+        });
     });
-    after(function (done) {
+    afterEach(function (done) {
         nsmockup.destroy(done);
     });
 });

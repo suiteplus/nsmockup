@@ -17,7 +17,7 @@
       "type": "TEXT"
     }
   ],
-  "sublists": {
+  "subLists": {
     "item_code": [
       {
         "code": "item-id",
