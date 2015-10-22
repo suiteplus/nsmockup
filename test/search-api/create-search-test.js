@@ -21,7 +21,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             };
         nsmockup.init({records, metadatas}, done);
     });
-    describe('SuiteScript API - nlapiCreateRecord:', function () {
+    describe('SuiteScript API - nlapiCreateSearch:', function () {
         let recType = 'customrecord_codeg_ids';
 
         it('create new search', function (done) {
