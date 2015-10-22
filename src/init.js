@@ -109,8 +109,15 @@ module.exports = (opts, cb) => {
                     let recSubTypes = Object.keys(recSubLists);
                     if (recSubTypes.length) {
                         for (let s = 0; s < recSubTypes.length; s++) {
-                            let recSubType = recSubTypes[s];
-                            db.object[recSubType] = recSubLists[recSubType];
+                            let recSubType = recSubTypes[s],
+                                dataSub = recSubLists[recSubType];
+                            if (!dataSub || !dataSub.length) continue;
+
+                            db.object[recSubType] = dataSub.map((val, i) => {
+                                val._index = (i + 1);
+                                val._uuid = uuid.v4();
+                                return val;
+                            });
                         }
                         db.saveSync();
                     }

@@ -71,17 +71,32 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             }
         });
 
-        it('record new line and commit', function (done) {
+        it('record select line and commit', function (done) {
             let o = nlapiLoadRecord(recType, 4);
             should(o).have.instanceOf(nlobjRecord);
             o.selectLineItem(item, 1);
 
             o.setCurrentLineItemValue(item, 'item-id', 23);
-            o.setCurrentLineItemValue(item, 'item-title', 'item super legal');
-            o.setCurrentLineItemValue(item, 'item-value', '111');
+            o.setCurrentLineItemText(item, 'item-title', 'item super legal');
+            o.setCurrentLineItemText(item, 'item-value', '111');
 
             let index = o.getCurrentLineItemIndex(item);
             should(index).be.equal(1);
+
+            let currentId = o.getCurrentLineItemText(item, 'item-id'),
+                currentTitle = o.getCurrentLineItemText(item, 'item-title'),
+                currentValue = o.getCurrentLineItemText(item, 'item-value');
+
+            should(currentId).be.equal('23');
+            should(currentTitle).be.equal('item super legal');
+            should(currentValue).be.equal('111');
+
+            try {
+                o.getCurrentLineItemText();
+                return done(`missing SubList Type`);
+            } catch(e) {
+                should(e).have.property('code', 'SSS_INVALID_SUBLIST_NAME');
+            }
 
             o.commitLineItem(item);
 
@@ -90,8 +105,38 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
                 return done(`invalid current item`);
             } catch(e) {
                 should(e).have.property('code', 'SSS_INVALID_CURRENT_LINE_ITEM');
-                return done();
             }
+            return done();
+        });
+
+        it('record count lines and find line', function (done) {
+            let o = nlapiLoadRecord(recType, 4);
+            should(o).have.instanceOf(nlobjRecord);
+
+            let count = o.getLineItemCount(item);
+            should(count).be.equal(2);
+
+            try {
+                o.getLineItemCount();
+                return done(`missing SubList Type`);
+            } catch(e) {
+                should(e).have.property('code', 'SSS_INVALID_SUBLIST_NAME');
+            }
+
+            let index = o.findLineItemValue(item, 'item-value', 'value 96');
+            should(index).be.equal(2);
+
+            o.setLineItemValue(item, 'item-value', index, 'VALUE-9966');
+
+            o.commitLineItem(item);
+
+            let title = o.getLineItemValue(item, 'item-title', index),
+                value = o.getLineItemValue(item, 'item-value', index);
+
+            should(title).be.equal('legal 96');
+            should(value).be.equal('VALUE-9966');
+
+            return done();
         });
     });
     afterEach(function (done) {
