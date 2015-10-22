@@ -1,7 +1,7 @@
 {
   "name": "nsmockup",
   "version": "0.8.0-pre",
-  "description": "Netsuite API Mockup",
+  "description": "Test your Suitescripts before deploying to NetSuite",
   "main": "nsapi.js",
   "scripts": {
     "test": "gulp test",
