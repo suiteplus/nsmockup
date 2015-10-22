@@ -1,5 +1,43 @@
 # nsmockup ChangeLog
 
+## 2015-10-22, Version 0.7.0 (unstable),
+
+### Notable changes
+  * improve VM context initializations for User Event Simulations
+  * add new test units for: Date API, Field API, File API, Record API, Scheduling API, Search API, SubList API and XML API
+
+### Netsuite API:
+  * __Record APIs__:
+    - `function nlapiTransformRecord(type, id, transformType, transformValues)`
+  * __Search APIs__:
+    - `function nlapiSearchGlobal(keywords)`
+  * __SubList APIs__:
+    - `function nlapiCancelLineItem(type)`
+    - `function nlapiCommitLineItem(type)`
+    - `function nlapiFindLineItemValue(type, fldnam, val)`
+    - `function nlapiGetCurrentLineItemIndex(type)`
+    - `function nlapiGetCurrentLineItemText(type, fldnam)`
+    - `function nlapiGetCurrentLineItemValue(type, fldnam)`
+    - `function nlapiGetLineItemCount(type)`
+    - `function nlapiGetLineItemText(type, fldnam, linenum)`
+    - `function nlapiGetLineItemValue(type, fldnam, linenum)`
+    - `function nlapiInsertLineItem(type, line)`
+    - `function nlapiSelectLineItem(type, linenum)`
+    - `function nlapiSelectNewLineItem(type)`
+    - `function nlapiSetCurrentLineItemText(type, fldnam, value)`
+    - `function nlapiSetCurrentLineItemValue(type, fldnam, value)`
+    - `function nlapiSetLineItemValue(type, fldnam, linenum, value)`
+  * __XML APIs__:
+    - `function nlapiEscapeXML(txt)`
+    - `function nlapiSelectNode(node, xpath)`
+    - `function nlapiSelectNodes(node, xpath)`
+    - `function nlapiSelectValue(node, xpath)`
+    - `function nlapiSelectValues(node, xpath)`
+    - `function nlapiStringToXML(str)`
+    - `function nlapiValidateXML(xmlDocument, schemaDocument, schemaFolderId)`
+    - `function nlapiXMLToPDF(input)`
+    - `function nlapiXMLToString(xml)`
+
 ## 2015-10-18, Version 0.6.0 (unstable),
 
 ### Notable changes
