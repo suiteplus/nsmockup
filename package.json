@@ -1,6 +1,6 @@
 {
   "name": "nsmockup",
-  "version": "0.7.0",
+  "version": "0.8.0-pre",
   "description": "Netsuite API Mockup",
   "main": "nsapi.js",
   "scripts": {
