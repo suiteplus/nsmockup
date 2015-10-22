@@ -138,6 +138,79 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
 
             return done();
         });
+
+        it('record insert new line and commit', function (done) {
+            let o = nlapiLoadRecord(recType, 4);
+            should(o).have.instanceOf(nlobjRecord);
+            {
+                o.insertLineItem(item, 2);
+
+                o.setCurrentLineItemValue(item, 'item-id', 12);
+                o.setCurrentLineItemValue(item, 'item-title', 'item legal');
+                o.setCurrentLineItemValue(item, 'item-value', '902193');
+
+                let currentId = o.getCurrentLineItemValue(item, 'item-id'),
+                    currentTitle = o.getCurrentLineItemValue(item, 'item-title'),
+                    currentValue = o.getCurrentLineItemValue(item, 'item-value');
+
+                should(currentId).be.equal('12');
+                should(currentTitle).be.equal('item legal');
+                should(currentValue).be.equal('902193');
+
+                let index = o.getCurrentLineItemIndex(item);
+                should(index).be.equal(2);
+
+                o.commitLineItem(item);
+
+                let count = o.getLineItemCount(item);
+                should(count).be.equal(3);
+
+                o.selectLineItem(item, 3);
+
+                let lastCurrentId = o.getCurrentLineItemText(item, 'item-id'),
+                    lastCurrentTitle = o.getCurrentLineItemText(item, 'item-title'),
+                    lastCurrentValue = o.getCurrentLineItemText(item, 'item-value');
+
+                should(lastCurrentId).be.equal('96');
+                should(lastCurrentTitle).be.equal('legal 96');
+                should(lastCurrentValue).be.equal('value 96');
+            }
+            // pos insert
+            {
+                o.insertLineItem(item, 4);
+
+                o.setCurrentLineItemValue(item, 'item-id', 12);
+                o.setCurrentLineItemValue(item, 'item-title', 'item legal');
+                o.setCurrentLineItemValue(item, 'item-value', '902193');
+
+                let currentId = o.getCurrentLineItemValue(item, 'item-id'),
+                    currentTitle = o.getCurrentLineItemValue(item, 'item-title'),
+                    currentValue = o.getCurrentLineItemValue(item, 'item-value');
+
+                should(currentId).be.equal('12');
+                should(currentTitle).be.equal('item legal');
+                should(currentValue).be.equal('902193');
+
+                let index = o.getCurrentLineItemIndex(item);
+                should(index).be.equal(4);
+
+                o.commitLineItem(item);
+
+                let count = o.getLineItemCount(item);
+                should(count).be.equal(4);
+
+                o.selectLineItem(item, 3);
+
+                let lastCurrentId = o.getCurrentLineItemText(item, 'item-id'),
+                    lastCurrentTitle = o.getCurrentLineItemText(item, 'item-title'),
+                    lastCurrentValue = o.getCurrentLineItemText(item, 'item-value');
+
+                should(lastCurrentId).be.equal('96');
+                should(lastCurrentTitle).be.equal('legal 96');
+                should(lastCurrentValue).be.equal('value 96');
+            }
+            return done();
+        });
     });
     afterEach(function (done) {
         nsmockup.destroy(done);

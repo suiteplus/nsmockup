@@ -120,6 +120,7 @@
         "nlapiScheduleScript": true,
         "nlapiSearchGlobal": true,
         "nlapiSearchRecord": true,
+        "nlapiSelectNewLineItem": true,
         "nlapiSelectNode": true,
         "nlapiSelectNodes": true,
         "nlapiSelectValue": true,
