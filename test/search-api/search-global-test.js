@@ -33,8 +33,6 @@ describe('<Unit Test - Netsuite Search API>', function () {
         });
     });
     describe('SuiteScript API - nlapiSearchGlobal:', function () {
-        let recType = 'customrecord_codeg_ids';
-
         it('global search record', function (done) {
             let records = nlapiSearchGlobal('japo 242');
             should(records).be.length(1);

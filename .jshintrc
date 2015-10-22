@@ -118,6 +118,7 @@
         "nlapiRequestURL": true,
         "nlapiResolveURL": true,
         "nlapiScheduleScript": true,
+        "nlapiSearchGlobal": true,
         "nlapiSearchRecord": true,
         "nlapiSelectNode": true,
         "nlapiSelectNodes": true,
