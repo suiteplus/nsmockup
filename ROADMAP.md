@@ -1,6 +1,6 @@
 # nsmockup Roadmap
 
-## Version 0.7.x
+## Version 0.8.x
 
 ### Work with currency simulation
 
@@ -8,17 +8,6 @@
   * __Currency APIs__:
     - `function nlapiExchangeRate(sourceCurrency, targetCurrency, effectiveDate)`
     - `function nlapiFormatCurrency(str)`
-
-## Version 0.8.x
-
-### Implement Mock of NetSuite tools APIs
-
-### Netsuite API:
-  * __Date APIs__:
-    - `function nlapiAddDays(d, days)`
-    - `function nlapiAddMonths(d, months)`
-    - `function nlapiDateToString(d, format)`
-    - `function nlapiStringToDate(str, format)`
 
 ## Version 0.9.x
 
