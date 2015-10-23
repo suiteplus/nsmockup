@@ -1,10 +1,10 @@
 'use strict';
 var URI = require('../server-config').URI;
 
-const uri = URI.scriptrecord;
+const uri = URI.restlet;
 
 module.exports = (app) => {
-    let methods = ['GET', 'POST'],
+    let methods = ['GET', 'POST', 'PUT', 'DELETE'],
         route = app.route(uri);
 
     // middlewares
@@ -12,7 +12,7 @@ module.exports = (app) => {
         loadDB = require('../middlewares/load-db');
 
     // controllers
-    let ctrl = require('../controllers/scriptrecord-ctrl');
+    let ctrl = require('../controllers/restlet-ctrl');
 
     // ####################
     // Include Headers

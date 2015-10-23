@@ -31,7 +31,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
                 let url = nlapiResolveURL('RESTLET', opts.name);
                 should(url).be.ok();
 
-                let res = nlapiRequestURL(url, null, null, 'GET');
+                let res = nlapiRequestURL(url + '&fake=12', null, null, 'GET');
                 should(res).be.ok();
 
                 let body = res.getBody();

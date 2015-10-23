@@ -10,8 +10,8 @@ exports.exec = (req, res) => {
     } else {
         let methods,
             method = req.method.toLowerCase();
-        if (script.type === 'suitelet') {
-            methods = ['get', 'post'];
+        if (script.type === 'restlet') {
+            methods = ['get', 'post', 'put', 'delete'];
         }
 
         if (!methods || !~methods.indexOf(method)) {
@@ -28,10 +28,25 @@ exports.exec = (req, res) => {
         let context = vmSim.importSuiteScript(script);
 
         // init request and response variables in context
-        context.$NS_REQ = new context.nlobjRequest(req);
-        context.$NS_RES = new context.nlobjResponse(res);
+        if (method === 'get') {
+            context.$NS_DATAIN = req.query;
+        } else {
+            context.$NS_DATAIN = req.body;
+        }
+        context.$NS_RESULT = null;
 
         // execute script on his context
-        vmSim.evalContext(execFunc + '($NS_REQ, $NS_RES)', context);
+        let code = `$NS_RESULT = ${execFunc}($NS_DATAIN)`;
+        vmSim.evalContext(code, context);
+
+        let body = context.$NS_RESULT;
+        if (typeof body === 'object') {
+            res.set('Content-Type', 'application/json');
+            res.status(200).send(body);
+        } else {
+            res.set('Content-Type', 'text/plain');
+            console.log(body);
+            res.status(200).send('' + body);
+        }
     }
 };

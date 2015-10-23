@@ -1,13 +1,14 @@
 var FakeRestlet = {
     context: nlapiGetContext(),
-    get: function (req, res) {
+    get: function (datain) {
         'use strict';
 
-        res.write(req.getParameter('fake'));
+        let result = this.context.getSetting('SCRIPT', 'fake-param');
+        return result;
     },
-    post: function (req, res) {
+    post: function (datain) {
         'use strict';
 
-        res.write(this.context.getSetting('SCRIPT', 'fake-param'));
+        return datain.fake;
     }
 };

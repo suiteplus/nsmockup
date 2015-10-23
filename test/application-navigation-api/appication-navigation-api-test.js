@@ -136,7 +136,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
         it('request restlet URL method POST', function (done) {
             let url = nlapiResolveURL('RESTLET', ropts.name);
             should(url).be.ok();
-            let res = nlapiRequestURL(url+'&fake=12', null, null, 'POST');
+            let res = nlapiRequestURL(url, {fake: 12}, null, 'POST');
             should(res).be.ok();
             let body = res.getBody();
             should(body).be.equal('12');
