@@ -45,7 +45,6 @@ exports.exec = (req, res) => {
             res.status(200).send(body);
         } else {
             res.set('Content-Type', 'text/plain');
-            console.log(body);
             res.status(200).send('' + body);
         }
     }
