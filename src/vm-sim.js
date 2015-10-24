@@ -1,6 +1,7 @@
 'use strict';
 var fs = require('fs'),
     path = require('path'),
+    glob = require('glob'),
     vm = require('vm'),
     ssParams = require('./suite-script/utils/ss-params'),
     $context = vm.createContext(global), // default context to nsmockup
@@ -47,8 +48,7 @@ exports.importNsApi = (path, ctx) => {
 };
 
 exports.importAllNsApi = (ctx) => {
-    var glob = require('glob'),
-        files = glob.sync(__dirname + '/../lib/ns*/**/*.js');
+    var files = glob.sync(__dirname + '/../lib/ns*/**/*.js');
 
     for (let i = 0; i < files.length; i++) {
         let file = path.resolve(files[i]);

@@ -48,7 +48,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
                 nlapiDeleteRecord(recType, code.id);
 
                 let emptyCode = nlapiSearchRecord(recType, code.id);
-                should(emptyCode).have.length(0);
+                should(emptyCode).not.be.ok();
             }
 
             return done();

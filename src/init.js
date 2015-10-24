@@ -3,6 +3,7 @@ var server = require('./server'),
     database = require('./database'),
     fs = require('fs'),
     path = require('path'),
+    glob = require('glob'),
     _ = require('lodash'),
     uuid = require('node-uuid');
 
@@ -51,7 +52,11 @@ module.exports = (opts, cb) => {
         }
 
         // add default metadatadas
-        metadatas.push(require('./metadatas/metadata-file'));
+        let defaultMetas = glob.sync(__dirname + '/defaults-records/metadatas/*.json');
+        for (let m = 0; m < defaultMetas.length; m++) {
+            let defaultMeta = defaultMetas[m];
+            metadatas.push(require(defaultMeta));
+        }
 
         let _metadata = db('__metadata');
         for (let i = 0; i < metadatas.length; i++) {
@@ -70,7 +75,7 @@ module.exports = (opts, cb) => {
         }
         try {
             db.saveSync();
-        } catch(e) {
+        } catch (e) {
             console.error(e);
         }
 
@@ -99,7 +104,16 @@ module.exports = (opts, cb) => {
         let records = opts.records;
         if (typeof records === 'string') records = readJSON(opts.records);
 
-        if (!records) return verifySteps();
+        if (!records) {
+            records = {};
+        }
+        // defaults data
+        let defaultDatas = glob.sync(__dirname + '/defaults-records/data/*.json');
+        for (let d = 0; d < defaultDatas.length; d++) {
+            let defaultData = defaultDatas[d],
+                recName = path.basename(defaultData, '.json');
+            records[recName] = require(defaultData);
+        }
         let recNames = Object.keys(records);
 
         let recSubLists = {},
@@ -147,7 +161,7 @@ module.exports = (opts, cb) => {
                 }
                 if (val.$$subLists) {
                     let subTypes = Object.keys(val.$$subLists);
-                    for (let s=0; s<subTypes.length; s++) {
+                    for (let s = 0; s < subTypes.length; s++) {
                         let subType = subTypes[s],
                             recSubType = `$$sl-${recName}-${subType}-${val._uuid}`;
 

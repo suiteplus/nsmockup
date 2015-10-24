@@ -1,6 +1,6 @@
 {
-  "code": "__file",
-  "id": -0,
+  "code": "file",
+  "id": 0,
   "name": "File",
   "inactive": false,
   "fields": [
@@ -19,11 +19,19 @@
       "mandatory": true
     },
     {
+      "code": "filetype",
+      "id": 0,
+      "desc": "File Type",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
       "code": "folder",
       "id": 0,
       "desc": "Folder",
-      "type": "STRING",
-      "mandatory": true
+      "type": "SELECT",
+      "mandatory": true,
+      "recordType": "__folder"
     },
     {
       "code": "encoding",

@@ -1,0 +1,31 @@
+{
+  "code": "folder",
+  "id": 0,
+  "name": "Folder",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "name",
+      "id": 0,
+      "desc": "Name",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "parent",
+      "id": 0,
+      "desc": "Parent",
+      "type": "SELECT",
+      "mandatory": true,
+      "recordType": "__folder"
+    },
+    {
+      "code": "isinactive",
+      "id": 0,
+      "desc": "Inactive",
+      "type": "CHECKBOX",
+      "mandatory": false,
+      "default": true
+    }
+  ]
+}

@@ -16,8 +16,13 @@ describe('<Unit Test - Netsuite File API>', function () {
             file = nlapiCreateFile('oba-load.txt', 'PLAINTEXT', 'uhuuu .. supimpa');
             should(file).have.instanceOf(nlobjFile);
 
+            let folder = nlapiCreateRecord('folder');
+            folder.setFieldValue('name', 'eba/humm');
+            folder.setFieldValue('parent', '@NONE@');
+            let folderId = nlapiSubmitRecord(folder);
+
             file.setIsOnline(true);
-            file.setFolder('eba/humm');
+            file.setFolder(folderId);
             file.setEncoding('utf8');
             return done();
         });
@@ -26,8 +31,8 @@ describe('<Unit Test - Netsuite File API>', function () {
             let id = nlapiSubmitFile(file);
 
             should(id).be.ok();
-            let cabinet = $db.object.__file,
-                fileObj = cabinet[id - 1];
+            let fileDB = $db.object.file,
+                fileObj = fileDB[id - 1];
 
             should(fileObj).be.ok();
             should(fileObj).have.property('name', file.getName());
