@@ -1,6 +1,6 @@
 {
   "name": "nsmockup",
-  "version": "0.8.0",
+  "version": "0.9.0-pre",
   "description": "Test your Suitescripts before deploying to NetSuite",
   "main": "nsapi.js",
   "scripts": {
@@ -29,8 +29,8 @@
   },
   "homepage": "https://github.com/suiteplus/nsmockup#readme",
   "engines": {
-    "node": "4.x.x",
-    "npm": "2.10.x"
+    "node": "4.0.0",
+    "npm": "2.10.0"
   },
   "dependencies": {
     "body-parser": "^1.14.1",
