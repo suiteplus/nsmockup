@@ -1,0 +1,37 @@
+{
+  "code": "subsidiary",
+  "id": 0,
+  "name": "Subsidiary",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "name",
+      "id": 0,
+      "desc": "Name",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "city",
+      "id": 0,
+      "desc": "City",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "email",
+      "id": 0,
+      "desc": "Email",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "isinactive",
+      "id": 0,
+      "desc": "Inactive",
+      "type": "CHECKBOX",
+      "mandatory": false,
+      "default": true
+    }
+  ]
+}

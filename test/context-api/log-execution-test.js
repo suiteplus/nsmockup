@@ -1,18 +1,13 @@
 'use strict';
 
-var should = require('should');
+var nsmockup = require('../../');
 
 /**
  * Test Suites
  */
 describe('<Unit Test - Netsuite Context API>', function () {
-    describe('SuiteScript API - nlapiGetContext:', function () {
-        it('just get context object', function (done) {
-            var context = nlapiGetContext();
-            should(context).have.instanceOf(nlobjContext);
-
-            return done();
-        });
+    before(function (done) {
+        nsmockup.init(done);
     });
 
     describe('SuiteScript API - nlapiLogExecution:', function () {
@@ -24,5 +19,9 @@ describe('<Unit Test - Netsuite Context API>', function () {
 
             return done();
         });
+    });
+
+    after(function (done) {
+        nsmockup.destroy(done);
     });
 });

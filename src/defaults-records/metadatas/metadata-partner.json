@@ -1,0 +1,54 @@
+{
+  "code": "partner",
+  "id": 0,
+  "name": "Partner",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "name",
+      "id": 0,
+      "desc": "Name",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "email",
+      "id": 0,
+      "desc": "Email",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "department",
+      "id": 0,
+      "desc": "Department",
+      "type": "SELECT",
+      "mandatory": true,
+      "recordType": "department"
+    },
+    {
+      "code": "subsidiary",
+      "id": 0,
+      "desc": "Subsidiary",
+      "type": "SELECT",
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "parent",
+      "id": 0,
+      "desc": "Parent",
+      "type": "SELECT",
+      "mandatory": true,
+      "recordType": "partner"
+    },
+    {
+      "code": "isinactive",
+      "id": 0,
+      "desc": "Inactive",
+      "type": "CHECKBOX",
+      "mandatory": false,
+      "default": true
+    }
+  ]
+}

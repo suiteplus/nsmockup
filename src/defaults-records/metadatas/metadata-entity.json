@@ -1,0 +1,52 @@
+{
+  "code": "entity",
+  "id": 0,
+  "name": "Entity",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "name",
+      "id": 0,
+      "desc": "Name",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "address",
+      "id": 0,
+      "desc": "Address",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "city",
+      "id": 0,
+      "desc": "City",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "email",
+      "id": 0,
+      "desc": "Email",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "subsidiary",
+      "id": 0,
+      "desc": "Subsidiary",
+      "type": "SELECT",
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "isinactive",
+      "id": 0,
+      "desc": "Inactive",
+      "type": "CHECKBOX",
+      "mandatory": false,
+      "default": true
+    }
+  ]
+}

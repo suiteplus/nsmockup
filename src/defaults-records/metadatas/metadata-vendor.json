@@ -1,0 +1,38 @@
+{
+  "code": "vendor",
+  "id": 0,
+  "name": "Vendor",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "name",
+      "id": 0,
+      "desc": "Name",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "email",
+      "id": 0,
+      "desc": "Email",
+      "type": "STRING",
+      "mandatory": true
+    },
+    {
+      "code": "subsidiary",
+      "id": 0,
+      "desc": "Subsidiary",
+      "type": "SELECT",
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "isinactive",
+      "id": 0,
+      "desc": "Inactive",
+      "type": "CHECKBOX",
+      "mandatory": false,
+      "default": true
+    }
+  ]
+}

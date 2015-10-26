@@ -17,12 +17,34 @@ var readJSON = (json) => {
     return JSON.parse(code);
 };
 
+const $$PACK = require('../package');
+const $$INIT_CURRENT = {
+    user: {
+        id: -4,
+        type: 'entity'
+    },
+    company: $$PACK.name.toUpperCase() + $$PACK.version.replace(/./, '')
+};
+
+const $$INIT_GENERAL_PREFS = {
+    dateFormat: 'MM/DD/YYYY',
+    timeFormat: 'hh:mm A',
+    lang: 'en'
+};
+
 /**
  *
  * @param [opts] {{
  *   [metadatas]: String || [String],
  *   [records]: Object,
  *   [server]: Boolean,
+ *   [current]: {
+ *      [user]: {
+ *          id: Number || '-4',
+ *          type: String
+ *      },
+ *      [company]: String || 'NSMOCKUPVxxx'
+ *   },
  *   [general]: {
  *      [dateFormat]: String || 'MM/DD/YYYY',
  *      [timeFormat]: String || 'hh:mm A',
@@ -39,7 +61,16 @@ module.exports = (opts, cb) => {
         opts = {};
     }
 
-    _.merge(global.$$GENERAL_PREFS, opts.general || {});
+    if (opts.current && opts.current.user && opts.current.user.type) {
+        let types = ['employee', 'customer', 'vendor', 'partner'],
+            type = opts.current.user.type;
+        if (type !== 'entity' && !~types.indexOf(type)) {
+            throw new Error(`Invalid type ("${type}") of current NetSuite user, see options: ${types}`);
+        }
+    }
+
+    _.merge(global.$$CURRENT_AUTH, $$INIT_CURRENT, opts.current || {});
+    _.merge(global.$$GENERAL_PREFS, $$INIT_GENERAL_PREFS, opts.general || {});
 
     function init(db) {
         let metadatas = opts.metadatas;
