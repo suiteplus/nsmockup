@@ -60,6 +60,8 @@ exports.load = (cb) => {
  *    id: number,
  *    name: string
  *    type: string,
+ *    [deploymentname] : String
+ *    [deploymentid] : number,
  *    files: [string],
  *    params: {}
  * }}
@@ -76,10 +78,12 @@ exports.createSuiteScript = (data) => {
 
     let scripts = $db('__scripts');
     if (!data.id) data.id = (scripts.size() + 1);
+    data.deploymentid = data.deploymentid || 1;
+    data.deploymentname = data.deploymentname || 'customdeploy' + data.name.substr( 'customscript'.length ),
 
     data.uri = URI[data.type]; // only suitelet and restlet
     if (data.uri) {
-        data.url = `http://localhost:${srvconf.port}${data.uri}?script=${data.id}`;
+        data.url = `http://localhost:${srvconf.port}${data.uri}?script=${data.id}&deploy=${data.deploymentid}`;
     }
 
     // create script in other context

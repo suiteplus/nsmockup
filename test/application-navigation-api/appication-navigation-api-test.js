@@ -144,6 +144,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
         });
     });
 
+
     after(function (done) {
         nsmockup.destroy(done);
     });
