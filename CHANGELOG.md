@@ -1,5 +1,17 @@
 # nsmockup ChangeLog
 
+## 2015-10-26, Version 0.8.0 (unstable),
+
+### Notable changes
+  * improve File Cabinet simulations
+  * change RESTlet service path to 'http://localhost:3030//app/site/hosting/restlet.nl?script=?'
+  * set default timeout to kill Fake Server process, default: 20s.
+
+### Netsuite API:
+  * __Encription APIs__
+    - `function nlapiDecrypt(s, algorithm, key)`
+    - `function nlapiEncrypt(s, algorithm, key)`
+  
 ## 2015-10-22, Version 0.7.0 (unstable),
 
 ### Notable changes

@@ -1,17 +1,13 @@
 # nsmockup Roadmap
 
-## Version 0.8.x
-
-### Work with currency simulation
+## Work with currency simulation
 
 ### Netsuite API:
   * __Currency APIs__:
     - `function nlapiExchangeRate(sourceCurrency, targetCurrency, effectiveDate)`
     - `function nlapiFormatCurrency(str)`
 
-## Version 0.9.x
-
-### Simulate Client Script
+## Simulate Client Script
  - **nsmockup.createClient(opt)**
 
 ### Netsuite API:
@@ -25,8 +21,7 @@
     - `function nlapiSetFieldtexts(fldnam)`
     - `function nlapiSetFieldValue(fldnam)`
     - `function nlapiSetFieldValues(fldnam)`
-
-## Version 0.1x.x
+    
 ...
 
 ## Version 1.0.0 (I hope => Stable)
