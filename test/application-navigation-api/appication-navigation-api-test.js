@@ -74,7 +74,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
                 should(o).have.instanceOf(String);
                 return done('missing id: '+o.getId());
             } catch (e) {
-                should(e).have.property('code', 'SSS_IDENTFIER_ARG_REQ');
+                should(e).have.property('code', 'SSS_MISSING_REQD_ARGUMENT');
                 return done();
             }
         });
@@ -90,12 +90,12 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             }
         });
 
-        it('resolve deployment id not found' , function() {
+        it('resolve deployment id not found' , function(done) {
             try {
                 nlapiResolveURL('RESTLET', ropts.name);
             } catch(e) {
                 should(e).have.property('code', 'INVALID_ID');
-                return done()
+                done()
             }
         });
 
