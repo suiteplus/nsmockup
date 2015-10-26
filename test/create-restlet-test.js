@@ -15,6 +15,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
         it('create restlet', function (done) {
             let opts = {
                 name: 'customscript_add_restlet',
+                deploymentname: 'customdeploy_add_restlet',
                 files: [
                     __dirname + '/_input-files/scripts/fake-restlet.js'
                 ],
@@ -28,7 +29,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
             nsmockup.createRESTlet(opts, (ctx) => {
                 should(ctx.FakeRestlet).be.ok();
 
-                let url = nlapiResolveURL('RESTLET', opts.name);
+                let url = nlapiResolveURL('RESTLET', opts.name, opts.deploymentname);
                 should(url).be.ok();
 
                 let res = nlapiRequestURL(url + '&fake=12', null, null, 'GET');
