@@ -1,6 +1,6 @@
 {
   "name": "nsmockup",
-  "version": "0.8.0-pre",
+  "version": "0.8.0",
   "description": "Test your Suitescripts before deploying to NetSuite",
   "main": "nsapi.js",
   "scripts": {
