@@ -30,11 +30,12 @@ for (let i = 0; i < routes.length; i++) {
 
 process.on('message', function (m) {
     //console.log('NSFAKE SERVER', m);
-    if (m === 'start') {
+    if (m.step === 'start') {
         server = app.listen(srvconf.port, function () {
             console.log('nsmockup server started', srvconf.port);
             if (!global.$db) {
-                nsmockup.init({}, () => {
+                let opts = m.opts;
+                nsmockup.init(opts, () => {
                     return process.send('started');
                 });
             } else {

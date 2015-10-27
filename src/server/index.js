@@ -34,7 +34,17 @@ if (!process.env.$NS_SERVER) {
             cb && cb();
         });
 
-        server.send(step);
+        if (step === 'start') {
+            server.send({
+                step: step,
+                opts: {
+                    general: global.$$GENERAL_PREFS,
+                    current: global.$$CURRENT_AUTH
+                }
+            });
+        } else {
+            server.send({step});
+        }
     };
 } else {
     exports.exec = (step, cb) => {
