@@ -1,5 +1,6 @@
 'use strict';
-var fork = require('child_process').fork;
+var childProcess = require('child_process'),
+    fork = childProcess.fork;
 
 var started = false;
 
