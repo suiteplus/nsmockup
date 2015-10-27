@@ -12,7 +12,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
     this.timeout(5000);
 
     before(function (done) {
-        let metadatas = [
+        let metadata = [
                 base + '/meta/recordType-metaData-codeg.json',
                 base + '/meta/recordType-metaData-codeg_ids.json'
             ],
@@ -20,7 +20,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                 'customrecord_codeg': base + '/data/recordType-codeg.json',
                 'customrecord_codeg_ids': base + '/data/recordType-codeg_ids.json'
             };
-        nsmockup.init({records, metadatas}, (err) => {
+        nsmockup.init({records, metadata}, (err) => {
             if (err) return done(err);
             else {
                 let xmlPath = __dirname + '/../_input-files/files/help.xml',

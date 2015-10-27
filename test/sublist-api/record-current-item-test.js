@@ -11,13 +11,13 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
     this.timeout(5000);
 
     beforeEach(function (done) {
-        let metadatas = [
+        let metadata = [
                 base + '/meta/recordType-metaData-codeg.json'
             ],
             records = {
                 'customrecord_codeg': base + '/data/recordType-codeg.json'
             };
-        nsmockup.init({records, metadatas}, done);
+        nsmockup.init({records, metadata}, done);
     });
     describe('SuiteScript API - nlapiSearchRecord:', function () {
         let recType = 'customrecord_codeg',

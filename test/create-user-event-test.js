@@ -27,13 +27,13 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
     };
 
     beforeEach(function (done) {
-        let metadatas = [
+        let metadata = [
                 base + '/meta/recordType-metaData-codeg_ids.json'
             ],
             records = {
                 'customrecord_codeg_ids': base + '/data/recordType-codeg_ids.json'
             };
-        nsmockup.init({records, metadatas}, done);
+        nsmockup.init({records, metadata}, done);
     });
     describe('Create Script - User Event', function () {
         it('user event - type: "create"', function (done) {

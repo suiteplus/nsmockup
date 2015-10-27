@@ -10,7 +10,7 @@ var base = __dirname + '/../_input-files/record-data';
 describe('<Unit Test - Netsuite Scheduling API>', function () {
     this.timeout(5000);
     before(function (done) {
-        let metadatas = [
+        let metadata = [
             base + '/meta/recordType-metaData-codeg.json',
             base + '/meta/recordType-metaData-codeg_ids.json'
         ],
@@ -18,7 +18,7 @@ describe('<Unit Test - Netsuite Scheduling API>', function () {
             'customrecord_codeg': base + '/data/recordType-codeg.json',
             'customrecord_codeg_ids': base + '/data/recordType-codeg_ids.json'
         };
-        nsmockup.init({records, metadatas}, done);
+        nsmockup.init({records, metadata}, done);
     });
     describe('SuiteScript - nlapiScheduleScript', function () {
         let ctx;

@@ -35,7 +35,7 @@ const $$INIT_GENERAL_PREFS = {
 /**
  *
  * @param [opts] {{
- *   [metadatas]: String || [String],
+ *   [metadata]: String || [String],
  *   [records]: Object,
  *   [server]: Boolean,
  *   [current]: {
@@ -73,34 +73,34 @@ module.exports = (opts, cb) => {
     _.merge(global.$$GENERAL_PREFS, $$INIT_GENERAL_PREFS, opts.general || {});
 
     function init(db) {
-        let metadatas = opts.metadatas;
-        if (typeof metadatas === 'string') {
-            metadatas = [readJSON(opts.records)];
-        } else if (metadatas && !Array.isArray(metadatas)) {
-            metadatas = [metadatas];
-        } else if (!metadatas) {
-            metadatas = [];
+        let metadata = opts.metadata;
+        if (typeof metadata === 'string') {
+            metadata = [readJSON(opts.records)];
+        } else if (metadata && !Array.isArray(metadata)) {
+            metadata = [metadata];
+        } else if (!metadata) {
+            metadata = [];
         }
 
         // add default metadatadas
-        let defaultMetas = glob.sync(__dirname + '/defaults-records/metadatas/*.json');
+        let defaultMetas = glob.sync(__dirname + '/defaults-records/metadata/*.json');
         for (let m = 0; m < defaultMetas.length; m++) {
             let defaultMeta = defaultMetas[m];
-            metadatas.push(require(defaultMeta));
+            metadata.push(require(defaultMeta));
         }
 
         let _metadata = db('__metadata');
-        for (let i = 0; i < metadatas.length; i++) {
-            let metadata = metadatas[i];
-            if (typeof metadata === 'string') {
-                metadata = readJSON(metadata);
+        for (let i = 0; i < metadata.length; i++) {
+            let metadatum = metadata[i];
+            if (typeof metadatum === 'string') {
+                metadatum = readJSON(metadatum);
             }
 
-            if (!metadata || !metadata.code) {
+            if (!metadatum || !metadatum.code) {
                 continue;
             } else {
-                _metadata.remove({code: metadata.code});
-                _metadata.push(metadata);
+                _metadata.remove({code: metadatum.code});
+                _metadata.push(metadatum);
                 //console.log('import record-type metadata "' + metadata.code + '"');
             }
         }
