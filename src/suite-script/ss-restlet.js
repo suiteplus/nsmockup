@@ -42,7 +42,7 @@ module.exports = (opt, cb) => {
         params: opt.params
     });
 
-    for (let i=0; i<funcs.length; i++) {
+    for (let i = 0; i < funcs.length; i++) {
         let method = funcs[i].toLowerCase();
         if (~['post', 'get', 'delete', 'put'].indexOf(method)) {
             ssValidate.principalFunction(opt.funcs, method, context);
