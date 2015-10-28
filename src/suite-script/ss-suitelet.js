@@ -8,6 +8,8 @@ var database = require('../database'),
  *
  * @param opt {{
  *    name: String,
+ *    [deploymentname] : String,
+ *    [deploymentid] : Number,
  *    files: [String],
  *    params: Object,
  *    func: String
@@ -26,6 +28,8 @@ module.exports = (opt, cb) => {
     let context = database.createSuiteScript({
         type: 'suitelet',
         name: opt.name,
+        deploymentname : opt.deploymentname,
+        deploymentid : opt.deploymentid,
         func: opt.func,
         files: opt.files,
         params: opt.params

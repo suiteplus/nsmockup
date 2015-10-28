@@ -12,6 +12,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
     let ropts = {
             // RESTlet Config
             name: 'customscript_add_restlet',
+            deploymentname : 'customdeploy_add_restlet' ,
             files: [
                 __dirname + '/../_input-files/scripts/fake-restlet.js'
             ],
@@ -26,6 +27,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
         sopts = {
             // Suitelet Config
             name: 'customscript_add_suitelet',
+            deploymentname : 'customdeploy_add_suitelet' ,
             files: [
                 __dirname + '/../_input-files/scripts/fake-suitelet.js'
             ],
@@ -44,13 +46,13 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
     });
     describe('SuiteScript API - nlapiResolveURL:', function () {
         it('resolve get internal URL from RESTlet', function (done) {
-            let url = nlapiResolveURL('RESTLET', ropts.name);
+            let url = nlapiResolveURL('RESTLET', ropts.name, ropts.deploymentname);
             should(url).be.ok();
             return done();
         });
 
         it('resolve get internal URL from Suitelet', function (done) {
-            let url = nlapiResolveURL('SUITELET', sopts.name);
+            let url = nlapiResolveURL('SUITELET', sopts.name, sopts.deploymentname);
             should(url).be.ok();
             return done();
         });
@@ -72,19 +74,28 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
                 should(o).have.instanceOf(String);
                 return done('missing id: '+o.getId());
             } catch (e) {
-                should(e).have.property('code', 'SSS_IDENTFIER_ARG_REQ');
+                should(e).have.property('code', 'SSS_MISSING_REQD_ARGUMENT');
                 return done();
             }
         });
 
         it('resolve identifier not found', function (done) {
             try {
-                let o = nlapiResolveURL('SUITELET', 'customscript_japopop');
+                let o = nlapiResolveURL('SUITELET', 'customscript_japopop','customdeploy_japopop');
                 should(o).have.instanceOf(String);
                 return done('missing id: '+o.getId());
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_IDENTFIER_ARG');
                 return done();
+            }
+        });
+
+        it('resolve deployment id not found' , function(done) {
+            try {
+                nlapiResolveURL('RESTLET', ropts.name);
+            } catch(e) {
+                should(e).have.property('code', 'INVALID_ID');
+                done()
             }
         });
 
@@ -114,7 +125,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
 
     describe('SuiteScript API - nlapiRequestURL:', function () {
         it('request only restlet URL', function (done) {
-            let url = nlapiResolveURL('RESTLET', ropts.name);
+            let url = nlapiResolveURL('RESTLET', ropts.name, ropts.deploymentname);
             should(url).be.ok();
             let res = nlapiRequestURL(url+'&fake=12');
             should(res).be.ok();
@@ -124,7 +135,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
         });
 
         it('request only suitelet URL', function (done) {
-            let url = nlapiResolveURL('SUITELET', sopts.name);
+            let url = nlapiResolveURL('SUITELET', sopts.name, sopts.deploymentname);
             should(url).be.ok();
             let res = nlapiRequestURL(url+'&fake=22');
             should(res).be.ok();
@@ -134,7 +145,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
         });
 
         it('request restlet URL method POST', function (done) {
-            let url = nlapiResolveURL('RESTLET', ropts.name);
+            let url = nlapiResolveURL('RESTLET', ropts.name, ropts.deploymentname);
             should(url).be.ok();
             let res = nlapiRequestURL(url, {fake: 12}, null, 'POST');
             should(res).be.ok();
@@ -143,6 +154,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             return done();
         });
     });
+
 
     after(function (done) {
         nsmockup.destroy(done);

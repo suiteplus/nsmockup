@@ -9,6 +9,8 @@ var database = require('../database'),
  *
  * @param opt {{
  *    name: String,
+ *    [deploymentname] : String,
+ *    [deploymentid] : Number,
  *    files: [String],
  *    params: Object,
  *    funcs: {
@@ -37,6 +39,8 @@ module.exports = (opt, cb) => {
     let context = database.createSuiteScript({
         type: 'restlet',
         name: opt.name,
+        deploymentname : opt.deploymentname,
+        deploymentid : opt.deploymentid,
         funcs: opt.funcs,
         files: opt.files,
         params: opt.params
