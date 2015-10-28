@@ -1,0 +1,528 @@
+{
+  "code": "projecttask",
+  "id": 0,
+  "name": "Project Task",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "actualwork",
+      "type": "FLOAT",
+      "label": "Actual Work",
+      "mandatory": false
+    },
+    {
+      "code": "assignee",
+      "type": "SELECT",
+      "label": "Assignee",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "company",
+      "type": "SELECT",
+      "label": "Project Name",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "constrainttype",
+      "type": "SELECT",
+      "label": "Constraint Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "contact",
+      "type": "SELECT",
+      "label": "Contact",
+      "mandatory": false,
+      "recordType": "contact"
+    },
+    {
+      "code": "cost",
+      "type": "CURRENCY",
+      "label": "Estimated Cost",
+      "mandatory": false
+    },
+    {
+      "code": "costbase",
+      "type": "CURRENCY",
+      "label": "Estimated Cost (Base Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "costbasebaseline",
+      "type": "CURRENCY",
+      "label": "Estimated Cost Baseline (Base Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "costbaseline",
+      "type": "CURRENCY",
+      "label": "Estimated Cost Baseline",
+      "mandatory": false
+    },
+    {
+      "code": "costbasevariance",
+      "type": "CURRENCY",
+      "label": "Estimated Cost Variance (Base Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "costvariance",
+      "type": "CURRENCY",
+      "label": "Estimated Cost Variance",
+      "mandatory": false
+    },
+    {
+      "code": "costvariancepercent",
+      "type": "FLOAT",
+      "label": "Estimated Cost Variance Percent",
+      "mandatory": false
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "label": "End Date",
+      "mandatory": false
+    },
+    {
+      "code": "enddatebaseline",
+      "type": "DATE",
+      "label": "End Date Baseline",
+      "mandatory": false
+    },
+    {
+      "code": "enddatevariance",
+      "type": "FLOAT",
+      "label": "End Date Variance",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedwork",
+      "type": "FLOAT",
+      "label": "Estimated Work",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedworkbaseline",
+      "type": "FLOAT",
+      "label": "Estimated Work Baseline",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedworkvariance",
+      "type": "FLOAT",
+      "label": "Estimated Work Variance",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedworkvariancepercent",
+      "type": "FLOAT",
+      "label": "Estimated Work Variance Percent",
+      "mandatory": false
+    },
+    {
+      "code": "eventid",
+      "type": "INTEGER",
+      "label": "Project Task ID",
+      "mandatory": true
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "finishbydate",
+      "type": "DATE",
+      "label": "Finish No Later Than Date",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "fxrate",
+      "type": "CURRENCY2",
+      "label": "Exchange Rate",
+      "mandatory": false
+    },
+    {
+      "code": "id",
+      "type": "INTEGER",
+      "label": "ID",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "ismilestone",
+      "type": "CHECKBOX",
+      "label": "Milestone",
+      "mandatory": false
+    },
+    {
+      "code": "isoncriticalpath",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "issummarytask",
+      "type": "CHECKBOX",
+      "label": "Is Summary Task",
+      "mandatory": false
+    },
+    {
+      "code": "job",
+      "type": "SELECT",
+      "label": "Job",
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "lateend",
+      "type": "DATE",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "latestart",
+      "type": "DATE",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "message",
+      "type": "TEXT",
+      "label": "Notes",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "nonbillabletask",
+      "type": "CHECKBOX",
+      "label": "Non-billable",
+      "mandatory": false
+    },
+    {
+      "code": "order",
+      "type": "SELECT",
+      "label": "Insert Before",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "owner",
+      "type": "SELECT",
+      "label": "Created By",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "parent",
+      "type": "SELECT",
+      "label": "Parent Task",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "percenttimecomplete",
+      "type": "PERCENT",
+      "label": "Percent Complete",
+      "mandatory": false
+    },
+    {
+      "code": "percentworkcomplete",
+      "type": "PERCENT",
+      "label": "Percent Work Complete",
+      "mandatory": false
+    },
+    {
+      "code": "predecessor",
+      "type": "SELECT",
+      "label": "Predecessor",
+      "mandatory": false,
+      "recordType": "projecttask"
+    },
+    {
+      "code": "predecessors",
+      "type": "TEXT",
+      "label": "Predecessors",
+      "mandatory": false
+    },
+    {
+      "code": "predecessortype",
+      "type": "TEXT",
+      "label": "Predecessor Type",
+      "mandatory": false
+    },
+    {
+      "code": "priority",
+      "type": "SELECT",
+      "label": "Priority",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "remainingwork",
+      "type": "FLOAT",
+      "label": "Remaining Work",
+      "mandatory": false
+    },
+    {
+      "code": "slackminutes",
+      "type": "FLOAT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "label": "Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "startdatebaseline",
+      "type": "DATE",
+      "label": "Start Date Baseline",
+      "mandatory": false
+    },
+    {
+      "code": "startdatevariance",
+      "type": "FLOAT",
+      "label": "Start Date Variance",
+      "mandatory": false
+    },
+    {
+      "code": "starttime",
+      "type": "TIMEOFDAY",
+      "label": "Start Time",
+      "mandatory": false
+    },
+    {
+      "code": "status",
+      "type": "SELECT",
+      "label": "Status",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "successor",
+      "type": "SELECT",
+      "label": "Successor",
+      "mandatory": false,
+      "recordType": "projecttask"
+    },
+    {
+      "code": "successortype",
+      "type": "TEXT",
+      "label": "Successor Type",
+      "mandatory": false
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "label": "Task Name",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "assignee": [
+      {
+        "code": "cost",
+        "type": "CURRENCY",
+        "label": "Cost",
+        "mandatory": false
+      },
+      {
+        "code": "estimatedwork",
+        "type": "FLOAT",
+        "label": "Estimated Work",
+        "mandatory": true
+      },
+      {
+        "code": "id",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "price",
+        "type": "CURRENCY",
+        "label": "Price",
+        "mandatory": false
+      },
+      {
+        "code": "resource",
+        "type": "SELECT",
+        "label": "Resource",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "serviceitem",
+        "type": "SELECT",
+        "label": "Service Item",
+        "mandatory": false,
+        "recordType": "serviceitem"
+      },
+      {
+        "code": "unitcost",
+        "type": "CURRENCY",
+        "label": "Unit Cost",
+        "mandatory": true
+      },
+      {
+        "code": "unitprice",
+        "type": "CURRENCY",
+        "label": "Unit Price",
+        "mandatory": false
+      },
+      {
+        "code": "units",
+        "type": "PERCENT",
+        "label": "Units",
+        "mandatory": false
+      }
+    ],
+    "predecessor": [
+      {
+        "code": "enddate",
+        "type": "DATETIME",
+        "label": "End Date",
+        "mandatory": false
+      },
+      {
+        "code": "startdate",
+        "type": "DATETIME",
+        "label": "Start Date",
+        "mandatory": false
+      },
+      {
+        "code": "task",
+        "type": "SELECT",
+        "label": "Task",
+        "mandatory": true,
+        "recordType": "task"
+      },
+      {
+        "code": "type",
+        "type": "SELECT",
+        "label": "Type",
+        "mandatory": true,
+        "recordType": null
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "assignees",
+      "label": "Assignees"
+    },
+    {
+      "code": "communication",
+      "label": "Communication"
+    },
+    {
+      "code": "custom",
+      "label": "Custom"
+    },
+    {
+      "code": "history",
+      "label": "History"
+    },
+    {
+      "code": "media",
+      "label": "File Cabinet"
+    },
+    {
+      "code": "predecessors",
+      "label": "Predecessors"
+    },
+    {
+      "code": "time",
+      "label": "Time"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

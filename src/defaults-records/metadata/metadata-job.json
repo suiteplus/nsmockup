@@ -1,0 +1,996 @@
+{
+  "code": "job",
+  "id": 0,
+  "name": "Project",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "accountnumber",
+      "type": "TEXT",
+      "label": "Account",
+      "mandatory": false
+    },
+    {
+      "code": "actualtime",
+      "type": "FLOAT",
+      "label": "Actual Work",
+      "mandatory": false
+    },
+    {
+      "code": "address",
+      "type": "TEXT",
+      "label": "Address",
+      "mandatory": false
+    },
+    {
+      "code": "address1",
+      "type": "TEXT",
+      "label": "Address 1",
+      "mandatory": false
+    },
+    {
+      "code": "address2",
+      "type": "TEXT",
+      "label": "Address 2",
+      "mandatory": false
+    },
+    {
+      "code": "address3",
+      "type": "TEXT",
+      "label": "Address 3",
+      "mandatory": false
+    },
+    {
+      "code": "addressee",
+      "type": "TEXT",
+      "label": "Addressee",
+      "mandatory": false
+    },
+    {
+      "code": "addressinternalid",
+      "type": "TEXT",
+      "label": "Address Internal ID",
+      "mandatory": false
+    },
+    {
+      "code": "addresslabel",
+      "type": "TEXT",
+      "label": "Address Label",
+      "mandatory": false
+    },
+    {
+      "code": "addressphone",
+      "type": "TEXT",
+      "label": "Address Phone",
+      "mandatory": false
+    },
+    {
+      "code": "allocatepayrollexpenses",
+      "type": "CHECKBOX",
+      "label": "Allocate Payroll Expenses",
+      "mandatory": false
+    },
+    {
+      "code": "allowallresourcesfortasks",
+      "type": "CHECKBOX",
+      "label": "Display All Resources for ProjectTask Assignment",
+      "mandatory": false
+    },
+    {
+      "code": "allowexpenses",
+      "type": "CHECKBOX",
+      "label": "Allow Expenses",
+      "mandatory": false
+    },
+    {
+      "code": "allowtime",
+      "type": "CHECKBOX",
+      "label": "Allow Time Entry",
+      "mandatory": false
+    },
+    {
+      "code": "altcontact",
+      "type": "TEXT",
+      "label": "Alt. Contact",
+      "mandatory": false
+    },
+    {
+      "code": "altemail",
+      "type": "EMAIL",
+      "label": "Alt. Email",
+      "mandatory": false
+    },
+    {
+      "code": "altname",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "altphone",
+      "type": "PHONE",
+      "label": "Office Phone",
+      "mandatory": false
+    },
+    {
+      "code": "applyprojectexpensetypetoall",
+      "type": "CHECKBOX",
+      "label": "Apply to all time entries",
+      "mandatory": false
+    },
+    {
+      "code": "attention",
+      "type": "TEXT",
+      "label": "Attention",
+      "mandatory": false
+    },
+    {
+      "code": "autoname",
+      "type": "CHECKBOX",
+      "label": "Auto",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress1",
+      "type": "TEXT",
+      "label": "Billing Address 1",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress2",
+      "type": "TEXT",
+      "label": "Billing Address 2",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress3",
+      "type": "TEXT",
+      "label": "Billing Address 3",
+      "mandatory": false
+    },
+    {
+      "code": "billaddressee",
+      "type": "TEXT",
+      "label": "Billing Addressee",
+      "mandatory": false
+    },
+    {
+      "code": "billattention",
+      "type": "TEXT",
+      "label": "Billing Attention",
+      "mandatory": false
+    },
+    {
+      "code": "billcity",
+      "type": "TEXT",
+      "label": "Billing City",
+      "mandatory": false
+    },
+    {
+      "code": "billcountry",
+      "type": "SELECT",
+      "label": "Billing Country",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "billcountrycode",
+      "type": "TEXT",
+      "label": "Billing Country Code",
+      "mandatory": false
+    },
+    {
+      "code": "billingschedule",
+      "type": "SELECT",
+      "label": "Billing Schedule",
+      "mandatory": false,
+      "recordType": "billingschedule"
+    },
+    {
+      "code": "billphone",
+      "type": "TEXT",
+      "label": "Billing Phone",
+      "mandatory": false
+    },
+    {
+      "code": "billstate",
+      "type": "SELECT",
+      "label": "Billing State/Province",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "billzipcode",
+      "type": "TEXT",
+      "label": "Billing Zip",
+      "mandatory": false
+    },
+    {
+      "code": "calculatedenddate",
+      "type": "DATE",
+      "label": "Calculated End Date",
+      "mandatory": false
+    },
+    {
+      "code": "calculatedenddatebaseline",
+      "type": "DATE",
+      "label": "Calculated End Date Baseline",
+      "mandatory": false
+    },
+    {
+      "code": "campaignresponse",
+      "type": "SELECT",
+      "label": "Campaign Response",
+      "mandatory": false,
+      "recordType": "campaign"
+    },
+    {
+      "code": "category",
+      "type": "SELECT",
+      "label": "Category",
+      "mandatory": false,
+      "help": "Select the category that applies to this customer.\nTo add choices to this list, go to <_TABNAME=EDIT_ACCOUNTINGOTHERLIST_> &gt <_TASKCATEGORY= ACCOUNTINGOTHERLIST _> &gt; New &gt; Customer Category.\nFor example, you might create categories of wholesale, retail, and online.",
+      "recordType": null
+    },
+    {
+      "code": "city",
+      "type": "TEXT",
+      "label": "City",
+      "mandatory": false
+    },
+    {
+      "code": "comments",
+      "type": "TEXT",
+      "label": "Comments",
+      "mandatory": false
+    },
+    {
+      "code": "companyname",
+      "type": "TEXT",
+      "label": "Job Name",
+      "mandatory": false
+    },
+    {
+      "code": "contact",
+      "type": "TEXT",
+      "label": "Primary Contact",
+      "mandatory": false
+    },
+    {
+      "code": "contactprimary",
+      "type": "SELECT",
+      "label": "Contact (Primary)",
+      "mandatory": false,
+      "recordType": "contact"
+    },
+    {
+      "code": "country",
+      "type": "SELECT",
+      "label": "Country",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "countrycode",
+      "type": "TEXT",
+      "label": "Country Code",
+      "mandatory": false
+    },
+    {
+      "code": "county",
+      "type": "TEXT",
+      "label": "County/State",
+      "mandatory": false
+    },
+    {
+      "code": "currency",
+      "type": "SELECT",
+      "label": "Currency",
+      "mandatory": false,
+      "help": "The customer's currency is shown here. This is the currency used for all transactions and records created for this project.\n\nIf you use the Multi-Currency Customers feature, select the customer's transaction currency you want to use for this project and its associated records and transactions.",
+      "recordType": "currency"
+    },
+    {
+      "code": "currencyprecision",
+      "type": "TEXT",
+      "label": "Currency Precision",
+      "mandatory": false
+    },
+    {
+      "code": "customer",
+      "type": "SELECT",
+      "label": "Customer",
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "datecreated",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "email",
+      "type": "EMAIL",
+      "label": "Email",
+      "mandatory": false
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "label": "Actual End Date",
+      "mandatory": false
+    },
+    {
+      "code": "entityid",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "entitynumber",
+      "type": "INTEGER",
+      "label": "Number",
+      "mandatory": false
+    },
+    {
+      "code": "entitystatus",
+      "type": "SELECT",
+      "label": "Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "estcost",
+      "type": "CURRENCY",
+      "label": "Estimated Cost",
+      "mandatory": false
+    },
+    {
+      "code": "estenddate",
+      "type": "DATE",
+      "label": "Projected End Date",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedcost",
+      "type": "CURRENCY",
+      "label": "Estimated Cost",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedgrossprofit",
+      "type": "CURRENCY",
+      "label": "Estimated Gross Profit",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedgrossprofitpercent",
+      "type": "PERCENT",
+      "label": "Estimated Gross Profit %",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedlaborcost",
+      "type": "CURRENCY",
+      "label": "Estimated Labor Cost",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedlaborcostbaseline",
+      "type": "CURRENCY",
+      "label": "Estimated Labor Cost Baseline",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedlaborrevenue",
+      "type": "CURRENCY",
+      "label": "Estimated Labor Revenue",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedrevenue",
+      "type": "CURRENCY",
+      "label": "Estimated Revenue",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedtime",
+      "type": "FLOAT",
+      "label": "Initial Time Budget",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedtimeoverride",
+      "type": "FLOAT",
+      "label": "Estimated Work",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedtimeoverridebaseline",
+      "type": "FLOAT",
+      "label": "Estimated Work Baseline",
+      "mandatory": false
+    },
+    {
+      "code": "estimaterevrectemplate",
+      "type": "SELECT",
+      "label": "Rev Rec Forecast Template",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "estrevenue",
+      "type": "CURRENCY",
+      "label": "Estimated Revenue",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "fax",
+      "type": "TEXT",
+      "label": "Fax",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "fxrate",
+      "type": "CURRENCY2",
+      "label": "Exchange Rate",
+      "mandatory": false
+    },
+    {
+      "code": "giveaccess",
+      "type": "CHECKBOX",
+      "label": "Login Access",
+      "mandatory": false
+    },
+    {
+      "code": "globalsubscriptionstatus",
+      "type": "SELECT",
+      "label": "Global Subscription Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "image",
+      "type": "IMAGE",
+      "label": "Image",
+      "mandatory": false
+    },
+    {
+      "code": "includecrmtasksintotals",
+      "type": "CHECKBOX",
+      "label": "Include CRM Tasks in Job Totals",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isbasecurrency",
+      "type": "CHECKBOX",
+      "label": "Base Currency",
+      "mandatory": false
+    },
+    {
+      "code": "isdefaultbilling",
+      "type": "CHECKBOX",
+      "label": "Default Billing Address",
+      "mandatory": false
+    },
+    {
+      "code": "isdefaultshipping",
+      "type": "CHECKBOX",
+      "label": "Default Shipping Address",
+      "mandatory": false
+    },
+    {
+      "code": "isexempttime",
+      "type": "CHECKBOX",
+      "label": "Classify Time as Exempt",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "isjob",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "isproductivetime",
+      "type": "CHECKBOX",
+      "label": "Classify Time as Productive",
+      "mandatory": false
+    },
+    {
+      "code": "isutilizedtime",
+      "type": "CHECKBOX",
+      "label": "Classify Time as Utilized",
+      "mandatory": false
+    },
+    {
+      "code": "jobbillingtype",
+      "type": "SELECT",
+      "label": "Billing Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "jobitem",
+      "type": "SELECT",
+      "label": "Billing Item",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "jobprice",
+      "type": "CURRENCY",
+      "label": "Job Price",
+      "mandatory": false
+    },
+    {
+      "code": "jobresource",
+      "type": "SELECT",
+      "label": "Job Resource",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "jobresourcerole",
+      "type": "SELECT",
+      "label": "Job Resource Role",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "jobtype",
+      "type": "SELECT",
+      "label": "Project Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "language",
+      "type": "SELECT",
+      "label": "Language",
+      "mandatory": false,
+      "help": "Select the language to use to display all project records and invoices.",
+      "recordType": null
+    },
+    {
+      "code": "lastbaselinedate",
+      "type": "DATE",
+      "label": "Last Baseline Date",
+      "mandatory": false
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "lastviewed",
+      "type": "DATETIME",
+      "label": "Last Viewed",
+      "mandatory": false
+    },
+    {
+      "code": "level",
+      "type": "SELECT",
+      "label": "Level",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "limittimetoassignees",
+      "type": "CHECKBOX",
+      "label": "Limit Time and Expenses to Resources",
+      "mandatory": false
+    },
+    {
+      "code": "materializetime",
+      "type": "CHECKBOX",
+      "label": "Create Planned Time Entries",
+      "mandatory": false
+    },
+    {
+      "code": "messages",
+      "type": "SELECT",
+      "label": "Messages",
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagesfrom",
+      "type": "SELECT",
+      "label": "Messages From",
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagesto",
+      "type": "SELECT",
+      "label": "Messages To",
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "otherrelationships",
+      "type": "SELECT",
+      "label": "Other Relationships",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "parent",
+      "type": "SELECT",
+      "label": "Customer",
+      "mandatory": false,
+      "help": "Enter the name of the customer for this project. If you are creating a subproject, then enter a customer and project in this field.",
+      "recordType": "customer"
+    },
+    {
+      "code": "pctcomplete",
+      "type": "INTEGER",
+      "label": "Percent Complete",
+      "mandatory": false
+    },
+    {
+      "code": "percentcomplete",
+      "type": "PERCENT",
+      "label": "Percent Complete",
+      "mandatory": false
+    },
+    {
+      "code": "percenttimecomplete",
+      "type": "PERCENT",
+      "label": "Percent Time Complete",
+      "mandatory": false
+    },
+    {
+      "code": "permission",
+      "type": "SELECT",
+      "label": "Permission",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "phone",
+      "type": "PHONE",
+      "label": "Phone",
+      "mandatory": false
+    },
+    {
+      "code": "phoneticname",
+      "type": "TEXT",
+      "label": "Phonetic Name",
+      "mandatory": false
+    },
+    {
+      "code": "projectedenddate",
+      "type": "DATE",
+      "label": "Projected End Date",
+      "mandatory": false
+    },
+    {
+      "code": "projectedenddatebaseline",
+      "type": "DATE",
+      "label": "Projected End Date Baseline",
+      "mandatory": false
+    },
+    {
+      "code": "projecttask",
+      "type": "SELECT",
+      "label": "Project Task",
+      "mandatory": false,
+      "recordType": "projecttask"
+    },
+    {
+      "code": "representingsubsidiary",
+      "type": "SELECT",
+      "label": "Represents Subsidiary",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipaddress1",
+      "type": "TEXT",
+      "label": "Shipping Address 1",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress2",
+      "type": "TEXT",
+      "label": "Shipping Address 2",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress3",
+      "type": "TEXT",
+      "label": "Shipping Address 3",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddressee",
+      "type": "TEXT",
+      "label": "Shipping Addressee",
+      "mandatory": false
+    },
+    {
+      "code": "shipattention",
+      "type": "TEXT",
+      "label": "Shipping Attention",
+      "mandatory": false
+    },
+    {
+      "code": "shipcity",
+      "type": "TEXT",
+      "label": "Shipping City",
+      "mandatory": false
+    },
+    {
+      "code": "shipcountry",
+      "type": "SELECT",
+      "label": "Shipping Country",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipcountrycode",
+      "type": "TEXT",
+      "label": "Shipping Country Code",
+      "mandatory": false
+    },
+    {
+      "code": "shipphone",
+      "type": "TEXT",
+      "label": "Shipping Phone",
+      "mandatory": false
+    },
+    {
+      "code": "shipstate",
+      "type": "TEXT",
+      "label": "Shipping State/Province",
+      "mandatory": false
+    },
+    {
+      "code": "shipzip",
+      "type": "TEXT",
+      "label": "Shipping Zip",
+      "mandatory": false
+    },
+    {
+      "code": "stage",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "label": "Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "startdatebaseline",
+      "type": "DATE",
+      "label": "Start Date Baseline",
+      "mandatory": false
+    },
+    {
+      "code": "state",
+      "type": "SELECT",
+      "label": "State/Province",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "statedisplayname",
+      "type": "SELECT",
+      "label": "State/Province Display Name",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "status",
+      "type": "SELECT",
+      "label": "Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subscription",
+      "type": "SELECT",
+      "label": "Subscription",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subscriptiondate",
+      "type": "DATETIME",
+      "label": "Subscription Date",
+      "mandatory": false
+    },
+    {
+      "code": "subscriptionstatus",
+      "type": "CHECKBOX",
+      "label": "Subscription Status",
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiary",
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "subsidiarynohierarchy",
+      "type": "SELECT",
+      "label": "Subsidiary (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "task",
+      "type": "SELECT",
+      "label": "Task",
+      "mandatory": false,
+      "recordType": "task"
+    },
+    {
+      "code": "timeremaining",
+      "type": "FLOAT",
+      "label": "Remaining Work",
+      "mandatory": false
+    },
+    {
+      "code": "type",
+      "type": "SELECT",
+      "label": "Entity Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "zipcode",
+      "type": "TEXT",
+      "label": "Zip Code",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "jobresources": [
+      {
+        "code": "email",
+        "type": "EMAIL",
+        "label": "Email",
+        "mandatory": false
+      },
+      {
+        "code": "jobresource",
+        "type": "SELECT",
+        "label": "Name",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "role",
+        "type": "SELECT",
+        "label": "Role",
+        "mandatory": true,
+        "recordType": null
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "address",
+      "label": "Address"
+    },
+    {
+      "code": "custom",
+      "label": "Custom"
+    },
+    {
+      "code": "financial",
+      "label": "Financial"
+    },
+    {
+      "code": "general",
+      "label": "General"
+    },
+    {
+      "code": "info",
+      "label": "Info"
+    },
+    {
+      "code": "resources",
+      "label": "Resources"
+    },
+    {
+      "code": "schedule",
+      "label": "Schedule"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

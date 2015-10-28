@@ -1,0 +1,2716 @@
+{
+  "code": "workorder",
+  "id": 0,
+  "name": "Work Order",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "abbrev",
+      "type": "TEXT",
+      "label": "Abbrev. Type",
+      "mandatory": false
+    },
+    {
+      "code": "account",
+      "type": "SELECT",
+      "label": "Account",
+      "mandatory": false,
+      "recordType": "account"
+    },
+    {
+      "code": "accountingperiod",
+      "type": "SELECT",
+      "label": "Accounting Period",
+      "mandatory": false,
+      "recordType": "accountingperiod"
+    },
+    {
+      "code": "accounttype",
+      "type": "TEXT",
+      "label": "Account Type",
+      "mandatory": false
+    },
+    {
+      "code": "actualshipdate",
+      "type": "DATE",
+      "label": "Actual Ship/Receipt Date",
+      "mandatory": false
+    },
+    {
+      "code": "altsalesamount",
+      "type": "CURRENCY",
+      "label": "Amount (Alt.Sales)",
+      "mandatory": false
+    },
+    {
+      "code": "altsalesnetamount",
+      "type": "CURRENCY",
+      "label": "Amount (Alt.Sales Net)",
+      "mandatory": false
+    },
+    {
+      "code": "amount",
+      "type": "CURRENCY",
+      "label": "Amount",
+      "mandatory": false
+    },
+    {
+      "code": "amountpaid",
+      "type": "CURRENCY",
+      "label": "Amount Paid",
+      "mandatory": false
+    },
+    {
+      "code": "amountremaining",
+      "type": "CURRENCY",
+      "label": "Amount Remaining",
+      "mandatory": false
+    },
+    {
+      "code": "amountunbilled",
+      "type": "CURRENCY",
+      "label": "Amount Unbilled",
+      "mandatory": false
+    },
+    {
+      "code": "anylineitem",
+      "type": "MULTISELECT",
+      "label": "Item On Any Line",
+      "mandatory": false
+    },
+    {
+      "code": "appliedtoforeignamount",
+      "type": "CURRENCY",
+      "label": "Applied To Link Amount (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "appliedtoisfxvariance",
+      "type": "CHECKBOX",
+      "label": "Applied To Link Is FxVariance",
+      "mandatory": false
+    },
+    {
+      "code": "appliedtolinkamount",
+      "type": "CURRENCY",
+      "label": "Applied To Link Amount",
+      "mandatory": false
+    },
+    {
+      "code": "appliedtolinktype",
+      "type": "SELECT",
+      "label": "Applied To Link Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "appliedtotransaction",
+      "type": "SELECT",
+      "label": "Applied To Transaction",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "applyingforeignamount",
+      "type": "CURRENCY",
+      "label": "Applying Link Amount (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "applyingisfxvariance",
+      "type": "CHECKBOX",
+      "label": "Applying Link Is FxVariance",
+      "mandatory": false
+    },
+    {
+      "code": "applyinglinkamount",
+      "type": "CURRENCY",
+      "label": "Applying Link Amount",
+      "mandatory": false
+    },
+    {
+      "code": "applyinglinktype",
+      "type": "SELECT",
+      "label": "Applying Link Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "applyingtransaction",
+      "type": "SELECT",
+      "label": "Applying Transaction",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "approvalstatus",
+      "type": "SELECT",
+      "label": "Approval Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "assemblyitem",
+      "type": "SELECT",
+      "label": "Assembly",
+      "mandatory": true,
+      "recordType": "assemblyitem"
+    },
+    {
+      "code": "authcode",
+      "type": "TEXT",
+      "label": "Auth. Code",
+      "mandatory": false
+    },
+    {
+      "code": "avsstreetmatch",
+      "type": "TEXT",
+      "label": "AVS Street Match",
+      "mandatory": false
+    },
+    {
+      "code": "avszipmatch",
+      "type": "TEXT",
+      "label": "AVS Zip Match",
+      "mandatory": false
+    },
+    {
+      "code": "billable",
+      "type": "CHECKBOX",
+      "label": "Billable",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress",
+      "type": "TEXT",
+      "label": "Billing Address",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress1",
+      "type": "TEXT",
+      "label": "Billing Address 1",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress2",
+      "type": "TEXT",
+      "label": "Billing Address 2",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress3",
+      "type": "TEXT",
+      "label": "Billing Address 3",
+      "mandatory": false
+    },
+    {
+      "code": "billaddressee",
+      "type": "TEXT",
+      "label": "Billing Addressee",
+      "mandatory": false
+    },
+    {
+      "code": "billattention",
+      "type": "TEXT",
+      "label": "Billing Attention",
+      "mandatory": false
+    },
+    {
+      "code": "billcity",
+      "type": "TEXT",
+      "label": "Billing City",
+      "mandatory": false
+    },
+    {
+      "code": "billcountry",
+      "type": "SELECT",
+      "label": "Billing Country",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "billcountrycode",
+      "type": "TEXT",
+      "label": "Billing Country Code",
+      "mandatory": false
+    },
+    {
+      "code": "billcounty",
+      "type": "TEXT",
+      "label": "Billing County/State",
+      "mandatory": false
+    },
+    {
+      "code": "billeddate",
+      "type": "DATE",
+      "label": "Date Billed",
+      "mandatory": false
+    },
+    {
+      "code": "billingamount",
+      "type": "CURRENCY2",
+      "label": "Billing Amount",
+      "mandatory": false
+    },
+    {
+      "code": "billingschedule",
+      "type": "SELECT",
+      "label": "Billing Schedule",
+      "mandatory": false,
+      "recordType": "billingschedule"
+    },
+    {
+      "code": "billingstatus",
+      "type": "CHECKBOX",
+      "label": "Billing Status",
+      "mandatory": false
+    },
+    {
+      "code": "billingtransaction",
+      "type": "SELECT",
+      "label": "Billing Transaction",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "billphone",
+      "type": "TEXT",
+      "label": "Billing Phone",
+      "mandatory": false
+    },
+    {
+      "code": "billstate",
+      "type": "TEXT",
+      "label": "Billing State/Province",
+      "mandatory": false
+    },
+    {
+      "code": "billvariancestatus",
+      "type": "TEXT",
+      "label": "Bill Variance Status",
+      "mandatory": false
+    },
+    {
+      "code": "billzip",
+      "type": "TEXT",
+      "label": "Billing Zip",
+      "mandatory": false
+    },
+    {
+      "code": "binnumber",
+      "type": "TEXT",
+      "label": "Transaction Bin Number",
+      "mandatory": false
+    },
+    {
+      "code": "binnumberquantity",
+      "type": "FLOAT",
+      "label": "Transaction Bin Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "bomquantity",
+      "type": "FLOAT",
+      "label": "BOM Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "buildentireassembly",
+      "type": "CHECKBOX",
+      "label": "Build Sub-Assemblies",
+      "mandatory": false
+    },
+    {
+      "code": "buildvariance",
+      "type": "FLOAT",
+      "label": "Build Variance",
+      "mandatory": false
+    },
+    {
+      "code": "built",
+      "type": "FLOAT",
+      "label": "Built",
+      "mandatory": false
+    },
+    {
+      "code": "cccustomercode",
+      "type": "TEXT",
+      "label": "CC Customer Code",
+      "mandatory": false
+    },
+    {
+      "code": "ccexpdate",
+      "type": "MMYYDATE",
+      "label": "CC Expire Date",
+      "mandatory": false
+    },
+    {
+      "code": "ccexpiredate",
+      "type": "DATE",
+      "label": "CC Expire Date",
+      "mandatory": false
+    },
+    {
+      "code": "ccholdername",
+      "type": "TEXT",
+      "label": "Credit Cardholder Name",
+      "mandatory": false
+    },
+    {
+      "code": "ccname",
+      "type": "TEXT",
+      "label": "Credit Cardholder Name",
+      "mandatory": false
+    },
+    {
+      "code": "ccnumber",
+      "type": "CCNUMBER",
+      "label": "Credit Card Number",
+      "mandatory": false
+    },
+    {
+      "code": "ccstreet",
+      "type": "TEXT",
+      "label": "Card Street",
+      "mandatory": false
+    },
+    {
+      "code": "cczipcode",
+      "type": "TEXT",
+      "label": "Card Zip Code",
+      "mandatory": false
+    },
+    {
+      "code": "class",
+      "type": "SELECT",
+      "label": "Class",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "classnohierarchy",
+      "type": "SELECT",
+      "label": "Class (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "cleared",
+      "type": "CHECKBOX",
+      "label": "Cleared",
+      "mandatory": false
+    },
+    {
+      "code": "closed",
+      "type": "CHECKBOX",
+      "label": "Closed",
+      "mandatory": false
+    },
+    {
+      "code": "closedate",
+      "type": "DATE",
+      "label": "Date Closed",
+      "mandatory": false
+    },
+    {
+      "code": "cogs",
+      "type": "CHECKBOX",
+      "label": "COGS Line",
+      "mandatory": false
+    },
+    {
+      "code": "cogsamount",
+      "type": "CURRENCY2",
+      "label": "COGS Amount",
+      "mandatory": false
+    },
+    {
+      "code": "commissioneffectivedate",
+      "type": "DATE",
+      "label": "Commission Effective Date",
+      "mandatory": false
+    },
+    {
+      "code": "commit",
+      "type": "SELECT",
+      "label": "Commit",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "componentyield",
+      "type": "FLOAT",
+      "label": "Component Yield",
+      "mandatory": false
+    },
+    {
+      "code": "confirmationnumber",
+      "type": "TEXT",
+      "label": "Confirmation Number",
+      "mandatory": false
+    },
+    {
+      "code": "contactprimary",
+      "type": "SELECT",
+      "label": "Contact (Primary)",
+      "mandatory": false,
+      "recordType": "contact"
+    },
+    {
+      "code": "contribution",
+      "type": "PERCENT",
+      "label": "Contribution %",
+      "mandatory": false
+    },
+    {
+      "code": "contributionprimary",
+      "type": "PERCENT",
+      "label": "Primary Sales Rep Contribution %",
+      "mandatory": false
+    },
+    {
+      "code": "costcomponentamount",
+      "type": "CURRENCY",
+      "label": "Cost Component Amount",
+      "mandatory": false
+    },
+    {
+      "code": "costcomponentcategory",
+      "type": "TEXT",
+      "label": "Cost Component Category",
+      "mandatory": false
+    },
+    {
+      "code": "costcomponentitem",
+      "type": "TEXT",
+      "label": "Cost Component Item",
+      "mandatory": false
+    },
+    {
+      "code": "costcomponentquantity",
+      "type": "FLOAT",
+      "label": "Cost Component Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "costcomponentstandardcost",
+      "type": "FLOAT",
+      "label": "Cost Component Standard Cost",
+      "mandatory": false
+    },
+    {
+      "code": "costestimate",
+      "type": "CURRENCY",
+      "label": "Est. Extended Cost (Line)",
+      "mandatory": false
+    },
+    {
+      "code": "costestimaterate",
+      "type": "CURRENCY",
+      "label": "Est. Unit Cost",
+      "mandatory": false
+    },
+    {
+      "code": "costestimatetype",
+      "type": "TEXT",
+      "label": "Cost Estimate Type",
+      "mandatory": false
+    },
+    {
+      "code": "createdby",
+      "type": "SELECT",
+      "label": "Created By",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "createdfrom",
+      "type": "SELECT",
+      "label": "Created From",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "creditamount",
+      "type": "CURRENCY",
+      "label": "Amount (Credit)",
+      "mandatory": false
+    },
+    {
+      "code": "cscmatch",
+      "type": "TEXT",
+      "label": "CSC Match",
+      "mandatory": false
+    },
+    {
+      "code": "currency",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "customer",
+      "type": "SELECT",
+      "label": "Customer",
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "customermain",
+      "type": "SELECT",
+      "label": "Customer (Main Line)",
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "customersubof",
+      "type": "SELECT",
+      "label": "Customer Sub of",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "custtype",
+      "type": "SELECT",
+      "label": "Customer Category",
+      "mandatory": false,
+      "recordType": "customercategory"
+    },
+    {
+      "code": "datecreated",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "daysopen",
+      "type": "INTEGER",
+      "label": "Days Open",
+      "mandatory": false
+    },
+    {
+      "code": "daysoverdue",
+      "type": "INTEGER",
+      "label": "Days Overdue",
+      "mandatory": false
+    },
+    {
+      "code": "debitamount",
+      "type": "CURRENCY",
+      "label": "Amount (Debit)",
+      "mandatory": false
+    },
+    {
+      "code": "deferredrevenue",
+      "type": "CURRENCY",
+      "label": "Amount (Deferred)",
+      "mandatory": false
+    },
+    {
+      "code": "deferrevrec",
+      "type": "CHECKBOX",
+      "label": "Delay Rev. Rec.",
+      "mandatory": false
+    },
+    {
+      "code": "department",
+      "type": "SELECT",
+      "label": "Department",
+      "mandatory": false,
+      "recordType": "department"
+    },
+    {
+      "code": "departmentnohierarchy",
+      "type": "SELECT",
+      "label": "Department (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "depositdate",
+      "type": "DATE",
+      "label": "Date Deposited/Refunded",
+      "mandatory": false
+    },
+    {
+      "code": "deposittransaction",
+      "type": "SELECT",
+      "label": "Deposit/Refund Transaction",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "discountamount",
+      "type": "CURRENCY",
+      "label": "Amount Discount",
+      "mandatory": false
+    },
+    {
+      "code": "draccount",
+      "type": "TEXT",
+      "label": "Deferred Revenue Reclassification Account",
+      "mandatory": false
+    },
+    {
+      "code": "duedate",
+      "type": "DATE",
+      "label": "Due Date/Receive By",
+      "mandatory": false
+    },
+    {
+      "code": "effectiverate",
+      "type": "CURRENCY2",
+      "label": "Effective Rate",
+      "mandatory": false
+    },
+    {
+      "code": "email",
+      "type": "EMAIL",
+      "label": "Email",
+      "mandatory": false
+    },
+    {
+      "code": "employee",
+      "type": "SELECT",
+      "label": "Employee",
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "label": "End Date",
+      "mandatory": false
+    },
+    {
+      "code": "entity",
+      "type": "SELECT",
+      "label": "Customer",
+      "mandatory": false,
+      "recordType": "entity"
+    },
+    {
+      "code": "entitynexus",
+      "type": "SELECT",
+      "label": "Nexus",
+      "mandatory": false,
+      "recordType": "nexus"
+    },
+    {
+      "code": "entitystatus",
+      "type": "SELECT",
+      "label": "Estimate/Opportunity Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "estgrossprofit",
+      "type": "CURRENCY",
+      "label": "Est. Gross Profit (Line)",
+      "mandatory": false
+    },
+    {
+      "code": "estgrossprofitpct",
+      "type": "PERCENT",
+      "label": "Est. Gross Profit Percent (Line)",
+      "mandatory": false
+    },
+    {
+      "code": "estgrossprofitpercent",
+      "type": "PERCENT",
+      "label": "Est. Gross Profit Percent (Transaction)",
+      "mandatory": false
+    },
+    {
+      "code": "exchangerate",
+      "type": "CURRENCY2",
+      "label": "Exchange Rate",
+      "mandatory": false
+    },
+    {
+      "code": "excludecommission",
+      "type": "CHECKBOX",
+      "label": "Exclude Commissions",
+      "mandatory": false
+    },
+    {
+      "code": "excludefromraterequest",
+      "type": "CHECKBOX",
+      "label": "Exclude Item from Rate Request",
+      "mandatory": false
+    },
+    {
+      "code": "expandassembly",
+      "type": "CHECKBOX",
+      "label": "Build Sub-Assemblies",
+      "mandatory": false
+    },
+    {
+      "code": "expectedclosedate",
+      "type": "DATE",
+      "label": "Expected Close",
+      "mandatory": false
+    },
+    {
+      "code": "expectedreceiptdate",
+      "type": "DATE",
+      "label": "Expected Receipt Date",
+      "mandatory": false
+    },
+    {
+      "code": "expensecategory",
+      "type": "SELECT",
+      "label": "Expense Category",
+      "mandatory": false,
+      "recordType": "expensecategory"
+    },
+    {
+      "code": "expensedate",
+      "type": "DATE",
+      "label": "Expense Date",
+      "mandatory": false
+    },
+    {
+      "code": "expreports",
+      "type": "SELECT",
+      "label": "Expense Category",
+      "mandatory": false,
+      "recordType": "expensecategory"
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "finchrg",
+      "type": "CHECKBOX",
+      "label": "Finance Charge",
+      "mandatory": false
+    },
+    {
+      "code": "firmed",
+      "type": "CHECKBOX",
+      "label": "Firmed",
+      "mandatory": false
+    },
+    {
+      "code": "forecasttype",
+      "type": "SELECT",
+      "label": "Forecast Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "fulfillingtransaction",
+      "type": "SELECT",
+      "label": "Fulfilling/Receiving Transaction",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "fxaccount",
+      "type": "TEXT",
+      "label": "Foreign Currency Adjustment Revenue Account",
+      "mandatory": false
+    },
+    {
+      "code": "fxamount",
+      "type": "CURRENCY",
+      "label": "Amount (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "fxcostestimate",
+      "type": "CURRENCY",
+      "label": "Est. Extended Cost (Line) (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "fxcostestimaterate",
+      "type": "CURRENCY",
+      "label": "Est. Unit Cost (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "fxestgrossprofit",
+      "type": "CURRENCY",
+      "label": "Est. Gross Profit (Line) (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "fxtrancostestimate",
+      "type": "CURRENCY",
+      "label": "Est. Extended Cost (Transaction) (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "fxvsoeallocation",
+      "type": "CURRENCY",
+      "label": "VSOE Allocation (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "fxvsoeamount",
+      "type": "CURRENCY",
+      "label": "VSOE Amount (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "fxvsoeprice",
+      "type": "CURRENCY2",
+      "label": "VSOE Price (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "gcoavailabeltocharge",
+      "type": "CURRENCY",
+      "label": "Funds Available to Process",
+      "mandatory": false
+    },
+    {
+      "code": "gcoavailabletorefund",
+      "type": "CURRENCY",
+      "label": "Funds Available to Refund",
+      "mandatory": false
+    },
+    {
+      "code": "gcoavsstreetmatch",
+      "type": "TEXT",
+      "label": "AVS Street Match (Google)",
+      "mandatory": false
+    },
+    {
+      "code": "gcoavszipmatch",
+      "type": "TEXT",
+      "label": "AVS Zip Match (Google)",
+      "mandatory": false
+    },
+    {
+      "code": "gcobuyeraccountage",
+      "type": "INTEGER",
+      "label": "Buyer Account Age",
+      "mandatory": false
+    },
+    {
+      "code": "gcobuyerip",
+      "type": "TEXT",
+      "label": "Buyer IP Address",
+      "mandatory": false
+    },
+    {
+      "code": "gcochargeamount",
+      "type": "CURRENCY",
+      "label": "Pending Charges",
+      "mandatory": false
+    },
+    {
+      "code": "gcochargebackamount",
+      "type": "CURRENCY",
+      "label": "Chargeback Amount",
+      "mandatory": false
+    },
+    {
+      "code": "gcoconfirmedchargedtotal",
+      "type": "CURRENCY",
+      "label": "Charge Amount Confirmed",
+      "mandatory": false
+    },
+    {
+      "code": "gcoconfirmedrefundedtotal",
+      "type": "CURRENCY",
+      "label": "Confirmed Refund Amount",
+      "mandatory": false
+    },
+    {
+      "code": "gcocreditcardnumber",
+      "type": "TEXT",
+      "label": "Credit Card (Google)",
+      "mandatory": false
+    },
+    {
+      "code": "gcocscmatch",
+      "type": "TEXT",
+      "label": "CSC Match (Google)",
+      "mandatory": false
+    },
+    {
+      "code": "gcofinancialstate",
+      "type": "TEXT",
+      "label": "Google Order Financial State",
+      "mandatory": false
+    },
+    {
+      "code": "gcofulfillmentstate",
+      "type": "TEXT",
+      "label": "Google Order Fulfillment State",
+      "mandatory": false
+    },
+    {
+      "code": "gcoorderid",
+      "type": "TEXT",
+      "label": "Google Order ID",
+      "mandatory": false
+    },
+    {
+      "code": "gcoordertotal",
+      "type": "CURRENCY",
+      "label": "Google Order Total",
+      "mandatory": false
+    },
+    {
+      "code": "gcopromotionamount",
+      "type": "CURRENCY",
+      "label": "Google Checkout Promotion Amount",
+      "mandatory": false
+    },
+    {
+      "code": "gcopromotionname",
+      "type": "TEXT",
+      "label": "Google Checkout Promotion",
+      "mandatory": false
+    },
+    {
+      "code": "gcorefundamount",
+      "type": "CURRENCY",
+      "label": "Pending Refund Amount",
+      "mandatory": false
+    },
+    {
+      "code": "gcoshippingtotal",
+      "type": "CURRENCY",
+      "label": "Google Shipping Total",
+      "mandatory": false
+    },
+    {
+      "code": "gcostatechangeddetail",
+      "type": "TEXT",
+      "label": "Reason for Cancellation",
+      "mandatory": false
+    },
+    {
+      "code": "giftcert",
+      "type": "TEXT",
+      "label": "Gift Certificate",
+      "mandatory": false
+    },
+    {
+      "code": "giftcertificate",
+      "type": "TEXT",
+      "label": "Gift Certificate",
+      "mandatory": false
+    },
+    {
+      "code": "grossamount",
+      "type": "CURRENCY",
+      "label": "Amount (Gross)",
+      "mandatory": false
+    },
+    {
+      "code": "includeinforecast",
+      "type": "CHECKBOX",
+      "label": "Include in Forecast",
+      "mandatory": false
+    },
+    {
+      "code": "intercostatus",
+      "type": "SELECT",
+      "label": "Intercompany Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "intercotransaction",
+      "type": "TEXT",
+      "label": "Paired Intercompany Transaction",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "inventorydetail",
+      "type": "SELECT",
+      "label": "Inventory Detail",
+      "mandatory": false,
+      "recordType": "inventorydetail"
+    },
+    {
+      "code": "invsoebundle",
+      "type": "CHECKBOX",
+      "label": "In VSOE Bundle",
+      "mandatory": false
+    },
+    {
+      "code": "isallocation",
+      "type": "CHECKBOX",
+      "label": "Is Allocation",
+      "mandatory": false
+    },
+    {
+      "code": "isbackflush",
+      "type": "CHECKBOX",
+      "label": "Backflush",
+      "mandatory": false
+    },
+    {
+      "code": "isgcochargeback",
+      "type": "CHECKBOX",
+      "label": "Chargeback",
+      "mandatory": false
+    },
+    {
+      "code": "isgcochargeconfirmed",
+      "type": "CHECKBOX",
+      "label": "Charge Confirmed",
+      "mandatory": false
+    },
+    {
+      "code": "isgcopaymentguaranteed",
+      "type": "CHECKBOX",
+      "label": "Payment Guaranteed by Google",
+      "mandatory": false
+    },
+    {
+      "code": "isgcorefundconfirmed",
+      "type": "CHECKBOX",
+      "label": "Refund Confirmed",
+      "mandatory": false
+    },
+    {
+      "code": "isintercompanyadjustment",
+      "type": "CHECKBOX",
+      "label": "Is Intercompany Adjustment",
+      "mandatory": false
+    },
+    {
+      "code": "ispaypalmeth",
+      "type": "CHECKBOX",
+      "label": "Is PayPal Payment Method",
+      "mandatory": false
+    },
+    {
+      "code": "isreversal",
+      "type": "CHECKBOX",
+      "label": "Is Reversal",
+      "mandatory": false
+    },
+    {
+      "code": "isrevrectransaction",
+      "type": "CHECKBOX",
+      "label": "Is Amortization/Revenue Recognition",
+      "mandatory": false
+    },
+    {
+      "code": "isscrap",
+      "type": "CHECKBOX",
+      "label": "Is Scrap",
+      "mandatory": false
+    },
+    {
+      "code": "isshipaddress",
+      "type": "CHECKBOX",
+      "label": "Residential Address",
+      "mandatory": false
+    },
+    {
+      "code": "istransferpricecosting",
+      "type": "CHECKBOX",
+      "label": "Use Item Cost as Transfer Cost",
+      "mandatory": false
+    },
+    {
+      "code": "isvsoealloc",
+      "type": "CHECKBOX",
+      "label": "VSOE Allocation Line",
+      "mandatory": false
+    },
+    {
+      "code": "iswip",
+      "type": "CHECKBOX",
+      "label": "WIP",
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": false,
+      "recordType": "item"
+    },
+    {
+      "code": "itemnumber",
+      "type": "SELECT",
+      "label": "Item Number",
+      "mandatory": false,
+      "recordType": "itemnumber"
+    },
+    {
+      "code": "itemrevision",
+      "type": "SELECT",
+      "label": "Item Revision",
+      "mandatory": false,
+      "recordType": "itemrevision"
+    },
+    {
+      "code": "itemsubof",
+      "type": "SELECT",
+      "label": "Item Sub of",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "job",
+      "type": "SELECT",
+      "label": "Project",
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "jobmain",
+      "type": "SELECT",
+      "label": "Job (Main Line)",
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "lastviewed",
+      "type": "DATETIME",
+      "label": "Last Viewed",
+      "mandatory": false
+    },
+    {
+      "code": "leadsource",
+      "type": "SELECT",
+      "label": "Lead Source",
+      "mandatory": false,
+      "recordType": "campaign"
+    },
+    {
+      "code": "line",
+      "type": "INTEGER",
+      "label": "Line ID",
+      "mandatory": false
+    },
+    {
+      "code": "linesequencenumber",
+      "type": "INTEGER",
+      "label": "Line Sequence Number",
+      "mandatory": false
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "label": "Location",
+      "mandatory": false,
+      "recordType": "location"
+    },
+    {
+      "code": "locationnohierarchy",
+      "type": "SELECT",
+      "label": "Location (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "mainline",
+      "type": "TEXT",
+      "label": "*",
+      "mandatory": false
+    },
+    {
+      "code": "mainname",
+      "type": "SELECT",
+      "label": "Main Line Name",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "matchbilltoreceipt",
+      "type": "CHECKBOX",
+      "label": "Match Bill To Receipt",
+      "mandatory": false
+    },
+    {
+      "code": "memo",
+      "type": "TEXT",
+      "label": "Memo",
+      "mandatory": false
+    },
+    {
+      "code": "memomain",
+      "type": "TEXT",
+      "label": "Memo (Main)",
+      "mandatory": false
+    },
+    {
+      "code": "memorized",
+      "type": "CHECKBOX",
+      "label": "Memorized",
+      "mandatory": false
+    },
+    {
+      "code": "merchantaccount",
+      "type": "TEXT",
+      "label": "Credit Card Processor",
+      "mandatory": false
+    },
+    {
+      "code": "message",
+      "type": "TEXT",
+      "label": "Message",
+      "mandatory": false
+    },
+    {
+      "code": "messages",
+      "type": "SELECT",
+      "label": "Messages",
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "multisubsidiary",
+      "type": "CHECKBOX",
+      "label": "Intercompany",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "netamount",
+      "type": "CURRENCY",
+      "label": "Amount (Net)",
+      "mandatory": false
+    },
+    {
+      "code": "netamountnotax",
+      "type": "CURRENCY",
+      "label": "Amount (Net of Tax)",
+      "mandatory": false
+    },
+    {
+      "code": "nextapprover",
+      "type": "SELECT",
+      "label": "Next Approver",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "nextbilldate",
+      "type": "DATE",
+      "label": "Next Bill Date",
+      "mandatory": false
+    },
+    {
+      "code": "nexus",
+      "type": "SELECT",
+      "label": "Nexus",
+      "mandatory": false,
+      "recordType": "nexus"
+    },
+    {
+      "code": "nonreimbursable",
+      "type": "CHECKBOX",
+      "label": "Non-reimbursable",
+      "mandatory": false
+    },
+    {
+      "code": "number",
+      "type": "INTEGER",
+      "label": "Number",
+      "mandatory": false
+    },
+    {
+      "code": "opportunity",
+      "type": "SELECT",
+      "label": "Opportunity",
+      "mandatory": false,
+      "recordType": "opportunity"
+    },
+    {
+      "code": "options",
+      "type": "NAMEVALUELIST",
+      "label": "Options",
+      "mandatory": false
+    },
+    {
+      "code": "orderstatus",
+      "type": "TEXT",
+      "label": "Status",
+      "mandatory": false
+    },
+    {
+      "code": "originator",
+      "type": "SELECT",
+      "label": "Originator",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "otherrefnum",
+      "type": "TEXT",
+      "label": "PO/Check Number",
+      "mandatory": false
+    },
+    {
+      "code": "packagecount",
+      "type": "INTEGER",
+      "label": "Package Count",
+      "mandatory": false
+    },
+    {
+      "code": "paidamount",
+      "type": "CURRENCY2",
+      "label": "Paid Amount",
+      "mandatory": false
+    },
+    {
+      "code": "paidtransaction",
+      "type": "SELECT",
+      "label": "Paid Transaction",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "partner",
+      "type": "SELECT",
+      "label": "Partner",
+      "mandatory": false,
+      "recordType": "partner"
+    },
+    {
+      "code": "partnercontribution",
+      "type": "PERCENT",
+      "label": "Partner Contribution %",
+      "mandatory": false
+    },
+    {
+      "code": "partnerrole",
+      "type": "SELECT",
+      "label": "Partner Role",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "partnerteammember",
+      "type": "SELECT",
+      "label": "Partner Team Member",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "payingamount",
+      "type": "CURRENCY2",
+      "label": "Paying Amount",
+      "mandatory": false
+    },
+    {
+      "code": "payingtransaction",
+      "type": "SELECT",
+      "label": "Paying Transaction",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "paymenteventdate",
+      "type": "DATETIME",
+      "label": "Payment Event Date",
+      "mandatory": false
+    },
+    {
+      "code": "paymenteventholdreason",
+      "type": "TEXT",
+      "label": "Payment Event Hold Reason",
+      "mandatory": false
+    },
+    {
+      "code": "paymenteventpurchasecardused",
+      "type": "CHECKBOX",
+      "label": "Payment Event Purchase Card Used",
+      "mandatory": false
+    },
+    {
+      "code": "paymenteventpurchasedatasent",
+      "type": "CHECKBOX",
+      "label": "Payment Event Purchase Data Sent",
+      "mandatory": false
+    },
+    {
+      "code": "paymenteventresult",
+      "type": "TEXT",
+      "label": "Payment Event Result",
+      "mandatory": false
+    },
+    {
+      "code": "paymenteventtype",
+      "type": "TEXT",
+      "label": "Payment Event Type",
+      "mandatory": false
+    },
+    {
+      "code": "paymentmethod",
+      "type": "SELECT",
+      "label": "Payment Method",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "paypalpending",
+      "type": "CHECKBOX",
+      "label": "Pending PayPal Authorization",
+      "mandatory": false
+    },
+    {
+      "code": "paypalstatus",
+      "type": "TEXT",
+      "label": "PayPal Payment Status",
+      "mandatory": false
+    },
+    {
+      "code": "paypaltranid",
+      "type": "TEXT",
+      "label": "PayPal Transaction ID",
+      "mandatory": false
+    },
+    {
+      "code": "payrollbatch",
+      "type": "TEXT",
+      "label": "Payroll Batch",
+      "mandatory": false
+    },
+    {
+      "code": "payrollitem",
+      "type": "SELECT",
+      "label": "Payroll Item",
+      "mandatory": false,
+      "recordType": "payrollitem"
+    },
+    {
+      "code": "pnrefnum",
+      "type": "TEXT",
+      "label": "P/N Ref",
+      "mandatory": false
+    },
+    {
+      "code": "poastext",
+      "type": "TEXT",
+      "label": "PO/Check ID",
+      "mandatory": false
+    },
+    {
+      "code": "porate",
+      "type": "CURRENCY2",
+      "label": "PO Rate",
+      "mandatory": false
+    },
+    {
+      "code": "posting",
+      "type": "CHECKBOX",
+      "label": "Posting",
+      "mandatory": false
+    },
+    {
+      "code": "postingperiod",
+      "type": "PERIOD",
+      "label": "Period",
+      "mandatory": false
+    },
+    {
+      "code": "pricelevel",
+      "type": "SELECT",
+      "label": "Price Level",
+      "mandatory": false,
+      "recordType": "pricelevel"
+    },
+    {
+      "code": "print",
+      "type": "TEXT",
+      "label": "Print",
+      "mandatory": false
+    },
+    {
+      "code": "printedpickingticket",
+      "type": "CHECKBOX",
+      "label": "Printed Picking Ticket",
+      "mandatory": false
+    },
+    {
+      "code": "probability",
+      "type": "PERCENT",
+      "label": "Probability",
+      "mandatory": false
+    },
+    {
+      "code": "projectedamount",
+      "type": "CURRENCY",
+      "label": "Projected Total",
+      "mandatory": false
+    },
+    {
+      "code": "promocode",
+      "type": "SELECT",
+      "label": "Promotion",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "purchaseorder",
+      "type": "SELECT",
+      "label": "Purchase Order",
+      "mandatory": false,
+      "recordType": "purchaseorder"
+    },
+    {
+      "code": "quantity",
+      "type": "FLOAT",
+      "label": "Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "quantitybilled",
+      "type": "FLOAT",
+      "label": "Quantity Billed",
+      "mandatory": false
+    },
+    {
+      "code": "quantitycommitted",
+      "type": "FLOAT",
+      "label": "Quantity Committed",
+      "mandatory": false
+    },
+    {
+      "code": "quantitypacked",
+      "type": "FLOAT",
+      "label": "Quantity Packed",
+      "mandatory": false
+    },
+    {
+      "code": "quantitypicked",
+      "type": "FLOAT",
+      "label": "Quantity Picked",
+      "mandatory": false
+    },
+    {
+      "code": "quantityrevcommitted",
+      "type": "FLOAT",
+      "label": "Quantity Rev. Committed",
+      "mandatory": false
+    },
+    {
+      "code": "quantityshiprecv",
+      "type": "FLOAT",
+      "label": "Quantity Fulfilled/Received",
+      "mandatory": false
+    },
+    {
+      "code": "quantityuom",
+      "type": "FLOAT",
+      "label": "Quantity in Transaction Units",
+      "mandatory": false
+    },
+    {
+      "code": "rate",
+      "type": "CURRENCY2",
+      "label": "Item Rate",
+      "mandatory": false
+    },
+    {
+      "code": "realizedgainpostingtransaction",
+      "type": "SELECT",
+      "label": "Realized Gain Posting Transaction",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "recognizedrevenue",
+      "type": "CURRENCY",
+      "label": "Amount (Recognized)",
+      "mandatory": false
+    },
+    {
+      "code": "recordtype",
+      "type": "TEXT",
+      "label": "Record Type",
+      "mandatory": false
+    },
+    {
+      "code": "requestor",
+      "type": "SELECT",
+      "label": "Requestor",
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "revcommitstatus",
+      "type": "TEXT",
+      "label": "Rev. Commit. Status",
+      "mandatory": false
+    },
+    {
+      "code": "revcommittingstatus",
+      "type": "CHECKBOX",
+      "label": "Revenue Committing Status",
+      "mandatory": false
+    },
+    {
+      "code": "revcommittingtransaction",
+      "type": "SELECT",
+      "label": "Revenue Committing Transaction",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "revenuestatus",
+      "type": "TEXT",
+      "label": "Revenue Status",
+      "mandatory": false
+    },
+    {
+      "code": "reversaldate",
+      "type": "DATE",
+      "label": "Reversal Date",
+      "mandatory": false
+    },
+    {
+      "code": "reversalnumber",
+      "type": "TEXT",
+      "label": "Reversal Number",
+      "mandatory": false
+    },
+    {
+      "code": "revision",
+      "type": "SELECT",
+      "label": "Revision",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "revisionmemo",
+      "type": "TEXTAREA",
+      "label": "Revision Memo",
+      "mandatory": false
+    },
+    {
+      "code": "revrecenddate",
+      "type": "DATE",
+      "label": "Rev. Rec. End Date",
+      "mandatory": false
+    },
+    {
+      "code": "revreconrevcommitment",
+      "type": "CHECKBOX",
+      "label": "Rev. Rec. On Rev. Committment",
+      "mandatory": false
+    },
+    {
+      "code": "revrecstartdate",
+      "type": "DATE",
+      "label": "Rev. Rec. Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "revrecterminmonths",
+      "type": "INTEGER",
+      "label": "Rev. Rec. Term in Months",
+      "mandatory": false
+    },
+    {
+      "code": "rgaccount",
+      "type": "SELECT",
+      "label": "Realized Gain Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "rgamount",
+      "type": "CURRENCY",
+      "label": "Realized Gain Amount",
+      "mandatory": false
+    },
+    {
+      "code": "saleseffectivedate",
+      "type": "DATE",
+      "label": "Sales Effective Date",
+      "mandatory": false
+    },
+    {
+      "code": "salesgroup",
+      "type": "SELECT",
+      "label": "Choose Team",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "salesorder",
+      "type": "SELECT",
+      "label": "Sales Order",
+      "mandatory": false,
+      "recordType": "salesorder"
+    },
+    {
+      "code": "salesrep",
+      "type": "SELECT",
+      "label": "Sales Rep",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "salesteammember",
+      "type": "SELECT",
+      "label": "Sales Team Member",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "salesteamrole",
+      "type": "SELECT",
+      "label": "Sales Team Role",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "serialnumber",
+      "type": "TEXT",
+      "label": "Transaction Serial/Lot Number",
+      "mandatory": false
+    },
+    {
+      "code": "serialnumbercost",
+      "type": "CURRENCY",
+      "label": "Transaction Serial/Lot Number Amount",
+      "mandatory": false
+    },
+    {
+      "code": "serialnumbercostadjustment",
+      "type": "CURRENCY",
+      "label": "Transaction Serial/Lot Number Cost Adjustment",
+      "mandatory": false
+    },
+    {
+      "code": "serialnumberquantity",
+      "type": "FLOAT",
+      "label": "Transaction Serial/Lot Number Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "serialnumbers",
+      "type": "TEXT",
+      "label": "Serial/Lot Numbers",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress",
+      "type": "TEXT",
+      "label": "Shipping Address",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress1",
+      "type": "TEXT",
+      "label": "Shipping Address 1",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress2",
+      "type": "TEXT",
+      "label": "Shipping Address 2",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress3",
+      "type": "TEXT",
+      "label": "Shipping Address 3",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddressee",
+      "type": "TEXT",
+      "label": "Shipping Addressee",
+      "mandatory": false
+    },
+    {
+      "code": "shipattention",
+      "type": "TEXT",
+      "label": "Shipping Attention",
+      "mandatory": false
+    },
+    {
+      "code": "shipcarrier",
+      "type": "SELECT",
+      "label": "Shipping Carrier",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipcity",
+      "type": "TEXT",
+      "label": "Shipping City",
+      "mandatory": false
+    },
+    {
+      "code": "shipcomplete",
+      "type": "CHECKBOX",
+      "label": "Ship Complete",
+      "mandatory": false
+    },
+    {
+      "code": "shipcountry",
+      "type": "SELECT",
+      "label": "Shipping Country",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipcountrycode",
+      "type": "TEXT",
+      "label": "Shipping Country Code",
+      "mandatory": false
+    },
+    {
+      "code": "shipcounty",
+      "type": "TEXT",
+      "label": "Shipping County/State",
+      "mandatory": false
+    },
+    {
+      "code": "shipdate",
+      "type": "DATE",
+      "label": "Ship Date",
+      "mandatory": false
+    },
+    {
+      "code": "shipgroup",
+      "type": "INTEGER",
+      "label": "Ship Group",
+      "mandatory": false
+    },
+    {
+      "code": "shipmethod",
+      "type": "SELECT",
+      "label": "Ship Via",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipphone",
+      "type": "TEXT",
+      "label": "Shipping Phone",
+      "mandatory": false
+    },
+    {
+      "code": "shipping",
+      "type": "CHECKBOX",
+      "label": "Shipping Line",
+      "mandatory": false
+    },
+    {
+      "code": "shippingamount",
+      "type": "CURRENCY",
+      "label": "Amount (Shipping)",
+      "mandatory": false
+    },
+    {
+      "code": "shiprecvstatus",
+      "type": "CHECKBOX",
+      "label": "Fulfillment/Receipt Status",
+      "mandatory": false
+    },
+    {
+      "code": "shiprecvstatusline",
+      "type": "CHECKBOX",
+      "label": "Fulfilled/Received (Line Level)",
+      "mandatory": false
+    },
+    {
+      "code": "shipstate",
+      "type": "TEXT",
+      "label": "Shipping State/Province",
+      "mandatory": false
+    },
+    {
+      "code": "shipto",
+      "type": "SELECT",
+      "label": "Ship To",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipzip",
+      "type": "TEXT",
+      "label": "Shipping Zip",
+      "mandatory": false
+    },
+    {
+      "code": "signedamount",
+      "type": "CURRENCY",
+      "label": "Amount (Signed)",
+      "mandatory": false
+    },
+    {
+      "code": "source",
+      "type": "TEXT",
+      "label": "Source",
+      "mandatory": false
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "label": "Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "status",
+      "type": "TEXT",
+      "label": "Status",
+      "mandatory": false
+    },
+    {
+      "code": "statusRef",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "statusref",
+      "type": "SELECT",
+      "label": "Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiary",
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "subsidiarynohierarchy",
+      "type": "SELECT",
+      "label": "Subsidiary (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "syncpartnerteams",
+      "type": "CHECKBOX",
+      "label": "Update Customer",
+      "mandatory": false
+    },
+    {
+      "code": "syncsalesteams",
+      "type": "CHECKBOX",
+      "label": "Update Customer",
+      "mandatory": false
+    },
+    {
+      "code": "task",
+      "type": "SELECT",
+      "label": "Task",
+      "mandatory": false,
+      "recordType": "task"
+    },
+    {
+      "code": "taxamount",
+      "type": "CURRENCY",
+      "label": "Amount (Tax)",
+      "mandatory": false
+    },
+    {
+      "code": "taxcode",
+      "type": "SELECT",
+      "label": "Tax Item",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "taxitem",
+      "type": "SELECT",
+      "label": "Tax Item",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "taxline",
+      "type": "CHECKBOX",
+      "label": "Tax Line",
+      "mandatory": false
+    },
+    {
+      "code": "taxperiod",
+      "type": "PERIOD",
+      "label": "Tax Period",
+      "mandatory": false
+    },
+    {
+      "code": "taxrate",
+      "type": "CURRENCY",
+      "label": "Rate",
+      "mandatory": false
+    },
+    {
+      "code": "taxtotal",
+      "type": "CURRENCY",
+      "label": "Amount (Tax Total)",
+      "mandatory": false
+    },
+    {
+      "code": "terminmonths",
+      "type": "INTEGER",
+      "label": "Rev. Rec. Term in Months",
+      "mandatory": false
+    },
+    {
+      "code": "terms",
+      "type": "SELECT",
+      "label": "Terms",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "label": "Title",
+      "mandatory": false
+    },
+    {
+      "code": "tobeemailed",
+      "type": "CHECKBOX",
+      "label": "To Be Emailed",
+      "mandatory": false
+    },
+    {
+      "code": "tobeprinted",
+      "type": "CHECKBOX",
+      "label": "To Be Printed",
+      "mandatory": false
+    },
+    {
+      "code": "tosubsidiary",
+      "type": "SELECT",
+      "label": "To Subsidiary",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "tosubsidiarynohierarchy",
+      "type": "SELECT",
+      "label": "To Subsidiary (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "total",
+      "type": "CURRENCY",
+      "label": "Amount (Transaction Total)",
+      "mandatory": false
+    },
+    {
+      "code": "totalamount",
+      "type": "CURRENCY",
+      "label": "Amount (Transaction Total)",
+      "mandatory": false
+    },
+    {
+      "code": "totalcostestimate",
+      "type": "CURRENCY",
+      "label": "Est. Extended Cost (Transaction)",
+      "mandatory": false
+    },
+    {
+      "code": "trackingnumbers",
+      "type": "TEXT",
+      "label": "Tracking Numbers",
+      "mandatory": false
+    },
+    {
+      "code": "trancostestimate",
+      "type": "CURRENCY",
+      "label": "Est. Extended Cost (Transaction)",
+      "mandatory": false
+    },
+    {
+      "code": "trandate",
+      "type": "DATE",
+      "label": "Date",
+      "mandatory": false
+    },
+    {
+      "code": "tranestgrossprofit",
+      "type": "CURRENCY",
+      "label": "Est. Gross Profit (Transaction)",
+      "mandatory": false
+    },
+    {
+      "code": "tranestgrossprofitpct",
+      "type": "PERCENT",
+      "label": "Est. Gross Profit Percent (Transaction)",
+      "mandatory": false
+    },
+    {
+      "code": "tranfxestgrossprofit",
+      "type": "CURRENCY",
+      "label": "Est. Gross Profit (Transaction) (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "tranid",
+      "type": "TEXT",
+      "label": "Number",
+      "mandatory": false
+    },
+    {
+      "code": "tranisvsoebundle",
+      "type": "CHECKBOX",
+      "label": "Transaction Is VSOE Bundle",
+      "mandatory": false
+    },
+    {
+      "code": "transactiondiscount",
+      "type": "CHECKBOX",
+      "label": "Transaction Discount",
+      "mandatory": false
+    },
+    {
+      "code": "transactionlinetype",
+      "type": "SELECT",
+      "label": "Transaction Line Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "transactionnumber",
+      "type": "TEXT",
+      "label": "Transaction Number",
+      "mandatory": false
+    },
+    {
+      "code": "transferlocation",
+      "type": "SELECT",
+      "label": "To Location",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "transferorderitemline",
+      "type": "TEXT",
+      "label": "Transfer Order Item Line Id",
+      "mandatory": false
+    },
+    {
+      "code": "transferorderquantitycommitted",
+      "type": "FLOAT",
+      "label": "Transfer Order Quantity Committed",
+      "mandatory": false
+    },
+    {
+      "code": "transferorderquantitypacked",
+      "type": "FLOAT",
+      "label": "Transfer Order Quantity Packed",
+      "mandatory": false
+    },
+    {
+      "code": "transferorderquantitypicked",
+      "type": "FLOAT",
+      "label": "Transfer Order Quantity Picked",
+      "mandatory": false
+    },
+    {
+      "code": "transferorderquantityreceived",
+      "type": "FLOAT",
+      "label": "Transfer Order Quantity Received",
+      "mandatory": false
+    },
+    {
+      "code": "transferorderquantityshipped",
+      "type": "FLOAT",
+      "label": "Transfer Order Quantity Shipped",
+      "mandatory": false
+    },
+    {
+      "code": "type",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "unit",
+      "type": "TEXT",
+      "label": "Units",
+      "mandatory": false
+    },
+    {
+      "code": "unitcostoverride",
+      "type": "CURRENCY",
+      "label": "Unit Cost Override",
+      "mandatory": false
+    },
+    {
+      "code": "units",
+      "type": "SELECT",
+      "label": "Units",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "vendor",
+      "type": "SELECT",
+      "label": "Vendor",
+      "mandatory": false,
+      "recordType": "vendor"
+    },
+    {
+      "code": "vendtype",
+      "type": "SELECT",
+      "label": "Vendor Category",
+      "mandatory": false,
+      "recordType": "vendorcategory"
+    },
+    {
+      "code": "visibletocustomer",
+      "type": "CHECKBOX",
+      "label": "Available In Customer Center",
+      "mandatory": false
+    },
+    {
+      "code": "voided",
+      "type": "CHECKBOX",
+      "label": "Voided",
+      "mandatory": false
+    },
+    {
+      "code": "vsoeallocation",
+      "type": "CURRENCY",
+      "label": "VSOE Allocation",
+      "mandatory": false
+    },
+    {
+      "code": "vsoeamount",
+      "type": "CURRENCY",
+      "label": "VSOE Amount",
+      "mandatory": false
+    },
+    {
+      "code": "vsoedeferral",
+      "type": "TEXT",
+      "label": "Deferral",
+      "mandatory": false
+    },
+    {
+      "code": "vsoedelivered",
+      "type": "CHECKBOX",
+      "label": "Delivered",
+      "mandatory": false
+    },
+    {
+      "code": "vsoepermitdiscount",
+      "type": "TEXT",
+      "label": "Permit Discount",
+      "mandatory": false
+    },
+    {
+      "code": "vsoeprice",
+      "type": "CURRENCY2",
+      "label": "VSOE Price",
+      "mandatory": false
+    },
+    {
+      "code": "website",
+      "type": "TEXT",
+      "label": "Web Site",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "accountingbookdetail": [
+      {
+        "code": "exchangerate",
+        "type": "CURRENCY2",
+        "label": "Exchange Rate",
+        "mandatory": true
+      }
+    ],
+    "item": [
+      {
+        "code": "billvariancestatus",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "commitinventory",
+        "type": "SELECT",
+        "label": "Commit",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "createpo",
+        "type": "SELECT",
+        "label": "Create PO",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "createwo",
+        "type": "CHECKBOX",
+        "label": "Create WO",
+        "mandatory": false
+      },
+      {
+        "code": "daysbeforeexpiration",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "deferrevrec",
+        "type": "CHECKBOX",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "description",
+        "type": "TEXTAREA",
+        "label": "Description",
+        "mandatory": false
+      },
+      {
+        "code": "id",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "inventorydetail",
+        "type": "SUMMARY",
+        "label": "Inventory Detail",
+        "mandatory": false
+      },
+      {
+        "code": "isclosed",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "isvsoebundle",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "item",
+        "type": "SELECT",
+        "label": "Item",
+        "mandatory": true,
+        "recordType": "item"
+      },
+      {
+        "code": "itemid",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "itemsubtype",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "itemtype",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "line",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "linenumber",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "matrixtype",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "options",
+        "type": "NAMEVALUELIST",
+        "label": "Options",
+        "mandatory": false
+      },
+      {
+        "code": "orderpriority",
+        "type": "FLOAT",
+        "label": "Order Priority",
+        "mandatory": false
+      },
+      {
+        "code": "porate",
+        "type": "CURRENCY2",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "povendor",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "printitems",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "quantity",
+        "type": "FLOAT",
+        "label": "Quantity",
+        "mandatory": false
+      },
+      {
+        "code": "quantityavailable",
+        "type": "FLOAT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "quantitybackordered",
+        "type": "FLOAT",
+        "label": "Back Ordered",
+        "mandatory": false
+      },
+      {
+        "code": "quantitycommitted",
+        "type": "FLOAT",
+        "label": "Committed",
+        "mandatory": false
+      },
+      {
+        "code": "quantityfulfilled",
+        "type": "FLOAT",
+        "label": "Used in Build",
+        "mandatory": false
+      },
+      {
+        "code": "rate",
+        "type": "RATE",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "rateschedule",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "units",
+        "type": "SELECT",
+        "label": "Units",
+        "mandatory": false,
+        "recordType": null
+      }
+    ],
+    "partners": [
+      {
+        "code": "contribution",
+        "type": "PERCENT",
+        "label": "Contribution %",
+        "mandatory": true
+      },
+      {
+        "code": "id",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "isprimary",
+        "type": "CHECKBOX",
+        "label": "Primary",
+        "mandatory": false
+      },
+      {
+        "code": "partner",
+        "type": "SELECT",
+        "label": "Partner",
+        "mandatory": true,
+        "recordType": "partner"
+      },
+      {
+        "code": "partnerrole",
+        "type": "SELECT",
+        "label": "Partner Role",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "transaction",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      }
+    ],
+    "salesteam": [
+      {
+        "code": "contribution",
+        "type": "PERCENT",
+        "label": "Contribution %",
+        "mandatory": true
+      },
+      {
+        "code": "employee",
+        "type": "SELECT",
+        "label": "Employee",
+        "mandatory": true,
+        "recordType": "employee"
+      },
+      {
+        "code": "id",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "isprimary",
+        "type": "CHECKBOX",
+        "label": "Primary",
+        "mandatory": false
+      },
+      {
+        "code": "issalesrep",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "salesrole",
+        "type": "SELECT",
+        "label": "Sales Role",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "transaction",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "custom",
+      "label": "Custom"
+    },
+    {
+      "code": "history",
+      "label": "History"
+    },
+    {
+      "code": "items",
+      "label": "Items"
+    },
+    {
+      "code": "multipartner",
+      "label": "Partners"
+    },
+    {
+      "code": "teamselling",
+      "label": "Sales Team"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

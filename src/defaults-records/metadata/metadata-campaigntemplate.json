@@ -1,0 +1,143 @@
+{
+  "code": "campaigntemplate",
+  "id": 0,
+  "name": "Campaign Template",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "campaigndomain",
+      "type": "SELECT",
+      "label": "Campaign Domain",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "content",
+      "type": "TEXTAREA",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "description",
+      "type": "TEXTAREA",
+      "label": "Description",
+      "mandatory": false
+    },
+    {
+      "code": "emailassalesrep",
+      "type": "CHECKBOX",
+      "label": "Email as Sales Rep",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "fromemail",
+      "type": "SELECT",
+      "label": "From Email Address",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "fromname",
+      "type": "TEXT",
+      "label": "From Name",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "isprivate",
+      "type": "CHECKBOX",
+      "label": "Private",
+      "mandatory": false
+    },
+    {
+      "code": "mediaitem",
+      "type": "SELECT",
+      "label": "",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "mergefieldstpl_en",
+      "type": "SELECT",
+      "label": "Insert Field",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "mergetypestpl_en",
+      "type": "SELECT",
+      "label": "Field Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "replytoemail",
+      "type": "SELECT",
+      "label": "Reply to Email Address",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "restricttogroup",
+      "type": "SELECT",
+      "label": "Restrict To Group",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subject",
+      "type": "TEXT",
+      "label": "Subject",
+      "mandatory": false
+    },
+    {
+      "code": "trackstatistics",
+      "type": "CHECKBOX",
+      "label": "Track Outgoing Email",
+      "mandatory": false
+    },
+    {
+      "code": "usesmedia",
+      "type": "RADIO",
+      "label": "File",
+      "mandatory": false
+    }
+  ],
+  "tabs": [
+    {
+      "code": "marketing",
+      "label": "Marketing"
+    },
+    {
+      "code": "restriction",
+      "label": "Restrict Access"
+    },
+    {
+      "code": "template",
+      "label": "Template"
+    }
+  ]
+}

@@ -1,0 +1,471 @@
+{
+  "code": "phonecall",
+  "id": 0,
+  "name": "Phone Call",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "accesslevel",
+      "type": "TEXT",
+      "label": "Private",
+      "mandatory": false
+    },
+    {
+      "code": "assigned",
+      "type": "SELECT",
+      "label": "Organizer",
+      "mandatory": true,
+      "help": "References an existing employee record. This defaults to the logged in user.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": null
+    },
+    {
+      "code": "company",
+      "type": "SELECT",
+      "label": "Company",
+      "mandatory": false,
+      "help": "References an existing customer record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": null
+    },
+    {
+      "code": "companycustomer",
+      "type": "SELECT",
+      "label": "Company (Customer)",
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "completeddate",
+      "type": "DATE",
+      "label": "Date Completed",
+      "mandatory": false
+    },
+    {
+      "code": "contact",
+      "type": "SELECT",
+      "label": "Contact",
+      "mandatory": false,
+      "help": "References an existing contact. \nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": "contact"
+    },
+    {
+      "code": "createdby",
+      "type": "SELECT",
+      "label": "Created By",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "employee",
+      "type": "SELECT",
+      "label": "Employee",
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "label": "End Date",
+      "mandatory": false
+    },
+    {
+      "code": "endtime",
+      "type": "TIMEOFDAY",
+      "label": "End Time",
+      "mandatory": true
+    },
+    {
+      "code": "endtimepicker",
+      "type": "SELECT",
+      "label": "",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "group",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isprivate",
+      "type": "CHECKBOX",
+      "label": "Is Private",
+      "mandatory": false
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "lastviewed",
+      "type": "DATETIME",
+      "label": "Last Viewed",
+      "mandatory": false
+    },
+    {
+      "code": "markdone",
+      "type": "TEXT",
+      "label": "Mark",
+      "mandatory": false
+    },
+    {
+      "code": "message",
+      "type": "TEXT",
+      "label": "Comment",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "owner",
+      "type": "CHECKBOX",
+      "label": "Owner",
+      "mandatory": false
+    },
+    {
+      "code": "phone",
+      "type": "PHONE",
+      "label": "Phone Number",
+      "mandatory": false
+    },
+    {
+      "code": "priority",
+      "type": "SELECT",
+      "label": "Priority",
+      "mandatory": true,
+      "help": "Reference to a value in a system list. Values: _low, _medium, _high. This field is currently only available on customized phone call forms.",
+      "recordType": null
+    },
+    {
+      "code": "reminderminutes",
+      "type": "SELECT",
+      "label": "Reminder",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "remindertype",
+      "type": "SELECT",
+      "label": "Reminder Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "sendemail",
+      "type": "CHECKBOX",
+      "label": "Send Email",
+      "mandatory": false
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "label": "Phone Call Date",
+      "mandatory": false
+    },
+    {
+      "code": "starttime",
+      "type": "TIMEOFDAY",
+      "label": "Start Time",
+      "mandatory": false
+    },
+    {
+      "code": "starttimepicker",
+      "type": "SELECT",
+      "label": "",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "status",
+      "type": "SELECT",
+      "label": "Status",
+      "mandatory": true,
+      "help": "Reference to a value in a system list. Values: _scheduled, _completed.",
+      "recordType": null
+    },
+    {
+      "code": "supportcase",
+      "type": "SELECT",
+      "label": "Support Case",
+      "mandatory": false,
+      "recordType": "supportcase"
+    },
+    {
+      "code": "timedevent",
+      "type": "CHECKBOX",
+      "label": "Reserve Time",
+      "mandatory": false
+    },
+    {
+      "code": "timezone",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "label": "Subject",
+      "mandatory": false
+    },
+    {
+      "code": "transaction",
+      "type": "SELECT",
+      "label": "Transaction",
+      "mandatory": false,
+      "help": "References an existing opportunity. This is only settable if the opportunities feature is enabled.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": "transaction"
+    }
+  ],
+  "subLists": {
+    "timeitem": [
+      {
+        "code": "class",
+        "type": "SELECT",
+        "label": "Class",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "customer",
+        "type": "SELECT",
+        "label": "Customer:Project",
+        "mandatory": false,
+        "recordType": "customer"
+      },
+      {
+        "code": "department",
+        "type": "SELECT",
+        "label": "Department",
+        "mandatory": false,
+        "recordType": "department"
+      },
+      {
+        "code": "employee",
+        "type": "SELECT",
+        "label": "Employee",
+        "mandatory": true,
+        "recordType": "employee"
+      },
+      {
+        "code": "hours",
+        "type": "TIMETRACK",
+        "label": "Duration",
+        "mandatory": true
+      },
+      {
+        "code": "id",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "isbillable",
+        "type": "CHECKBOX",
+        "label": "Billable",
+        "mandatory": false
+      },
+      {
+        "code": "isexempt",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "isproductive",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "isutilized",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "item",
+        "type": "SELECT",
+        "label": "Service Item",
+        "mandatory": false,
+        "recordType": "item"
+      },
+      {
+        "code": "jobbillingtype",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "location",
+        "type": "SELECT",
+        "label": "Location",
+        "mandatory": true,
+        "recordType": "location"
+      },
+      {
+        "code": "memo",
+        "type": "TEXTAREA",
+        "label": "Memo",
+        "mandatory": false
+      },
+      {
+        "code": "overriderate",
+        "type": "CHECKBOX",
+        "label": "Lock this Rate",
+        "mandatory": false
+      },
+      {
+        "code": "payrollitem",
+        "type": "SELECT",
+        "label": "Payroll Item",
+        "mandatory": false,
+        "recordType": "payrollitem"
+      },
+      {
+        "code": "price",
+        "type": "SELECT",
+        "label": "Price Level",
+        "mandatory": false,
+        "recordType": "pricelevel"
+      },
+      {
+        "code": "rate",
+        "type": "CURRENCY2",
+        "label": "Rate",
+        "mandatory": false
+      },
+      {
+        "code": "timetype",
+        "type": "SELECT",
+        "label": "Type",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "trandate",
+        "type": "DATE",
+        "label": "Date",
+        "mandatory": true
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "communication",
+      "label": "Communication"
+    },
+    {
+      "code": "contacts",
+      "label": "Contacts"
+    },
+    {
+      "code": "custom",
+      "label": "Custom"
+    },
+    {
+      "code": "history",
+      "label": "History"
+    },
+    {
+      "code": "icalendar",
+      "label": "Availability"
+    },
+    {
+      "code": "media",
+      "label": "File Cabinet"
+    },
+    {
+      "code": "relatedinfo",
+      "label": "Related Info"
+    },
+    {
+      "code": "time",
+      "label": "Time"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

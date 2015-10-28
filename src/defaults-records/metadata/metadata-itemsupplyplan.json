@@ -1,0 +1,198 @@
+{
+  "code": "itemsupplyplan",
+  "id": 0,
+  "name": "Item Supply Plan",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": true,
+      "recordType": "item"
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Plan Modified",
+      "mandatory": false
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "label": "Location",
+      "mandatory": true,
+      "recordType": "location"
+    },
+    {
+      "code": "memo",
+      "type": "TEXT",
+      "label": "Memo",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "ordercreated",
+      "type": "CHECKBOX",
+      "label": "Order Created",
+      "mandatory": false
+    },
+    {
+      "code": "orderdate",
+      "type": "DATE",
+      "label": "Order Date",
+      "mandatory": false
+    },
+    {
+      "code": "ordertype",
+      "type": "SELECT",
+      "label": "Order Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "quantity",
+      "type": "FLOAT",
+      "label": "Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "quantityuom",
+      "type": "FLOAT",
+      "label": "Quantity in Supply Plan Units",
+      "mandatory": false
+    },
+    {
+      "code": "receiptdate",
+      "type": "DATE",
+      "label": "Receipt Date",
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiary",
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "units",
+      "type": "SELECT",
+      "label": "Unit of Measure",
+      "mandatory": false,
+      "recordType": null
+    }
+  ],
+  "subLists": {
+    "order": [
+      {
+        "code": "orderdate",
+        "type": "DATE",
+        "label": "Order Date",
+        "mandatory": true
+      },
+      {
+        "code": "ordertype",
+        "type": "SELECT",
+        "label": "Order Type",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "quantity",
+        "type": "POSFLOAT",
+        "label": "Quantity",
+        "mandatory": true
+      },
+      {
+        "code": "receiptdate",
+        "type": "DATE",
+        "label": "Receipt Date",
+        "mandatory": true
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "orders",
+      "label": "Orders"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

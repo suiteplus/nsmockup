@@ -1,0 +1,192 @@
+{
+  "code": "giftcertificate",
+  "id": 0,
+  "name": "Gift Certificate",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "amountavailablebilled",
+      "type": "CURRENCY",
+      "label": "Amount Remaining (Billed)",
+      "mandatory": false
+    },
+    {
+      "code": "amountremaining",
+      "type": "CURRENCY",
+      "label": "Amount Available",
+      "mandatory": false
+    },
+    {
+      "code": "amtavailbilled",
+      "type": "CURRENCY",
+      "label": "Amount Available (Billed)",
+      "mandatory": false
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "email",
+      "type": "TEXT",
+      "label": "To (Email)",
+      "mandatory": false
+    },
+    {
+      "code": "expirationdate",
+      "type": "DATE",
+      "label": "Expiration Date",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "gcactive",
+      "type": "CHECKBOX",
+      "label": "Active",
+      "mandatory": false
+    },
+    {
+      "code": "giftcertcode",
+      "type": "TEXT",
+      "label": "Gift Certificate Code",
+      "mandatory": false
+    },
+    {
+      "code": "incomeaccount",
+      "type": "SELECT",
+      "label": "Income Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "incomeacct",
+      "type": "TEXT",
+      "label": "Income Account",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isactive",
+      "type": "CHECKBOX",
+      "label": "Active",
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": false,
+      "recordType": "item"
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Modified Date",
+      "mandatory": false
+    },
+    {
+      "code": "liabilityaccount",
+      "type": "SELECT",
+      "label": "Liability Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "liabilityacct",
+      "type": "TEXT",
+      "label": "Liability Account",
+      "mandatory": false
+    },
+    {
+      "code": "message",
+      "type": "TEXT",
+      "label": "Gift Message",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "To (Name)",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "originalamount",
+      "type": "CURRENCY",
+      "label": "Amount",
+      "mandatory": false
+    },
+    {
+      "code": "purchasedate",
+      "type": "DATE",
+      "label": "Purchase Date",
+      "mandatory": false
+    },
+    {
+      "code": "sender",
+      "type": "TEXT",
+      "label": "From (Name)",
+      "mandatory": false
+    }
+  ]
+}

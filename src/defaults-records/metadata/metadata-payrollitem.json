@@ -1,0 +1,189 @@
+{
+  "code": "payrollitem",
+  "id": 0,
+  "name": "Payroll Item",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "allowbulkentry",
+      "type": "CHECKBOX",
+      "label": "Allow entry from Create Payroll",
+      "mandatory": false
+    },
+    {
+      "code": "applylimit",
+      "type": "CHECKBOX",
+      "label": "Apply Limit to All Employees",
+      "mandatory": false
+    },
+    {
+      "code": "applyrate",
+      "type": "CHECKBOX",
+      "label": "Apply Rate to All Employees",
+      "mandatory": false
+    },
+    {
+      "code": "basedonquantity",
+      "type": "CHECKBOX",
+      "label": "Based on quantity",
+      "mandatory": false
+    },
+    {
+      "code": "defaultrate",
+      "type": "RATE",
+      "label": "Default Rate",
+      "mandatory": false
+    },
+    {
+      "code": "employeepaid",
+      "type": "CHECKBOX",
+      "label": "Employee Paid",
+      "mandatory": false
+    },
+    {
+      "code": "expenseaccount",
+      "type": "TEXT",
+      "label": "Expense Account",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "inactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "itemtype",
+      "type": "SELECT",
+      "label": "Item Type",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "itemtypenohierarchy",
+      "type": "TEXT",
+      "label": "Item Type (no hierarchy)",
+      "mandatory": false
+    },
+    {
+      "code": "liabilityaccount",
+      "type": "TEXT",
+      "label": "Liability Account",
+      "mandatory": false
+    },
+    {
+      "code": "limit",
+      "type": "CURRENCY",
+      "label": "Limit",
+      "mandatory": false
+    },
+    {
+      "code": "limitiswithholding",
+      "type": "RADIO",
+      "label": "Wage",
+      "mandatory": false
+    },
+    {
+      "code": "limittype",
+      "type": "TEXT",
+      "label": "Limit Type",
+      "mandatory": false
+    },
+    {
+      "code": "masterpaycode",
+      "type": "TEXT",
+      "label": "Master Pay Code",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "reportingsection",
+      "type": "SELECT",
+      "label": "Report Section",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "showinemployeecenter",
+      "type": "CHECKBOX",
+      "label": "View in Employee Center",
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiary",
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "usedefaults",
+      "type": "CHECKBOX",
+      "label": "Use System Defaults",
+      "mandatory": false
+    },
+    {
+      "code": "vendor",
+      "type": "TEXT",
+      "label": "Vendor",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "employeepaycodelist": [
+      {
+        "code": "apply",
+        "type": "CHECKBOX",
+        "label": "Apply",
+        "mandatory": false
+      },
+      {
+        "code": "employeeid",
+        "type": "INTEGER",
+        "label": "Name",
+        "mandatory": false
+      },
+      {
+        "code": "empprevstate",
+        "type": "TEXT",
+        "label": "State",
+        "mandatory": false
+      },
+      {
+        "code": "inactive",
+        "type": "CHECKBOX",
+        "label": "Inactive",
+        "mandatory": false
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "employee",
+      "label": "Employee"
+    }
+  ]
+}

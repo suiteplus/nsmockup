@@ -1,0 +1,136 @@
+{
+  "code": "currency",
+  "id": -122,
+  "name": "Currency",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "currencyformatsample",
+      "type": "TEXT",
+      "label": "Format Sample",
+      "mandatory": false
+    },
+    {
+      "code": "displaysymbol",
+      "type": "TEXT",
+      "label": "Symbol",
+      "mandatory": false
+    },
+    {
+      "code": "exchangerate",
+      "type": "FLOAT",
+      "label": "Exchange Rate",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "includeinfxrateupdates",
+      "type": "CHECKBOX",
+      "label": "Automatic Update",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isbasecurrency",
+      "type": "CHECKBOX",
+      "label": "Is Base Currency",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "overridecurrencyformat",
+      "type": "CHECKBOX",
+      "label": "Override Currency Format",
+      "mandatory": false
+    },
+    {
+      "code": "symbol",
+      "type": "TEXT",
+      "label": "Symbol",
+      "mandatory": false
+    },
+    {
+      "code": "symbolplacement",
+      "type": "SELECT",
+      "label": "Symbol Placement",
+      "mandatory": false,
+      "recordType": null
+    }
+  ]
+}

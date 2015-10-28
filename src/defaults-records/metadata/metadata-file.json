@@ -31,7 +31,7 @@
       "desc": "Folder",
       "type": "SELECT",
       "mandatory": true,
-      "recordType": "__folder"
+      "recordType": "folder"
     },
     {
       "code": "encoding",

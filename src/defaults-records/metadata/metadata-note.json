@@ -1,0 +1,256 @@
+{
+  "code": "note",
+  "id": 0,
+  "name": "Note",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "accountingperiod",
+      "type": "SELECT",
+      "label": "Accounting Period",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "author",
+      "type": "SELECT",
+      "label": "Author",
+      "mandatory": false,
+      "help": "References an existing entity record. This value defaults to the current logged in user (as specified during the login operation).\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": null
+    },
+    {
+      "code": "campaign",
+      "type": "SELECT",
+      "label": "Campaign",
+      "mandatory": false,
+      "recordType": "campaign"
+    },
+    {
+      "code": "contact",
+      "type": "SELECT",
+      "label": "Contact",
+      "mandatory": false,
+      "recordType": "contact"
+    },
+    {
+      "code": "customer",
+      "type": "SELECT",
+      "label": "Customer",
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "direction",
+      "type": "TEXT",
+      "label": "Direction",
+      "mandatory": false
+    },
+    {
+      "code": "employee",
+      "type": "SELECT",
+      "label": "Employee",
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "entity",
+      "type": "SELECT",
+      "label": "Entity",
+      "mandatory": false,
+      "help": "References an existing entity (customer or contact) record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": "entity"
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "folder",
+      "type": "SELECT",
+      "label": "Folder",
+      "mandatory": false,
+      "recordType": "folder"
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "issue",
+      "type": "SELECT",
+      "label": "Issue",
+      "mandatory": false,
+      "recordType": "issue"
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": false,
+      "help": "References an existing item record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": "item"
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Modification Date",
+      "mandatory": false
+    },
+    {
+      "code": "media",
+      "type": "SELECT",
+      "label": "Media",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "note",
+      "type": "TEXT",
+      "label": "Memo",
+      "mandatory": false
+    },
+    {
+      "code": "notedate",
+      "type": "DATETIME",
+      "label": "Date",
+      "mandatory": false
+    },
+    {
+      "code": "notetype",
+      "type": "TEXT",
+      "label": "Type",
+      "mandatory": false
+    },
+    {
+      "code": "partner",
+      "type": "SELECT",
+      "label": "Partner",
+      "mandatory": false,
+      "recordType": "partner"
+    },
+    {
+      "code": "record",
+      "type": "SELECT",
+      "label": "Custom Record Key",
+      "mandatory": false,
+      "help": "References an existing record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": null
+    },
+    {
+      "code": "recordtype",
+      "type": "SELECT",
+      "label": "Custom Record Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "solution",
+      "type": "SELECT",
+      "label": "Solution",
+      "mandatory": false,
+      "recordType": "solution"
+    },
+    {
+      "code": "task",
+      "type": "SELECT",
+      "label": "Task",
+      "mandatory": false,
+      "recordType": "task"
+    },
+    {
+      "code": "time",
+      "type": "TIMEOFDAY",
+      "label": "Time",
+      "mandatory": false
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "label": "Title",
+      "mandatory": false
+    },
+    {
+      "code": "topic",
+      "type": "SELECT",
+      "label": "Topic",
+      "mandatory": false,
+      "help": "References an existing topic record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": "topic"
+    },
+    {
+      "code": "transaction",
+      "type": "SELECT",
+      "label": "Transaction",
+      "mandatory": false,
+      "help": "References an existing transaction (opportunity) record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": "transaction"
+    },
+    {
+      "code": "vendor",
+      "type": "SELECT",
+      "label": "Vendor",
+      "mandatory": false,
+      "recordType": "vendor"
+    }
+  ]
+}

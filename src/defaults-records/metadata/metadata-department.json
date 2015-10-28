@@ -1,39 +1,123 @@
 {
   "code": "department",
-  "id": 0,
+  "id": -102,
   "name": "Department",
   "inactive": false,
   "fields": [
     {
-      "code": "name",
-      "id": 0,
-      "desc": "Name",
-      "type": "STRING",
-      "mandatory": true
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
     },
     {
-      "code": "parent",
-      "id": 0,
-      "desc": "Parent",
-      "type": "SELECT",
-      "mandatory": true,
-      "recordType": "department"
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
     },
     {
-      "code": "subsidiary",
-      "id": 0,
-      "desc": "Subsidiary",
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "includechildren",
+      "type": "CHECKBOX",
+      "label": "Include Children",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
       "type": "SELECT",
-      "mandatory": true,
-      "recordType": "subsidiary"
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
     },
     {
       "code": "isinactive",
-      "id": 0,
-      "desc": "Inactive",
       "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "namenohierarchy",
+      "type": "TEXT",
+      "label": "Name (no hierarchy)",
+      "mandatory": false
+    },
+    {
+      "code": "parent",
+      "type": "SELECT",
+      "label": "Subdepartment of",
       "mandatory": false,
-      "default": true
+      "help": "References a record that currently exists in this Department list. Therefore, you should define all departments that will be used as parent records before submitting child department records.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": null
+    },
+    {
+      "code": "subsidiary",
+      "type": "MULTISELECT",
+      "label": "Subsidiary",
+      "mandatory": false
+    }
+  ],
+  "tabs": [
+    {
+      "code": "history",
+      "label": "System Notes"
+    },
+    {
+      "code": "translation",
+      "label": "Translation"
     }
   ]
 }

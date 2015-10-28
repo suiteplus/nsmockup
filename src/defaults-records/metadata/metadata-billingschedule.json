@@ -1,0 +1,318 @@
+{
+  "code": "billingschedule",
+  "id": -141,
+  "name": "Billing Schedule",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "billforactuals",
+      "type": "CHECKBOX",
+      "label": "Invoice Actual Time Only",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "frequency",
+      "type": "SELECT",
+      "label": "Recurrence Frequency",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "id",
+      "type": "INTEGER",
+      "label": "BillingSchedule ID",
+      "mandatory": false
+    },
+    {
+      "code": "inarrears",
+      "type": "CHECKBOX",
+      "label": "In Arrears",
+      "mandatory": false
+    },
+    {
+      "code": "initialamount",
+      "type": "CURRENCY",
+      "label": "Initial Amount",
+      "mandatory": false
+    },
+    {
+      "code": "initialterms",
+      "type": "TEXT",
+      "label": "Initial Payment Terms",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "ispublic",
+      "type": "CHECKBOX",
+      "label": "Public",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "numberremaining",
+      "type": "INTEGER",
+      "label": "Recurrence Count",
+      "mandatory": true
+    },
+    {
+      "code": "project",
+      "type": "SELECT",
+      "label": "Project",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "recurrencecount",
+      "type": "INTEGER",
+      "label": "Recurrence Count",
+      "mandatory": false
+    },
+    {
+      "code": "recurrenceterms",
+      "type": "TEXT",
+      "label": "Recurrence Payment Terms",
+      "mandatory": false
+    },
+    {
+      "code": "repeatevery",
+      "type": "INTEGER",
+      "label": "Repeat Every",
+      "mandatory": false
+    },
+    {
+      "code": "scheduletype",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "seriesstartdate",
+      "type": "DATE",
+      "label": "Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "transaction",
+      "type": "SELECT",
+      "label": "Transaction",
+      "mandatory": false,
+      "recordType": "transaction"
+    },
+    {
+      "code": "type",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "weekfriday",
+      "type": "CHECKBOX",
+      "label": "Friday",
+      "mandatory": false
+    },
+    {
+      "code": "weekmonday",
+      "type": "CHECKBOX",
+      "label": "Monday",
+      "mandatory": false
+    },
+    {
+      "code": "weeksaturday",
+      "type": "CHECKBOX",
+      "label": "Saturday",
+      "mandatory": false
+    },
+    {
+      "code": "weeksunday",
+      "type": "CHECKBOX",
+      "label": "Sunday",
+      "mandatory": false
+    },
+    {
+      "code": "weekthursday",
+      "type": "CHECKBOX",
+      "label": "Thursday",
+      "mandatory": false
+    },
+    {
+      "code": "weektuesday",
+      "type": "CHECKBOX",
+      "label": "Tuesday",
+      "mandatory": false
+    },
+    {
+      "code": "weekwednesday",
+      "type": "CHECKBOX",
+      "label": "Wednesday",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "milestone": [
+      {
+        "code": "comments",
+        "type": "TEXT",
+        "label": "Comment",
+        "mandatory": false
+      },
+      {
+        "code": "milestoneactualcompletiondate",
+        "type": "DATE",
+        "label": "Actual Completion Date",
+        "mandatory": false
+      },
+      {
+        "code": "milestoneamount",
+        "type": "PERCENT",
+        "label": "Amount",
+        "mandatory": true
+      },
+      {
+        "code": "milestonecompleted",
+        "type": "CHECKBOX",
+        "label": "Completed",
+        "mandatory": false
+      },
+      {
+        "code": "milestonedate",
+        "type": "DATE",
+        "label": "Estimated Completion Date",
+        "mandatory": true
+      },
+      {
+        "code": "milestoneterms",
+        "type": "SELECT",
+        "label": "Payment Terms",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "projecttask",
+        "type": "SELECT",
+        "label": "Task/Milestone",
+        "mandatory": false,
+        "recordType": "projecttask"
+      }
+    ],
+    "recurrence": [
+      {
+        "code": "amount",
+        "type": "RATEHIGHPRECISION",
+        "label": "Amount",
+        "mandatory": true
+      },
+      {
+        "code": "count",
+        "type": "INTEGER",
+        "label": "Count",
+        "mandatory": true
+      },
+      {
+        "code": "paymentterms",
+        "type": "SELECT",
+        "label": "Payment Terms",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "recurrencedate",
+        "type": "DATE",
+        "label": "Date",
+        "mandatory": true
+      },
+      {
+        "code": "relativetoprevious",
+        "type": "CHECKBOX",
+        "label": "Relative to Previous",
+        "mandatory": false
+      },
+      {
+        "code": "units",
+        "type": "SELECT",
+        "label": "Units",
+        "mandatory": true,
+        "recordType": null
+      }
+    ]
+  }
+}

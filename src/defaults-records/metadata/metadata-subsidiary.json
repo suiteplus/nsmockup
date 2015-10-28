@@ -1,37 +1,568 @@
 {
   "code": "subsidiary",
-  "id": 0,
+  "id": -117,
   "name": "Subsidiary",
   "inactive": false,
   "fields": [
     {
-      "code": "name",
-      "id": 0,
-      "desc": "Name",
-      "type": "STRING",
-      "mandatory": true
+      "code": "accountingbook",
+      "type": "SELECT",
+      "label": "Accounting Book",
+      "mandatory": false,
+      "recordType": "accountingbook"
+    },
+    {
+      "code": "accountingbookcurrency",
+      "type": "SELECT",
+      "label": "Accounting Book Currency",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "addr1",
+      "type": "TEXT",
+      "label": "Address 1",
+      "mandatory": false,
+      "help": "Enter the street address of this subsidiary."
+    },
+    {
+      "code": "addr2",
+      "type": "TEXT",
+      "label": "Address 2",
+      "mandatory": false,
+      "help": "Enter the street address  of this subsidiary."
+    },
+    {
+      "code": "addr3",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "address",
+      "type": "TEXTAREA",
+      "label": "Address",
+      "mandatory": false
+    },
+    {
+      "code": "address1",
+      "type": "TEXT",
+      "label": "Address 1",
+      "mandatory": false
+    },
+    {
+      "code": "address2",
+      "type": "TEXT",
+      "label": "Address 2",
+      "mandatory": false
+    },
+    {
+      "code": "address3",
+      "type": "TEXT",
+      "label": "Address 3",
+      "mandatory": false
+    },
+    {
+      "code": "addressee",
+      "type": "TEXT",
+      "label": "Addressee",
+      "mandatory": false,
+      "help": "Enter the name of this subsidiary as it should appear on shipping labels and \n  return addresses."
+    },
+    {
+      "code": "addrphone",
+      "type": "PHONE",
+      "label": "Phone",
+      "mandatory": false
+    },
+    {
+      "code": "addrtext",
+      "type": "ADDRESS",
+      "label": "Address",
+      "mandatory": false
+    },
+    {
+      "code": "anonymouscustomerinboundemail",
+      "type": "TEXT",
+      "label": "Anonymous Customer - Inbound Email",
+      "mandatory": false
+    },
+    {
+      "code": "anonymouscustomeronlineforms",
+      "type": "TEXT",
+      "label": "Anonymous Customer - Online Forms",
+      "mandatory": false
+    },
+    {
+      "code": "attention",
+      "type": "TEXT",
+      "label": "Attention",
+      "mandatory": false,
+      "help": "Enter the name of person that should be notified of shipment or return arrivals."
+    },
+    {
+      "code": "caseassignmenttemplate",
+      "type": "TEXT",
+      "label": "Employee Notification Template - Case Assignment",
+      "mandatory": false
+    },
+    {
+      "code": "caseautomaticclosuretemplate",
+      "type": "TEXT",
+      "label": "Customer Notification Template - Automatic Case Closure",
+      "mandatory": false
+    },
+    {
+      "code": "casecopyemployeetemplate",
+      "type": "TEXT",
+      "label": "Employee Notification Template - Copy Employee",
+      "mandatory": false
+    },
+    {
+      "code": "casecreationtemplate",
+      "type": "TEXT",
+      "label": "Customer Notification Template - Case Creation",
+      "mandatory": false
+    },
+    {
+      "code": "caseescalationtemplate",
+      "type": "TEXT",
+      "label": "Employee Notification Template - Escalation",
+      "mandatory": false
+    },
+    {
+      "code": "caseupdatetemplate",
+      "type": "TEXT",
+      "label": "Customer Notification Template - Case Update",
+      "mandatory": false
+    },
+    {
+      "code": "checklayout",
+      "type": "SELECT",
+      "label": "Check Default Chart Type",
+      "mandatory": true,
+      "recordType": null
     },
     {
       "code": "city",
-      "id": 0,
-      "desc": "City",
-      "type": "STRING",
-      "mandatory": true
+      "type": "TEXT",
+      "label": "City",
+      "mandatory": false
+    },
+    {
+      "code": "companynameforsupportmessages",
+      "type": "TEXT",
+      "label": "Company Name for Support Messages",
+      "mandatory": false
+    },
+    {
+      "code": "country",
+      "type": "SELECT",
+      "label": "Country",
+      "mandatory": true,
+      "help": "Enter the country this subsidiary is located in.",
+      "recordType": null
+    },
+    {
+      "code": "currency",
+      "type": "SELECT",
+      "label": "Currency",
+      "mandatory": true,
+      "help": "Set the base currency used by this subsidiary. If you do not set a currency, the currency of the parent is used.",
+      "recordType": "currency"
+    },
+    {
+      "code": "edition",
+      "type": "TEXT",
+      "label": "Edition",
+      "mandatory": false,
+      "help": "This field shows the edition of NetSuite used by this subsidiary."
     },
     {
       "code": "email",
-      "id": 0,
-      "desc": "Email",
-      "type": "STRING",
-      "mandatory": true
+      "type": "EMAIL",
+      "label": "Email",
+      "mandatory": false
+    },
+    {
+      "code": "employeecaseupdatetemplate",
+      "type": "TEXT",
+      "label": "Employee Notification Template - Case Update",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "fax",
+      "type": "PHONE",
+      "label": "Fax",
+      "mandatory": false
+    },
+    {
+      "code": "federalidnumber",
+      "type": "TEXT",
+      "label": "Employer Identification Number (EIN)",
+      "mandatory": false
+    },
+    {
+      "code": "fiscalcalendar",
+      "type": "SELECT",
+      "label": "Fiscal Calendar",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "heading0",
+      "type": "TEXT",
+      "label": "Case Email Setup",
+      "mandatory": false
+    },
+    {
+      "code": "heading1",
+      "type": "TEXT",
+      "label": "Customer Notification Templates",
+      "mandatory": false
+    },
+    {
+      "code": "heading2",
+      "type": "TEXT",
+      "label": "Employee Notification Templates",
+      "mandatory": false
+    },
+    {
+      "code": "intercoaccount",
+      "type": "SELECT",
+      "label": "Intercompany Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "iselimination",
+      "type": "CHECKBOX",
+      "label": "Elimination",
+      "mandatory": false
     },
     {
       "code": "isinactive",
-      "id": 0,
-      "desc": "Inactive",
       "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "languagelocale",
+      "type": "SELECT",
+      "label": "Language",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "legalname",
+      "type": "TEXT",
+      "label": "Legal Name",
+      "mandatory": false
+    },
+    {
+      "code": "logo",
+      "type": "SELECT",
+      "label": "Subsidiary Logo (Forms)",
       "mandatory": false,
-      "default": true
+      "help": "Set the logo that should appear on printed and emailed transaction forms for this subsidiary. If you do not set a logo here, the logo for the parent subsidiary or company is used. To upload a logo into NetSuite, click Add New next to the Logo field in the UI. Be sure to check the Available Without Login box.",
+      "recordType": null
+    },
+    {
+      "code": "mainsupportemailaddress",
+      "type": "EMAIL",
+      "label": "Main Support Email Address",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "namenohierarchy",
+      "type": "TEXT",
+      "label": "Name (no hierarchy)",
+      "mandatory": false
+    },
+    {
+      "code": "override",
+      "type": "CHECKBOX",
+      "label": "Override",
+      "mandatory": false,
+      "help": "Check this box to edit the address in the Address field."
+    },
+    {
+      "code": "pagelogo",
+      "type": "SELECT",
+      "label": "Subsidiary Logo (Pages)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "parent",
+      "type": "SELECT",
+      "label": "Subsubsidiary of",
+      "mandatory": true,
+      "help": "Set this field to the direct parent of the subsidiary.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation.\nSetting a parent subsidiary sets your company hierarchy which is shown in the subsidiaries list.",
+      "recordType": null
+    },
+    {
+      "code": "phone",
+      "type": "PHONE",
+      "label": "Phone",
+      "mandatory": false
+    },
+    {
+      "code": "returnaddr",
+      "type": "ADDRESS",
+      "label": "Address",
+      "mandatory": false
+    },
+    {
+      "code": "returnaddress1",
+      "type": "TEXT",
+      "label": "Address1",
+      "mandatory": false
+    },
+    {
+      "code": "returnaddress2",
+      "type": "TEXT",
+      "label": "Address2",
+      "mandatory": false
+    },
+    {
+      "code": "returncity",
+      "type": "TEXT",
+      "label": "City",
+      "mandatory": false
+    },
+    {
+      "code": "returncountry",
+      "type": "SELECT",
+      "label": "Country",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "returnstate",
+      "type": "TEXT",
+      "label": "County/State/Province",
+      "mandatory": false
+    },
+    {
+      "code": "returnzip",
+      "type": "TEXT",
+      "label": "Postal Code",
+      "mandatory": false
+    },
+    {
+      "code": "roundtime",
+      "type": "SELECT",
+      "label": "Round Time Entry Duration",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipaddr",
+      "type": "ADDRESS",
+      "label": "Address",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress1",
+      "type": "TEXT",
+      "label": "Address1",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress2",
+      "type": "TEXT",
+      "label": "Address2",
+      "mandatory": false
+    },
+    {
+      "code": "shipcity",
+      "type": "TEXT",
+      "label": "City",
+      "mandatory": false
+    },
+    {
+      "code": "shipcountry",
+      "type": "SELECT",
+      "label": "Country",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipstate",
+      "type": "TEXT",
+      "label": "County/State/Province",
+      "mandatory": false
+    },
+    {
+      "code": "shipzip",
+      "type": "TEXT",
+      "label": "Postal Code",
+      "mandatory": false
+    },
+    {
+      "code": "showsubsidiaryname",
+      "type": "CHECKBOX",
+      "label": "Always Display Subsidiary Name",
+      "mandatory": false
+    },
+    {
+      "code": "ssnortin",
+      "type": "TEXT",
+      "label": "SSN or TIN (Social Security Number, Tax ID Number)",
+      "mandatory": false
+    },
+    {
+      "code": "state",
+      "type": "TEXT",
+      "label": "State/Province",
+      "mandatory": false,
+      "help": "Choose the state or province this subsidiary is located in."
+    },
+    {
+      "code": "taxfiscalcalendar",
+      "type": "SELECT",
+      "label": "Tax Fiscal Calendar",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "taxidnum",
+      "type": "TEXT",
+      "label": "Tax ID",
+      "mandatory": false
+    },
+    {
+      "code": "tranprefix",
+      "type": "TEXT",
+      "label": "Transaction Prefix",
+      "mandatory": false
+    },
+    {
+      "code": "url",
+      "type": "URL",
+      "label": "Web Site",
+      "mandatory": false
+    },
+    {
+      "code": "zip",
+      "type": "TEXT",
+      "label": "Zip",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "accountingbookdetail": [
+      {
+        "code": "currency",
+        "type": "SELECT",
+        "label": "Base Currency",
+        "mandatory": true,
+        "recordType": "currency"
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "addressbook",
+      "label": "Address"
+    },
+    {
+      "code": "history",
+      "label": "System Notes"
+    },
+    {
+      "code": "nexustab",
+      "label": "Nexuses"
+    },
+    {
+      "code": "preferencestab",
+      "label": "Preferences"
+    },
+    {
+      "code": "returnsaddrtab",
+      "label": "Return Address"
+    },
+    {
+      "code": "shippingaddrtab",
+      "label": "Shipping Address"
+    },
+    {
+      "code": "translation",
+      "label": "Translation"
     }
   ]
 }

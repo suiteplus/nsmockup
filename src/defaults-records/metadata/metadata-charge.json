@@ -1,0 +1,251 @@
+{
+  "code": "charge",
+  "id": 0,
+  "name": "Charge",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "amount",
+      "type": "CURRENCY",
+      "label": "Amount",
+      "mandatory": false
+    },
+    {
+      "code": "billingitem",
+      "type": "SELECT",
+      "label": "Billing Item",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "billto",
+      "type": "SELECT",
+      "label": "Customer:Project",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "chargedate",
+      "type": "DATE",
+      "label": "Date",
+      "mandatory": false
+    },
+    {
+      "code": "chargetype",
+      "type": "TEXT",
+      "label": "Charge Type",
+      "mandatory": false
+    },
+    {
+      "code": "class",
+      "type": "SELECT",
+      "label": "Class",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "createddate",
+      "type": "DATE",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "currency",
+      "type": "SELECT",
+      "label": "Currency",
+      "mandatory": false,
+      "help": "The currency of this charge is shown here.",
+      "recordType": "currency"
+    },
+    {
+      "code": "department",
+      "type": "SELECT",
+      "label": "Department",
+      "mandatory": false,
+      "recordType": "department"
+    },
+    {
+      "code": "description",
+      "type": "TEXT",
+      "label": "Description",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "SELECT",
+      "label": "External ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "id",
+      "type": "INTEGER",
+      "label": "Charge ID",
+      "mandatory": false
+    },
+    {
+      "code": "invoice",
+      "type": "SELECT",
+      "label": "Invoice",
+      "mandatory": false,
+      "help": "If the sales order has been billed, the invoice is shown here.\nCharges that have been billed cannot be edited.",
+      "recordType": "invoice"
+    },
+    {
+      "code": "invoiceline",
+      "type": "TEXT",
+      "label": "Invoice Line",
+      "mandatory": false
+    },
+    {
+      "code": "job",
+      "type": "SELECT",
+      "label": "Job",
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "label": "Location",
+      "mandatory": false,
+      "recordType": "location"
+    },
+    {
+      "code": "modifieddate",
+      "type": "DATE",
+      "label": "Date Modified",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "projecttask",
+      "type": "SELECT",
+      "label": "Project Task",
+      "mandatory": false,
+      "recordType": "projecttask"
+    },
+    {
+      "code": "quantity",
+      "type": "TEXT",
+      "label": "Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "rate",
+      "type": "TEXT",
+      "label": "Rate",
+      "mandatory": false
+    },
+    {
+      "code": "rule",
+      "type": "SELECT",
+      "label": "Charge Rule",
+      "mandatory": false,
+      "help": "If this is a project charge, the charge rule used to generate this charge is shown here.",
+      "recordType": null
+    },
+    {
+      "code": "runid",
+      "type": "TEXT",
+      "label": "Charge Run ID",
+      "mandatory": false
+    },
+    {
+      "code": "salesorder",
+      "type": "TEXT",
+      "label": "Sales Order Id",
+      "mandatory": false
+    },
+    {
+      "code": "salesorderline",
+      "type": "SELECT",
+      "label": "Sales Order Line",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "stage",
+      "type": "TEXT",
+      "label": "Charge Stage",
+      "mandatory": false
+    },
+    {
+      "code": "timerecord",
+      "type": "SELECT",
+      "label": "Time Entry",
+      "mandatory": false,
+      "recordType": "timeentry"
+    },
+    {
+      "code": "use",
+      "type": "TEXT",
+      "label": "Charge Use",
+      "mandatory": false
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "label": "User",
+      "mandatory": false,
+      "recordType": "employee"
+    }
+  ],
+  "tabs": [
+    {
+      "code": "historytab",
+      "label": "System Notes"
+    },
+    {
+      "code": "source",
+      "label": "Source"
+    }
+  ]
+}

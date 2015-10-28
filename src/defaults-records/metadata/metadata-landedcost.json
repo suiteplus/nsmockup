@@ -1,0 +1,50 @@
+{
+  "code": "landedcost",
+  "id": 0,
+  "name": "Landed Cost",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": false,
+      "recordType": "item"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "total",
+      "type": "CURRENCY2",
+      "label": "Total",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "landedcostdata": [
+      {
+        "code": "amount",
+        "type": "POSCURRENCY",
+        "label": "Amount",
+        "mandatory": true
+      },
+      {
+        "code": "costcategory",
+        "type": "SELECT",
+        "label": "Cost Category",
+        "mandatory": true,
+        "recordType": null
+      }
+    ]
+  }
+}

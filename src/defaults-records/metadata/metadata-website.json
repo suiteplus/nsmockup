@@ -1,0 +1,1034 @@
+{
+  "code": "website",
+  "id": -268,
+  "name": "Website",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "analyticsclickattributes",
+      "type": "TEXTAREA",
+      "label": "Analytics Click Attributes",
+      "mandatory": false
+    },
+    {
+      "code": "analyticssubmitattributes",
+      "type": "TEXTAREA",
+      "label": "Analytics Submit Attributes",
+      "mandatory": false
+    },
+    {
+      "code": "autodownloadmedia",
+      "type": "CHECKBOX",
+      "label": "Automatically download published site media items",
+      "mandatory": false
+    },
+    {
+      "code": "cartdisplayorder",
+      "type": "SELECT",
+      "label": "Display Order of Cart Items",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "cartupsellitems",
+      "type": "SELECT",
+      "label": "Items to Upsell in Cart",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "categorylistlayout",
+      "type": "SELECT",
+      "label": "Default Category List Layout",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "ccformtemplate",
+      "type": "SELECT",
+      "label": "Credit Card Form",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "ccrequireauth",
+      "type": "CHECKBOX",
+      "label": "Require Authorization for Credit Card Transactions",
+      "mandatory": false
+    },
+    {
+      "code": "checkoutdomain",
+      "type": "SELECT",
+      "label": "Checkout URL",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "colorset",
+      "type": "SELECT",
+      "label": "Web Site Color Theme",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "confpagetrackinghtml",
+      "type": "TEXTAREA",
+      "label": "Order Tracking Script HTML",
+      "mandatory": false
+    },
+    {
+      "code": "cookiepolicy",
+      "type": "SELECT",
+      "label": "Cookie Policy",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "createcustomersascompanies",
+      "type": "CHECKBOX",
+      "label": "Create Customers as Companies",
+      "mandatory": false
+    },
+    {
+      "code": "custromeregistrationtype",
+      "type": "SELECT",
+      "label": "Customer registration is",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "defaultcustomercategory",
+      "type": "SELECT",
+      "label": "Default Customer Category",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "defaulthostingroot",
+      "type": "SELECT",
+      "label": "Default Hosting Root",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "defaultshippingcountry",
+      "type": "SELECT",
+      "label": "Default Shipping Country for Checkout",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "defaultshippingmethod",
+      "type": "SELECT",
+      "label": "Default Web Site Shipping Method",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "descriptionfontsize",
+      "type": "POSINTEGER",
+      "label": "Description Font Size",
+      "mandatory": true
+    },
+    {
+      "code": "displaycompanyfield",
+      "type": "CHECKBOX",
+      "label": "Display Company Field on Registration Page",
+      "mandatory": false
+    },
+    {
+      "code": "displayname",
+      "type": "TEXT",
+      "label": "Display Name",
+      "mandatory": true
+    },
+    {
+      "code": "displayunsubscribe",
+      "type": "CHECKBOX",
+      "label": "Display Unsubscribe to Email Checkbox on Registration Page",
+      "mandatory": false
+    },
+    {
+      "code": "doctypehtml",
+      "type": "TEXTAREA",
+      "label": "Document Type",
+      "mandatory": false
+    },
+    {
+      "code": "emailfooter",
+      "type": "TEXTAREA",
+      "label": "Footer Text",
+      "mandatory": false
+    },
+    {
+      "code": "emailheader",
+      "type": "TEXTAREA",
+      "label": "Header Text",
+      "mandatory": false
+    },
+    {
+      "code": "enablegaintegration",
+      "type": "CHECKBOX",
+      "label": "Enable Google Analytics Integration",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "font",
+      "type": "SELECT",
+      "label": "Web Site Font",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "gconotificationurl",
+      "type": "TEXT",
+      "label": "Google Notification URL",
+      "mandatory": false
+    },
+    {
+      "code": "giftcerteaffectsminamount",
+      "type": "CHECKBOX",
+      "label": "Gift Certificate Affects Minimum Order Amount",
+      "mandatory": false
+    },
+    {
+      "code": "hidepaymentpagewhennobalance",
+      "type": "CHECKBOX",
+      "label": "Hide payment page if order total equals zero",
+      "mandatory": false
+    },
+    {
+      "code": "igniteedition",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "includeuncategorizeditems",
+      "type": "CHECKBOX",
+      "label": "Show Uncategorized Items",
+      "mandatory": false
+    },
+    {
+      "code": "includevatwithprices",
+      "type": "CHECKBOX",
+      "label": "Prices Include Tax",
+      "mandatory": false
+    },
+    {
+      "code": "internalname",
+      "type": "TEXT",
+      "label": "Internal Name",
+      "mandatory": true
+    },
+    {
+      "code": "invoiceformtemplate",
+      "type": "SELECT",
+      "label": "Invoice Form",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "isscriptablecartandcheckout",
+      "type": "CHECKBOX",
+      "label": "Scriptable Cart and Checkout",
+      "mandatory": false
+    },
+    {
+      "code": "iswebstoreoffline",
+      "type": "CHECKBOX",
+      "label": "Take Web Site Offline for Maintenance",
+      "mandatory": false
+    },
+    {
+      "code": "iswsdk",
+      "type": "CHECKBOX",
+      "label": "WSDK",
+      "mandatory": false
+    },
+    {
+      "code": "itemlistlayout",
+      "type": "SELECT",
+      "label": "Default Item List Layout",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "itemtemplateaccountingtitem",
+      "type": "SELECT",
+      "label": "Default Item Drilldown Template",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "itemtemplateinformationitem",
+      "type": "SELECT",
+      "label": "Default Info Item Drilldown Template",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "legacycategorydescriptions",
+      "type": "CHECKBOX",
+      "label": "Legacy Category Descriptions",
+      "mandatory": false
+    },
+    {
+      "code": "legacydenselistsupport",
+      "type": "CHECKBOX",
+      "label": "Legacy Dense List Layout",
+      "mandatory": false
+    },
+    {
+      "code": "legacyimageattributetags",
+      "type": "CHECKBOX",
+      "label": "Legacy Tag Support for Images",
+      "mandatory": false
+    },
+    {
+      "code": "legacynavigationlinks",
+      "type": "CHECKBOX",
+      "label": "Legacy Navigation Style",
+      "mandatory": false
+    },
+    {
+      "code": "legacywelcomepage",
+      "type": "CHECKBOX",
+      "label": "Legacy Welcome Page Style",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "nameorig",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "noactivatetabonhostedpages",
+      "type": "CHECKBOX",
+      "label": "Don't Activate Hosted Page Tabs",
+      "mandatory": false
+    },
+    {
+      "code": "onlinepricelevel",
+      "type": "SELECT",
+      "label": "Price Level",
+      "mandatory": true,
+      "recordType": "pricelevel"
+    },
+    {
+      "code": "outofstockitems",
+      "type": "SELECT",
+      "label": "Web Store Out Of Stock Items",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "outputlinebreaksasbr",
+      "type": "CHECKBOX",
+      "label": "Output Line Breaks as &lt;br&gt;",
+      "mandatory": false
+    },
+    {
+      "code": "pagealign",
+      "type": "SELECT",
+      "label": "Page Alignment",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "pagewidth",
+      "type": "TEXT",
+      "label": "Page Width",
+      "mandatory": false
+    },
+    {
+      "code": "pagezoom",
+      "type": "SELECT",
+      "label": "Zoom",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "passpromocodetocheckout",
+      "type": "CHECKBOX",
+      "label": "Pass URL Promotion Code to Checkout",
+      "mandatory": false
+    },
+    {
+      "code": "relateditemsdescription",
+      "type": "TEXT",
+      "label": "Related Items",
+      "mandatory": false
+    },
+    {
+      "code": "relateditemslayout",
+      "type": "SELECT",
+      "label": "Default Related Items Layout",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "requestshippingaddressfirst",
+      "type": "CHECKBOX",
+      "label": "Ask For Shipping Address First",
+      "mandatory": false
+    },
+    {
+      "code": "requirecompanyfield",
+      "type": "CHECKBOX",
+      "label": "Mandatory",
+      "mandatory": false
+    },
+    {
+      "code": "requireloginforpricing",
+      "type": "CHECKBOX",
+      "label": "Require Login For Pricing",
+      "mandatory": false
+    },
+    {
+      "code": "requireshippinginformation",
+      "type": "CHECKBOX",
+      "label": "Shipping Information is Required",
+      "mandatory": false
+    },
+    {
+      "code": "requiretermsandconditions",
+      "type": "CHECKBOX",
+      "label": "Require Terms and Conditions",
+      "mandatory": false
+    },
+    {
+      "code": "salesordertype",
+      "type": "SELECT",
+      "label": "Sales Order Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "savecreditinfo",
+      "type": "CHECKBOX",
+      "label": "Save Credit Card Info by Default",
+      "mandatory": false
+    },
+    {
+      "code": "scripttemplatecreditcard",
+      "type": "SELECT",
+      "label": "Scripting Template (Credit Card)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "scripttemplateinvoice",
+      "type": "SELECT",
+      "label": "Scripting Template (Invoice)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "searchcategorylistlayout",
+      "type": "SELECT",
+      "label": "Category List Layout",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "searchforcategories",
+      "type": "CHECKBOX",
+      "label": "Include Categories",
+      "mandatory": false
+    },
+    {
+      "code": "searchforinformationitems",
+      "type": "CHECKBOX",
+      "label": "Include Information Items",
+      "mandatory": false
+    },
+    {
+      "code": "searchformitemlistlayout",
+      "type": "SELECT",
+      "label": "Item List Layout",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "searchitemlistlayout",
+      "type": "SELECT",
+      "label": "Item List Layout",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "searchlinkform",
+      "type": "SELECT",
+      "label": "Search Link Form",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "searchportletdisplay",
+      "type": "RADIO",
+      "label": "Global Search",
+      "mandatory": false
+    },
+    {
+      "code": "searchportletform",
+      "type": "SELECT",
+      "label": "Search Portlet Form",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "searchresultforinvalidurls",
+      "type": "CHECKBOX",
+      "label": "Return Invalid URLs as Search Results",
+      "mandatory": false
+    },
+    {
+      "code": "semailaddrforerror",
+      "type": "EMAILS",
+      "label": "Email To",
+      "mandatory": false
+    },
+    {
+      "code": "shipstoallcountries",
+      "type": "CHECKBOX",
+      "label": "Web Store Ships to all countries",
+      "mandatory": false
+    },
+    {
+      "code": "shipstocountries",
+      "type": "SELECT",
+      "label": "Countries Web Store Ships To",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "showbillingaddress",
+      "type": "CHECKBOX",
+      "label": "Display Billing Address",
+      "mandatory": false
+    },
+    {
+      "code": "showcartsummaryportlet",
+      "type": "CHECKBOX",
+      "label": "Show Cart Summary",
+      "mandatory": false
+    },
+    {
+      "code": "showcookieconsentbanner",
+      "type": "CHECKBOX",
+      "label": "Show Cookie Consent Banner",
+      "mandatory": false
+    },
+    {
+      "code": "showcurrencyportlet",
+      "type": "CHECKBOX",
+      "label": "Show Web Site Currency",
+      "mandatory": false
+    },
+    {
+      "code": "showextendedcart",
+      "type": "CHECKBOX",
+      "label": "Show Extended Cart",
+      "mandatory": false
+    },
+    {
+      "code": "shownavigationportlet",
+      "type": "CHECKBOX",
+      "label": "Show Navigation Portlet",
+      "mandatory": false
+    },
+    {
+      "code": "showordertrackinglink",
+      "type": "CHECKBOX",
+      "label": "Display Order Tracking Link",
+      "mandatory": false
+    },
+    {
+      "code": "showpofieldonpayment",
+      "type": "CHECKBOX",
+      "label": "Display Purchase Order Field on Payment Info Page",
+      "mandatory": false
+    },
+    {
+      "code": "showquantitypricinginlists",
+      "type": "CHECKBOX",
+      "label": "Show Quantity Pricing in Lists",
+      "mandatory": false
+    },
+    {
+      "code": "showsavecreditinfo",
+      "type": "CHECKBOX",
+      "label": "Display 'Save My Credit Card Info' Field",
+      "mandatory": false
+    },
+    {
+      "code": "showsearchportlet",
+      "type": "CHECKBOX",
+      "label": "Show Search",
+      "mandatory": false
+    },
+    {
+      "code": "showshippingestimator",
+      "type": "CHECKBOX",
+      "label": "Show Shipping Estimator in Cart",
+      "mandatory": false
+    },
+    {
+      "code": "showtellafriendlink",
+      "type": "CHECKBOX",
+      "label": "Show \"Tell a Friend\" Link",
+      "mandatory": false
+    },
+    {
+      "code": "siteloginrequired",
+      "type": "CHECKBOX",
+      "label": "Password-Protect Entire Site",
+      "mandatory": false
+    },
+    {
+      "code": "siteportletstyle",
+      "type": "SELECT",
+      "label": "Site Portlet Style",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "sitetabalignment",
+      "type": "SELECT",
+      "label": "Site Tab Alignment",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "sitetabstyle",
+      "type": "SELECT",
+      "label": "Site Tab Style",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "siteusescarttags",
+      "type": "CHECKBOX",
+      "label": "Site Uses Cart Summary Tags",
+      "mandatory": false
+    },
+    {
+      "code": "siteusesdropshadows",
+      "type": "CHECKBOX",
+      "label": "Site Uses Drop Shadows",
+      "mandatory": false
+    },
+    {
+      "code": "sstoreemailaddrforcopy",
+      "type": "EMAILS",
+      "label": "Email To",
+      "mandatory": false
+    },
+    {
+      "code": "sstoreemailaddrforgiftconfcopy",
+      "type": "EMAILS",
+      "label": "Email To",
+      "mandatory": false
+    },
+    {
+      "code": "sstoreemailaddrforgiftcopy",
+      "type": "EMAILS",
+      "label": "Email To",
+      "mandatory": false
+    },
+    {
+      "code": "storealias",
+      "type": "TEXT",
+      "label": "http://devbox6.corp.netsuite.com/",
+      "mandatory": false
+    },
+    {
+      "code": "storeemail",
+      "type": "EMAIL",
+      "label": "Default Web Store Email From Address",
+      "mandatory": false
+    },
+    {
+      "code": "termsandconditionshtml",
+      "type": "TEXTAREA",
+      "label": "Terms and Conditions HTML",
+      "mandatory": false
+    },
+    {
+      "code": "textgroup",
+      "type": "SELECT",
+      "label": "Text Group",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "titlefontsize",
+      "type": "POSINTEGER",
+      "label": "Title Font Size",
+      "mandatory": true
+    },
+    {
+      "code": "upselldescription",
+      "type": "TEXT",
+      "label": "Upsell",
+      "mandatory": false
+    },
+    {
+      "code": "upsellitems",
+      "type": "SELECT",
+      "label": "Items to Upsell",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "upsellitemslayout",
+      "type": "SELECT",
+      "label": "Default Upsell Items Layout",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "upsellminimumcorrelation",
+      "type": "PERCENT",
+      "label": "Minimum Correlation",
+      "mandatory": false
+    },
+    {
+      "code": "upsellminimumcount",
+      "type": "INTEGER",
+      "label": "Minimum Count",
+      "mandatory": false
+    },
+    {
+      "code": "upsellminimumlift",
+      "type": "PERCENT",
+      "label": "Minimum Lift",
+      "mandatory": false
+    },
+    {
+      "code": "urlformat",
+      "type": "SELECT",
+      "label": "Format",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "useurlfileextension",
+      "type": "CHECKBOX",
+      "label": "Use File Extension",
+      "mandatory": false
+    },
+    {
+      "code": "websitehomepage",
+      "type": "SELECT",
+      "label": "Web Site Home Page",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "websitehomepagetype",
+      "type": "SELECT",
+      "label": "Web Site Home Page Type",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "websitelogo",
+      "type": "SELECT",
+      "label": "Web Site Logo",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "websitelogoalign",
+      "type": "SELECT",
+      "label": "Web Site Logo Alignment",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "websitelogolinkurl",
+      "type": "TEXT",
+      "label": "Logo Link URL",
+      "mandatory": false
+    },
+    {
+      "code": "websitescope",
+      "type": "SELECT",
+      "label": "Web Site Scope",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "websitetheme",
+      "type": "SELECT",
+      "label": "Web Site Theme",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "webstoreadditembehavior",
+      "type": "SELECT",
+      "label": "After shopper adds an item to the cart",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "webstoremetatags",
+      "type": "TEXTAREA",
+      "label": "Addition to <head>",
+      "mandatory": false
+    },
+    {
+      "code": "wsdkcancelcarturl",
+      "type": "TEXT",
+      "label": "Shopping cart page Continue Shopping link URL",
+      "mandatory": false
+    },
+    {
+      "code": "wsdkcancelcheckouturl",
+      "type": "TEXT",
+      "label": "Checkout page Cancel link URL",
+      "mandatory": false
+    },
+    {
+      "code": "wsdkcancelloginurl",
+      "type": "TEXT",
+      "label": "Login/registration page Cancel link URL",
+      "mandatory": false
+    },
+    {
+      "code": "wsdkcompletecheckouturl",
+      "type": "TEXT",
+      "label": "URL to go to after checkout is complete",
+      "mandatory": false
+    },
+    {
+      "code": "wsdkcompleteloginurl",
+      "type": "TEXT",
+      "label": "URL to go to after login/registration is complete",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "cartcolumn": [
+      {
+        "code": "show",
+        "type": "CHECKBOX",
+        "label": "Show",
+        "mandatory": false
+      },
+      {
+        "code": "width",
+        "type": "FLOAT",
+        "label": "Width (%)",
+        "mandatory": false
+      }
+    ],
+    "shoppingdomain": [
+      {
+        "code": "domain",
+        "type": "TEXT",
+        "label": "Domain Name",
+        "mandatory": true
+      },
+      {
+        "code": "hostingroot",
+        "type": "SELECT",
+        "label": "HTML Hosting Root",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "isprimary",
+        "type": "CHECKBOX",
+        "label": "Primary Web Site URL",
+        "mandatory": false
+      },
+      {
+        "code": "notfoundpage",
+        "type": "SELECT",
+        "label": "Not-Found Page",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "touchpoints",
+        "type": "NAMEVALUELIST",
+        "label": "Touch Points",
+        "mandatory": false
+      }
+    ],
+    "sitecurrency": [
+      {
+        "code": "currency",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "isdefault",
+        "type": "RADIO",
+        "label": "Default",
+        "mandatory": false
+      },
+      {
+        "code": "isonline",
+        "type": "CHECKBOX",
+        "label": "Online",
+        "mandatory": false
+      },
+      {
+        "code": "minimumorderamount",
+        "type": "CURRENCY",
+        "label": "Minimum Order Amount",
+        "mandatory": false
+      }
+    ],
+    "sitelanguage": [
+      {
+        "code": "isdefault",
+        "type": "RADIO",
+        "label": "Default",
+        "mandatory": false
+      },
+      {
+        "code": "isonline",
+        "type": "CHECKBOX",
+        "label": "Online",
+        "mandatory": false
+      },
+      {
+        "code": "locale",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      }
+    ],
+    "siteregion": [
+      {
+        "code": "ccprocessingprofile",
+        "type": "SELECT",
+        "label": "Credit Card Processing Profile",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "displayname",
+        "type": "TEXT",
+        "label": "Display Name",
+        "mandatory": false
+      },
+      {
+        "code": "isdefault",
+        "type": "RADIO",
+        "label": "Default",
+        "mandatory": false
+      },
+      {
+        "code": "isonline",
+        "type": "CHECKBOX",
+        "label": "Online",
+        "mandatory": false
+      },
+      {
+        "code": "paypalaccount",
+        "type": "SELECT",
+        "label": "PayPal Account",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "subsidiary",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      }
+    ],
+    "storetab": [
+      {
+        "code": "tabdescription",
+        "type": "TEXT",
+        "label": "Tab Description",
+        "mandatory": false
+      },
+      {
+        "code": "tabname",
+        "type": "TEXT",
+        "label": "Tab Name",
+        "mandatory": false
+      },
+      {
+        "code": "tabtype",
+        "type": "TEXT",
+        "label": "Tab Type",
+        "mandatory": false
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "advanced",
+      "label": "Advanced"
+    },
+    {
+      "code": "analytics",
+      "label": "Analytics"
+    },
+    {
+      "code": "appearance",
+      "label": "Appearance"
+    },
+    {
+      "code": "cart",
+      "label": "Cart"
+    },
+    {
+      "code": "email",
+      "label": "Email"
+    },
+    {
+      "code": "external",
+      "label": "External"
+    },
+    {
+      "code": "general",
+      "label": "Setup"
+    },
+    {
+      "code": "legacy",
+      "label": "Legacy"
+    },
+    {
+      "code": "search",
+      "label": "Search"
+    },
+    {
+      "code": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "code": "shoppingdomainstab",
+      "label": "Domains"
+    },
+    {
+      "code": "upsell",
+      "label": "Upsell"
+    }
+  ]
+}

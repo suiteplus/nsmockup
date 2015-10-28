@@ -1,0 +1,123 @@
+{
+  "code": "emailtemplate",
+  "id": -120,
+  "name": "Email Template",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "addcompanyaddress",
+      "type": "CHECKBOX",
+      "label": "Add Company Address to Message Footer in Bulk Merges",
+      "mandatory": false
+    },
+    {
+      "code": "addunsubscribelink",
+      "type": "CHECKBOX",
+      "label": "Add Unsubscribe Link to Message Footer in Bulk Merges",
+      "mandatory": false
+    },
+    {
+      "code": "campaigndomain",
+      "type": "SELECT",
+      "label": "Campaign Domain",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "content",
+      "type": "TEXTAREA",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "description",
+      "type": "TEXTAREA",
+      "label": "Description",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "isprivate",
+      "type": "CHECKBOX",
+      "label": "Private",
+      "mandatory": false
+    },
+    {
+      "code": "mediaitem",
+      "type": "SELECT",
+      "label": "",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "mergefieldstpl_en",
+      "type": "SELECT",
+      "label": "Insert Field",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "mergetypestpl_en",
+      "type": "SELECT",
+      "label": "Field Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "restricttogroup",
+      "type": "SELECT",
+      "label": "Restrict To Group",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subject",
+      "type": "TEXT",
+      "label": "Subject",
+      "mandatory": false
+    },
+    {
+      "code": "usesmedia",
+      "type": "RADIO",
+      "label": "File",
+      "mandatory": false
+    }
+  ],
+  "tabs": [
+    {
+      "code": "marketing",
+      "label": "Marketing"
+    },
+    {
+      "code": "restriction",
+      "label": "Restrict Access"
+    },
+    {
+      "code": "template",
+      "label": "Template"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "code": "reallocateitem",
+  "id": 0,
+  "name": "Reallocate Items",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": true,
+      "recordType": "item"
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "label": "Location",
+      "mandatory": true,
+      "recordType": "location"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "quantitycommitted",
+      "type": "FLOAT",
+      "label": "Quantity Committed",
+      "mandatory": false
+    },
+    {
+      "code": "quantityonhand",
+      "type": "FLOAT",
+      "label": "Quantity On Hand",
+      "mandatory": false
+    },
+    {
+      "code": "quantitypicked",
+      "type": "FLOAT",
+      "label": "Quantity Picked",
+      "mandatory": false
+    },
+    {
+      "code": "quantityrequired",
+      "type": "FLOAT",
+      "label": "Quantity Required",
+      "mandatory": false
+    },
+    {
+      "code": "units",
+      "type": "TEXT",
+      "label": "Units",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "order": [
+      {
+        "code": "commit",
+        "type": "CHECKBOX",
+        "label": "Commit",
+        "mandatory": false
+      },
+      {
+        "code": "numberedquantityremaining",
+        "type": "FLOAT",
+        "label": "Numbered Quantity Remaining",
+        "mandatory": false
+      },
+      {
+        "code": "quantitycommitted",
+        "type": "POSFLOAT",
+        "label": "Quantity Committed",
+        "mandatory": false
+      },
+      {
+        "code": "quantitypicked",
+        "type": "FLOAT",
+        "label": "Quantity Picked",
+        "mandatory": false
+      },
+      {
+        "code": "quantityremaining",
+        "type": "FLOAT",
+        "label": "Quantity Remaining",
+        "mandatory": false
+      }
+    ]
+  }
+}

@@ -1,38 +1,1144 @@
 {
   "code": "vendor",
-  "id": 0,
+  "id": -3,
   "name": "Vendor",
   "inactive": false,
   "fields": [
     {
-      "code": "name",
-      "id": 0,
-      "desc": "Name",
-      "type": "STRING",
-      "mandatory": true
+      "code": "accountnumber",
+      "type": "TEXT",
+      "label": "Account",
+      "mandatory": false
+    },
+    {
+      "code": "address",
+      "type": "TEXT",
+      "label": "Address",
+      "mandatory": false
+    },
+    {
+      "code": "address1",
+      "type": "TEXT",
+      "label": "Address 1",
+      "mandatory": false
+    },
+    {
+      "code": "address2",
+      "type": "TEXT",
+      "label": "Address 2",
+      "mandatory": false
+    },
+    {
+      "code": "address3",
+      "type": "TEXT",
+      "label": "Address 3",
+      "mandatory": false
+    },
+    {
+      "code": "addressee",
+      "type": "TEXT",
+      "label": "Addressee",
+      "mandatory": false
+    },
+    {
+      "code": "addressinternalid",
+      "type": "TEXT",
+      "label": "Address Internal ID",
+      "mandatory": false
+    },
+    {
+      "code": "addresslabel",
+      "type": "TEXT",
+      "label": "Address Label",
+      "mandatory": false
+    },
+    {
+      "code": "addressphone",
+      "type": "TEXT",
+      "label": "Address Phone",
+      "mandatory": false
+    },
+    {
+      "code": "altcontact",
+      "type": "TEXT",
+      "label": "Alt. Contact",
+      "mandatory": false
+    },
+    {
+      "code": "altemail",
+      "type": "EMAIL",
+      "label": "Alt. Email",
+      "mandatory": false
+    },
+    {
+      "code": "altname",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "altphone",
+      "type": "PHONE",
+      "label": "Office Phone",
+      "mandatory": false
+    },
+    {
+      "code": "attention",
+      "type": "TEXT",
+      "label": "Attention",
+      "mandatory": false
+    },
+    {
+      "code": "autoname",
+      "type": "CHECKBOX",
+      "label": "Auto",
+      "mandatory": false
+    },
+    {
+      "code": "balance",
+      "type": "CURRENCY",
+      "label": "Balance",
+      "mandatory": false
+    },
+    {
+      "code": "balanceprimary",
+      "type": "CURRENCY",
+      "label": "Balance",
+      "mandatory": false
+    },
+    {
+      "code": "bcn",
+      "type": "TEXT",
+      "label": "Business Number",
+      "mandatory": false,
+      "help": "Enter the 15-digit registration number that identifies this vendor as a client of  the Canada Customs and Revenue Agency (CCRA)."
+    },
+    {
+      "code": "billaddr1",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "billaddr2",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "billaddr3",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress",
+      "type": "TEXT",
+      "label": "Billing Address",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress1",
+      "type": "TEXT",
+      "label": "Billing Address 1",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress2",
+      "type": "TEXT",
+      "label": "Billing Address 2",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress3",
+      "type": "TEXT",
+      "label": "Billing Address 3",
+      "mandatory": false
+    },
+    {
+      "code": "billaddressee",
+      "type": "TEXT",
+      "label": "Billing Addressee",
+      "mandatory": false
+    },
+    {
+      "code": "billattention",
+      "type": "TEXT",
+      "label": "Billing Attention",
+      "mandatory": false
+    },
+    {
+      "code": "billcity",
+      "type": "TEXT",
+      "label": "Billing City",
+      "mandatory": false
+    },
+    {
+      "code": "billcountry",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "billcountrycode",
+      "type": "TEXT",
+      "label": "Billing Country Code",
+      "mandatory": false
+    },
+    {
+      "code": "billpay",
+      "type": "CHECKBOX",
+      "label": "Enable Online Bill Pay",
+      "mandatory": false
+    },
+    {
+      "code": "billphone",
+      "type": "TEXT",
+      "label": "Billing Phone",
+      "mandatory": false
+    },
+    {
+      "code": "billstate",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "billzip",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "billzipcode",
+      "type": "TEXT",
+      "label": "Billing Zip",
+      "mandatory": false
+    },
+    {
+      "code": "campaignresponse",
+      "type": "SELECT",
+      "label": "Campaign Response",
+      "mandatory": false,
+      "recordType": "campaign"
+    },
+    {
+      "code": "category",
+      "type": "SELECT",
+      "label": "Category",
+      "mandatory": false,
+      "help": "References a value in a user defined list at Setup > Accounting > Setup Tasks > Accounting Lists > Vendor Categories.",
+      "recordType": null
+    },
+    {
+      "code": "city",
+      "type": "TEXT",
+      "label": "City",
+      "mandatory": false
+    },
+    {
+      "code": "comments",
+      "type": "TEXT",
+      "label": "Comments",
+      "mandatory": false
+    },
+    {
+      "code": "companyname",
+      "type": "TEXT",
+      "label": "Company Name",
+      "mandatory": false
+    },
+    {
+      "code": "contact",
+      "type": "TEXT",
+      "label": "Contact",
+      "mandatory": false
+    },
+    {
+      "code": "contactprimary",
+      "type": "SELECT",
+      "label": "Contact (Primary)",
+      "mandatory": false,
+      "recordType": "contact"
+    },
+    {
+      "code": "country",
+      "type": "SELECT",
+      "label": "Country",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "countrycode",
+      "type": "TEXT",
+      "label": "Country Code",
+      "mandatory": false
+    },
+    {
+      "code": "county",
+      "type": "TEXT",
+      "label": "County/State",
+      "mandatory": false
+    },
+    {
+      "code": "creditlimit",
+      "type": "CURRENCY",
+      "label": "Credit Limit",
+      "mandatory": false
+    },
+    {
+      "code": "currency",
+      "type": "SELECT",
+      "label": "Primary Currency",
+      "mandatory": true,
+      "help": "References a value in a user-defined list at Lists > Accounting > Currencies. This value sets the currency that all transactions involving this vendor are conducted in. If defaults are OFF, this field is required. Can only be set if the multicurrency feature is enabled?",
+      "recordType": "currency"
+    },
+    {
+      "code": "currentexchangerate",
+      "type": "FLOAT",
+      "label": "Current Currency Exchange Rate",
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "datecreated",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "defaultaddress",
+      "type": "ADDRESS",
+      "label": "Address",
+      "mandatory": false
+    },
+    {
+      "code": "defaultbankaccount",
+      "type": "SELECT",
+      "label": "Bank Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "eligibleforcommission",
+      "type": "CHECKBOX",
+      "label": "Eligible for Commission",
+      "mandatory": false
     },
     {
       "code": "email",
-      "id": 0,
-      "desc": "Email",
-      "type": "STRING",
-      "mandatory": true
+      "type": "EMAIL",
+      "label": "Email",
+      "mandatory": false
     },
     {
-      "code": "subsidiary",
-      "id": 0,
-      "desc": "Subsidiary",
+      "code": "emailpreference",
       "type": "SELECT",
-      "mandatory": true,
-      "recordType": "subsidiary"
+      "label": "Email Preference",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "emailtransactions",
+      "type": "CHECKBOX",
+      "label": "Email Transactions",
+      "mandatory": false
+    },
+    {
+      "code": "entityid",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "entitynumber",
+      "type": "INTEGER",
+      "label": "Number",
+      "mandatory": false
+    },
+    {
+      "code": "expenseaccount",
+      "type": "SELECT",
+      "label": "Default Expense Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "fax",
+      "type": "TEXT",
+      "label": "Fax",
+      "mandatory": false
+    },
+    {
+      "code": "faxtransactions",
+      "type": "CHECKBOX",
+      "label": "Fax Transactions",
+      "mandatory": false
+    },
+    {
+      "code": "firstname",
+      "type": "TEXT",
+      "label": "First Name",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "fxbalance",
+      "type": "CURRENCY",
+      "label": "Balance (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "fxunbilledorders",
+      "type": "CURRENCY",
+      "label": "Unbilled Orders (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "giveaccess",
+      "type": "CHECKBOX",
+      "label": "Login Access",
+      "mandatory": false
+    },
+    {
+      "code": "globalsubscriptionstatus",
+      "type": "SELECT",
+      "label": "Global Subscription Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "group",
+      "type": "MULTISELECT",
+      "label": "Group",
+      "mandatory": false
+    },
+    {
+      "code": "hasduplicates",
+      "type": "CHECKBOX",
+      "label": "Duplicate",
+      "mandatory": false
+    },
+    {
+      "code": "homephone",
+      "type": "PHONE",
+      "label": "Home Phone",
+      "mandatory": false
+    },
+    {
+      "code": "image",
+      "type": "IMAGE",
+      "label": "Image",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "is1099eligible",
+      "type": "CHECKBOX",
+      "label": "1099 Eligible",
+      "mandatory": false
+    },
+    {
+      "code": "isdefaultbilling",
+      "type": "CHECKBOX",
+      "label": "Default Billing Address",
+      "mandatory": false
+    },
+    {
+      "code": "isdefaultshipping",
+      "type": "CHECKBOX",
+      "label": "Default Shipping Address",
+      "mandatory": false
     },
     {
       "code": "isinactive",
-      "id": 0,
-      "desc": "Inactive",
       "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "isjobresourcevend",
+      "type": "CHECKBOX",
+      "label": "Job Resource",
+      "mandatory": false
+    },
+    {
+      "code": "isperson",
+      "type": "CHECKBOX",
+      "label": "Is Individual",
+      "mandatory": false
+    },
+    {
+      "code": "laborcost",
+      "type": "CURRENCY",
+      "label": "Labor Cost",
+      "mandatory": false
+    },
+    {
+      "code": "language",
+      "type": "SELECT",
+      "label": "Language",
       "mandatory": false,
-      "default": true
+      "recordType": null
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "lastname",
+      "type": "TEXT",
+      "label": "Last Name",
+      "mandatory": false
+    },
+    {
+      "code": "lastviewed",
+      "type": "DATETIME",
+      "label": "Last Viewed",
+      "mandatory": false
+    },
+    {
+      "code": "legalname",
+      "type": "TEXT",
+      "label": "Legal Name",
+      "mandatory": false
+    },
+    {
+      "code": "level",
+      "type": "SELECT",
+      "label": "Level",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "messages",
+      "type": "SELECT",
+      "label": "Messages",
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagesfrom",
+      "type": "SELECT",
+      "label": "Messages From",
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagesto",
+      "type": "SELECT",
+      "label": "Messages To",
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "middlename",
+      "type": "TEXT",
+      "label": "Middle Name",
+      "mandatory": false
+    },
+    {
+      "code": "mobilephone",
+      "type": "PHONE",
+      "label": "Mobile Phone",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "openingbalance",
+      "type": "CURRENCY",
+      "label": "Opening Balance",
+      "mandatory": false
+    },
+    {
+      "code": "openingbalanceaccount",
+      "type": "SELECT",
+      "label": "Opening Balance Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "openingbalancedate",
+      "type": "DATE",
+      "label": "Opening Balance Date",
+      "mandatory": false
+    },
+    {
+      "code": "otherrelationships",
+      "type": "MULTISELECT",
+      "label": "Other Relationships",
+      "mandatory": false
+    },
+    {
+      "code": "parent",
+      "type": "INTEGER",
+      "label": "Parent",
+      "mandatory": false
+    },
+    {
+      "code": "payablesaccount",
+      "type": "SELECT",
+      "label": "Default Payables Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "pec",
+      "type": "TEXT",
+      "label": "PEC",
+      "mandatory": false
+    },
+    {
+      "code": "permission",
+      "type": "SELECT",
+      "label": "Permission",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "phone",
+      "type": "PHONE",
+      "label": "Phone",
+      "mandatory": false
+    },
+    {
+      "code": "phoneticname",
+      "type": "TEXT",
+      "label": "Phonetic Name",
+      "mandatory": false
+    },
+    {
+      "code": "printoncheckas",
+      "type": "TEXT",
+      "label": "Print As",
+      "mandatory": false
+    },
+    {
+      "code": "printtransactions",
+      "type": "CHECKBOX",
+      "label": "Print Transactions",
+      "mandatory": false
+    },
+    {
+      "code": "representingsubsidiary",
+      "type": "SELECT",
+      "label": "Represents Subsidiary",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "requirepwdchange",
+      "type": "CHECKBOX",
+      "label": "Require Password Change On Next Login",
+      "mandatory": false
+    },
+    {
+      "code": "salutation",
+      "type": "TEXT",
+      "label": "Mr./Mrs...",
+      "mandatory": false
+    },
+    {
+      "code": "sendemail",
+      "type": "CHECKBOX",
+      "label": "Send Notification Email",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress",
+      "type": "TEXT",
+      "label": "Shipping Address",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress1",
+      "type": "TEXT",
+      "label": "Shipping Address 1",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress2",
+      "type": "TEXT",
+      "label": "Shipping Address 2",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress3",
+      "type": "TEXT",
+      "label": "Shipping Address 3",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddressee",
+      "type": "TEXT",
+      "label": "Shipping Addressee",
+      "mandatory": false
+    },
+    {
+      "code": "shipattention",
+      "type": "TEXT",
+      "label": "Shipping Attention",
+      "mandatory": false
+    },
+    {
+      "code": "shipcity",
+      "type": "TEXT",
+      "label": "Shipping City",
+      "mandatory": false
+    },
+    {
+      "code": "shipcountry",
+      "type": "SELECT",
+      "label": "Shipping Country",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipcountrycode",
+      "type": "TEXT",
+      "label": "Shipping Country Code",
+      "mandatory": false
+    },
+    {
+      "code": "shipphone",
+      "type": "TEXT",
+      "label": "Shipping Phone",
+      "mandatory": false
+    },
+    {
+      "code": "shipstate",
+      "type": "TEXT",
+      "label": "Shipping State/Province",
+      "mandatory": false
+    },
+    {
+      "code": "shipzip",
+      "type": "TEXT",
+      "label": "Shipping Zip",
+      "mandatory": false
+    },
+    {
+      "code": "state",
+      "type": "SELECT",
+      "label": "State/Province",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "statedisplayname",
+      "type": "SELECT",
+      "label": "State/Province Display Name",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "strength",
+      "type": "TEXT",
+      "label": "Password Strength",
+      "mandatory": false
+    },
+    {
+      "code": "subscription",
+      "type": "SELECT",
+      "label": "Subscription",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subscriptiondate",
+      "type": "DATETIME",
+      "label": "Subscription Date",
+      "mandatory": false
+    },
+    {
+      "code": "subscriptionstatus",
+      "type": "CHECKBOX",
+      "label": "Subscription Status",
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiary",
+      "mandatory": true,
+      "help": "Select the subsidiary to associate with this vendor. You cannot enter transactions for this vendor unless a subsidiary is assigned.\n&nbsp;\nIf you select this vendor on a transaction, the transaction is associated with this subsidiary. The vendor is able to access only information associated with this subsidiary.\n&nbsp;\nNote: Once a transaction has posted for the vendor, you are not able to change the subsidiary selected on the vendor record.",
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "subsidiaryedition",
+      "type": "TEXT",
+      "label": "Edition",
+      "mandatory": false
+    },
+    {
+      "code": "subsidiarynohierarchy",
+      "type": "SELECT",
+      "label": "Subsidiary (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "taxfractionunit",
+      "type": "SELECT",
+      "label": "Tax Rounding Precision",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "taxidnum",
+      "type": "TEXT",
+      "label": "Tax ID",
+      "mandatory": false
+    },
+    {
+      "code": "taxitem",
+      "type": "SELECT",
+      "label": "Tax Code",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "taxrounding",
+      "type": "SELECT",
+      "label": "Tax Rounding Method",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "tegatamaturity",
+      "type": "INTEGER",
+      "label": "Tegata Maturity Date",
+      "mandatory": false
+    },
+    {
+      "code": "terms",
+      "type": "SELECT",
+      "label": "Terms",
+      "mandatory": false,
+      "help": "References a value in a user-defined list at Setup > Accounting > Setup Tasks > Accounting Lists > Term and sets the standard discount terms for this Vendor&#xfffd;s invoices.",
+      "recordType": null
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "label": "Job Title",
+      "mandatory": false
+    },
+    {
+      "code": "type",
+      "type": "SELECT",
+      "label": "Entity Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "unbilledorders",
+      "type": "CURRENCY",
+      "label": "Unbilled Orders",
+      "mandatory": false
+    },
+    {
+      "code": "unbilledordersprimary",
+      "type": "CURRENCY",
+      "label": "Unbilled Orders",
+      "mandatory": false
+    },
+    {
+      "code": "unsubscribe",
+      "type": "SELECT",
+      "label": "Unsubscribe from Campaigns",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "url",
+      "type": "TEXT",
+      "label": "Web Address",
+      "mandatory": false
+    },
+    {
+      "code": "vatregnumber",
+      "type": "TEXT",
+      "label": "Tax Number",
+      "mandatory": false
+    },
+    {
+      "code": "workcalendar",
+      "type": "SELECT",
+      "label": "Work Calendar",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "zipcode",
+      "type": "TEXT",
+      "label": "Zip Code",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "addressbook": [
+      {
+        "code": "addr1",
+        "type": "TEXT",
+        "label": "Address 1",
+        "mandatory": false
+      },
+      {
+        "code": "addr2",
+        "type": "TEXT",
+        "label": "Address 2",
+        "mandatory": false
+      },
+      {
+        "code": "addr3",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "addressee",
+        "type": "TEXT",
+        "label": "Addressee",
+        "mandatory": false
+      },
+      {
+        "code": "addressid",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "addrtext",
+        "type": "ADDRESS",
+        "label": "Address",
+        "mandatory": false
+      },
+      {
+        "code": "attention",
+        "type": "TEXT",
+        "label": "Attention",
+        "mandatory": false
+      },
+      {
+        "code": "city",
+        "type": "TEXT",
+        "label": "City",
+        "mandatory": false
+      },
+      {
+        "code": "country",
+        "type": "SELECT",
+        "label": "Country",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "defaultbilling",
+        "type": "CHECKBOX",
+        "label": "Default Billing",
+        "mandatory": false
+      },
+      {
+        "code": "defaultshipping",
+        "type": "CHECKBOX",
+        "label": "Default Shipping",
+        "mandatory": false
+      },
+      {
+        "code": "displaystate",
+        "type": "TEXT",
+        "label": "State/Province",
+        "mandatory": false
+      },
+      {
+        "code": "id",
+        "type": "INTEGER",
+        "label": "ID",
+        "mandatory": false
+      },
+      {
+        "code": "internalid",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "label",
+        "type": "TEXT",
+        "label": "Label",
+        "mandatory": false
+      },
+      {
+        "code": "override",
+        "type": "CHECKBOX",
+        "label": "Override",
+        "mandatory": false
+      },
+      {
+        "code": "phone",
+        "type": "PHONE",
+        "label": "Phone",
+        "mandatory": false
+      },
+      {
+        "code": "state",
+        "type": "TEXT",
+        "label": "State/Province",
+        "mandatory": false
+      },
+      {
+        "code": "zip",
+        "type": "TEXT",
+        "label": "Zip",
+        "mandatory": false
+      }
+    ],
+    "currency": [
+      {
+        "code": "balance",
+        "type": "CURRENCY",
+        "label": "Balance",
+        "mandatory": false
+      },
+      {
+        "code": "currency",
+        "type": "SELECT",
+        "label": "Currency",
+        "mandatory": true,
+        "recordType": "currency"
+      },
+      {
+        "code": "unbilledorders",
+        "type": "CURRENCY",
+        "label": "Unbilled Orders",
+        "mandatory": false
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "access",
+      "label": "Access"
+    },
+    {
+      "code": "address",
+      "label": "Address"
+    },
+    {
+      "code": "commission",
+      "label": "Commission"
+    },
+    {
+      "code": "custom",
+      "label": "Custom"
+    },
+    {
+      "code": "financial",
+      "label": "Financial"
+    },
+    {
+      "code": "general",
+      "label": "General"
+    },
+    {
+      "code": "info",
+      "label": "Info"
+    },
+    {
+      "code": "marketing",
+      "label": "Marketing"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ],
+  "transformTypes": [
+    {
+      "targetRecord": "purchaseorder",
+      "fieldDefault": "customform"
+    },
+    {
+      "targetRecord": "vendorbill",
+      "fieldDefault": "customform,entity,poids"
+    },
+    {
+      "targetRecord": "vendorpayment",
+      "fieldDefault": "customform"
     }
   ]
 }

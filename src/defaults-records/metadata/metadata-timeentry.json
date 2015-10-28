@@ -1,0 +1,431 @@
+{
+  "code": "timeentry",
+  "id": 0,
+  "name": "Time Entry",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "approvalstatus",
+      "type": "SELECT",
+      "label": "",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "billable",
+      "type": "CHECKBOX",
+      "label": "Billable",
+      "mandatory": false
+    },
+    {
+      "code": "billingclass",
+      "type": "TEXT",
+      "label": "Billing Class",
+      "mandatory": false
+    },
+    {
+      "code": "billingstatus",
+      "type": "TEXT",
+      "label": "Billing Status",
+      "mandatory": false
+    },
+    {
+      "code": "break",
+      "type": "TEXT",
+      "label": "Break",
+      "mandatory": false
+    },
+    {
+      "code": "casetaskevent",
+      "type": "SELECT",
+      "label": "Case/Task/Event",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "chargebillingrunid",
+      "type": "INTEGER",
+      "label": "Charge Billing Run ID",
+      "mandatory": false
+    },
+    {
+      "code": "class",
+      "type": "SELECT",
+      "label": "Class",
+      "mandatory": false,
+      "help": "References a value from a user defined list at Setup > Company > Classifications > Classes. This field is required when the Make Classes Mandatory preference is enabled at Setup > Accounting > Accounting Preferences.",
+      "recordType": null
+    },
+    {
+      "code": "classnohierarchy",
+      "type": "SELECT",
+      "label": "Class (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "customer",
+      "type": "SELECT",
+      "label": "Customer",
+      "mandatory": false,
+      "help": "References an existing customer. If you select a customer or job, you must also select a service item.",
+      "recordType": "customer"
+    },
+    {
+      "code": "date",
+      "type": "DATE",
+      "label": "Date",
+      "mandatory": false
+    },
+    {
+      "code": "datecreated",
+      "type": "DATE",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "day",
+      "type": "DATE",
+      "label": "Date",
+      "mandatory": false
+    },
+    {
+      "code": "department",
+      "type": "SELECT",
+      "label": "Department",
+      "mandatory": false,
+      "help": "References a value from a user defined list at Setup > Company > Departments.\nThis field is required when Make Departments Mandatory is enabled at Setup > Accounting > Accounting Preferences.",
+      "recordType": "department"
+    },
+    {
+      "code": "departmentnohierarchy",
+      "type": "SELECT",
+      "label": "Department (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "duration",
+      "type": "FLOAT",
+      "label": "Duration",
+      "mandatory": false
+    },
+    {
+      "code": "durationdecimal",
+      "type": "FLOAT",
+      "label": "Duration (Decimal)",
+      "mandatory": false
+    },
+    {
+      "code": "employee",
+      "type": "SELECT",
+      "label": "Employee",
+      "mandatory": true,
+      "recordType": "employee"
+    },
+    {
+      "code": "endtime",
+      "type": "TIMEOFDAY",
+      "label": "End Time",
+      "mandatory": false
+    },
+    {
+      "code": "exempt",
+      "type": "CHECKBOX",
+      "label": "Exempt",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "hours",
+      "type": "TEXT",
+      "label": "Duration",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "INTEGER",
+      "label": "Internal ID",
+      "mandatory": false
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isbillable",
+      "type": "CHECKBOX",
+      "label": "Billable",
+      "mandatory": false
+    },
+    {
+      "code": "ischarged",
+      "type": "CHECKBOX",
+      "label": "Charged",
+      "mandatory": false
+    },
+    {
+      "code": "isexempt",
+      "type": "CHECKBOX",
+      "label": "Exempt",
+      "mandatory": false
+    },
+    {
+      "code": "isproductive",
+      "type": "CHECKBOX",
+      "label": "Productive",
+      "mandatory": false
+    },
+    {
+      "code": "isutilized",
+      "type": "CHECKBOX",
+      "label": "Utilized",
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "TEXT",
+      "label": "Item",
+      "mandatory": false
+    },
+    {
+      "code": "job",
+      "type": "SELECT",
+      "label": "Job",
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "lastmodified",
+      "type": "DATE",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "label": "Location",
+      "mandatory": true,
+      "help": "References a value in a user-defined list at Setup > Company > Classifications > Locations.\nThis field is required when Make Locations Mandatory is enabled at Setup > Accounting > Accounting Preferences.",
+      "recordType": "location"
+    },
+    {
+      "code": "locationnohierarchy",
+      "type": "SELECT",
+      "label": "Location (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "memo",
+      "type": "TEXT",
+      "label": "Note",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "nextapprover",
+      "type": "SELECT",
+      "label": "Next Approver",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "overriderate",
+      "type": "TEXT",
+      "label": "Lock this Rate",
+      "mandatory": false
+    },
+    {
+      "code": "paidbypayroll",
+      "type": "CHECKBOX",
+      "label": "Paid by Payroll",
+      "mandatory": false
+    },
+    {
+      "code": "paidexternally",
+      "type": "CHECKBOX",
+      "label": "Paid Externally",
+      "mandatory": false
+    },
+    {
+      "code": "payitem",
+      "type": "SELECT",
+      "label": "Payroll Item",
+      "mandatory": false,
+      "recordType": "payrollitem"
+    },
+    {
+      "code": "payrolldate",
+      "type": "DATE",
+      "label": "Payroll Date",
+      "mandatory": false
+    },
+    {
+      "code": "payrollitem",
+      "type": "SELECT",
+      "label": "Payroll Item",
+      "mandatory": false,
+      "recordType": "payrollitem"
+    },
+    {
+      "code": "price",
+      "type": "SELECT",
+      "label": "Price Level",
+      "mandatory": false,
+      "help": "If you've set up a custom price level for your customer, it appears here. Otherwise, Sales Price 1 on the service item's record appears.If you want to change the price level, select one from the list. Select Custom to enter a new price in the Rate field. If you're entering time for a payroll item like vacation time, leave this field blank.",
+      "recordType": "pricelevel"
+    },
+    {
+      "code": "productive",
+      "type": "CHECKBOX",
+      "label": "Productive",
+      "mandatory": false
+    },
+    {
+      "code": "projecttask",
+      "type": "SELECT",
+      "label": "Project Task",
+      "mandatory": false,
+      "recordType": "projecttask"
+    },
+    {
+      "code": "projecttaskassignment",
+      "type": "SELECT",
+      "label": "",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "rate",
+      "type": "CURRENCY",
+      "label": "Rate",
+      "mandatory": false
+    },
+    {
+      "code": "starttime",
+      "type": "TIMEOFDAY",
+      "label": "Start Time",
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "TEXT",
+      "label": "Subsidiary",
+      "mandatory": false
+    },
+    {
+      "code": "subsidiarynohierarchy",
+      "type": "TEXT",
+      "label": "Subsidiary (no hierarchy)",
+      "mandatory": false
+    },
+    {
+      "code": "task",
+      "type": "SELECT",
+      "label": "Task",
+      "mandatory": false,
+      "recordType": "task"
+    },
+    {
+      "code": "timesheet",
+      "type": "URL",
+      "label": "Timesheet",
+      "mandatory": false
+    },
+    {
+      "code": "timetype",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "type",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "label": "User",
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "utilized",
+      "type": "CHECKBOX",
+      "label": "Utilized",
+      "mandatory": false
+    },
+    {
+      "code": "vendor",
+      "type": "SELECT",
+      "label": "Vendor",
+      "mandatory": false,
+      "recordType": "vendor"
+    }
+  ]
+}

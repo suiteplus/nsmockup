@@ -1,0 +1,634 @@
+{
+  "code": "issue",
+  "id": 0,
+  "name": "Issue",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "ageinmonths",
+      "type": "INTEGER",
+      "label": "Age in Months",
+      "mandatory": false
+    },
+    {
+      "code": "assigned",
+      "type": "SELECT",
+      "label": "Assigned To",
+      "mandatory": false,
+      "help": "Select the employee you want to assign this issue to.You assign an issue to the person who needs to take the next step in resolving the issue.The employees you see in this list vary according to your role permissions.",
+      "recordType": null
+    },
+    {
+      "code": "autoname",
+      "type": "CHECKBOX",
+      "label": "Auto",
+      "mandatory": false
+    },
+    {
+      "code": "buildbroken",
+      "type": "SELECT",
+      "label": "Broken In Build",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "buildbrokenname",
+      "type": "TEXT",
+      "label": "Broken In Build (Name)",
+      "mandatory": false
+    },
+    {
+      "code": "buildfixed",
+      "type": "SELECT",
+      "label": "Fixed In Build",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "buildfixedname",
+      "type": "TEXT",
+      "label": "Fixed In Build (Name)",
+      "mandatory": false
+    },
+    {
+      "code": "buildtarget",
+      "type": "SELECT",
+      "label": "Target Build",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "buildtargetname",
+      "type": "TEXT",
+      "label": "Target Build (Name)",
+      "mandatory": false
+    },
+    {
+      "code": "casecount",
+      "type": "INTEGER",
+      "label": "Case Count",
+      "mandatory": false
+    },
+    {
+      "code": "casenumber",
+      "type": "TEXT",
+      "label": "Case Number",
+      "mandatory": false
+    },
+    {
+      "code": "closeddate",
+      "type": "DATETIME",
+      "label": "Date Closed",
+      "mandatory": false
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "datereleased",
+      "type": "DATE",
+      "label": "Date Released",
+      "mandatory": false
+    },
+    {
+      "code": "details",
+      "type": "TEXT",
+      "label": "Details",
+      "mandatory": false
+    },
+    {
+      "code": "duplicateof",
+      "type": "SELECT",
+      "label": "Duplicate Of",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "efix",
+      "type": "CHECKBOX",
+      "label": "E-Fix",
+      "mandatory": false
+    },
+    {
+      "code": "emailassignee",
+      "type": "CHECKBOX",
+      "label": "Email Assignee",
+      "mandatory": false
+    },
+    {
+      "code": "emailcells",
+      "type": "SELECT",
+      "label": "Email Functional Teams",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "emailemployees",
+      "type": "SELECT",
+      "label": "Copy Employees",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "employee",
+      "type": "SELECT",
+      "label": "Employee",
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "employeeorteam",
+      "type": "SELECT",
+      "label": "Employee/Team",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "eventstatus",
+      "type": "SELECT",
+      "label": "Base Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalabstract",
+      "type": "TEXT",
+      "label": "External Abstract",
+      "mandatory": false
+    },
+    {
+      "code": "externaldetails",
+      "type": "TEXT",
+      "label": "External Details",
+      "mandatory": false
+    },
+    {
+      "code": "externalfixedin",
+      "type": "TEXT",
+      "label": "Fixed In Version (External)",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "externalstatus",
+      "type": "SELECT",
+      "label": "External Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "fixed",
+      "type": "DATETIME",
+      "label": "Date Fixed",
+      "mandatory": false
+    },
+    {
+      "code": "fixedby",
+      "type": "SELECT",
+      "label": "Fixed By",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isowner",
+      "type": "CHECKBOX",
+      "label": "I Own This Issue",
+      "mandatory": false
+    },
+    {
+      "code": "isreviewed",
+      "type": "CHECKBOX",
+      "label": "Reviewed",
+      "mandatory": false
+    },
+    {
+      "code": "isshowstopper",
+      "type": "CHECKBOX",
+      "label": "Showstopper",
+      "mandatory": false
+    },
+    {
+      "code": "issueabstract",
+      "type": "TEXT",
+      "label": "Abstract",
+      "mandatory": false
+    },
+    {
+      "code": "issuenumber",
+      "type": "TEXT",
+      "label": "Number/ID",
+      "mandatory": false
+    },
+    {
+      "code": "issuestatus",
+      "type": "SELECT",
+      "label": "Issue Status",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "issuetags",
+      "type": "SELECT",
+      "label": "Tags",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "issuetype",
+      "type": "SELECT",
+      "label": "Issue Type",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": false,
+      "help": "If this issue is associated with an item, select the item.",
+      "recordType": "item"
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "lastviewed",
+      "type": "DATETIME",
+      "label": "Last Viewed",
+      "mandatory": false
+    },
+    {
+      "code": "module",
+      "type": "TEXT",
+      "label": "Module",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "newdetails",
+      "type": "TEXTAREA",
+      "label": "New Details",
+      "mandatory": false
+    },
+    {
+      "code": "number",
+      "type": "TEXT",
+      "label": "Number",
+      "mandatory": false
+    },
+    {
+      "code": "originalfixedin",
+      "type": "TEXT",
+      "label": "Last Version Fixed (pre-11)",
+      "mandatory": false
+    },
+    {
+      "code": "priority",
+      "type": "SELECT",
+      "label": "Priority",
+      "mandatory": true,
+      "help": "Select a priority level to denote when this issue needs to be resolved. A priority of 1 should receive attention first, and a priority of 9 does not need immediate attention.",
+      "recordType": null
+    },
+    {
+      "code": "product",
+      "type": "SELECT",
+      "label": "Product",
+      "mandatory": true,
+      "help": "Select the product affected by this issue.Administrators can create product records with modules at <_TABNAME=ADMI_ISSUEPRODUCT_> &gt; <_TASKCATEGORY=ADMI_ISSUEPRODUCT_> &gt; Products &gt; New.Products are tracked separately from item records. You can associate multiple items with a product on product records.",
+      "recordType": null
+    },
+    {
+      "code": "productteam",
+      "type": "SELECT",
+      "label": "Product Team",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "reportedby",
+      "type": "SELECT",
+      "label": "Reported By",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "reproduce",
+      "type": "SELECT",
+      "label": "Reproduced",
+      "mandatory": false,
+      "help": "Select where this issue can be reproduced:\n<ul>\n  <li>In test environment &#150 this issue can be experienced in internal \n    test accounts.</li>\n  <li>In user's environment ONLY &#150 this issue can not be experienced \n    in internal test accounts.</li>\n  <li>Not reproduced &#150 this issue has not been reproduced.</li>\n</ul>",
+      "recordType": null
+    },
+    {
+      "code": "resolved",
+      "type": "DATETIME",
+      "label": "Date Resolved",
+      "mandatory": false
+    },
+    {
+      "code": "resolvedby",
+      "type": "SELECT",
+      "label": "Resolved By",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "reviewer",
+      "type": "SELECT",
+      "label": "Reviewer",
+      "mandatory": false,
+      "help": "Select the person's name who reviewed the work done to resolve this issue.",
+      "recordType": null
+    },
+    {
+      "code": "severity",
+      "type": "SELECT",
+      "label": "Severity",
+      "mandatory": true,
+      "help": "Select the severity of this issue.For specific severity criteria, click Help at the top of the page.",
+      "recordType": null
+    },
+    {
+      "code": "source",
+      "type": "SELECT",
+      "label": "Source",
+      "mandatory": false,
+      "help": "Select where information about this issue originated.",
+      "recordType": null
+    },
+    {
+      "code": "status",
+      "type": "SELECT",
+      "label": "Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "tags",
+      "type": "MULTISELECT",
+      "label": "Tags",
+      "mandatory": false
+    },
+    {
+      "code": "tracking",
+      "type": "CHECKBOX",
+      "label": "Tracking",
+      "mandatory": false
+    },
+    {
+      "code": "type",
+      "type": "TEXT",
+      "label": "Type",
+      "mandatory": false
+    },
+    {
+      "code": "usertype",
+      "type": "SELECT",
+      "label": "User Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "versionbroken",
+      "type": "SELECT",
+      "label": "Broken In Version",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "versionfixed",
+      "type": "SELECT",
+      "label": "Fixed In Version",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "versiontarget",
+      "type": "SELECT",
+      "label": "Target Version",
+      "mandatory": false,
+      "recordType": null
+    }
+  ],
+  "subLists": {
+    "brokeninversion": [
+      {
+        "code": "build",
+        "type": "SELECT",
+        "label": "Build",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "primary",
+        "type": "CHECKBOX",
+        "label": "Primary",
+        "mandatory": false
+      },
+      {
+        "code": "version",
+        "type": "SELECT",
+        "label": "Version",
+        "mandatory": true,
+        "recordType": null
+      }
+    ],
+    "fixedinversion": [
+      {
+        "code": "build",
+        "type": "SELECT",
+        "label": "Build",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "primary",
+        "type": "CHECKBOX",
+        "label": "Primary",
+        "mandatory": false
+      },
+      {
+        "code": "version",
+        "type": "SELECT",
+        "label": "Version",
+        "mandatory": true,
+        "recordType": null
+      }
+    ],
+    "relatedissues": [
+      {
+        "code": "issueabstract",
+        "type": "URL",
+        "label": "Abstract",
+        "mandatory": false
+      },
+      {
+        "code": "issueassignee",
+        "type": "TEXT",
+        "label": "Assigned To",
+        "mandatory": false
+      },
+      {
+        "code": "issuenumber",
+        "type": "SELECT",
+        "label": "Issue No.",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "issuestatus",
+        "type": "TEXT",
+        "label": "Status",
+        "mandatory": false
+      },
+      {
+        "code": "relationship",
+        "type": "SELECT",
+        "label": "Relationship",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "relationshipcomment",
+        "type": "TEXTAREA",
+        "label": "Comment",
+        "mandatory": false
+      }
+    ],
+    "targetversion": [
+      {
+        "code": "build",
+        "type": "SELECT",
+        "label": "Build",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "primary",
+        "type": "CHECKBOX",
+        "label": "Primary",
+        "mandatory": false
+      },
+      {
+        "code": "version",
+        "type": "SELECT",
+        "label": "Version",
+        "mandatory": true,
+        "recordType": null
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "case",
+      "label": "Cases"
+    },
+    {
+      "code": "communication",
+      "label": "Communication"
+    },
+    {
+      "code": "custom",
+      "label": "Custom"
+    },
+    {
+      "code": "detail",
+      "label": "Details"
+    },
+    {
+      "code": "external",
+      "label": "External"
+    },
+    {
+      "code": "file",
+      "label": "Files"
+    },
+    {
+      "code": "version",
+      "label": "Versions"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "code": "portlet",
+  "id": 0,
+  "name": "Portlet",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "afterinstallfunction",
+      "type": "TEXT",
+      "label": "After Install Function",
+      "mandatory": false
+    },
+    {
+      "code": "aftersubmitfunction",
+      "type": "TEXT",
+      "label": "After Submit Function",
+      "mandatory": false
+    },
+    {
+      "code": "afterupdatefunction",
+      "type": "TEXT",
+      "label": "After Update Function",
+      "mandatory": false
+    },
+    {
+      "code": "beforeinstallfunction",
+      "type": "TEXT",
+      "label": "Before Install Function",
+      "mandatory": false
+    },
+    {
+      "code": "beforeloadfunction",
+      "type": "TEXT",
+      "label": "Before Load Function",
+      "mandatory": false
+    },
+    {
+      "code": "beforesubmitfunction",
+      "type": "TEXT",
+      "label": "Before Submit Function",
+      "mandatory": false
+    },
+    {
+      "code": "beforeuninstallfunction",
+      "type": "TEXT",
+      "label": "Before Uninstall Function",
+      "mandatory": false
+    },
+    {
+      "code": "beforeupdatefunction",
+      "type": "TEXT",
+      "label": "Before Update Function",
+      "mandatory": false
+    },
+    {
+      "code": "defaultfunction",
+      "type": "TEXT",
+      "label": "Default Function",
+      "mandatory": false
+    },
+    {
+      "code": "deletefunction",
+      "type": "TEXT",
+      "label": "DELETE Function",
+      "mandatory": false
+    },
+    {
+      "code": "description",
+      "type": "TEXT",
+      "label": "Description",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "fieldchangedfunction",
+      "type": "TEXT",
+      "label": "Field Changed Function",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "getfunction",
+      "type": "TEXT",
+      "label": "GET Function",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "lineinitfunction",
+      "type": "TEXT",
+      "label": "Line Init Function",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "notifyadmins",
+      "type": "CHECKBOX",
+      "label": "Notify All Admins",
+      "mandatory": false
+    },
+    {
+      "code": "notifyemails",
+      "type": "EMAILS",
+      "label": "Notify Emails",
+      "mandatory": false
+    },
+    {
+      "code": "notifygroup",
+      "type": "SELECT",
+      "label": "Notify Group",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "notifyowner",
+      "type": "CHECKBOX",
+      "label": "Notify Script Owner",
+      "mandatory": false
+    },
+    {
+      "code": "notifyuser",
+      "type": "CHECKBOX",
+      "label": "Notify Current User",
+      "mandatory": false
+    },
+    {
+      "code": "owner",
+      "type": "SELECT",
+      "label": "Owner",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "pageinitfunction",
+      "type": "TEXT",
+      "label": "Page Init Function",
+      "mandatory": false
+    },
+    {
+      "code": "portlettype",
+      "type": "SELECT",
+      "label": "Portlet Type",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "postfunction",
+      "type": "TEXT",
+      "label": "POST Function",
+      "mandatory": false
+    },
+    {
+      "code": "postsourcingfunction",
+      "type": "TEXT",
+      "label": "Post Sourcing Function",
+      "mandatory": false
+    },
+    {
+      "code": "putfunction",
+      "type": "TEXT",
+      "label": "PUT Function",
+      "mandatory": false
+    },
+    {
+      "code": "recalcfunction",
+      "type": "TEXT",
+      "label": "Recalc Function",
+      "mandatory": false
+    },
+    {
+      "code": "saverecordfunction",
+      "type": "TEXT",
+      "label": "Save Record Function",
+      "mandatory": false
+    },
+    {
+      "code": "scriptfile",
+      "type": "SELECT",
+      "label": "Script File",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "scriptid",
+      "type": "TEXT",
+      "label": "Script ID",
+      "mandatory": false
+    },
+    {
+      "code": "scripttype",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "label": "User",
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "validatedeletefunction",
+      "type": "TEXT",
+      "label": "Validate Delete Function",
+      "mandatory": false
+    },
+    {
+      "code": "validatefieldfunction",
+      "type": "TEXT",
+      "label": "Validate Field Function",
+      "mandatory": false
+    },
+    {
+      "code": "validateinsertfunction",
+      "type": "TEXT",
+      "label": "Validate Insert Function",
+      "mandatory": false
+    },
+    {
+      "code": "validatelinefunction",
+      "type": "TEXT",
+      "label": "Validate Line Function",
+      "mandatory": false
+    }
+  ],
+  "tabs": [
+    {
+      "code": "errorhandling",
+      "label": "Unhandled Errors"
+    },
+    {
+      "code": "executionlog",
+      "label": "Execution Log"
+    },
+    {
+      "code": "historytab",
+      "label": "History"
+    },
+    {
+      "code": "scriptdeployments",
+      "label": "Deployments"
+    },
+    {
+      "code": "scripts",
+      "label": "Scripts"
+    },
+    {
+      "code": "tab_parameters",
+      "label": "Parameters"
+    }
+  ]
+}

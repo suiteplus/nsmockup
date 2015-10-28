@@ -1,0 +1,106 @@
+{
+  "code": "scheduledscriptinstance",
+  "id": 0,
+  "name": "Scheduled Script Instance",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "datecreated",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "enddate",
+      "type": "DATETIME",
+      "label": "End Date",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "percentcomplete",
+      "type": "PERCENT",
+      "label": "Percent Complete",
+      "mandatory": false
+    },
+    {
+      "code": "queue",
+      "type": "TEXT",
+      "label": "Queue",
+      "mandatory": false
+    },
+    {
+      "code": "queueposition",
+      "type": "INTEGER",
+      "label": "Queue Position",
+      "mandatory": false
+    },
+    {
+      "code": "script",
+      "type": "SELECT",
+      "label": "Script",
+      "mandatory": false,
+      "recordType": "script"
+    },
+    {
+      "code": "scriptdeployment",
+      "type": "SELECT",
+      "label": "Script Deployment",
+      "mandatory": false,
+      "recordType": "scriptdeployment"
+    },
+    {
+      "code": "startdate",
+      "type": "DATETIME",
+      "label": "Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "status",
+      "type": "TEXT",
+      "label": "Status",
+      "mandatory": false
+    }
+  ]
+}

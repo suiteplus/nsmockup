@@ -1,0 +1,183 @@
+{
+  "code": "inventorydetail",
+  "id": 0,
+  "name": "Inventory Detail",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "binnumber",
+      "type": "SELECT",
+      "label": "Bin Number",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "inventorynumber",
+      "type": "SELECT",
+      "label": "Inventory Number",
+      "mandatory": false,
+      "recordType": "inventorynumber"
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": false,
+      "recordType": "item"
+    },
+    {
+      "code": "itemdescription",
+      "type": "TEXT",
+      "label": "Description",
+      "mandatory": false
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "label": "Location",
+      "mandatory": false,
+      "recordType": "location"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "quantity",
+      "type": "FLOAT",
+      "label": "Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "tolocation",
+      "type": "TEXT",
+      "label": "Location",
+      "mandatory": false
+    },
+    {
+      "code": "unit",
+      "type": "SELECT",
+      "label": "Units",
+      "mandatory": false,
+      "recordType": null
+    }
+  ],
+  "subLists": {
+    "inventoryassignment": [
+      {
+        "code": "binnumber",
+        "type": "SELECT",
+        "label": "Bin",
+        "mandatory": true,
+        "recordType": "bin"
+      },
+      {
+        "code": "expirationdate",
+        "type": "DATE",
+        "label": "Expiration Date",
+        "mandatory": false
+      },
+      {
+        "code": "internalid",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "inventorydetail",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "issueinventorynumber",
+        "type": "SELECT",
+        "label": "Serial/Lot Number",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "quantity",
+        "type": "FLOAT",
+        "label": "Quantity",
+        "mandatory": true
+      },
+      {
+        "code": "quantityavailable",
+        "type": "POSFLOAT",
+        "label": "Available",
+        "mandatory": false
+      }
+    ]
+  }
+}

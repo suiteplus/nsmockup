@@ -1,0 +1,58 @@
+{
+  "code": "pricelevel",
+  "id": -186,
+  "name": "Price Level",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "discountpct",
+      "type": "PERCENT",
+      "label": "Markup/Discount %",
+      "mandatory": false,
+      "help": "If you like, enter a positive or negative percentage to mark up or discount prices for this price level.\nPrices for this level are calculated by applying the positive or negative percentage to the Base Price level.\nIf you want to update all items using this price level, you must also check the Update Existing Prices box.\nAfter you click Save, your prices automatically update.\nNote: Any value you enter is rounded to the nearest 0.01%"
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "isonline",
+      "type": "CHECKBOX",
+      "label": "Online Price Level",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Price Level",
+      "mandatory": true,
+      "help": "Enter the name for this category, group, method, message, status, type or term."
+    },
+    {
+      "code": "updateexistingprices",
+      "type": "CHECKBOX",
+      "label": "Update Existing Prices",
+      "mandatory": false
+    }
+  ]
+}

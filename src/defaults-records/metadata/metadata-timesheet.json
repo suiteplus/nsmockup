@@ -1,0 +1,194 @@
+{
+  "code": "timesheet",
+  "id": 0,
+  "name": "Timesheet",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "approvalstatus",
+      "type": "SELECT",
+      "label": "",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "employee",
+      "type": "SELECT",
+      "label": "Employee",
+      "mandatory": false,
+      "help": "References an existing employee record. Required on Add.",
+      "recordType": "employee"
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "label": "End Date",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "id",
+      "type": "INTEGER",
+      "label": "ID",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "iscomplete",
+      "type": "CHECKBOX",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "label": "Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiary",
+      "mandatory": false,
+      "help": "The subsidiary associated with the employee is displayed here.",
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "timeentry",
+      "type": "SELECT",
+      "label": "Time Entry",
+      "mandatory": false,
+      "recordType": "timeentry"
+    },
+    {
+      "code": "timesheetdate",
+      "type": "DATE",
+      "label": "Timesheet Date",
+      "mandatory": false
+    },
+    {
+      "code": "totalhours",
+      "type": "TEXT",
+      "label": "Total Hours",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "timegrid": [
+      {
+        "code": "friday",
+        "type": "SUMMARY",
+        "label": "&nbsp",
+        "mandatory": false
+      },
+      {
+        "code": "monday",
+        "type": "SUMMARY",
+        "label": "&nbsp",
+        "mandatory": false
+      },
+      {
+        "code": "saturday",
+        "type": "SUMMARY",
+        "label": "&nbsp",
+        "mandatory": false
+      },
+      {
+        "code": "sunday",
+        "type": "SUMMARY",
+        "label": "&nbsp",
+        "mandatory": false
+      },
+      {
+        "code": "thursday",
+        "type": "SUMMARY",
+        "label": "&nbsp",
+        "mandatory": false
+      },
+      {
+        "code": "tuesday",
+        "type": "SUMMARY",
+        "label": "&nbsp",
+        "mandatory": false
+      },
+      {
+        "code": "wednesday",
+        "type": "SUMMARY",
+        "label": "&nbsp",
+        "mandatory": false
+      }
+    ]
+  }
+}

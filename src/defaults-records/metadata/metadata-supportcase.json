@@ -1,0 +1,653 @@
+{
+  "code": "supportcase",
+  "id": 0,
+  "name": "Case",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "assigned",
+      "type": "SELECT",
+      "label": "Assigned To",
+      "mandatory": false,
+      "help": "References an employee record that already exists in your account.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation.",
+      "recordType": null
+    },
+    {
+      "code": "autoname",
+      "type": "CHECKBOX",
+      "label": "Auto",
+      "mandatory": false
+    },
+    {
+      "code": "awaitingreply",
+      "type": "CHECKBOX",
+      "label": "Awaiting Support Reply",
+      "mandatory": false
+    },
+    {
+      "code": "casenumber",
+      "type": "TEXT",
+      "label": "Number",
+      "mandatory": false
+    },
+    {
+      "code": "category",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "help": "References a value in a user defined list at Setup > Support > Case Types.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation.",
+      "recordType": null
+    },
+    {
+      "code": "closeddate",
+      "type": "DATE",
+      "label": "Date Closed",
+      "mandatory": false
+    },
+    {
+      "code": "company",
+      "type": "TEXT",
+      "label": "Company",
+      "mandatory": false
+    },
+    {
+      "code": "companyname",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "contact",
+      "type": "TEXT",
+      "label": "Contact",
+      "mandatory": false
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "customer",
+      "type": "SELECT",
+      "label": "Customer",
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "customerstage",
+      "type": "SELECT",
+      "label": "Customer Stage",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "email",
+      "type": "EMAIL",
+      "label": "Email",
+      "mandatory": false
+    },
+    {
+      "code": "emailemployees",
+      "type": "SELECT",
+      "label": "Copy Employees",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "emailform",
+      "type": "CHECKBOX",
+      "label": "Send to Customer",
+      "mandatory": false
+    },
+    {
+      "code": "employee",
+      "type": "SELECT",
+      "label": "Employee",
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "enddate",
+      "type": "DATETIME",
+      "label": "Date Closed",
+      "mandatory": false
+    },
+    {
+      "code": "escalatee",
+      "type": "SELECT",
+      "label": "Escalated To",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "escalateto",
+      "type": "SELECT",
+      "label": "Escalated To",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "escalationmessage",
+      "type": "TEXTAREA",
+      "label": "Escalation Message",
+      "mandatory": false
+    },
+    {
+      "code": "eventnumber",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "grabref",
+      "type": "TEXT",
+      "label": "Grab",
+      "mandatory": false
+    },
+    {
+      "code": "helpdesk",
+      "type": "CHECKBOX",
+      "label": "Help Desk",
+      "mandatory": false
+    },
+    {
+      "code": "inboundemail",
+      "type": "TEXT",
+      "label": "Inbound Email",
+      "mandatory": false
+    },
+    {
+      "code": "incomingmessage",
+      "type": "TEXTAREA",
+      "label": "Message",
+      "mandatory": false
+    },
+    {
+      "code": "insertsolution",
+      "type": "SELECT",
+      "label": "Insert Solution",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "internalonly",
+      "type": "CHECKBOX",
+      "label": "Internal Only",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "issue",
+      "type": "SELECT",
+      "label": "Case Issue",
+      "mandatory": false,
+      "help": "References a value in a user defined list at Setup > Support > Case Issues. This value represents an issue type.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation.",
+      "recordType": "issue"
+    },
+    {
+      "code": "issuefixedin",
+      "type": "SELECT",
+      "label": "Issue Fixed In",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "issuenumber",
+      "type": "TEXT",
+      "label": "Issue Number",
+      "mandatory": false
+    },
+    {
+      "code": "issuestatus",
+      "type": "SELECT",
+      "label": "Issue Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "issuetype",
+      "type": "SELECT",
+      "label": "Issue Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": false,
+      "help": "References an item record that already exists in your NetSuite account. Only items that have the Offer Support tag enabled can be referenced in this field. This tag can be set in Lists > Accounting > Items. It can also be set when creating item records via Web services.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation.",
+      "recordType": "item"
+    },
+    {
+      "code": "lastmessage",
+      "type": "CHECKBOX",
+      "label": "Most Recent Message",
+      "mandatory": false
+    },
+    {
+      "code": "lastmessagedate",
+      "type": "DATETIME",
+      "label": "Last Msg. Date",
+      "mandatory": false
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "lastreopeneddate",
+      "type": "DATETIME",
+      "label": "Last Reopened",
+      "mandatory": false
+    },
+    {
+      "code": "lastviewed",
+      "type": "DATETIME",
+      "label": "Last Viewed",
+      "mandatory": false
+    },
+    {
+      "code": "locked",
+      "type": "CHECKBOX",
+      "label": "Locked",
+      "mandatory": false
+    },
+    {
+      "code": "message",
+      "type": "CLOBTEXT",
+      "label": "Message Text",
+      "mandatory": false
+    },
+    {
+      "code": "messageauthor",
+      "type": "SELECT",
+      "label": "Message Author",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "messagedate",
+      "type": "DATE",
+      "label": "Message Date",
+      "mandatory": false
+    },
+    {
+      "code": "messagenew",
+      "type": "CHECKBOX",
+      "label": "New Message",
+      "mandatory": false
+    },
+    {
+      "code": "messages",
+      "type": "SELECT",
+      "label": "Messages",
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagetype",
+      "type": "CHECKBOX",
+      "label": "Message Type",
+      "mandatory": false
+    },
+    {
+      "code": "module",
+      "type": "SELECT",
+      "label": "Module",
+      "mandatory": false,
+      "help": "Select the product module this case is related to.You can create and edit modules on product records at <_TABNAME=ADMI_ISSUEPRODUCT_> &gt; <_TASKCATEGORY=ADMI_ISSUEPRODUCT_> &gt; Products.",
+      "recordType": null
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "newsolutionfrommsg",
+      "type": "TEXTAREA",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "number",
+      "type": "INTEGER",
+      "label": "Number",
+      "mandatory": false
+    },
+    {
+      "code": "origin",
+      "type": "SELECT",
+      "label": "Origin",
+      "mandatory": false,
+      "help": "References a value in a user defined list at Setup > Support > Case Origin Types.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation.",
+      "recordType": null
+    },
+    {
+      "code": "outgoingmessage",
+      "type": "TEXTAREA",
+      "label": "Reply",
+      "mandatory": false
+    },
+    {
+      "code": "phone",
+      "type": "PHONE",
+      "label": "Phone",
+      "mandatory": false,
+      "help": "A read-only field referencing the phone number of the employee selected."
+    },
+    {
+      "code": "priority",
+      "type": "SELECT",
+      "label": "Priority",
+      "mandatory": false,
+      "help": "References a value in a user defined list at Setup > Support > Case Priorities. This value represents an issue status.In order to retrieve a list of available values for this field, use the GetSelectValue operation.",
+      "recordType": null
+    },
+    {
+      "code": "product",
+      "type": "SELECT",
+      "label": "Product",
+      "mandatory": false,
+      "help": "Select the product this case is related to.You can create and edit product records at <_TABNAME=ADMI_ISSUEPRODUCT_> &gt; <_TASKCATEGORY=ADMI_ISSUEPRODUCT_> &gt; Products.",
+      "recordType": null
+    },
+    {
+      "code": "profile",
+      "type": "SELECT",
+      "label": "Profile",
+      "mandatory": true,
+      "help": "Select the profile you want to assign to this case. This profile determines the following:\n<ul><li>the from name and from email address shown on notification sent for this case</li>\n<li>the notification templates used</li>\n</ul>\nYou can create new case profiles at <_TABNAME=EDIT_CASEPROFILE_> &gt; <_TASKCATEGORY=EDIT_CASEPROFILE_> &gt; Case Profiles > New.",
+      "recordType": null
+    },
+    {
+      "code": "searchsolution",
+      "type": "TEXTAREA",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "serialnumber",
+      "type": "TEXT",
+      "label": "Serial/Lot #",
+      "mandatory": false
+    },
+    {
+      "code": "stage",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "startdate",
+      "type": "DATETIME",
+      "label": "Incident Date",
+      "mandatory": false
+    },
+    {
+      "code": "starttime",
+      "type": "TIMEOFDAY",
+      "label": "Incident Time",
+      "mandatory": true
+    },
+    {
+      "code": "status",
+      "type": "SELECT",
+      "label": "Status",
+      "mandatory": true,
+      "help": "References a value in a user defined list at Setup > Support > Case Statuses. This value represents an issue status.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation.",
+      "recordType": null
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiary",
+      "mandatory": false,
+      "help": "The subsidiary for the customer associated with this case is displayed here.",
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "label": "Subject",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "escalateto": [
+      {
+        "code": "email",
+        "type": "EMAIL",
+        "label": "Email",
+        "mandatory": false
+      },
+      {
+        "code": "escalatee",
+        "type": "SELECT",
+        "label": "Escalatee",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "phone",
+        "type": "PHONE",
+        "label": "Phone",
+        "mandatory": false
+      }
+    ],
+    "timeitem": [
+      {
+        "code": "class",
+        "type": "SELECT",
+        "label": "Class",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "department",
+        "type": "SELECT",
+        "label": "Department",
+        "mandatory": false,
+        "recordType": "department"
+      },
+      {
+        "code": "employee",
+        "type": "SELECT",
+        "label": "Employee",
+        "mandatory": true,
+        "recordType": "employee"
+      },
+      {
+        "code": "hours",
+        "type": "TIMETRACK",
+        "label": "Duration",
+        "mandatory": true
+      },
+      {
+        "code": "id",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "isbillable",
+        "type": "CHECKBOX",
+        "label": "Billable",
+        "mandatory": false
+      },
+      {
+        "code": "isexempt",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "isproductive",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "isutilized",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "item",
+        "type": "SELECT",
+        "label": "Service Item",
+        "mandatory": true,
+        "recordType": "item"
+      },
+      {
+        "code": "jobbillingtype",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "location",
+        "type": "SELECT",
+        "label": "Location",
+        "mandatory": true,
+        "recordType": "location"
+      },
+      {
+        "code": "memo",
+        "type": "TEXTAREA",
+        "label": "Memo",
+        "mandatory": false
+      },
+      {
+        "code": "payrollitem",
+        "type": "SELECT",
+        "label": "Payroll Item",
+        "mandatory": false,
+        "recordType": "payrollitem"
+      },
+      {
+        "code": "timetype",
+        "type": "SELECT",
+        "label": "Type",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "trandate",
+        "type": "DATE",
+        "label": "Date",
+        "mandatory": true
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "communication",
+      "label": "Communication"
+    },
+    {
+      "code": "custom",
+      "label": "Custom"
+    },
+    {
+      "code": "escalation",
+      "label": "Escalations"
+    },
+    {
+      "code": "general",
+      "label": "General"
+    },
+    {
+      "code": "interactions",
+      "label": "Interactions"
+    },
+    {
+      "code": "time",
+      "label": "Time"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

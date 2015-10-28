@@ -1,0 +1,751 @@
+{
+  "code": "campaign",
+  "id": 0,
+  "name": "Campaign",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "audience",
+      "type": "SELECT",
+      "label": "Audience Description",
+      "mandatory": false,
+      "help": "Select the audience for this campaign.\nTracking the target audience is useful for media marketing without a clear list of recipients.\nYou can create new campaign audience records at <_TABNAME=EDIT_CAMPAIGNAUDIENCE_> > <_TASKCATEGORY=EDIT_CAMPAIGNAUDIENCE_> > Campaign Audiences > New.",
+      "recordType": null
+    },
+    {
+      "code": "autoname",
+      "type": "CHECKBOX",
+      "label": "Auto",
+      "mandatory": false
+    },
+    {
+      "code": "basecost",
+      "type": "CURRENCY",
+      "label": "Base Cost",
+      "mandatory": false
+    },
+    {
+      "code": "campaigneventtype",
+      "type": "SELECT",
+      "label": "Campaign Event Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "campaignid",
+      "type": "TEXT",
+      "label": "Campaign ID",
+      "mandatory": false
+    },
+    {
+      "code": "category",
+      "type": "SELECT",
+      "label": "Category",
+      "mandatory": false,
+      "help": "Select the category this campaign belongs in.\nCampaign categories are used to group campaigns on reports and lists.\nYou can create new campaign categories at <_TABNAME=EDIT_CAMPAIGNCATEGORY_> &gt; <_TASKCATEGORY=EDIT_CAMPAIGNCATEGORY_> &gt; Campaign Categories &gt; New.",
+      "recordType": null
+    },
+    {
+      "code": "channel",
+      "type": "SELECT",
+      "label": "Channel",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "convcostpercustomer",
+      "type": "CURRENCY",
+      "label": "Cost per Purchaser",
+      "mandatory": false
+    },
+    {
+      "code": "conversions",
+      "type": "INTEGER",
+      "label": "Number of Purchasers",
+      "mandatory": false,
+      "help": "This is the number of leads or prospects that have become customers as a result of this campaign."
+    },
+    {
+      "code": "cost",
+      "type": "CURRENCY",
+      "label": "Total Cost",
+      "mandatory": false
+    },
+    {
+      "code": "costpercustomer",
+      "type": "CURRENCY",
+      "label": "Cost per Lead",
+      "mandatory": false
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "label": "End Date",
+      "mandatory": false
+    },
+    {
+      "code": "event",
+      "type": "TEXT",
+      "label": "Event",
+      "mandatory": false
+    },
+    {
+      "code": "eventnumber",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "executeddate",
+      "type": "DATETIME",
+      "label": "Executed on",
+      "mandatory": false
+    },
+    {
+      "code": "expectedrevenue",
+      "type": "CURRENCY",
+      "label": "Expected Revenue",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "family",
+      "type": "SELECT",
+      "label": "Family",
+      "mandatory": false,
+      "help": "Select the family of keywords this campaign keyword is a part of. \nKeyword families are larger groupings of paid keywords. You can create a keyword family at <_TABNAME=EDIT_CAMPAIGNFAMILY_> > <_TASKCATEGORY=EDIT_CAMPAIGNFAMILY_> > Campaign Families > New.",
+      "recordType": null
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "group",
+      "type": "SELECT",
+      "label": "Group",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "issalescampaign",
+      "type": "CHECKBOX",
+      "label": "Is Sales Campaign",
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": false,
+      "recordType": "item"
+    },
+    {
+      "code": "keyword",
+      "type": "TEXT",
+      "label": "Keyword",
+      "mandatory": false
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "lastviewed",
+      "type": "DATETIME",
+      "label": "Last Viewed",
+      "mandatory": false
+    },
+    {
+      "code": "leadsgenerated",
+      "type": "INTEGER",
+      "label": "Leads Generated",
+      "mandatory": false
+    },
+    {
+      "code": "manager",
+      "type": "SELECT",
+      "label": "Campaign Manager",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "managerrole",
+      "type": "SELECT",
+      "label": "Campaign Manager Role",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "message",
+      "type": "TEXT",
+      "label": "Description",
+      "mandatory": false
+    },
+    {
+      "code": "messages",
+      "type": "SELECT",
+      "label": "Messages",
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "number",
+      "type": "INTEGER",
+      "label": "Number",
+      "mandatory": false
+    },
+    {
+      "code": "offer",
+      "type": "SELECT",
+      "label": "Offer",
+      "mandatory": false,
+      "help": "Select an offer you want to associate with this campaign.\nYou can create new campaign offers at <_TABNAME=EDIT_CAMPAIGNOFFER_> > <_TASKCATEGORY=EDIT_CAMPAIGNOFFER_> > Offers > New.",
+      "recordType": null
+    },
+    {
+      "code": "owner",
+      "type": "SELECT",
+      "label": "Manager",
+      "mandatory": true,
+      "help": "Select the campaign manager for his campaign.\nThe campaign manager receives a notification email message when a campaign \n  event is delivered successfully.",
+      "recordType": null
+    },
+    {
+      "code": "profit",
+      "type": "CURRENCY",
+      "label": "Profit",
+      "mandatory": false,
+      "help": "This is the profit earned by this campaign. Profit is calculated by deducting the cost of the campaign from the total revenue."
+    },
+    {
+      "code": "promocode",
+      "type": "TEXT",
+      "label": "Promotion",
+      "mandatory": false
+    },
+    {
+      "code": "promotioncode",
+      "type": "SELECT",
+      "label": "Promotion Code",
+      "mandatory": false,
+      "recordType": "promotioncode"
+    },
+    {
+      "code": "recipient",
+      "type": "SELECT",
+      "label": "Recipient",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "response",
+      "type": "SELECT",
+      "label": "Response Detail",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "responsecategory",
+      "type": "SELECT",
+      "label": "Response",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "responsecode",
+      "type": "INTEGER",
+      "label": "Response Code",
+      "mandatory": false
+    },
+    {
+      "code": "responsecomments",
+      "type": "TEXT",
+      "label": "Response Comments",
+      "mandatory": false
+    },
+    {
+      "code": "responsedate",
+      "type": "DATETIME",
+      "label": "Response Date",
+      "mandatory": false
+    },
+    {
+      "code": "responsenotes",
+      "type": "TEXTAREA",
+      "label": "Response Notes",
+      "mandatory": false
+    },
+    {
+      "code": "revenue",
+      "type": "CURRENCY",
+      "label": "Revenue",
+      "mandatory": false
+    },
+    {
+      "code": "roi",
+      "type": "PERCENT",
+      "label": "ROI",
+      "mandatory": false
+    },
+    {
+      "code": "scheduledate",
+      "type": "DATE",
+      "label": "Schedule Date",
+      "mandatory": false
+    },
+    {
+      "code": "scheduleddate",
+      "type": "DATETIME",
+      "label": "Scheduled on",
+      "mandatory": false
+    },
+    {
+      "code": "searchengine",
+      "type": "SELECT",
+      "label": "Search Engine",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "label": "Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "status",
+      "type": "SELECT",
+      "label": "Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subscription",
+      "type": "SELECT",
+      "label": "Subscription",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "template",
+      "type": "SELECT",
+      "label": "Campaign Templates",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "label": "Title",
+      "mandatory": false
+    },
+    {
+      "code": "totalrevenue",
+      "type": "CURRENCY",
+      "label": "Total Revenue",
+      "mandatory": false
+    },
+    {
+      "code": "uniquevisitors",
+      "type": "INTEGER",
+      "label": "Unique Visitors",
+      "mandatory": false
+    },
+    {
+      "code": "url",
+      "type": "TEXT",
+      "label": "URL",
+      "mandatory": false
+    },
+    {
+      "code": "vertical",
+      "type": "SELECT",
+      "label": "Vertical",
+      "mandatory": false,
+      "help": "Select the market vertical you are targeting with this campaign.\nYou can create new verticals at <_TABNAME=EDIT_CAMPAIGNVERTICAL_> > <_TASKCATEGORY=EDIT_CAMPAIGNVERTICAL_> > Campaign Verticals > New.",
+      "recordType": null
+    }
+  ],
+  "subLists": {
+    "campaigndirectmail": [
+      {
+        "code": "campaigngroup",
+        "type": "SELECT",
+        "label": "Target Group",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "channel",
+        "type": "SELECT",
+        "label": "Channel",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "cost",
+        "type": "CURRENCY",
+        "label": "Cost",
+        "mandatory": false
+      },
+      {
+        "code": "datescheduled",
+        "type": "DATE",
+        "label": "Date",
+        "mandatory": false
+      },
+      {
+        "code": "description",
+        "type": "TEXT",
+        "label": "Title",
+        "mandatory": true
+      },
+      {
+        "code": "internalid",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "promocode",
+        "type": "SELECT",
+        "label": "Promotion",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "status",
+        "type": "SELECT",
+        "label": "Status",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "subscription",
+        "type": "SELECT",
+        "label": "Subscription",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "template",
+        "type": "SELECT",
+        "label": "Template",
+        "mandatory": false,
+        "recordType": null
+      }
+    ],
+    "campaigndrip": [
+      {
+        "code": "channel",
+        "type": "SELECT",
+        "label": "Channel",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "cost",
+        "type": "CURRENCY",
+        "label": "Cost",
+        "mandatory": false
+      },
+      {
+        "code": "description",
+        "type": "TEXT",
+        "label": "Title",
+        "mandatory": true
+      },
+      {
+        "code": "internalid",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "promocode",
+        "type": "SELECT",
+        "label": "Promotion",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "subscription",
+        "type": "SELECT",
+        "label": "Subscription",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "template",
+        "type": "SELECT",
+        "label": "Template",
+        "mandatory": true,
+        "recordType": null
+      }
+    ],
+    "campaignemail": [
+      {
+        "code": "campaigngroup",
+        "type": "SELECT",
+        "label": "Target Group",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "channel",
+        "type": "SELECT",
+        "label": "Channel",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "cost",
+        "type": "CURRENCY",
+        "label": "Cost",
+        "mandatory": false
+      },
+      {
+        "code": "datescheduled",
+        "type": "DATE",
+        "label": "Date",
+        "mandatory": true
+      },
+      {
+        "code": "description",
+        "type": "TEXT",
+        "label": "Title",
+        "mandatory": true
+      },
+      {
+        "code": "internalid",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "promocode",
+        "type": "SELECT",
+        "label": "Promotion",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "status",
+        "type": "SELECT",
+        "label": "Status",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "subscription",
+        "type": "SELECT",
+        "label": "Subscription",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "template",
+        "type": "SELECT",
+        "label": "Template",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "testcell",
+        "type": "SELECT",
+        "label": "Test Cell",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "timescheduled",
+        "type": "TIMEOFDAY",
+        "label": "Time",
+        "mandatory": false
+      }
+    ],
+    "campaignevent": [
+      {
+        "code": "campaigngroup",
+        "type": "SELECT",
+        "label": "Target Group",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "channel",
+        "type": "SELECT",
+        "label": "Channel",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "cost",
+        "type": "CURRENCY",
+        "label": "Cost",
+        "mandatory": false
+      },
+      {
+        "code": "datescheduled",
+        "type": "DATE",
+        "label": "Date",
+        "mandatory": false
+      },
+      {
+        "code": "description",
+        "type": "TEXT",
+        "label": "Title",
+        "mandatory": true
+      },
+      {
+        "code": "internalid",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "promocode",
+        "type": "SELECT",
+        "label": "Promotion",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "status",
+        "type": "SELECT",
+        "label": "Status",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "subscription",
+        "type": "SELECT",
+        "label": "Subscription",
+        "mandatory": false,
+        "recordType": null
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "communication",
+      "label": "Communication"
+    },
+    {
+      "code": "custom",
+      "label": "Custom"
+    },
+    {
+      "code": "events",
+      "label": "Scheduled Events"
+    },
+    {
+      "code": "history",
+      "label": "History"
+    },
+    {
+      "code": "keyword",
+      "label": "Keyword"
+    },
+    {
+      "code": "media",
+      "label": "File Cabinet"
+    },
+    {
+      "code": "relatedinfo",
+      "label": "Related Info"
+    },
+    {
+      "code": "statistics",
+      "label": "Statistics"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

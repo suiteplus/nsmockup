@@ -1,0 +1,125 @@
+{
+  "code": "expensecategory",
+  "id": -126,
+  "name": "Expense Category",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "account",
+      "type": "SELECT",
+      "label": "Account",
+      "mandatory": false,
+      "recordType": "account"
+    },
+    {
+      "code": "defaultrate",
+      "type": "POSFLOAT",
+      "label": "Default Rate",
+      "mandatory": false
+    },
+    {
+      "code": "description",
+      "type": "TEXT",
+      "label": "Description",
+      "mandatory": false
+    },
+    {
+      "code": "expenseacct",
+      "type": "SELECT",
+      "label": "Expense Account",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "raterequired",
+      "type": "CHECKBOX",
+      "label": "Rate is Required",
+      "mandatory": false
+    }
+  ],
+  "tabs": [
+    {
+      "code": "cattrans",
+      "label": "Translation"
+    }
+  ]
+}

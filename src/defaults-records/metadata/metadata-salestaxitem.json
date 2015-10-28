@@ -1,0 +1,225 @@
+{
+  "code": "salestaxitem",
+  "id": 0,
+  "name": "Sales Tax Item",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "appliestoservice",
+      "type": "CHECKBOX",
+      "label": "Applies To Service",
+      "mandatory": false
+    },
+    {
+      "code": "availableon",
+      "type": "SELECT",
+      "label": "Available On",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "city",
+      "type": "TEXT",
+      "label": "City",
+      "mandatory": false,
+      "help": "Enter the city where this tax should be applied.\n\nThis is used by NetSuite to automatically determine the correct tax when an order is entered or a customer places an order on your Web site."
+    },
+    {
+      "code": "country",
+      "type": "SELECT",
+      "label": "Country",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "county",
+      "type": "TEXT",
+      "label": "County",
+      "mandatory": false,
+      "help": "Enter the county where this tax should be applied.\n\nThis is used by NetSuite to automatically determine the correct tax when an order is entered or a customer places an order on your Web site."
+    },
+    {
+      "code": "description",
+      "type": "TEXTAREA",
+      "label": "Description",
+      "mandatory": false
+    },
+    {
+      "code": "displayname",
+      "type": "TEXT",
+      "label": "Display Name/Code",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "includechildren",
+      "type": "CHECKBOX",
+      "label": "Include Children",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "iseccode",
+      "type": "CHECKBOX",
+      "label": "EC Code",
+      "mandatory": false
+    },
+    {
+      "code": "isexcludetaxreports",
+      "type": "CHECKBOX",
+      "label": "Is Excluded From Tax Reports",
+      "mandatory": false
+    },
+    {
+      "code": "isexport",
+      "type": "CHECKBOX",
+      "label": "Export",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "isreversecharge",
+      "type": "CHECKBOX",
+      "label": "Reverse Charge",
+      "mandatory": false
+    },
+    {
+      "code": "itemid",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "itemtype",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "parent",
+      "type": "SELECT",
+      "label": "Parent",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "rate",
+      "type": "CURRENCY",
+      "label": "Rate",
+      "mandatory": false
+    },
+    {
+      "code": "state",
+      "type": "SELECT",
+      "label": "State",
+      "mandatory": false,
+      "help": "Enter the state where this tax should be applied.\n\nThis is used by NetSuite to automatically determine the correct tax when an order is entered or a customer places an order on your Web site.",
+      "recordType": null
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiaries",
+      "mandatory": false,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "taxaccount",
+      "type": "SELECT",
+      "label": "Tax Account",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "taxagency",
+      "type": "SELECT",
+      "label": "Tax Agency",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "taxtype",
+      "type": "SELECT",
+      "label": "Tax Type",
+      "mandatory": false,
+      "recordType": "taxtype"
+    },
+    {
+      "code": "zip",
+      "type": "TEXTAREA",
+      "label": "Zip Codes",
+      "mandatory": false,
+      "help": "Enter the zip codes where this tax should be applied.\n\nThis is used by NetSuite to automatically determine the correct tax when an order is entered or a customer places an order on your Web site.\n\nSeparate each zip code with a comma."
+    }
+  ]
+}

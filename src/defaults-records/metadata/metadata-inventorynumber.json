@@ -1,0 +1,145 @@
+{
+  "code": "inventorynumber",
+  "id": -266,
+  "name": "Inventory Number",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "expirationdate",
+      "type": "DATE",
+      "label": "Expiration Date",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "SELECT",
+      "label": "External ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "inventorynumber",
+      "type": "TEXT",
+      "label": "Number",
+      "mandatory": false
+    },
+    {
+      "code": "isonhand",
+      "type": "CHECKBOX",
+      "label": "Is On Hand",
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": false,
+      "recordType": "item"
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "label": "Location",
+      "mandatory": false,
+      "recordType": "location"
+    },
+    {
+      "code": "memo",
+      "type": "TEXT",
+      "label": "Memo",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "quantityavailable",
+      "type": "FLOAT",
+      "label": "Available",
+      "mandatory": false
+    },
+    {
+      "code": "quantityintransit",
+      "type": "FLOAT",
+      "label": "In Transit",
+      "mandatory": false
+    },
+    {
+      "code": "quantityonhand",
+      "type": "FLOAT",
+      "label": "On Hand",
+      "mandatory": false
+    },
+    {
+      "code": "quantityonorder",
+      "type": "FLOAT",
+      "label": "On Order",
+      "mandatory": false
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "label": "User",
+      "mandatory": false,
+      "recordType": "employee"
+    }
+  ]
+}

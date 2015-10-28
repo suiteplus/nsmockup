@@ -1,0 +1,247 @@
+{
+  "code": "promotioncode",
+  "id": 0,
+  "name": "Promotion",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "applydiscountto",
+      "type": "SELECT",
+      "label": "Apply Discount To",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "code",
+      "type": "TEXT",
+      "label": "Code",
+      "mandatory": false
+    },
+    {
+      "code": "codepattern",
+      "type": "TEXT",
+      "label": "Code Pattern",
+      "mandatory": false
+    },
+    {
+      "code": "couponcodefile",
+      "type": "FILE",
+      "label": "Import File",
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "description",
+      "type": "TEXT",
+      "label": "Description",
+      "mandatory": false
+    },
+    {
+      "code": "discount",
+      "type": "TEXT",
+      "label": "Discount",
+      "mandatory": false
+    },
+    {
+      "code": "discountamount",
+      "type": "CURRENCY",
+      "label": "Discount Amount",
+      "mandatory": false
+    },
+    {
+      "code": "discounttype",
+      "type": "RADIO",
+      "label": "%",
+      "mandatory": false
+    },
+    {
+      "code": "displaylinediscounts",
+      "type": "CHECKBOX",
+      "label": "Display line discounts",
+      "mandatory": false
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "label": "End Date",
+      "mandatory": false
+    },
+    {
+      "code": "excludeitems",
+      "type": "CHECKBOX",
+      "label": "Exclude Items",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "freeshipitem",
+      "type": "SELECT",
+      "label": "Free Shipping Method",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "freeshipmethod",
+      "type": "SELECT",
+      "label": "Free Shipping Method",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "ispublic",
+      "type": "CHECKBOX",
+      "label": "Available to all Customers",
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": false,
+      "recordType": "item"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "numbertogenerate",
+      "type": "INTEGER",
+      "label": "Codes to Generate",
+      "mandatory": false
+    },
+    {
+      "code": "partner",
+      "type": "SELECT",
+      "label": "Partner",
+      "mandatory": false,
+      "recordType": "partner"
+    },
+    {
+      "code": "rate",
+      "type": "RATE",
+      "label": "Rate",
+      "mandatory": false,
+      "help": "Set the rate of discount for this item."
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "label": "Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "usetype",
+      "type": "SELECT",
+      "label": "Number of Uses",
+      "mandatory": false,
+      "recordType": null
+    }
+  ],
+  "tabs": [
+    {
+      "code": "campaign",
+      "label": "Campaigns"
+    },
+    {
+      "code": "code",
+      "label": "Codes"
+    },
+    {
+      "code": "item",
+      "label": "Items"
+    },
+    {
+      "code": "minimumorderamount",
+      "label": "Minimum Order Amount"
+    },
+    {
+      "code": "partner",
+      "label": "Partners"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

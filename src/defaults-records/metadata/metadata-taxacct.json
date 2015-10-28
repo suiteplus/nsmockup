@@ -1,0 +1,59 @@
+{
+  "code": "taxacct",
+  "id": 0,
+  "name": "Tax Account",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "country",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "description",
+      "type": "TEXT",
+      "label": "Description",
+      "mandatory": false,
+      "help": "Enter a description for this account."
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true,
+      "help": "Enter a name for this account."
+    },
+    {
+      "code": "nexus",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "taxaccttype",
+      "type": "SELECT",
+      "label": "Tax Account Type",
+      "mandatory": true,
+      "recordType": null
+    }
+  ]
+}

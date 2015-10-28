@@ -1,46 +1,1666 @@
 {
   "code": "employee",
-  "id": 0,
+  "id": -4,
   "name": "Employee",
   "inactive": false,
   "fields": [
     {
-      "code": "name",
-      "id": 0,
-      "desc": "Name",
-      "type": "STRING",
-      "mandatory": true
+      "code": "accountnumber",
+      "type": "TEXT",
+      "label": "Account",
+      "mandatory": false
     },
     {
-      "code": "email",
-      "id": 0,
-      "desc": "Email",
-      "type": "STRING",
-      "mandatory": true
+      "code": "address",
+      "type": "TEXT",
+      "label": "Address",
+      "mandatory": false
+    },
+    {
+      "code": "address1",
+      "type": "TEXT",
+      "label": "Address 1",
+      "mandatory": false
+    },
+    {
+      "code": "address2",
+      "type": "TEXT",
+      "label": "Address 2",
+      "mandatory": false
+    },
+    {
+      "code": "address3",
+      "type": "TEXT",
+      "label": "Address 3",
+      "mandatory": false
+    },
+    {
+      "code": "addressee",
+      "type": "TEXT",
+      "label": "Addressee",
+      "mandatory": false
+    },
+    {
+      "code": "addressinternalid",
+      "type": "INTEGER",
+      "label": "Address Internal ID",
+      "mandatory": false
+    },
+    {
+      "code": "addresslabel",
+      "type": "TEXT",
+      "label": "Address Label",
+      "mandatory": false
+    },
+    {
+      "code": "addressphone",
+      "type": "TEXT",
+      "label": "Address Phone",
+      "mandatory": false
+    },
+    {
+      "code": "aliennumber",
+      "type": "TEXT",
+      "label": "Alien #",
+      "mandatory": false
+    },
+    {
+      "code": "altemail",
+      "type": "EMAIL",
+      "label": "Alt. Email",
+      "mandatory": false
+    },
+    {
+      "code": "altname",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "altphone",
+      "type": "PHONE",
+      "label": "Office Phone",
+      "mandatory": false
+    },
+    {
+      "code": "anniversary",
+      "type": "DATE",
+      "label": "Anniversary",
+      "mandatory": false
+    },
+    {
+      "code": "approvallimit",
+      "type": "CURRENCY",
+      "label": "Expense Approval Limit",
+      "mandatory": false
+    },
+    {
+      "code": "approver",
+      "type": "SELECT",
+      "label": "Expense Approver",
+      "mandatory": false,
+      "help": "References an employee record. Sets the person who approves the employees expense reports and purchase requests.\nIf you have set a supervisor, you can NOT set an approver. \nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": null
+    },
+    {
+      "code": "attention",
+      "type": "TEXT",
+      "label": "Attention",
+      "mandatory": false
+    },
+    {
+      "code": "authworkdate",
+      "type": "DATE",
+      "label": "Authorized to work until date",
+      "mandatory": false
+    },
+    {
+      "code": "autoname",
+      "type": "CHECKBOX",
+      "label": "Auto",
+      "mandatory": false
+    },
+    {
+      "code": "billaddr1",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "billaddr2",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "billaddr3",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress",
+      "type": "TEXT",
+      "label": "Address",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress1",
+      "type": "TEXT",
+      "label": "Billing Address 1",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress2",
+      "type": "TEXT",
+      "label": "Billing Address 2",
+      "mandatory": false
+    },
+    {
+      "code": "billaddress3",
+      "type": "TEXT",
+      "label": "Billing Address 3",
+      "mandatory": false
+    },
+    {
+      "code": "billaddressee",
+      "type": "TEXT",
+      "label": "Billing Addressee",
+      "mandatory": false
+    },
+    {
+      "code": "billattention",
+      "type": "TEXT",
+      "label": "Billing Attention",
+      "mandatory": false
+    },
+    {
+      "code": "billcity",
+      "type": "TEXT",
+      "label": "Billing City",
+      "mandatory": false
+    },
+    {
+      "code": "billcountry",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "billcountrycode",
+      "type": "TEXT",
+      "label": "Billing Country Code",
+      "mandatory": false
+    },
+    {
+      "code": "billingclass",
+      "type": "SELECT",
+      "label": "Billing Class",
+      "mandatory": false,
+      "recordType": "billingclass"
+    },
+    {
+      "code": "billpay",
+      "type": "CHECKBOX",
+      "label": "Enable Online Bill Pay",
+      "mandatory": false
+    },
+    {
+      "code": "billphone",
+      "type": "TEXT",
+      "label": "Billing Phone",
+      "mandatory": false
+    },
+    {
+      "code": "billstate",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "billzip",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "billzipcode",
+      "type": "TEXT",
+      "label": "Billing Zip",
+      "mandatory": false
+    },
+    {
+      "code": "birthdate",
+      "type": "DATE",
+      "label": "Birth Date",
+      "mandatory": false
+    },
+    {
+      "code": "birthday",
+      "type": "DATE",
+      "label": "Birth Day",
+      "mandatory": false
+    },
+    {
+      "code": "btemplate",
+      "type": "TEXT",
+      "label": "Employee is Template",
+      "mandatory": false
+    },
+    {
+      "code": "campaignresponse",
+      "type": "SELECT",
+      "label": "Campaign Response",
+      "mandatory": false,
+      "recordType": "campaign"
+    },
+    {
+      "code": "ccontribution",
+      "type": "SELECT",
+      "label": "Company Contribution",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "city",
+      "type": "TEXT",
+      "label": "City",
+      "mandatory": false
+    },
+    {
+      "code": "class",
+      "type": "SELECT",
+      "label": "Class",
+      "mandatory": false,
+      "help": "References a value from a user defined list at Setup > Company > Classifications > Classes.\nThis field is required when the Make Classes Mandatory preference is enabled at Setup > Accounting > Accounting Preferences.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": null
+    },
+    {
+      "code": "classnohierarchy",
+      "type": "SELECT",
+      "label": "Class (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "comments",
+      "type": "TEXT",
+      "label": "Comments",
+      "mandatory": false
+    },
+    {
+      "code": "commissionpaymentpreference",
+      "type": "SELECT",
+      "label": "Pay Commissions Using",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "commissionplan",
+      "type": "SELECT",
+      "label": "Commission Plan",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "concurrentwebservicesuser",
+      "type": "CHECKBOX",
+      "label": "Concurrent Web Services User",
+      "mandatory": false
+    },
+    {
+      "code": "country",
+      "type": "SELECT",
+      "label": "Country",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "countrycode",
+      "type": "TEXT",
+      "label": "Country Code",
+      "mandatory": false
+    },
+    {
+      "code": "county",
+      "type": "TEXT",
+      "label": "County/State",
+      "mandatory": false
+    },
+    {
+      "code": "currency",
+      "type": "SELECT",
+      "label": "Currency",
+      "mandatory": false,
+      "help": "The currency for an employee automatically defaults to the base currency of the associated subsidiary or company.  This currency must be used for transactions with this employee.",
+      "recordType": "currency"
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "datecreated",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "deduction",
+      "type": "SELECT",
+      "label": "Deduction",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "defaultaddress",
+      "type": "ADDRESS",
+      "label": "Address",
+      "mandatory": false
     },
     {
       "code": "department",
-      "id": 0,
-      "desc": "Department",
       "type": "SELECT",
-      "mandatory": true,
+      "label": "Department",
+      "mandatory": false,
+      "help": "References a value from a user defined list at Setup > Company > Departments.\nThis field is required when Make Departments Mandatory is enabled at Setup > Accounting > Accounting Preferences.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
       "recordType": "department"
     },
     {
-      "code": "subsidiary",
-      "id": 0,
-      "desc": "Subsidiary",
+      "code": "departmentnohierarchy",
       "type": "SELECT",
-      "mandatory": true,
-      "recordType": "subsidiary"
+      "label": "Department (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "directdeposit",
+      "type": "CHECKBOX",
+      "label": "Use Direct Deposit",
+      "mandatory": false
+    },
+    {
+      "code": "earning",
+      "type": "SELECT",
+      "label": "Earning",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "education",
+      "type": "SELECT",
+      "label": "Education",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "eligibleforcommission",
+      "type": "CHECKBOX",
+      "label": "Eligible for Commission",
+      "mandatory": false
+    },
+    {
+      "code": "email",
+      "type": "EMAIL",
+      "label": "Email",
+      "mandatory": false
+    },
+    {
+      "code": "empcenterqty",
+      "type": "TEXT",
+      "label": "EmpCenter current",
+      "mandatory": false
+    },
+    {
+      "code": "empcenterqtymax",
+      "type": "TEXT",
+      "label": "EmpCenter max",
+      "mandatory": false
+    },
+    {
+      "code": "employeestatus",
+      "type": "SELECT",
+      "label": "Employee Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "employeetype",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "employeetypekpi",
+      "type": "CHECKBOX",
+      "label": "Include in KPI",
+      "mandatory": false
+    },
+    {
+      "code": "entityid",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "entitynumber",
+      "type": "INTEGER",
+      "label": "Number",
+      "mandatory": false
+    },
+    {
+      "code": "ethnicity",
+      "type": "SELECT",
+      "label": "Ethnicity",
+      "mandatory": false,
+      "help": "Select the employee's ethnicity. \n    You can create a new ethnicity category at <_TABNAME=EDIT_EMPOTHERLIST_> > <_TASKCATEGORY=EDIT_EMPOTHERLIST_> > Employee Related Lists.",
+      "recordType": null
+    },
+    {
+      "code": "expenselimit",
+      "type": "CURRENCY",
+      "label": "Expense Limit",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "fax",
+      "type": "TEXT",
+      "label": "Fax",
+      "mandatory": false
+    },
+    {
+      "code": "firstname",
+      "type": "TEXT",
+      "label": "First Name",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "fulluserqty",
+      "type": "TEXT",
+      "label": "FullUser current",
+      "mandatory": false
+    },
+    {
+      "code": "fulluserqtymax",
+      "type": "TEXT",
+      "label": "FullUser max",
+      "mandatory": false
+    },
+    {
+      "code": "gender",
+      "type": "CHECKBOX",
+      "label": "Gender",
+      "mandatory": false
+    },
+    {
+      "code": "giveaccess",
+      "type": "CHECKBOX",
+      "label": "Login Access",
+      "mandatory": false
+    },
+    {
+      "code": "globalsubscriptionstatus",
+      "type": "SELECT",
+      "label": "Global Subscription Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "group",
+      "type": "MULTISELECT",
+      "label": "Group",
+      "mandatory": false
+    },
+    {
+      "code": "hasofflineaccess",
+      "type": "CHECKBOX",
+      "label": "Offline Client Access",
+      "mandatory": false
+    },
+    {
+      "code": "hiredate",
+      "type": "DATE",
+      "label": "Hire Date",
+      "mandatory": false
+    },
+    {
+      "code": "homephone",
+      "type": "PHONE",
+      "label": "Home Phone",
+      "mandatory": false
+    },
+    {
+      "code": "i9verified",
+      "type": "CHECKBOX",
+      "label": "I9 Verified",
+      "mandatory": false
+    },
+    {
+      "code": "image",
+      "type": "IMAGE",
+      "label": "Image",
+      "mandatory": false
+    },
+    {
+      "code": "initials",
+      "type": "TEXT",
+      "label": "Initials",
+      "mandatory": false,
+      "help": "NetSuite automatically completes this field as you enter first, middle and last names.If you want to make changes to an employee's initials, enter up to three letters in this field."
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isdefaultbilling",
+      "type": "CHECKBOX",
+      "label": "Default Billing Address",
+      "mandatory": false
+    },
+    {
+      "code": "isdefaultshipping",
+      "type": "CHECKBOX",
+      "label": "Default Shipping Address",
+      "mandatory": false
+    },
+    {
+      "code": "isempcenterqtyenforced",
+      "type": "TEXT",
+      "label": "EmpCenter enforce",
+      "mandatory": false
+    },
+    {
+      "code": "isfulluserqtyenforced",
+      "type": "TEXT",
+      "label": "FullUser enforce",
+      "mandatory": false
     },
     {
       "code": "isinactive",
-      "id": 0,
-      "desc": "Inactive",
       "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "isjobresource",
+      "type": "CHECKBOX",
+      "label": "Job Resource",
+      "mandatory": false
+    },
+    {
+      "code": "isretailuserqtyenforced",
+      "type": "TEXT",
+      "label": "RetailUser enforce",
+      "mandatory": false
+    },
+    {
+      "code": "issalesrep",
+      "type": "CHECKBOX",
+      "label": "Sales Rep",
+      "mandatory": false
+    },
+    {
+      "code": "issupportrep",
+      "type": "CHECKBOX",
+      "label": "Support Rep",
+      "mandatory": false
+    },
+    {
+      "code": "istemplate",
+      "type": "CHECKBOX",
+      "label": "Is Template",
+      "mandatory": false
+    },
+    {
+      "code": "jobdescription",
+      "type": "TEXT",
+      "label": "Job Description",
+      "mandatory": false
+    },
+    {
+      "code": "jurisdiction1display",
+      "type": "TEXT",
+      "label": "Federal:",
+      "mandatory": false
+    },
+    {
+      "code": "jurisdiction2display",
+      "type": "TEXT",
+      "label": "State:",
+      "mandatory": false
+    },
+    {
+      "code": "jurisdiction3display",
+      "type": "TEXT",
+      "label": "County:",
+      "mandatory": false
+    },
+    {
+      "code": "jurisdiction4display",
+      "type": "TEXT",
+      "label": "Local:",
+      "mandatory": false
+    },
+    {
+      "code": "jurisdiction5display",
+      "type": "TEXT",
+      "label": "School District:",
+      "mandatory": false
+    },
+    {
+      "code": "laborcost",
+      "type": "CURRENCY",
+      "label": "Labor Cost",
+      "mandatory": false
+    },
+    {
+      "code": "language",
+      "type": "SELECT",
+      "label": "Language",
       "mandatory": false,
-      "default": true
+      "recordType": null
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "lastname",
+      "type": "TEXT",
+      "label": "Last Name",
+      "mandatory": false
+    },
+    {
+      "code": "lastpaiddate",
+      "type": "DATE",
+      "label": "Last Paid Date",
+      "mandatory": false
+    },
+    {
+      "code": "lastreviewdate",
+      "type": "DATE",
+      "label": "Last Review",
+      "mandatory": false
+    },
+    {
+      "code": "lastviewed",
+      "type": "DATETIME",
+      "label": "Last Viewed",
+      "mandatory": false
+    },
+    {
+      "code": "level",
+      "type": "SELECT",
+      "label": "Level",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "label": "Location",
+      "mandatory": false,
+      "help": "References a value in a user-defined list at Setup > Company > Classifications > Locations.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": "location"
+    },
+    {
+      "code": "locationnohierarchy",
+      "type": "SELECT",
+      "label": "Location (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "maritalstatus",
+      "type": "SELECT",
+      "label": "Marital Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "messages",
+      "type": "SELECT",
+      "label": "Messages",
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagesfrom",
+      "type": "SELECT",
+      "label": "Messages From",
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagesto",
+      "type": "SELECT",
+      "label": "Messages To",
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "middlename",
+      "type": "TEXT",
+      "label": "Middle Name",
+      "mandatory": false
+    },
+    {
+      "code": "mobilephone",
+      "type": "PHONE",
+      "label": "Mobile Phone",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "nextreviewdate",
+      "type": "DATE",
+      "label": "Next Review",
+      "mandatory": false
+    },
+    {
+      "code": "officephone",
+      "type": "PHONE",
+      "label": "Office Phone",
+      "mandatory": false
+    },
+    {
+      "code": "offlineaccess",
+      "type": "CHECKBOX",
+      "label": "Offline Access",
+      "mandatory": false
+    },
+    {
+      "code": "payfrequency",
+      "type": "SELECT",
+      "label": "Pay Frequency",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "permchangedate",
+      "type": "DATETIME",
+      "label": "Permission Change Date",
+      "mandatory": false
+    },
+    {
+      "code": "permchangelevel",
+      "type": "TEXT",
+      "label": "Permission Change Level",
+      "mandatory": false
+    },
+    {
+      "code": "permission",
+      "type": "SELECT",
+      "label": "Permission",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "permissionchange",
+      "type": "TEXT",
+      "label": "Permission Change",
+      "mandatory": false
+    },
+    {
+      "code": "phone",
+      "type": "PHONE",
+      "label": "Phone",
+      "mandatory": false
+    },
+    {
+      "code": "phoneticname",
+      "type": "TEXT",
+      "label": "Phonetic Name",
+      "mandatory": false
+    },
+    {
+      "code": "primaryearningamount",
+      "type": "CURRENCY",
+      "label": "Primary Earning Amount",
+      "mandatory": false
+    },
+    {
+      "code": "primaryearningitem",
+      "type": "TEXT",
+      "label": "Primary Earning Item",
+      "mandatory": false
+    },
+    {
+      "code": "primaryearningtype",
+      "type": "TEXT",
+      "label": "Primary Earning Type",
+      "mandatory": false
+    },
+    {
+      "code": "purchaseorderapprovallimit",
+      "type": "CURRENCY",
+      "label": "Purchase Approval Limit",
+      "mandatory": false
+    },
+    {
+      "code": "purchaseorderapprover",
+      "type": "SELECT",
+      "label": "Purchase Approver",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "purchaseorderlimit",
+      "type": "CURRENCY",
+      "label": "Purchase Limit",
+      "mandatory": false
+    },
+    {
+      "code": "releasedate",
+      "type": "DATE",
+      "label": "Release Date",
+      "mandatory": false
+    },
+    {
+      "code": "representingsubsidiary",
+      "type": "SELECT",
+      "label": "Represents Subsidiary",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "requirepwdchange",
+      "type": "CHECKBOX",
+      "label": "Require Password Change On Next Login",
+      "mandatory": false
+    },
+    {
+      "code": "residentstatus",
+      "type": "SELECT",
+      "label": "Resident Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "retailuserqty",
+      "type": "TEXT",
+      "label": "RetailUser current",
+      "mandatory": false
+    },
+    {
+      "code": "retailuserqtymax",
+      "type": "TEXT",
+      "label": "RetailUser max",
+      "mandatory": false
+    },
+    {
+      "code": "role",
+      "type": "SELECT",
+      "label": "Role",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "rolechange",
+      "type": "TEXT",
+      "label": "Role Change",
+      "mandatory": false
+    },
+    {
+      "code": "rolechangeaction",
+      "type": "TEXT",
+      "label": "Role Change Action",
+      "mandatory": false
+    },
+    {
+      "code": "rolechangedate",
+      "type": "DATETIME",
+      "label": "Role Change Date",
+      "mandatory": false
+    },
+    {
+      "code": "salesrep",
+      "type": "CHECKBOX",
+      "label": "Is Sales Rep",
+      "mandatory": false
+    },
+    {
+      "code": "salesrole",
+      "type": "SELECT",
+      "label": "Sales Role",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "salutation",
+      "type": "TEXT",
+      "label": "Mr./Mrs...",
+      "mandatory": false
+    },
+    {
+      "code": "sendemail",
+      "type": "CHECKBOX",
+      "label": "Send Notification Email",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress1",
+      "type": "TEXT",
+      "label": "Shipping Address 1",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress2",
+      "type": "TEXT",
+      "label": "Shipping Address 2",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress3",
+      "type": "TEXT",
+      "label": "Shipping Address 3",
+      "mandatory": false
+    },
+    {
+      "code": "shipaddressee",
+      "type": "TEXT",
+      "label": "Shipping Addressee",
+      "mandatory": false
+    },
+    {
+      "code": "shipattention",
+      "type": "TEXT",
+      "label": "Shipping Attention",
+      "mandatory": false
+    },
+    {
+      "code": "shipcity",
+      "type": "TEXT",
+      "label": "Shipping City",
+      "mandatory": false
+    },
+    {
+      "code": "shipcountry",
+      "type": "SELECT",
+      "label": "Shipping Country",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipcountrycode",
+      "type": "TEXT",
+      "label": "Shipping Country Code",
+      "mandatory": false
+    },
+    {
+      "code": "shipphone",
+      "type": "TEXT",
+      "label": "Shipping Phone",
+      "mandatory": false
+    },
+    {
+      "code": "shipstate",
+      "type": "TEXT",
+      "label": "Shipping State/Province",
+      "mandatory": false
+    },
+    {
+      "code": "shipzip",
+      "type": "TEXT",
+      "label": "Shipping Zip",
+      "mandatory": false
+    },
+    {
+      "code": "socialsecuritynumber",
+      "type": "SSNUMBER",
+      "label": "Social Security #",
+      "mandatory": false
+    },
+    {
+      "code": "state",
+      "type": "SELECT",
+      "label": "State/Province",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "statedisplayname",
+      "type": "SELECT",
+      "label": "State/Province Display Name",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "strength",
+      "type": "TEXT",
+      "label": "Password Strength",
+      "mandatory": false
+    },
+    {
+      "code": "subscription",
+      "type": "SELECT",
+      "label": "Subscription",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subscriptiondate",
+      "type": "DATETIME",
+      "label": "Subscription Date",
+      "mandatory": false
+    },
+    {
+      "code": "subscriptionstatus",
+      "type": "CHECKBOX",
+      "label": "Subscription Status",
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiary",
+      "mandatory": true,
+      "help": "Select the subsidiary to associate with this employee. You cannot enter transactions for this employee unless a subsidiary is assigned.\nIf you select this employee on time transactions, the transaction is associated with this subsidiary. The employee is able to access only information associated with this subsidiary.\nNote: Once a transaction has posted for the employee, you are not able to change the subsidiary selected on the employee record.",
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "subsidiarynohierarchy",
+      "type": "SELECT",
+      "label": "Subsidiary (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "supervisor",
+      "type": "SELECT",
+      "label": "Supervisor",
+      "mandatory": false,
+      "help": "References an employee record. This employee will approve expense reports and purchase requests.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": null
+    },
+    {
+      "code": "supportrep",
+      "type": "CHECKBOX",
+      "label": "Is Support Rep",
+      "mandatory": false
+    },
+    {
+      "code": "terminationbydeath",
+      "type": "CHECKBOX",
+      "label": "Termination Due To Death",
+      "mandatory": false
+    },
+    {
+      "code": "timeapprover",
+      "type": "SELECT",
+      "label": "Time Approver",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "label": "Job Title",
+      "mandatory": false
+    },
+    {
+      "code": "type",
+      "type": "SELECT",
+      "label": "Entity Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "unsubscribe",
+      "type": "SELECT",
+      "label": "Unsubscribe from Campaigns",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "useperquest",
+      "type": "CHECKBOX",
+      "label": "Include In US Payroll",
+      "mandatory": false
+    },
+    {
+      "code": "usetimedata",
+      "type": "CHECKBOX",
+      "label": "Use Time Data",
+      "mandatory": false
+    },
+    {
+      "code": "visaexpdate",
+      "type": "DATE",
+      "label": "Visa Expiration Date",
+      "mandatory": false
+    },
+    {
+      "code": "visatype",
+      "type": "SELECT",
+      "label": "Visa Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "wasempcenterhasaccess",
+      "type": "TEXT",
+      "label": "EmpCenter hasaccess",
+      "mandatory": false
+    },
+    {
+      "code": "wasfulluserhasaccess",
+      "type": "TEXT",
+      "label": "FullUser hasaccess",
+      "mandatory": false
+    },
+    {
+      "code": "wasinactive",
+      "type": "TEXT",
+      "label": "wasinactive",
+      "mandatory": false
+    },
+    {
+      "code": "wasretailuserhasaccess",
+      "type": "TEXT",
+      "label": "RetailUser hasaccess",
+      "mandatory": false
+    },
+    {
+      "code": "withholding",
+      "type": "SELECT",
+      "label": "Withholding",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "workcalendar",
+      "type": "SELECT",
+      "label": "Work Calendar",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "workplace",
+      "type": "SELECT",
+      "label": "Workplace",
+      "mandatory": false,
+      "help": "Select \nthe workplace where this employee works.The address of this workplace \nwill be used to define the taxes you are required to withhold and pay for \nthis employee.",
+      "recordType": null
+    },
+    {
+      "code": "zipcode",
+      "type": "TEXT",
+      "label": "Zip Code",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "accruedtime": [
+      {
+        "code": "accrualmethod",
+        "type": "SELECT",
+        "label": "Accrue As",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "accrualrate",
+        "type": "FLOAT",
+        "label": "Accrual Rate",
+        "mandatory": false
+      },
+      {
+        "code": "accruedhours",
+        "type": "FLOAT",
+        "label": "Accrued Hours",
+        "mandatory": false
+      },
+      {
+        "code": "inactive",
+        "type": "CHECKBOX",
+        "label": "Inactive",
+        "mandatory": false
+      },
+      {
+        "code": "maximumaccruedhours",
+        "type": "FLOAT",
+        "label": "Maximum Hours",
+        "mandatory": false
+      },
+      {
+        "code": "monetaryrate",
+        "type": "CURRENCY",
+        "label": "Monetary Rate",
+        "mandatory": false
+      },
+      {
+        "code": "payrollitem",
+        "type": "SELECT",
+        "label": "Sick/Vacation Time",
+        "mandatory": true,
+        "recordType": "payrollitem"
+      },
+      {
+        "code": "resetaccruedhoursatyearend",
+        "type": "CHECKBOX",
+        "label": "Reset at Year End",
+        "mandatory": false
+      }
+    ],
+    "addressbook": [
+      {
+        "code": "addr1",
+        "type": "TEXT",
+        "label": "Address 1",
+        "mandatory": false
+      },
+      {
+        "code": "addr2",
+        "type": "TEXT",
+        "label": "Address 2",
+        "mandatory": false
+      },
+      {
+        "code": "addr3",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "addressee",
+        "type": "TEXT",
+        "label": "Addressee",
+        "mandatory": false
+      },
+      {
+        "code": "addressid",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "addrtext",
+        "type": "ADDRESS",
+        "label": "Address",
+        "mandatory": false
+      },
+      {
+        "code": "attention",
+        "type": "TEXT",
+        "label": "Attention",
+        "mandatory": false
+      },
+      {
+        "code": "city",
+        "type": "TEXT",
+        "label": "City",
+        "mandatory": false
+      },
+      {
+        "code": "country",
+        "type": "SELECT",
+        "label": "Country",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "defaultbilling",
+        "type": "CHECKBOX",
+        "label": "Home",
+        "mandatory": false
+      },
+      {
+        "code": "defaultshipping",
+        "type": "CHECKBOX",
+        "label": "Default Shipping",
+        "mandatory": false
+      },
+      {
+        "code": "displaystate",
+        "type": "TEXT",
+        "label": "State/Province",
+        "mandatory": false
+      },
+      {
+        "code": "id",
+        "type": "INTEGER",
+        "label": "ID",
+        "mandatory": false
+      },
+      {
+        "code": "internalid",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "label",
+        "type": "TEXT",
+        "label": "Label",
+        "mandatory": false
+      },
+      {
+        "code": "override",
+        "type": "CHECKBOX",
+        "label": "Override",
+        "mandatory": false
+      },
+      {
+        "code": "phone",
+        "type": "PHONE",
+        "label": "Phone",
+        "mandatory": false
+      },
+      {
+        "code": "state",
+        "type": "TEXT",
+        "label": "State/Province",
+        "mandatory": false
+      },
+      {
+        "code": "zip",
+        "type": "TEXT",
+        "label": "Zip",
+        "mandatory": false
+      }
+    ],
+    "companycontribution": [
+      {
+        "code": "inactive",
+        "type": "CHECKBOX",
+        "label": "Inactive",
+        "mandatory": false
+      },
+      {
+        "code": "limit",
+        "type": "CURRENCY",
+        "label": "Limit",
+        "mandatory": false
+      },
+      {
+        "code": "payrollitem",
+        "type": "SELECT",
+        "label": "Company Contribution",
+        "mandatory": true,
+        "recordType": "payrollitem"
+      },
+      {
+        "code": "rate",
+        "type": "RATE",
+        "label": "Rate",
+        "mandatory": false
+      }
+    ],
+    "deduction": [
+      {
+        "code": "inactive",
+        "type": "CHECKBOX",
+        "label": "Inactive",
+        "mandatory": false
+      },
+      {
+        "code": "limit",
+        "type": "CURRENCY",
+        "label": "Limit",
+        "mandatory": false
+      },
+      {
+        "code": "payrollitem",
+        "type": "SELECT",
+        "label": "Deduction",
+        "mandatory": true,
+        "recordType": "payrollitem"
+      },
+      {
+        "code": "rate",
+        "type": "RATE",
+        "label": "Rate",
+        "mandatory": false
+      }
+    ],
+    "directdeposit": [
+      {
+        "code": "accountprenoted",
+        "type": "CHECKBOX",
+        "label": "Prenoted",
+        "mandatory": false
+      },
+      {
+        "code": "amount",
+        "type": "CURRENCY",
+        "label": "Amount",
+        "mandatory": false
+      },
+      {
+        "code": "bankaccountnumber",
+        "type": "TEXT",
+        "label": "Account Number",
+        "mandatory": true
+      },
+      {
+        "code": "bankname",
+        "type": "TEXT",
+        "label": "Bank Name",
+        "mandatory": true
+      },
+      {
+        "code": "bankroutingnumber",
+        "type": "TEXT",
+        "label": "Routing Number",
+        "mandatory": true
+      },
+      {
+        "code": "id",
+        "type": "TEXT",
+        "label": "ID",
+        "mandatory": false
+      },
+      {
+        "code": "inactive",
+        "type": "CHECKBOX",
+        "label": "Inactive",
+        "mandatory": false
+      },
+      {
+        "code": "netaccount",
+        "type": "CHECKBOX",
+        "label": "Net Account",
+        "mandatory": false
+      },
+      {
+        "code": "savingsaccount",
+        "type": "CHECKBOX",
+        "label": "Savings Account",
+        "mandatory": false
+      }
+    ],
+    "earning": [
+      {
+        "code": "defaultearning",
+        "type": "CHECKBOX",
+        "label": "Default",
+        "mandatory": false
+      },
+      {
+        "code": "defaulthours",
+        "type": "FLOAT",
+        "label": "Default Hours",
+        "mandatory": false
+      },
+      {
+        "code": "inactive",
+        "type": "CHECKBOX",
+        "label": "Inactive",
+        "mandatory": false
+      },
+      {
+        "code": "payrate",
+        "type": "RATE",
+        "label": "Rate",
+        "mandatory": false
+      },
+      {
+        "code": "payrollitem",
+        "type": "SELECT",
+        "label": "Earning",
+        "mandatory": true,
+        "recordType": "payrollitem"
+      },
+      {
+        "code": "primaryearning",
+        "type": "CHECKBOX",
+        "label": "Primary",
+        "mandatory": false
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "access",
+      "label": "Access"
+    },
+    {
+      "code": "address",
+      "label": "Address"
+    },
+    {
+      "code": "commission",
+      "label": "Commission"
+    },
+    {
+      "code": "curjurisdictions",
+      "label": "Current"
+    },
+    {
+      "code": "custom",
+      "label": "Custom"
+    },
+    {
+      "code": "dd",
+      "label": "ACH/Direct Deposit"
+    },
+    {
+      "code": "education",
+      "label": "Education"
+    },
+    {
+      "code": "general",
+      "label": "General"
+    },
+    {
+      "code": "hr",
+      "label": "Human Resources"
+    },
+    {
+      "code": "hrpersonal",
+      "label": "Personal"
+    },
+    {
+      "code": "hrworkstatus",
+      "label": "Work Status"
+    },
+    {
+      "code": "info",
+      "label": "Info"
+    },
+    {
+      "code": "jurisdictions",
+      "label": "Jurisdictions"
+    },
+    {
+      "code": "marketing",
+      "label": "Marketing"
+    },
+    {
+      "code": "payfed",
+      "label": "Federal Withholdings"
+    },
+    {
+      "code": "payroll",
+      "label": "Payroll"
+    },
+    {
+      "code": "support",
+      "label": "Support"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ],
+  "transformTypes": [
+    {
+      "targetRecord": "expensereport",
+      "fieldDefault": "customform"
+    },
+    {
+      "targetRecord": "timebill",
+      "fieldDefault": "customform"
     }
   ]
 }

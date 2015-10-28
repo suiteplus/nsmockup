@@ -1,0 +1,169 @@
+{
+  "code": "unitstype",
+  "id": -201,
+  "name": "Units Type",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "abbreviation",
+      "type": "TEXT",
+      "label": "Abbreviation Name",
+      "mandatory": false
+    },
+    {
+      "code": "baseunit",
+      "type": "CHECKBOX",
+      "label": "Is Base Unit",
+      "mandatory": false
+    },
+    {
+      "code": "conversionrate",
+      "type": "TEXT",
+      "label": "Rate",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "pluralabbreviation",
+      "type": "TEXT",
+      "label": "Abbreviation Name(Plural)",
+      "mandatory": false
+    },
+    {
+      "code": "pluralname",
+      "type": "TEXT",
+      "label": "Unit Name(Plural)",
+      "mandatory": false
+    },
+    {
+      "code": "unitname",
+      "type": "TEXT",
+      "label": "Unit Name",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "uom": [
+      {
+        "code": "abbreviation",
+        "type": "TEXT",
+        "label": "Abbreviation",
+        "mandatory": true
+      },
+      {
+        "code": "baseunit",
+        "type": "CHECKBOX",
+        "label": "Base Unit",
+        "mandatory": false
+      },
+      {
+        "code": "conversionrate",
+        "type": "POSFLOAT",
+        "label": "Conversion Rate  (/base)",
+        "mandatory": true
+      },
+      {
+        "code": "internalid",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "pluralabbreviation",
+        "type": "TEXT",
+        "label": "Plural Abbreviation",
+        "mandatory": true
+      },
+      {
+        "code": "pluralname",
+        "type": "TEXT",
+        "label": "Plural Name",
+        "mandatory": true
+      },
+      {
+        "code": "unitname",
+        "type": "TEXT",
+        "label": "Name",
+        "mandatory": true
+      }
+    ]
+  }
+}

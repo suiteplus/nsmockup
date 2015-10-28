@@ -1,0 +1,184 @@
+{
+  "code": "taxperiod",
+  "id": -127,
+  "name": "Tax Period",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "allclosed",
+      "type": "CHECKBOX",
+      "label": "All Closed",
+      "mandatory": false
+    },
+    {
+      "code": "alllocked",
+      "type": "CHECKBOX",
+      "label": "All Locked",
+      "mandatory": false
+    },
+    {
+      "code": "aplocked",
+      "type": "CHECKBOX",
+      "label": "AP Locked",
+      "mandatory": false
+    },
+    {
+      "code": "arlocked",
+      "type": "CHECKBOX",
+      "label": "AR Locked",
+      "mandatory": false
+    },
+    {
+      "code": "closed",
+      "type": "CHECKBOX",
+      "label": "Closed",
+      "mandatory": false
+    },
+    {
+      "code": "closedondate",
+      "type": "DATE",
+      "label": "Date Closed On",
+      "mandatory": false
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "label": "End Date",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isadjust",
+      "type": "CHECKBOX",
+      "label": "Adjust",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "isquarter",
+      "type": "CHECKBOX",
+      "label": "Quarter",
+      "mandatory": false
+    },
+    {
+      "code": "isyear",
+      "type": "CHECKBOX",
+      "label": "Year",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "parent",
+      "type": "SELECT",
+      "label": "Sub-Period Of",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "payrolllocked",
+      "type": "CHECKBOX",
+      "label": "Payroll Locked",
+      "mandatory": false
+    },
+    {
+      "code": "periodname",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "label": "Start Date",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "fiscalcalendars": [
+      {
+        "code": "fiscalcalendar",
+        "type": "SELECT",
+        "label": "Fiscal Calendar",
+        "mandatory": false,
+        "recordType": null
+      },
+      {
+        "code": "parent",
+        "type": "SELECT",
+        "label": "Sub-period of",
+        "mandatory": false,
+        "recordType": null
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "parents",
+      "label": "Fiscal Calendars"
+    }
+  ]
+}

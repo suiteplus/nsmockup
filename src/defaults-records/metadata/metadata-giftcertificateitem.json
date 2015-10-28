@@ -1,0 +1,1997 @@
+{
+  "code": "giftcertificateitem",
+  "id": 0,
+  "name": "Gift Certificate Item",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "account",
+      "type": "SELECT",
+      "label": "Account",
+      "mandatory": false,
+      "recordType": "account"
+    },
+    {
+      "code": "accountingbook",
+      "type": "SELECT",
+      "label": "Accounting Book",
+      "mandatory": false,
+      "recordType": "accountingbook"
+    },
+    {
+      "code": "accountingbookamortization",
+      "type": "SELECT",
+      "label": "Accounting Book Amortization Schedule",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "accountingbookrevrecschedule",
+      "type": "SELECT",
+      "label": "Accounting Book Rev. Rec. Schedule",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "alternatedemandsourceitem",
+      "type": "TEXT",
+      "label": "Alternate Source Item",
+      "mandatory": false
+    },
+    {
+      "code": "assetaccount",
+      "type": "SELECT",
+      "label": "Asset Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "atpleadtime",
+      "type": "FLOAT",
+      "label": "ATP Lead Time",
+      "mandatory": false
+    },
+    {
+      "code": "atpmethod",
+      "type": "TEXT",
+      "label": "Default ATP Method",
+      "mandatory": false
+    },
+    {
+      "code": "autoleadtime",
+      "type": "CHECKBOX",
+      "label": "Auto Lead Time",
+      "mandatory": false
+    },
+    {
+      "code": "autopreferredstocklevel",
+      "type": "CHECKBOX",
+      "label": "Auto Stock Level",
+      "mandatory": false
+    },
+    {
+      "code": "autoreorderpoint",
+      "type": "CHECKBOX",
+      "label": "Auto Reorder Point",
+      "mandatory": false
+    },
+    {
+      "code": "availabletopartners",
+      "type": "CHECKBOX",
+      "label": "Available to Partners",
+      "mandatory": false
+    },
+    {
+      "code": "averagecost",
+      "type": "CURRENCY2",
+      "label": "Average Cost",
+      "mandatory": false
+    },
+    {
+      "code": "baseprice",
+      "type": "CURRENCY2",
+      "label": "Base Price",
+      "mandatory": false
+    },
+    {
+      "code": "billexchratevarianceacct",
+      "type": "SELECT",
+      "label": "Bill Exchange Rate Variance Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "billingschedule",
+      "type": "SELECT",
+      "label": "Billing Schedule",
+      "mandatory": false,
+      "recordType": "billingschedule"
+    },
+    {
+      "code": "billpricevarianceacct",
+      "type": "SELECT",
+      "label": "Bill Price Variance Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "billqtyvarianceacct",
+      "type": "SELECT",
+      "label": "Bill Quantity Variance Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "binnumber",
+      "type": "TEXT",
+      "label": "Bin Number",
+      "mandatory": false
+    },
+    {
+      "code": "binonhandavail",
+      "type": "FLOAT",
+      "label": "Bin On Hand Available",
+      "mandatory": false
+    },
+    {
+      "code": "binonhandcount",
+      "type": "FLOAT",
+      "label": "Bin On Hand Count",
+      "mandatory": false
+    },
+    {
+      "code": "buildentireassembly",
+      "type": "CHECKBOX",
+      "label": "Build Sub-Assemblies",
+      "mandatory": false
+    },
+    {
+      "code": "buildtime",
+      "type": "FLOAT",
+      "label": "Work Order Lead Time",
+      "mandatory": false
+    },
+    {
+      "code": "buyitnowprice",
+      "type": "CURRENCY",
+      "label": "eBay Buy It Now Price",
+      "mandatory": false
+    },
+    {
+      "code": "caption",
+      "type": "TEXT",
+      "label": "Store Display Name",
+      "mandatory": false
+    },
+    {
+      "code": "category",
+      "type": "TEXT",
+      "label": "Category",
+      "mandatory": false
+    },
+    {
+      "code": "categorynohierarchy",
+      "type": "TEXT",
+      "label": "Category (no hierarchy)",
+      "mandatory": false
+    },
+    {
+      "code": "categorypreferred",
+      "type": "TEXT",
+      "label": "Category (preferred)",
+      "mandatory": false
+    },
+    {
+      "code": "class",
+      "type": "SELECT",
+      "label": "Class",
+      "mandatory": false,
+      "help": "References a value from a user defined list at Setup > Company > Classifications > Classes.\nThis field is required when the Make Classes Mandatory preference is enabled at Setup > Accounting > Accounting Preferences.",
+      "recordType": null
+    },
+    {
+      "code": "classnohierarchy",
+      "type": "SELECT",
+      "label": "Class (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "component",
+      "type": "SELECT",
+      "label": "Component Item",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "componentof",
+      "type": "SELECT",
+      "label": "Component Of",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "copydescription",
+      "type": "CHECKBOX",
+      "label": "Copy SO Descr.",
+      "mandatory": false
+    },
+    {
+      "code": "correlateditem",
+      "type": "SELECT",
+      "label": "Correlated Item",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "correlateditemcorrelation",
+      "type": "FLOAT",
+      "label": "Correlated Item Correlation",
+      "mandatory": false
+    },
+    {
+      "code": "correlateditemcount",
+      "type": "INTEGER",
+      "label": "Correlated Item Count",
+      "mandatory": false
+    },
+    {
+      "code": "correlateditemlift",
+      "type": "FLOAT",
+      "label": "Correlated Item Lift",
+      "mandatory": false
+    },
+    {
+      "code": "correlateditempurchaserate",
+      "type": "FLOAT",
+      "label": "Correlated Item Purchase Rate",
+      "mandatory": false
+    },
+    {
+      "code": "cost",
+      "type": "CURRENCY2",
+      "label": "Purchase Price",
+      "mandatory": false
+    },
+    {
+      "code": "costaccountingstatus",
+      "type": "TEXT",
+      "label": "Cost Accounting Status",
+      "mandatory": false
+    },
+    {
+      "code": "costcategory",
+      "type": "TEXT",
+      "label": "Cost Category",
+      "mandatory": false
+    },
+    {
+      "code": "costestimate",
+      "type": "CURRENCY2",
+      "label": "Item Defined Cost",
+      "mandatory": false
+    },
+    {
+      "code": "costestimatetype",
+      "type": "TEXT",
+      "label": "Cost Estimate Type",
+      "mandatory": false
+    },
+    {
+      "code": "costingmethod",
+      "type": "SELECT",
+      "label": "Costing Method",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "countryofmanufacture",
+      "type": "TEXT",
+      "label": "Manufacturer Country",
+      "mandatory": false
+    },
+    {
+      "code": "created",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "createjob",
+      "type": "CHECKBOX",
+      "label": "Create Job",
+      "mandatory": false
+    },
+    {
+      "code": "currentstandardcost",
+      "type": "CURRENCY2",
+      "label": "Current Standard Cost",
+      "mandatory": false
+    },
+    {
+      "code": "currentstdcosteffectivedate",
+      "type": "DATE",
+      "label": "Current Standard Cost Effective Date",
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "custreturnvarianceaccount",
+      "type": "SELECT",
+      "label": "Customer Return Variance Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "dateviewed",
+      "type": "DATETIME",
+      "label": "Date Viewed",
+      "mandatory": false
+    },
+    {
+      "code": "daysbeforeexpiration",
+      "type": "TEXT",
+      "label": "Days Before Expiration",
+      "mandatory": false
+    },
+    {
+      "code": "defaultreturncost",
+      "type": "CURRENCY2",
+      "label": "Default Return Cost",
+      "mandatory": false
+    },
+    {
+      "code": "deferredexpenseaccount",
+      "type": "SELECT",
+      "label": "Deferred Expense Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "deferredrevenueaccount",
+      "type": "SELECT",
+      "label": "Deferred Revenue Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "demandmodifier",
+      "type": "PERCENT",
+      "label": "Expected Demand Change",
+      "mandatory": false
+    },
+    {
+      "code": "demandsource",
+      "type": "TEXT",
+      "label": "Demand Source",
+      "mandatory": false
+    },
+    {
+      "code": "department",
+      "type": "SELECT",
+      "label": "Department",
+      "mandatory": false,
+      "help": "Set a department to associate with this item.\nFor details on existing department records, in the UI go to Setup > Company > Departments.",
+      "recordType": "department"
+    },
+    {
+      "code": "departmentnohierarchy",
+      "type": "SELECT",
+      "label": "Department (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "displayinebaystore",
+      "type": "CHECKBOX",
+      "label": "eBay Store",
+      "mandatory": false
+    },
+    {
+      "code": "displayname",
+      "type": "TEXT",
+      "label": "Display Name",
+      "mandatory": false
+    },
+    {
+      "code": "dontshowprice",
+      "type": "CHECKBOX",
+      "label": "Don't Show Price",
+      "mandatory": false
+    },
+    {
+      "code": "ebayitemdescription",
+      "type": "CLOBTEXT",
+      "label": "eBay Description",
+      "mandatory": false
+    },
+    {
+      "code": "ebayitemsubtitle",
+      "type": "TEXT",
+      "label": "eBay Subtitle",
+      "mandatory": false
+    },
+    {
+      "code": "ebayitemtitle",
+      "type": "TEXT",
+      "label": "eBay Title",
+      "mandatory": false
+    },
+    {
+      "code": "ebayrelistingoption",
+      "type": "TEXT",
+      "label": "eBay Relisting Option",
+      "mandatory": false
+    },
+    {
+      "code": "effectivebomcontrol",
+      "type": "TEXT",
+      "label": "Effective BOM Control",
+      "mandatory": false
+    },
+    {
+      "code": "effectivedate",
+      "type": "DATE",
+      "label": "Effective Date",
+      "mandatory": false
+    },
+    {
+      "code": "effectiverevision",
+      "type": "SELECT",
+      "label": "Effective Revision",
+      "mandatory": false,
+      "recordType": "itemrevision"
+    },
+    {
+      "code": "endauctionswhenoutofstock",
+      "type": "CHECKBOX",
+      "label": "eBay End Auctions When Out of Stock",
+      "mandatory": false
+    },
+    {
+      "code": "excludefromsitemap",
+      "type": "CHECKBOX",
+      "label": "Exclude from Sitemap",
+      "mandatory": false
+    },
+    {
+      "code": "expenseaccount",
+      "type": "SELECT",
+      "label": "Expense/COGS Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "featureddescription",
+      "type": "CLOBTEXT",
+      "label": "Featured Description",
+      "mandatory": false
+    },
+    {
+      "code": "feeddescription",
+      "type": "TEXT",
+      "label": "Feed Description",
+      "mandatory": false
+    },
+    {
+      "code": "feedname",
+      "type": "TEXT",
+      "label": "Feed Name",
+      "mandatory": false
+    },
+    {
+      "code": "fixedlotsize",
+      "type": "FLOAT",
+      "label": "Fixed Lot Size",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "froogleproductfeed",
+      "type": "CHECKBOX",
+      "label": "Google Base Product Feed",
+      "mandatory": false
+    },
+    {
+      "code": "fxcost",
+      "type": "CURRENCY2",
+      "label": "Purchase Price (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "gainlossaccount",
+      "type": "SELECT",
+      "label": "Gain/Loss Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "giftcertauthcode",
+      "type": "TEXT",
+      "label": "Gift Certificate Auth Code",
+      "mandatory": false
+    },
+    {
+      "code": "giftcertemail",
+      "type": "TEXT",
+      "label": "Gift Certificate To (Email)",
+      "mandatory": false
+    },
+    {
+      "code": "giftcertexpdate",
+      "type": "DATE",
+      "label": "Gift Certificate Expiration Date",
+      "mandatory": false
+    },
+    {
+      "code": "giftcertexpirationdate",
+      "type": "TEXT",
+      "label": "Gift Certificate Exp Date",
+      "mandatory": false
+    },
+    {
+      "code": "giftcertfrom",
+      "type": "TEXT",
+      "label": "Gift Certificate From (Name)",
+      "mandatory": false
+    },
+    {
+      "code": "giftcertmessage",
+      "type": "TEXT",
+      "label": "Gift Certificate Message",
+      "mandatory": false
+    },
+    {
+      "code": "giftcertmsg",
+      "type": "TEXT",
+      "label": "Gift Certificate Message",
+      "mandatory": false
+    },
+    {
+      "code": "giftcertorigamt",
+      "type": "TEXT",
+      "label": "Gift Certificate Original Amount",
+      "mandatory": false
+    },
+    {
+      "code": "giftcertoriginalamount",
+      "type": "TEXT",
+      "label": "Gift Certificate Orig Amount",
+      "mandatory": false
+    },
+    {
+      "code": "giftcertrecipient",
+      "type": "TEXT",
+      "label": "Gift Certificate To (Name)",
+      "mandatory": false
+    },
+    {
+      "code": "hits",
+      "type": "INTEGER",
+      "label": "# Times Viewed",
+      "mandatory": false
+    },
+    {
+      "code": "imageurl",
+      "type": "TEXT",
+      "label": "Image URL",
+      "mandatory": false
+    },
+    {
+      "code": "includechildren",
+      "type": "CHECKBOX",
+      "label": "Include Children",
+      "mandatory": false
+    },
+    {
+      "code": "incomeaccount",
+      "type": "SELECT",
+      "label": "Income Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalid",
+      "type": "INTEGER",
+      "label": "Internal ID",
+      "mandatory": false
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "inventorydetail",
+      "type": "SELECT",
+      "label": "Inventory Detail",
+      "mandatory": false,
+      "recordType": "inventorydetail"
+    },
+    {
+      "code": "inventorylocation",
+      "type": "SELECT",
+      "label": "Inventory Location",
+      "mandatory": false,
+      "recordType": "location"
+    },
+    {
+      "code": "inventorynumber",
+      "type": "SELECT",
+      "label": "Inventory Number",
+      "mandatory": false,
+      "recordType": "inventorynumber"
+    },
+    {
+      "code": "invtclassification",
+      "type": "TEXT",
+      "label": "Inventory Classification",
+      "mandatory": false
+    },
+    {
+      "code": "invtcountinterval",
+      "type": "INTEGER",
+      "label": "Inventory Count Interval",
+      "mandatory": false
+    },
+    {
+      "code": "isavailable",
+      "type": "CHECKBOX",
+      "label": "Is Available?",
+      "mandatory": false
+    },
+    {
+      "code": "isdonationitem",
+      "type": "CHECKBOX",
+      "label": "Variable Amount",
+      "mandatory": false
+    },
+    {
+      "code": "isdropshipitem",
+      "type": "CHECKBOX",
+      "label": "Drop Ship Item",
+      "mandatory": false
+    },
+    {
+      "code": "isfulfillable",
+      "type": "CHECKBOX",
+      "label": "Can be Fulfilled",
+      "mandatory": false
+    },
+    {
+      "code": "isgcocompliant",
+      "type": "CHECKBOX",
+      "label": "Google Checkout Compliant",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "islotitem",
+      "type": "CHECKBOX",
+      "label": "Is Lot Numbered Item",
+      "mandatory": false
+    },
+    {
+      "code": "isonline",
+      "type": "CHECKBOX",
+      "label": "Display in Web Site",
+      "mandatory": false
+    },
+    {
+      "code": "ispreferredvendor",
+      "type": "CHECKBOX",
+      "label": "Vendor is Preferred",
+      "mandatory": false
+    },
+    {
+      "code": "isserialitem",
+      "type": "CHECKBOX",
+      "label": "Is Serialized Item",
+      "mandatory": false
+    },
+    {
+      "code": "isspecialorderitem",
+      "type": "CHECKBOX",
+      "label": "Special Order Item",
+      "mandatory": false
+    },
+    {
+      "code": "isspecialworkorderitem",
+      "type": "CHECKBOX",
+      "label": "Special Work Order Item",
+      "mandatory": false
+    },
+    {
+      "code": "issueproduct",
+      "type": "SELECT",
+      "label": "Product Name",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "istaxable",
+      "type": "CHECKBOX",
+      "label": "Taxable",
+      "mandatory": false
+    },
+    {
+      "code": "isvsoebundle",
+      "type": "CHECKBOX",
+      "label": "Is VSOE Bundle?",
+      "mandatory": false
+    },
+    {
+      "code": "iswip",
+      "type": "CHECKBOX",
+      "label": "WIP",
+      "mandatory": false
+    },
+    {
+      "code": "itemid",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "itemnumberoptions",
+      "type": "SELECT",
+      "label": "Item Number Options",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "itemoptions",
+      "type": "SELECT",
+      "label": "Item Options",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "itemtype",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "itemurl",
+      "type": "TEXT",
+      "label": "Item URL",
+      "mandatory": false
+    },
+    {
+      "code": "lastinvtcountdate",
+      "type": "DATE",
+      "label": "Last Inventory Count Date",
+      "mandatory": false
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "lastpurchaseprice",
+      "type": "CURRENCY",
+      "label": "Last Purchase Price",
+      "mandatory": false
+    },
+    {
+      "code": "lastquantityavailablechange",
+      "type": "DATETIME",
+      "label": "Last Quantity Available Change",
+      "mandatory": false
+    },
+    {
+      "code": "lastviewed",
+      "type": "DATETIME",
+      "label": "Last Viewed",
+      "mandatory": false
+    },
+    {
+      "code": "leadtime",
+      "type": "INTEGER",
+      "label": "Lead Time",
+      "mandatory": false
+    },
+    {
+      "code": "liabilityaccount",
+      "type": "SELECT",
+      "label": "Liability Account",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "listingduration",
+      "type": "TEXT",
+      "label": "eBay Duration",
+      "mandatory": false
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "label": "Location",
+      "mandatory": false,
+      "recordType": "location"
+    },
+    {
+      "code": "locationatpleadtime",
+      "type": "FLOAT",
+      "label": "Location ATP Lead Time",
+      "mandatory": false
+    },
+    {
+      "code": "locationaveragecost",
+      "type": "CURRENCY2",
+      "label": "Location Average Cost",
+      "mandatory": false
+    },
+    {
+      "code": "locationbinquantityavailable",
+      "type": "FLOAT",
+      "label": "Location Bin Available",
+      "mandatory": false
+    },
+    {
+      "code": "locationbuildtime",
+      "type": "FLOAT",
+      "label": "Location Work Order Lead Time",
+      "mandatory": false
+    },
+    {
+      "code": "locationcost",
+      "type": "CURRENCY",
+      "label": "Location Standard Cost",
+      "mandatory": false
+    },
+    {
+      "code": "locationcostaccountingstatus",
+      "type": "TEXT",
+      "label": "Location Cost Accounting Status",
+      "mandatory": false
+    },
+    {
+      "code": "locationdefaultreturncost",
+      "type": "CURRENCY2",
+      "label": "Location Default Return Cost",
+      "mandatory": false
+    },
+    {
+      "code": "locationdemandsource",
+      "type": "TEXT",
+      "label": "Location Demand Source",
+      "mandatory": false
+    },
+    {
+      "code": "locationfixedlotsize",
+      "type": "FLOAT",
+      "label": "Location Fixed Lot Size",
+      "mandatory": false
+    },
+    {
+      "code": "locationinvtclassification",
+      "type": "TEXT",
+      "label": "Location Inventory Classification",
+      "mandatory": false
+    },
+    {
+      "code": "locationinvtcountinterval",
+      "type": "INTEGER",
+      "label": "Location Inventory Count Interval",
+      "mandatory": false
+    },
+    {
+      "code": "locationlastinvtcountdate",
+      "type": "DATE",
+      "label": "Location Last Inventory Count Date",
+      "mandatory": false
+    },
+    {
+      "code": "locationleadtime",
+      "type": "INTEGER",
+      "label": "Location Lead Time",
+      "mandatory": false
+    },
+    {
+      "code": "locationnextinvtcountdate",
+      "type": "DATE",
+      "label": "Location Next Inventory Count Date",
+      "mandatory": false
+    },
+    {
+      "code": "locationnohierarchy",
+      "type": "SELECT",
+      "label": "Location (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "locationpreferredstocklevel",
+      "type": "FLOAT",
+      "label": "Location Preferred Stock Level",
+      "mandatory": false
+    },
+    {
+      "code": "locationquantityavailable",
+      "type": "FLOAT",
+      "label": "Location Available",
+      "mandatory": false
+    },
+    {
+      "code": "locationquantitybackordered",
+      "type": "FLOAT",
+      "label": "Location Back Ordered",
+      "mandatory": false
+    },
+    {
+      "code": "locationquantitycommitted",
+      "type": "FLOAT",
+      "label": "Location Committed",
+      "mandatory": false
+    },
+    {
+      "code": "locationquantityintransit",
+      "type": "FLOAT",
+      "label": "Location In Transit",
+      "mandatory": false
+    },
+    {
+      "code": "locationquantityonhand",
+      "type": "FLOAT",
+      "label": "Location On Hand",
+      "mandatory": false
+    },
+    {
+      "code": "locationquantityonorder",
+      "type": "FLOAT",
+      "label": "Location On Order",
+      "mandatory": false
+    },
+    {
+      "code": "locationreorderpoint",
+      "type": "FLOAT",
+      "label": "Location Reorder Point",
+      "mandatory": false
+    },
+    {
+      "code": "locationsafetystocklevel",
+      "type": "FLOAT",
+      "label": "Location Safety Stock Level",
+      "mandatory": false
+    },
+    {
+      "code": "locationsupplylotsizingmethod",
+      "type": "TEXT",
+      "label": "Location Supply Lot Sizing Method",
+      "mandatory": false
+    },
+    {
+      "code": "locationsupplytype",
+      "type": "TEXT",
+      "label": "Location Supply Type",
+      "mandatory": false
+    },
+    {
+      "code": "locationtotalvalue",
+      "type": "CURRENCY2",
+      "label": "Location Total Value",
+      "mandatory": false
+    },
+    {
+      "code": "manufacturer",
+      "type": "TEXT",
+      "label": "Manufacturer",
+      "mandatory": false
+    },
+    {
+      "code": "manufactureraddr1",
+      "type": "TEXT",
+      "label": "Manufacturer Address",
+      "mandatory": false
+    },
+    {
+      "code": "manufacturercity",
+      "type": "TEXT",
+      "label": "Manufacturer City",
+      "mandatory": false
+    },
+    {
+      "code": "manufacturerstate",
+      "type": "TEXT",
+      "label": "Manufacturer State",
+      "mandatory": false
+    },
+    {
+      "code": "manufacturertariff",
+      "type": "TEXT",
+      "label": "Manufacturer Tariff",
+      "mandatory": false
+    },
+    {
+      "code": "manufacturertaxid",
+      "type": "TEXT",
+      "label": "Manufacturer Tax Id",
+      "mandatory": false
+    },
+    {
+      "code": "manufacturerzip",
+      "type": "TEXT",
+      "label": "Manufacturer Zip",
+      "mandatory": false
+    },
+    {
+      "code": "matchbilltoreceipt",
+      "type": "CHECKBOX",
+      "label": "Match Bill To Receipt",
+      "mandatory": false
+    },
+    {
+      "code": "matrix",
+      "type": "CHECKBOX",
+      "label": "Matrix Item",
+      "mandatory": false
+    },
+    {
+      "code": "matrixchild",
+      "type": "CHECKBOX",
+      "label": "Matrix Child Item",
+      "mandatory": false
+    },
+    {
+      "code": "maxdonationamount",
+      "type": "CURRENCY2",
+      "label": "Maximum Variable Amount",
+      "mandatory": false
+    },
+    {
+      "code": "memberitem",
+      "type": "SELECT",
+      "label": "Member Item",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "memberquantity",
+      "type": "FLOAT",
+      "label": "Member Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "metataghtml",
+      "type": "CLOBTEXT",
+      "label": "Meta Tag Html",
+      "mandatory": false
+    },
+    {
+      "code": "minimumquantity",
+      "type": "TEXT",
+      "label": "Minimum Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "modified",
+      "type": "DATETIME",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "mpn",
+      "type": "TEXT",
+      "label": "MPN",
+      "mandatory": false
+    },
+    {
+      "code": "multmanufactureaddr",
+      "type": "CHECKBOX",
+      "label": "Multiple Manufacture Addresses",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "nextagcategory",
+      "type": "TEXT",
+      "label": "NexTag Category",
+      "mandatory": false
+    },
+    {
+      "code": "nextagproductfeed",
+      "type": "CHECKBOX",
+      "label": "NexTag Product Feed",
+      "mandatory": false
+    },
+    {
+      "code": "nextinvtcountdate",
+      "type": "DATE",
+      "label": "Next Inventory Count Date",
+      "mandatory": false
+    },
+    {
+      "code": "nopricemessage",
+      "type": "TEXT",
+      "label": "No Price Message",
+      "mandatory": false
+    },
+    {
+      "code": "numactivelistings",
+      "type": "INTEGER",
+      "label": "eBay Active Listings",
+      "mandatory": false
+    },
+    {
+      "code": "numberalloweddownloads",
+      "type": "TEXT",
+      "label": "Number of Allowed Downloads",
+      "mandatory": false
+    },
+    {
+      "code": "numcurrentlylisted",
+      "type": "INTEGER",
+      "label": "eBay Quantity Currently Listed",
+      "mandatory": false
+    },
+    {
+      "code": "obsoletedate",
+      "type": "DATE",
+      "label": "Obsolete Date",
+      "mandatory": false
+    },
+    {
+      "code": "obsoleterevision",
+      "type": "SELECT",
+      "label": "Obsolete Revision",
+      "mandatory": false,
+      "recordType": "itemrevision"
+    },
+    {
+      "code": "offersupport",
+      "type": "CHECKBOX",
+      "label": "Offer Support",
+      "mandatory": false
+    },
+    {
+      "code": "onlinecustomerprice",
+      "type": "CURRENCY",
+      "label": "Online Customer Price",
+      "mandatory": false
+    },
+    {
+      "code": "onlineprice",
+      "type": "CURRENCY",
+      "label": "Online Price",
+      "mandatory": false
+    },
+    {
+      "code": "onspecial",
+      "type": "CHECKBOX",
+      "label": "On Special",
+      "mandatory": false
+    },
+    {
+      "code": "otherprices",
+      "type": "CURRENCY",
+      "label": "Other Prices",
+      "mandatory": false
+    },
+    {
+      "code": "othervendor",
+      "type": "SELECT",
+      "label": "Vendor",
+      "mandatory": false,
+      "recordType": "vendor"
+    },
+    {
+      "code": "outofstockbehavior",
+      "type": "TEXT",
+      "label": "Out Of Stock Behavior",
+      "mandatory": false
+    },
+    {
+      "code": "outofstockmessage",
+      "type": "TEXT",
+      "label": "Out Of Stock Message",
+      "mandatory": false
+    },
+    {
+      "code": "overallquantitypricingtype",
+      "type": "SELECT",
+      "label": "Overall Qty. Pricing Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "pagetitle",
+      "type": "TEXTAREA",
+      "label": "Page Title",
+      "mandatory": false
+    },
+    {
+      "code": "parent",
+      "type": "SELECT",
+      "label": "Subitem of",
+      "mandatory": false,
+      "help": "References an existing item record. Only required if the item is a child of another item.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation.",
+      "recordType": null
+    },
+    {
+      "code": "preferencecriterion",
+      "type": "TEXT",
+      "label": "Preference Criterion",
+      "mandatory": false
+    },
+    {
+      "code": "preferredbin",
+      "type": "CHECKBOX",
+      "label": "Preferred Bin",
+      "mandatory": false
+    },
+    {
+      "code": "preferredlocation",
+      "type": "SELECT",
+      "label": "Preferred Location",
+      "mandatory": false,
+      "recordType": "location"
+    },
+    {
+      "code": "preferredstocklevel",
+      "type": "FLOAT",
+      "label": "Preferred Stock Level",
+      "mandatory": false
+    },
+    {
+      "code": "preferredstockleveldays",
+      "type": "INTEGER",
+      "label": "Days Supply",
+      "mandatory": false
+    },
+    {
+      "code": "preferredvendor",
+      "type": "SELECT",
+      "label": "Preferred Vendor",
+      "mandatory": false,
+      "recordType": "vendor"
+    },
+    {
+      "code": "price",
+      "type": "CURRENCY",
+      "label": "Sales Price",
+      "mandatory": false
+    },
+    {
+      "code": "pricesincludetax",
+      "type": "CHECKBOX",
+      "label": "Prices Include Tax",
+      "mandatory": false
+    },
+    {
+      "code": "pricinggroup",
+      "type": "SELECT",
+      "label": "Pricing Group",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "primarycategory",
+      "type": "TEXT",
+      "label": "eBay Category Id",
+      "mandatory": false
+    },
+    {
+      "code": "prodpricevarianceacct",
+      "type": "SELECT",
+      "label": "Production Price Variance Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "prodqtyvarianceacct",
+      "type": "SELECT",
+      "label": "Production Quantity Variance Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "purchasedescription",
+      "type": "TEXT",
+      "label": "Purchase Description",
+      "mandatory": false
+    },
+    {
+      "code": "purchasepricevarianceacct",
+      "type": "SELECT",
+      "label": "Purchase Price Variance Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "purchaseunit",
+      "type": "SELECT",
+      "label": "Purchase Unit",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "quantityavailable",
+      "type": "FLOAT",
+      "label": "Available",
+      "mandatory": false
+    },
+    {
+      "code": "quantitybackordered",
+      "type": "FLOAT",
+      "label": "Back Ordered",
+      "mandatory": false
+    },
+    {
+      "code": "quantitycommitted",
+      "type": "FLOAT",
+      "label": "Committed",
+      "mandatory": false
+    },
+    {
+      "code": "quantityonhand",
+      "type": "FLOAT",
+      "label": "On Hand",
+      "mandatory": false
+    },
+    {
+      "code": "quantityonorder",
+      "type": "FLOAT",
+      "label": "On Order",
+      "mandatory": false
+    },
+    {
+      "code": "quantitypricingschedule",
+      "type": "SELECT",
+      "label": "Qty. Pricing Schedule",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "relateditemsdescription",
+      "type": "TEXTAREA",
+      "label": "Related Items Description",
+      "mandatory": false
+    },
+    {
+      "code": "reordermultiple",
+      "type": "INTEGER",
+      "label": "Reorder Multiple",
+      "mandatory": false
+    },
+    {
+      "code": "reorderpoint",
+      "type": "FLOAT",
+      "label": "Reorder Point",
+      "mandatory": false
+    },
+    {
+      "code": "reserveprice",
+      "type": "CURRENCY",
+      "label": "eBay Reserve Price",
+      "mandatory": false
+    },
+    {
+      "code": "revrecschedule",
+      "type": "SELECT",
+      "label": "Rev. Rec. Schedule",
+      "mandatory": false,
+      "recordType": "revrecschedule"
+    },
+    {
+      "code": "safetystocklevel",
+      "type": "FLOAT",
+      "label": "Safety Stock Level",
+      "mandatory": false
+    },
+    {
+      "code": "safetystockleveldays",
+      "type": "INTEGER",
+      "label": "Safety Stock Days",
+      "mandatory": false
+    },
+    {
+      "code": "salesdescription",
+      "type": "TEXT",
+      "label": "Description",
+      "mandatory": false
+    },
+    {
+      "code": "salestaxcode",
+      "type": "SELECT",
+      "label": "Tax Code",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "saleunit",
+      "type": "SELECT",
+      "label": "Sale Unit",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "schedulebcode",
+      "type": "TEXT",
+      "label": "Schedule B Code",
+      "mandatory": false
+    },
+    {
+      "code": "schedulebnumber",
+      "type": "TEXT",
+      "label": "Schedule B Number",
+      "mandatory": false
+    },
+    {
+      "code": "schedulebquantity",
+      "type": "TEXT",
+      "label": "Schedule B Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "scrapacct",
+      "type": "SELECT",
+      "label": "Scrap Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "searchkeywords",
+      "type": "TEXT",
+      "label": "Search Keywords",
+      "mandatory": false
+    },
+    {
+      "code": "seasonaldemand",
+      "type": "CHECKBOX",
+      "label": "Seasonal Demand",
+      "mandatory": false
+    },
+    {
+      "code": "sellonebay",
+      "type": "CHECKBOX",
+      "label": "eBay Auction",
+      "mandatory": false
+    },
+    {
+      "code": "serialnumber",
+      "type": "TEXT",
+      "label": "Serial/Lot Number",
+      "mandatory": false
+    },
+    {
+      "code": "serialnumberlocation",
+      "type": "TEXT",
+      "label": "Serial/Lot Number Location",
+      "mandatory": false
+    },
+    {
+      "code": "shipindividually",
+      "type": "CHECKBOX",
+      "label": "Ships Individually",
+      "mandatory": false
+    },
+    {
+      "code": "shippackage",
+      "type": "SELECT",
+      "label": "Shipping Package",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shippingrate",
+      "type": "CURRENCY",
+      "label": "Shipping Rate",
+      "mandatory": false
+    },
+    {
+      "code": "shopper",
+      "type": "SELECT",
+      "label": "Shopper",
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "shoppingdotcomcategory",
+      "type": "TEXT",
+      "label": "Shopping.com Category",
+      "mandatory": false
+    },
+    {
+      "code": "shoppingproductfeed",
+      "type": "CHECKBOX",
+      "label": "Shopping.com Product Feed",
+      "mandatory": false
+    },
+    {
+      "code": "shopzillacategoryid",
+      "type": "INTEGER",
+      "label": "Shopzilla Category Id",
+      "mandatory": false
+    },
+    {
+      "code": "shopzillaproductfeed",
+      "type": "CHECKBOX",
+      "label": "Shopzilla Product Feed",
+      "mandatory": false
+    },
+    {
+      "code": "showdefaultdonationamount",
+      "type": "CHECKBOX",
+      "label": "Show Default Amount",
+      "mandatory": false
+    },
+    {
+      "code": "sitemappriority",
+      "type": "FLOAT",
+      "label": "Sitemap Priority",
+      "mandatory": false
+    },
+    {
+      "code": "softdescriptor",
+      "type": "SELECT",
+      "label": "Soft Descriptor",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "startingprice",
+      "type": "CURRENCY",
+      "label": "eBay Starting Price",
+      "mandatory": false
+    },
+    {
+      "code": "stockdescription",
+      "type": "TEXT",
+      "label": "Stock Description",
+      "mandatory": false
+    },
+    {
+      "code": "stockunit",
+      "type": "SELECT",
+      "label": "Stock Unit",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "storedescription",
+      "type": "TEXT",
+      "label": "Store Description",
+      "mandatory": false
+    },
+    {
+      "code": "storedetaileddescription",
+      "type": "CLOBTEXT",
+      "label": "Detailed Description",
+      "mandatory": false
+    },
+    {
+      "code": "storedisplayimage",
+      "type": "SELECT",
+      "label": "Item Display Image",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "storedisplayname",
+      "type": "TEXT",
+      "label": "Store Display Name",
+      "mandatory": false
+    },
+    {
+      "code": "storedisplaythumbnail",
+      "type": "SELECT",
+      "label": "Item Display Thumbnail",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "storeitemtemplate",
+      "type": "SELECT",
+      "label": "Item Drilldown Template",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiary",
+      "mandatory": false,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "subsidiarynohierarchy",
+      "type": "SELECT",
+      "label": "Subsidiary (no hierarchy)",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subtype",
+      "type": "TEXT",
+      "label": "SubType",
+      "mandatory": false
+    },
+    {
+      "code": "supplylotsizingmethod",
+      "type": "TEXT",
+      "label": "Supply Lot Sizing Method",
+      "mandatory": false
+    },
+    {
+      "code": "supplyreplenishmentmethod",
+      "type": "TEXT",
+      "label": "Replenishment Method",
+      "mandatory": false
+    },
+    {
+      "code": "supplytype",
+      "type": "TEXT",
+      "label": "Supply Type",
+      "mandatory": false
+    },
+    {
+      "code": "taxcode",
+      "type": "SELECT",
+      "label": "Tax Code",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "taxschedule",
+      "type": "SELECT",
+      "label": "Tax Schedule",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "thumbnailurl",
+      "type": "TEXT",
+      "label": "Thumbnail URL",
+      "mandatory": false
+    },
+    {
+      "code": "totalvalue",
+      "type": "CURRENCY2",
+      "label": "Total Value",
+      "mandatory": false
+    },
+    {
+      "code": "tracklandedcost",
+      "type": "CHECKBOX",
+      "label": "Track Landed Cost",
+      "mandatory": false
+    },
+    {
+      "code": "transferprice",
+      "type": "CURRENCY2",
+      "label": "Transfer Price",
+      "mandatory": false
+    },
+    {
+      "code": "type",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "unbuildvarianceaccount",
+      "type": "SELECT",
+      "label": "Unbuild Variance Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "unitstype",
+      "type": "SELECT",
+      "label": "Units Type",
+      "mandatory": false,
+      "recordType": "unitstype"
+    },
+    {
+      "code": "upccode",
+      "type": "TEXT",
+      "label": "UPC Code",
+      "mandatory": false
+    },
+    {
+      "code": "urlcomponent",
+      "type": "TEXT",
+      "label": "URL Component",
+      "mandatory": false
+    },
+    {
+      "code": "usebins",
+      "type": "CHECKBOX",
+      "label": "Use Bins",
+      "mandatory": false
+    },
+    {
+      "code": "usemarginalrates",
+      "type": "CHECKBOX",
+      "label": "Use Marginal Rates",
+      "mandatory": false
+    },
+    {
+      "code": "vendor",
+      "type": "SELECT",
+      "label": "Vendor",
+      "mandatory": false,
+      "recordType": "vendor"
+    },
+    {
+      "code": "vendorcode",
+      "type": "TEXT",
+      "label": "Vendor Code",
+      "mandatory": false
+    },
+    {
+      "code": "vendorcost",
+      "type": "CURRENCY",
+      "label": "Vendor Price",
+      "mandatory": false
+    },
+    {
+      "code": "vendorcostentered",
+      "type": "CURRENCY",
+      "label": "Vendor Price (Entered)",
+      "mandatory": false
+    },
+    {
+      "code": "vendorname",
+      "type": "TEXT",
+      "label": "Vendor Name",
+      "mandatory": false
+    },
+    {
+      "code": "vendorpricecurrency",
+      "type": "TEXT",
+      "label": "Vendor Price Currency",
+      "mandatory": false
+    },
+    {
+      "code": "vendorschedule",
+      "type": "SELECT",
+      "label": "Vendor Schedule",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "vendreturnvarianceaccount",
+      "type": "SELECT",
+      "label": "Vendor Return Variance Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "vsoedeferral",
+      "type": "SELECT",
+      "label": "Deferral",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "vsoedelivered",
+      "type": "CHECKBOX",
+      "label": "Default as Delivered",
+      "mandatory": false
+    },
+    {
+      "code": "vsoepermitdiscount",
+      "type": "SELECT",
+      "label": "Permit Discount",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "vsoeprice",
+      "type": "CURRENCY2",
+      "label": "VSOE Price",
+      "mandatory": false
+    },
+    {
+      "code": "website",
+      "type": "SELECT",
+      "label": "Web Site",
+      "mandatory": false,
+      "recordType": "website"
+    },
+    {
+      "code": "weight",
+      "type": "FLOAT",
+      "label": "Weight",
+      "mandatory": false
+    },
+    {
+      "code": "weightunit",
+      "type": "SELECT",
+      "label": "Weight Units",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "wipacct",
+      "type": "SELECT",
+      "label": "WIP Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "wipvarianceacct",
+      "type": "SELECT",
+      "label": "WIP Cost Variance Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "yahooproductfeed",
+      "type": "CHECKBOX",
+      "label": "Yahoo Shopping Product Feed",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "price": [
+      {
+        "code": "currency",
+        "type": "TEXT",
+        "label": "Currency",
+        "mandatory": false
+      },
+      {
+        "code": "pricelevel",
+        "type": "TEXT",
+        "label": "Price Level",
+        "mandatory": false
+      }
+    ],
+    "sitecategory": [
+      {
+        "code": "category",
+        "type": "SELECT",
+        "label": "Site Category",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "categorydescription",
+        "type": "TEXT",
+        "label": "Description",
+        "mandatory": false
+      },
+      {
+        "code": "isdefault",
+        "type": "CHECKBOX",
+        "label": "Preferred Category",
+        "mandatory": false
+      },
+      {
+        "code": "website",
+        "type": "SELECT",
+        "label": "Site",
+        "mandatory": true,
+        "recordType": "website"
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "basic",
+      "label": "Basic"
+    },
+    {
+      "code": "custom",
+      "label": "Custom"
+    },
+    {
+      "code": "history",
+      "label": "History"
+    },
+    {
+      "code": "matrix",
+      "label": "Matrix"
+    },
+    {
+      "code": "pricing",
+      "label": "Pricing"
+    },
+    {
+      "code": "projects",
+      "label": "Projects"
+    },
+    {
+      "code": "relitems",
+      "label": "Related Items"
+    },
+    {
+      "code": "specials",
+      "label": "Specials"
+    },
+    {
+      "code": "store",
+      "label": "Store"
+    },
+    {
+      "code": "translation",
+      "label": "Translation"
+    },
+    {
+      "code": "vsoepricing",
+      "label": "Rev Rec / Amort"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

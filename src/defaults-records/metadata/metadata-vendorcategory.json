@@ -1,0 +1,45 @@
+{
+  "code": "vendorcategory",
+  "id": -110,
+  "name": "Vendor Category",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "istaxagency",
+      "type": "CHECKBOX",
+      "label": "Tax Agency",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Vendor",
+      "mandatory": true,
+      "help": "Enter the name for this category, group, method, message, status, type or term."
+    }
+  ]
+}

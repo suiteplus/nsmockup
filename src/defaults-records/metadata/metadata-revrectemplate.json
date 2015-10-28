@@ -1,0 +1,250 @@
+{
+  "code": "revrectemplate",
+  "id": 0,
+  "name": "Revenue Recognition Template",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "amorinactive",
+      "type": "TEXT",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "amormethod",
+      "type": "TEXT",
+      "label": "Method",
+      "mandatory": false
+    },
+    {
+      "code": "amorperiod",
+      "type": "TEXT",
+      "label": "Amortization Period",
+      "mandatory": false
+    },
+    {
+      "code": "amorstartoffset",
+      "type": "TEXT",
+      "label": "Start Offset",
+      "mandatory": false
+    },
+    {
+      "code": "amortermsrc",
+      "type": "TEXT",
+      "label": "Term Source",
+      "mandatory": false
+    },
+    {
+      "code": "amortizationperiod",
+      "type": "INTEGER",
+      "label": "Recognition Period",
+      "mandatory": false
+    },
+    {
+      "code": "amortizationtype",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "amortype",
+      "type": "TEXT",
+      "label": "Type",
+      "mandatory": false
+    },
+    {
+      "code": "contraaccount",
+      "type": "TEXT",
+      "label": "Contra Account",
+      "mandatory": false
+    },
+    {
+      "code": "deferralaccount",
+      "type": "TEXT",
+      "label": "Deferral Account",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "initialamount",
+      "type": "RATE",
+      "label": "Initial Amount",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "ispublic",
+      "type": "CHECKBOX",
+      "label": "Public",
+      "mandatory": false
+    },
+    {
+      "code": "job",
+      "type": "SELECT",
+      "label": "Project",
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "periodoffset",
+      "type": "TEXT",
+      "label": "Period Offset",
+      "mandatory": false
+    },
+    {
+      "code": "recogintervalsrc",
+      "type": "SELECT",
+      "label": "Term Source",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "recurrencetype",
+      "type": "SELECT",
+      "label": "Method",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "revrecoffset",
+      "type": "INTEGER",
+      "label": "Start Offset",
+      "mandatory": true
+    },
+    {
+      "code": "targetaccount",
+      "type": "TEXT",
+      "label": "Target Account",
+      "mandatory": false
+    },
+    {
+      "code": "totalamount",
+      "type": "CURRENCY2",
+      "label": "Amount",
+      "mandatory": false
+    },
+    {
+      "code": "useforeignamounts",
+      "type": "CHECKBOX",
+      "label": "Use Transaction Currency",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "recurrence": [
+      {
+        "code": "incomeaccount",
+        "type": "SELECT",
+        "label": "Account",
+        "mandatory": false,
+        "recordType": "account"
+      },
+      {
+        "code": "periodoffset",
+        "type": "INTEGER",
+        "label": "Period Offset",
+        "mandatory": true
+      },
+      {
+        "code": "postingperiod",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "recamount",
+        "type": "RATE",
+        "label": "Amount",
+        "mandatory": true
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "history",
+      "label": "System Notes"
+    },
+    {
+      "code": "meta",
+      "label": "Recurrence"
+    }
+  ]
+}

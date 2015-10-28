@@ -1,0 +1,248 @@
+{
+  "code": "manufacturingrouting",
+  "id": 0,
+  "name": "Manufacturing Routing",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isdefault",
+      "type": "CHECKBOX",
+      "label": "Default",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": true,
+      "recordType": "item"
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "label": "Location",
+      "mandatory": true,
+      "recordType": "location"
+    },
+    {
+      "code": "manufacturingcosttemplate",
+      "type": "SELECT",
+      "label": "Manufacturing Cost Template",
+      "mandatory": false,
+      "recordType": "manufacturingcosttemplate"
+    },
+    {
+      "code": "manufacturingworkcenter",
+      "type": "SELECT",
+      "label": "Manufacturing Work Center",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "memo",
+      "type": "TEXT",
+      "label": "Memo",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "operationname",
+      "type": "TEXT",
+      "label": "Operation Name",
+      "mandatory": false
+    },
+    {
+      "code": "operationyield",
+      "type": "PERCENT",
+      "label": "Operation Yield",
+      "mandatory": false
+    },
+    {
+      "code": "runrate",
+      "type": "FLOAT",
+      "label": "Run Rate",
+      "mandatory": false
+    },
+    {
+      "code": "sequence",
+      "type": "INTEGER",
+      "label": "Operation Sequence",
+      "mandatory": false
+    },
+    {
+      "code": "setuptime",
+      "type": "FLOAT",
+      "label": "Setup Time",
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiary",
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "label": "User",
+      "mandatory": false,
+      "recordType": "employee"
+    }
+  ],
+  "subLists": {
+    "routingstep": [
+      {
+        "code": "laborresources",
+        "type": "INTEGER",
+        "label": "Labor Resources",
+        "mandatory": false
+      },
+      {
+        "code": "machineresources",
+        "type": "INTEGER",
+        "label": "Machine Resources",
+        "mandatory": false
+      },
+      {
+        "code": "manufacturingcosttemplate",
+        "type": "SELECT",
+        "label": "Manufacturing Cost Template",
+        "mandatory": true,
+        "recordType": "manufacturingcosttemplate"
+      },
+      {
+        "code": "manufacturingworkcenter",
+        "type": "SELECT",
+        "label": "Manufacturing Work Center",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "operationname",
+        "type": "TEXT",
+        "label": "Operation Name",
+        "mandatory": true
+      },
+      {
+        "code": "operationsequence",
+        "type": "INTEGER",
+        "label": "Operation Sequence",
+        "mandatory": true
+      },
+      {
+        "code": "operationyield",
+        "type": "PERCENT",
+        "label": "Operation Yield",
+        "mandatory": false
+      },
+      {
+        "code": "runrate",
+        "type": "FLOAT",
+        "label": "Run Rate (Min/Unit)",
+        "mandatory": true
+      },
+      {
+        "code": "setuptime",
+        "type": "FLOAT",
+        "label": "Setup Time (Min)",
+        "mandatory": true
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "routingsteps",
+      "label": "Routing Steps"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

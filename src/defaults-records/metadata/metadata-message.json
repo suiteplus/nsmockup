@@ -1,0 +1,300 @@
+{
+  "code": "message",
+  "id": 0,
+  "name": "Message",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "activity",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false,
+      "help": "References an activity record that must already exist in your account. In a single request, a value can be provided for either Activity or Transaction but not both. To have the same message attached to both an Activity and a Transaction, you must add the Message twice. SupportCase, Task, CalendarEvent, and PhoneCall (all examples of Activities) as parents can be set via the \"activity\" field. Opportunity and all other transactions can be set as parent via the \"transaction\" field. In order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+    },
+    {
+      "code": "author",
+      "type": "SELECT",
+      "label": "From",
+      "mandatory": false,
+      "help": "References an entity record that must already exist in your account. Defaults to the currently logged in user (as specified in the login operation).\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": null
+    },
+    {
+      "code": "authoremail",
+      "type": "TEXT",
+      "label": "Author Email",
+      "mandatory": false
+    },
+    {
+      "code": "bcc",
+      "type": "EMAIL",
+      "label": "Bcc",
+      "mandatory": false
+    },
+    {
+      "code": "campaign",
+      "type": "SELECT",
+      "label": "Campaign",
+      "mandatory": false,
+      "recordType": "campaign"
+    },
+    {
+      "code": "cc",
+      "type": "EMAIL",
+      "label": "Cc",
+      "mandatory": false
+    },
+    {
+      "code": "contact",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "customer",
+      "type": "SELECT",
+      "label": "Customer",
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "emailed",
+      "type": "CHECKBOX",
+      "label": "Emailed",
+      "mandatory": false,
+      "help": "Check this box if you are pasting in an e-mail message."
+    },
+    {
+      "code": "employee",
+      "type": "SELECT",
+      "label": "Employee",
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "entity",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "entitytype",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "hasattachment",
+      "type": "CHECKBOX",
+      "label": "Files",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "internalonly",
+      "type": "CHECKBOX",
+      "label": "Internal Only",
+      "mandatory": false
+    },
+    {
+      "code": "isemailed",
+      "type": "CHECKBOX",
+      "label": "Email Sent",
+      "mandatory": false
+    },
+    {
+      "code": "isincoming",
+      "type": "CHECKBOX",
+      "label": "Is Incoming",
+      "mandatory": false
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Modification Date",
+      "mandatory": false
+    },
+    {
+      "code": "message",
+      "type": "CLOBTEXT",
+      "label": "Message",
+      "mandatory": false
+    },
+    {
+      "code": "messagedate",
+      "type": "DATETIME",
+      "label": "Date",
+      "mandatory": false
+    },
+    {
+      "code": "messagetype",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "partner",
+      "type": "SELECT",
+      "label": "Partner",
+      "mandatory": false,
+      "recordType": "partner"
+    },
+    {
+      "code": "recipient",
+      "type": "SELECT",
+      "label": "Attach to",
+      "mandatory": false,
+      "help": "References an entity record that must already exist in your account. The submitted message is saved on the Messages subtab of the recipient's record as well as the author, activity or transaction records.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
+      "recordType": null
+    },
+    {
+      "code": "recipientemail",
+      "type": "TEXT",
+      "label": "Recipient Email",
+      "mandatory": false
+    },
+    {
+      "code": "record",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "recordtype",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "subject",
+      "type": "TEXT",
+      "label": "Subject",
+      "mandatory": false
+    },
+    {
+      "code": "template",
+      "type": "SELECT",
+      "label": "Template",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "time",
+      "type": "TIMEOFDAY",
+      "label": "Time",
+      "mandatory": false
+    },
+    {
+      "code": "transaction",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false,
+      "help": "References an opportunity record that already exists in your NetSuite account. In a single request, a value can be provided for either Activity or Transaction but not both. To have the same message attached to both an Activity and a Transaction, you must add the Message twice."
+    },
+    {
+      "code": "vendor",
+      "type": "SELECT",
+      "label": "Vendor",
+      "mandatory": false,
+      "recordType": "vendor"
+    },
+    {
+      "code": "view",
+      "type": "TEXT",
+      "label": "View",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "mediaitem": [
+      {
+        "code": "mediaitem",
+        "type": "SELECT",
+        "label": "Attach File",
+        "mandatory": true,
+        "recordType": null
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "attachments",
+      "label": "Attachments"
+    },
+    {
+      "code": "messages",
+      "label": "Message"
+    },
+    {
+      "code": "recipients",
+      "label": "Recipients"
+    }
+  ]
+}

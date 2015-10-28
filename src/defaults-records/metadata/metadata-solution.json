@@ -1,0 +1,286 @@
+{
+  "code": "solution",
+  "id": 0,
+  "name": "Solution",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "abstract",
+      "type": "TEXTAREA",
+      "label": "Abstract",
+      "mandatory": false
+    },
+    {
+      "code": "assigned",
+      "type": "SELECT",
+      "label": "Assigned To",
+      "mandatory": false,
+      "help": "If you want to assign this solution to someone, select that person in this field.",
+      "recordType": null
+    },
+    {
+      "code": "autoname",
+      "type": "CHECKBOX",
+      "label": "Auto",
+      "mandatory": false
+    },
+    {
+      "code": "casecount",
+      "type": "INTEGER",
+      "label": "Case Count",
+      "mandatory": false
+    },
+    {
+      "code": "code",
+      "type": "TEXT",
+      "label": "Code",
+      "mandatory": false
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "description",
+      "type": "TEXTAREA",
+      "label": "Detailed Description",
+      "mandatory": false
+    },
+    {
+      "code": "displayonline",
+      "type": "CHECKBOX",
+      "label": "Display Online",
+      "mandatory": false
+    },
+    {
+      "code": "eventnumber",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "find",
+      "type": "TEXT",
+      "label": "Keyword",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "isonline",
+      "type": "CHECKBOX",
+      "label": "Display Online",
+      "mandatory": false
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "longdescription",
+      "type": "TEXTAREA",
+      "label": "Description",
+      "mandatory": true
+    },
+    {
+      "code": "message",
+      "type": "TEXTAREA",
+      "label": "Abstract",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "number",
+      "type": "INTEGER",
+      "label": "Number",
+      "mandatory": false
+    },
+    {
+      "code": "previewref",
+      "type": "TEXT",
+      "label": "Preview",
+      "mandatory": false
+    },
+    {
+      "code": "relatedsolution",
+      "type": "SELECT",
+      "label": "Related Solution",
+      "mandatory": false,
+      "recordType": "solution"
+    },
+    {
+      "code": "solutioncode",
+      "type": "TEXT",
+      "label": "Code",
+      "mandatory": false
+    },
+    {
+      "code": "status",
+      "type": "SELECT",
+      "label": "Status",
+      "mandatory": true,
+      "help": "Required on Add.",
+      "recordType": null
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "label": "Title",
+      "mandatory": false
+    },
+    {
+      "code": "topic",
+      "type": "SELECT",
+      "label": "Topic",
+      "mandatory": false,
+      "recordType": "topic"
+    }
+  ],
+  "subLists": {
+    "solutions": [
+      {
+        "code": "id",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "message",
+        "type": "TEXTAREA",
+        "label": "Abstract",
+        "mandatory": false
+      },
+      {
+        "code": "solution",
+        "type": "SELECT",
+        "label": "Code/Title",
+        "mandatory": true,
+        "recordType": "solution"
+      }
+    ],
+    "topics": [
+      {
+        "code": "topic",
+        "type": "SELECT",
+        "label": "Topic",
+        "mandatory": true,
+        "recordType": "topic"
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "communication",
+      "label": "Communication"
+    },
+    {
+      "code": "custom",
+      "label": "Custom"
+    },
+    {
+      "code": "detail",
+      "label": "Details"
+    },
+    {
+      "code": "notes",
+      "label": "Notes"
+    },
+    {
+      "code": "solution",
+      "label": "Solutions"
+    },
+    {
+      "code": "support",
+      "label": "Cases"
+    },
+    {
+      "code": "topic",
+      "label": "Topics"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

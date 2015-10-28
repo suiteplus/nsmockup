@@ -1,0 +1,435 @@
+{
+  "code": "amortizationschedule",
+  "id": 0,
+  "name": "Amortization Schedule",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "accountingbook",
+      "type": "SELECT",
+      "label": "Accounting Book",
+      "mandatory": false,
+      "recordType": "accountingbook"
+    },
+    {
+      "code": "amorstatus",
+      "type": "TEXT",
+      "label": "Status",
+      "mandatory": false
+    },
+    {
+      "code": "amortemplate",
+      "type": "SELECT",
+      "label": "Template Name",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "amortizationtype",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "amortizedamount",
+      "type": "CURRENCY",
+      "label": "Total Amortized",
+      "mandatory": false
+    },
+    {
+      "code": "amortype",
+      "type": "TEXT",
+      "label": "Type",
+      "mandatory": false
+    },
+    {
+      "code": "amount",
+      "type": "CURRENCY",
+      "label": "Amount (Schedule Total)",
+      "mandatory": false
+    },
+    {
+      "code": "currency",
+      "type": "SELECT",
+      "label": "Schedule Currency",
+      "mandatory": false,
+      "recordType": "currency"
+    },
+    {
+      "code": "currencyname",
+      "type": "SELECT",
+      "label": "Schedule Currency",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "deferredamount",
+      "type": "CURRENCY",
+      "label": "Remaining Deferred Balance",
+      "mandatory": false
+    },
+    {
+      "code": "destacct",
+      "type": "SELECT",
+      "label": "Destination Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "label": "End Date",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "initialamount",
+      "type": "RATE",
+      "label": "Initial Amount",
+      "mandatory": false
+    },
+    {
+      "code": "initialamt",
+      "type": "CURRENCY",
+      "label": "Initial Amount",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "isrecognized",
+      "type": "CHECKBOX",
+      "label": "Is Recognized?",
+      "mandatory": false
+    },
+    {
+      "code": "job",
+      "type": "SELECT",
+      "label": "Project",
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Schedule Name",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "parentSched",
+      "type": "SELECT",
+      "label": "Template",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "pctcomplete",
+      "type": "PERCENT",
+      "label": "% Complete",
+      "mandatory": false
+    },
+    {
+      "code": "pctrecognition",
+      "type": "PERCENT",
+      "label": "% Recog.",
+      "mandatory": false
+    },
+    {
+      "code": "periodoffset",
+      "type": "INTEGER",
+      "label": "Period Offset",
+      "mandatory": false
+    },
+    {
+      "code": "postperiod",
+      "type": "SELECT",
+      "label": "Posting Period",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "recogintervalsrc",
+      "type": "SELECT",
+      "label": "Term Source",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "recuramount",
+      "type": "CURRENCY",
+      "label": "Amount",
+      "mandatory": false
+    },
+    {
+      "code": "recurfxamount",
+      "type": "CURRENCY",
+      "label": "Amount (Foreign Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "recurrencetype",
+      "type": "SELECT",
+      "label": "Method",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "remainingdeferredbalance",
+      "type": "CURRENCY",
+      "label": "Remaining Deferred Balance",
+      "mandatory": false
+    },
+    {
+      "code": "residual",
+      "type": "CURRENCY",
+      "label": "Residual",
+      "mandatory": false
+    },
+    {
+      "code": "revrecoffset",
+      "type": "INTEGER",
+      "label": "Start Offset",
+      "mandatory": true
+    },
+    {
+      "code": "scheddate",
+      "type": "DATE",
+      "label": "Date",
+      "mandatory": false
+    },
+    {
+      "code": "schedulenumber",
+      "type": "TEXT",
+      "label": "Number",
+      "mandatory": false
+    },
+    {
+      "code": "schedulenumbertext",
+      "type": "TEXT",
+      "label": "Number/ID",
+      "mandatory": false
+    },
+    {
+      "code": "sourceacct",
+      "type": "SELECT",
+      "label": "Source Account",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "sourcetran",
+      "type": "SELECT",
+      "label": "Created From",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "srctran",
+      "type": "SELECT",
+      "label": "Source Transaction",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "srctranpostperiod",
+      "type": "SELECT",
+      "label": "Source Transaction Posting Period",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "srctrantype",
+      "type": "SELECT",
+      "label": "Transaction Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "label": "Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "startoffset",
+      "type": "INTEGER",
+      "label": "Start Offset",
+      "mandatory": false
+    },
+    {
+      "code": "status",
+      "type": "SELECT",
+      "label": "Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "templatename",
+      "type": "TEXT",
+      "label": "Template Name",
+      "mandatory": false
+    },
+    {
+      "code": "totalamortized",
+      "type": "CURRENCY",
+      "label": "Total Amortized",
+      "mandatory": false
+    },
+    {
+      "code": "totalamount",
+      "type": "CURRENCY2",
+      "label": "Amount",
+      "mandatory": false
+    },
+    {
+      "code": "useforeignamounts",
+      "type": "CHECKBOX",
+      "label": "Use Transaction Currency",
+      "mandatory": false
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "label": "User",
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "vendor",
+      "type": "SELECT",
+      "label": "Vendor",
+      "mandatory": false,
+      "recordType": "vendor"
+    }
+  ],
+  "subLists": {
+    "recurrence": [
+      {
+        "code": "defrevaccount",
+        "type": "SELECT",
+        "label": "Account",
+        "mandatory": false,
+        "recordType": "account"
+      },
+      {
+        "code": "id",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "incomeaccount",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "isrecognized",
+        "type": "CHECKBOX",
+        "label": "Is Recognized",
+        "mandatory": false
+      },
+      {
+        "code": "jdate",
+        "type": "DATE",
+        "label": "Date Executed",
+        "mandatory": false
+      },
+      {
+        "code": "journal",
+        "type": "TEXT",
+        "label": "Journal",
+        "mandatory": false
+      },
+      {
+        "code": "periodoffset",
+        "type": "INTEGER",
+        "label": "Period Offset",
+        "mandatory": true
+      },
+      {
+        "code": "postingperiod",
+        "type": "TEXT",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "recamount",
+        "type": "RATE",
+        "label": "Amount",
+        "mandatory": true
+      },
+      {
+        "code": "recurdate",
+        "type": "DATE",
+        "label": "Date",
+        "mandatory": false
+      }
+    ]
+  }
+}

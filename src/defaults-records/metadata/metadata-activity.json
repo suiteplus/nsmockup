@@ -1,0 +1,196 @@
+{
+  "code": "activity",
+  "id": 0,
+  "name": "Activity",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "assigned",
+      "type": "SELECT",
+      "label": "Assigned To",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "company",
+      "type": "TEXT",
+      "label": "Company",
+      "mandatory": false
+    },
+    {
+      "code": "completeddate",
+      "type": "DATE",
+      "label": "Date Completed",
+      "mandatory": false
+    },
+    {
+      "code": "contact",
+      "type": "SELECT",
+      "label": "Contact",
+      "mandatory": false,
+      "recordType": "contact"
+    },
+    {
+      "code": "createddate",
+      "type": "DATE",
+      "label": "Date Created",
+      "mandatory": false
+    },
+    {
+      "code": "date",
+      "type": "DATE",
+      "label": "Date",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "SELECT",
+      "label": "External ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATE",
+      "label": "Last Modified",
+      "mandatory": false
+    },
+    {
+      "code": "markdone",
+      "type": "TEXT",
+      "label": "Mark",
+      "mandatory": false
+    },
+    {
+      "code": "memo",
+      "type": "TEXTAREA",
+      "label": "Notes",
+      "mandatory": false
+    },
+    {
+      "code": "message",
+      "type": "TEXTAREA",
+      "label": "Notes",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "owner",
+      "type": "SELECT",
+      "label": "Created By",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "priority",
+      "type": "SELECT",
+      "label": "Priority",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "label": "Date",
+      "mandatory": false
+    },
+    {
+      "code": "starttime",
+      "type": "TIMEOFDAY",
+      "label": "Time",
+      "mandatory": false
+    },
+    {
+      "code": "status",
+      "type": "TEXT",
+      "label": "Status",
+      "mandatory": false
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "label": "Title",
+      "mandatory": false
+    },
+    {
+      "code": "transaction",
+      "type": "SELECT",
+      "label": "Transaction",
+      "mandatory": false,
+      "recordType": "transaction"
+    },
+    {
+      "code": "type",
+      "type": "TEXT",
+      "label": "Type",
+      "mandatory": false
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "label": "User",
+      "mandatory": false,
+      "recordType": "employee"
+    }
+  ]
+}

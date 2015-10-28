@@ -1,0 +1,442 @@
+{
+  "code": "manufacturingoperationtask",
+  "id": 0,
+  "name": "Manufacturing Operation Task",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "actualruntime",
+      "type": "FLOAT",
+      "label": "Actual Run Time",
+      "mandatory": false
+    },
+    {
+      "code": "actualsetuptime",
+      "type": "FLOAT",
+      "label": "Actual Setup Time",
+      "mandatory": false
+    },
+    {
+      "code": "actualwork",
+      "type": "FLOAT",
+      "label": "Actual Hours",
+      "mandatory": false
+    },
+    {
+      "code": "company",
+      "type": "SELECT",
+      "label": "Project",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "completedquantity",
+      "type": "FLOAT",
+      "label": "Completed Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "constrainttype",
+      "type": "SELECT",
+      "label": "Type",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "contact",
+      "type": "SELECT",
+      "label": "Contact",
+      "mandatory": false,
+      "recordType": "contact"
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "label": "End Date",
+      "mandatory": false
+    },
+    {
+      "code": "enddatebaseline",
+      "type": "DATETIME",
+      "label": "End Date",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedwork",
+      "type": "FLOAT",
+      "label": "Estimated Work",
+      "mandatory": false
+    },
+    {
+      "code": "estimatedworkbaseline",
+      "type": "FLOAT",
+      "label": "Hours",
+      "mandatory": false
+    },
+    {
+      "code": "eventid",
+      "type": "INTEGER",
+      "label": "ID",
+      "mandatory": true
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "fxrate",
+      "type": "CURRENCY2",
+      "label": "Exchange Rate",
+      "mandatory": false
+    },
+    {
+      "code": "id",
+      "type": "INTEGER",
+      "label": "ID",
+      "mandatory": false
+    },
+    {
+      "code": "inputquantity",
+      "type": "FLOAT",
+      "label": "Input Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "laborresources",
+      "type": "INTEGER",
+      "label": "Labor Resources",
+      "mandatory": false
+    },
+    {
+      "code": "machineresources",
+      "type": "INTEGER",
+      "label": "Machine Resources",
+      "mandatory": false
+    },
+    {
+      "code": "manufacturingcosttemplate",
+      "type": "SELECT",
+      "label": "Manufacturing Cost Template",
+      "mandatory": true,
+      "recordType": "manufacturingcosttemplate"
+    },
+    {
+      "code": "manufacturingworkcenter",
+      "type": "SELECT",
+      "label": "Manufacturing Work Center",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "message",
+      "type": "TEXT",
+      "label": "Notes",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Operation Name",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "operationsequence",
+      "type": "INTEGER",
+      "label": "Operation Sequence",
+      "mandatory": true
+    },
+    {
+      "code": "order",
+      "type": "FLOAT",
+      "label": "Order",
+      "mandatory": false
+    },
+    {
+      "code": "owner",
+      "type": "SELECT",
+      "label": "Owner",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "percenttimecomplete",
+      "type": "PERCENT",
+      "label": "Percent Complete",
+      "mandatory": false
+    },
+    {
+      "code": "predecessor",
+      "type": "SELECT",
+      "label": "Predecessor",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "predecessortype",
+      "type": "TEXT",
+      "label": "Predecessor Type",
+      "mandatory": false
+    },
+    {
+      "code": "priority",
+      "type": "SELECT",
+      "label": "Priority",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "remainingquantity",
+      "type": "FLOAT",
+      "label": "Remaining Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "remainingwork",
+      "type": "FLOAT",
+      "label": "Remaining Hours",
+      "mandatory": false
+    },
+    {
+      "code": "runrate",
+      "type": "FLOAT",
+      "label": "Run Rate (Min/Unit)",
+      "mandatory": false
+    },
+    {
+      "code": "runtime",
+      "type": "FLOAT",
+      "label": "Run Time",
+      "mandatory": false
+    },
+    {
+      "code": "sequence",
+      "type": "INTEGER",
+      "label": "Operation Sequence",
+      "mandatory": false
+    },
+    {
+      "code": "setuptime",
+      "type": "FLOAT",
+      "label": "Setup Time (Min)",
+      "mandatory": false
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "label": "Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "startdatebaseline",
+      "type": "DATETIME",
+      "label": "Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "starttime",
+      "type": "TIMEOFDAY",
+      "label": "Start Time",
+      "mandatory": false
+    },
+    {
+      "code": "status",
+      "type": "SELECT",
+      "label": "Status",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "label": "Operation Name",
+      "mandatory": true
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "label": "User",
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "workorder",
+      "type": "TEXT",
+      "label": "Work Order",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "costdetail": [
+      {
+        "code": "account",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "costcategory",
+        "type": "SELECT",
+        "label": "Cost Category",
+        "mandatory": true,
+        "recordType": null
+      },
+      {
+        "code": "fixedrate",
+        "type": "CURRENCY2",
+        "label": "Fixed Rate",
+        "mandatory": false
+      },
+      {
+        "code": "id",
+        "type": "INTEGER",
+        "label": "",
+        "mandatory": false
+      },
+      {
+        "code": "item",
+        "type": "SELECT",
+        "label": "Item",
+        "mandatory": true,
+        "recordType": "item"
+      },
+      {
+        "code": "runrate",
+        "type": "CURRENCY2",
+        "label": "Run Rate",
+        "mandatory": false
+      }
+    ],
+    "predecessor": [
+      {
+        "code": "enddate",
+        "type": "DATETIME",
+        "label": "End Date",
+        "mandatory": false
+      },
+      {
+        "code": "startdate",
+        "type": "DATETIME",
+        "label": "Start Date",
+        "mandatory": false
+      },
+      {
+        "code": "task",
+        "type": "SELECT",
+        "label": "Task",
+        "mandatory": true,
+        "recordType": "task"
+      },
+      {
+        "code": "type",
+        "type": "SELECT",
+        "label": "Type",
+        "mandatory": true,
+        "recordType": null
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "assignees",
+      "label": "Assignees"
+    },
+    {
+      "code": "communication",
+      "label": "Communication"
+    },
+    {
+      "code": "costdetails",
+      "label": "Cost Details"
+    },
+    {
+      "code": "custom",
+      "label": "Custom"
+    },
+    {
+      "code": "messagetab",
+      "label": "Message"
+    },
+    {
+      "code": "predecessors",
+      "label": "Predecessors"
+    },
+    {
+      "code": "s_sysinfo",
+      "label": "System Information"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "code": "term",
+  "id": -199,
+  "name": "Term",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "datedriven",
+      "type": "CHECKBOX",
+      "label": "Date Driven",
+      "mandatory": false
+    },
+    {
+      "code": "daydiscountexpires",
+      "type": "INTEGER",
+      "label": "Day Discount Expires",
+      "mandatory": false
+    },
+    {
+      "code": "dayofmonthnetdue",
+      "type": "INTEGER",
+      "label": "Day of Month Net Due",
+      "mandatory": false
+    },
+    {
+      "code": "daysuntilexpiry",
+      "type": "INTEGER",
+      "label": "Days Till Discount Expires",
+      "mandatory": false
+    },
+    {
+      "code": "daysuntilnetdue",
+      "type": "INTEGER",
+      "label": "Days Till Net Due",
+      "mandatory": false
+    },
+    {
+      "code": "discountpercent",
+      "type": "FLOAT",
+      "label": "% Discount",
+      "mandatory": false
+    },
+    {
+      "code": "discountpercentdatedriven",
+      "type": "FLOAT",
+      "label": "Date Driven % Discount",
+      "mandatory": false
+    },
+    {
+      "code": "duenextmonthifwithindays",
+      "type": "INTEGER",
+      "label": "Due Next Month if Within Days",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "label": "Inactive",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": false
+    },
+    {
+      "code": "preferred",
+      "type": "CHECKBOX",
+      "label": "Preferred",
+      "mandatory": false
+    }
+  ]
+}

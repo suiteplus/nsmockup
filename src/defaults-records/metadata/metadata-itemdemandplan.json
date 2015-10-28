@@ -1,0 +1,246 @@
+{
+  "code": "itemdemandplan",
+  "id": 0,
+  "name": "Item Demand Plan",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "alternatesourceitem",
+      "type": "TEXT",
+      "label": "Alternate Source Item",
+      "mandatory": false
+    },
+    {
+      "code": "analysisduration",
+      "type": "INTEGER",
+      "label": "Last Historical Analysis Duration",
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "demanddate",
+      "type": "DATE",
+      "label": "Demand Date",
+      "mandatory": false
+    },
+    {
+      "code": "demandplancalendartype",
+      "type": "SELECT",
+      "label": "View",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "label": "End Date",
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "label": "External ID (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "label": "Formula (Currency)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "label": "Formula (Date)",
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "label": "Formula (Date/Time)",
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "label": "Formula (Numeric)",
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "label": "Formula (Percent)",
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "label": "Formula (Text)",
+      "mandatory": false
+    },
+    {
+      "code": "internalid",
+      "type": "SELECT",
+      "label": "Internal ID",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "internalidnumber",
+      "type": "INTEGER",
+      "label": "Internal ID (Number)",
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": true,
+      "recordType": "item"
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "Last Plan Modified",
+      "mandatory": false
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "label": "Location",
+      "mandatory": true,
+      "recordType": "location"
+    },
+    {
+      "code": "memo",
+      "type": "TEXT",
+      "label": "Memo",
+      "mandatory": false
+    },
+    {
+      "code": "month",
+      "type": "SELECT",
+      "label": "Month",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "projectionduration",
+      "type": "INTEGER",
+      "label": "Last Projection Duration",
+      "mandatory": false
+    },
+    {
+      "code": "projectioninterval",
+      "type": "TEXT",
+      "label": "Last Projection Interval",
+      "mandatory": false
+    },
+    {
+      "code": "projectionmethod",
+      "type": "TEXT",
+      "label": "Last Projection Method",
+      "mandatory": false
+    },
+    {
+      "code": "projectionstartdate",
+      "type": "DATE",
+      "label": "Last Projection Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "quantity",
+      "type": "FLOAT",
+      "label": "Quantity",
+      "mandatory": false
+    },
+    {
+      "code": "quantityuom",
+      "type": "FLOAT",
+      "label": "Quantity in Demand Plan Units",
+      "mandatory": false
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "label": "Start Date",
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiary",
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "units",
+      "type": "SELECT",
+      "label": "Unit of Measure",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "year",
+      "type": "YEAR",
+      "label": "Year",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "demandplandetail": [
+      {
+        "code": "enddate",
+        "type": "DATE",
+        "label": "End Date",
+        "mandatory": false
+      },
+      {
+        "code": "quantity_1_",
+        "type": "POSFLOAT",
+        "label": "Quantity",
+        "mandatory": false
+      },
+      {
+        "code": "startdate",
+        "type": "DATE",
+        "label": "Start Date",
+        "mandatory": false
+      },
+      {
+        "code": "systemcalculated",
+        "type": "FLOAT",
+        "label": "Monthly Calculated",
+        "mandatory": false
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "demand",
+      "label": "Demand"
+    },
+    {
+      "code": "workflow",
+      "label": "Workflow"
+    }
+  ]
+}

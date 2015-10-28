@@ -1,0 +1,146 @@
+{
+  "code": "inventorycostrevaluation",
+  "id": 0,
+  "name": "Inventory Cost Revaluation",
+  "inactive": false,
+  "fields": [
+    {
+      "code": "account",
+      "type": "SELECT",
+      "label": "Adjustment Account",
+      "mandatory": true,
+      "recordType": "account"
+    },
+    {
+      "code": "class",
+      "type": "SELECT",
+      "label": "Class",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "label": "Custom Form",
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "department",
+      "type": "SELECT",
+      "label": "Department",
+      "mandatory": false,
+      "recordType": "department"
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "label": "ExternalId",
+      "mandatory": false
+    },
+    {
+      "code": "inventoryvalue",
+      "type": "CURRENCY",
+      "label": "New Inventory Value",
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "label": "Item",
+      "mandatory": true,
+      "recordType": "item"
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "label": "Location",
+      "mandatory": true,
+      "recordType": "location"
+    },
+    {
+      "code": "memo",
+      "type": "TEXT",
+      "label": "Memo",
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "label": "Name",
+      "mandatory": true
+    },
+    {
+      "code": "postingperiod",
+      "type": "SELECT",
+      "label": "Posting Period",
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "label": "Subsidiary",
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "taxperiod",
+      "type": "TEXT",
+      "label": "",
+      "mandatory": false
+    },
+    {
+      "code": "total",
+      "type": "CURRENCY",
+      "label": "Adjustment Amount",
+      "mandatory": true
+    },
+    {
+      "code": "trandate",
+      "type": "DATE",
+      "label": "Date",
+      "mandatory": true
+    },
+    {
+      "code": "tranid",
+      "type": "TEXT",
+      "label": "Ref. No.",
+      "mandatory": false
+    },
+    {
+      "code": "unitcost",
+      "type": "CURRENCY2",
+      "label": "New Unit Cost",
+      "mandatory": false
+    }
+  ],
+  "subLists": {
+    "accountingbookdetail": [
+      {
+        "code": "exchangerate",
+        "type": "CURRENCY2",
+        "label": "Exchange Rate",
+        "mandatory": true
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "code": "costcomponents",
+      "label": "Cost Components"
+    }
+  ]
+}
