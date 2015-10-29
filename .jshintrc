@@ -112,6 +112,7 @@
         "nlapiDeleteRecord": true,
         "nlapiEncrypt": true,
         "nlapiEscapeXML": true,
+        "nlapiFormatCurrency": true,
         "nlapiGetContext": true,
         "nlapiGetDepartment": true,
         "nlapiGetSubsidiary": true,

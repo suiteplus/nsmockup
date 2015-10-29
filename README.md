@@ -33,7 +33,11 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
 | opt.current.company | <code>string</code> | Define company of the current NetSuite user. Default `NSMOCKUPVxxx`.|
 | opt.current.user.id | <code>number</code> | Define the ID of the current NetSuite user. Default `-4` for anonymous. Default `null`. |
 | opt.current.user.type | <code>string</code> | Define the type of the current NetSuite user, see options: `"employee"`, `"customer"`, `"vendor"` or `"partner"`. Default `"entity"` |
+| opt.general.currency | <code>string</code> | Set currency. Default `$`.|
 | opt.general.dateFormat | <code>string</code> | Global Preferences: `dateformat`, default `"MM/DD/YYYY"`. |
+| opt.general.numberFormat.decimal | <code>string</code> | Set decimal format. Default `"."`.|
+| opt.general.numberFormat.precision | <code>string</code> | Set number format precision. Default `2`.|
+| opt.general.numberFormat.thousand | <code>string</code> | Set thousand format. Default `","`.|
 | opt.general.timeFormat | <code>string</code> | Global Preferences: `timeFormat`, default `"hh:mm A"`. |
 | opt.general.lang | <code>string</code> | Global Preferences: `lang`, default `"en"`. |
 | opt.metadata | <code>[string]</code> | List of Records Types Metadata, generate that with [ns-export][nsexport-url]. |

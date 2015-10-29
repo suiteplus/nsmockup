@@ -27,7 +27,13 @@ const $$INIT_CURRENT = {
 };
 
 const $$INIT_GENERAL_PREFS = {
+    currency: '$',
     dateFormat: 'MM/DD/YYYY',
+    numberFormat: {
+        decimal: '.',
+        precision: 2,
+        thousand: ','
+    },
     timeFormat: 'hh:mm A',
     lang: 'en'
 };
@@ -46,7 +52,13 @@ const $$INIT_GENERAL_PREFS = {
  *      [company]: String || 'NSMOCKUPVxxx'
  *   },
  *   [general]: {
+ *      [currency]: String || '$',
  *      [dateFormat]: String || 'MM/DD/YYYY',
+ *      [numberFormat]: {
+ *          [decimal]: String || '.',
+ *          [precision]: Number || 2,
+ *          [thousand]: String || ','
+ *      }
  *      [timeFormat]: String || 'hh:mm A',
  *      [lang]: String || 'en'
  *   }
