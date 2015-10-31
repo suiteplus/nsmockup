@@ -48,7 +48,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
             try {
                 nlapiEncrypt();
                 return done('missing str');
-            } catch(e) {
+            } catch (e) {
                 should(e).have.property('code', 'SSS_TYPE_STR_REQD');
                 return done();
             }
@@ -58,7 +58,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
             try {
                 nlapiEncrypt('opa');
                 return done('missing algorithm');
-            } catch(e) {
+            } catch (e) {
                 should(e).have.property('code', 'SSS_TYPE_ALGORITHM_REQD');
                 return done();
             }
@@ -68,7 +68,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
             try {
                 nlapiEncrypt('opa', 'des');
                 return done('missing algorithm');
-            } catch(e) {
+            } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_ALGORITHM');
                 return done();
             }

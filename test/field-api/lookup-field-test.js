@@ -107,7 +107,7 @@ describe('<Unit Test - Netsuite Field API>', function () {
             try {
                 let invalidRecType = recType + 'japois';
                 nlapiLookupField(invalidRecType, 1, 'custrecord_code_id');
-                return done('invalid record type: '+invalidRecType);
+                return done('invalid record type: ' + invalidRecType);
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_RECORD_TYPE');
                 return done();

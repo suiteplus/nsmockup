@@ -70,7 +70,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             try {
                 let o = nlapiResolveURL('RESTLET');
                 should(o).have.instanceOf(String);
-                return done('missing id: '+o.getId());
+                return done('missing id: ' + o.getId());
             } catch (e) {
                 should(e).have.property('code', 'SSS_IDENTFIER_ARG_REQ');
                 return done();
@@ -81,7 +81,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             try {
                 let o = nlapiResolveURL('SUITELET', 'customscript_japopop');
                 should(o).have.instanceOf(String);
-                return done('missing id: '+o.getId());
+                return done('missing id: ' + o.getId());
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_IDENTFIER_ARG');
                 return done();
@@ -92,7 +92,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             try {
                 let o = nlapiResolveURL('RECORD');
                 should(o).have.instanceOf(String);
-                return done('missing id: '+o.getId());
+                return done('missing id: ' + o.getId());
             } catch (e) {
                 should(e).have.property('code', 'SSS_NOT_YET_SUPPORTED');
                 return done();
@@ -104,7 +104,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
                 let invalidRecType = 'japois';
                 let o = nlapiResolveURL(invalidRecType, 1);
                 should(o).have.instanceOf(String);
-                return done('invalid record type: '+o.getRecordType());
+                return done('invalid record type: ' + o.getRecordType());
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_TYPE_ARG');
                 return done();
@@ -116,7 +116,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
         it('request only restlet URL', function (done) {
             let url = nlapiResolveURL('RESTLET', ropts.name);
             should(url).be.ok();
-            let res = nlapiRequestURL(url+'&fake=12');
+            let res = nlapiRequestURL(url + '&fake=12');
             should(res).be.ok();
             let body = res.getBody();
             should(body).be.equal('12');
@@ -126,7 +126,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
         it('request only suitelet URL', function (done) {
             let url = nlapiResolveURL('SUITELET', sopts.name);
             should(url).be.ok();
-            let res = nlapiRequestURL(url+'&fake=22');
+            let res = nlapiRequestURL(url + '&fake=22');
             should(res).be.ok();
             let body = res.getBody();
             should(body).be.equal('22');

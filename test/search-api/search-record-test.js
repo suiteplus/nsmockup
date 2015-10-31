@@ -23,7 +23,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
     });
     describe('SuiteScript API - nlapiSearchRecord:', function () {
         let recType = 'customrecord_codeg';
-        
+
         it('search all', function (done) {
             var columns = [
                 'custrecord_type_id',
@@ -51,18 +51,18 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search by internalid', function(done) {
+        it('search by internalid', function (done) {
             let columns = [
-                    'custrecord_type_id',
-                    'custrecord_code_id'
-                ].map(c => new nlobjSearchColumn(c));
+                'custrecord_type_id',
+                'custrecord_code_id'
+            ].map(c => new nlobjSearchColumn(c));
 
             var codes = nlapiSearchRecord(recType, 5, null, columns);
             should(codes).have.length(1);
             return done();
         });
 
-        it('search one field (using nlobjSearchFilter)', function(done) {
+        it('search one field (using nlobjSearchFilter)', function (done) {
             let columns = [
                     'custrecord_type_id',
                     'custrecord_code_id'
@@ -76,7 +76,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field (using array filter)', function(done) {
+        it('search one field (using array filter)', function (done) {
             let columns = [
                     'custrecord_type_id',
                     'custrecord_code_id'
@@ -90,7 +90,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field + join', function(done) {
+        it('search one field + join', function (done) {
             let columns = [
                     'custrecord_type_id',
                     'custrecord_code_id'
@@ -104,7 +104,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field + join and column join (raw params)', function(done) {
+        it('search one field + join and column join (raw params)', function (done) {
             let columns = [
                     ['custrecord_id_title_id', 'custrecord_type_id'],
                     ['custrecord_code_id']
@@ -124,7 +124,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field + join and column join (using nlobjSearchColumn)', function(done) {
+        it('search one field + join and column join (using nlobjSearchColumn)', function (done) {
             let columns = [
                     ['custrecord_id_title_id', 'custrecord_type_id'],
                     ['custrecord_code_id']

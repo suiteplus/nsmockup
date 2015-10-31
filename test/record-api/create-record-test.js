@@ -52,7 +52,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             try {
                 let o = nlapiCreateRecord();
                 should(o).have.instanceOf(nlobjRecord);
-                return done('invalid record type: '+o.getRecordType());
+                return done('invalid record type: ' + o.getRecordType());
             } catch (e) {
                 should(e).have.property('code', 'SSS_TYPE_ARG_REQD');
                 return done();
@@ -64,7 +64,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
                 let invalidRecType = recType + 'japois';
                 let o = nlapiCreateRecord(invalidRecType);
                 should(o).have.instanceOf(nlobjRecord);
-                return done('invalid record type: '+o.getRecordType());
+                return done('invalid record type: ' + o.getRecordType());
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_RECORD_TYPE');
                 return done();
@@ -73,14 +73,14 @@ describe('<Unit Test - Netsuite Record API>', function () {
 
         it('create new object + invalid initializeValues', function (done) {
             let initializeValues = {
-                    custrecord_type_id_oba: 239,
-                    custrecord_code_id: 19
-                };
+                custrecord_type_id_oba: 239,
+                custrecord_code_id: 19
+            };
 
             try {
                 let o = nlapiCreateRecord(recType, initializeValues);
                 should(o).have.instanceOf(nlobjRecord);
-                return done('invalid initializeValues type: '+o.getRecordType()+' -> '+o.getAllFields().toJSON());
+                return done('invalid initializeValues type: ' + o.getRecordType() + ' -> ' + o.getAllFields().toJSON());
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_INITIALIZE_DEFAULT_VALUE');
                 return done();

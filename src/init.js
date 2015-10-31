@@ -96,7 +96,7 @@ module.exports = (opts, cb) => {
 
         // add default metadatadas
         let defaulEntities = ['folder', 'file'];
-        for (let e=0; e<defaulEntities.length; e++) {
+        for (let e = 0; e < defaulEntities.length; e++) {
             let entity = defaulEntities[e];
             if (!~metadata.indexOf(`:${entity}`)) {
                 metadata.push(`:${entity}`);

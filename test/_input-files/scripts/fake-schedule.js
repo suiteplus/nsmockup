@@ -1,5 +1,5 @@
 var context = nlapiGetContext();
-function ScheduleFake () {
+function ScheduleFake() {
     'use strict';
     var recordType = ScheduleFake.getContext().getSetting('SCRIPT', 'fake-param');
     var datas = nlapiSearchRecord(recordType);

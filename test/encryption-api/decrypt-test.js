@@ -33,8 +33,8 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
         it('decrypt aes to str', function (done) {
             let algorithm = 'aes',
                 key = '128-bit',
-                //code = nlapiEncrypt(strFinal, algorithm, key),
-                //str = nlapiDecrypt(code, algorithm);
+            //code = nlapiEncrypt(strFinal, algorithm, key),
+            //str = nlapiDecrypt(code, algorithm);
                 str = nlapiDecrypt('opa', algorithm, key);
             //should(str).be.equal(strFinal);
             should(str).be.equal(null);
@@ -45,7 +45,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
             try {
                 nlapiDecrypt();
                 return done('missing str');
-            } catch(e) {
+            } catch (e) {
                 should(e).have.property('code', 'SSS_TYPE_STR_REQD');
                 return done();
             }
@@ -55,7 +55,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
             try {
                 nlapiDecrypt('opa');
                 return done('missing algorithm');
-            } catch(e) {
+            } catch (e) {
                 should(e).have.property('code', 'SSS_TYPE_ALGORITHM_REQD');
                 return done();
             }
@@ -65,7 +65,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
             try {
                 nlapiDecrypt('opa', 'des');
                 return done('missing algorithm');
-            } catch(e) {
+            } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_ALGORITHM');
                 return done();
             }

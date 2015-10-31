@@ -97,7 +97,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             try {
                 let o = nlapiSubmitRecord();
                 should(o).have.instanceOf(nlobjRecord);
-                return done('missing record type: '+o.getRecordType());
+                return done('missing record type: ' + o.getRecordType());
             } catch (e) {
                 should(e).have.property('code', 'SSS_RECORD_OBJ_REQD');
                 return done();
@@ -106,10 +106,10 @@ describe('<Unit Test - Netsuite Record API>', function () {
 
         it('submit missing record type', function (done) {
             try {
-                let invalidRecType = recType+'japoooo',
+                let invalidRecType = recType + 'japoooo',
                     o = nlapiSubmitRecord(new nlobjRecord(invalidRecType));
                 should(o).have.instanceOf(nlobjRecord);
-                return done('missing record type: '+invalidRecType);
+                return done('missing record type: ' + invalidRecType);
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_RECORD_TYPE');
                 return done();

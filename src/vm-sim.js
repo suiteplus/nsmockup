@@ -106,7 +106,7 @@ exports.importSuiteScript = (script) => {
         files = script.files || [];
 
     // load files
-    for (let i=0; i<files.length; i++) {
+    for (let i = 0; i < files.length; i++) {
         let file = path.resolve(files[i]);
         // verify if the file was cached
         if (!~cfg.files.indexOf(file)) {
@@ -146,7 +146,7 @@ exports.createInvokeFunction = (ctx) => {
     return (name, args) => {
         args = args ? Array.isArray(args) ? args : [args] : [];
         let codeArgs = [];
-        for (let a=0; a<args.length; a++) {
+        for (let a = 0; a < args.length; a++) {
             let codeArg = `$$ARG$${a}`;
             ctx[codeArg] = args[a];
             codeArgs.push(codeArg);

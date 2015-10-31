@@ -19,10 +19,10 @@
     {
       "code": "custrecord_code_id",
       "translations": {
-      "en": {
-        "label": "Code"
-      }
-    },
+        "en": {
+          "label": "Code"
+        }
+      },
       "id": 2,
       "type": "TEXT"
     }

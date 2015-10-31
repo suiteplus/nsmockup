@@ -16,7 +16,7 @@ describe('<Unit Test - Netsuite XML API>', function () {
     });
     describe('XML API - nlapiSelectNode:', function () {
         let xmlDoc;
-        before(function(done) {
+        before(function (done) {
             let xmlPath = path.resolve(fileDir + '/help.xml'),
                 xml = fs.readFileSync(xmlPath, 'utf8');
             xmlDoc = nlapiStringToXML(xml);

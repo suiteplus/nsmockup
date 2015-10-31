@@ -1,5 +1,5 @@
 var main = function (req, res) {
-        'use strict';
+    'use strict';
 
-        res.write(req.getParameter('fake'));
-    };
+    res.write(req.getParameter('fake'));
+};

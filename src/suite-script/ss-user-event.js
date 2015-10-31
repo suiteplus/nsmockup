@@ -47,7 +47,7 @@ module.exports = (opt, cb) => {
         record: opt.record
     });
 
-    for (let i=0; i<funcs.length; i++) {
+    for (let i = 0; i < funcs.length; i++) {
         let step = funcs[i];
         if (~['beforeLoad', 'beforeSubmit', 'afterSubmit'].indexOf(step)) {
             ssValidate.principalFunction(opt.funcs, step, context);

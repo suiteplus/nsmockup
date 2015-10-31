@@ -45,9 +45,9 @@ describe('<Unit Test - Netsuite File API>', function () {
             should(data).have.property('content', file.content);
             should(data).have.property('encoding', file.encoding);
 
-            let fc = $db.object.file[id-1];
+            let fc = $db.object.file[id - 1];
             should(fc).have.property('path', path.join('/', folderNames.join('/'), file.name));
-            should(fc).have.property('realPath', path.join($db.$pathCabinet, ''+file.folder, file.name));
+            should(fc).have.property('realPath', path.join($db.$pathCabinet, '' + file.folder, file.name));
 
             return done();
         });

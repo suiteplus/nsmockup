@@ -30,7 +30,7 @@ describe('<Unit Test - Netsuite File API>', function () {
 
         it('delete file', function (done) {
             let id_ = nlapiDeleteFile(id),
-                fc = $db.object.file[id-1];
+                fc = $db.object.file[id - 1];
 
             should(id_).be.equal(id);
             should(fc).be.equal(null);

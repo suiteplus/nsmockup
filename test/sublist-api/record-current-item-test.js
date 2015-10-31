@@ -65,7 +65,7 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             try {
                 o.getCurrentLineItemValue(item, 'item-id');
                 return done(`invalid current item`);
-            } catch(e) {
+            } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_CURRENT_LINE_ITEM');
                 return done();
             }
@@ -94,7 +94,7 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             try {
                 o.getCurrentLineItemText();
                 return done(`missing SubList Type`);
-            } catch(e) {
+            } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_SUBLIST_NAME');
             }
 
@@ -103,7 +103,7 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             try {
                 o.getCurrentLineItemValue(item, 'item-id');
                 return done(`invalid current item`);
-            } catch(e) {
+            } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_CURRENT_LINE_ITEM');
             }
             return done();
@@ -119,7 +119,7 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             try {
                 o.getLineItemCount();
                 return done(`missing SubList Type`);
-            } catch(e) {
+            } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_SUBLIST_NAME');
             }
 

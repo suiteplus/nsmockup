@@ -32,13 +32,13 @@ describe('<Unit Test - Netsuite File API>', function () {
             should(file).have.property('encoding', 'utf8');
 
             let id = nlapiSubmitFile(file),
-                fc = $db.object.file[id-1];
+                fc = $db.object.file[id - 1];
 
             should(fc).have.property('name', file.name);
             should(fc).have.property('folder', file.folder);
             should(fc).have.property('encoding', file.encoding);
             should(fc).have.property('path', path.join('/', folder.getFieldValue('name'), file.name));
-            should(fc).have.property('realPath', path.join($db.$pathCabinet, ''+file.folder, file.name));
+            should(fc).have.property('realPath', path.join($db.$pathCabinet, '' + file.folder, file.name));
             return done();
         });
     });

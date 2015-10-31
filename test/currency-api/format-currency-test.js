@@ -30,7 +30,7 @@ describe('<Unit Test - Netsuite Currency API>', function () {
                     try {
                         nlapiFormatCurrency('opaa');
                         return done('invalid current number');
-                    } catch(e) {
+                    } catch (e) {
                         should(e).have.property('code', 'SSS_INVALID_VALUE');
                     }
 
@@ -71,7 +71,7 @@ describe('<Unit Test - Netsuite Currency API>', function () {
                     try {
                         nlapiFormatCurrency('opaa');
                         return done('invalid current number');
-                    } catch(e) {
+                    } catch (e) {
                         should(e).have.property('code', 'SSS_INVALID_VALUE');
                     }
 

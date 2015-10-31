@@ -37,7 +37,7 @@ exports.load = (cb) => {
     });
     try {
         change && db.saveSync();
-    } catch(e) {
+    } catch (e) {
         console.error(e);
     }
 

@@ -36,7 +36,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             //should(copy.getAllFields()).be.equal(code.getAllFields());
 
             let fields = copy.getAllFields();
-            for (let i=0; i<fields.length; i++) {
+            for (let i = 0; i < fields.length; i++) {
                 let field = fields[i];
                 should(copy.getFieldValue(field)).be.equal(code.getFieldValue(field));
             }
@@ -48,7 +48,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             try {
                 let o = nlapiCopyRecord();
                 should(o).have.instanceOf(nlobjRecord);
-                return done('missing record type: '+o.getRecordType());
+                return done('missing record type: ' + o.getRecordType());
             } catch (e) {
                 should(e).have.property('code', 'SSS_TYPE_ARG_REQD');
                 return done();
@@ -59,7 +59,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             try {
                 let o = nlapiCopyRecord(recType);
                 should(o).have.instanceOf(nlobjRecord);
-                return done('missing id: '+o.getId());
+                return done('missing id: ' + o.getId());
             } catch (e) {
                 should(e).have.property('code', 'SSS_ID_ARG_REQD');
                 return done();
@@ -71,7 +71,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
                 let invalidRecType = recType + 'japois';
                 let o = nlapiCopyRecord(invalidRecType, 1);
                 should(o).have.instanceOf(nlobjRecord);
-                return done('invalid record type: '+o.getRecordType());
+                return done('invalid record type: ' + o.getRecordType());
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_RECORD_TYPE');
                 return done();
