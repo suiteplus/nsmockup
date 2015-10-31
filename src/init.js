@@ -95,10 +95,22 @@ module.exports = (opts, cb) => {
         }
 
         // add default metadatadas
+        let defaulEntities = ['folder', 'file'];
+        for (let e=0; e<defaulEntities.length; e++) {
+            let entity = defaulEntities[e];
+            if (!~metadata.indexOf(`:${entity}`)) {
+                metadata.push(`:${entity}`);
+            }
+        }
+
         let defaultMetas = glob.sync(__dirname + '/defaults-records/metadata/*.json');
         for (let m = 0; m < defaultMetas.length; m++) {
-            let defaultMeta = defaultMetas[m];
-            metadata.push(require(defaultMeta));
+            let defaultMeta = defaultMetas[m],
+                entityName = path.basename(defaultMeta, '.json').replace('metadata-', ''),
+                index = metadata.indexOf(`:${entityName}`);
+            if (~index) {
+                metadata[index] = require(defaultMeta);
+            }
         }
 
         let _metadata = db('__metadata');

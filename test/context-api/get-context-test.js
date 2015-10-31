@@ -23,6 +23,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
 
         it('get-context current "entity"', function (done) {
             let opts = {
+                metadata: [':entity'],
                 records: {
                     'entity': base + '/data/recordType-user.json'
                 },
@@ -48,6 +49,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
 
         it('get-context current "employee"', function (done) {
             let opts = {
+                metadata: [':employee'],
                 records: {
                     'employee': base + '/data/recordType-user.json'
                 },
@@ -76,6 +78,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
 
         it('get-context current "customer"', function (done) {
             let opts = {
+                metadata: [':customer'],
                 records: {
                     'customer': base + '/data/recordType-user.json'
                 },
@@ -104,6 +107,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
 
         it('get-context current "vendor"', function (done) {
             let opts = {
+                metadata: [':vendor'],
                 records: {
                     'vendor': base + '/data/recordType-user.json'
                 },
@@ -132,6 +136,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
 
         it('get-context current "partner"', function (done) {
             let opts = {
+                metadata: [':partner'],
                 records: {
                     'partner': base + '/data/recordType-user.json'
                 },
