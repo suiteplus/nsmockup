@@ -1,123 +1,195 @@
 {
   "code": "emailtemplate",
   "id": -120,
-  "name": "Email Template",
+  "translations": {
+    "en": "Email Template"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "addcompanyaddress",
       "type": "CHECKBOX",
-      "label": "Add Company Address to Message Footer in Bulk Merges",
+      "translations": {
+        "en": {
+          "label": "Add Company Address to Message Footer in Bulk Merges"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "addunsubscribelink",
       "type": "CHECKBOX",
-      "label": "Add Unsubscribe Link to Message Footer in Bulk Merges",
+      "translations": {
+        "en": {
+          "label": "Add Unsubscribe Link to Message Footer in Bulk Merges"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "campaigndomain",
       "type": "SELECT",
-      "label": "Campaign Domain",
+      "translations": {
+        "en": {
+          "label": "Campaign Domain"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "content",
       "type": "TEXTAREA",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "content"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "description",
       "type": "TEXTAREA",
-      "label": "Description",
+      "translations": {
+        "en": {
+          "label": "Description"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isinactive",
       "type": "CHECKBOX",
-      "label": "Inactive",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isprivate",
       "type": "CHECKBOX",
-      "label": "Private",
+      "translations": {
+        "en": {
+          "label": "Private"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "mediaitem",
       "type": "SELECT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "mediaitem"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "mergefieldstpl_en",
       "type": "SELECT",
-      "label": "Insert Field",
+      "translations": {
+        "en": {
+          "label": "Insert Field"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "mergetypestpl_en",
       "type": "SELECT",
-      "label": "Field Type",
+      "translations": {
+        "en": {
+          "label": "Field Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "restricttogroup",
       "type": "SELECT",
-      "label": "Restrict To Group",
+      "translations": {
+        "en": {
+          "label": "Restrict To Group"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "subject",
       "type": "TEXT",
-      "label": "Subject",
+      "translations": {
+        "en": {
+          "label": "Subject"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "usesmedia",
       "type": "RADIO",
-      "label": "File",
+      "translations": {
+        "en": {
+          "label": "File"
+        }
+      },
       "mandatory": false
     }
   ],
   "tabs": [
     {
       "code": "marketing",
-      "label": "Marketing"
+      "translations": {
+        "en": "Marketing"
+      }
     },
     {
       "code": "restriction",
-      "label": "Restrict Access"
+      "translations": {
+        "en": "Restrict Access"
+      }
     },
     {
       "code": "template",
-      "label": "Template"
+      "translations": {
+        "en": "Template"
+      }
     }
   ]
 }

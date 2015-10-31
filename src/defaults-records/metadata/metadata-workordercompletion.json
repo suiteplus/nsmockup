@@ -1,2567 +1,4221 @@
 {
   "code": "workordercompletion",
   "id": 0,
-  "name": "Work Order Completion",
+  "translations": {
+    "en": "Work Order Completion"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "abbrev",
       "type": "TEXT",
-      "label": "Abbrev. Type",
+      "translations": {
+        "en": {
+          "label": "Abbrev. Type"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "account",
       "type": "SELECT",
-      "label": "Account",
+      "translations": {
+        "en": {
+          "label": "Account"
+        }
+      },
       "mandatory": false,
       "recordType": "account"
     },
     {
       "code": "account_grouped",
       "type": "SELECT",
-      "label": "Account (Grouped)",
+      "translations": {
+        "en": {
+          "label": "Account (Grouped)"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "accountingperiod",
       "type": "SELECT",
-      "label": "Accounting Period",
+      "translations": {
+        "en": {
+          "label": "Accounting Period"
+        }
+      },
       "mandatory": false,
       "recordType": "accountingperiod"
     },
     {
       "code": "accounttype",
       "type": "TEXT",
-      "label": "Account Type",
+      "translations": {
+        "en": {
+          "label": "Account Type"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "actualshipdate",
       "type": "DATE",
-      "label": "Actual Ship/Receipt Date",
+      "translations": {
+        "en": {
+          "label": "Actual Ship/Receipt Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "altsalesamount",
       "type": "CURRENCY",
-      "label": "Amount (Alt.Sales)",
+      "translations": {
+        "en": {
+          "label": "Amount (Alt.Sales)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "altsalesnetamount",
       "type": "CURRENCY",
-      "label": "Amount (Alt.Sales Net)",
+      "translations": {
+        "en": {
+          "label": "Amount (Alt.Sales Net)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "amount",
       "type": "CURRENCY",
-      "label": "Amount",
+      "translations": {
+        "en": {
+          "label": "Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "amountpaid",
       "type": "CURRENCY",
-      "label": "Amount Paid",
+      "translations": {
+        "en": {
+          "label": "Amount Paid"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "amountremaining",
       "type": "CURRENCY",
-      "label": "Amount Remaining",
+      "translations": {
+        "en": {
+          "label": "Amount Remaining"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "amountunbilled",
       "type": "CURRENCY",
-      "label": "Amount Unbilled",
+      "translations": {
+        "en": {
+          "label": "Amount Unbilled"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "anylineitem",
       "type": "MULTISELECT",
-      "label": "Item On Any Line",
+      "translations": {
+        "en": {
+          "label": "Item On Any Line"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "appliedtoforeignamount",
       "type": "CURRENCY",
-      "label": "Applied To Link Amount (Foreign Currency)",
+      "translations": {
+        "en": {
+          "label": "Applied To Link Amount (Foreign Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "appliedtoisfxvariance",
       "type": "CHECKBOX",
-      "label": "Applied To Link Is FxVariance",
+      "translations": {
+        "en": {
+          "label": "Applied To Link Is FxVariance"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "appliedtolinkamount",
       "type": "CURRENCY",
-      "label": "Applied To Link Amount",
+      "translations": {
+        "en": {
+          "label": "Applied To Link Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "appliedtolinktype",
       "type": "SELECT",
-      "label": "Applied To Link Type",
+      "translations": {
+        "en": {
+          "label": "Applied To Link Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "appliedtotransaction",
       "type": "SELECT",
-      "label": "Applied To Transaction",
+      "translations": {
+        "en": {
+          "label": "Applied To Transaction"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "applyingforeignamount",
       "type": "CURRENCY",
-      "label": "Applying Link Amount (Foreign Currency)",
+      "translations": {
+        "en": {
+          "label": "Applying Link Amount (Foreign Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "applyingisfxvariance",
       "type": "CHECKBOX",
-      "label": "Applying Link Is FxVariance",
+      "translations": {
+        "en": {
+          "label": "Applying Link Is FxVariance"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "applyinglinkamount",
       "type": "CURRENCY",
-      "label": "Applying Link Amount",
+      "translations": {
+        "en": {
+          "label": "Applying Link Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "applyinglinktype",
       "type": "SELECT",
-      "label": "Applying Link Type",
+      "translations": {
+        "en": {
+          "label": "Applying Link Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "applyingtransaction",
       "type": "SELECT",
-      "label": "Applying Transaction",
+      "translations": {
+        "en": {
+          "label": "Applying Transaction"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "approvalstatus",
       "type": "SELECT",
-      "label": "Approval Status",
+      "translations": {
+        "en": {
+          "label": "Approval Status"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "authcode",
       "type": "TEXT",
-      "label": "Auth. Code",
+      "translations": {
+        "en": {
+          "label": "Auth. Code"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "avsstreetmatch",
       "type": "TEXT",
-      "label": "AVS Street Match",
+      "translations": {
+        "en": {
+          "label": "AVS Street Match"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "avszipmatch",
       "type": "TEXT",
-      "label": "AVS Zip Match",
+      "translations": {
+        "en": {
+          "label": "AVS Zip Match"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billable",
       "type": "CHECKBOX",
-      "label": "Billable",
+      "translations": {
+        "en": {
+          "label": "Billable"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billaddress",
       "type": "TEXT",
-      "label": "Billing Address",
+      "translations": {
+        "en": {
+          "label": "Billing Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billaddress1",
       "type": "TEXT",
-      "label": "Billing Address 1",
+      "translations": {
+        "en": {
+          "label": "Billing Address 1"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billaddress2",
       "type": "TEXT",
-      "label": "Billing Address 2",
+      "translations": {
+        "en": {
+          "label": "Billing Address 2"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billaddress3",
       "type": "TEXT",
-      "label": "Billing Address 3",
+      "translations": {
+        "en": {
+          "label": "Billing Address 3"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billaddressee",
       "type": "TEXT",
-      "label": "Billing Addressee",
+      "translations": {
+        "en": {
+          "label": "Billing Addressee"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billattention",
       "type": "TEXT",
-      "label": "Billing Attention",
+      "translations": {
+        "en": {
+          "label": "Billing Attention"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billcity",
       "type": "TEXT",
-      "label": "Billing City",
+      "translations": {
+        "en": {
+          "label": "Billing City"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billcountry",
       "type": "SELECT",
-      "label": "Billing Country",
+      "translations": {
+        "en": {
+          "label": "Billing Country"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "billcountrycode",
       "type": "TEXT",
-      "label": "Billing Country Code",
+      "translations": {
+        "en": {
+          "label": "Billing Country Code"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billcounty",
       "type": "TEXT",
-      "label": "Billing County/State",
+      "translations": {
+        "en": {
+          "label": "Billing County/State"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billeddate",
       "type": "DATE",
-      "label": "Date Billed",
+      "translations": {
+        "en": {
+          "label": "Date Billed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billingamount",
       "type": "CURRENCY2",
-      "label": "Billing Amount",
+      "translations": {
+        "en": {
+          "label": "Billing Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billingschedule",
       "type": "SELECT",
-      "label": "Billing Schedule",
+      "translations": {
+        "en": {
+          "label": "Billing Schedule"
+        }
+      },
       "mandatory": false,
       "recordType": "billingschedule"
     },
     {
       "code": "billingstatus",
       "type": "CHECKBOX",
-      "label": "Billing Status",
+      "translations": {
+        "en": {
+          "label": "Billing Status"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billingtransaction",
       "type": "SELECT",
-      "label": "Billing Transaction",
+      "translations": {
+        "en": {
+          "label": "Billing Transaction"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "billphone",
       "type": "TEXT",
-      "label": "Billing Phone",
+      "translations": {
+        "en": {
+          "label": "Billing Phone"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billstate",
       "type": "TEXT",
-      "label": "Billing State/Province",
+      "translations": {
+        "en": {
+          "label": "Billing State/Province"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billvariancestatus",
       "type": "TEXT",
-      "label": "Bill Variance Status",
+      "translations": {
+        "en": {
+          "label": "Bill Variance Status"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billzip",
       "type": "TEXT",
-      "label": "Billing Zip",
+      "translations": {
+        "en": {
+          "label": "Billing Zip"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "binnumber",
       "type": "TEXT",
-      "label": "Transaction Bin Number",
+      "translations": {
+        "en": {
+          "label": "Transaction Bin Number"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "binnumberquantity",
       "type": "FLOAT",
-      "label": "Transaction Bin Quantity",
+      "translations": {
+        "en": {
+          "label": "Transaction Bin Quantity"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "buildentireassembly",
       "type": "CHECKBOX",
-      "label": "Build Sub-Assemblies",
+      "translations": {
+        "en": {
+          "label": "Build Sub-Assemblies"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "buildvariance",
       "type": "FLOAT",
-      "label": "Build Variance",
+      "translations": {
+        "en": {
+          "label": "Build Variance"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "built",
       "type": "FLOAT",
-      "label": "Built",
+      "translations": {
+        "en": {
+          "label": "Built"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "cccustomercode",
       "type": "TEXT",
-      "label": "CC Customer Code",
+      "translations": {
+        "en": {
+          "label": "CC Customer Code"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "ccexpdate",
       "type": "MMYYDATE",
-      "label": "CC Expire Date",
+      "translations": {
+        "en": {
+          "label": "CC Expire Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "ccexpiredate",
       "type": "DATE",
-      "label": "CC Expire Date",
+      "translations": {
+        "en": {
+          "label": "CC Expire Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "ccholdername",
       "type": "TEXT",
-      "label": "Credit Cardholder Name",
+      "translations": {
+        "en": {
+          "label": "Credit Cardholder Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "ccname",
       "type": "TEXT",
-      "label": "Credit Cardholder Name",
+      "translations": {
+        "en": {
+          "label": "Credit Cardholder Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "ccnumber",
       "type": "CCNUMBER",
-      "label": "Credit Card Number",
+      "translations": {
+        "en": {
+          "label": "Credit Card Number"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "ccstreet",
       "type": "TEXT",
-      "label": "Card Street",
+      "translations": {
+        "en": {
+          "label": "Card Street"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "cczipcode",
       "type": "TEXT",
-      "label": "Card Zip Code",
+      "translations": {
+        "en": {
+          "label": "Card Zip Code"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "class",
       "type": "SELECT",
-      "label": "Class",
+      "translations": {
+        "en": {
+          "label": "Class"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "classnohierarchy",
       "type": "SELECT",
-      "label": "Class (no hierarchy)",
+      "translations": {
+        "en": {
+          "label": "Class (no hierarchy)"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "cleared",
       "type": "CHECKBOX",
-      "label": "Cleared",
+      "translations": {
+        "en": {
+          "label": "Cleared"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "closed",
       "type": "CHECKBOX",
-      "label": "Closed",
+      "translations": {
+        "en": {
+          "label": "Closed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "closedate",
       "type": "DATE",
-      "label": "Date Closed",
+      "translations": {
+        "en": {
+          "label": "Date Closed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "cogs",
       "type": "CHECKBOX",
-      "label": "COGS Line",
+      "translations": {
+        "en": {
+          "label": "COGS Line"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "cogsamount",
       "type": "CURRENCY2",
-      "label": "COGS Amount",
+      "translations": {
+        "en": {
+          "label": "COGS Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "commissioneffectivedate",
       "type": "DATE",
-      "label": "Commission Effective Date",
+      "translations": {
+        "en": {
+          "label": "Commission Effective Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "commit",
       "type": "SELECT",
-      "label": "Commit",
+      "translations": {
+        "en": {
+          "label": "Commit"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "completedquantity",
       "type": "FLOAT",
-      "label": "Completed Quantity",
+      "translations": {
+        "en": {
+          "label": "Completed Quantity"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "confirmationnumber",
       "type": "TEXT",
-      "label": "Confirmation Number",
+      "translations": {
+        "en": {
+          "label": "Confirmation Number"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "contactprimary",
       "type": "SELECT",
-      "label": "Contact (Primary)",
+      "translations": {
+        "en": {
+          "label": "Contact (Primary)"
+        }
+      },
       "mandatory": false,
       "recordType": "contact"
     },
     {
       "code": "contribution",
       "type": "PERCENT",
-      "label": "Contribution %",
+      "translations": {
+        "en": {
+          "label": "Contribution %"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "contributionprimary",
       "type": "PERCENT",
-      "label": "Primary Sales Rep Contribution %",
+      "translations": {
+        "en": {
+          "label": "Primary Sales Rep Contribution %"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "costcomponentamount",
       "type": "CURRENCY",
-      "label": "Cost Component Amount",
+      "translations": {
+        "en": {
+          "label": "Cost Component Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "costcomponentcategory",
       "type": "TEXT",
-      "label": "Cost Component Category",
+      "translations": {
+        "en": {
+          "label": "Cost Component Category"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "costcomponentitem",
       "type": "TEXT",
-      "label": "Cost Component Item",
+      "translations": {
+        "en": {
+          "label": "Cost Component Item"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "costcomponentquantity",
       "type": "FLOAT",
-      "label": "Cost Component Quantity",
+      "translations": {
+        "en": {
+          "label": "Cost Component Quantity"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "costcomponentstandardcost",
       "type": "FLOAT",
-      "label": "Cost Component Standard Cost",
+      "translations": {
+        "en": {
+          "label": "Cost Component Standard Cost"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "costestimate",
       "type": "CURRENCY",
-      "label": "Est. Extended Cost (Line)",
+      "translations": {
+        "en": {
+          "label": "Est. Extended Cost (Line)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "costestimaterate",
       "type": "CURRENCY",
-      "label": "Est. Unit Cost",
+      "translations": {
+        "en": {
+          "label": "Est. Unit Cost"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "costestimatetype",
       "type": "TEXT",
-      "label": "Cost Estimate Type",
+      "translations": {
+        "en": {
+          "label": "Cost Estimate Type"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "createdby",
       "type": "SELECT",
-      "label": "Created By",
+      "translations": {
+        "en": {
+          "label": "Created By"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "createddate",
       "type": "DATETIME",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "createddate"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "createdfrom",
       "type": "SELECT",
-      "label": "Created From",
+      "translations": {
+        "en": {
+          "label": "Created From"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "creditamount",
       "type": "CURRENCY",
-      "label": "Amount (Credit)",
+      "translations": {
+        "en": {
+          "label": "Amount (Credit)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "cscmatch",
       "type": "TEXT",
-      "label": "CSC Match",
+      "translations": {
+        "en": {
+          "label": "CSC Match"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "currency",
       "type": "SELECT",
-      "label": "Currency",
+      "translations": {
+        "en": {
+          "label": "Currency"
+        }
+      },
       "mandatory": false,
       "recordType": "currency"
     },
     {
       "code": "customer",
       "type": "SELECT",
-      "label": "Customer",
+      "translations": {
+        "en": {
+          "label": "Customer"
+        }
+      },
       "mandatory": false,
       "recordType": "customer"
     },
     {
       "code": "customermain",
       "type": "SELECT",
-      "label": "Customer (Main Line)",
+      "translations": {
+        "en": {
+          "label": "Customer (Main Line)"
+        }
+      },
       "mandatory": false,
       "recordType": "customer"
     },
     {
       "code": "customersubof",
       "type": "SELECT",
-      "label": "Customer Sub of",
+      "translations": {
+        "en": {
+          "label": "Customer Sub of"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "customform",
       "type": "SELECT",
-      "label": "Custom Form",
+      "translations": {
+        "en": {
+          "label": "Custom Form"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "custtype",
       "type": "SELECT",
-      "label": "Customer Category",
+      "translations": {
+        "en": {
+          "label": "Customer Category"
+        }
+      },
       "mandatory": false,
       "recordType": "customercategory"
     },
     {
       "code": "datecreated",
       "type": "DATETIME",
-      "label": "Date Created",
+      "translations": {
+        "en": {
+          "label": "Date Created"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "daysopen",
       "type": "INTEGER",
-      "label": "Days Open",
+      "translations": {
+        "en": {
+          "label": "Days Open"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "daysoverdue",
       "type": "INTEGER",
-      "label": "Days Overdue",
+      "translations": {
+        "en": {
+          "label": "Days Overdue"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "debitamount",
       "type": "CURRENCY",
-      "label": "Amount (Debit)",
+      "translations": {
+        "en": {
+          "label": "Amount (Debit)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "deferredrevenue",
       "type": "CURRENCY",
-      "label": "Amount (Deferred)",
+      "translations": {
+        "en": {
+          "label": "Amount (Deferred)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "deferrevrec",
       "type": "CHECKBOX",
-      "label": "Delay Rev. Rec.",
+      "translations": {
+        "en": {
+          "label": "Delay Rev. Rec."
+        }
+      },
       "mandatory": false
     },
     {
       "code": "department",
       "type": "SELECT",
-      "label": "Department",
+      "translations": {
+        "en": {
+          "label": "Department"
+        }
+      },
       "mandatory": false,
       "recordType": "department"
     },
     {
       "code": "departmentnohierarchy",
       "type": "SELECT",
-      "label": "Department (no hierarchy)",
+      "translations": {
+        "en": {
+          "label": "Department (no hierarchy)"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "depositdate",
       "type": "DATE",
-      "label": "Date Deposited/Refunded",
+      "translations": {
+        "en": {
+          "label": "Date Deposited/Refunded"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "deposittransaction",
       "type": "SELECT",
-      "label": "Deposit/Refund Transaction",
+      "translations": {
+        "en": {
+          "label": "Deposit/Refund Transaction"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "discountamount",
       "type": "CURRENCY",
-      "label": "Amount Discount",
+      "translations": {
+        "en": {
+          "label": "Amount Discount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "draccount",
       "type": "TEXT",
-      "label": "Deferred Revenue Reclassification Account",
+      "translations": {
+        "en": {
+          "label": "Deferred Revenue Reclassification Account"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "duedate",
       "type": "DATE",
-      "label": "Due Date/Receive By",
+      "translations": {
+        "en": {
+          "label": "Due Date/Receive By"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "effectiverate",
       "type": "CURRENCY2",
-      "label": "Effective Rate",
+      "translations": {
+        "en": {
+          "label": "Effective Rate"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "email",
       "type": "EMAIL",
-      "label": "Email",
+      "translations": {
+        "en": {
+          "label": "Email"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "employee",
       "type": "SELECT",
-      "label": "Employee",
+      "translations": {
+        "en": {
+          "label": "Employee"
+        }
+      },
       "mandatory": false,
       "recordType": "employee"
     },
     {
       "code": "enddate",
       "type": "DATE",
-      "label": "End Date",
+      "translations": {
+        "en": {
+          "label": "End Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "endoperation",
       "type": "SELECT",
-      "label": "Ending Operation",
+      "translations": {
+        "en": {
+          "label": "Ending Operation"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "entity",
       "type": "SELECT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": false,
       "recordType": "entity"
     },
     {
       "code": "entitystatus",
       "type": "SELECT",
-      "label": "Estimate/Opportunity Status",
+      "translations": {
+        "en": {
+          "label": "Estimate/Opportunity Status"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "estgrossprofit",
       "type": "CURRENCY",
-      "label": "Est. Gross Profit (Line)",
+      "translations": {
+        "en": {
+          "label": "Est. Gross Profit (Line)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estgrossprofitpct",
       "type": "PERCENT",
-      "label": "Est. Gross Profit Percent (Line)",
+      "translations": {
+        "en": {
+          "label": "Est. Gross Profit Percent (Line)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estgrossprofitpercent",
       "type": "PERCENT",
-      "label": "Est. Gross Profit Percent (Transaction)",
+      "translations": {
+        "en": {
+          "label": "Est. Gross Profit Percent (Transaction)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "exchangerate",
       "type": "CURRENCY2",
-      "label": "Exchange Rate",
+      "translations": {
+        "en": {
+          "label": "Exchange Rate"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "excludecommission",
       "type": "CHECKBOX",
-      "label": "Exclude Commissions",
+      "translations": {
+        "en": {
+          "label": "Exclude Commissions"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "excludefromraterequest",
       "type": "CHECKBOX",
-      "label": "Exclude Item from Rate Request",
+      "translations": {
+        "en": {
+          "label": "Exclude Item from Rate Request"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "expectedclosedate",
       "type": "DATE",
-      "label": "Expected Close",
+      "translations": {
+        "en": {
+          "label": "Expected Close"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "expectedreceiptdate",
       "type": "DATE",
-      "label": "Expected Receipt Date",
+      "translations": {
+        "en": {
+          "label": "Expected Receipt Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "expensecategory",
       "type": "SELECT",
-      "label": "Expense Category",
+      "translations": {
+        "en": {
+          "label": "Expense Category"
+        }
+      },
       "mandatory": false,
       "recordType": "expensecategory"
     },
     {
       "code": "expensedate",
       "type": "DATE",
-      "label": "Expense Date",
+      "translations": {
+        "en": {
+          "label": "Expense Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "expreports",
       "type": "SELECT",
-      "label": "Expense Category",
+      "translations": {
+        "en": {
+          "label": "Expense Category"
+        }
+      },
       "mandatory": false,
       "recordType": "expensecategory"
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalidstring",
       "type": "TEXT",
-      "label": "External ID (Text)",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "finchrg",
       "type": "CHECKBOX",
-      "label": "Finance Charge",
+      "translations": {
+        "en": {
+          "label": "Finance Charge"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "firmed",
       "type": "CHECKBOX",
-      "label": "Firmed",
+      "translations": {
+        "en": {
+          "label": "Firmed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "forecasttype",
       "type": "SELECT",
-      "label": "Forecast Type",
+      "translations": {
+        "en": {
+          "label": "Forecast Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "fulfillingtransaction",
       "type": "SELECT",
-      "label": "Fulfilling/Receiving Transaction",
+      "translations": {
+        "en": {
+          "label": "Fulfilling/Receiving Transaction"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "fxaccount",
       "type": "TEXT",
-      "label": "Foreign Currency Adjustment Revenue Account",
+      "translations": {
+        "en": {
+          "label": "Foreign Currency Adjustment Revenue Account"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "fxamount",
       "type": "CURRENCY",
-      "label": "Amount (Foreign Currency)",
+      "translations": {
+        "en": {
+          "label": "Amount (Foreign Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "fxcostestimate",
       "type": "CURRENCY",
-      "label": "Est. Extended Cost (Line) (Foreign Currency)",
+      "translations": {
+        "en": {
+          "label": "Est. Extended Cost (Line) (Foreign Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "fxcostestimaterate",
       "type": "CURRENCY",
-      "label": "Est. Unit Cost (Foreign Currency)",
+      "translations": {
+        "en": {
+          "label": "Est. Unit Cost (Foreign Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "fxestgrossprofit",
       "type": "CURRENCY",
-      "label": "Est. Gross Profit (Line) (Foreign Currency)",
+      "translations": {
+        "en": {
+          "label": "Est. Gross Profit (Line) (Foreign Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "fxtrancostestimate",
       "type": "CURRENCY",
-      "label": "Est. Extended Cost (Transaction) (Foreign Currency)",
+      "translations": {
+        "en": {
+          "label": "Est. Extended Cost (Transaction) (Foreign Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "fxvsoeallocation",
       "type": "CURRENCY",
-      "label": "VSOE Allocation (Foreign Currency)",
+      "translations": {
+        "en": {
+          "label": "VSOE Allocation (Foreign Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "fxvsoeamount",
       "type": "CURRENCY",
-      "label": "VSOE Amount (Foreign Currency)",
+      "translations": {
+        "en": {
+          "label": "VSOE Amount (Foreign Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "fxvsoeprice",
       "type": "CURRENCY2",
-      "label": "VSOE Price (Foreign Currency)",
+      "translations": {
+        "en": {
+          "label": "VSOE Price (Foreign Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcoavailabeltocharge",
       "type": "CURRENCY",
-      "label": "Funds Available to Process",
+      "translations": {
+        "en": {
+          "label": "Funds Available to Process"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcoavailabletorefund",
       "type": "CURRENCY",
-      "label": "Funds Available to Refund",
+      "translations": {
+        "en": {
+          "label": "Funds Available to Refund"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcoavsstreetmatch",
       "type": "TEXT",
-      "label": "AVS Street Match (Google)",
+      "translations": {
+        "en": {
+          "label": "AVS Street Match (Google)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcoavszipmatch",
       "type": "TEXT",
-      "label": "AVS Zip Match (Google)",
+      "translations": {
+        "en": {
+          "label": "AVS Zip Match (Google)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcobuyeraccountage",
       "type": "INTEGER",
-      "label": "Buyer Account Age",
+      "translations": {
+        "en": {
+          "label": "Buyer Account Age"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcobuyerip",
       "type": "TEXT",
-      "label": "Buyer IP Address",
+      "translations": {
+        "en": {
+          "label": "Buyer IP Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcochargeamount",
       "type": "CURRENCY",
-      "label": "Pending Charges",
+      "translations": {
+        "en": {
+          "label": "Pending Charges"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcochargebackamount",
       "type": "CURRENCY",
-      "label": "Chargeback Amount",
+      "translations": {
+        "en": {
+          "label": "Chargeback Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcoconfirmedchargedtotal",
       "type": "CURRENCY",
-      "label": "Charge Amount Confirmed",
+      "translations": {
+        "en": {
+          "label": "Charge Amount Confirmed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcoconfirmedrefundedtotal",
       "type": "CURRENCY",
-      "label": "Confirmed Refund Amount",
+      "translations": {
+        "en": {
+          "label": "Confirmed Refund Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcocreditcardnumber",
       "type": "TEXT",
-      "label": "Credit Card (Google)",
+      "translations": {
+        "en": {
+          "label": "Credit Card (Google)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcocscmatch",
       "type": "TEXT",
-      "label": "CSC Match (Google)",
+      "translations": {
+        "en": {
+          "label": "CSC Match (Google)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcofinancialstate",
       "type": "TEXT",
-      "label": "Google Order Financial State",
+      "translations": {
+        "en": {
+          "label": "Google Order Financial State"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcofulfillmentstate",
       "type": "TEXT",
-      "label": "Google Order Fulfillment State",
+      "translations": {
+        "en": {
+          "label": "Google Order Fulfillment State"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcoorderid",
       "type": "TEXT",
-      "label": "Google Order ID",
+      "translations": {
+        "en": {
+          "label": "Google Order ID"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcoordertotal",
       "type": "CURRENCY",
-      "label": "Google Order Total",
+      "translations": {
+        "en": {
+          "label": "Google Order Total"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcopromotionamount",
       "type": "CURRENCY",
-      "label": "Google Checkout Promotion Amount",
+      "translations": {
+        "en": {
+          "label": "Google Checkout Promotion Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcopromotionname",
       "type": "TEXT",
-      "label": "Google Checkout Promotion",
+      "translations": {
+        "en": {
+          "label": "Google Checkout Promotion"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcorefundamount",
       "type": "CURRENCY",
-      "label": "Pending Refund Amount",
+      "translations": {
+        "en": {
+          "label": "Pending Refund Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcoshippingtotal",
       "type": "CURRENCY",
-      "label": "Google Shipping Total",
+      "translations": {
+        "en": {
+          "label": "Google Shipping Total"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcostatechangeddetail",
       "type": "TEXT",
-      "label": "Reason for Cancellation",
+      "translations": {
+        "en": {
+          "label": "Reason for Cancellation"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "giftcert",
       "type": "TEXT",
-      "label": "Gift Certificate",
+      "translations": {
+        "en": {
+          "label": "Gift Certificate"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "giftcertificate",
       "type": "TEXT",
-      "label": "Gift Certificate",
+      "translations": {
+        "en": {
+          "label": "Gift Certificate"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "grossamount",
       "type": "CURRENCY",
-      "label": "Amount (Gross)",
+      "translations": {
+        "en": {
+          "label": "Amount (Gross)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "includeinforecast",
       "type": "CHECKBOX",
-      "label": "Include in Forecast",
+      "translations": {
+        "en": {
+          "label": "Include in Forecast"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "intercostatus",
       "type": "SELECT",
-      "label": "Intercompany Status",
+      "translations": {
+        "en": {
+          "label": "Intercompany Status"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "intercotransaction",
       "type": "TEXT",
-      "label": "Paired Intercompany Transaction",
+      "translations": {
+        "en": {
+          "label": "Paired Intercompany Transaction"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "inventorydetail",
       "type": "SUMMARY",
-      "label": "Inventory Detail",
+      "translations": {
+        "en": {
+          "label": "Inventory Detail"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "invsoebundle",
       "type": "CHECKBOX",
-      "label": "In VSOE Bundle",
+      "translations": {
+        "en": {
+          "label": "In VSOE Bundle"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isallocation",
       "type": "CHECKBOX",
-      "label": "Is Allocation",
+      "translations": {
+        "en": {
+          "label": "Is Allocation"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isbackflush",
       "type": "CHECKBOX",
-      "label": "Backflush",
+      "translations": {
+        "en": {
+          "label": "Backflush"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isgcochargeback",
       "type": "CHECKBOX",
-      "label": "Chargeback",
+      "translations": {
+        "en": {
+          "label": "Chargeback"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isgcochargeconfirmed",
       "type": "CHECKBOX",
-      "label": "Charge Confirmed",
+      "translations": {
+        "en": {
+          "label": "Charge Confirmed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isgcopaymentguaranteed",
       "type": "CHECKBOX",
-      "label": "Payment Guaranteed by Google",
+      "translations": {
+        "en": {
+          "label": "Payment Guaranteed by Google"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isgcorefundconfirmed",
       "type": "CHECKBOX",
-      "label": "Refund Confirmed",
+      "translations": {
+        "en": {
+          "label": "Refund Confirmed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isintercompanyadjustment",
       "type": "CHECKBOX",
-      "label": "Is Intercompany Adjustment",
+      "translations": {
+        "en": {
+          "label": "Is Intercompany Adjustment"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "ispaypalmeth",
       "type": "CHECKBOX",
-      "label": "Is PayPal Payment Method",
+      "translations": {
+        "en": {
+          "label": "Is PayPal Payment Method"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isreversal",
       "type": "CHECKBOX",
-      "label": "Is Reversal",
+      "translations": {
+        "en": {
+          "label": "Is Reversal"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isrevrectransaction",
       "type": "CHECKBOX",
-      "label": "Is Amortization/Revenue Recognition",
+      "translations": {
+        "en": {
+          "label": "Is Amortization/Revenue Recognition"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isscrap",
       "type": "CHECKBOX",
-      "label": "Is Scrap",
+      "translations": {
+        "en": {
+          "label": "Is Scrap"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isshipaddress",
       "type": "CHECKBOX",
-      "label": "Residential Address",
+      "translations": {
+        "en": {
+          "label": "Residential Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "istransferpricecosting",
       "type": "CHECKBOX",
-      "label": "Use Item Cost as Transfer Cost",
+      "translations": {
+        "en": {
+          "label": "Use Item Cost as Transfer Cost"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isvsoealloc",
       "type": "CHECKBOX",
-      "label": "VSOE Allocation Line",
+      "translations": {
+        "en": {
+          "label": "VSOE Allocation Line"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "iswip",
       "type": "CHECKBOX",
-      "label": "WIP",
+      "translations": {
+        "en": {
+          "label": "WIP"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "item",
       "type": "SELECT",
-      "label": "Assembly",
+      "translations": {
+        "en": {
+          "label": "Assembly"
+        }
+      },
       "mandatory": true,
       "recordType": "item"
     },
     {
       "code": "itemnumber",
       "type": "SELECT",
-      "label": "Item Number",
+      "translations": {
+        "en": {
+          "label": "Item Number"
+        }
+      },
       "mandatory": false,
       "recordType": "itemnumber"
     },
     {
       "code": "itemrevision",
       "type": "SELECT",
-      "label": "Item Revision",
+      "translations": {
+        "en": {
+          "label": "Item Revision"
+        }
+      },
       "mandatory": false,
       "recordType": "itemrevision"
     },
     {
       "code": "itemsubof",
       "type": "SELECT",
-      "label": "Item Sub of",
+      "translations": {
+        "en": {
+          "label": "Item Sub of"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "job",
       "type": "SELECT",
-      "label": "Job",
+      "translations": {
+        "en": {
+          "label": "Job"
+        }
+      },
       "mandatory": false,
       "recordType": "job"
     },
     {
       "code": "jobmain",
       "type": "SELECT",
-      "label": "Job (Main Line)",
+      "translations": {
+        "en": {
+          "label": "Job (Main Line)"
+        }
+      },
       "mandatory": false,
       "recordType": "job"
     },
     {
       "code": "lastmodifieddate",
       "type": "DATETIME",
-      "label": "Last Modified",
+      "translations": {
+        "en": {
+          "label": "Last Modified"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "lastviewed",
       "type": "DATETIME",
-      "label": "Last Viewed",
+      "translations": {
+        "en": {
+          "label": "Last Viewed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "leadsource",
       "type": "SELECT",
-      "label": "Lead Source",
+      "translations": {
+        "en": {
+          "label": "Lead Source"
+        }
+      },
       "mandatory": false,
       "recordType": "campaign"
     },
     {
       "code": "line",
       "type": "INTEGER",
-      "label": "Line ID",
+      "translations": {
+        "en": {
+          "label": "Line ID"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "linesequencenumber",
       "type": "INTEGER",
-      "label": "Line Sequence Number",
+      "translations": {
+        "en": {
+          "label": "Line Sequence Number"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "location",
       "type": "SELECT",
-      "label": "Location",
+      "translations": {
+        "en": {
+          "label": "Location"
+        }
+      },
       "mandatory": true,
       "recordType": "location"
     },
     {
       "code": "locationnohierarchy",
       "type": "SELECT",
-      "label": "Location (no hierarchy)",
+      "translations": {
+        "en": {
+          "label": "Location (no hierarchy)"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "mainline",
       "type": "TEXT",
-      "label": "*",
+      "translations": {
+        "en": {
+          "label": "*"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "mainname",
       "type": "SELECT",
-      "label": "Main Line Name",
+      "translations": {
+        "en": {
+          "label": "Main Line Name"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "manufacturingrouting",
       "type": "SELECT",
-      "label": "Manufacturing Routing",
+      "translations": {
+        "en": {
+          "label": "Manufacturing Routing"
+        }
+      },
       "mandatory": false,
       "recordType": "manufacturingrouting"
     },
     {
       "code": "matchbilltoreceipt",
       "type": "CHECKBOX",
-      "label": "Match Bill To Receipt",
+      "translations": {
+        "en": {
+          "label": "Match Bill To Receipt"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "memo",
       "type": "TEXT",
-      "label": "Memo",
+      "translations": {
+        "en": {
+          "label": "Memo"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "memomain",
       "type": "TEXT",
-      "label": "Memo (Main)",
+      "translations": {
+        "en": {
+          "label": "Memo (Main)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "memorized",
       "type": "CHECKBOX",
-      "label": "Memorized",
+      "translations": {
+        "en": {
+          "label": "Memorized"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "merchantaccount",
       "type": "TEXT",
-      "label": "Credit Card Processor",
+      "translations": {
+        "en": {
+          "label": "Credit Card Processor"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "message",
       "type": "TEXT",
-      "label": "Message",
+      "translations": {
+        "en": {
+          "label": "Message"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "messages",
       "type": "SELECT",
-      "label": "Messages",
+      "translations": {
+        "en": {
+          "label": "Messages"
+        }
+      },
       "mandatory": false,
       "recordType": "message"
     },
     {
       "code": "multisubsidiary",
       "type": "CHECKBOX",
-      "label": "Intercompany",
+      "translations": {
+        "en": {
+          "label": "Intercompany"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "netamount",
       "type": "CURRENCY",
-      "label": "Amount (Net)",
+      "translations": {
+        "en": {
+          "label": "Amount (Net)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "netamountnotax",
       "type": "CURRENCY",
-      "label": "Amount (Net of Tax)",
+      "translations": {
+        "en": {
+          "label": "Amount (Net of Tax)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "nextapprover",
       "type": "SELECT",
-      "label": "Next Approver",
+      "translations": {
+        "en": {
+          "label": "Next Approver"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "nextbilldate",
       "type": "DATE",
-      "label": "Next Bill Date",
+      "translations": {
+        "en": {
+          "label": "Next Bill Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "nonreimbursable",
       "type": "CHECKBOX",
-      "label": "Non-reimbursable",
+      "translations": {
+        "en": {
+          "label": "Non-reimbursable"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "number",
       "type": "INTEGER",
-      "label": "Number",
+      "translations": {
+        "en": {
+          "label": "Number"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "opportunity",
       "type": "SELECT",
-      "label": "Opportunity",
+      "translations": {
+        "en": {
+          "label": "Opportunity"
+        }
+      },
       "mandatory": false,
       "recordType": "opportunity"
     },
     {
       "code": "options",
       "type": "NAMEVALUELIST",
-      "label": "Options",
+      "translations": {
+        "en": {
+          "label": "Options"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "orderquantity",
       "type": "FLOAT",
-      "label": "Work Order Quantity",
+      "translations": {
+        "en": {
+          "label": "Work Order Quantity"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "originator",
       "type": "SELECT",
-      "label": "Originator",
+      "translations": {
+        "en": {
+          "label": "Originator"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "otherrefnum",
       "type": "TEXT",
-      "label": "PO/Check Number",
+      "translations": {
+        "en": {
+          "label": "PO/Check Number"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "packagecount",
       "type": "INTEGER",
-      "label": "Package Count",
+      "translations": {
+        "en": {
+          "label": "Package Count"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "paidamount",
       "type": "CURRENCY2",
-      "label": "Paid Amount",
+      "translations": {
+        "en": {
+          "label": "Paid Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "paidtransaction",
       "type": "SELECT",
-      "label": "Paid Transaction",
+      "translations": {
+        "en": {
+          "label": "Paid Transaction"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "partner",
       "type": "SELECT",
-      "label": "Partner",
+      "translations": {
+        "en": {
+          "label": "Partner"
+        }
+      },
       "mandatory": false,
       "recordType": "partner"
     },
     {
       "code": "partnercontribution",
       "type": "PERCENT",
-      "label": "Partner Contribution %",
+      "translations": {
+        "en": {
+          "label": "Partner Contribution %"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "partnerrole",
       "type": "SELECT",
-      "label": "Partner Role",
+      "translations": {
+        "en": {
+          "label": "Partner Role"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "partnerteammember",
       "type": "SELECT",
-      "label": "Partner Team Member",
+      "translations": {
+        "en": {
+          "label": "Partner Team Member"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "payingamount",
       "type": "CURRENCY2",
-      "label": "Paying Amount",
+      "translations": {
+        "en": {
+          "label": "Paying Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "payingtransaction",
       "type": "SELECT",
-      "label": "Paying Transaction",
+      "translations": {
+        "en": {
+          "label": "Paying Transaction"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "paymenteventdate",
       "type": "DATETIME",
-      "label": "Payment Event Date",
+      "translations": {
+        "en": {
+          "label": "Payment Event Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "paymenteventholdreason",
       "type": "TEXT",
-      "label": "Payment Event Hold Reason",
+      "translations": {
+        "en": {
+          "label": "Payment Event Hold Reason"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "paymenteventpurchasecardused",
       "type": "CHECKBOX",
-      "label": "Payment Event Purchase Card Used",
+      "translations": {
+        "en": {
+          "label": "Payment Event Purchase Card Used"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "paymenteventpurchasedatasent",
       "type": "CHECKBOX",
-      "label": "Payment Event Purchase Data Sent",
+      "translations": {
+        "en": {
+          "label": "Payment Event Purchase Data Sent"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "paymenteventresult",
       "type": "TEXT",
-      "label": "Payment Event Result",
+      "translations": {
+        "en": {
+          "label": "Payment Event Result"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "paymenteventtype",
       "type": "TEXT",
-      "label": "Payment Event Type",
+      "translations": {
+        "en": {
+          "label": "Payment Event Type"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "paymentmethod",
       "type": "SELECT",
-      "label": "Payment Method",
+      "translations": {
+        "en": {
+          "label": "Payment Method"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "paypalpending",
       "type": "CHECKBOX",
-      "label": "Pending PayPal Authorization",
+      "translations": {
+        "en": {
+          "label": "Pending PayPal Authorization"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "paypalstatus",
       "type": "TEXT",
-      "label": "PayPal Payment Status",
+      "translations": {
+        "en": {
+          "label": "PayPal Payment Status"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "paypaltranid",
       "type": "TEXT",
-      "label": "PayPal Transaction ID",
+      "translations": {
+        "en": {
+          "label": "PayPal Transaction ID"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "payrollbatch",
       "type": "TEXT",
-      "label": "Payroll Batch",
+      "translations": {
+        "en": {
+          "label": "Payroll Batch"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "payrollitem",
       "type": "SELECT",
-      "label": "Payroll Item",
+      "translations": {
+        "en": {
+          "label": "Payroll Item"
+        }
+      },
       "mandatory": false,
       "recordType": "payrollitem"
     },
     {
       "code": "pnrefnum",
       "type": "TEXT",
-      "label": "P/N Ref",
+      "translations": {
+        "en": {
+          "label": "P/N Ref"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "poastext",
       "type": "TEXT",
-      "label": "PO/Check ID",
+      "translations": {
+        "en": {
+          "label": "PO/Check ID"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "porate",
       "type": "CURRENCY2",
-      "label": "PO Rate",
+      "translations": {
+        "en": {
+          "label": "PO Rate"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "posting",
       "type": "CHECKBOX",
-      "label": "Posting",
+      "translations": {
+        "en": {
+          "label": "Posting"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "postingperiod",
       "type": "PERIOD",
-      "label": "Period",
+      "translations": {
+        "en": {
+          "label": "Period"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "pricelevel",
       "type": "SELECT",
-      "label": "Price Level",
+      "translations": {
+        "en": {
+          "label": "Price Level"
+        }
+      },
       "mandatory": false,
       "recordType": "pricelevel"
     },
     {
       "code": "print",
       "type": "TEXT",
-      "label": "Print",
+      "translations": {
+        "en": {
+          "label": "Print"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "printedpickingticket",
       "type": "CHECKBOX",
-      "label": "Printed Picking Ticket",
+      "translations": {
+        "en": {
+          "label": "Printed Picking Ticket"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "probability",
       "type": "PERCENT",
-      "label": "Probability",
+      "translations": {
+        "en": {
+          "label": "Probability"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "projectedamount",
       "type": "CURRENCY",
-      "label": "Projected Total",
+      "translations": {
+        "en": {
+          "label": "Projected Total"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "promocode",
       "type": "SELECT",
-      "label": "Promotion",
+      "translations": {
+        "en": {
+          "label": "Promotion"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "purchaseorder",
       "type": "SELECT",
-      "label": "Purchase Order",
+      "translations": {
+        "en": {
+          "label": "Purchase Order"
+        }
+      },
       "mandatory": false,
       "recordType": "purchaseorder"
     },
     {
       "code": "quantity",
       "type": "FLOAT",
-      "label": "Quantity",
+      "translations": {
+        "en": {
+          "label": "Quantity"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "quantitybilled",
       "type": "FLOAT",
-      "label": "Quantity Billed",
+      "translations": {
+        "en": {
+          "label": "Quantity Billed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "quantitycommitted",
       "type": "FLOAT",
-      "label": "Quantity Committed",
+      "translations": {
+        "en": {
+          "label": "Quantity Committed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "quantitypacked",
       "type": "FLOAT",
-      "label": "Quantity Packed",
+      "translations": {
+        "en": {
+          "label": "Quantity Packed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "quantitypicked",
       "type": "FLOAT",
-      "label": "Quantity Picked",
+      "translations": {
+        "en": {
+          "label": "Quantity Picked"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "quantityrevcommitted",
       "type": "FLOAT",
-      "label": "Quantity Rev. Committed",
+      "translations": {
+        "en": {
+          "label": "Quantity Rev. Committed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "quantityshiprecv",
       "type": "FLOAT",
-      "label": "Quantity Fulfilled/Received",
+      "translations": {
+        "en": {
+          "label": "Quantity Fulfilled/Received"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "quantityuom",
       "type": "FLOAT",
-      "label": "Quantity in Transaction Units",
+      "translations": {
+        "en": {
+          "label": "Quantity in Transaction Units"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "rate",
       "type": "CURRENCY2",
-      "label": "Item Rate",
+      "translations": {
+        "en": {
+          "label": "Item Rate"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "realizedgainpostingtransaction",
       "type": "SELECT",
-      "label": "Realized Gain Posting Transaction",
+      "translations": {
+        "en": {
+          "label": "Realized Gain Posting Transaction"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "recognizedrevenue",
       "type": "CURRENCY",
-      "label": "Amount (Recognized)",
+      "translations": {
+        "en": {
+          "label": "Amount (Recognized)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "recordtype",
       "type": "TEXT",
-      "label": "Record Type",
+      "translations": {
+        "en": {
+          "label": "Record Type"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "refnumber",
       "type": "INTEGER",
-      "label": "Reference Number",
+      "translations": {
+        "en": {
+          "label": "Reference Number"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "requestor",
       "type": "SELECT",
-      "label": "Requestor",
+      "translations": {
+        "en": {
+          "label": "Requestor"
+        }
+      },
       "mandatory": false,
       "recordType": "employee"
     },
     {
       "code": "revcommitstatus",
       "type": "TEXT",
-      "label": "Rev. Commit. Status",
+      "translations": {
+        "en": {
+          "label": "Rev. Commit. Status"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "revcommittingstatus",
       "type": "CHECKBOX",
-      "label": "Revenue Committing Status",
+      "translations": {
+        "en": {
+          "label": "Revenue Committing Status"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "revcommittingtransaction",
       "type": "SELECT",
-      "label": "Revenue Committing Transaction",
+      "translations": {
+        "en": {
+          "label": "Revenue Committing Transaction"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "revenuestatus",
       "type": "TEXT",
-      "label": "Revenue Status",
+      "translations": {
+        "en": {
+          "label": "Revenue Status"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "reversaldate",
       "type": "DATE",
-      "label": "Reversal Date",
+      "translations": {
+        "en": {
+          "label": "Reversal Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "reversalnumber",
       "type": "TEXT",
-      "label": "Reversal Number",
+      "translations": {
+        "en": {
+          "label": "Reversal Number"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "revision",
       "type": "SELECT",
-      "label": "Revision",
+      "translations": {
+        "en": {
+          "label": "Revision"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "revisionmemo",
       "type": "TEXT",
-      "label": "Revision Memo",
+      "translations": {
+        "en": {
+          "label": "Revision Memo"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "revrecenddate",
       "type": "DATE",
-      "label": "Rev. Rec. End Date",
+      "translations": {
+        "en": {
+          "label": "Rev. Rec. End Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "revreconrevcommitment",
       "type": "CHECKBOX",
-      "label": "Rev. Rec. On Rev. Committment",
+      "translations": {
+        "en": {
+          "label": "Rev. Rec. On Rev. Committment"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "revrecstartdate",
       "type": "DATE",
-      "label": "Rev. Rec. Start Date",
+      "translations": {
+        "en": {
+          "label": "Rev. Rec. Start Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "revrecterminmonths",
       "type": "INTEGER",
-      "label": "Rev. Rec. Term in Months",
+      "translations": {
+        "en": {
+          "label": "Rev. Rec. Term in Months"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "rgaccount",
       "type": "SELECT",
-      "label": "Realized Gain Account",
+      "translations": {
+        "en": {
+          "label": "Realized Gain Account"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "rgamount",
       "type": "CURRENCY",
-      "label": "Realized Gain Amount",
+      "translations": {
+        "en": {
+          "label": "Realized Gain Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "saleseffectivedate",
       "type": "DATE",
-      "label": "Sales Effective Date",
+      "translations": {
+        "en": {
+          "label": "Sales Effective Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "salesorder",
       "type": "SELECT",
-      "label": "Sales Order",
+      "translations": {
+        "en": {
+          "label": "Sales Order"
+        }
+      },
       "mandatory": false,
       "recordType": "salesorder"
     },
     {
       "code": "salesrep",
       "type": "SELECT",
-      "label": "Sales Rep",
+      "translations": {
+        "en": {
+          "label": "Sales Rep"
+        }
+      },
       "mandatory": false,
       "recordType": "employee"
     },
     {
       "code": "salesteammember",
       "type": "SELECT",
-      "label": "Sales Team Member",
+      "translations": {
+        "en": {
+          "label": "Sales Team Member"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "salesteamrole",
       "type": "SELECT",
-      "label": "Sales Team Role",
+      "translations": {
+        "en": {
+          "label": "Sales Team Role"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "scrapquantity",
       "type": "FLOAT",
-      "label": "Scrap Quantity",
+      "translations": {
+        "en": {
+          "label": "Scrap Quantity"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "serialnumber",
       "type": "TEXT",
-      "label": "Transaction Serial/Lot Number",
+      "translations": {
+        "en": {
+          "label": "Transaction Serial/Lot Number"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "serialnumbercost",
       "type": "CURRENCY",
-      "label": "Transaction Serial/Lot Number Amount",
+      "translations": {
+        "en": {
+          "label": "Transaction Serial/Lot Number Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "serialnumbercostadjustment",
       "type": "CURRENCY",
-      "label": "Transaction Serial/Lot Number Cost Adjustment",
+      "translations": {
+        "en": {
+          "label": "Transaction Serial/Lot Number Cost Adjustment"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "serialnumberquantity",
       "type": "FLOAT",
-      "label": "Transaction Serial/Lot Number Quantity",
+      "translations": {
+        "en": {
+          "label": "Transaction Serial/Lot Number Quantity"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "serialnumbers",
       "type": "TEXT",
-      "label": "Serial/Lot Numbers",
+      "translations": {
+        "en": {
+          "label": "Serial/Lot Numbers"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipaddress",
       "type": "TEXT",
-      "label": "Shipping Address",
+      "translations": {
+        "en": {
+          "label": "Shipping Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipaddress1",
       "type": "TEXT",
-      "label": "Shipping Address 1",
+      "translations": {
+        "en": {
+          "label": "Shipping Address 1"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipaddress2",
       "type": "TEXT",
-      "label": "Shipping Address 2",
+      "translations": {
+        "en": {
+          "label": "Shipping Address 2"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipaddress3",
       "type": "TEXT",
-      "label": "Shipping Address 3",
+      "translations": {
+        "en": {
+          "label": "Shipping Address 3"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipaddressee",
       "type": "TEXT",
-      "label": "Shipping Addressee",
+      "translations": {
+        "en": {
+          "label": "Shipping Addressee"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipattention",
       "type": "TEXT",
-      "label": "Shipping Attention",
+      "translations": {
+        "en": {
+          "label": "Shipping Attention"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipcarrier",
       "type": "SELECT",
-      "label": "Shipping Carrier",
+      "translations": {
+        "en": {
+          "label": "Shipping Carrier"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "shipcity",
       "type": "TEXT",
-      "label": "Shipping City",
+      "translations": {
+        "en": {
+          "label": "Shipping City"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipcomplete",
       "type": "CHECKBOX",
-      "label": "Ship Complete",
+      "translations": {
+        "en": {
+          "label": "Ship Complete"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipcountry",
       "type": "SELECT",
-      "label": "Shipping Country",
+      "translations": {
+        "en": {
+          "label": "Shipping Country"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "shipcountrycode",
       "type": "TEXT",
-      "label": "Shipping Country Code",
+      "translations": {
+        "en": {
+          "label": "Shipping Country Code"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipcounty",
       "type": "TEXT",
-      "label": "Shipping County/State",
+      "translations": {
+        "en": {
+          "label": "Shipping County/State"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipdate",
       "type": "DATE",
-      "label": "Ship Date",
+      "translations": {
+        "en": {
+          "label": "Ship Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipgroup",
       "type": "INTEGER",
-      "label": "Ship Group",
+      "translations": {
+        "en": {
+          "label": "Ship Group"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipmethod",
       "type": "SELECT",
-      "label": "Ship Via",
+      "translations": {
+        "en": {
+          "label": "Ship Via"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "shipphone",
       "type": "TEXT",
-      "label": "Shipping Phone",
+      "translations": {
+        "en": {
+          "label": "Shipping Phone"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipping",
       "type": "CHECKBOX",
-      "label": "Shipping Line",
+      "translations": {
+        "en": {
+          "label": "Shipping Line"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shippingamount",
       "type": "CURRENCY",
-      "label": "Amount (Shipping)",
+      "translations": {
+        "en": {
+          "label": "Amount (Shipping)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shiprecvstatus",
       "type": "CHECKBOX",
-      "label": "Fulfillment/Receipt Status",
+      "translations": {
+        "en": {
+          "label": "Fulfillment/Receipt Status"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shiprecvstatusline",
       "type": "CHECKBOX",
-      "label": "Fulfilled/Received (Line Level)",
+      "translations": {
+        "en": {
+          "label": "Fulfilled/Received (Line Level)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipstate",
       "type": "TEXT",
-      "label": "Shipping State/Province",
+      "translations": {
+        "en": {
+          "label": "Shipping State/Province"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipto",
       "type": "SELECT",
-      "label": "Ship To",
+      "translations": {
+        "en": {
+          "label": "Ship To"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "shipzip",
       "type": "TEXT",
-      "label": "Shipping Zip",
+      "translations": {
+        "en": {
+          "label": "Shipping Zip"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "signedamount",
       "type": "CURRENCY",
-      "label": "Amount (Signed)",
+      "translations": {
+        "en": {
+          "label": "Amount (Signed)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "source",
       "type": "SELECT",
-      "label": "Source",
+      "translations": {
+        "en": {
+          "label": "Source"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "startdate",
       "type": "DATE",
-      "label": "Start Date",
+      "translations": {
+        "en": {
+          "label": "Start Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "startoperation",
       "type": "SELECT",
-      "label": "Starting Operation",
+      "translations": {
+        "en": {
+          "label": "Starting Operation"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "status",
       "type": "SELECT",
-      "label": "Status",
+      "translations": {
+        "en": {
+          "label": "Status"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "statusref",
       "type": "SELECT",
-      "label": "Status",
+      "translations": {
+        "en": {
+          "label": "Status"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "subsidiary",
       "type": "SELECT",
-      "label": "Subsidiary",
+      "translations": {
+        "en": {
+          "label": "Subsidiary"
+        }
+      },
       "mandatory": false,
       "recordType": "subsidiary"
     },
     {
       "code": "subsidiarynohierarchy",
       "type": "SELECT",
-      "label": "Subsidiary (no hierarchy)",
+      "translations": {
+        "en": {
+          "label": "Subsidiary (no hierarchy)"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "task",
       "type": "SELECT",
-      "label": "Task",
+      "translations": {
+        "en": {
+          "label": "Task"
+        }
+      },
       "mandatory": false,
       "recordType": "task"
     },
     {
       "code": "taxamount",
       "type": "CURRENCY",
-      "label": "Amount (Tax)",
+      "translations": {
+        "en": {
+          "label": "Amount (Tax)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "taxcode",
       "type": "SELECT",
-      "label": "Tax Item",
+      "translations": {
+        "en": {
+          "label": "Tax Item"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "taxitem",
       "type": "SELECT",
-      "label": "Tax Item",
+      "translations": {
+        "en": {
+          "label": "Tax Item"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "taxline",
       "type": "CHECKBOX",
-      "label": "Tax Line",
+      "translations": {
+        "en": {
+          "label": "Tax Line"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "taxperiod",
       "type": "PERIOD",
-      "label": "Tax Period",
+      "translations": {
+        "en": {
+          "label": "Tax Period"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "taxrate",
       "type": "CURRENCY",
-      "label": "Rate",
+      "translations": {
+        "en": {
+          "label": "Rate"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "taxtotal",
       "type": "CURRENCY",
-      "label": "Amount (Tax Total)",
+      "translations": {
+        "en": {
+          "label": "Amount (Tax Total)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "terminmonths",
       "type": "INTEGER",
-      "label": "Rev. Rec. Term in Months",
+      "translations": {
+        "en": {
+          "label": "Rev. Rec. Term in Months"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "terms",
       "type": "SELECT",
-      "label": "Terms",
+      "translations": {
+        "en": {
+          "label": "Terms"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "title",
       "type": "TEXT",
-      "label": "Title",
+      "translations": {
+        "en": {
+          "label": "Title"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "tobeemailed",
       "type": "CHECKBOX",
-      "label": "To Be Emailed",
+      "translations": {
+        "en": {
+          "label": "To Be Emailed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "tobeprinted",
       "type": "CHECKBOX",
-      "label": "To Be Printed",
+      "translations": {
+        "en": {
+          "label": "To Be Printed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "tosubsidiary",
       "type": "SELECT",
-      "label": "To Subsidiary",
+      "translations": {
+        "en": {
+          "label": "To Subsidiary"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "tosubsidiarynohierarchy",
       "type": "SELECT",
-      "label": "To Subsidiary (no hierarchy)",
+      "translations": {
+        "en": {
+          "label": "To Subsidiary (no hierarchy)"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "total",
       "type": "CURRENCY",
-      "label": "Amount (Transaction Total)",
+      "translations": {
+        "en": {
+          "label": "Amount (Transaction Total)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "totalamount",
       "type": "CURRENCY",
-      "label": "Amount (Transaction Total)",
+      "translations": {
+        "en": {
+          "label": "Amount (Transaction Total)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "totalcostestimate",
       "type": "CURRENCY",
-      "label": "Est. Extended Cost (Transaction)",
+      "translations": {
+        "en": {
+          "label": "Est. Extended Cost (Transaction)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "trackingnumbers",
       "type": "TEXT",
-      "label": "Tracking Numbers",
+      "translations": {
+        "en": {
+          "label": "Tracking Numbers"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "trancostestimate",
       "type": "CURRENCY",
-      "label": "Est. Extended Cost (Transaction)",
+      "translations": {
+        "en": {
+          "label": "Est. Extended Cost (Transaction)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "trandate",
       "type": "DATE",
-      "label": "Date",
+      "translations": {
+        "en": {
+          "label": "Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "tranestgrossprofit",
       "type": "CURRENCY",
-      "label": "Est. Gross Profit (Transaction)",
+      "translations": {
+        "en": {
+          "label": "Est. Gross Profit (Transaction)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "tranestgrossprofitpct",
       "type": "PERCENT",
-      "label": "Est. Gross Profit Percent (Transaction)",
+      "translations": {
+        "en": {
+          "label": "Est. Gross Profit Percent (Transaction)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "tranfxestgrossprofit",
       "type": "CURRENCY",
-      "label": "Est. Gross Profit (Transaction) (Foreign Currency)",
+      "translations": {
+        "en": {
+          "label": "Est. Gross Profit (Transaction) (Foreign Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "tranid",
       "type": "TEXT",
-      "label": "Number",
+      "translations": {
+        "en": {
+          "label": "Number"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "tranisvsoebundle",
       "type": "CHECKBOX",
-      "label": "Transaction Is VSOE Bundle",
+      "translations": {
+        "en": {
+          "label": "Transaction Is VSOE Bundle"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "transactiondiscount",
       "type": "CHECKBOX",
-      "label": "Transaction Discount",
+      "translations": {
+        "en": {
+          "label": "Transaction Discount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "transactionlinetype",
       "type": "SELECT",
-      "label": "Transaction Line Type",
+      "translations": {
+        "en": {
+          "label": "Transaction Line Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "transactionnumber",
       "type": "TEXT",
-      "label": "Transaction Number",
+      "translations": {
+        "en": {
+          "label": "Transaction Number"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "transferlocation",
       "type": "SELECT",
-      "label": "To Location",
+      "translations": {
+        "en": {
+          "label": "To Location"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "transferorderitemline",
       "type": "TEXT",
-      "label": "Transfer Order Item Line Id",
+      "translations": {
+        "en": {
+          "label": "Transfer Order Item Line Id"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "transferorderquantitycommitted",
       "type": "FLOAT",
-      "label": "Transfer Order Quantity Committed",
+      "translations": {
+        "en": {
+          "label": "Transfer Order Quantity Committed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "transferorderquantitypacked",
       "type": "FLOAT",
-      "label": "Transfer Order Quantity Packed",
+      "translations": {
+        "en": {
+          "label": "Transfer Order Quantity Packed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "transferorderquantitypicked",
       "type": "FLOAT",
-      "label": "Transfer Order Quantity Picked",
+      "translations": {
+        "en": {
+          "label": "Transfer Order Quantity Picked"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "transferorderquantityreceived",
       "type": "FLOAT",
-      "label": "Transfer Order Quantity Received",
+      "translations": {
+        "en": {
+          "label": "Transfer Order Quantity Received"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "transferorderquantityshipped",
       "type": "FLOAT",
-      "label": "Transfer Order Quantity Shipped",
+      "translations": {
+        "en": {
+          "label": "Transfer Order Quantity Shipped"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "type",
       "type": "SELECT",
-      "label": "Type",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "unit",
       "type": "TEXT",
-      "label": "Units",
+      "translations": {
+        "en": {
+          "label": "Units"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "unitcost",
       "type": "FLOAT",
-      "label": "Unit Cost",
+      "translations": {
+        "en": {
+          "label": "Unit Cost"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "unitcostoverride",
       "type": "CURRENCY",
-      "label": "Unit Cost Override",
+      "translations": {
+        "en": {
+          "label": "Unit Cost Override"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "units",
       "type": "SELECT",
-      "label": "Units",
+      "translations": {
+        "en": {
+          "label": "Units"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "user",
       "type": "SELECT",
-      "label": "User",
+      "translations": {
+        "en": {
+          "label": "User"
+        }
+      },
       "mandatory": false,
       "recordType": "employee"
     },
     {
       "code": "vendor",
       "type": "SELECT",
-      "label": "Vendor",
+      "translations": {
+        "en": {
+          "label": "Vendor"
+        }
+      },
       "mandatory": false,
       "recordType": "vendor"
     },
     {
       "code": "vendtype",
       "type": "SELECT",
-      "label": "Vendor Category",
+      "translations": {
+        "en": {
+          "label": "Vendor Category"
+        }
+      },
       "mandatory": false,
       "recordType": "vendorcategory"
     },
     {
       "code": "visibletocustomer",
       "type": "CHECKBOX",
-      "label": "Available In Customer Center",
+      "translations": {
+        "en": {
+          "label": "Available In Customer Center"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "voided",
       "type": "CHECKBOX",
-      "label": "Voided",
+      "translations": {
+        "en": {
+          "label": "Voided"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "vsoeallocation",
       "type": "CURRENCY",
-      "label": "VSOE Allocation",
+      "translations": {
+        "en": {
+          "label": "VSOE Allocation"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "vsoeamount",
       "type": "CURRENCY",
-      "label": "VSOE Amount",
+      "translations": {
+        "en": {
+          "label": "VSOE Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "vsoedeferral",
       "type": "TEXT",
-      "label": "Deferral",
+      "translations": {
+        "en": {
+          "label": "Deferral"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "vsoedelivered",
       "type": "CHECKBOX",
-      "label": "Delivered",
+      "translations": {
+        "en": {
+          "label": "Delivered"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "vsoepermitdiscount",
       "type": "TEXT",
-      "label": "Permit Discount",
+      "translations": {
+        "en": {
+          "label": "Permit Discount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "vsoeprice",
       "type": "CURRENCY2",
-      "label": "VSOE Price",
+      "translations": {
+        "en": {
+          "label": "VSOE Price"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "website",
       "type": "TEXT",
-      "label": "Web Site",
+      "translations": {
+        "en": {
+          "label": "Web Site"
+        }
+      },
       "mandatory": false
     }
   ],
-  "subLists": {
-    "accountingbookdetail": [
-      {
-        "code": "exchangerate",
-        "type": "CURRENCY2",
-        "label": "Exchange Rate",
-        "mandatory": true
-      }
-    ],
-    "component": [
-      {
-        "code": "componentinventorydetail",
-        "type": "SUMMARY",
-        "label": "Inventory Detail",
-        "mandatory": false
+  "subLists": [
+    {
+      "code": "accountingbookdetail",
+      "translations": {
+        "en": "Accounting Books"
       },
-      {
-        "code": "item",
-        "type": "TEXT",
-        "label": "",
-        "mandatory": false
+      "fields": [
+        {
+          "code": "exchangerate",
+          "type": "CURRENCY2",
+          "translations": {
+            "en": {
+              "label": "Exchange Rate"
+            }
+          },
+          "mandatory": true
+        }
+      ]
+    },
+    {
+      "code": "component",
+      "translations": {
+        "en": "Components"
       },
-      {
-        "code": "linenumber",
-        "type": "INTEGER",
-        "label": "",
-        "mandatory": false
+      "fields": [
+        {
+          "code": "componentinventorydetail",
+          "type": "SUMMARY",
+          "translations": {
+            "en": {
+              "label": "Inventory Detail"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "item",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "item"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "linenumber",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "linenumber"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "quantity",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Quantity"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "quantityper",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Quantity Per"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "unitcost",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "unitcost"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "operation",
+      "translations": {
+        "en": "Operations"
       },
-      {
-        "code": "quantity",
-        "type": "FLOAT",
-        "label": "Quantity",
-        "mandatory": true
-      },
-      {
-        "code": "quantityper",
-        "type": "FLOAT",
-        "label": "Quantity Per",
-        "mandatory": false
-      },
-      {
-        "code": "unitcost",
-        "type": "FLOAT",
-        "label": "",
-        "mandatory": false
-      }
-    ],
-    "operation": [
-      {
-        "code": "completedquantity",
-        "type": "FLOAT",
-        "label": "Completed Quantity",
-        "mandatory": false
-      },
-      {
-        "code": "inputquantity",
-        "type": "FLOAT",
-        "label": "Input Quantity",
-        "mandatory": false
-      },
-      {
-        "code": "laborresources",
-        "type": "INTEGER",
-        "label": "Labor Resources",
-        "mandatory": false
-      },
-      {
-        "code": "laborruntime",
-        "type": "FLOAT",
-        "label": "Labor Run Time (Min)",
-        "mandatory": false
-      },
-      {
-        "code": "laborsetuptime",
-        "type": "FLOAT",
-        "label": "Labor Setup Time (Min)",
-        "mandatory": false
-      },
-      {
-        "code": "machineresources",
-        "type": "INTEGER",
-        "label": "Machine Resources",
-        "mandatory": false
-      },
-      {
-        "code": "machineruntime",
-        "type": "FLOAT",
-        "label": "Machine Run Time (Min)",
-        "mandatory": false
-      },
-      {
-        "code": "machinesetuptime",
-        "type": "FLOAT",
-        "label": "Machine Setup Time (Min)",
-        "mandatory": false
-      },
-      {
-        "code": "operationname",
-        "type": "TEXT",
-        "label": "Operation Name",
-        "mandatory": false
-      },
-      {
-        "code": "operationsequence",
-        "type": "INTEGER",
-        "label": "Operation Sequence",
-        "mandatory": false
-      },
-      {
-        "code": "predecessorcompletedquantity",
-        "type": "FLOAT",
-        "label": "Predecessor Completed Quantity",
-        "mandatory": false
-      },
-      {
-        "code": "quantityremaining",
-        "type": "FLOAT",
-        "label": "Quantity Remaining",
-        "mandatory": false
-      },
-      {
-        "code": "recordsetup",
-        "type": "CHECKBOX",
-        "label": "Record Setup Time",
-        "mandatory": false
-      },
-      {
-        "code": "runrate",
-        "type": "FLOAT",
-        "label": "",
-        "mandatory": false
-      },
-      {
-        "code": "setuptime",
-        "type": "FLOAT",
-        "label": "",
-        "mandatory": false
-      },
-      {
-        "code": "workcenter",
-        "type": "TEXT",
-        "label": "Manufacturing Work Center",
-        "mandatory": false
-      }
-    ]
-  },
+      "fields": [
+        {
+          "code": "completedquantity",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Completed Quantity"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "inputquantity",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Input Quantity"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "laborresources",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "Labor Resources"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "laborruntime",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Labor Run Time (Min)"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "laborsetuptime",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Labor Setup Time (Min)"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "machineresources",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "Machine Resources"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "machineruntime",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Machine Run Time (Min)"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "machinesetuptime",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Machine Setup Time (Min)"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "operationname",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Operation Name"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "operationsequence",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "Operation Sequence"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "predecessorcompletedquantity",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Predecessor Completed Quantity"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "quantityremaining",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Quantity Remaining"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "recordsetup",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Record Setup Time"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "runrate",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "runrate"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "setuptime",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "setuptime"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "workcenter",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Manufacturing Work Center"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    }
+  ],
   "tabs": [
     {
       "code": "components",
-      "label": "Components"
+      "translations": {
+        "en": "Components"
+      }
     },
     {
       "code": "custom",
-      "label": "Custom"
+      "translations": {
+        "en": "Custom"
+      }
     },
     {
       "code": "history",
-      "label": "History"
+      "translations": {
+        "en": "History"
+      }
     },
     {
       "code": "operations",
-      "label": "Operations"
+      "translations": {
+        "en": "Operations"
+      }
     },
     {
       "code": "workflow",
-      "label": "Workflow"
+      "translations": {
+        "en": "Workflow"
+      }
     }
   ]
 }

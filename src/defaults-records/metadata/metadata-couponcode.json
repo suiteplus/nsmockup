@@ -1,110 +1,180 @@
 {
   "code": "couponcode",
   "id": 0,
-  "name": "Coupon Code",
+  "translations": {
+    "en": "Coupon Code"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "code",
       "type": "TEXT",
-      "label": "Code",
+      "translations": {
+        "en": {
+          "label": "Code"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "datesent",
       "type": "DATE",
-      "label": "Date Sent",
+      "translations": {
+        "en": {
+          "label": "Date Sent"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "id",
       "type": "INTEGER",
-      "label": "ID",
+      "translations": {
+        "en": {
+          "label": "ID"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "promotion",
       "type": "TEXT",
-      "label": "Promotion",
+      "translations": {
+        "en": {
+          "label": "Promotion"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "recipient",
       "type": "TEXT",
-      "label": "Recipient",
+      "translations": {
+        "en": {
+          "label": "Recipient"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "usecount",
       "type": "INTEGER",
-      "label": "Use Count",
+      "translations": {
+        "en": {
+          "label": "Use Count"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "used",
       "type": "CHECKBOX",
-      "label": "Used",
+      "translations": {
+        "en": {
+          "label": "Used"
+        }
+      },
       "mandatory": false
     }
   ]

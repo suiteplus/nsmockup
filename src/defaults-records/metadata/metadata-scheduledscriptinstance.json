@@ -1,105 +1,171 @@
 {
   "code": "scheduledscriptinstance",
   "id": 0,
-  "name": "Scheduled Script Instance",
+  "translations": {
+    "en": "Scheduled Script Instance"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "datecreated",
       "type": "DATETIME",
-      "label": "Date Created",
+      "translations": {
+        "en": {
+          "label": "Date Created"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "enddate",
       "type": "DATETIME",
-      "label": "End Date",
+      "translations": {
+        "en": {
+          "label": "End Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "percentcomplete",
       "type": "PERCENT",
-      "label": "Percent Complete",
+      "translations": {
+        "en": {
+          "label": "Percent Complete"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "queue",
       "type": "TEXT",
-      "label": "Queue",
+      "translations": {
+        "en": {
+          "label": "Queue"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "queueposition",
       "type": "INTEGER",
-      "label": "Queue Position",
+      "translations": {
+        "en": {
+          "label": "Queue Position"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "script",
       "type": "SELECT",
-      "label": "Script",
+      "translations": {
+        "en": {
+          "label": "Script"
+        }
+      },
       "mandatory": false,
       "recordType": "script"
     },
     {
       "code": "scriptdeployment",
       "type": "SELECT",
-      "label": "Script Deployment",
+      "translations": {
+        "en": {
+          "label": "Script Deployment"
+        }
+      },
       "mandatory": false,
       "recordType": "scriptdeployment"
     },
     {
       "code": "startdate",
       "type": "DATETIME",
-      "label": "Start Date",
+      "translations": {
+        "en": {
+          "label": "Start Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "status",
       "type": "TEXT",
-      "label": "Status",
+      "translations": {
+        "en": {
+          "label": "Status"
+        }
+      },
       "mandatory": false
     }
   ]

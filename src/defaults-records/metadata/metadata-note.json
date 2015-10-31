@@ -1,254 +1,404 @@
 {
   "code": "note",
   "id": 0,
-  "name": "Note",
+  "translations": {
+    "en": "Note"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "accountingperiod",
       "type": "SELECT",
-      "label": "Accounting Period",
+      "translations": {
+        "en": {
+          "label": "Accounting Period"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "author",
       "type": "SELECT",
-      "label": "Author",
+      "translations": {
+        "en": {
+          "label": "Author",
+          "help": "References an existing entity record. This value defaults to the current logged in user (as specified during the login operation).\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
       "mandatory": false,
-      "help": "References an existing entity record. This value defaults to the current logged in user (as specified during the login operation).\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
       "recordType": null
     },
     {
       "code": "campaign",
       "type": "SELECT",
-      "label": "Campaign",
+      "translations": {
+        "en": {
+          "label": "Campaign"
+        }
+      },
       "mandatory": false,
       "recordType": "campaign"
     },
     {
       "code": "contact",
       "type": "SELECT",
-      "label": "Contact",
+      "translations": {
+        "en": {
+          "label": "Contact"
+        }
+      },
       "mandatory": false,
       "recordType": "contact"
     },
     {
       "code": "customer",
       "type": "SELECT",
-      "label": "Customer",
+      "translations": {
+        "en": {
+          "label": "Customer"
+        }
+      },
       "mandatory": false,
       "recordType": "customer"
     },
     {
       "code": "direction",
       "type": "TEXT",
-      "label": "Direction",
+      "translations": {
+        "en": {
+          "label": "Direction"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "employee",
       "type": "SELECT",
-      "label": "Employee",
+      "translations": {
+        "en": {
+          "label": "Employee"
+        }
+      },
       "mandatory": false,
       "recordType": "employee"
     },
     {
       "code": "entity",
       "type": "SELECT",
-      "label": "Entity",
+      "translations": {
+        "en": {
+          "label": "Entity",
+          "help": "References an existing entity (customer or contact) record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
       "mandatory": false,
-      "help": "References an existing entity (customer or contact) record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
       "recordType": "entity"
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalidstring",
       "type": "TEXT",
-      "label": "External ID (Text)",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "folder",
       "type": "SELECT",
-      "label": "Folder",
+      "translations": {
+        "en": {
+          "label": "Folder"
+        }
+      },
       "mandatory": false,
       "recordType": "folder"
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "issue",
       "type": "SELECT",
-      "label": "Issue",
+      "translations": {
+        "en": {
+          "label": "Issue"
+        }
+      },
       "mandatory": false,
       "recordType": "issue"
     },
     {
       "code": "item",
       "type": "SELECT",
-      "label": "Item",
+      "translations": {
+        "en": {
+          "label": "Item",
+          "help": "References an existing item record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
       "mandatory": false,
-      "help": "References an existing item record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
       "recordType": "item"
     },
     {
       "code": "lastmodifieddate",
       "type": "DATETIME",
-      "label": "Modification Date",
+      "translations": {
+        "en": {
+          "label": "Modification Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "media",
       "type": "SELECT",
-      "label": "Media",
+      "translations": {
+        "en": {
+          "label": "Media"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "note",
       "type": "TEXT",
-      "label": "Memo",
+      "translations": {
+        "en": {
+          "label": "Memo"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "notedate",
       "type": "DATETIME",
-      "label": "Date",
+      "translations": {
+        "en": {
+          "label": "Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "notetype",
       "type": "TEXT",
-      "label": "Type",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "partner",
       "type": "SELECT",
-      "label": "Partner",
+      "translations": {
+        "en": {
+          "label": "Partner"
+        }
+      },
       "mandatory": false,
       "recordType": "partner"
     },
     {
       "code": "record",
       "type": "SELECT",
-      "label": "Custom Record Key",
+      "translations": {
+        "en": {
+          "label": "Custom Record Key",
+          "help": "References an existing record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
       "mandatory": false,
-      "help": "References an existing record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
       "recordType": null
     },
     {
       "code": "recordtype",
       "type": "SELECT",
-      "label": "Custom Record Type",
+      "translations": {
+        "en": {
+          "label": "Custom Record Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "solution",
       "type": "SELECT",
-      "label": "Solution",
+      "translations": {
+        "en": {
+          "label": "Solution"
+        }
+      },
       "mandatory": false,
       "recordType": "solution"
     },
     {
       "code": "task",
       "type": "SELECT",
-      "label": "Task",
+      "translations": {
+        "en": {
+          "label": "Task"
+        }
+      },
       "mandatory": false,
       "recordType": "task"
     },
     {
       "code": "time",
       "type": "TIMEOFDAY",
-      "label": "Time",
+      "translations": {
+        "en": {
+          "label": "Time"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "title",
       "type": "TEXT",
-      "label": "Title",
+      "translations": {
+        "en": {
+          "label": "Title"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "topic",
       "type": "SELECT",
-      "label": "Topic",
+      "translations": {
+        "en": {
+          "label": "Topic",
+          "help": "References an existing topic record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
       "mandatory": false,
-      "help": "References an existing topic record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
       "recordType": "topic"
     },
     {
       "code": "transaction",
       "type": "SELECT",
-      "label": "Transaction",
+      "translations": {
+        "en": {
+          "label": "Transaction",
+          "help": "References an existing transaction (opportunity) record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
       "mandatory": false,
-      "help": "References an existing transaction (opportunity) record. When set, the note is associated with that record.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
       "recordType": "transaction"
     },
     {
       "code": "vendor",
       "type": "SELECT",
-      "label": "Vendor",
+      "translations": {
+        "en": {
+          "label": "Vendor"
+        }
+      },
       "mandatory": false,
       "recordType": "vendor"
     }

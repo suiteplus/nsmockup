@@ -1,255 +1,419 @@
 {
   "code": "amortizationtemplate",
   "id": 0,
-  "name": "Amortization Template",
+  "translations": {
+    "en": "Amortization Template"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "acctcontra",
       "type": "SELECT",
-      "label": "Contra Account",
+      "translations": {
+        "en": {
+          "label": "Contra Account"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "acctdeferral",
       "type": "SELECT",
-      "label": "Deferral Account",
+      "translations": {
+        "en": {
+          "label": "Deferral Account"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "accttarget",
       "type": "SELECT",
-      "label": "Target Account",
+      "translations": {
+        "en": {
+          "label": "Target Account"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "amormethod",
       "type": "TEXT",
-      "label": "Method",
+      "translations": {
+        "en": {
+          "label": "Method"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "amorperiod",
       "type": "TEXT",
-      "label": "Amortization Period",
+      "translations": {
+        "en": {
+          "label": "Amortization Period"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "amorstartoffset",
       "type": "TEXT",
-      "label": "Start Offset",
+      "translations": {
+        "en": {
+          "label": "Start Offset"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "amortermsrc",
       "type": "TEXT",
-      "label": "Term Source",
+      "translations": {
+        "en": {
+          "label": "Term Source"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "amortizationperiod",
       "type": "INTEGER",
-      "label": "Amortization Period",
+      "translations": {
+        "en": {
+          "label": "Amortization Period"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "amortizationtype",
       "type": "SELECT",
-      "label": "Type",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "amortype",
       "type": "TEXT",
-      "label": "Type",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "contraaccount",
       "type": "TEXT",
-      "label": "Contra Account",
+      "translations": {
+        "en": {
+          "label": "Contra Account"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "deferralaccount",
       "type": "TEXT",
-      "label": "Deferral Account",
+      "translations": {
+        "en": {
+          "label": "Deferral Account"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "initialamount",
       "type": "RATE",
-      "label": "Initial Amount",
+      "translations": {
+        "en": {
+          "label": "Initial Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isinactive",
       "type": "TEXT",
-      "label": "Inactive",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "periodoffset",
       "type": "TEXT",
-      "label": "Period Offset",
+      "translations": {
+        "en": {
+          "label": "Period Offset"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "recogintervalsrc",
       "type": "SELECT",
-      "label": "Term Source",
+      "translations": {
+        "en": {
+          "label": "Term Source"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "recurrencetype",
       "type": "SELECT",
-      "label": "Method",
+      "translations": {
+        "en": {
+          "label": "Method"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "residual",
       "type": "RATE",
-      "label": "Residual",
+      "translations": {
+        "en": {
+          "label": "Residual"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "revrecoffset",
       "type": "INTEGER",
-      "label": "Start Offset",
+      "translations": {
+        "en": {
+          "label": "Start Offset"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "targetaccount",
       "type": "TEXT",
-      "label": "Target Account",
+      "translations": {
+        "en": {
+          "label": "Target Account"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "totalamount",
       "type": "CURRENCY2",
-      "label": "Amount",
+      "translations": {
+        "en": {
+          "label": "Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "useforeignamounts",
       "type": "CHECKBOX",
-      "label": "Use Transaction Currency",
+      "translations": {
+        "en": {
+          "label": "Use Transaction Currency"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "user",
       "type": "SELECT",
-      "label": "User",
+      "translations": {
+        "en": {
+          "label": "User"
+        }
+      },
       "mandatory": false,
       "recordType": "employee"
     }
   ],
-  "subLists": {
-    "recurrence": [
-      {
-        "code": "defrevaccount",
-        "type": "SELECT",
-        "label": "Account",
-        "mandatory": false,
-        "recordType": "account"
+  "subLists": [
+    {
+      "code": "recurrence",
+      "translations": {
+        "en": "Custom Recurrence Pattern"
       },
-      {
-        "code": "incomeaccount",
-        "type": "TEXT",
-        "label": "",
-        "mandatory": false
-      },
-      {
-        "code": "periodoffset",
-        "type": "INTEGER",
-        "label": "Period Offset",
-        "mandatory": true
-      },
-      {
-        "code": "postingperiod",
-        "type": "TEXT",
-        "label": "",
-        "mandatory": false
-      },
-      {
-        "code": "recamount",
-        "type": "RATE",
-        "label": "Amount",
-        "mandatory": true
-      }
-    ]
-  }
+      "fields": [
+        {
+          "code": "defrevaccount",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Account"
+            }
+          },
+          "mandatory": false,
+          "recordType": "account"
+        },
+        {
+          "code": "incomeaccount",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "incomeaccount"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "periodoffset",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "Period Offset"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "postingperiod",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "postingperiod"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "recamount",
+          "type": "RATE",
+          "translations": {
+            "en": {
+              "label": "Amount"
+            }
+          },
+          "mandatory": true
+        }
+      ]
+    }
+  ]
 }

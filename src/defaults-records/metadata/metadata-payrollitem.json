@@ -1,189 +1,311 @@
 {
   "code": "payrollitem",
   "id": 0,
-  "name": "Payroll Item",
+  "translations": {
+    "en": "Payroll Item"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "allowbulkentry",
       "type": "CHECKBOX",
-      "label": "Allow entry from Create Payroll",
+      "translations": {
+        "en": {
+          "label": "Allow entry from Create Payroll"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "applylimit",
       "type": "CHECKBOX",
-      "label": "Apply Limit to All Employees",
+      "translations": {
+        "en": {
+          "label": "Apply Limit to All Employees"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "applyrate",
       "type": "CHECKBOX",
-      "label": "Apply Rate to All Employees",
+      "translations": {
+        "en": {
+          "label": "Apply Rate to All Employees"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "basedonquantity",
       "type": "CHECKBOX",
-      "label": "Based on quantity",
+      "translations": {
+        "en": {
+          "label": "Based on quantity"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "defaultrate",
       "type": "RATE",
-      "label": "Default Rate",
+      "translations": {
+        "en": {
+          "label": "Default Rate"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "employeepaid",
       "type": "CHECKBOX",
-      "label": "Employee Paid",
+      "translations": {
+        "en": {
+          "label": "Employee Paid"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "expenseaccount",
       "type": "TEXT",
-      "label": "Expense Account",
+      "translations": {
+        "en": {
+          "label": "Expense Account"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "inactive",
       "type": "CHECKBOX",
-      "label": "Inactive",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isinactive",
       "type": "CHECKBOX",
-      "label": "Inactive",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "itemtype",
       "type": "SELECT",
-      "label": "Item Type",
+      "translations": {
+        "en": {
+          "label": "Item Type"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "itemtypenohierarchy",
       "type": "TEXT",
-      "label": "Item Type (no hierarchy)",
+      "translations": {
+        "en": {
+          "label": "Item Type (no hierarchy)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "liabilityaccount",
       "type": "TEXT",
-      "label": "Liability Account",
+      "translations": {
+        "en": {
+          "label": "Liability Account"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "limit",
       "type": "CURRENCY",
-      "label": "Limit",
+      "translations": {
+        "en": {
+          "label": "Limit"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "limitiswithholding",
       "type": "RADIO",
-      "label": "Wage",
+      "translations": {
+        "en": {
+          "label": "Wage"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "limittype",
       "type": "TEXT",
-      "label": "Limit Type",
+      "translations": {
+        "en": {
+          "label": "Limit Type"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "masterpaycode",
       "type": "TEXT",
-      "label": "Master Pay Code",
+      "translations": {
+        "en": {
+          "label": "Master Pay Code"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "reportingsection",
       "type": "SELECT",
-      "label": "Report Section",
+      "translations": {
+        "en": {
+          "label": "Report Section"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "showinemployeecenter",
       "type": "CHECKBOX",
-      "label": "View in Employee Center",
+      "translations": {
+        "en": {
+          "label": "View in Employee Center"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "subsidiary",
       "type": "SELECT",
-      "label": "Subsidiary",
+      "translations": {
+        "en": {
+          "label": "Subsidiary"
+        }
+      },
       "mandatory": true,
       "recordType": "subsidiary"
     },
     {
       "code": "usedefaults",
       "type": "CHECKBOX",
-      "label": "Use System Defaults",
+      "translations": {
+        "en": {
+          "label": "Use System Defaults"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "vendor",
       "type": "TEXT",
-      "label": "Vendor",
+      "translations": {
+        "en": {
+          "label": "Vendor"
+        }
+      },
       "mandatory": false
     }
   ],
-  "subLists": {
-    "employeepaycodelist": [
-      {
-        "code": "apply",
-        "type": "CHECKBOX",
-        "label": "Apply",
-        "mandatory": false
+  "subLists": [
+    {
+      "code": "employeepaycodelist",
+      "translations": {
+        "en": "Employees"
       },
-      {
-        "code": "employeeid",
-        "type": "INTEGER",
-        "label": "Name",
-        "mandatory": false
-      },
-      {
-        "code": "empprevstate",
-        "type": "TEXT",
-        "label": "State",
-        "mandatory": false
-      },
-      {
-        "code": "inactive",
-        "type": "CHECKBOX",
-        "label": "Inactive",
-        "mandatory": false
-      }
-    ]
-  },
+      "fields": [
+        {
+          "code": "apply",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Apply"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "employeeid",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "Name"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "empprevstate",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "State"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "inactive",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Inactive"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    }
+  ],
   "tabs": [
     {
       "code": "employee",
-      "label": "Employee"
+      "translations": {
+        "en": "Employee"
+      }
     }
   ]
 }

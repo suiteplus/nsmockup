@@ -1,357 +1,585 @@
 {
   "code": "entitygroup",
   "id": -8,
-  "name": "Entity Group",
+  "translations": {
+    "en": "Entity Group"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "calendardefaultview",
       "type": "SELECT",
-      "label": "Default View",
+      "translations": {
+        "en": {
+          "label": "Default View"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "calendarendtime",
       "type": "SELECT",
-      "label": "Daily End Time",
+      "translations": {
+        "en": {
+          "label": "Daily End Time"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "calendarname",
       "type": "TEXT",
-      "label": "Title",
+      "translations": {
+        "en": {
+          "label": "Title"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "calendarperiod",
       "type": "SELECT",
-      "label": "Daily Time Increments",
+      "translations": {
+        "en": {
+          "label": "Daily Time Increments"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "calendarstarttime",
       "type": "SELECT",
-      "label": "Daily Start Time",
+      "translations": {
+        "en": {
+          "label": "Daily Start Time"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "comments",
       "type": "TEXTAREA",
-      "label": "Comments",
-      "mandatory": false,
-      "help": "Enter any notes or comments about the group here."
+      "translations": {
+        "en": {
+          "label": "Comments",
+          "help": "Enter any notes or comments about the group here."
+        }
+      },
+      "mandatory": false
     },
     {
       "code": "email",
       "type": "EMAIL",
-      "label": "Email",
+      "translations": {
+        "en": {
+          "label": "Email"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalidstring",
       "type": "TEXT",
-      "label": "External ID (Text)",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "groupname",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "groupowner",
       "type": "SELECT",
-      "label": "Owner",
+      "translations": {
+        "en": {
+          "label": "Owner"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "grouptype",
       "type": "TEXT",
-      "label": "Type",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "grouptypename",
       "type": "TEXT",
-      "label": "Type",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isdynamic",
       "type": "CHECKBOX",
-      "label": "Dynamic",
+      "translations": {
+        "en": {
+          "label": "Dynamic"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isfunctionalteam",
       "type": "CHECKBOX",
-      "label": "Functional Team",
+      "translations": {
+        "en": {
+          "label": "Functional Team"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isinactive",
       "type": "CHECKBOX",
-      "label": "Inactive",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "ismanufacturingworkcenter",
       "type": "CHECKBOX",
-      "label": "Manufacturing Work Center",
+      "translations": {
+        "en": {
+          "label": "Manufacturing Work Center"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isprivate",
       "type": "CHECKBOX",
-      "label": "Private",
+      "translations": {
+        "en": {
+          "label": "Private"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isproductteam",
       "type": "CHECKBOX",
-      "label": "Product Team",
+      "translations": {
+        "en": {
+          "label": "Product Team"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "issalesrep",
       "type": "CHECKBOX",
-      "label": "Sales Group",
+      "translations": {
+        "en": {
+          "label": "Sales Group"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "issuerole",
       "type": "SELECT",
-      "label": "Issue Role",
+      "translations": {
+        "en": {
+          "label": "Issue Role"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "issupportrep",
       "type": "CHECKBOX",
-      "label": "Support Group",
+      "translations": {
+        "en": {
+          "label": "Support Group"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "laborresources",
       "type": "INTEGER",
-      "label": "Labor Resources",
+      "translations": {
+        "en": {
+          "label": "Labor Resources"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "lastmodifieddate",
       "type": "DATETIME",
-      "label": "Last Modified",
+      "translations": {
+        "en": {
+          "label": "Last Modified"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "machineresources",
       "type": "INTEGER",
-      "label": "Machine Resources",
+      "translations": {
+        "en": {
+          "label": "Machine Resources"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "owner",
       "type": "SELECT",
-      "label": "Owner",
+      "translations": {
+        "en": {
+          "label": "Owner"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "restrictiongroup",
       "type": "SELECT",
-      "label": "Restrict To",
+      "translations": {
+        "en": {
+          "label": "Restrict To"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "savedsearch",
       "type": "TEXT",
-      "label": "Saved Search",
+      "translations": {
+        "en": {
+          "label": "Saved Search"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "size",
       "type": "INTEGER",
-      "label": "Size",
+      "translations": {
+        "en": {
+          "label": "Size"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "subsidiary",
       "type": "SELECT",
-      "label": "Subsidiary",
+      "translations": {
+        "en": {
+          "label": "Subsidiary"
+        }
+      },
       "mandatory": true,
       "recordType": "subsidiary"
     },
     {
       "code": "workcalendar",
       "type": "SELECT",
-      "label": "Work Calendar",
+      "translations": {
+        "en": {
+          "label": "Work Calendar"
+        }
+      },
       "mandatory": false,
       "recordType": null
     }
   ],
-  "subLists": {
-    "groupmembers": [
-      {
-        "code": "accesslevel",
-        "type": "SELECT",
-        "label": "Access Level",
-        "mandatory": false,
-        "recordType": null
+  "subLists": [
+    {
+      "code": "groupmembers",
+      "translations": {
+        "en": "Group Members"
       },
-      {
-        "code": "bouncedaddress",
-        "type": "TEXT",
-        "label": "Bounced",
-        "mandatory": false
-      },
-      {
-        "code": "contribution",
-        "type": "PERCENT",
-        "label": "Contribution %",
-        "mandatory": true
-      },
-      {
-        "code": "email",
-        "type": "EMAIL",
-        "label": "Email",
-        "mandatory": false
-      },
-      {
-        "code": "employeemember",
-        "type": "SELECT",
-        "label": "Name",
-        "mandatory": true,
-        "recordType": null
-      },
-      {
-        "code": "inactive",
-        "type": "TEXT",
-        "label": "Inactive",
-        "mandatory": false
-      },
-      {
-        "code": "isprimary",
-        "type": "CHECKBOX",
-        "label": "Primary",
-        "mandatory": false
-      },
-      {
-        "code": "issalesrep",
-        "type": "TEXT",
-        "label": "",
-        "mandatory": false
-      },
-      {
-        "code": "memberemail",
-        "type": "TEXT",
-        "label": "Email",
-        "mandatory": false
-      },
-      {
-        "code": "membername",
-        "type": "TEXT",
-        "label": "Name",
-        "mandatory": false
-      },
-      {
-        "code": "memberphone",
-        "type": "PHONE",
-        "label": "Phone",
-        "mandatory": false
-      },
-      {
-        "code": "phone",
-        "type": "PHONE",
-        "label": "Phone",
-        "mandatory": false
-      },
-      {
-        "code": "remove",
-        "type": "TEXT",
-        "label": "Remove",
-        "mandatory": false
-      },
-      {
-        "code": "salesrole",
-        "type": "SELECT",
-        "label": "Sales Role",
-        "mandatory": true,
-        "recordType": null
-      },
-      {
-        "code": "subscriptionstatus",
-        "type": "TEXT",
-        "label": "Global Subscription Status",
-        "mandatory": false
-      }
-    ]
-  }
+      "fields": [
+        {
+          "code": "accesslevel",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Access Level"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "bouncedaddress",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Bounced"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "contribution",
+          "type": "PERCENT",
+          "translations": {
+            "en": {
+              "label": "Contribution %"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "email",
+          "type": "EMAIL",
+          "translations": {
+            "en": {
+              "label": "Email"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "employeemember",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Name"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        },
+        {
+          "code": "inactive",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Inactive"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isprimary",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Primary"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "issalesrep",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "issalesrep"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "memberemail",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Email"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "membername",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Name"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "memberphone",
+          "type": "PHONE",
+          "translations": {
+            "en": {
+              "label": "Phone"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "phone",
+          "type": "PHONE",
+          "translations": {
+            "en": {
+              "label": "Phone"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "remove",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Remove"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "salesrole",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Sales Role"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        },
+        {
+          "code": "subscriptionstatus",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Global Subscription Status"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    }
+  ]
 }

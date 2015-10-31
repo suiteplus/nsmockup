@@ -1,42 +1,70 @@
 {
   "code": "customrecord_codeg",
-  "name": "Code Generic",
+  "translations": {
+    "en": "Code Generic"
+  },
   "id": 1,
   "fields": [
     {
       "code": "custrecord_type_id",
-      "desc": "Type",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
       "id": 1,
       "type": "SELECT",
       "recordType": "customrecord_codeg_ids"
     },
     {
       "code": "custrecord_code_id",
-      "desc": "Code",
+      "translations": {
+      "en": {
+        "label": "Code"
+      }
+    },
       "id": 2,
       "type": "TEXT"
     }
   ],
-  "subLists": {
-    "item_code": [
-      {
-        "code": "item-id",
-        "desc": "Code",
-        "id": 2,
-        "type": "INTEGER"
+  "subLists": [
+    {
+      "code": "item_code",
+      "translations": {
+        "en": "Item Code"
       },
-      {
-        "code": "item-title",
-        "desc": "Code",
-        "id": 2,
-        "type": "TEXT"
-      },
-      {
-        "code": "item-value",
-        "desc": "Code",
-        "id": 2,
-        "type": "TEXT"
-      }
-    ]
-  }
+      "fields": [
+        {
+          "code": "item-id",
+          "translations": {
+            "en": {
+              "label": "Code"
+            }
+          },
+          "id": 2,
+          "type": "INTEGER"
+        },
+        {
+          "code": "item-title",
+          "translations": {
+            "en": {
+              "label": "Title"
+            }
+          },
+          "id": 2,
+          "type": "TEXT"
+        },
+        {
+          "code": "item-value",
+          "translations": {
+            "en": {
+              "label": "Value"
+            }
+          },
+          "id": 2,
+          "type": "TEXT"
+        }
+      ]
+    }
+  ]
 }

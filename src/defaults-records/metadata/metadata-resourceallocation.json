@@ -1,227 +1,365 @@
 {
   "code": "resourceallocation",
   "id": 0,
-  "name": "Resource Allocation",
+  "translations": {
+    "en": "Resource Allocation"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "allocationamount",
       "type": "POSFLOAT",
-      "label": "Allocate",
+      "translations": {
+        "en": {
+          "label": "Allocate"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "allocationresource",
       "type": "SELECT",
-      "label": "Resource",
+      "translations": {
+        "en": {
+          "label": "Resource"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "allocationtype",
       "type": "SELECT",
-      "label": "Allocation Type",
+      "translations": {
+        "en": {
+          "label": "Allocation Type"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "allocationunit",
       "type": "SELECT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "allocationunit"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "approvalstatus",
       "type": "SELECT",
-      "label": "Approval Status",
+      "translations": {
+        "en": {
+          "label": "Approval Status"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "company",
       "type": "SELECT",
-      "label": "Project",
+      "translations": {
+        "en": {
+          "label": "Project"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "customer",
       "type": "SELECT",
-      "label": "Customer",
+      "translations": {
+        "en": {
+          "label": "Customer"
+        }
+      },
       "mandatory": false,
       "recordType": "customer"
     },
     {
       "code": "customform",
       "type": "SELECT",
-      "label": "Custom Form",
+      "translations": {
+        "en": {
+          "label": "Custom Form"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "employee",
       "type": "SELECT",
-      "label": "Resource - Employee",
+      "translations": {
+        "en": {
+          "label": "Resource - Employee"
+        }
+      },
       "mandatory": false,
       "recordType": "employee"
     },
     {
       "code": "enddate",
       "type": "DATE",
-      "label": "End Date",
+      "translations": {
+        "en": {
+          "label": "End Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalidstring",
       "type": "TEXT",
-      "label": "External ID (Text)",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "id",
       "type": "INTEGER",
-      "label": "ID",
+      "translations": {
+        "en": {
+          "label": "ID"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "job",
       "type": "SELECT",
-      "label": "Project",
+      "translations": {
+        "en": {
+          "label": "Project"
+        }
+      },
       "mandatory": false,
       "recordType": "job"
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "nextapprover",
       "type": "SELECT",
-      "label": "Next Approver",
+      "translations": {
+        "en": {
+          "label": "Next Approver"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "notes",
       "type": "TEXT",
-      "label": "Notes",
+      "translations": {
+        "en": {
+          "label": "Notes"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "numberhours",
       "type": "FLOAT",
-      "label": "Number of Hours",
+      "translations": {
+        "en": {
+          "label": "Number of Hours"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "percentoftime",
       "type": "PERCENT",
-      "label": "Percentage of Time",
+      "translations": {
+        "en": {
+          "label": "Percentage of Time"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "project",
       "type": "SELECT",
-      "label": "Customer:Project",
+      "translations": {
+        "en": {
+          "label": "Customer:Project"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "requestedby",
       "type": "SELECT",
-      "label": "Requested by",
+      "translations": {
+        "en": {
+          "label": "Requested by"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "requestor",
       "type": "SELECT",
-      "label": "Requested By",
+      "translations": {
+        "en": {
+          "label": "Requested By"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "resource",
       "type": "SELECT",
-      "label": "Resource",
+      "translations": {
+        "en": {
+          "label": "Resource"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "startdate",
       "type": "DATE",
-      "label": "Start Date",
+      "translations": {
+        "en": {
+          "label": "Start Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "user",
       "type": "SELECT",
-      "label": "User",
+      "translations": {
+        "en": {
+          "label": "User"
+        }
+      },
       "mandatory": false,
       "recordType": "employee"
     },
     {
       "code": "vendor",
       "type": "SELECT",
-      "label": "Resource - Vendor",
+      "translations": {
+        "en": {
+          "label": "Resource - Vendor"
+        }
+      },
       "mandatory": false,
       "recordType": "vendor"
     }

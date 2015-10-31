@@ -1,300 +1,486 @@
 {
   "code": "message",
   "id": 0,
-  "name": "Message",
+  "translations": {
+    "en": "Message"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "activity",
       "type": "TEXT",
-      "label": "",
-      "mandatory": false,
-      "help": "References an activity record that must already exist in your account. In a single request, a value can be provided for either Activity or Transaction but not both. To have the same message attached to both an Activity and a Transaction, you must add the Message twice. SupportCase, Task, CalendarEvent, and PhoneCall (all examples of Activities) as parents can be set via the \"activity\" field. Opportunity and all other transactions can be set as parent via the \"transaction\" field. In order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+      "translations": {
+        "en": {
+          "label": "activity",
+          "help": "References an activity record that must already exist in your account. In a single request, a value can be provided for either Activity or Transaction but not both. To have the same message attached to both an Activity and a Transaction, you must add the Message twice. SupportCase, Task, CalendarEvent, and PhoneCall (all examples of Activities) as parents can be set via the \"activity\" field. Opportunity and all other transactions can be set as parent via the \"transaction\" field. In order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false
     },
     {
       "code": "author",
       "type": "SELECT",
-      "label": "From",
+      "translations": {
+        "en": {
+          "label": "From",
+          "help": "References an entity record that must already exist in your account. Defaults to the currently logged in user (as specified in the login operation).\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
       "mandatory": false,
-      "help": "References an entity record that must already exist in your account. Defaults to the currently logged in user (as specified in the login operation).\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
       "recordType": null
     },
     {
       "code": "authoremail",
       "type": "TEXT",
-      "label": "Author Email",
+      "translations": {
+        "en": {
+          "label": "Author Email"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "bcc",
       "type": "EMAIL",
-      "label": "Bcc",
+      "translations": {
+        "en": {
+          "label": "Bcc"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "campaign",
       "type": "SELECT",
-      "label": "Campaign",
+      "translations": {
+        "en": {
+          "label": "Campaign"
+        }
+      },
       "mandatory": false,
       "recordType": "campaign"
     },
     {
       "code": "cc",
       "type": "EMAIL",
-      "label": "Cc",
+      "translations": {
+        "en": {
+          "label": "Cc"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "contact",
       "type": "TEXT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "contact"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "customer",
       "type": "SELECT",
-      "label": "Customer",
+      "translations": {
+        "en": {
+          "label": "Customer"
+        }
+      },
       "mandatory": false,
       "recordType": "customer"
     },
     {
       "code": "emailed",
       "type": "CHECKBOX",
-      "label": "Emailed",
-      "mandatory": false,
-      "help": "Check this box if you are pasting in an e-mail message."
+      "translations": {
+        "en": {
+          "label": "Emailed",
+          "help": "Check this box if you are pasting in an e-mail message."
+        }
+      },
+      "mandatory": false
     },
     {
       "code": "employee",
       "type": "SELECT",
-      "label": "Employee",
+      "translations": {
+        "en": {
+          "label": "Employee"
+        }
+      },
       "mandatory": false,
       "recordType": "employee"
     },
     {
       "code": "entity",
       "type": "TEXT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "entity"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "entitytype",
       "type": "TEXT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "entitytype"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalidstring",
       "type": "TEXT",
-      "label": "External ID (Text)",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "hasattachment",
       "type": "CHECKBOX",
-      "label": "Files",
+      "translations": {
+        "en": {
+          "label": "Files"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalonly",
       "type": "CHECKBOX",
-      "label": "Internal Only",
+      "translations": {
+        "en": {
+          "label": "Internal Only"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isemailed",
       "type": "CHECKBOX",
-      "label": "Email Sent",
+      "translations": {
+        "en": {
+          "label": "Email Sent"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isincoming",
       "type": "CHECKBOX",
-      "label": "Is Incoming",
+      "translations": {
+        "en": {
+          "label": "Is Incoming"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "lastmodifieddate",
       "type": "DATETIME",
-      "label": "Modification Date",
+      "translations": {
+        "en": {
+          "label": "Modification Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "message",
       "type": "CLOBTEXT",
-      "label": "Message",
+      "translations": {
+        "en": {
+          "label": "Message"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "messagedate",
       "type": "DATETIME",
-      "label": "Date",
+      "translations": {
+        "en": {
+          "label": "Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "messagetype",
       "type": "SELECT",
-      "label": "Type",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "partner",
       "type": "SELECT",
-      "label": "Partner",
+      "translations": {
+        "en": {
+          "label": "Partner"
+        }
+      },
       "mandatory": false,
       "recordType": "partner"
     },
     {
       "code": "recipient",
       "type": "SELECT",
-      "label": "Attach to",
+      "translations": {
+        "en": {
+          "label": "Attach to",
+          "help": "References an entity record that must already exist in your account. The submitted message is saved on the Messages subtab of the recipient's record as well as the author, activity or transaction records.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
       "mandatory": false,
-      "help": "References an entity record that must already exist in your account. The submitted message is saved on the Messages subtab of the recipient's record as well as the author, activity or transaction records.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
       "recordType": null
     },
     {
       "code": "recipientemail",
       "type": "TEXT",
-      "label": "Recipient Email",
+      "translations": {
+        "en": {
+          "label": "Recipient Email"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "record",
       "type": "TEXT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "record"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "recordtype",
       "type": "TEXT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "recordtype"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "subject",
       "type": "TEXT",
-      "label": "Subject",
+      "translations": {
+        "en": {
+          "label": "Subject"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "template",
       "type": "SELECT",
-      "label": "Template",
+      "translations": {
+        "en": {
+          "label": "Template"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "time",
       "type": "TIMEOFDAY",
-      "label": "Time",
+      "translations": {
+        "en": {
+          "label": "Time"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "transaction",
       "type": "TEXT",
-      "label": "",
-      "mandatory": false,
-      "help": "References an opportunity record that already exists in your NetSuite account. In a single request, a value can be provided for either Activity or Transaction but not both. To have the same message attached to both an Activity and a Transaction, you must add the Message twice."
+      "translations": {
+        "en": {
+          "label": "transaction",
+          "help": "References an opportunity record that already exists in your NetSuite account. In a single request, a value can be provided for either Activity or Transaction but not both. To have the same message attached to both an Activity and a Transaction, you must add the Message twice."
+        }
+      },
+      "mandatory": false
     },
     {
       "code": "vendor",
       "type": "SELECT",
-      "label": "Vendor",
+      "translations": {
+        "en": {
+          "label": "Vendor"
+        }
+      },
       "mandatory": false,
       "recordType": "vendor"
     },
     {
       "code": "view",
       "type": "TEXT",
-      "label": "View",
+      "translations": {
+        "en": {
+          "label": "View"
+        }
+      },
       "mandatory": false
     }
   ],
-  "subLists": {
-    "mediaitem": [
-      {
-        "code": "mediaitem",
-        "type": "SELECT",
-        "label": "Attach File",
-        "mandatory": true,
-        "recordType": null
-      }
-    ]
-  },
+  "subLists": [
+    {
+      "code": "mediaitem",
+      "translations": {
+        "en": "Attachments"
+      },
+      "fields": [
+        {
+          "code": "mediaitem",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Attach File"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        }
+      ]
+    }
+  ],
   "tabs": [
     {
       "code": "attachments",
-      "label": "Attachments"
+      "translations": {
+        "en": "Attachments"
+      }
     },
     {
       "code": "messages",
-      "label": "Message"
+      "translations": {
+        "en": "Message"
+      }
     },
     {
       "code": "recipients",
-      "label": "Recipients"
+      "translations": {
+        "en": "Recipients"
+      }
     }
   ]
 }

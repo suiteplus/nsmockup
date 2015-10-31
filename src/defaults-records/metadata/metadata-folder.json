@@ -1,201 +1,323 @@
 {
   "code": "folder",
   "id": 0,
-  "name": "Folder",
+  "translations": {
+    "en": "Folder"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "class",
       "type": "SELECT",
-      "label": "Restrict by Class",
+      "translations": {
+        "en": {
+          "label": "Restrict by Class",
+          "help": "References a value from a user defined list at Setup > Company > Classes. This field is required when Make Classes Mandatory is enabled at Setup > Accounting > Accounting Preferences."
+        }
+      },
       "mandatory": false,
-      "help": "References a value from a user defined list at Setup > Company > Classes. This field is required when Make Classes Mandatory is enabled at Setup > Accounting > Accounting Preferences.",
       "recordType": null
     },
     {
       "code": "department",
       "type": "SELECT",
-      "label": "Restrict by Department",
+      "translations": {
+        "en": {
+          "label": "Restrict by Department",
+          "help": "References a value from a user defined list at Setup > Company > Departments. This field is required when Make Departments Mandatory is enabled at Setup > Accounting > Accounting Preferences."
+        }
+      },
       "mandatory": false,
-      "help": "References a value from a user defined list at Setup > Company > Departments. This field is required when Make Departments Mandatory is enabled at Setup > Accounting > Accounting Preferences.",
       "recordType": "department"
     },
     {
       "code": "description",
       "type": "TEXT",
-      "label": "Description",
+      "translations": {
+        "en": {
+          "label": "Description"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalidstring",
       "type": "TEXT",
-      "label": "External ID (Text)",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "foldersize",
       "type": "INTEGER",
-      "label": "Size (KB)",
+      "translations": {
+        "en": {
+          "label": "Size (KB)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "foldertype",
       "type": "SELECT",
-      "label": "Type",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "group",
       "type": "SELECT",
-      "label": "Restrict by Group",
+      "translations": {
+        "en": {
+          "label": "Restrict by Group",
+          "help": "References a value from a user defined list at Lists > Relationships > Groups."
+        }
+      },
       "mandatory": false,
-      "help": "References a value from a user defined list at Lists > Relationships > Groups.",
       "recordType": null
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isinactive",
       "type": "CHECKBOX",
-      "label": "Inactive",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isprivate",
       "type": "CHECKBOX",
-      "label": "Private",
+      "translations": {
+        "en": {
+          "label": "Private"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "istoplevel",
       "type": "CHECKBOX",
-      "label": "Is Top Level",
+      "translations": {
+        "en": {
+          "label": "Is Top Level"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "lastmodifieddate",
       "type": "DATETIME",
-      "label": "Last Modified",
+      "translations": {
+        "en": {
+          "label": "Last Modified"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "location",
       "type": "SELECT",
-      "label": "Restrict by Location",
+      "translations": {
+        "en": {
+          "label": "Restrict by Location",
+          "help": "References a value from a user defined list at Setup > Company > Locations. This field is required when Make Locations Mandatory is enabled at Setup > Accounting > Accounting Preferences."
+        }
+      },
       "mandatory": false,
-      "help": "References a value from a user defined list at Setup > Company > Locations. This field is required when Make Locations Mandatory is enabled at Setup > Accounting > Accounting Preferences.",
       "recordType": "location"
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "numfiles",
       "type": "INTEGER",
-      "label": "# of Files",
+      "translations": {
+        "en": {
+          "label": "# of Files"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "owner",
       "type": "SELECT",
-      "label": "Owner",
+      "translations": {
+        "en": {
+          "label": "Owner"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "parent",
       "type": "SELECT",
-      "label": "Sub-Folder of",
+      "translations": {
+        "en": {
+          "label": "Sub-Folder of",
+          "help": "If this folder is a subfolder of another, set the parent folder here."
+        }
+      },
       "mandatory": false,
-      "help": "If this folder is a subfolder of another, set the parent folder here.",
       "recordType": null
     },
     {
       "code": "predecessor",
       "type": "SELECT",
-      "label": "Predecessor",
+      "translations": {
+        "en": {
+          "label": "Predecessor"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "private",
       "type": "CHECKBOX",
-      "label": "Is Private",
+      "translations": {
+        "en": {
+          "label": "Is Private"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "size",
       "type": "INTEGER",
-      "label": "Size (KB)",
+      "translations": {
+        "en": {
+          "label": "Size (KB)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "subsidiary",
       "type": "SELECT",
-      "label": "Restrict by Subsidiary",
+      "translations": {
+        "en": {
+          "label": "Restrict by Subsidiary"
+        }
+      },
       "mandatory": false,
       "recordType": "subsidiary"
     }

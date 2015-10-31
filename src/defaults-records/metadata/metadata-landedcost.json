@@ -1,50 +1,82 @@
 {
   "code": "landedcost",
   "id": 0,
-  "name": "Landed Cost",
+  "translations": {
+    "en": "Landed Cost"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "item",
       "type": "SELECT",
-      "label": "Item",
+      "translations": {
+        "en": {
+          "label": "Item"
+        }
+      },
       "mandatory": false,
       "recordType": "item"
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "total",
       "type": "CURRENCY2",
-      "label": "Total",
+      "translations": {
+        "en": {
+          "label": "Total"
+        }
+      },
       "mandatory": false
     }
   ],
-  "subLists": {
-    "landedcostdata": [
-      {
-        "code": "amount",
-        "type": "POSCURRENCY",
-        "label": "Amount",
-        "mandatory": true
+  "subLists": [
+    {
+      "code": "landedcostdata",
+      "translations": {
+        "en": "Landed Cost"
       },
-      {
-        "code": "costcategory",
-        "type": "SELECT",
-        "label": "Cost Category",
-        "mandatory": true,
-        "recordType": null
-      }
-    ]
-  }
+      "fields": [
+        {
+          "code": "amount",
+          "type": "POSCURRENCY",
+          "translations": {
+            "en": {
+              "label": "Amount"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "costcategory",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Cost Category"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        }
+      ]
+    }
+  ]
 }

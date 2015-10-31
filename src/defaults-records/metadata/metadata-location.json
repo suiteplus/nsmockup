@@ -1,314 +1,508 @@
 {
   "code": "location",
   "id": -103,
-  "name": "Location",
+  "translations": {
+    "en": "Location"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "addr1",
       "type": "TEXT",
-      "label": "Address 1",
-      "mandatory": false,
-      "help": "Enter the address for this location the way it should appear on all forms."
+      "translations": {
+        "en": {
+          "label": "Address 1",
+          "help": "Enter the address for this location the way it should appear on all forms."
+        }
+      },
+      "mandatory": false
     },
     {
       "code": "addr2",
       "type": "TEXT",
-      "label": "Address 2",
-      "mandatory": false,
-      "help": "Enter an optional second address line for this location the way it should appear on all forms."
+      "translations": {
+        "en": {
+          "label": "Address 2",
+          "help": "Enter an optional second address line for this location the way it should appear on all forms."
+        }
+      },
+      "mandatory": false
     },
     {
       "code": "addr3",
       "type": "TEXT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "addr3"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "address",
       "type": "TEXTAREA",
-      "label": "Address",
+      "translations": {
+        "en": {
+          "label": "Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "address1",
       "type": "TEXT",
-      "label": "Address 1",
+      "translations": {
+        "en": {
+          "label": "Address 1"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "address2",
       "type": "TEXT",
-      "label": "Address 2",
+      "translations": {
+        "en": {
+          "label": "Address 2"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "address3",
       "type": "TEXT",
-      "label": "Address 3",
+      "translations": {
+        "en": {
+          "label": "Address 3"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "addressee",
       "type": "TEXT",
-      "label": "Addressee",
-      "mandatory": false,
-      "help": "Enter the company name for this location that should show on labels and transactions.This name appears under the name you enter in the Attention field."
+      "translations": {
+        "en": {
+          "label": "Addressee",
+          "help": "Enter the company name for this location that should show on labels and transactions.This name appears under the name you enter in the Attention field."
+        }
+      },
+      "mandatory": false
     },
     {
       "code": "addrphone",
       "type": "PHONE",
-      "label": "Phone",
+      "translations": {
+        "en": {
+          "label": "Phone"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "addrtext",
       "type": "ADDRESS",
-      "label": "Address",
+      "translations": {
+        "en": {
+          "label": "Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "attention",
       "type": "TEXT",
-      "label": "Attention",
-      "mandatory": false,
-      "help": "Enter the person at this address who should be notified of receipt of documents or goods."
+      "translations": {
+        "en": {
+          "label": "Attention",
+          "help": "Enter the person at this address who should be notified of receipt of documents or goods."
+        }
+      },
+      "mandatory": false
     },
     {
       "code": "city",
       "type": "TEXT",
-      "label": "City",
+      "translations": {
+        "en": {
+          "label": "City"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "country",
       "type": "TEXT",
-      "label": "Country",
+      "translations": {
+        "en": {
+          "label": "Country"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "county",
       "type": "TEXT",
-      "label": "County/State",
+      "translations": {
+        "en": {
+          "label": "County/State"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalidstring",
       "type": "TEXT",
-      "label": "External ID (Text)",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isinactive",
       "type": "CHECKBOX",
-      "label": "Inactive",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isoffice",
       "type": "CHECKBOX",
-      "label": "Staffed Location",
+      "translations": {
+        "en": {
+          "label": "Staffed Location"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "logo",
       "type": "SELECT",
-      "label": "Logo",
+      "translations": {
+        "en": {
+          "label": "Logo",
+          "help": "In order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
       "mandatory": false,
-      "help": "In order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
       "recordType": null
     },
     {
       "code": "makeinventoryavailable",
       "type": "CHECKBOX",
-      "label": "Make Inventory Available",
+      "translations": {
+        "en": {
+          "label": "Make Inventory Available"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "makeinventoryavailablestore",
       "type": "CHECKBOX",
-      "label": "Make Inventory Available in Web Store",
+      "translations": {
+        "en": {
+          "label": "Make Inventory Available in Web Store"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "namenohierarchy",
       "type": "TEXT",
-      "label": "Name (no hierarchy)",
+      "translations": {
+        "en": {
+          "label": "Name (no hierarchy)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "override",
       "type": "CHECKBOX",
-      "label": "Override",
-      "mandatory": false,
-      "help": "Set to TRUE in order to set a value for the addrText field."
+      "translations": {
+        "en": {
+          "label": "Override",
+          "help": "Set to TRUE in order to set a value for the addrText field."
+        }
+      },
+      "mandatory": false
     },
     {
       "code": "parent",
       "type": "SELECT",
-      "label": "Sublocation of",
+      "translations": {
+        "en": {
+          "label": "Sublocation of",
+          "help": "In order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
       "mandatory": false,
-      "help": "In order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide.",
       "recordType": null
     },
     {
       "code": "phone",
       "type": "PHONE",
-      "label": "Phone",
+      "translations": {
+        "en": {
+          "label": "Phone"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "returnaddr",
       "type": "ADDRESS",
-      "label": "Address",
+      "translations": {
+        "en": {
+          "label": "Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "returnaddress1",
       "type": "TEXT",
-      "label": "Address1",
+      "translations": {
+        "en": {
+          "label": "Address1"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "returnaddress2",
       "type": "TEXT",
-      "label": "Address2",
+      "translations": {
+        "en": {
+          "label": "Address2"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "returncity",
       "type": "TEXT",
-      "label": "City",
+      "translations": {
+        "en": {
+          "label": "City"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "returncountry",
       "type": "SELECT",
-      "label": "Country",
+      "translations": {
+        "en": {
+          "label": "Country"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "returnstate",
       "type": "SELECT",
-      "label": "State",
+      "translations": {
+        "en": {
+          "label": "State"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "returnzip",
       "type": "TEXT",
-      "label": "Zip",
+      "translations": {
+        "en": {
+          "label": "Zip"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "state",
       "type": "TEXT",
-      "label": "State/Province",
+      "translations": {
+        "en": {
+          "label": "State/Province"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "subsidiary",
       "type": "MULTISELECT",
-      "label": "Subsidiary",
+      "translations": {
+        "en": {
+          "label": "Subsidiary"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "tranprefix",
       "type": "TEXT",
-      "label": "Transaction Prefix",
+      "translations": {
+        "en": {
+          "label": "Transaction Prefix"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "zip",
       "type": "TEXT",
-      "label": "Zip",
+      "translations": {
+        "en": {
+          "label": "Zip"
+        }
+      },
       "mandatory": false
     }
   ],
   "tabs": [
     {
       "code": "addressbook",
-      "label": "Address"
+      "translations": {
+        "en": "Address"
+      }
     },
     {
       "code": "history",
-      "label": "System Notes"
+      "translations": {
+        "en": "System Notes"
+      }
     },
     {
       "code": "returnsaddrtab",
-      "label": "Return Address"
+      "translations": {
+        "en": "Return Address"
+      }
     },
     {
       "code": "translation",
-      "label": "Translation"
+      "translations": {
+        "en": "Translation"
+      }
     }
   ]
 }

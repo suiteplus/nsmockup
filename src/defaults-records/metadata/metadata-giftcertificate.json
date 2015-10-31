@@ -1,191 +1,313 @@
 {
   "code": "giftcertificate",
   "id": 0,
-  "name": "Gift Certificate",
+  "translations": {
+    "en": "Gift Certificate"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "amountavailablebilled",
       "type": "CURRENCY",
-      "label": "Amount Remaining (Billed)",
+      "translations": {
+        "en": {
+          "label": "Amount Remaining (Billed)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "amountremaining",
       "type": "CURRENCY",
-      "label": "Amount Available",
+      "translations": {
+        "en": {
+          "label": "Amount Available"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "amtavailbilled",
       "type": "CURRENCY",
-      "label": "Amount Available (Billed)",
+      "translations": {
+        "en": {
+          "label": "Amount Available (Billed)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "createddate",
       "type": "DATETIME",
-      "label": "Date Created",
+      "translations": {
+        "en": {
+          "label": "Date Created"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "email",
       "type": "TEXT",
-      "label": "To (Email)",
+      "translations": {
+        "en": {
+          "label": "To (Email)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "expirationdate",
       "type": "DATE",
-      "label": "Expiration Date",
+      "translations": {
+        "en": {
+          "label": "Expiration Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "gcactive",
       "type": "CHECKBOX",
-      "label": "Active",
+      "translations": {
+        "en": {
+          "label": "Active"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "giftcertcode",
       "type": "TEXT",
-      "label": "Gift Certificate Code",
+      "translations": {
+        "en": {
+          "label": "Gift Certificate Code"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "incomeaccount",
       "type": "SELECT",
-      "label": "Income Account",
+      "translations": {
+        "en": {
+          "label": "Income Account"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "incomeacct",
       "type": "TEXT",
-      "label": "Income Account",
+      "translations": {
+        "en": {
+          "label": "Income Account"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isactive",
       "type": "CHECKBOX",
-      "label": "Active",
+      "translations": {
+        "en": {
+          "label": "Active"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "item",
       "type": "SELECT",
-      "label": "Item",
+      "translations": {
+        "en": {
+          "label": "Item"
+        }
+      },
       "mandatory": false,
       "recordType": "item"
     },
     {
       "code": "lastmodifieddate",
       "type": "DATETIME",
-      "label": "Last Modified Date",
+      "translations": {
+        "en": {
+          "label": "Last Modified Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "liabilityaccount",
       "type": "SELECT",
-      "label": "Liability Account",
+      "translations": {
+        "en": {
+          "label": "Liability Account"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "liabilityacct",
       "type": "TEXT",
-      "label": "Liability Account",
+      "translations": {
+        "en": {
+          "label": "Liability Account"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "message",
       "type": "TEXT",
-      "label": "Gift Message",
+      "translations": {
+        "en": {
+          "label": "Gift Message"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "To (Name)",
+      "translations": {
+        "en": {
+          "label": "To (Name)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "originalamount",
       "type": "CURRENCY",
-      "label": "Amount",
+      "translations": {
+        "en": {
+          "label": "Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "purchasedate",
       "type": "DATE",
-      "label": "Purchase Date",
+      "translations": {
+        "en": {
+          "label": "Purchase Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "sender",
       "type": "TEXT",
-      "label": "From (Name)",
+      "translations": {
+        "en": {
+          "label": "From (Name)"
+        }
+      },
       "mandatory": false
     }
   ]

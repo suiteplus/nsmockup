@@ -1,49 +1,69 @@
 {
   "code": "file",
   "id": 0,
-  "name": "File",
+  "translations": {
+    "en": "File"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "name",
-      "id": 0,
-      "desc": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "type": "STRING",
       "mandatory": true
     },
     {
       "code": "path",
-      "id": 0,
-      "desc": "Path",
+      "translations": {
+        "en": {
+          "label": "Path"
+        }
+      },
       "type": "STRING",
       "mandatory": true
     },
     {
       "code": "filetype",
-      "id": 0,
-      "desc": "File Type",
+      "translations": {
+        "en": {
+          "label": "File Type"
+        }
+      },
       "type": "STRING",
       "mandatory": true
     },
     {
       "code": "folder",
-      "id": 0,
-      "desc": "Folder",
+      "translations": {
+        "en": {
+          "label": "Folder"
+        }
+      },
       "type": "SELECT",
       "mandatory": true,
       "recordType": "folder"
     },
     {
       "code": "encoding",
-      "id": 0,
-      "desc": "Encoding",
+      "translations": {
+        "en": {
+          "label": "Encoding"
+        }
+      },
       "type": "STRING",
       "mandatory": true
     },
     {
       "code": "isinactive",
-      "id": 0,
-      "desc": "Inactive",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
       "type": "CHECKBOX",
       "mandatory": false,
       "default": true

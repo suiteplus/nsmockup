@@ -1,57 +1,91 @@
 {
   "code": "taxacct",
   "id": 0,
-  "name": "Tax Account",
+  "translations": {
+    "en": "Tax Account"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "country",
       "type": "TEXT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "country"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "description",
       "type": "TEXT",
-      "label": "Description",
-      "mandatory": false,
-      "help": "Enter a description for this account."
+      "translations": {
+        "en": {
+          "label": "Description",
+          "help": "Enter a description for this account."
+        }
+      },
+      "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isinactive",
       "type": "CHECKBOX",
-      "label": "Inactive",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
-      "mandatory": true,
-      "help": "Enter a name for this account."
+      "translations": {
+        "en": {
+          "label": "Name",
+          "help": "Enter a name for this account."
+        }
+      },
+      "mandatory": true
     },
     {
       "code": "nexus",
       "type": "TEXT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "nexus"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "taxaccttype",
       "type": "SELECT",
-      "label": "Tax Account Type",
+      "translations": {
+        "en": {
+          "label": "Tax Account Type"
+        }
+      },
       "mandatory": true,
       "recordType": null
     }

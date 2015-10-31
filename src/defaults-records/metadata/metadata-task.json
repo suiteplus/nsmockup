@@ -1,540 +1,870 @@
 {
   "code": "task",
   "id": -21,
-  "name": "Task",
+  "translations": {
+    "en": "Task"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "accesslevel",
       "type": "TEXT",
-      "label": "Private",
+      "translations": {
+        "en": {
+          "label": "Private"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "actualtime",
       "type": "FLOAT",
-      "label": "Actual Work",
+      "translations": {
+        "en": {
+          "label": "Actual Work"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "assigned",
       "type": "SELECT",
-      "label": "Assigned To",
+      "translations": {
+        "en": {
+          "label": "Assigned To",
+          "help": "References an entity record that already exists in your account.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation."
+        }
+      },
       "mandatory": true,
-      "help": "References an entity record that already exists in your account.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation.",
       "recordType": null
     },
     {
       "code": "company",
       "type": "SELECT",
-      "label": "Company",
+      "translations": {
+        "en": {
+          "label": "Company",
+          "help": "References a company record that already exists in your account.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation."
+        }
+      },
       "mandatory": false,
-      "help": "References a company record that already exists in your account.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation.",
       "recordType": null
     },
     {
       "code": "companycustomer",
       "type": "SELECT",
-      "label": "Company (Customer)",
+      "translations": {
+        "en": {
+          "label": "Company (Customer)"
+        }
+      },
       "mandatory": false,
       "recordType": "customer"
     },
     {
       "code": "completeddate",
       "type": "DATE",
-      "label": "Date Completed",
+      "translations": {
+        "en": {
+          "label": "Date Completed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "contact",
       "type": "SELECT",
-      "label": "Contact",
+      "translations": {
+        "en": {
+          "label": "Contact",
+          "help": "References a contact record that already exists in your account.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation."
+        }
+      },
       "mandatory": false,
-      "help": "References a contact record that already exists in your account.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation.",
       "recordType": "contact"
     },
     {
       "code": "createddate",
       "type": "DATETIME",
-      "label": "Date Created",
+      "translations": {
+        "en": {
+          "label": "Date Created"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "customform",
       "type": "SELECT",
-      "label": "Custom Form",
+      "translations": {
+        "en": {
+          "label": "Custom Form"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "duedate",
       "type": "DATE",
-      "label": "Due Date",
+      "translations": {
+        "en": {
+          "label": "Due Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "employee",
       "type": "SELECT",
-      "label": "Employee",
+      "translations": {
+        "en": {
+          "label": "Employee"
+        }
+      },
       "mandatory": false,
       "recordType": "employee"
     },
     {
       "code": "enddate",
       "type": "DATE",
-      "label": "Due date",
+      "translations": {
+        "en": {
+          "label": "Due date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "endtime",
       "type": "TIMEOFDAY",
-      "label": "End Time",
+      "translations": {
+        "en": {
+          "label": "End Time"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "endtimepicker",
       "type": "SELECT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "endtimepicker"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "estimatedtime",
       "type": "FLOAT",
-      "label": "Initial Time Budget",
+      "translations": {
+        "en": {
+          "label": "Initial Time Budget"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estimatedtimeoverride",
       "type": "FLOAT",
-      "label": "Current Time Budget",
+      "translations": {
+        "en": {
+          "label": "Current Time Budget"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalidstring",
       "type": "TEXT",
-      "label": "External ID (Text)",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "group",
       "type": "TEXT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "group"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isjobsummarytask",
       "type": "CHECKBOX",
-      "label": "Is Job Summary Task",
+      "translations": {
+        "en": {
+          "label": "Is Job Summary Task"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isjobtask",
       "type": "CHECKBOX",
-      "label": "Is Job Task",
+      "translations": {
+        "en": {
+          "label": "Is Job Task"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isprivate",
       "type": "CHECKBOX",
-      "label": "Is Private",
+      "translations": {
+        "en": {
+          "label": "Is Private"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "job",
       "type": "SELECT",
-      "label": "Job",
+      "translations": {
+        "en": {
+          "label": "Job"
+        }
+      },
       "mandatory": false,
       "recordType": "job"
     },
     {
       "code": "lastmodifieddate",
       "type": "DATETIME",
-      "label": "Last Modified",
+      "translations": {
+        "en": {
+          "label": "Last Modified"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "lastviewed",
       "type": "DATETIME",
-      "label": "Last Viewed",
+      "translations": {
+        "en": {
+          "label": "Last Viewed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "markdone",
       "type": "TEXT",
-      "label": "Mark",
+      "translations": {
+        "en": {
+          "label": "Mark"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "message",
       "type": "TEXT",
-      "label": "Comment",
+      "translations": {
+        "en": {
+          "label": "Comment"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "milestone",
       "type": "INTEGER",
-      "label": "Milestone",
+      "translations": {
+        "en": {
+          "label": "Milestone"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "order",
       "type": "INTEGER",
-      "label": "Insert",
+      "translations": {
+        "en": {
+          "label": "Insert"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "owner",
       "type": "TEXT",
-      "label": "Created By",
-      "mandatory": true,
-      "help": "References an entity record that already exists in your account. The field defaults to the current user.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation."
+      "translations": {
+        "en": {
+          "label": "Created By",
+          "help": "References an entity record that already exists in your account. The field defaults to the current user.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation."
+        }
+      },
+      "mandatory": true
     },
     {
       "code": "parent",
       "type": "SELECT",
-      "label": "Parent Task",
+      "translations": {
+        "en": {
+          "label": "Parent Task",
+          "help": "Select the parent task if this task is the subordinate of another.\nNote: By identifying this task as a subordinate, the parent task becomes a summary task. A summary task cannot have resources assigned to it because it does not track work, it only tracks information about subordinate tasks."
+        }
+      },
       "mandatory": false,
-      "help": "Select the parent task if this task is the subordinate of another.\nNote: By identifying this task as a subordinate, the parent task becomes a summary task. A summary task cannot have resources assigned to it because it does not track work, it only tracks information about subordinate tasks.",
       "recordType": null
     },
     {
       "code": "percentcomplete",
       "type": "PERCENT",
-      "label": "Pct Complete",
+      "translations": {
+        "en": {
+          "label": "Pct Complete"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "percenttimecomplete",
       "type": "PERCENT",
-      "label": "Percent Time Complete",
+      "translations": {
+        "en": {
+          "label": "Percent Time Complete"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "priority",
       "type": "SELECT",
-      "label": "Priority",
+      "translations": {
+        "en": {
+          "label": "Priority",
+          "help": "The values used to populate this field are _low, _medium or _high."
+        }
+      },
       "mandatory": true,
-      "help": "The values used to populate this field are _low, _medium or _high.",
       "recordType": null
     },
     {
       "code": "reminderminutes",
       "type": "SELECT",
-      "label": "Reminder",
+      "translations": {
+        "en": {
+          "label": "Reminder"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "remindertype",
       "type": "SELECT",
-      "label": "Reminder Type",
+      "translations": {
+        "en": {
+          "label": "Reminder Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "sendemail",
       "type": "CHECKBOX",
-      "label": "Notify Assignee by Email",
+      "translations": {
+        "en": {
+          "label": "Notify Assignee by Email"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "startdate",
       "type": "DATE",
-      "label": "Start Date",
+      "translations": {
+        "en": {
+          "label": "Start Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "starttime",
       "type": "TIMEOFDAY",
-      "label": "Start Time",
+      "translations": {
+        "en": {
+          "label": "Start Time"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "starttimepicker",
       "type": "SELECT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "starttimepicker"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "status",
       "type": "SELECT",
-      "label": "Status",
+      "translations": {
+        "en": {
+          "label": "Status",
+          "help": "The values used to populate this field are _notStarted, _inProgress or _completed."
+        }
+      },
       "mandatory": true,
-      "help": "The values used to populate this field are _notStarted, _inProgress or _completed.",
       "recordType": null
     },
     {
       "code": "supportcase",
       "type": "SELECT",
-      "label": "Support Case",
+      "translations": {
+        "en": {
+          "label": "Support Case"
+        }
+      },
       "mandatory": false,
       "recordType": "supportcase"
     },
     {
       "code": "timedevent",
       "type": "CHECKBOX",
-      "label": "Reserve Time",
+      "translations": {
+        "en": {
+          "label": "Reserve Time"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "timeremaining",
       "type": "FLOAT",
-      "label": "Remaining Work",
+      "translations": {
+        "en": {
+          "label": "Remaining Work"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "timezone",
       "type": "TEXT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "timezone"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "title",
       "type": "TEXT",
-      "label": "Task Title",
+      "translations": {
+        "en": {
+          "label": "Task Title"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "transaction",
       "type": "SELECT",
-      "label": "Transaction",
+      "translations": {
+        "en": {
+          "label": "Transaction",
+          "help": "References an opportunity record that already exists in your account.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation."
+        }
+      },
       "mandatory": false,
-      "help": "References an opportunity record that already exists in your account.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation.",
       "recordType": "transaction"
     }
   ],
-  "subLists": {
-    "timeitem": [
-      {
-        "code": "class",
-        "type": "SELECT",
-        "label": "Class",
-        "mandatory": false,
-        "recordType": null
+  "subLists": [
+    {
+      "code": "timeitem",
+      "translations": {
+        "en": "Time Tracking"
       },
-      {
-        "code": "customer",
-        "type": "SELECT",
-        "label": "Customer:Project",
-        "mandatory": false,
-        "recordType": "customer"
-      },
-      {
-        "code": "department",
-        "type": "SELECT",
-        "label": "Department",
-        "mandatory": false,
-        "recordType": "department"
-      },
-      {
-        "code": "employee",
-        "type": "SELECT",
-        "label": "Employee",
-        "mandatory": true,
-        "recordType": "employee"
-      },
-      {
-        "code": "hours",
-        "type": "TIMETRACK",
-        "label": "Duration",
-        "mandatory": true
-      },
-      {
-        "code": "id",
-        "type": "INTEGER",
-        "label": "",
-        "mandatory": false
-      },
-      {
-        "code": "isbillable",
-        "type": "CHECKBOX",
-        "label": "Billable",
-        "mandatory": false
-      },
-      {
-        "code": "isexempt",
-        "type": "TEXT",
-        "label": "",
-        "mandatory": false
-      },
-      {
-        "code": "isproductive",
-        "type": "TEXT",
-        "label": "",
-        "mandatory": false
-      },
-      {
-        "code": "isutilized",
-        "type": "TEXT",
-        "label": "",
-        "mandatory": false
-      },
-      {
-        "code": "item",
-        "type": "SELECT",
-        "label": "Service Item",
-        "mandatory": false,
-        "recordType": "item"
-      },
-      {
-        "code": "jobbillingtype",
-        "type": "TEXT",
-        "label": "",
-        "mandatory": false
-      },
-      {
-        "code": "location",
-        "type": "SELECT",
-        "label": "Location",
-        "mandatory": true,
-        "recordType": "location"
-      },
-      {
-        "code": "memo",
-        "type": "TEXTAREA",
-        "label": "Memo",
-        "mandatory": false
-      },
-      {
-        "code": "overriderate",
-        "type": "CHECKBOX",
-        "label": "Lock this Rate",
-        "mandatory": false
-      },
-      {
-        "code": "payrollitem",
-        "type": "SELECT",
-        "label": "Payroll Item",
-        "mandatory": false,
-        "recordType": "payrollitem"
-      },
-      {
-        "code": "price",
-        "type": "SELECT",
-        "label": "Price Level",
-        "mandatory": false,
-        "recordType": "pricelevel"
-      },
-      {
-        "code": "rate",
-        "type": "CURRENCY2",
-        "label": "Rate",
-        "mandatory": false
-      },
-      {
-        "code": "timetype",
-        "type": "SELECT",
-        "label": "Type",
-        "mandatory": false,
-        "recordType": null
-      },
-      {
-        "code": "trandate",
-        "type": "DATE",
-        "label": "Date",
-        "mandatory": true
-      }
-    ]
-  },
+      "fields": [
+        {
+          "code": "class",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Class"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "customer",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Customer:Project"
+            }
+          },
+          "mandatory": false,
+          "recordType": "customer"
+        },
+        {
+          "code": "department",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Department"
+            }
+          },
+          "mandatory": false,
+          "recordType": "department"
+        },
+        {
+          "code": "employee",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Employee"
+            }
+          },
+          "mandatory": true,
+          "recordType": "employee"
+        },
+        {
+          "code": "hours",
+          "type": "TIMETRACK",
+          "translations": {
+            "en": {
+              "label": "Duration"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "id",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "id"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isbillable",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Billable"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isexempt",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "isexempt"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isproductive",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "isproductive"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isutilized",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "isutilized"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "item",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Service Item"
+            }
+          },
+          "mandatory": false,
+          "recordType": "item"
+        },
+        {
+          "code": "jobbillingtype",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "jobbillingtype"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "location",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Location"
+            }
+          },
+          "mandatory": true,
+          "recordType": "location"
+        },
+        {
+          "code": "memo",
+          "type": "TEXTAREA",
+          "translations": {
+            "en": {
+              "label": "Memo"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "overriderate",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Lock this Rate"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "payrollitem",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Payroll Item"
+            }
+          },
+          "mandatory": false,
+          "recordType": "payrollitem"
+        },
+        {
+          "code": "price",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Price Level"
+            }
+          },
+          "mandatory": false,
+          "recordType": "pricelevel"
+        },
+        {
+          "code": "rate",
+          "type": "CURRENCY2",
+          "translations": {
+            "en": {
+              "label": "Rate"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "timetype",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Type"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "trandate",
+          "type": "DATE",
+          "translations": {
+            "en": {
+              "label": "Date"
+            }
+          },
+          "mandatory": true
+        }
+      ]
+    }
+  ],
   "tabs": [
     {
       "code": "communication",
-      "label": "Communication"
+      "translations": {
+        "en": "Communication"
+      }
     },
     {
       "code": "contacts",
-      "label": "Contacts"
+      "translations": {
+        "en": "Contacts"
+      }
     },
     {
       "code": "custom",
-      "label": "Custom"
+      "translations": {
+        "en": "Custom"
+      }
     },
     {
       "code": "history",
-      "label": "History"
+      "translations": {
+        "en": "History"
+      }
     },
     {
       "code": "icalendar",
-      "label": "Availability"
+      "translations": {
+        "en": "Availability"
+      }
     },
     {
       "code": "media",
-      "label": "File Cabinet"
+      "translations": {
+        "en": "File Cabinet"
+      }
     },
     {
       "code": "relatedinfo",
-      "label": "Related Info"
+      "translations": {
+        "en": "Related Info"
+      }
     },
     {
       "code": "time",
-      "label": "Time"
+      "translations": {
+        "en": "Time"
+      }
     },
     {
       "code": "workflow",
-      "label": "Workflow"
+      "translations": {
+        "en": "Workflow"
+      }
     }
   ]
 }

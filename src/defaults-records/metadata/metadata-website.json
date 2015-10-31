@@ -1,1034 +1,1704 @@
 {
   "code": "website",
   "id": -268,
-  "name": "Website",
+  "translations": {
+    "en": "Website"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "analyticsclickattributes",
       "type": "TEXTAREA",
-      "label": "Analytics Click Attributes",
+      "translations": {
+        "en": {
+          "label": "Analytics Click Attributes"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "analyticssubmitattributes",
       "type": "TEXTAREA",
-      "label": "Analytics Submit Attributes",
+      "translations": {
+        "en": {
+          "label": "Analytics Submit Attributes"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "autodownloadmedia",
       "type": "CHECKBOX",
-      "label": "Automatically download published site media items",
+      "translations": {
+        "en": {
+          "label": "Automatically download published site media items"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "cartdisplayorder",
       "type": "SELECT",
-      "label": "Display Order of Cart Items",
+      "translations": {
+        "en": {
+          "label": "Display Order of Cart Items"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "cartupsellitems",
       "type": "SELECT",
-      "label": "Items to Upsell in Cart",
+      "translations": {
+        "en": {
+          "label": "Items to Upsell in Cart"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "categorylistlayout",
       "type": "SELECT",
-      "label": "Default Category List Layout",
+      "translations": {
+        "en": {
+          "label": "Default Category List Layout"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "ccformtemplate",
       "type": "SELECT",
-      "label": "Credit Card Form",
+      "translations": {
+        "en": {
+          "label": "Credit Card Form"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "ccrequireauth",
       "type": "CHECKBOX",
-      "label": "Require Authorization for Credit Card Transactions",
+      "translations": {
+        "en": {
+          "label": "Require Authorization for Credit Card Transactions"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "checkoutdomain",
       "type": "SELECT",
-      "label": "Checkout URL",
+      "translations": {
+        "en": {
+          "label": "Checkout URL"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "colorset",
       "type": "SELECT",
-      "label": "Web Site Color Theme",
+      "translations": {
+        "en": {
+          "label": "Web Site Color Theme"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "confpagetrackinghtml",
       "type": "TEXTAREA",
-      "label": "Order Tracking Script HTML",
+      "translations": {
+        "en": {
+          "label": "Order Tracking Script HTML"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "cookiepolicy",
       "type": "SELECT",
-      "label": "Cookie Policy",
+      "translations": {
+        "en": {
+          "label": "Cookie Policy"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "createcustomersascompanies",
       "type": "CHECKBOX",
-      "label": "Create Customers as Companies",
+      "translations": {
+        "en": {
+          "label": "Create Customers as Companies"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "custromeregistrationtype",
       "type": "SELECT",
-      "label": "Customer registration is",
+      "translations": {
+        "en": {
+          "label": "Customer registration is"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "defaultcustomercategory",
       "type": "SELECT",
-      "label": "Default Customer Category",
+      "translations": {
+        "en": {
+          "label": "Default Customer Category"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "defaulthostingroot",
       "type": "SELECT",
-      "label": "Default Hosting Root",
+      "translations": {
+        "en": {
+          "label": "Default Hosting Root"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "defaultshippingcountry",
       "type": "SELECT",
-      "label": "Default Shipping Country for Checkout",
+      "translations": {
+        "en": {
+          "label": "Default Shipping Country for Checkout"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "defaultshippingmethod",
       "type": "SELECT",
-      "label": "Default Web Site Shipping Method",
+      "translations": {
+        "en": {
+          "label": "Default Web Site Shipping Method"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "descriptionfontsize",
       "type": "POSINTEGER",
-      "label": "Description Font Size",
+      "translations": {
+        "en": {
+          "label": "Description Font Size"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "displaycompanyfield",
       "type": "CHECKBOX",
-      "label": "Display Company Field on Registration Page",
+      "translations": {
+        "en": {
+          "label": "Display Company Field on Registration Page"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "displayname",
       "type": "TEXT",
-      "label": "Display Name",
+      "translations": {
+        "en": {
+          "label": "Display Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "displayunsubscribe",
       "type": "CHECKBOX",
-      "label": "Display Unsubscribe to Email Checkbox on Registration Page",
+      "translations": {
+        "en": {
+          "label": "Display Unsubscribe to Email Checkbox on Registration Page"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "doctypehtml",
       "type": "TEXTAREA",
-      "label": "Document Type",
+      "translations": {
+        "en": {
+          "label": "Document Type"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "emailfooter",
       "type": "TEXTAREA",
-      "label": "Footer Text",
+      "translations": {
+        "en": {
+          "label": "Footer Text"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "emailheader",
       "type": "TEXTAREA",
-      "label": "Header Text",
+      "translations": {
+        "en": {
+          "label": "Header Text"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "enablegaintegration",
       "type": "CHECKBOX",
-      "label": "Enable Google Analytics Integration",
+      "translations": {
+        "en": {
+          "label": "Enable Google Analytics Integration"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "font",
       "type": "SELECT",
-      "label": "Web Site Font",
+      "translations": {
+        "en": {
+          "label": "Web Site Font"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "gconotificationurl",
       "type": "TEXT",
-      "label": "Google Notification URL",
+      "translations": {
+        "en": {
+          "label": "Google Notification URL"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "giftcerteaffectsminamount",
       "type": "CHECKBOX",
-      "label": "Gift Certificate Affects Minimum Order Amount",
+      "translations": {
+        "en": {
+          "label": "Gift Certificate Affects Minimum Order Amount"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "hidepaymentpagewhennobalance",
       "type": "CHECKBOX",
-      "label": "Hide payment page if order total equals zero",
+      "translations": {
+        "en": {
+          "label": "Hide payment page if order total equals zero"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "igniteedition",
       "type": "SELECT",
-      "label": "Type",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "includeuncategorizeditems",
       "type": "CHECKBOX",
-      "label": "Show Uncategorized Items",
+      "translations": {
+        "en": {
+          "label": "Show Uncategorized Items"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "includevatwithprices",
       "type": "CHECKBOX",
-      "label": "Prices Include Tax",
+      "translations": {
+        "en": {
+          "label": "Prices Include Tax"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalname",
       "type": "TEXT",
-      "label": "Internal Name",
+      "translations": {
+        "en": {
+          "label": "Internal Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "invoiceformtemplate",
       "type": "SELECT",
-      "label": "Invoice Form",
+      "translations": {
+        "en": {
+          "label": "Invoice Form"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "isscriptablecartandcheckout",
       "type": "CHECKBOX",
-      "label": "Scriptable Cart and Checkout",
+      "translations": {
+        "en": {
+          "label": "Scriptable Cart and Checkout"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "iswebstoreoffline",
       "type": "CHECKBOX",
-      "label": "Take Web Site Offline for Maintenance",
+      "translations": {
+        "en": {
+          "label": "Take Web Site Offline for Maintenance"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "iswsdk",
       "type": "CHECKBOX",
-      "label": "WSDK",
+      "translations": {
+        "en": {
+          "label": "WSDK"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "itemlistlayout",
       "type": "SELECT",
-      "label": "Default Item List Layout",
+      "translations": {
+        "en": {
+          "label": "Default Item List Layout"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "itemtemplateaccountingtitem",
       "type": "SELECT",
-      "label": "Default Item Drilldown Template",
+      "translations": {
+        "en": {
+          "label": "Default Item Drilldown Template"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "itemtemplateinformationitem",
       "type": "SELECT",
-      "label": "Default Info Item Drilldown Template",
+      "translations": {
+        "en": {
+          "label": "Default Info Item Drilldown Template"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "legacycategorydescriptions",
       "type": "CHECKBOX",
-      "label": "Legacy Category Descriptions",
+      "translations": {
+        "en": {
+          "label": "Legacy Category Descriptions"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "legacydenselistsupport",
       "type": "CHECKBOX",
-      "label": "Legacy Dense List Layout",
+      "translations": {
+        "en": {
+          "label": "Legacy Dense List Layout"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "legacyimageattributetags",
       "type": "CHECKBOX",
-      "label": "Legacy Tag Support for Images",
+      "translations": {
+        "en": {
+          "label": "Legacy Tag Support for Images"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "legacynavigationlinks",
       "type": "CHECKBOX",
-      "label": "Legacy Navigation Style",
+      "translations": {
+        "en": {
+          "label": "Legacy Navigation Style"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "legacywelcomepage",
       "type": "CHECKBOX",
-      "label": "Legacy Welcome Page Style",
+      "translations": {
+        "en": {
+          "label": "Legacy Welcome Page Style"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "nameorig",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "noactivatetabonhostedpages",
       "type": "CHECKBOX",
-      "label": "Don't Activate Hosted Page Tabs",
+      "translations": {
+        "en": {
+          "label": "Don't Activate Hosted Page Tabs"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "onlinepricelevel",
       "type": "SELECT",
-      "label": "Price Level",
+      "translations": {
+        "en": {
+          "label": "Price Level"
+        }
+      },
       "mandatory": true,
       "recordType": "pricelevel"
     },
     {
       "code": "outofstockitems",
       "type": "SELECT",
-      "label": "Web Store Out Of Stock Items",
+      "translations": {
+        "en": {
+          "label": "Web Store Out Of Stock Items"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "outputlinebreaksasbr",
       "type": "CHECKBOX",
-      "label": "Output Line Breaks as &lt;br&gt;",
+      "translations": {
+        "en": {
+          "label": "Output Line Breaks as &lt;br&gt;"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "pagealign",
       "type": "SELECT",
-      "label": "Page Alignment",
+      "translations": {
+        "en": {
+          "label": "Page Alignment"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "pagewidth",
       "type": "TEXT",
-      "label": "Page Width",
+      "translations": {
+        "en": {
+          "label": "Page Width"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "pagezoom",
       "type": "SELECT",
-      "label": "Zoom",
+      "translations": {
+        "en": {
+          "label": "Zoom"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "passpromocodetocheckout",
       "type": "CHECKBOX",
-      "label": "Pass URL Promotion Code to Checkout",
+      "translations": {
+        "en": {
+          "label": "Pass URL Promotion Code to Checkout"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "relateditemsdescription",
       "type": "TEXT",
-      "label": "Related Items",
+      "translations": {
+        "en": {
+          "label": "Related Items"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "relateditemslayout",
       "type": "SELECT",
-      "label": "Default Related Items Layout",
+      "translations": {
+        "en": {
+          "label": "Default Related Items Layout"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "requestshippingaddressfirst",
       "type": "CHECKBOX",
-      "label": "Ask For Shipping Address First",
+      "translations": {
+        "en": {
+          "label": "Ask For Shipping Address First"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "requirecompanyfield",
       "type": "CHECKBOX",
-      "label": "Mandatory",
+      "translations": {
+        "en": {
+          "label": "Mandatory"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "requireloginforpricing",
       "type": "CHECKBOX",
-      "label": "Require Login For Pricing",
+      "translations": {
+        "en": {
+          "label": "Require Login For Pricing"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "requireshippinginformation",
       "type": "CHECKBOX",
-      "label": "Shipping Information is Required",
+      "translations": {
+        "en": {
+          "label": "Shipping Information is Required"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "requiretermsandconditions",
       "type": "CHECKBOX",
-      "label": "Require Terms and Conditions",
+      "translations": {
+        "en": {
+          "label": "Require Terms and Conditions"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "salesordertype",
       "type": "SELECT",
-      "label": "Sales Order Type",
+      "translations": {
+        "en": {
+          "label": "Sales Order Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "savecreditinfo",
       "type": "CHECKBOX",
-      "label": "Save Credit Card Info by Default",
+      "translations": {
+        "en": {
+          "label": "Save Credit Card Info by Default"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "scripttemplatecreditcard",
       "type": "SELECT",
-      "label": "Scripting Template (Credit Card)",
+      "translations": {
+        "en": {
+          "label": "Scripting Template (Credit Card)"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "scripttemplateinvoice",
       "type": "SELECT",
-      "label": "Scripting Template (Invoice)",
+      "translations": {
+        "en": {
+          "label": "Scripting Template (Invoice)"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "searchcategorylistlayout",
       "type": "SELECT",
-      "label": "Category List Layout",
+      "translations": {
+        "en": {
+          "label": "Category List Layout"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "searchforcategories",
       "type": "CHECKBOX",
-      "label": "Include Categories",
+      "translations": {
+        "en": {
+          "label": "Include Categories"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "searchforinformationitems",
       "type": "CHECKBOX",
-      "label": "Include Information Items",
+      "translations": {
+        "en": {
+          "label": "Include Information Items"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "searchformitemlistlayout",
       "type": "SELECT",
-      "label": "Item List Layout",
+      "translations": {
+        "en": {
+          "label": "Item List Layout"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "searchitemlistlayout",
       "type": "SELECT",
-      "label": "Item List Layout",
+      "translations": {
+        "en": {
+          "label": "Item List Layout"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "searchlinkform",
       "type": "SELECT",
-      "label": "Search Link Form",
+      "translations": {
+        "en": {
+          "label": "Search Link Form"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "searchportletdisplay",
       "type": "RADIO",
-      "label": "Global Search",
+      "translations": {
+        "en": {
+          "label": "Global Search"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "searchportletform",
       "type": "SELECT",
-      "label": "Search Portlet Form",
+      "translations": {
+        "en": {
+          "label": "Search Portlet Form"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "searchresultforinvalidurls",
       "type": "CHECKBOX",
-      "label": "Return Invalid URLs as Search Results",
+      "translations": {
+        "en": {
+          "label": "Return Invalid URLs as Search Results"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "semailaddrforerror",
       "type": "EMAILS",
-      "label": "Email To",
+      "translations": {
+        "en": {
+          "label": "Email To"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipstoallcountries",
       "type": "CHECKBOX",
-      "label": "Web Store Ships to all countries",
+      "translations": {
+        "en": {
+          "label": "Web Store Ships to all countries"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipstocountries",
       "type": "SELECT",
-      "label": "Countries Web Store Ships To",
+      "translations": {
+        "en": {
+          "label": "Countries Web Store Ships To"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "showbillingaddress",
       "type": "CHECKBOX",
-      "label": "Display Billing Address",
+      "translations": {
+        "en": {
+          "label": "Display Billing Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "showcartsummaryportlet",
       "type": "CHECKBOX",
-      "label": "Show Cart Summary",
+      "translations": {
+        "en": {
+          "label": "Show Cart Summary"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "showcookieconsentbanner",
       "type": "CHECKBOX",
-      "label": "Show Cookie Consent Banner",
+      "translations": {
+        "en": {
+          "label": "Show Cookie Consent Banner"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "showcurrencyportlet",
       "type": "CHECKBOX",
-      "label": "Show Web Site Currency",
+      "translations": {
+        "en": {
+          "label": "Show Web Site Currency"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "showextendedcart",
       "type": "CHECKBOX",
-      "label": "Show Extended Cart",
+      "translations": {
+        "en": {
+          "label": "Show Extended Cart"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shownavigationportlet",
       "type": "CHECKBOX",
-      "label": "Show Navigation Portlet",
+      "translations": {
+        "en": {
+          "label": "Show Navigation Portlet"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "showordertrackinglink",
       "type": "CHECKBOX",
-      "label": "Display Order Tracking Link",
+      "translations": {
+        "en": {
+          "label": "Display Order Tracking Link"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "showpofieldonpayment",
       "type": "CHECKBOX",
-      "label": "Display Purchase Order Field on Payment Info Page",
+      "translations": {
+        "en": {
+          "label": "Display Purchase Order Field on Payment Info Page"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "showquantitypricinginlists",
       "type": "CHECKBOX",
-      "label": "Show Quantity Pricing in Lists",
+      "translations": {
+        "en": {
+          "label": "Show Quantity Pricing in Lists"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "showsavecreditinfo",
       "type": "CHECKBOX",
-      "label": "Display 'Save My Credit Card Info' Field",
+      "translations": {
+        "en": {
+          "label": "Display 'Save My Credit Card Info' Field"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "showsearchportlet",
       "type": "CHECKBOX",
-      "label": "Show Search",
+      "translations": {
+        "en": {
+          "label": "Show Search"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "showshippingestimator",
       "type": "CHECKBOX",
-      "label": "Show Shipping Estimator in Cart",
+      "translations": {
+        "en": {
+          "label": "Show Shipping Estimator in Cart"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "showtellafriendlink",
       "type": "CHECKBOX",
-      "label": "Show \"Tell a Friend\" Link",
+      "translations": {
+        "en": {
+          "label": "Show \"Tell a Friend\" Link"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "siteloginrequired",
       "type": "CHECKBOX",
-      "label": "Password-Protect Entire Site",
+      "translations": {
+        "en": {
+          "label": "Password-Protect Entire Site"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "siteportletstyle",
       "type": "SELECT",
-      "label": "Site Portlet Style",
+      "translations": {
+        "en": {
+          "label": "Site Portlet Style"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "sitetabalignment",
       "type": "SELECT",
-      "label": "Site Tab Alignment",
+      "translations": {
+        "en": {
+          "label": "Site Tab Alignment"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "sitetabstyle",
       "type": "SELECT",
-      "label": "Site Tab Style",
+      "translations": {
+        "en": {
+          "label": "Site Tab Style"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "siteusescarttags",
       "type": "CHECKBOX",
-      "label": "Site Uses Cart Summary Tags",
+      "translations": {
+        "en": {
+          "label": "Site Uses Cart Summary Tags"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "siteusesdropshadows",
       "type": "CHECKBOX",
-      "label": "Site Uses Drop Shadows",
+      "translations": {
+        "en": {
+          "label": "Site Uses Drop Shadows"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "sstoreemailaddrforcopy",
       "type": "EMAILS",
-      "label": "Email To",
+      "translations": {
+        "en": {
+          "label": "Email To"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "sstoreemailaddrforgiftconfcopy",
       "type": "EMAILS",
-      "label": "Email To",
+      "translations": {
+        "en": {
+          "label": "Email To"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "sstoreemailaddrforgiftcopy",
       "type": "EMAILS",
-      "label": "Email To",
+      "translations": {
+        "en": {
+          "label": "Email To"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "storealias",
       "type": "TEXT",
-      "label": "http://devbox6.corp.netsuite.com/",
+      "translations": {
+        "en": {
+          "label": "http://devbox6.corp.netsuite.com/"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "storeemail",
       "type": "EMAIL",
-      "label": "Default Web Store Email From Address",
+      "translations": {
+        "en": {
+          "label": "Default Web Store Email From Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "termsandconditionshtml",
       "type": "TEXTAREA",
-      "label": "Terms and Conditions HTML",
+      "translations": {
+        "en": {
+          "label": "Terms and Conditions HTML"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "textgroup",
       "type": "SELECT",
-      "label": "Text Group",
+      "translations": {
+        "en": {
+          "label": "Text Group"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "titlefontsize",
       "type": "POSINTEGER",
-      "label": "Title Font Size",
+      "translations": {
+        "en": {
+          "label": "Title Font Size"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "upselldescription",
       "type": "TEXT",
-      "label": "Upsell",
+      "translations": {
+        "en": {
+          "label": "Upsell"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "upsellitems",
       "type": "SELECT",
-      "label": "Items to Upsell",
+      "translations": {
+        "en": {
+          "label": "Items to Upsell"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "upsellitemslayout",
       "type": "SELECT",
-      "label": "Default Upsell Items Layout",
+      "translations": {
+        "en": {
+          "label": "Default Upsell Items Layout"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "upsellminimumcorrelation",
       "type": "PERCENT",
-      "label": "Minimum Correlation",
+      "translations": {
+        "en": {
+          "label": "Minimum Correlation"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "upsellminimumcount",
       "type": "INTEGER",
-      "label": "Minimum Count",
+      "translations": {
+        "en": {
+          "label": "Minimum Count"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "upsellminimumlift",
       "type": "PERCENT",
-      "label": "Minimum Lift",
+      "translations": {
+        "en": {
+          "label": "Minimum Lift"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "urlformat",
       "type": "SELECT",
-      "label": "Format",
+      "translations": {
+        "en": {
+          "label": "Format"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "useurlfileextension",
       "type": "CHECKBOX",
-      "label": "Use File Extension",
+      "translations": {
+        "en": {
+          "label": "Use File Extension"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "websitehomepage",
       "type": "SELECT",
-      "label": "Web Site Home Page",
+      "translations": {
+        "en": {
+          "label": "Web Site Home Page"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "websitehomepagetype",
       "type": "SELECT",
-      "label": "Web Site Home Page Type",
+      "translations": {
+        "en": {
+          "label": "Web Site Home Page Type"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "websitelogo",
       "type": "SELECT",
-      "label": "Web Site Logo",
+      "translations": {
+        "en": {
+          "label": "Web Site Logo"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "websitelogoalign",
       "type": "SELECT",
-      "label": "Web Site Logo Alignment",
+      "translations": {
+        "en": {
+          "label": "Web Site Logo Alignment"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "websitelogolinkurl",
       "type": "TEXT",
-      "label": "Logo Link URL",
+      "translations": {
+        "en": {
+          "label": "Logo Link URL"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "websitescope",
       "type": "SELECT",
-      "label": "Web Site Scope",
+      "translations": {
+        "en": {
+          "label": "Web Site Scope"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "websitetheme",
       "type": "SELECT",
-      "label": "Web Site Theme",
+      "translations": {
+        "en": {
+          "label": "Web Site Theme"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "webstoreadditembehavior",
       "type": "SELECT",
-      "label": "After shopper adds an item to the cart",
+      "translations": {
+        "en": {
+          "label": "After shopper adds an item to the cart"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "webstoremetatags",
       "type": "TEXTAREA",
-      "label": "Addition to <head>",
+      "translations": {
+        "en": {
+          "label": "Addition to <head>"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "wsdkcancelcarturl",
       "type": "TEXT",
-      "label": "Shopping cart page Continue Shopping link URL",
+      "translations": {
+        "en": {
+          "label": "Shopping cart page Continue Shopping link URL"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "wsdkcancelcheckouturl",
       "type": "TEXT",
-      "label": "Checkout page Cancel link URL",
+      "translations": {
+        "en": {
+          "label": "Checkout page Cancel link URL"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "wsdkcancelloginurl",
       "type": "TEXT",
-      "label": "Login/registration page Cancel link URL",
+      "translations": {
+        "en": {
+          "label": "Login/registration page Cancel link URL"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "wsdkcompletecheckouturl",
       "type": "TEXT",
-      "label": "URL to go to after checkout is complete",
+      "translations": {
+        "en": {
+          "label": "URL to go to after checkout is complete"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "wsdkcompleteloginurl",
       "type": "TEXT",
-      "label": "URL to go to after login/registration is complete",
+      "translations": {
+        "en": {
+          "label": "URL to go to after login/registration is complete"
+        }
+      },
       "mandatory": false
     }
   ],
-  "subLists": {
-    "cartcolumn": [
-      {
-        "code": "show",
-        "type": "CHECKBOX",
-        "label": "Show",
-        "mandatory": false
+  "subLists": [
+    {
+      "code": "cartcolumn",
+      "translations": {
+        "en": "Cart"
       },
-      {
-        "code": "width",
-        "type": "FLOAT",
-        "label": "Width (%)",
-        "mandatory": false
-      }
-    ],
-    "shoppingdomain": [
-      {
-        "code": "domain",
-        "type": "TEXT",
-        "label": "Domain Name",
-        "mandatory": true
+      "fields": [
+        {
+          "code": "show",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Show"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "width",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Width (%)"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "shoppingdomain",
+      "translations": {
+        "en": "Domain Names"
       },
-      {
-        "code": "hostingroot",
-        "type": "SELECT",
-        "label": "HTML Hosting Root",
-        "mandatory": true,
-        "recordType": null
+      "fields": [
+        {
+          "code": "domain",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Domain Name"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "hostingroot",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "HTML Hosting Root"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        },
+        {
+          "code": "isprimary",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Primary Web Site URL"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "notfoundpage",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Not-Found Page"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "touchpoints",
+          "type": "NAMEVALUELIST",
+          "translations": {
+            "en": {
+              "label": "Touch Points"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "sitecurrency",
+      "translations": {
+        "en": "Currency"
       },
-      {
-        "code": "isprimary",
-        "type": "CHECKBOX",
-        "label": "Primary Web Site URL",
-        "mandatory": false
+      "fields": [
+        {
+          "code": "currency",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "currency"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isdefault",
+          "type": "RADIO",
+          "translations": {
+            "en": {
+              "label": "Default"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isonline",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Online"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "minimumorderamount",
+          "type": "CURRENCY",
+          "translations": {
+            "en": {
+              "label": "Minimum Order Amount"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "sitelanguage",
+      "translations": {
+        "en": "Languages"
       },
-      {
-        "code": "notfoundpage",
-        "type": "SELECT",
-        "label": "Not-Found Page",
-        "mandatory": false,
-        "recordType": null
+      "fields": [
+        {
+          "code": "isdefault",
+          "type": "RADIO",
+          "translations": {
+            "en": {
+              "label": "Default"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isonline",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Online"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "locale",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "locale"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "siteregion",
+      "translations": {
+        "en": "Subsidiaries"
       },
-      {
-        "code": "touchpoints",
-        "type": "NAMEVALUELIST",
-        "label": "Touch Points",
-        "mandatory": false
-      }
-    ],
-    "sitecurrency": [
-      {
-        "code": "currency",
-        "type": "TEXT",
-        "label": "",
-        "mandatory": false
+      "fields": [
+        {
+          "code": "ccprocessingprofile",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Credit Card Processing Profile"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "displayname",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Display Name"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isdefault",
+          "type": "RADIO",
+          "translations": {
+            "en": {
+              "label": "Default"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isonline",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Online"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "paypalaccount",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "PayPal Account"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "subsidiary",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "subsidiary"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "storetab",
+      "translations": {
+        "en": "Tabs"
       },
-      {
-        "code": "isdefault",
-        "type": "RADIO",
-        "label": "Default",
-        "mandatory": false
-      },
-      {
-        "code": "isonline",
-        "type": "CHECKBOX",
-        "label": "Online",
-        "mandatory": false
-      },
-      {
-        "code": "minimumorderamount",
-        "type": "CURRENCY",
-        "label": "Minimum Order Amount",
-        "mandatory": false
-      }
-    ],
-    "sitelanguage": [
-      {
-        "code": "isdefault",
-        "type": "RADIO",
-        "label": "Default",
-        "mandatory": false
-      },
-      {
-        "code": "isonline",
-        "type": "CHECKBOX",
-        "label": "Online",
-        "mandatory": false
-      },
-      {
-        "code": "locale",
-        "type": "TEXT",
-        "label": "",
-        "mandatory": false
-      }
-    ],
-    "siteregion": [
-      {
-        "code": "ccprocessingprofile",
-        "type": "SELECT",
-        "label": "Credit Card Processing Profile",
-        "mandatory": false,
-        "recordType": null
-      },
-      {
-        "code": "displayname",
-        "type": "TEXT",
-        "label": "Display Name",
-        "mandatory": false
-      },
-      {
-        "code": "isdefault",
-        "type": "RADIO",
-        "label": "Default",
-        "mandatory": false
-      },
-      {
-        "code": "isonline",
-        "type": "CHECKBOX",
-        "label": "Online",
-        "mandatory": false
-      },
-      {
-        "code": "paypalaccount",
-        "type": "SELECT",
-        "label": "PayPal Account",
-        "mandatory": false,
-        "recordType": null
-      },
-      {
-        "code": "subsidiary",
-        "type": "TEXT",
-        "label": "",
-        "mandatory": false
-      }
-    ],
-    "storetab": [
-      {
-        "code": "tabdescription",
-        "type": "TEXT",
-        "label": "Tab Description",
-        "mandatory": false
-      },
-      {
-        "code": "tabname",
-        "type": "TEXT",
-        "label": "Tab Name",
-        "mandatory": false
-      },
-      {
-        "code": "tabtype",
-        "type": "TEXT",
-        "label": "Tab Type",
-        "mandatory": false
-      }
-    ]
-  },
+      "fields": [
+        {
+          "code": "tabdescription",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Tab Description"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "tabname",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Tab Name"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "tabtype",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Tab Type"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    }
+  ],
   "tabs": [
     {
       "code": "advanced",
-      "label": "Advanced"
+      "translations": {
+        "en": "Advanced"
+      }
     },
     {
       "code": "analytics",
-      "label": "Analytics"
+      "translations": {
+        "en": "Analytics"
+      }
     },
     {
       "code": "appearance",
-      "label": "Appearance"
+      "translations": {
+        "en": "Appearance"
+      }
     },
     {
       "code": "cart",
-      "label": "Cart"
+      "translations": {
+        "en": "Cart"
+      }
     },
     {
       "code": "email",
-      "label": "Email"
+      "translations": {
+        "en": "Email"
+      }
     },
     {
       "code": "external",
-      "label": "External"
+      "translations": {
+        "en": "External"
+      }
     },
     {
       "code": "general",
-      "label": "Setup"
+      "translations": {
+        "en": "Setup"
+      }
     },
     {
       "code": "legacy",
-      "label": "Legacy"
+      "translations": {
+        "en": "Legacy"
+      }
     },
     {
       "code": "search",
-      "label": "Search"
+      "translations": {
+        "en": "Search"
+      }
     },
     {
       "code": "shopping",
-      "label": "Shopping"
+      "translations": {
+        "en": "Shopping"
+      }
     },
     {
       "code": "shoppingdomainstab",
-      "label": "Domains"
+      "translations": {
+        "en": "Domains"
+      }
     },
     {
       "code": "upsell",
-      "label": "Upsell"
+      "translations": {
+        "en": "Upsell"
+      }
     }
   ]
 }

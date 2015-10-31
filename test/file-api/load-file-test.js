@@ -8,6 +8,8 @@ var path = require('path'),
  * Test Suites
  */
 describe('<Unit Test - Netsuite File API>', function () {
+    this.timeout(5000);
+
     before(function (done) {
         nsmockup.init(done);
     });

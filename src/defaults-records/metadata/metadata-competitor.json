@@ -1,160 +1,262 @@
 {
   "code": "competitor",
   "id": -108,
-  "name": "Competitor",
+  "translations": {
+    "en": "Competitor"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "customform",
       "type": "SELECT",
-      "label": "Custom Form",
+      "translations": {
+        "en": {
+          "label": "Custom Form"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "description",
       "type": "TEXTAREA",
-      "label": "Description",
+      "translations": {
+        "en": {
+          "label": "Description"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalidstring",
       "type": "TEXT",
-      "label": "External ID (Text)",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isinactive",
       "type": "CHECKBOX",
-      "label": "Inactive",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "oppnotes",
       "type": "TEXTAREA",
-      "label": "Opportunity Notes",
+      "translations": {
+        "en": {
+          "label": "Opportunity Notes"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "opportunity",
       "type": "SELECT",
-      "label": "Opportunity",
+      "translations": {
+        "en": {
+          "label": "Opportunity"
+        }
+      },
       "mandatory": false,
       "recordType": "opportunity"
     },
     {
       "code": "oppwinloss",
       "type": "CHECKBOX",
-      "label": "Winner",
+      "translations": {
+        "en": {
+          "label": "Winner"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "productservice",
       "type": "TEXTAREA",
-      "label": "Products & Services",
+      "translations": {
+        "en": {
+          "label": "Products & Services"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "productservices",
       "type": "RICHTEXT",
-      "label": "Products/Services",
+      "translations": {
+        "en": {
+          "label": "Products/Services"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "strategy",
       "type": "RICHTEXT",
-      "label": "Strategy",
+      "translations": {
+        "en": {
+          "label": "Strategy"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "strengths",
       "type": "RICHTEXT",
-      "label": "Strengths",
+      "translations": {
+        "en": {
+          "label": "Strengths"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "url",
       "type": "URL",
-      "label": "Web Address",
+      "translations": {
+        "en": {
+          "label": "Web Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "weaknesses",
       "type": "RICHTEXT",
-      "label": "Weaknesses",
+      "translations": {
+        "en": {
+          "label": "Weaknesses"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "wonopportunity",
       "type": "CHECKBOX",
-      "label": "Won Opportunity",
+      "translations": {
+        "en": {
+          "label": "Won Opportunity"
+        }
+      },
       "mandatory": false
     }
   ]

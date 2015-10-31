@@ -1,996 +1,1624 @@
 {
   "code": "job",
-  "id": 0,
-  "name": "Project",
+  "id": -7,
+  "translations": {
+    "en": "Project"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "accountnumber",
       "type": "TEXT",
-      "label": "Account",
+      "translations": {
+        "en": {
+          "label": "Account"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "actualtime",
       "type": "FLOAT",
-      "label": "Actual Work",
+      "translations": {
+        "en": {
+          "label": "Actual Work"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "address",
       "type": "TEXT",
-      "label": "Address",
+      "translations": {
+        "en": {
+          "label": "Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "address1",
       "type": "TEXT",
-      "label": "Address 1",
+      "translations": {
+        "en": {
+          "label": "Address 1"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "address2",
       "type": "TEXT",
-      "label": "Address 2",
+      "translations": {
+        "en": {
+          "label": "Address 2"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "address3",
       "type": "TEXT",
-      "label": "Address 3",
+      "translations": {
+        "en": {
+          "label": "Address 3"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "addressee",
       "type": "TEXT",
-      "label": "Addressee",
+      "translations": {
+        "en": {
+          "label": "Addressee"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "addressinternalid",
       "type": "TEXT",
-      "label": "Address Internal ID",
+      "translations": {
+        "en": {
+          "label": "Address Internal ID"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "addresslabel",
       "type": "TEXT",
-      "label": "Address Label",
+      "translations": {
+        "en": {
+          "label": "Address Label"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "addressphone",
       "type": "TEXT",
-      "label": "Address Phone",
+      "translations": {
+        "en": {
+          "label": "Address Phone"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "allocatepayrollexpenses",
       "type": "CHECKBOX",
-      "label": "Allocate Payroll Expenses",
+      "translations": {
+        "en": {
+          "label": "Allocate Payroll Expenses"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "allowallresourcesfortasks",
       "type": "CHECKBOX",
-      "label": "Display All Resources for ProjectTask Assignment",
+      "translations": {
+        "en": {
+          "label": "Display All Resources for ProjectTask Assignment"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "allowexpenses",
       "type": "CHECKBOX",
-      "label": "Allow Expenses",
+      "translations": {
+        "en": {
+          "label": "Allow Expenses"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "allowtime",
       "type": "CHECKBOX",
-      "label": "Allow Time Entry",
+      "translations": {
+        "en": {
+          "label": "Allow Time Entry"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "altcontact",
       "type": "TEXT",
-      "label": "Alt. Contact",
+      "translations": {
+        "en": {
+          "label": "Alt. Contact"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "altemail",
       "type": "EMAIL",
-      "label": "Alt. Email",
+      "translations": {
+        "en": {
+          "label": "Alt. Email"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "altname",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "altphone",
       "type": "PHONE",
-      "label": "Office Phone",
+      "translations": {
+        "en": {
+          "label": "Office Phone"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "applyprojectexpensetypetoall",
       "type": "CHECKBOX",
-      "label": "Apply to all time entries",
+      "translations": {
+        "en": {
+          "label": "Apply to all time entries"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "attention",
       "type": "TEXT",
-      "label": "Attention",
+      "translations": {
+        "en": {
+          "label": "Attention"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "autoname",
       "type": "CHECKBOX",
-      "label": "Auto",
+      "translations": {
+        "en": {
+          "label": "Auto"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billaddress1",
       "type": "TEXT",
-      "label": "Billing Address 1",
+      "translations": {
+        "en": {
+          "label": "Billing Address 1"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billaddress2",
       "type": "TEXT",
-      "label": "Billing Address 2",
+      "translations": {
+        "en": {
+          "label": "Billing Address 2"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billaddress3",
       "type": "TEXT",
-      "label": "Billing Address 3",
+      "translations": {
+        "en": {
+          "label": "Billing Address 3"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billaddressee",
       "type": "TEXT",
-      "label": "Billing Addressee",
+      "translations": {
+        "en": {
+          "label": "Billing Addressee"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billattention",
       "type": "TEXT",
-      "label": "Billing Attention",
+      "translations": {
+        "en": {
+          "label": "Billing Attention"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billcity",
       "type": "TEXT",
-      "label": "Billing City",
+      "translations": {
+        "en": {
+          "label": "Billing City"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billcountry",
       "type": "SELECT",
-      "label": "Billing Country",
+      "translations": {
+        "en": {
+          "label": "Billing Country"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "billcountrycode",
       "type": "TEXT",
-      "label": "Billing Country Code",
+      "translations": {
+        "en": {
+          "label": "Billing Country Code"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billingschedule",
       "type": "SELECT",
-      "label": "Billing Schedule",
+      "translations": {
+        "en": {
+          "label": "Billing Schedule"
+        }
+      },
       "mandatory": false,
       "recordType": "billingschedule"
     },
     {
       "code": "billphone",
       "type": "TEXT",
-      "label": "Billing Phone",
+      "translations": {
+        "en": {
+          "label": "Billing Phone"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "billstate",
       "type": "SELECT",
-      "label": "Billing State/Province",
+      "translations": {
+        "en": {
+          "label": "Billing State/Province"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "billzipcode",
       "type": "TEXT",
-      "label": "Billing Zip",
+      "translations": {
+        "en": {
+          "label": "Billing Zip"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "calculatedenddate",
       "type": "DATE",
-      "label": "Calculated End Date",
+      "translations": {
+        "en": {
+          "label": "Calculated End Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "calculatedenddatebaseline",
       "type": "DATE",
-      "label": "Calculated End Date Baseline",
+      "translations": {
+        "en": {
+          "label": "Calculated End Date Baseline"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "campaignresponse",
       "type": "SELECT",
-      "label": "Campaign Response",
+      "translations": {
+        "en": {
+          "label": "Campaign Response"
+        }
+      },
       "mandatory": false,
       "recordType": "campaign"
     },
     {
       "code": "category",
       "type": "SELECT",
-      "label": "Category",
+      "translations": {
+        "en": {
+          "label": "Category",
+          "help": "Select the category that applies to this customer.\nTo add choices to this list, go to <_TABNAME=EDIT_ACCOUNTINGOTHERLIST_> &gt <_TASKCATEGORY= ACCOUNTINGOTHERLIST _> &gt; New &gt; Customer Category.\nFor example, you might create categories of wholesale, retail, and online."
+        }
+      },
       "mandatory": false,
-      "help": "Select the category that applies to this customer.\nTo add choices to this list, go to <_TABNAME=EDIT_ACCOUNTINGOTHERLIST_> &gt <_TASKCATEGORY= ACCOUNTINGOTHERLIST _> &gt; New &gt; Customer Category.\nFor example, you might create categories of wholesale, retail, and online.",
       "recordType": null
     },
     {
       "code": "city",
       "type": "TEXT",
-      "label": "City",
+      "translations": {
+        "en": {
+          "label": "City"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "comments",
       "type": "TEXT",
-      "label": "Comments",
+      "translations": {
+        "en": {
+          "label": "Comments"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "companyname",
       "type": "TEXT",
-      "label": "Job Name",
+      "translations": {
+        "en": {
+          "label": "Job Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "contact",
       "type": "TEXT",
-      "label": "Primary Contact",
+      "translations": {
+        "en": {
+          "label": "Primary Contact"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "contactprimary",
       "type": "SELECT",
-      "label": "Contact (Primary)",
+      "translations": {
+        "en": {
+          "label": "Contact (Primary)"
+        }
+      },
       "mandatory": false,
       "recordType": "contact"
     },
     {
       "code": "country",
       "type": "SELECT",
-      "label": "Country",
+      "translations": {
+        "en": {
+          "label": "Country"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "countrycode",
       "type": "TEXT",
-      "label": "Country Code",
+      "translations": {
+        "en": {
+          "label": "Country Code"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "county",
       "type": "TEXT",
-      "label": "County/State",
+      "translations": {
+        "en": {
+          "label": "County/State"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "currency",
       "type": "SELECT",
-      "label": "Currency",
+      "translations": {
+        "en": {
+          "label": "Currency",
+          "help": "The customer's currency is shown here. This is the currency used for all transactions and records created for this project.\n\nIf you use the Multi-Currency Customers feature, select the customer's transaction currency you want to use for this project and its associated records and transactions."
+        }
+      },
       "mandatory": false,
-      "help": "The customer's currency is shown here. This is the currency used for all transactions and records created for this project.\n\nIf you use the Multi-Currency Customers feature, select the customer's transaction currency you want to use for this project and its associated records and transactions.",
       "recordType": "currency"
     },
     {
       "code": "currencyprecision",
       "type": "TEXT",
-      "label": "Currency Precision",
+      "translations": {
+        "en": {
+          "label": "Currency Precision"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "customer",
       "type": "SELECT",
-      "label": "Customer",
+      "translations": {
+        "en": {
+          "label": "Customer"
+        }
+      },
       "mandatory": false,
       "recordType": "customer"
     },
     {
       "code": "customform",
       "type": "SELECT",
-      "label": "Custom Form",
+      "translations": {
+        "en": {
+          "label": "Custom Form"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "datecreated",
       "type": "DATETIME",
-      "label": "Date Created",
+      "translations": {
+        "en": {
+          "label": "Date Created"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "email",
       "type": "EMAIL",
-      "label": "Email",
+      "translations": {
+        "en": {
+          "label": "Email"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "enddate",
       "type": "DATE",
-      "label": "Actual End Date",
+      "translations": {
+        "en": {
+          "label": "Actual End Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "entityid",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "entitynumber",
       "type": "INTEGER",
-      "label": "Number",
+      "translations": {
+        "en": {
+          "label": "Number"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "entitystatus",
       "type": "SELECT",
-      "label": "Status",
+      "translations": {
+        "en": {
+          "label": "Status"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "estcost",
       "type": "CURRENCY",
-      "label": "Estimated Cost",
+      "translations": {
+        "en": {
+          "label": "Estimated Cost"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estenddate",
       "type": "DATE",
-      "label": "Projected End Date",
+      "translations": {
+        "en": {
+          "label": "Projected End Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estimatedcost",
       "type": "CURRENCY",
-      "label": "Estimated Cost",
+      "translations": {
+        "en": {
+          "label": "Estimated Cost"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estimatedgrossprofit",
       "type": "CURRENCY",
-      "label": "Estimated Gross Profit",
+      "translations": {
+        "en": {
+          "label": "Estimated Gross Profit"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estimatedgrossprofitpercent",
       "type": "PERCENT",
-      "label": "Estimated Gross Profit %",
+      "translations": {
+        "en": {
+          "label": "Estimated Gross Profit %"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estimatedlaborcost",
       "type": "CURRENCY",
-      "label": "Estimated Labor Cost",
+      "translations": {
+        "en": {
+          "label": "Estimated Labor Cost"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estimatedlaborcostbaseline",
       "type": "CURRENCY",
-      "label": "Estimated Labor Cost Baseline",
+      "translations": {
+        "en": {
+          "label": "Estimated Labor Cost Baseline"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estimatedlaborrevenue",
       "type": "CURRENCY",
-      "label": "Estimated Labor Revenue",
+      "translations": {
+        "en": {
+          "label": "Estimated Labor Revenue"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estimatedrevenue",
       "type": "CURRENCY",
-      "label": "Estimated Revenue",
+      "translations": {
+        "en": {
+          "label": "Estimated Revenue"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estimatedtime",
       "type": "FLOAT",
-      "label": "Initial Time Budget",
+      "translations": {
+        "en": {
+          "label": "Initial Time Budget"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estimatedtimeoverride",
       "type": "FLOAT",
-      "label": "Estimated Work",
+      "translations": {
+        "en": {
+          "label": "Estimated Work"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estimatedtimeoverridebaseline",
       "type": "FLOAT",
-      "label": "Estimated Work Baseline",
+      "translations": {
+        "en": {
+          "label": "Estimated Work Baseline"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "estimaterevrectemplate",
       "type": "SELECT",
-      "label": "Rev Rec Forecast Template",
+      "translations": {
+        "en": {
+          "label": "Rev Rec Forecast Template"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "estrevenue",
       "type": "CURRENCY",
-      "label": "Estimated Revenue",
+      "translations": {
+        "en": {
+          "label": "Estimated Revenue"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalidstring",
       "type": "TEXT",
-      "label": "External ID (Text)",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "fax",
       "type": "TEXT",
-      "label": "Fax",
+      "translations": {
+        "en": {
+          "label": "Fax"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "fxrate",
       "type": "CURRENCY2",
-      "label": "Exchange Rate",
+      "translations": {
+        "en": {
+          "label": "Exchange Rate"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "giveaccess",
       "type": "CHECKBOX",
-      "label": "Login Access",
+      "translations": {
+        "en": {
+          "label": "Login Access"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "globalsubscriptionstatus",
       "type": "SELECT",
-      "label": "Global Subscription Status",
+      "translations": {
+        "en": {
+          "label": "Global Subscription Status"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "image",
       "type": "IMAGE",
-      "label": "Image",
+      "translations": {
+        "en": {
+          "label": "Image"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "includecrmtasksintotals",
       "type": "CHECKBOX",
-      "label": "Include CRM Tasks in Job Totals",
+      "translations": {
+        "en": {
+          "label": "Include CRM Tasks in Job Totals"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isbasecurrency",
       "type": "CHECKBOX",
-      "label": "Base Currency",
+      "translations": {
+        "en": {
+          "label": "Base Currency"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isdefaultbilling",
       "type": "CHECKBOX",
-      "label": "Default Billing Address",
+      "translations": {
+        "en": {
+          "label": "Default Billing Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isdefaultshipping",
       "type": "CHECKBOX",
-      "label": "Default Shipping Address",
+      "translations": {
+        "en": {
+          "label": "Default Shipping Address"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isexempttime",
       "type": "CHECKBOX",
-      "label": "Classify Time as Exempt",
+      "translations": {
+        "en": {
+          "label": "Classify Time as Exempt"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isinactive",
       "type": "CHECKBOX",
-      "label": "Inactive",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isjob",
       "type": "TEXT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "isjob"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isproductivetime",
       "type": "CHECKBOX",
-      "label": "Classify Time as Productive",
+      "translations": {
+        "en": {
+          "label": "Classify Time as Productive"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isutilizedtime",
       "type": "CHECKBOX",
-      "label": "Classify Time as Utilized",
+      "translations": {
+        "en": {
+          "label": "Classify Time as Utilized"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "jobbillingtype",
       "type": "SELECT",
-      "label": "Billing Type",
+      "translations": {
+        "en": {
+          "label": "Billing Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "jobitem",
       "type": "SELECT",
-      "label": "Billing Item",
+      "translations": {
+        "en": {
+          "label": "Billing Item"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "jobprice",
       "type": "CURRENCY",
-      "label": "Job Price",
+      "translations": {
+        "en": {
+          "label": "Job Price"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "jobresource",
       "type": "SELECT",
-      "label": "Job Resource",
+      "translations": {
+        "en": {
+          "label": "Job Resource"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "jobresourcerole",
       "type": "SELECT",
-      "label": "Job Resource Role",
+      "translations": {
+        "en": {
+          "label": "Job Resource Role"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "jobtype",
       "type": "SELECT",
-      "label": "Project Type",
+      "translations": {
+        "en": {
+          "label": "Project Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "language",
       "type": "SELECT",
-      "label": "Language",
+      "translations": {
+        "en": {
+          "label": "Language",
+          "help": "Select the language to use to display all project records and invoices."
+        }
+      },
       "mandatory": false,
-      "help": "Select the language to use to display all project records and invoices.",
       "recordType": null
     },
     {
       "code": "lastbaselinedate",
       "type": "DATE",
-      "label": "Last Baseline Date",
+      "translations": {
+        "en": {
+          "label": "Last Baseline Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "lastmodifieddate",
       "type": "DATETIME",
-      "label": "Last Modified",
+      "translations": {
+        "en": {
+          "label": "Last Modified"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "lastviewed",
       "type": "DATETIME",
-      "label": "Last Viewed",
+      "translations": {
+        "en": {
+          "label": "Last Viewed"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "level",
       "type": "SELECT",
-      "label": "Level",
+      "translations": {
+        "en": {
+          "label": "Level"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "limittimetoassignees",
       "type": "CHECKBOX",
-      "label": "Limit Time and Expenses to Resources",
+      "translations": {
+        "en": {
+          "label": "Limit Time and Expenses to Resources"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "materializetime",
       "type": "CHECKBOX",
-      "label": "Create Planned Time Entries",
+      "translations": {
+        "en": {
+          "label": "Create Planned Time Entries"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "messages",
       "type": "SELECT",
-      "label": "Messages",
+      "translations": {
+        "en": {
+          "label": "Messages"
+        }
+      },
       "mandatory": false,
       "recordType": "message"
     },
     {
       "code": "messagesfrom",
       "type": "SELECT",
-      "label": "Messages From",
+      "translations": {
+        "en": {
+          "label": "Messages From"
+        }
+      },
       "mandatory": false,
       "recordType": "message"
     },
     {
       "code": "messagesto",
       "type": "SELECT",
-      "label": "Messages To",
+      "translations": {
+        "en": {
+          "label": "Messages To"
+        }
+      },
       "mandatory": false,
       "recordType": "message"
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "otherrelationships",
       "type": "SELECT",
-      "label": "Other Relationships",
+      "translations": {
+        "en": {
+          "label": "Other Relationships"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "parent",
       "type": "SELECT",
-      "label": "Customer",
+      "translations": {
+        "en": {
+          "label": "Customer",
+          "help": "Enter the name of the customer for this project. If you are creating a subproject, then enter a customer and project in this field."
+        }
+      },
       "mandatory": false,
-      "help": "Enter the name of the customer for this project. If you are creating a subproject, then enter a customer and project in this field.",
       "recordType": "customer"
     },
     {
       "code": "pctcomplete",
       "type": "INTEGER",
-      "label": "Percent Complete",
+      "translations": {
+        "en": {
+          "label": "Percent Complete"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "percentcomplete",
       "type": "PERCENT",
-      "label": "Percent Complete",
+      "translations": {
+        "en": {
+          "label": "Percent Complete"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "percenttimecomplete",
       "type": "PERCENT",
-      "label": "Percent Time Complete",
+      "translations": {
+        "en": {
+          "label": "Percent Time Complete"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "permission",
       "type": "SELECT",
-      "label": "Permission",
+      "translations": {
+        "en": {
+          "label": "Permission"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "phone",
       "type": "PHONE",
-      "label": "Phone",
+      "translations": {
+        "en": {
+          "label": "Phone"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "phoneticname",
       "type": "TEXT",
-      "label": "Phonetic Name",
+      "translations": {
+        "en": {
+          "label": "Phonetic Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "projectedenddate",
       "type": "DATE",
-      "label": "Projected End Date",
+      "translations": {
+        "en": {
+          "label": "Projected End Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "projectedenddatebaseline",
       "type": "DATE",
-      "label": "Projected End Date Baseline",
+      "translations": {
+        "en": {
+          "label": "Projected End Date Baseline"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "projecttask",
       "type": "SELECT",
-      "label": "Project Task",
+      "translations": {
+        "en": {
+          "label": "Project Task"
+        }
+      },
       "mandatory": false,
       "recordType": "projecttask"
     },
     {
       "code": "representingsubsidiary",
       "type": "SELECT",
-      "label": "Represents Subsidiary",
+      "translations": {
+        "en": {
+          "label": "Represents Subsidiary"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "shipaddress1",
       "type": "TEXT",
-      "label": "Shipping Address 1",
+      "translations": {
+        "en": {
+          "label": "Shipping Address 1"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipaddress2",
       "type": "TEXT",
-      "label": "Shipping Address 2",
+      "translations": {
+        "en": {
+          "label": "Shipping Address 2"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipaddress3",
       "type": "TEXT",
-      "label": "Shipping Address 3",
+      "translations": {
+        "en": {
+          "label": "Shipping Address 3"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipaddressee",
       "type": "TEXT",
-      "label": "Shipping Addressee",
+      "translations": {
+        "en": {
+          "label": "Shipping Addressee"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipattention",
       "type": "TEXT",
-      "label": "Shipping Attention",
+      "translations": {
+        "en": {
+          "label": "Shipping Attention"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipcity",
       "type": "TEXT",
-      "label": "Shipping City",
+      "translations": {
+        "en": {
+          "label": "Shipping City"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipcountry",
       "type": "SELECT",
-      "label": "Shipping Country",
+      "translations": {
+        "en": {
+          "label": "Shipping Country"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "shipcountrycode",
       "type": "TEXT",
-      "label": "Shipping Country Code",
+      "translations": {
+        "en": {
+          "label": "Shipping Country Code"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipphone",
       "type": "TEXT",
-      "label": "Shipping Phone",
+      "translations": {
+        "en": {
+          "label": "Shipping Phone"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipstate",
       "type": "TEXT",
-      "label": "Shipping State/Province",
+      "translations": {
+        "en": {
+          "label": "Shipping State/Province"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "shipzip",
       "type": "TEXT",
-      "label": "Shipping Zip",
+      "translations": {
+        "en": {
+          "label": "Shipping Zip"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "stage",
       "type": "TEXT",
-      "label": "",
+      "translations": {
+        "en": {
+          "label": "stage"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "startdate",
       "type": "DATE",
-      "label": "Start Date",
+      "translations": {
+        "en": {
+          "label": "Start Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "startdatebaseline",
       "type": "DATE",
-      "label": "Start Date Baseline",
+      "translations": {
+        "en": {
+          "label": "Start Date Baseline"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "state",
       "type": "SELECT",
-      "label": "State/Province",
+      "translations": {
+        "en": {
+          "label": "State/Province"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "statedisplayname",
       "type": "SELECT",
-      "label": "State/Province Display Name",
+      "translations": {
+        "en": {
+          "label": "State/Province Display Name"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "status",
       "type": "SELECT",
-      "label": "Status",
+      "translations": {
+        "en": {
+          "label": "Status"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "subscription",
       "type": "SELECT",
-      "label": "Subscription",
+      "translations": {
+        "en": {
+          "label": "Subscription"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "subscriptiondate",
       "type": "DATETIME",
-      "label": "Subscription Date",
+      "translations": {
+        "en": {
+          "label": "Subscription Date"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "subscriptionstatus",
       "type": "CHECKBOX",
-      "label": "Subscription Status",
+      "translations": {
+        "en": {
+          "label": "Subscription Status"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "subsidiary",
       "type": "SELECT",
-      "label": "Subsidiary",
+      "translations": {
+        "en": {
+          "label": "Subsidiary"
+        }
+      },
       "mandatory": true,
       "recordType": "subsidiary"
     },
     {
       "code": "subsidiarynohierarchy",
       "type": "SELECT",
-      "label": "Subsidiary (no hierarchy)",
+      "translations": {
+        "en": {
+          "label": "Subsidiary (no hierarchy)"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "task",
       "type": "SELECT",
-      "label": "Task",
+      "translations": {
+        "en": {
+          "label": "Task"
+        }
+      },
       "mandatory": false,
       "recordType": "task"
     },
     {
       "code": "timeremaining",
       "type": "FLOAT",
-      "label": "Remaining Work",
+      "translations": {
+        "en": {
+          "label": "Remaining Work"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "type",
       "type": "SELECT",
-      "label": "Entity Type",
+      "translations": {
+        "en": {
+          "label": "Entity Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "zipcode",
       "type": "TEXT",
-      "label": "Zip Code",
+      "translations": {
+        "en": {
+          "label": "Zip Code"
+        }
+      },
       "mandatory": false
     }
   ],
-  "subLists": {
-    "jobresources": [
-      {
-        "code": "email",
-        "type": "EMAIL",
-        "label": "Email",
-        "mandatory": false
+  "subLists": [
+    {
+      "code": "jobresources",
+      "translations": {
+        "en": "Resource Details"
       },
-      {
-        "code": "jobresource",
-        "type": "SELECT",
-        "label": "Name",
-        "mandatory": true,
-        "recordType": null
-      },
-      {
-        "code": "role",
-        "type": "SELECT",
-        "label": "Role",
-        "mandatory": true,
-        "recordType": null
-      }
-    ]
-  },
+      "fields": [
+        {
+          "code": "email",
+          "type": "EMAIL",
+          "translations": {
+            "en": {
+              "label": "Email"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "jobresource",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Name"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        },
+        {
+          "code": "role",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Role"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        }
+      ]
+    }
+  ],
   "tabs": [
     {
       "code": "address",
-      "label": "Address"
+      "translations": {
+        "en": "Address"
+      }
     },
     {
       "code": "custom",
-      "label": "Custom"
+      "translations": {
+        "en": "Custom"
+      }
     },
     {
       "code": "financial",
-      "label": "Financial"
+      "translations": {
+        "en": "Financial"
+      }
     },
     {
       "code": "general",
-      "label": "General"
+      "translations": {
+        "en": "General"
+      }
     },
     {
       "code": "info",
-      "label": "Info"
+      "translations": {
+        "en": "Info"
+      }
     },
     {
       "code": "resources",
-      "label": "Resources"
+      "translations": {
+        "en": "Resources"
+      }
     },
     {
       "code": "schedule",
-      "label": "Schedule"
+      "translations": {
+        "en": "Schedule"
+      }
     },
     {
       "code": "workflow",
-      "label": "Workflow"
+      "translations": {
+        "en": "Workflow"
+      }
     }
   ]
 }

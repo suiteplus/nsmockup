@@ -1,337 +1,547 @@
 {
   "code": "workflowactionscript",
   "id": 0,
-  "name": "Workflow Action Script",
+  "translations": {
+    "en": "Workflow Action Script"
+  },
   "inactive": false,
   "fields": [
     {
       "code": "afterinstallfunction",
       "type": "TEXT",
-      "label": "After Install Function",
+      "translations": {
+        "en": {
+          "label": "After Install Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "aftersubmitfunction",
       "type": "TEXT",
-      "label": "After Submit Function",
+      "translations": {
+        "en": {
+          "label": "After Submit Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "afterupdatefunction",
       "type": "TEXT",
-      "label": "After Update Function",
+      "translations": {
+        "en": {
+          "label": "After Update Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "beforeinstallfunction",
       "type": "TEXT",
-      "label": "Before Install Function",
+      "translations": {
+        "en": {
+          "label": "Before Install Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "beforeloadfunction",
       "type": "TEXT",
-      "label": "Before Load Function",
+      "translations": {
+        "en": {
+          "label": "Before Load Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "beforesubmitfunction",
       "type": "TEXT",
-      "label": "Before Submit Function",
+      "translations": {
+        "en": {
+          "label": "Before Submit Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "beforeuninstallfunction",
       "type": "TEXT",
-      "label": "Before Uninstall Function",
+      "translations": {
+        "en": {
+          "label": "Before Uninstall Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "beforeupdatefunction",
       "type": "TEXT",
-      "label": "Before Update Function",
+      "translations": {
+        "en": {
+          "label": "Before Update Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "defaultfunction",
       "type": "TEXT",
-      "label": "Default Function",
+      "translations": {
+        "en": {
+          "label": "Default Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "deletefunction",
       "type": "TEXT",
-      "label": "DELETE Function",
+      "translations": {
+        "en": {
+          "label": "DELETE Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "description",
       "type": "TEXT",
-      "label": "Description",
+      "translations": {
+        "en": {
+          "label": "Description"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "externalid",
       "type": "TEXT",
-      "label": "ExternalId",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "fieldchangedfunction",
       "type": "TEXT",
-      "label": "Field Changed Function",
+      "translations": {
+        "en": {
+          "label": "Field Changed Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulacurrency",
       "type": "CURRENCY",
-      "label": "Formula (Currency)",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladate",
       "type": "DATE",
-      "label": "Formula (Date)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formuladatetime",
       "type": "DATETIME",
-      "label": "Formula (Date/Time)",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulanumeric",
       "type": "FLOAT",
-      "label": "Formula (Numeric)",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulapercent",
       "type": "PERCENT",
-      "label": "Formula (Percent)",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "formulatext",
       "type": "TEXT",
-      "label": "Formula (Text)",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "getfunction",
       "type": "TEXT",
-      "label": "GET Function",
+      "translations": {
+        "en": {
+          "label": "GET Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "internalid",
       "type": "SELECT",
-      "label": "Internal ID",
+      "translations": {
+        "en": {
+          "label": "Internal ID"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "internalidnumber",
       "type": "INTEGER",
-      "label": "Internal ID (Number)",
+      "translations": {
+        "en": {
+          "label": "Internal ID (Number)"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "isinactive",
       "type": "CHECKBOX",
-      "label": "Inactive",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "lineinitfunction",
       "type": "TEXT",
-      "label": "Line Init Function",
+      "translations": {
+        "en": {
+          "label": "Line Init Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": true
     },
     {
       "code": "name",
       "type": "TEXT",
-      "label": "Name",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "notifyadmins",
       "type": "CHECKBOX",
-      "label": "Notify All Admins",
+      "translations": {
+        "en": {
+          "label": "Notify All Admins"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "notifyemails",
       "type": "EMAILS",
-      "label": "Notify Emails",
+      "translations": {
+        "en": {
+          "label": "Notify Emails"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "notifygroup",
       "type": "SELECT",
-      "label": "Notify Group",
+      "translations": {
+        "en": {
+          "label": "Notify Group"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "notifyowner",
       "type": "CHECKBOX",
-      "label": "Notify Script Owner",
+      "translations": {
+        "en": {
+          "label": "Notify Script Owner"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "notifyuser",
       "type": "CHECKBOX",
-      "label": "Notify Current User",
+      "translations": {
+        "en": {
+          "label": "Notify Current User"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "owner",
       "type": "SELECT",
-      "label": "Owner",
+      "translations": {
+        "en": {
+          "label": "Owner"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "pageinitfunction",
       "type": "TEXT",
-      "label": "Page Init Function",
+      "translations": {
+        "en": {
+          "label": "Page Init Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "portlettype",
       "type": "SELECT",
-      "label": "Portlet Type",
+      "translations": {
+        "en": {
+          "label": "Portlet Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "postfunction",
       "type": "TEXT",
-      "label": "POST Function",
+      "translations": {
+        "en": {
+          "label": "POST Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "postsourcingfunction",
       "type": "TEXT",
-      "label": "Post Sourcing Function",
+      "translations": {
+        "en": {
+          "label": "Post Sourcing Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "putfunction",
       "type": "TEXT",
-      "label": "PUT Function",
+      "translations": {
+        "en": {
+          "label": "PUT Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "recalcfunction",
       "type": "TEXT",
-      "label": "Recalc Function",
+      "translations": {
+        "en": {
+          "label": "Recalc Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "returnrecordtype",
       "type": "SELECT",
-      "label": "List/Record",
+      "translations": {
+        "en": {
+          "label": "List/Record"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "returntype",
       "type": "SELECT",
-      "label": "Return Type",
+      "translations": {
+        "en": {
+          "label": "Return Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "saverecordfunction",
       "type": "TEXT",
-      "label": "Save Record Function",
+      "translations": {
+        "en": {
+          "label": "Save Record Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "scriptfile",
       "type": "SELECT",
-      "label": "Script File",
+      "translations": {
+        "en": {
+          "label": "Script File"
+        }
+      },
       "mandatory": true,
       "recordType": null
     },
     {
       "code": "scriptid",
       "type": "TEXT",
-      "label": "Script ID",
+      "translations": {
+        "en": {
+          "label": "Script ID"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "scripttype",
       "type": "SELECT",
-      "label": "Type",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
       "mandatory": false,
       "recordType": null
     },
     {
       "code": "user",
       "type": "SELECT",
-      "label": "User",
+      "translations": {
+        "en": {
+          "label": "User"
+        }
+      },
       "mandatory": false,
       "recordType": "employee"
     },
     {
       "code": "validatedeletefunction",
       "type": "TEXT",
-      "label": "Validate Delete Function",
+      "translations": {
+        "en": {
+          "label": "Validate Delete Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "validatefieldfunction",
       "type": "TEXT",
-      "label": "Validate Field Function",
+      "translations": {
+        "en": {
+          "label": "Validate Field Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "validateinsertfunction",
       "type": "TEXT",
-      "label": "Validate Insert Function",
+      "translations": {
+        "en": {
+          "label": "Validate Insert Function"
+        }
+      },
       "mandatory": false
     },
     {
       "code": "validatelinefunction",
       "type": "TEXT",
-      "label": "Validate Line Function",
+      "translations": {
+        "en": {
+          "label": "Validate Line Function"
+        }
+      },
       "mandatory": false
     }
   ],
   "tabs": [
     {
       "code": "errorhandling",
-      "label": "Unhandled Errors"
+      "translations": {
+        "en": "Unhandled Errors"
+      }
     },
     {
       "code": "executionlog",
-      "label": "Execution Log"
+      "translations": {
+        "en": "Execution Log"
+      }
     },
     {
       "code": "historytab",
-      "label": "History"
+      "translations": {
+        "en": "History"
+      }
     },
     {
       "code": "scriptdeployments",
-      "label": "Deployments"
+      "translations": {
+        "en": "Deployments"
+      }
     },
     {
       "code": "scripts",
-      "label": "Scripts"
+      "translations": {
+        "en": "Scripts"
+      }
     },
     {
       "code": "tab_parameters",
-      "label": "Parameters"
+      "translations": {
+        "en": "Parameters"
+      }
     }
   ]
 }
