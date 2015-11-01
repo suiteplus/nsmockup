@@ -1,6 +1,7 @@
 'use strict';
 
 var should = require('should'),
+    parallel = require('mocha.parallel'),
     nsmockup = require('../../');
 
 /**
@@ -11,7 +12,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
     before(function (done) {
         nsmockup.init(done);
     });
-    describe('Encription API - nlapiEncrypt:', function () {
+    parallel('Encription API - nlapiEncrypt:', function () {
         let str = 'nsmockup - Test your Suitescripts before deploying to NetSuite.';
 
         it('encrypt str to base64', function (done) {
