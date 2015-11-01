@@ -1,6 +1,7 @@
 'use strict';
 
 var should = require('should'),
+    parallel = require('mocha.parallel'),
     nsmockup = require('../../');
 
 /**
@@ -17,7 +18,7 @@ describe('<Unit Test - Netsuite Date API>', function () {
             };
         nsmockup.init(opts, done);
     });
-    describe('SuiteScript API - nlapiDateToString:', function () {
+    parallel('SuiteScript API - nlapiDateToString:', function () {
         it('date no format', function (done) {
             let date = new Date('2015-09-15T08:58:12+0000'),
                 str = nlapiDateToString(date);

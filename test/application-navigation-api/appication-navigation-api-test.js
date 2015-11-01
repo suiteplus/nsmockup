@@ -1,6 +1,7 @@
 'use strict';
 
 var should = require('should'),
+    parallel = require('mocha.parallel'),
     nsmockup = require('../../');
 
 /**
@@ -42,7 +43,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             return done();
         });
     });
-    describe('SuiteScript API - nlapiResolveURL:', function () {
+    parallel('SuiteScript API - nlapiResolveURL:', function () {
         it('resolve get internal URL from RESTlet', function (done) {
             let url = nlapiResolveURL('RESTLET', ropts.name);
             should(url).be.ok();

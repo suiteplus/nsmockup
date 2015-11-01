@@ -57,6 +57,7 @@
     "gulp-util": "^3.0.6",
     "isparta": "^3.0.4",
     "jshint-stylish": "^2.0.1",
+    "mocha.parallel": "^0.8.0",
     "require-dir": "^0.3.0",
     "should": "^7.1.0",
     "through": "^2.3.8"

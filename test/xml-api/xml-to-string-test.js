@@ -3,6 +3,7 @@
 var fs = require('fs'),
     path = require('path'),
     should = require('should'),
+    parallel = require('mocha.parallel'),
     nsmockup = require('../../');
 
 const fileDir = __dirname + '/../_input-files/files';
@@ -15,7 +16,7 @@ describe('<Unit Test - Netsuite XML API>', function () {
     before(function (done) {
         nsmockup.init(done);
     });
-    describe('XML API - nlapiXMLToString:', function () {
+    parallel('XML API - nlapiXMLToString:', function () {
         it('xml convert string to xml document', function (done) {
             let xmlPath = path.resolve(fileDir + '/help.xml'),
                 xml = fs.readFileSync(xmlPath, 'utf8'),

@@ -1,11 +1,12 @@
 'use strict';
 
-var should = require('should');
+var should = require('should'),
+    parallel = require('mocha.parallel');
 
 /**
  * Test Suites
  */
-describe('<Unit Test - Netsuite Communication API>', function () {
+parallel('<Unit Test - Netsuite Communication API>', function () {
     describe('SuiteScript API - nlapiSendEmail:', function () {
         it('just test function', function (done) {
             should(nlapiSendEmail).be.ok();
