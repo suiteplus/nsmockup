@@ -167,7 +167,10 @@ module.exports = (opts, cb) => {
         for (let d = 0; d < defaultDatas.length; d++) {
             let defaultData = defaultDatas[d],
                 recName = path.basename(defaultData, '.json');
-            records[recName] = require(defaultData);
+
+            let data = records[recName] || [];
+            if (typeof data === 'string') data = readJSON(data);
+            records[recName] = data.concat(require(defaultData));
         }
         let recNames = Object.keys(records);
 
@@ -197,17 +200,20 @@ module.exports = (opts, cb) => {
 
         for (let i = 0; i < recNames.length; i++) {
             let recName = recNames[i],
-                recVal = records[recName];
+                data = records[recName];
 
-            if (typeof recVal === 'string') recVal = readJSON(recVal);
-            if (!recVal || !recVal.length) {
+            if (typeof data === 'string') data = readJSON(data);
+            if (!data || !data.length) {
                 // save record type data in lowdb database
-                db.object[recName] = [];
+                if (!db.object[recName]) {
+                    db.object[recName] = [];
+                    db.saveSync();
+                }
                 verifyDone();
                 continue;
             }
 
-            recVal = recVal.map((val, i) => {
+            let recVal = data.map((val, i) => {
                 if (!val.internalid) {
                     val.internalid = (i + 1);
                 }
