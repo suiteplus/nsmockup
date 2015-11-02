@@ -494,7 +494,7 @@
         }
       },
       "mandatory": false,
-      "recordType": null
+      "recordType": "projecttask"
     },
     {
       "code": "percenttimecomplete",

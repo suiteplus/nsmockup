@@ -419,7 +419,7 @@
         }
       },
       "mandatory": false,
-      "recordType": null
+      "recordType": "task"
     },
     {
       "code": "percentcomplete",

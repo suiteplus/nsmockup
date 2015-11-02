@@ -877,7 +877,7 @@
           "label": "Parent"
         }
       },
-      "mandatory": false
+      "mandatory": "othername"
     },
     {
       "code": "permission",

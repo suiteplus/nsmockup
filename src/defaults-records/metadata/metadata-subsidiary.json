@@ -606,7 +606,7 @@
         }
       },
       "mandatory": true,
-      "recordType": null
+      "recordType": "subsidiary"
     },
     {
       "code": "phone",

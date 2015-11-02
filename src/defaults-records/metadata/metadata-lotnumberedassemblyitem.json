@@ -2654,7 +2654,7 @@
         }
       },
       "mandatory": false,
-      "recordType": null
+      "recordType": "item"
     },
     {
       "code": "preferencecriterion",

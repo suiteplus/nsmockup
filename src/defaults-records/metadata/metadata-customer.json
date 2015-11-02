@@ -1842,7 +1842,7 @@
         }
       },
       "mandatory": false,
-      "recordType": null
+      "recordType": "customer"
     },
     {
       "code": "parentcustomer",
