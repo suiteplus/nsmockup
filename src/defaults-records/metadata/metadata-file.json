@@ -13,7 +13,7 @@
           "label": "Name"
         }
       },
-      "type": "STRING",
+      "type": "TEXT",
       "mandatory": true
     },
     {
@@ -23,7 +23,7 @@
           "label": "Path"
         }
       },
-      "type": "STRING",
+      "type": "TEXT",
       "mandatory": true
     },
     {
@@ -33,7 +33,7 @@
           "label": "File Type"
         }
       },
-      "type": "STRING",
+      "type": "TEXT",
       "mandatory": true
     },
     {
@@ -54,7 +54,7 @@
           "label": "Encoding"
         }
       },
-      "type": "STRING",
+      "type": "TEXT",
       "mandatory": true
     },
     {

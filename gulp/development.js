@@ -23,7 +23,7 @@ var gulp = require('gulp'),
         jsTests: [appRoot + '/test/**/*-test.js']
     };
 
-var defaultTasks = ['env:development', 'dev:jshint', 'dev:coverage', 'watch'];
+var defaultTasks = ['env:development', 'dev:jshint', 'dev:mocha', 'watch'];
 
 gulp.task('env:development', function () {
     process.env.NODE_ENV = 'development';
@@ -38,7 +38,7 @@ gulp.task('dev:jshint', function () {
 });
 
 
-gulp.task('dev:coverage', function () {
+gulp.task('dev:mocha', ['dev:jshint'], function () {
     let jsTests = '/test/**/' + (file ? '*'+file : '' ) +  '*-test.js';
     return gulp.src(appRoot + jsTests)
         .pipe(plugins.plumber())
@@ -48,7 +48,7 @@ gulp.task('dev:coverage', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(paths.js.concat(paths.jsTests), ['dev:jshint', 'dev:coverage'])
+    gulp.watch(paths.js.concat(paths.jsTests), ['dev:jshint', 'dev:mocha'])
         .on('error', e => console.error(e));
 });
 

@@ -1,6 +1,7 @@
 'use strict';
 
 var should = require('should'),
+    parallel = require('mocha.parallel'),
     nsmockup = require('../../');
 
 var base = __dirname + '/../_input-files/record-data';
@@ -21,7 +22,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             };
         nsmockup.init({records, metadata}, done);
     });
-    describe('SuiteScript API - nlapiSearchRecord:', function () {
+    parallel('SuiteScript API - nlapiSearchRecord:', function () {
         let recType = 'customrecord_codeg';
 
         it('search all', function (done) {
@@ -68,7 +69,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                     'custrecord_code_id'
                 ].map(c => new nlobjSearchColumn(c)),
                 filters = [
-                    ['custrecord_type_id', null, 'is', 237]
+                    ['custrecord_type_id', null, 'anyof', 237]
                 ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
 
             var codes = nlapiSearchRecord(recType, null, filters, columns);
@@ -82,7 +83,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                     'custrecord_code_id'
                 ].map(c => new nlobjSearchColumn(c)),
                 filters = [
-                    ['custrecord_type_id', null, 'is', 237]
+                    ['custrecord_type_id', null, 'anyof', 237]
                 ];
 
             var codes = nlapiSearchRecord(recType, null, filters, columns);

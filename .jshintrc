@@ -1,6 +1,6 @@
 {
     "maxerr"        : 50,       // {int} Maximum error before stopping
-
+    "-W086"         : true,     //allow fall-through
     // Enforcing
     "bitwise"       : false,     // true: Prohibit bitwise operators (&, |, ^, etc.)
     "camelcase"     : false,    // true: Identifiers must be in camelCase

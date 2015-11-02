@@ -26,7 +26,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
 
         it('delete by id', function (done) {
             var filters = [
-                ['custrecord_type_id', null, 'is', 241]
+                ['custrecord_type_id', null, 'anyof', 241]
             ];
 
             let codes = nlapiSearchRecord(recType, null, filters);
