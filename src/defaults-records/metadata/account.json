@@ -1,0 +1,462 @@
+{
+  "code": "account",
+  "id": -112,
+  "translations": {
+    "en": "Account"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "acctname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "acctnumber",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Number"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "accttype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "accttype2",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "balance",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Balance"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billableexpensesacct",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Track Billable Expenses in"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "cashflowrate",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Cash Flow Rate Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "cashflowratetype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Cash Flow Rate Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "category1099misc",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "1099-MISC Category",
+          "help": "In order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "class",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Restrict To Class",
+          "help": "Sets the class to restrict use of this account to roles with permission to access it. \nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "currency",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Currency",
+          "help": "Sets the currency for the funds in this account. Can only be set on Add. In order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": "currency"
+    },
+    {
+      "code": "deferralacct",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Deferral Account"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "department",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Restrict To Department",
+          "help": "Sets the department to restrict use of this account to roles with permission to access it. \nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": "department"
+    },
+    {
+      "code": "description",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Description"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "eliminate",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Eliminate Intercompany Transactions",
+          "help": "Indicates this is an intercompany account used only to record transactions between subsidiaries. Amounts posted to intercompany accounts are eliminated when you run the intercompany elimination process at the end of an accounting period."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "generalrate",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "General Rate Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "generalratetype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "General Rate Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "includechildren",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Include Children"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "inventory",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Inventory",
+          "help": "If TRUE, the account balance is included in the Inventory KPI. It cannot be modified on certain system-generated OCAsset accounts."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Restrict To Location",
+          "help": "Sets the location to restrict use of this account to roles with permission to access it. \nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": "location"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "number",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Number"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "openingbalance",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "openingbalance"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "parent",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subaccount of",
+          "help": "In order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": "account"
+    },
+    {
+      "code": "revalue",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Revalue Open Balance for Foreign Currency Transactions",
+          "help": "Indicates whether this account can be selected for open balance currency revaluation."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subsidiaries"
+        }
+      },
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "subsidiarynohierarchy",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subsidiary (no hierarchy)"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "trandate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "type",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "unit",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Default Unit",
+          "help": "This field displays the base unit assigned to the Unit Type. The default unit cannot be changed."
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "unitstype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Unit Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": "unitstype"
+    }
+  ],
+  "tabs": [
+    {
+      "code": "history",
+      "translations": {
+        "en": "System Notes"
+      }
+    },
+    {
+      "code": "translation",
+      "translations": {
+        "en": "Translation"
+      }
+    }
+  ]
+}

@@ -106,7 +106,7 @@ module.exports = (opts, cb) => {
         let defaultMetas = glob.sync(__dirname + '/defaults-records/metadata/*.json');
         for (let m = 0; m < defaultMetas.length; m++) {
             let defaultMeta = defaultMetas[m],
-                entityName = path.basename(defaultMeta, '.json').replace('metadata-', ''),
+                entityName = path.basename(defaultMeta, '.json'),
                 index = metadata.indexOf(`:${entityName}`);
             if (~index) {
                 metadata[index] = require(defaultMeta);

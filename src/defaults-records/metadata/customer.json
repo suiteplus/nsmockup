@@ -1,0 +1,3674 @@
+{
+  "code": "customer",
+  "id": -2,
+  "translations": {
+    "en": "Customer"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "accessrole",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Role"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "accountnumber",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Account"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "address",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "address1",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address 1"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "address2",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address 2"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "address3",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address 3"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "addressee",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Addressee"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "addressinternalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address Internal ID"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "addresslabel",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address Label"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "addressphone",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "altcontact",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Alt. Contact"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "altemail",
+      "type": "EMAIL",
+      "translations": {
+        "en": {
+          "label": "Alt. Email"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "altname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "altphone",
+      "type": "PHONE",
+      "translations": {
+        "en": {
+          "label": "Office Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "attention",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Attention"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "autoname",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Auto"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "availableoffline",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Always Available Offline"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "balance",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Balance"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddr1",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "billaddr1"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddr2",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "billaddr2"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddr3",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "billaddr3"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddress",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Address"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddress1",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Address 1"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddress2",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Address 2"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddress3",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Address 3"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddressee",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Addressee"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billattention",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Attention"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billcity",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing City"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billcountry",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "billcountry"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billcountrycode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Country Code"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billingschedule",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Billing Schedule"
+        }
+      },
+      "mandatory": false,
+      "recordType": "billingschedule"
+    },
+    {
+      "code": "billpay",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Enable Online Bill Pay"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billphone",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billstate",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "billstate"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billzip",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "billzip"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billzipcode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Zip"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "boughtamount",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Total Amount Purchased"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "boughtdate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Purchase Dates"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "buyingreason",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Buying Reason"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "buyingtimeframe",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Buying Time Frame"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "campaigncategory",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Campaign Category"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "campaignresponse",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Campaign Response"
+        }
+      },
+      "mandatory": false,
+      "recordType": "campaign"
+    },
+    {
+      "code": "category",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Category",
+          "help": "References a value in a user defined list at Setup > Acco..."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "cccustomercode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "CC Customer Code"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "ccdefault",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Default Credit Card"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "ccexpdate",
+      "type": "MMYYDATE",
+      "translations": {
+        "en": {
+          "label": "CC Expire Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "ccholdername",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Credit Cardholder Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "ccinternalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Credit Card Internal ID"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "ccnumber",
+      "type": "CCNUMBER",
+      "translations": {
+        "en": {
+          "label": "Credit Card Number"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "cctype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Credit Card Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "city",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "City"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "classbought",
+      "type": "MULTISELECT",
+      "translations": {
+        "en": {
+          "label": "Class"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "clickstream",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Clickstream (1st Visit)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "comments",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Comments"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "companyname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Company Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "consolbalance",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Consolidated Balance"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "consoldaysoverdue",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Consolidated Days Overdue"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "consoldepositbalance",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Consolidated Deposit Balance"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "consoloverduebalance",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Consolidated Overdue Balance"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "consolunbilledorders",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Consolidated Unbilled Orders"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "contact",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Contact"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "contactprimary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Contact (Primary)"
+        }
+      },
+      "mandatory": false,
+      "recordType": "contact"
+    },
+    {
+      "code": "contribution",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Contribution %"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "contributionprimary",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Primary Sales Rep Contribution %"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "conversiondate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Conversion Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "country",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Country"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "countrycode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Country Code"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "county",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "County/State"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "credithold",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Credit Hold"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "creditholdoverride",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Override Credit Hold Off"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "creditlimit",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Credit Limit"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "currency",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Currency",
+          "help": "References a value in a user-defined list at Lists > Acco..."
+        }
+      },
+      "mandatory": true,
+      "recordType": "currency"
+    },
+    {
+      "code": "currencyprecision",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Currency Precision"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Custom Form"
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "custstage",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Parent Stage"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "custstatus",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Parent Status"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "dateclosed",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Date Closed"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "datecreated",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Date Created"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "daysoverdue",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Days Overdue"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "defaultaddress",
+      "type": "ADDRESS",
+      "translations": {
+        "en": {
+          "label": "Address"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "defaultbankaccount",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Bank Account"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "defaultorderpriority",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Default Order Priority"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "depositbalance",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Deposit Balance"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "deptbought",
+      "type": "MULTISELECT",
+      "translations": {
+        "en": {
+          "label": "Department"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "draccount",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Deferred Revenue Reclassification Account"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "email",
+      "type": "EMAIL",
+      "translations": {
+        "en": {
+          "label": "Email"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "emailpreference",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "E-Mail Preference"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "emailtransactions",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Email Transactions"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "End Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "entityid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "entitynumber",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Number"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "entitystatus",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Status"
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "estimatedbudget",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Estimated Budget"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "explicitconversion",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Explicit Conversion"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "fax",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Fax"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "faxtransactions",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Fax Transactions"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "firstname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "First Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "firstorderdate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date of First Order"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "firstsaledate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date of First Sale"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "firstvisit",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Date of First Visit"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "fxaccount",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Foreign Currency Adjustment Revenue Account"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "fxbalance",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Balance (Foreign Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "fxconsolbalance",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Consolidated Balance (Foreign Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "fxconsolunbilledorders",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Consolidated Unbilled Orders (Foreign Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "fxunbilledorders",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Unbilled Orders (Foreign Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "giveaccess",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Login Access"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "globalsubscriptionstatus",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Global Subscription Status"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "group",
+      "type": "MULTISELECT",
+      "translations": {
+        "en": {
+          "label": "Group"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "grouppricinglevel",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Group Pricing Level"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "hasduplicates",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Duplicate"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "homephone",
+      "type": "PHONE",
+      "translations": {
+        "en": {
+          "label": "Home Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "image",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Image",
+          "help": "References an image file that has already been uploaded t..."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "isbudgetapproved",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Budget Approved"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isdefaultbilling",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Default Billing Address"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isdefaultshipping",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Default Shipping Address"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isjob",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Is Job"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isperson",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Is Individual"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isreportedlead",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Included in Lead Reports"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isshipaddress",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Residential Address"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "itempricinglevel",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Item Pricing Level"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "itempricingunitprice",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Item Pricing Unit Price"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "itemsbought",
+      "type": "MULTISELECT",
+      "translations": {
+        "en": {
+          "label": "Items Purchased"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "itemsordered",
+      "type": "MULTISELECT",
+      "translations": {
+        "en": {
+          "label": "Items Ordered"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "job",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Job"
+        }
+      },
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "jobenddate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Job Actual End"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "jobestcost",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Estimated Cost"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "jobestenddate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Projected End Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "jobestrevenue",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Estimated Revenue"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "jobpctcomplete",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Percent Complete"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "jobprojectedend",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Job Projected End"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "jobstartdate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Job Start"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "jobstatus",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Job Status"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "jobtype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Job Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "keywords",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Search Engine Keywords (1st Visit)",
+          "help": "This is a read-only field that returns the search engine ..."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "language",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Language",
+          "help": "References a value in the Language system list."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Last Modified"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "lastname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Last Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "lastorderdate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date of Last Order"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "lastpagevisited",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Last Page Visited"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "lastsaledate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date of Last Sale"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "lastviewed",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Last Viewed"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "lastvisit",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Date of Last Visit"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "leaddate",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Lead Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "leadsource",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Lead Source"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "level",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Level"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "locationbought",
+      "type": "MULTISELECT",
+      "translations": {
+        "en": {
+          "label": "Location"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "manualcredithold",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Override Credit Hold On"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "merchantaccount",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Credit Card Processor"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "messages",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Messages"
+        }
+      },
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagesfrom",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Messages From"
+        }
+      },
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagesto",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Messages To"
+        }
+      },
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "middlename",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Middle Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "mobilephone",
+      "type": "PHONE",
+      "translations": {
+        "en": {
+          "label": "Mobile Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "monthlyclosing",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Monthly Closing Date"
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "negativenumberformat",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Negative Number Format"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "numberformat",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Number Format"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "oncredithold",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "On Credit Hold"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "onlineformdate",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Online Form History - Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "onlineformleadsource",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Online Form History - Lead Source"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "onlineformname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Online Form History - Form Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "openingbalance",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Opening Balance"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "openingbalanceaccount",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Opening Balance Account"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "openingbalancedate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Opening Balance Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "orderedamount",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Total Amount Ordered"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "ordereddate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Order Dates"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "otherrelationships",
+      "type": "MULTISELECT",
+      "translations": {
+        "en": {
+          "label": "Other Relationships"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "overduebalance",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Overdue Balance"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "parent",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Child Of",
+          "help": "If this customer is subcustomer of another customer or a smaller entity of another customer, select the larger parent customer here.\nIf you select a parent customer in this field, this record will show indented under the parent customer in the Customers list.\n&nbsp;"
+        }
+      },
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "parentcustomer",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Parent Customer"
+        }
+      },
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "parentitemsbought",
+      "type": "MULTISELECT",
+      "translations": {
+        "en": {
+          "label": "Items or Sub-Items Purchased"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "parentitemsordered",
+      "type": "MULTISELECT",
+      "translations": {
+        "en": {
+          "label": "Items or Sub-Items Ordered"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "partner",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Partner",
+          "help": "References a partner record. This value sets the partner responsible for referring this customer.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": "partner"
+    },
+    {
+      "code": "partnercontribution",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Partner Contribution %"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "partnerrole",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Partner Role"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "partnerteammember",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Partner Team Member"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "password",
+      "type": "PASSWORD",
+      "translations": {
+        "en": {
+          "label": "Password",
+          "help": "Sets the password assigned to allow this customer access to NetSuite. The password must be at least 6 characters long and contain one number or special character. Special characters include: , ` ~ ! @ # $ % ^ & * ) ; ' [ ] \"{ }."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "password2",
+      "type": "PASSWORD",
+      "translations": {
+        "en": {
+          "label": "Confirm Password",
+          "help": "Sets the password confirmation field."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "pec",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "PEC"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "permission",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Permission"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "phone",
+      "type": "PHONE",
+      "translations": {
+        "en": {
+          "label": "Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "phoneticname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Phonetic Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "prefccprocessor",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Pref. CC Processor"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "pricelevel",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Price Level"
+        }
+      },
+      "mandatory": false,
+      "recordType": "pricelevel"
+    },
+    {
+      "code": "pricinggroup",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Pricing Group"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "pricingitem",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Pricing Item"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "printoncheckas",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Print on Check As"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "printtransactions",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Print Transactions"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "prospectdate",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Prospect Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "pstexempt",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "PST Exempt"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "receivablesaccount",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Default Receivables Account"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "referrer",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Referrer (1st Visit)",
+          "help": "Read-only field that returns the site that referred the customer to the NetSuite account website."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "reminderdate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Renewal Reminder Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "reminderdays",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Reminder Days"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "representingsubsidiary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Represents Subsidiary"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "resalenumber",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Resale Number"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "role",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Role"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "salesgroup",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Choose Team"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "salesreadiness",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Sales Readiness"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "salesrep",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Sales Rep"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "salesteammember",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Sales Team Member"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "salesteamrole",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Sales Team Role"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "salutation",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Mr./Mrs..."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "sendemail",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Send Notification E-mail"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Address"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress1",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Address 1"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress2",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Address 2"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress3",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Address 3"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipaddressee",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Addressee"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipattention",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Attention"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipcity",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping City"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipcomplete",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Ship Complete"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipcountry",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Shipping Country"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipcountrycode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Country Code"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipphone",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shippingcarrier",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Carrier"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shippingitem",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Shipping Item"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipstate",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping State/Province"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipzip",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Zip"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "stage",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "stage",
+          "help": "This is a read only field that references a value in a system list. Possible values include LEAD, PROSPECT or CUSTOMER. This value refers to the stage of customer that is being created and are the values that should be submitted as the internal ID values when performing a search. NetSuite automatically updates the customer stage when certain customer status (entityStatus field) changes occur. For more information, see the section Understanding Customer Stages in the SuiteTalk (Web Services) Records Guide."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Start Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "state",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "State/Province"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "statedisplayname",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "State/Province Display Name"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "strength",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Password Strength"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "subcustomer",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Sub Customer"
+        }
+      },
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "subscription",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subscription"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subscriptiondate",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Subscription Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "subscriptionstatus",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Subscription Status"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "subsidbought",
+      "type": "MULTISELECT",
+      "translations": {
+        "en": {
+          "label": "Subsidiaries Bought"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subsidiary",
+          "help": "Select the subsidiary to associate with this entity or job. You cannot enter transactions for this entity or job unless a subsidiary is assigned. \n&nbsp;\nIf you select this entity on a transaction, the transaction is associated with this subsidiary. The entity is able to access only information associated with this subsidiary. \n&nbsp;\nNote: Once a transaction has posted for the entity or job, you are not able to change the subsidiary selected on the entity or job record."
+        }
+      },
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "subsidiarynohierarchy",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subsidiary (no hierarchy)"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "syncpartnerteams",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Update Transactions"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "syncsalesteams",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Update Transactions"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "task",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Task"
+        }
+      },
+      "mandatory": false,
+      "recordType": "task"
+    },
+    {
+      "code": "taxable",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Taxable"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "taxexempt",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "PST Exempt"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "taxfractionunit",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Tax Rounding Precision"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "taxitem",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Tax Item"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "taxrounding",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Tax Rounding Method"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "terms",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Terms",
+          "help": "References a value in a user-defined list at Setup > Accounting > Setup Tasks > Accounting Lists > Term.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "territory",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Territory",
+          "help": "References a value in a user-defined list at Setup > Sales > Sales Management > Sales Territories. This value sets the sales territory this customer belongs in.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "thirdpartyacct",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "3rd Party Billing Account Number"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "thirdpartycarrier",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "3rd Party Billing Carrier"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "thirdpartycountry",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "3rd Party Billing Country"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "thirdpartyzipcode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "3rd Party Billing Zip"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Job Title"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "toplevelparent",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Top Level Parent"
+        }
+      },
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "type",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Entity Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "unbilledorders",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Unbilled Orders"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "unsubscribe",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Unsubscribe from Campaigns"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "url",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Web Address"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "vatregnumber",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Tax Number"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "visits",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Number of Visits",
+          "help": "This field displays the total number of visits this customer has made to your Web site. A new visit is counted after the customer leaves your site and returns."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "weblead",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Web Lead"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "websitecategory",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Web Site Category"
+        }
+      },
+      "mandatory": false,
+      "recordType": "websitecategory"
+    },
+    {
+      "code": "zipcode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Zip Code"
+        }
+      },
+      "mandatory": false
+    }
+  ],
+  "subLists": [
+    {
+      "code": "addressbook",
+      "translations": {
+        "en": "Address"
+      },
+      "fields": [
+        {
+          "code": "addr1",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Address 1"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "addr2",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Address 2"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "addr3",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "addr3"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "addressee",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Addressee"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "addressid",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "addressid"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "addrtext",
+          "type": "ADDRESS",
+          "translations": {
+            "en": {
+              "label": "Address"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "attention",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Attention"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "city",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "City"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "country",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Country"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "defaultbilling",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Default Billing"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "defaultshipping",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Default Shipping"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "displaystate",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "State/Province"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "id",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "ID"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "internalid",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "internalid"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isresidential",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Residential Address"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "label",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Label"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "override",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Override"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "phone",
+          "type": "PHONE",
+          "translations": {
+            "en": {
+              "label": "Phone"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "state",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "State/Province"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "zip",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Zip"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "contactroles",
+      "translations": {
+        "en": "Contacts"
+      },
+      "fields": [
+        {
+          "code": "contact",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Contact"
+            }
+          },
+          "mandatory": false,
+          "recordType": "contact"
+        },
+        {
+          "code": "email",
+          "type": "EMAIL",
+          "translations": {
+            "en": {
+              "label": "Email"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "giveaccess",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Access"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "passwordconfirm",
+          "type": "PASSWORD",
+          "translations": {
+            "en": {
+              "label": "Confirm Password"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "role",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Role"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "sendemail",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Notify"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "strength",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Password Strength"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "creditcards",
+      "translations": {
+        "en": "Credit Cards"
+      },
+      "fields": [
+        {
+          "code": "cardstate",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Card State"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "ccdefault",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Default Credit Card"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "ccexpiredate",
+          "type": "MMYYDATE",
+          "translations": {
+            "en": {
+              "label": "Expiration Date"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "ccmemo",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Memo"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "ccname",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Cardholder Name"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "ccnumber",
+          "type": "CCNUMBER",
+          "translations": {
+            "en": {
+              "label": "Credit Card Number"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "customercode",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Customer Code"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "debitcardissueno",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Issue No."
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "internalid",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "ID"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "paymentmethod",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Credit Card Type"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        },
+        {
+          "code": "statefrom",
+          "type": "DATETIME",
+          "translations": {
+            "en": {
+              "label": "State From"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "validfrom",
+          "type": "CCVALIDFROM",
+          "translations": {
+            "en": {
+              "label": "Valid From / Start Date (MM/YYYY)"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "currency",
+      "translations": {
+        "en": "Currencies"
+      },
+      "fields": [
+        {
+          "code": "balance",
+          "type": "CURRENCY",
+          "translations": {
+            "en": {
+              "label": "Balance"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "consolbalance",
+          "type": "CURRENCY",
+          "translations": {
+            "en": {
+              "label": "Consolidated"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "consoldepositbalance",
+          "type": "CURRENCY",
+          "translations": {
+            "en": {
+              "label": "Consolidated"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "consoloverduebalance",
+          "type": "CURRENCY",
+          "translations": {
+            "en": {
+              "label": "Consolidated"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "consolunbilledorders",
+          "type": "CURRENCY",
+          "translations": {
+            "en": {
+              "label": "Consolidated"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "currency",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Currency"
+            }
+          },
+          "mandatory": true,
+          "recordType": "currency"
+        },
+        {
+          "code": "currencyformatsample",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Format Sample"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "depositbalance",
+          "type": "CURRENCY",
+          "translations": {
+            "en": {
+              "label": "Deposit Balance"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "displaysymbol",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Symbol"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "overduebalance",
+          "type": "CURRENCY",
+          "translations": {
+            "en": {
+              "label": "Overdue Balance"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "overridecurrencyformat",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Override Currency Format"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "symbolplacement",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Symbol Placement"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "unbilledorders",
+          "type": "CURRENCY",
+          "translations": {
+            "en": {
+              "label": "Unbilled Orders"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "download",
+      "translations": {
+        "en": "Downloads"
+      },
+      "fields": [
+        {
+          "code": "expiration",
+          "type": "DATE",
+          "translations": {
+            "en": {
+              "label": "Expiration Date"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "file",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Attach File"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "licensecode",
+          "type": "TEXTAREA",
+          "translations": {
+            "en": {
+              "label": "License Code"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "remainingdownloads",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "Remaining Downloads"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "grouppricing",
+      "translations": {
+        "en": "Group Pricing"
+      },
+      "fields": [
+        {
+          "code": "group",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Pricing Group"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        },
+        {
+          "code": "level",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Price Level"
+            }
+          },
+          "mandatory": true,
+          "recordType": "pricelevel"
+        }
+      ]
+    },
+    {
+      "code": "itempricing",
+      "translations": {
+        "en": "Item Pricing"
+      },
+      "fields": [
+        {
+          "code": "currency",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Currency"
+            }
+          },
+          "mandatory": false,
+          "recordType": "currency"
+        },
+        {
+          "code": "item",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Item"
+            }
+          },
+          "mandatory": true,
+          "recordType": "item"
+        },
+        {
+          "code": "level",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Price Level"
+            }
+          },
+          "mandatory": true,
+          "recordType": "pricelevel"
+        },
+        {
+          "code": "price",
+          "type": "CURRENCY2",
+          "translations": {
+            "en": {
+              "label": "Unit Price"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "partners",
+      "translations": {
+        "en": "Partners"
+      },
+      "fields": [
+        {
+          "code": "contribution",
+          "type": "PERCENT",
+          "translations": {
+            "en": {
+              "label": "Contribution %"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "customer",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "customer"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "id",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "id"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isprimary",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Primary"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "partner",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Partner"
+            }
+          },
+          "mandatory": true,
+          "recordType": "partner"
+        },
+        {
+          "code": "partnerrole",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Partner Role"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        }
+      ]
+    },
+    {
+      "code": "salesteam",
+      "translations": {
+        "en": "Sales Team"
+      },
+      "fields": [
+        {
+          "code": "contribution",
+          "type": "PERCENT",
+          "translations": {
+            "en": {
+              "label": "Contribution %"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "customer",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "customer"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "employee",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Employee"
+            }
+          },
+          "mandatory": true,
+          "recordType": "employee"
+        },
+        {
+          "code": "id",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "id"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "isprimary",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Primary"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "issalesrep",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "issalesrep"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "salesrole",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Sales Role"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        }
+      ]
+    }
+  ],
+  "tabs": [
+    {
+      "code": "access",
+      "translations": {
+        "en": "Access"
+      }
+    },
+    {
+      "code": "address",
+      "translations": {
+        "en": "Address"
+      }
+    },
+    {
+      "code": "custom",
+      "translations": {
+        "en": "Custom"
+      }
+    },
+    {
+      "code": "financial",
+      "translations": {
+        "en": "Financial"
+      }
+    },
+    {
+      "code": "general",
+      "translations": {
+        "en": "General"
+      }
+    },
+    {
+      "code": "info",
+      "translations": {
+        "en": "Info"
+      }
+    },
+    {
+      "code": "marketing",
+      "translations": {
+        "en": "Marketing"
+      }
+    },
+    {
+      "code": "qualification",
+      "translations": {
+        "en": "Qualification"
+      }
+    },
+    {
+      "code": "sales",
+      "translations": {
+        "en": "Sales"
+      }
+    },
+    {
+      "code": "support",
+      "translations": {
+        "en": "Support"
+      }
+    },
+    {
+      "code": "workflow",
+      "translations": {
+        "en": "Workflow"
+      }
+    }
+  ],
+  "transformTypes": [
+    {
+      "targetRecord": "cashsale",
+      "fieldDefault": "customform,billdate"
+    },
+    {
+      "targetRecord": "customerpayment",
+      "fieldDefault": "customform"
+    },
+    {
+      "targetRecord": "estimate",
+      "fieldDefault": "customform"
+    },
+    {
+      "targetRecord": "invoice",
+      "fieldDefault": "customform,billdate"
+    },
+    {
+      "targetRecord": "opportunity",
+      "fieldDefault": "customform"
+    },
+    {
+      "targetRecord": "salesorder",
+      "fieldDefault": "customform"
+    }
+  ]
+}

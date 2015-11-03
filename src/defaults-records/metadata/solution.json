@@ -1,0 +1,447 @@
+{
+  "code": "solution",
+  "id": -25,
+  "translations": {
+    "en": "Solution"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "abstract",
+      "type": "TEXTAREA",
+      "translations": {
+        "en": {
+          "label": "Abstract"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "assigned",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Assigned To",
+          "help": "If you want to assign this solution to someone, select that person in this field."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "autoname",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Auto"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "casecount",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Case Count"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "code",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Code"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Date Created"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Custom Form"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "description",
+      "type": "TEXTAREA",
+      "translations": {
+        "en": {
+          "label": "Detailed Description"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "displayonline",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Display Online"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "eventnumber",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "eventnumber"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "find",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Keyword"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isonline",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Display Online"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Last Modified"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "longdescription",
+      "type": "TEXTAREA",
+      "translations": {
+        "en": {
+          "label": "Description"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "message",
+      "type": "TEXTAREA",
+      "translations": {
+        "en": {
+          "label": "Abstract"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "number",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Number"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "previewref",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Preview"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "relatedsolution",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Related Solution"
+        }
+      },
+      "mandatory": false,
+      "recordType": "solution"
+    },
+    {
+      "code": "solutioncode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Code"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "status",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Status",
+          "help": "Required on Add."
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Title"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "topic",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Topic"
+        }
+      },
+      "mandatory": false,
+      "recordType": "topic"
+    }
+  ],
+  "subLists": [
+    {
+      "code": "solutions",
+      "translations": {
+        "en": "Solutions"
+      },
+      "fields": [
+        {
+          "code": "id",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "id"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "message",
+          "type": "TEXTAREA",
+          "translations": {
+            "en": {
+              "label": "Abstract"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "solution",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Code/Title"
+            }
+          },
+          "mandatory": true,
+          "recordType": "solution"
+        }
+      ]
+    },
+    {
+      "code": "topics",
+      "translations": {
+        "en": "Topics"
+      },
+      "fields": [
+        {
+          "code": "topic",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Topic"
+            }
+          },
+          "mandatory": true,
+          "recordType": "topic"
+        }
+      ]
+    }
+  ],
+  "tabs": [
+    {
+      "code": "communication",
+      "translations": {
+        "en": "Communication"
+      }
+    },
+    {
+      "code": "custom",
+      "translations": {
+        "en": "Custom"
+      }
+    },
+    {
+      "code": "detail",
+      "translations": {
+        "en": "Details"
+      }
+    },
+    {
+      "code": "notes",
+      "translations": {
+        "en": "Notes"
+      }
+    },
+    {
+      "code": "solution",
+      "translations": {
+        "en": "Solutions"
+      }
+    },
+    {
+      "code": "support",
+      "translations": {
+        "en": "Cases"
+      }
+    },
+    {
+      "code": "topic",
+      "translations": {
+        "en": "Topics"
+      }
+    },
+    {
+      "code": "workflow",
+      "translations": {
+        "en": "Workflow"
+      }
+    }
+  ]
+}

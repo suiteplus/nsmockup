@@ -1,0 +1,686 @@
+[
+  {
+    "id": "-2",
+    "name": "Customer"
+  },
+  {
+    "id": "-3",
+    "name": "Vendor"
+  },
+  {
+    "id": "-4",
+    "name": "Employee"
+  },
+  {
+    "id": "-5",
+    "name": "Partner"
+  },
+  {
+    "id": "-6",
+    "name": "Contact"
+  },
+  {
+    "id": "-7",
+    "name": "Job"
+  },
+  {
+    "id": "-8",
+    "name": "Entity Group"
+  },
+  {
+    "id": "-9",
+    "name": "Entity"
+  },
+  {
+    "id": "-10",
+    "name": "Item"
+  },
+  {
+    "id": "-20",
+    "name": "Event"
+  },
+  {
+    "id": "-21",
+    "name": "Task"
+  },
+  {
+    "id": "-22",
+    "name": "Call"
+  },
+  {
+    "id": "-23",
+    "name": "Case"
+  },
+  {
+    "id": "-24",
+    "name": "Campaign"
+  },
+  {
+    "id": "-25",
+    "name": "Solution"
+  },
+  {
+    "id": "-26",
+    "name": "Issue"
+  },
+  {
+    "id": "-27",
+    "name": "Project Task"
+  },
+  {
+    "id": "-30",
+    "name": "Transaction"
+  },
+  {
+    "id": "-31",
+    "name": "Opportunity"
+  },
+  {
+    "id": "-100",
+    "name": "Transaction Type"
+  },
+  {
+    "id": "-101",
+    "name": "Class"
+  },
+  {
+    "id": "-102",
+    "name": "Department"
+  },
+  {
+    "id": "-103",
+    "name": "Location"
+  },
+  {
+    "id": "-104",
+    "name": "Entity Status"
+  },
+  {
+    "id": "-105",
+    "name": "Accounting Period"
+  },
+  {
+    "id": "-106",
+    "name": "Item Type"
+  },
+  {
+    "id": "-108",
+    "name": "Competitor"
+  },
+  {
+    "id": "-109",
+    "name": "Customer Category"
+  },
+  {
+    "id": "-110",
+    "name": "Vendor Category"
+  },
+  {
+    "id": "-111",
+    "name": "Employee Type"
+  },
+  {
+    "id": "-112",
+    "name": "Account"
+  },
+  {
+    "id": "-113",
+    "name": "Product Version"
+  },
+  {
+    "id": "-114",
+    "name": "Product Build"
+  },
+  {
+    "id": "-115",
+    "name": "Product"
+  },
+  {
+    "id": "-116",
+    "name": "Module"
+  },
+  {
+    "id": "-117",
+    "name": "Subsidiary"
+  },
+  {
+    "id": "-118",
+    "name": "Role"
+  },
+  {
+    "id": "-119",
+    "name": "Saved Search"
+  },
+  {
+    "id": "-120",
+    "name": "Email Template"
+  },
+  {
+    "id": "-122",
+    "name": "Currency"
+  },
+  {
+    "id": "-123",
+    "name": "Record Type"
+  },
+  {
+    "id": "-124",
+    "name": "Field"
+  },
+  {
+    "id": "-125",
+    "name": "Scripted Record Type"
+  },
+  {
+    "id": "-126",
+    "name": "Expense Category"
+  },
+  {
+    "id": "-127",
+    "name": "Tax Period"
+  },
+  {
+    "id": "-128",
+    "name": "Tax Code"
+  },
+  {
+    "id": "-129",
+    "name": "Workflow"
+  },
+  {
+    "id": "-131",
+    "name": "Campaign Response Type"
+  },
+  {
+    "id": "-132",
+    "name": "Case Status"
+  },
+  {
+    "id": "-133",
+    "name": "Issue Status"
+  },
+  {
+    "id": "-134",
+    "name": "Sales Readiness"
+  },
+  {
+    "id": "-135",
+    "name": "Buying Time Frame"
+  },
+  {
+    "id": "-136",
+    "name": "Buying Reason"
+  },
+  {
+    "id": "-137",
+    "name": "Address Book"
+  },
+  {
+    "id": "-138",
+    "name": "Allocation Schedule"
+  },
+  {
+    "id": "-139",
+    "name": "Billing Class"
+  },
+  {
+    "id": "-140",
+    "name": "Billing Milestone"
+  },
+  {
+    "id": "-141",
+    "name": "Billing Schedule"
+  },
+  {
+    "id": "-142",
+    "name": "Campaign Audience"
+  },
+  {
+    "id": "-143",
+    "name": "Campaign Category"
+  },
+  {
+    "id": "-144",
+    "name": "Campaign Channel"
+  },
+  {
+    "id": "-145",
+    "name": "Campaign Family"
+  },
+  {
+    "id": "-146",
+    "name": "Campaign Offer"
+  },
+  {
+    "id": "-147",
+    "name": "File Type"
+  },
+  {
+    "id": "-148",
+    "name": "Campaign Search Engine"
+  },
+  {
+    "id": "-149",
+    "name": "Campaign Subscription"
+  },
+  {
+    "id": "-150",
+    "name": "Campaign Vertical"
+  },
+  {
+    "id": "-151",
+    "name": "Case Issue"
+  },
+  {
+    "id": "-152",
+    "name": "Case Origin"
+  },
+  {
+    "id": "-153",
+    "name": "Case Priority"
+  },
+  {
+    "id": "-154",
+    "name": "Case Type"
+  },
+  {
+    "id": "-155",
+    "name": "Cost Category"
+  },
+  {
+    "id": "-156",
+    "name": "Work Calendar"
+  },
+  {
+    "id": "-157",
+    "name": "Contact Role"
+  },
+  {
+    "id": "-158",
+    "name": "Contact Category"
+  },
+  {
+    "id": "-159",
+    "name": "Country"
+  },
+  {
+    "id": "-160",
+    "name": "Credit Hold Override Type"
+  },
+  {
+    "id": "-161",
+    "name": "Customer Message"
+  },
+  {
+    "id": "-162",
+    "name": "Sales Territory"
+  },
+  {
+    "id": "-163",
+    "name": "Support Territory"
+  },
+  {
+    "id": "-164",
+    "name": "Transaction Status"
+  },
+  {
+    "id": "-165",
+    "name": "Email Preference Type"
+  },
+  {
+    "id": "-166",
+    "name": "Employee Status"
+  },
+  {
+    "id": "-167",
+    "name": "Entry Form"
+  },
+  {
+    "id": "-168",
+    "name": "Ethnicity"
+  },
+  {
+    "id": "-169",
+    "name": "Event Reminder Duration"
+  },
+  {
+    "id": "-170",
+    "name": "Event Reminder Type"
+  },
+  {
+    "id": "-171",
+    "name": "Transaction Form"
+  },
+  {
+    "id": "-173",
+    "name": "Issue Reproducibility"
+  },
+  {
+    "id": "-174",
+    "name": "Issue Severity"
+  },
+  {
+    "id": "-175",
+    "name": "Issue Source"
+  },
+  {
+    "id": "-176",
+    "name": "Issue Type"
+  },
+  {
+    "id": "-177",
+    "name": "Project Type"
+  },
+  {
+    "id": "-178",
+    "name": "Marital Status"
+  },
+  {
+    "id": "-179",
+    "name": "Merchant Account"
+  },
+  {
+    "id": "-180",
+    "name": "Note Type"
+  },
+  {
+    "id": "-181",
+    "name": "Other Name Category"
+  },
+  {
+    "id": "-182",
+    "name": "Partner Category"
+  },
+  {
+    "id": "-183",
+    "name": "Payment Method"
+  },
+  {
+    "id": "-184",
+    "name": "Costing Method Type"
+  },
+  {
+    "id": "-185",
+    "name": "Site Category"
+  },
+  {
+    "id": "-186",
+    "name": "Price Level"
+  },
+  {
+    "id": "-187",
+    "name": "Pricing Group"
+  },
+  {
+    "id": "-188",
+    "name": "Resident Status"
+  },
+  {
+    "id": "-190",
+    "name": "Sales Forecast Type"
+  },
+  {
+    "id": "-191",
+    "name": "Sales Role"
+  },
+  {
+    "id": "-192",
+    "name": "Shipping Method"
+  },
+  {
+    "id": "-193",
+    "name": "Shipping Package"
+  },
+  {
+    "id": "-194",
+    "name": "Site Template"
+  },
+  {
+    "id": "-195",
+    "name": "State"
+  },
+  {
+    "id": "-196",
+    "name": "Workplace"
+  },
+  {
+    "id": "-197",
+    "name": "Subscription Status"
+  },
+  {
+    "id": "-198",
+    "name": "Taxation Type"
+  },
+  {
+    "id": "-199",
+    "name": "Term"
+  },
+  {
+    "id": "-201",
+    "name": "Units Type"
+  },
+  {
+    "id": "-202",
+    "name": "Visa Type"
+  },
+  {
+    "id": "-203",
+    "name": "Win/Loss Reason"
+  },
+  {
+    "id": "-205",
+    "name": "Quantity Pricing Schedule"
+  },
+  {
+    "id": "-206",
+    "name": "Quantity Pricing Type"
+  },
+  {
+    "id": "-207",
+    "name": "Cost Estimate Type"
+  },
+  {
+    "id": "-210",
+    "name": "Out of Stock Behavior Type"
+  },
+  {
+    "id": "-211",
+    "name": "Project Constraint Type"
+  },
+  {
+    "id": "-212",
+    "name": "Commission Payment Type"
+  },
+  {
+    "id": "-213",
+    "name": "Field Type"
+  },
+  {
+    "id": "-214",
+    "name": "Entity Type"
+  },
+  {
+    "id": "-215",
+    "name": "Account Type"
+  },
+  {
+    "id": "-218",
+    "name": "Event Status"
+  },
+  {
+    "id": "-219",
+    "name": "Task Status"
+  },
+  {
+    "id": "-220",
+    "name": "Phone Call Status"
+  },
+  {
+    "id": "-221",
+    "name": "Unit"
+  },
+  {
+    "id": "-222",
+    "name": "Event Priority"
+  },
+  {
+    "id": "-223",
+    "name": "Entity Stage"
+  },
+  {
+    "id": "-224",
+    "name": "Language"
+  },
+  {
+    "id": "-225",
+    "name": "Product Tax"
+  },
+  {
+    "id": "-226",
+    "name": "Campaign Event Response"
+  },
+  {
+    "id": "-227",
+    "name": "Campaign Event Type"
+  },
+  {
+    "id": "-228",
+    "name": "Category 1099 Misc"
+  },
+  {
+    "id": "-229",
+    "name": "Campaign Email"
+  },
+  {
+    "id": "-230",
+    "name": "Event Response Type"
+  },
+  {
+    "id": "-234",
+    "name": "Billing Schedule Type"
+  },
+  {
+    "id": "-235",
+    "name": "Workflow Trigger Type"
+  },
+  {
+    "id": "-236",
+    "name": "Workflow Release Status"
+  },
+  {
+    "id": "-237",
+    "name": "Locale"
+  },
+  {
+    "id": "-238",
+    "name": "Timezone"
+  },
+  {
+    "id": "-239",
+    "name": "Tax Rounding Type"
+  },
+  {
+    "id": "-240",
+    "name": "Consolidated Rate Type"
+  },
+  {
+    "id": "-241",
+    "name": "Edition"
+  },
+  {
+    "id": "-242",
+    "name": "Bin"
+  },
+  {
+    "id": "-243",
+    "name": "Approval Status"
+  },
+  {
+    "id": "-244",
+    "name": "Order Status"
+  },
+  {
+    "id": "-245",
+    "name": "Shipping Status"
+  },
+  {
+    "id": "-256",
+    "name": "Time"
+  },
+  {
+    "id": "-261",
+    "name": "Period Subsidiary"
+  },
+  {
+    "id": "-264",
+    "name": "Task Item Status"
+  },
+  {
+    "id": "-266",
+    "name": "Inventory Number"
+  },
+  {
+    "id": "-268",
+    "name": "Website"
+  },
+  {
+    "id": "-269",
+    "name": "Item Revision"
+  },
+  {
+    "id": "-270",
+    "name": "Commission Schedule"
+  },
+  {
+    "id": "-271",
+    "name": "Commission Plan"
+  },
+  {
+    "id": "-280",
+    "name": "Number Format"
+  },
+  {
+    "id": "-281",
+    "name": "Negative Number Format"
+  },
+  {
+    "id": "-282",
+    "name": "Currency Symbol Placement"
+  },
+  {
+    "id": "-289",
+    "name": "Address"
+  },
+  {
+    "id": "-310",
+    "name": "Generic Resource"
+  },
+  {
+    "id": "-319",
+    "name": "Charge Billing Mode"
+  },
+  {
+    "id": "-320",
+    "name": "Case Profile"
+  },
+  {
+    "id": "-321",
+    "name": "Project Template"
+  },
+  {
+    "id": "-322",
+    "name": "ConsolidatedExchangeRate"
+  },
+  {
+    "id": "-324",
+    "name": "Incoterm"
+  },
+  {
+    "id": "-371",
+    "name": "Location Type"
+  },
+  {
+    "id": "-375",
+    "name": "Device Id"
+  }
+]

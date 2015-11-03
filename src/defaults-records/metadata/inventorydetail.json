@@ -1,0 +1,278 @@
+{
+  "code": "inventorydetail",
+  "id": 0,
+  "translations": {
+    "en": "Inventory Detail"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "binnumber",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Bin Number"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Custom Form"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "inventorynumber",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Inventory Number"
+        }
+      },
+      "mandatory": false,
+      "recordType": "inventorynumber"
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Item"
+        }
+      },
+      "mandatory": false,
+      "recordType": "item"
+    },
+    {
+      "code": "itemdescription",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Description"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Location"
+        }
+      },
+      "mandatory": false,
+      "recordType": "location"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "quantity",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Quantity"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "tolocation",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Location"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "unit",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Units"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    }
+  ],
+  "subLists": [
+    {
+      "code": "inventoryassignment",
+      "translations": {
+        "en": "Inventory Detail"
+      },
+      "fields": [
+        {
+          "code": "binnumber",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Bin"
+            }
+          },
+          "mandatory": true,
+          "recordType": "bin"
+        },
+        {
+          "code": "expirationdate",
+          "type": "DATE",
+          "translations": {
+            "en": {
+              "label": "Expiration Date"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "internalid",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "internalid"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "inventorydetail",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "inventorydetail"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "issueinventorynumber",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Serial/Lot Number"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        },
+        {
+          "code": "quantity",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Quantity"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "quantityavailable",
+          "type": "POSFLOAT",
+          "translations": {
+            "en": {
+              "label": "Available"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    }
+  ]
+}

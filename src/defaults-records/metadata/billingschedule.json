@@ -1,0 +1,507 @@
+{
+  "code": "billingschedule",
+  "id": -141,
+  "translations": {
+    "en": "Billing Schedule"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "billforactuals",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Invoice Actual Time Only"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "frequency",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Recurrence Frequency"
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "id",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "BillingSchedule ID"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "inarrears",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "In Arrears"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "initialamount",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Initial Amount"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "initialterms",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Initial Payment Terms"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "ispublic",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Public"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "numberremaining",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Recurrence Count"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "project",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Project"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "recurrencecount",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Recurrence Count"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "recurrenceterms",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Recurrence Payment Terms"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "repeatevery",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Repeat Every"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "scheduletype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "seriesstartdate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Start Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "transaction",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Transaction"
+        }
+      },
+      "mandatory": false,
+      "recordType": "transaction"
+    },
+    {
+      "code": "type",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "weekfriday",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Friday"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "weekmonday",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Monday"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "weeksaturday",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Saturday"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "weeksunday",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Sunday"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "weekthursday",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Thursday"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "weektuesday",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Tuesday"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "weekwednesday",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Wednesday"
+        }
+      },
+      "mandatory": false
+    }
+  ],
+  "subLists": [
+    {
+      "code": "milestone",
+      "translations": {
+        "en": "Milestones"
+      },
+      "fields": [
+        {
+          "code": "comments",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Comment"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "milestoneactualcompletiondate",
+          "type": "DATE",
+          "translations": {
+            "en": {
+              "label": "Actual Completion Date"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "milestoneamount",
+          "type": "PERCENT",
+          "translations": {
+            "en": {
+              "label": "Amount"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "milestonecompleted",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Completed"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "milestonedate",
+          "type": "DATE",
+          "translations": {
+            "en": {
+              "label": "Estimated Completion Date"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "milestoneterms",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Payment Terms"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "projecttask",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Task/Milestone"
+            }
+          },
+          "mandatory": false,
+          "recordType": "projecttask"
+        }
+      ]
+    },
+    {
+      "code": "recurrence",
+      "translations": {
+        "en": "Custom Recurrence Pattern"
+      },
+      "fields": [
+        {
+          "code": "amount",
+          "type": "RATEHIGHPRECISION",
+          "translations": {
+            "en": {
+              "label": "Amount"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "count",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "Count"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "paymentterms",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Payment Terms"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "recurrencedate",
+          "type": "DATE",
+          "translations": {
+            "en": {
+              "label": "Date"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "relativetoprevious",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Relative to Previous"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "units",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Units"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        }
+      ]
+    }
+  ]
+}

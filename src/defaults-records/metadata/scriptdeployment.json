@@ -1,0 +1,355 @@
+{
+  "code": "scriptdeployment",
+  "id": 0,
+  "translations": {
+    "en": "Script Deployment"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "allemployees",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Select All"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "allpartners",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Select All"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "allroles",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Select All"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "auddepartment",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Departments"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "audemployee",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Employees"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "audgroup",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Groups"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "audpartner",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Partners"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "audslctrole",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Roles"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "audsubsidiary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subsidiaries"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "eventtype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Event Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalurl",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External URL"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isdeployed",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Is Deployed"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isonline",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Available Without Login"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "loglevel",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Log Level"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "queueid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Queue"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "recordtype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Record Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "recurrenceminutes",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Repeat"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "script",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Script"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "scriptid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Custom ID"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "scripttype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Script Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "starttime",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Start Time"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "status",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Status"
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Title"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "url",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "URL"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "User"
+        }
+      },
+      "mandatory": false,
+      "recordType": "employee"
+    }
+  ]
+}

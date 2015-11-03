@@ -1,0 +1,139 @@
+{
+  "code": "billingscheduletype",
+  "id": -234,
+  "translations": {
+    "en": "Billing Schedule Type"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "isinactive",
+      "id": 0,
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
+      "type": "CHECKBOX",
+      "mandatory": false,
+      "default": true
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "language",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Language"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Last Modified"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "lastviewed",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Last Viewed"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "level",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Level"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "messages",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Messages"
+        }
+      },
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagesfrom",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Messages From"
+        }
+      },
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagesto",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Messages To"
+        }
+      },
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "permission",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Permission"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subsidiary"
+        }
+      },
+      "mandatory": false,
+      "recordType": "subsidiary"
+    }
+  ]
+}

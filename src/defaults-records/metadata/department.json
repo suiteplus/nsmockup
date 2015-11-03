@@ -1,0 +1,176 @@
+{
+  "code": "department",
+  "id": -102,
+  "translations": {
+    "en": "Department"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "includechildren",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Include Children"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "namenohierarchy",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name (no hierarchy)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "parent",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subdepartment of",
+          "help": "References a record that currently exists in this Department list. Therefore, you should define all departments that will be used as parent records before submitting child department records.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": "department"
+    },
+    {
+      "code": "subsidiary",
+      "type": "MULTISELECT",
+      "translations": {
+        "en": {
+          "label": "Subsidiary"
+        }
+      },
+      "mandatory": false
+    }
+  ],
+  "tabs": [
+    {
+      "code": "history",
+      "translations": {
+        "en": "System Notes"
+      }
+    },
+    {
+      "code": "translation",
+      "translations": {
+        "en": "Translation"
+      }
+    }
+  ]
+}
