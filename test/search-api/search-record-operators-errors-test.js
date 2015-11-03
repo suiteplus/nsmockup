@@ -22,14 +22,14 @@ describe('<Unit Test - Netsuite Search API>', function () {
             }
 
             try {
-                operator('SELECT');
+                operator({type: 'SELECT'});
                 done('missing opertator');
             } catch (e) {
                 should(e).have.property('code', 'SSS_OPERATOR_OBJ_REQD');
             }
 
             try {
-                operator('SELECT', 'anyof');
+                operator({type: 'SELECT', operator: 'anyof'});
                 done('missing value');
             } catch (e) {
                 should(e).have.property('code', 'SSS_VALUE_OBJ_REQD');
@@ -50,7 +50,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             let notSelectOp = allOps.filter(op => op !== 'anyof' && op !== 'noneof');
             notSelectOp.forEach((op) => {
                 try {
-                    operator('SELECT', op, 1);
+                    operator({type: 'SELECT', operator: op, valActual: 1, valExpect: 1});
                     done(`missing operator "${op}" to field type "SELECT"`);
                 } catch (e) {
                     should(e).have.property('code', 'SSS_INVALID_OPERATOR');
@@ -60,7 +60,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             let notMultiSelectOp = allOps.filter(op => !~['allof', 'anyof', 'noneof', 'notallof'].indexOf(op));
             notMultiSelectOp.forEach((op) => {
                 try {
-                    operator('MULTISELECT', op, 1);
+                    operator({type: 'MULTISELECT', operator: op, valActual: 1, valExpect: 1});
                     done(`missing operator "${op}" to field type "MULTISELECT"`);
                 } catch (e) {
                     should(e).have.property('code', 'SSS_INVALID_OPERATOR');
@@ -70,7 +70,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             let notCheckboxOp = allOps.filter(op => op !== 'is');
             notCheckboxOp.forEach((op) => {
                 try {
-                    operator('CHECKBOX', op, 1);
+                    operator({type: 'CHECKBOX', operator: op, valActual: 1, valExpect: 1});
                     done(`missing operator "${op}" to field type "CHECKBOX"`);
                 } catch (e) {
                     should(e).have.property('code', 'SSS_INVALID_OPERATOR');
@@ -87,7 +87,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             typeNumbers.forEach(fldType => {
                 notNumberOp.forEach(op => {
                     try {
-                        operator(`${fldType}`, op, 1);
+                        operator({type: `${fldType}`, operator: op, valActual: 1, valExpect: 1});
                         done(`missing operator "${op}" to field type "${fldType}"`);
                     } catch (e) {
                         should(e).have.property('code', 'SSS_INVALID_OPERATOR');
@@ -104,7 +104,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             typeString.forEach(fldType => {
                 notStringOp.forEach(op => {
                     try {
-                        operator(`${fldType}`, op, 1);
+                        operator({type: `${fldType}`, operator: op, valActual: 1, valExpect: 1});
                         done(`missing operator "${op}" to field type "${fldType}"`);
                     } catch (e) {
                         should(e).have.property('code', 'SSS_INVALID_OPERATOR');
@@ -121,7 +121,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             typeDate.forEach(fldType => {
                 notDateOp.forEach(op => {
                     try {
-                        operator(`${fldType}`, op, 1);
+                        operator({type: `${fldType}`, operator: op, valActual: 1, valExpect: 1});
                         done(`missing operator "${op}" to field type "${fldType}"`);
                     } catch (e) {
                         should(e).have.property('code', 'SSS_INVALID_OPERATOR');
@@ -135,4 +135,5 @@ describe('<Unit Test - Netsuite Search API>', function () {
     after(function (done) {
         nsmockup.destroy(done);
     });
+
 });
