@@ -111,6 +111,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                     ['custrecord_code_id']
                 ].map(c => new nlobjSearchColumn(c[0], c[1])),
                 filters = [
+                    ['internalid', 'custrecord_type_id', 'is', '266'],
                     ['custrecord_id_title_id', 'custrecord_type_id', 'is', 'japo 266']
                 ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
 
@@ -143,6 +144,26 @@ describe('<Unit Test - Netsuite Search API>', function () {
             should(code_id).have.equal('japo 266');
 
             return done();
+        });
+
+        it('search missing "type"', function(done) {
+            try {
+                nlapiSearchRecord();
+                return done('missing type');
+            } catch (e) {
+                should(e).have.property('code', 'SSS_TYPE_ARG_REQD');
+                return done();
+            }
+        });
+
+        it('search ivalid "id"', function(done) {
+            try {
+                nlapiSearchRecord(recType, 'opa');
+                return done('invalid id');
+            } catch (e) {
+                should(e).have.property('code', 'SSS_INVALID_INTERNAL_ID');
+                return done();
+            }
         });
     });
     after(function (done) {

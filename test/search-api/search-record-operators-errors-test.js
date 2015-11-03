@@ -3,7 +3,7 @@
 var should = require('should'),
     parallel = require('mocha.parallel'),
     nsmockup = require('../../'),
-    operator = require('../../lib/db-utils/search-operator');
+    operator = require('../../lib/search-utils/operator');
 
 /**
  * Test Suites
@@ -47,13 +47,13 @@ describe('<Unit Test - Netsuite Search API>', function () {
                 'notonorafter', 'notonorbefore', 'notwithin', 'on', 'onorafter', 'onorbefore', 'startswith', 'within'
             ];
 
-            let notSelectOp = allOps.filter(op => op !== 'anyof' && op !== 'noneof');
+            let notSelectOp = allOps.filter(op => !~['anyof', 'noneof', 'is'].indexOf(op));
             notSelectOp.forEach((op) => {
                 try {
                     operator({type: 'SELECT', operator: op, valActual: 1, valExpect: 1});
                     done(`missing operator "${op}" to field type "SELECT"`);
                 } catch (e) {
-                    should(e).have.property('code', 'SSS_INVALID_OPERATOR');
+                    should(e).have.property('code', 'SSS_INVALID_SRCH_OPERATOR');
                 }
             });
 
@@ -63,7 +63,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                     operator({type: 'MULTISELECT', operator: op, valActual: 1, valExpect: 1});
                     done(`missing operator "${op}" to field type "MULTISELECT"`);
                 } catch (e) {
-                    should(e).have.property('code', 'SSS_INVALID_OPERATOR');
+                    should(e).have.property('code', 'SSS_INVALID_SRCH_OPERATOR');
                 }
             });
 
@@ -73,7 +73,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                     operator({type: 'CHECKBOX', operator: op, valActual: 1, valExpect: 1});
                     done(`missing operator "${op}" to field type "CHECKBOX"`);
                 } catch (e) {
-                    should(e).have.property('code', 'SSS_INVALID_OPERATOR');
+                    should(e).have.property('code', 'SSS_INVALID_SRCH_OPERATOR');
                 }
             });
 
@@ -90,7 +90,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                         operator({type: `${fldType}`, operator: op, valActual: 1, valExpect: 1});
                         done(`missing operator "${op}" to field type "${fldType}"`);
                     } catch (e) {
-                        should(e).have.property('code', 'SSS_INVALID_OPERATOR');
+                        should(e).have.property('code', 'SSS_INVALID_SRCH_OPERATOR');
                     }
                 });
             });
@@ -107,7 +107,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                         operator({type: `${fldType}`, operator: op, valActual: 1, valExpect: 1});
                         done(`missing operator "${op}" to field type "${fldType}"`);
                     } catch (e) {
-                        should(e).have.property('code', 'SSS_INVALID_OPERATOR');
+                        should(e).have.property('code', 'SSS_INVALID_SRCH_OPERATOR');
                     }
                 });
             });
@@ -124,7 +124,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
                         operator({type: `${fldType}`, operator: op, valActual: 1, valExpect: 1});
                         done(`missing operator "${op}" to field type "${fldType}"`);
                     } catch (e) {
-                        should(e).have.property('code', 'SSS_INVALID_OPERATOR');
+                        should(e).have.property('code', 'SSS_INVALID_SRCH_OPERATOR');
                     }
                 });
             });
