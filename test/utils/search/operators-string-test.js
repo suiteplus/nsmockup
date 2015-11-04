@@ -2,7 +2,7 @@
 
 var should = require('should'),
     parallel = require('mocha.parallel'),
-    nsmockup = require('../../');
+    nsmockup = require('../../../');
 
 var base = __dirname + '/../_input-files/record-data';
 /**

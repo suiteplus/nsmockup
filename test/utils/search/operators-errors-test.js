@@ -2,8 +2,8 @@
 
 var should = require('should'),
     parallel = require('mocha.parallel'),
-    nsmockup = require('../../'),
-    operator = require('../../lib/search-utils/operator');
+    nsmockup = require('../../../'),
+    operator = require('../../../lib/search-utils/operator');
 
 /**
  * Test Suites
