@@ -25,8 +25,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
                 ':subsidiary'
             ],
             records = {
-                'subsidiary': `${base}/data/recordType-subsidiary.json`,
-                'vendor': `${base}/data/recordType-user.json`
+                'subsidiary': `${base}/data/subsidiary.json`,
+                'vendor': `${base}/data/user.json`
             },
             opts = {metadata, records};
         nsmockup.init(opts, done);

@@ -14,7 +14,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
     before(function (done) {
         let metadata = [],
             records = {
-                'folder': `${base}/data/recordType-folder.json`
+                'folder': `${base}/data/folder.json`
             },
             opts = {metadata, records};
         nsmockup.init(opts, done);

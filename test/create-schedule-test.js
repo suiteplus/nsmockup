@@ -11,10 +11,10 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
     this.timeout(5000);
     before(function (done) {
         let metadata = [
-                base + '/meta/recordType-metaData-codeg_ids.json'
+                base + '/meta/customrecord_codeg_ids.json'
             ],
             records = {
-                'customrecord_codeg_ids': base + '/data/recordType-codeg_ids.json'
+                'customrecord_codeg_ids': base + '/data/customrecord_codeg_ids.json'
             };
         nsmockup.init({records, metadata}, done);
     });

@@ -17,9 +17,9 @@ describe('<Unit Test - Netsuite Search API>', function () {
                 ':subsidiary'
             ],
             records = {
-                'folder': `${base}/data/recordType-folder.json`,
-                'customer': `${base}/data/recordType-customer.json`,
-                'subsidiary': `${base}/data/recordType-subsidiary.json`
+                'folder': `${base}/data/folder.json`,
+                'customer': `${base}/data/customer.json`,
+                'subsidiary': `${base}/data/subsidiary.json`
             },
             opts = {
                 metadata,

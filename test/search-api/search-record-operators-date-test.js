@@ -25,8 +25,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
                 ':subsidiary'
             ],
             records = {
-                'customer': `${base}/data/recordType-customer.json`,
-                'subsidiary': `${base}/data/recordType-subsidiary.json`
+                'customer': `${base}/data/customer.json`,
+                'subsidiary': `${base}/data/subsidiary.json`
             },
             opts = {
                 general: {

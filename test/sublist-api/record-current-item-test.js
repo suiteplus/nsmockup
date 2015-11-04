@@ -12,10 +12,10 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
 
     beforeEach(function (done) {
         let metadata = [
-                base + '/meta/recordType-metaData-codeg.json'
+                base + '/meta/customrecord_codeg.json'
             ],
             records = {
-                'customrecord_codeg': base + '/data/recordType-codeg.json'
+                'customrecord_codeg': base + '/data/customrecord_codeg.json'
             };
         nsmockup.init({records, metadata}, done);
     });
