@@ -12,8 +12,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
     before(function (done) {
         nsmockup.init(done);
     });
-    parallel('SuiteScript API - nlapiSearchRecord - "operators" - validate error messages:', function () {
-        it('search-op validate missing errors', (done) => {
+    parallel('SuiteScript API - Search Utils - "operators" - validate error messages:', function () {
+        it('operator validate missing errors', (done) => {
             try {
                 operator();
                 done('missing field type');
@@ -38,7 +38,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op validate invalid operators', (done) => {
+        it('operator validate invalid operators', (done) => {
             let allOps = [
                 'after', 'allof', 'any', 'anyof', 'before', 'between', 'contains', 'doesnotcontain', 'doesnotstartwith',
                 'equalto', 'greaterthan', 'greaterthanorequalto', 'haskeywords', 'is', 'isempty', 'isnot', 'isnotempty',

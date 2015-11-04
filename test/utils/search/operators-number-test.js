@@ -4,7 +4,7 @@ var should = require('should'),
     parallel = require('mocha.parallel'),
     nsmockup = require('../../../');
 
-var base = __dirname + '/../_input-files/record-data';
+var base = __dirname + '/../../_input-files/record-data';
 
 var validateVendor = (vendors) => {
     should(vendors).have.length(1);
@@ -31,8 +31,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
             opts = {metadata, records};
         nsmockup.init(opts, done);
     });
-    parallel('SuiteScript API - nlapiSearchRecord - "operator" - NUMBER:', function () {
-        it('search-op "any": vendor by fxbalance', function (done) {
+    parallel('SuiteScript API - Search Utils - "operator" - NUMBER:', function () {
+        it('operator "any": vendor by fxbalance', function (done) {
             let recType = 'vendor',
                 columns = [
                     ['name'],
@@ -47,7 +47,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "between": vendor by fxbalance', function (done) {
+        it('operator "between": vendor by fxbalance', function (done) {
             let recType = 'vendor',
                 columns = [
                     ['name'],
@@ -62,7 +62,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "equalto": vendor by fxbalance', function (done) {
+        it('operator "equalto": vendor by fxbalance', function (done) {
             let recType = 'vendor',
                 columns = [
                     ['name'],
@@ -77,7 +77,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "greaterthan": vendor by fxbalance', function (done) {
+        it('operator "greaterthan": vendor by fxbalance', function (done) {
             let recType = 'vendor',
                 columns = [
                     ['name'],
@@ -92,7 +92,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "greaterthanorequalto": vendor by fxbalance', function (done) {
+        it('operator "greaterthanorequalto": vendor by fxbalance', function (done) {
             [200, 300].forEach(value => {
                 let recType = 'vendor',
                     columns = [
@@ -109,7 +109,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "lessthan": vendor by fxbalance', function (done) {
+        it('operator "lessthan": vendor by fxbalance', function (done) {
             let recType = 'vendor',
                 columns = [
                     ['name'],
@@ -124,7 +124,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "lessthanorequalto": vendor by fxbalance', function (done) {
+        it('operator "lessthanorequalto": vendor by fxbalance', function (done) {
             [400, 300].forEach(value => {
                 let recType = 'vendor',
                     columns = [
@@ -141,7 +141,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "isnotempty": vendor by fxbalance', function (done) {
+        it('operator "isnotempty": vendor by fxbalance', function (done) {
             let recType = 'vendor',
                 columns = [
                     ['name'],
@@ -156,7 +156,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "notbetween": vendor by fxbalance', function (done) {
+        it('operator "notbetween": vendor by fxbalance', function (done) {
             let recType = 'vendor',
                 columns = [
                     ['name'],
@@ -171,7 +171,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "notequalto": vendor by fxbalance', function (done) {
+        it('operator "notequalto": vendor by fxbalance', function (done) {
             let recType = 'vendor',
                 columns = [
                     ['name'],
@@ -186,7 +186,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "notgreaterthan": vendor by fxbalance', function (done) {
+        it('operator "notgreaterthan": vendor by fxbalance', function (done) {
             let recType = 'vendor',
                 columns = [
                     ['name'],
@@ -201,7 +201,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "notgreaterthanorequalto": vendor by fxbalance', function (done) {
+        it('operator "notgreaterthanorequalto": vendor by fxbalance', function (done) {
             [400, 300].forEach(value => {
                 let recType = 'vendor',
                     columns = [
@@ -218,7 +218,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "notlessthan": vendor by fxbalance', function (done) {
+        it('operator "notlessthan": vendor by fxbalance', function (done) {
             let recType = 'vendor',
                 columns = [
                     ['name'],
@@ -233,7 +233,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "notlessthanorequalto": vendor by fxbalance', function (done) {
+        it('operator "notlessthanorequalto": vendor by fxbalance', function (done) {
             [200, 300].forEach(value => {
                 let recType = 'vendor',
                     columns = [

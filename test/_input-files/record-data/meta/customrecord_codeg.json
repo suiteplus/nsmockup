@@ -25,6 +25,67 @@
       },
       "id": 2,
       "type": "TEXT"
+    },
+    {
+      "code": "custrecord_code_batch",
+      "translations": {
+        "en": {
+          "label": "Batch"
+        }
+      },
+      "id": 3,
+      "type": "SELECT",
+      "recordType": "customlist_batchtype"
+    },
+    {
+      "code": "custrecord_code_currency",
+      "translations": {
+        "en": {
+          "label": "Currency"
+        }
+      },
+      "id": 4,
+      "type": "CURRENCY"
+    },
+    {
+      "code": "custrecord_code_decimal",
+      "translations": {
+        "en": {
+          "label": "Decimal"
+        }
+      },
+      "id": 5,
+      "type": "DECIMAL"
+    },
+    {
+      "code": "custrecord_code_multiselect",
+      "translations": {
+        "en": {
+          "label": "Decimal"
+        }
+      },
+      "id": 6,
+      "type": "MULTISELECT"
+    },
+    {
+      "code": "custrecord_code_date",
+      "translations": {
+        "en": {
+          "label": "Date"
+        }
+      },
+      "id": 7,
+      "type": "DATE"
+    },
+    {
+      "code": "custrecord_code_datetime",
+      "translations": {
+        "en": {
+          "label": "Datetime"
+        }
+      },
+      "id": 8,
+      "type": "DATETIME"
     }
   ],
   "subLists": [

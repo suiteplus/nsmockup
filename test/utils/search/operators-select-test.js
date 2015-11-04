@@ -4,7 +4,7 @@ var should = require('should'),
     parallel = require('mocha.parallel'),
     nsmockup = require('../../../');
 
-var base = __dirname + '/../_input-files/record-data';
+var base = __dirname + '/../../_input-files/record-data';
 /**
  * Test Suites
  */
@@ -19,8 +19,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
             opts = {metadata, records};
         nsmockup.init(opts, done);
     });
-    parallel('SuiteScript API - nlapiSearchRecord - "operator" - SELECT:', function () {
-        it('search-op "anyof": folder by parent', function (done) {
+    parallel('SuiteScript API - Search Utils - "operator" - SELECT:', function () {
+        it('operator "anyof": folder by parent', function (done) {
             let recType = 'folder',
                 columns = [
                     ['name'],
@@ -37,7 +37,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "noneof": folder by parent', function (done) {
+        it('operator "noneof": folder by parent', function (done) {
             let recType = 'folder',
                 columns = [
                     ['name'],

@@ -4,7 +4,7 @@ var should = require('should'),
     parallel = require('mocha.parallel'),
     nsmockup = require('../../../');
 
-var base = __dirname + '/../_input-files/record-data';
+var base = __dirname + '/../../_input-files/record-data';
 /**
  * Test Suites
  */
@@ -38,8 +38,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
             }
         });
     });
-    parallel('SuiteScript API - nlapiSearchRecord - "operators" - STRING:', function () {
-        it('search-op "is": folder by name', function (done) {
+    parallel('SuiteScript API - Search Utils - "operators" - STRING:', function () {
+        it('operator "is": folder by name', function (done) {
             let recType = 'folder',
                 columns = [
                     ['name', 'parent']
@@ -57,7 +57,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "haskeywords": folder by name', function (done) {
+        it('operator "haskeywords": folder by name', function (done) {
             let recType = 'folder',
                 columns = [
                     ['name', 'parent']
@@ -75,7 +75,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "isempty": folder by name', function (done) {
+        it('operator "isempty": folder by name', function (done) {
             let recType = 'folder',
                 filters = [
                     ['name', null, 'isempty', '@NONE@']
@@ -86,7 +86,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "isnot": folder by name', function (done) {
+        it('operator "isnot": folder by name', function (done) {
             let recType = 'folder',
                 filters = [
                     ['name', null, 'isnot', 'SuiteScripts']
@@ -100,7 +100,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "isnotempty": file by name', function (done) {
+        it('operator "isnotempty": file by name', function (done) {
             let recType = 'file',
                 columns = [
                     ['name', 'folder']
@@ -119,7 +119,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "any": customer by email', function (done) {
+        it('operator "any": customer by email', function (done) {
             let recType = 'customer',
                 columns = [
                     ['entityid']
@@ -137,7 +137,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "contains": file by name', function (done) {
+        it('operator "contains": file by name', function (done) {
             let recType = 'file',
                 columns = [
                     ['name', 'folder']
@@ -154,7 +154,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "doesnotcontain": file by name', function (done) {
+        it('operator "doesnotcontain": file by name', function (done) {
             let recType = 'file',
                 columns = [
                     ['name', 'folder']
@@ -173,7 +173,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "doesnotstartwith": file by name', function (done) {
+        it('operator "doesnotstartwith": file by name', function (done) {
             let recType = 'file',
                 columns = [
                     ['name', 'folder']
@@ -192,7 +192,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search-op "startswith": file by name', function (done) {
+        it('operator "startswith": file by name', function (done) {
             let recType = 'file',
                 columns = [
                     ['name', 'folder']

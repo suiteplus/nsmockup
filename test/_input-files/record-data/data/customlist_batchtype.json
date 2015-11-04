@@ -1,0 +1,14 @@
+[
+  {
+    "internalid": 1,
+    "name": "DOC",
+    "inactive": false,
+    "abbreviation": "D"
+  },
+  {
+    "internalid": 2,
+    "name": "TED",
+    "inactive": false,
+    "abbreviation": "T"
+  }
+]

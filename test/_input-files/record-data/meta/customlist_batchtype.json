@@ -1,0 +1,34 @@
+{
+  "code": "customlist_batchtype",
+  "id": 420,
+  "translations": {
+    "en": "Batch Type",
+    "pt_BR": "Tipo do Lote"
+  },
+  "inactive": false,
+  "description": "",
+  "disclaimer": "<b>Record numbers cannot be reverted back to names once updated. If you check Update, a number is assigned to each existing record of that type, and the name is stored in a separate field.<br/></b><br/>You can return to this tab at any time to turn on or off numbering for new records; however, once numbered, records will be listed by number instead of by name.<br/>It typically takes just a few minutes for 5000 records. While it is running, this tab will not be available.<br/>",
+  "fields": [
+    {
+      "code": "name",
+      "id": 0,
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "isinactive",
+      "id": 0,
+      "translations": {
+        "en": {
+          "label": "Is Inactive"
+        }
+      },
+      "type": "CHECKBOX",
+      "mandatory": false
+    }
+  ]
+}
