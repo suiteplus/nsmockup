@@ -19,7 +19,7 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
         nsmockup.init({records, metadata}, done);
     });
     describe('Create Script - Schedule', function () {
-        it('create schedule', function (done) {
+        it('schedule: create', function (done) {
             nsmockup.createSchedule({
                 name: 'customscript_my_schedule',
                 files: [
@@ -36,6 +36,79 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
 
                 return done();
             });
+        });
+
+        it('schedule: missing "opt.files"', function(done) {
+            const errorDone = 'missing "opt.files"',
+                errorMsg = 'script needs libraries: "opt.files"';
+
+            try {
+                nsmockup.createSchedule(null, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+
+            try {
+                nsmockup.createSchedule({}, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+
+            try {
+                nsmockup.createSchedule({file: {}}, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+
+            try {
+                nsmockup.createSchedule({files: []}, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+            return done();
+        });
+
+        it('schedule: missing "opt.func"', function(done) {
+            const errorDone = 'missing "opt.func"',
+                errorMsg = 'principal function not def: "opt.func"',
+                opts = {
+                    files:[__dirname + '/_input-files/scripts/fake-schedule.js']
+                };
+
+            try {
+                nsmockup.createSchedule(opts, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+            return done();
+        });
+
+        it('schedule: invalid "opt.func"', function(done) {
+            const errorDone = 'invalid method "opt.funcs"',
+                errorMsg = 'invalid type of principal function, string only: "opt.func"',
+                opts = {
+                    files:[__dirname + '/_input-files/scripts/fake-schedule.js'],
+                    func: {opa: 1}
+                };
+
+            try {
+                nsmockup.createSchedule(opts, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+            return done();
         });
     });
     after(function (done) {

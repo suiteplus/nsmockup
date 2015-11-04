@@ -12,7 +12,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
         nsmockup.init({server: true}, done);
     });
     describe('Create Script - Restlet', function () {
-        it('create restlet', function (done) {
+        it('restlet: create', function (done) {
             let opts = {
                 name: 'customscript_add_restlet',
                 files: [
@@ -38,6 +38,97 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
                 should(body).be.equal('12');
                 return done();
             });
+        });
+
+        it('restlet: missing "opt.files"', function(done) {
+            const errorDone = 'missing "opt.files"',
+                errorMsg = 'script needs libraries: "opt.files"';
+
+            try {
+                nsmockup.createRESTlet(null, () => {
+                    return done(errorDone);
+                });
+           } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+
+            try {
+                nsmockup.createRESTlet({}, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+
+            try {
+                nsmockup.createRESTlet({file: {}}, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+
+            try {
+                nsmockup.createRESTlet({files: []}, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+            return done();
+        });
+
+        it('restlet: missing "opt.funcs"', function(done) {
+            const errorDone = 'missing "opt.funcs"',
+                errorMsg = 'principal functions not def: "opt.funcs"',
+                opts = {
+                    files:[__dirname + '/_input-files/scripts/fake-restlet.js']
+                };
+
+            try {
+                nsmockup.createRESTlet(opts, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+            return done();
+        });
+
+        it('restlet: empty "opt.funcs"', function(done) {
+            const errorDone = 'missing "opt.funcs"',
+                errorMsg = 'principal functions was empty: "opt.funcs"',
+                opts = {
+                    files:[__dirname + '/_input-files/scripts/fake-restlet.js'],
+                    funcs: {}
+                };
+
+            try {
+                nsmockup.createRESTlet(opts, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+            return done();
+        });
+
+        it('restlet: invalid method "opt.funcs"', function(done) {
+            const errorDone = 'invalid method "opt.funcs"',
+                errorMsg = 'invalid method opa',
+                opts = {
+                    files:[__dirname + '/_input-files/scripts/fake-restlet.js'],
+                    funcs: {opa: 'legal'}
+                };
+
+            try {
+                nsmockup.createRESTlet(opts, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+            return done();
         });
     });
     after(function (done) {

@@ -17,9 +17,7 @@ var database = require('../database'),
 module.exports = (opt, cb) => {
     if (!opt || !opt.files || opt.files.length === 0) {
         return ssValidate.throwError('script needs libraries: "opt.files"');
-    }
-
-    if (!opt.func) {
+    } else  if (!opt.func) {
         return ssValidate.throwError('principal function not def: "opt.func"');
     }
 

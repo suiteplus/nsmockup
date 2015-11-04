@@ -22,9 +22,7 @@ var database = require('../database'),
 module.exports = (opt, cb) => {
     if (!opt || !opt.files || opt.files.length === 0) {
         return ssValidate.throwError('script needs libraries: "opt.files"');
-    }
-
-    if (!opt.funcs) {
+    } else if (!opt.funcs) {
         return ssValidate.throwError('principal functions not def: "opt.funcs"');
     }
 
@@ -47,7 +45,7 @@ module.exports = (opt, cb) => {
         if (~['post', 'get', 'delete', 'put'].indexOf(method)) {
             ssValidate.principalFunction(opt.funcs, method, context);
         } else {
-            should(method).be.equal(null, `invalid method ${method}}`);
+            should(method).be.equal(null, `invalid method ${method}`);
         }
     }
 

@@ -22,11 +22,11 @@ var database = require('../database'),
 module.exports = (opt, cb) => {
     if (!opt || !opt.files || opt.files.length === 0) {
         return ssValidate.throwError('script needs libraries: "opt.files"');
-    }
-    if (!opt.record) {
+    } else if (!opt.record) {
         return ssValidate.throwError('user event needs one Record Type: "opt.record"');
+    } else if (!opt.funcs) {
+        return ssValidate.throwError('principal functions not def: "opt.funcs"');
     }
-
     let funcs = Object.keys(opt.funcs);
     if (!funcs || funcs.length === 0) {
         return ssValidate.throwError('principal functions was empty: "opt.funcs"');
