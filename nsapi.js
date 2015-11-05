@@ -1,6 +1,12 @@
 'use strict';
 var vmSim = require('./src/vm-sim');
 
+var moment = require('moment');
+moment.createFromInputFallback = function(config) {
+    // unreliable string magic, or
+    config._d = new Date(config._i);
+};
+
 // workaround to 'require' works in vm.runInThisContext
 global.require = require;
 // add window
