@@ -26,7 +26,12 @@ describe('<Unit Test - Netsuite Search API>', function () {
             opts = {
                 general: {
                     dateFormat: 'DD-MM-YYYY',
-                    timeFormat: 'HH:mm:ss'
+                    timeFormat: 'HH:mm:ss',
+                    numberFormat: {
+                        decimal: ',',
+                        precision: 2,
+                        thousand: '.'
+                    }
                 },
                 metadata,
                 records
@@ -45,16 +50,17 @@ describe('<Unit Test - Netsuite Search API>', function () {
                 };
                 let value = fieldValue(opts);
 
-                should(value).be.equal(o.expect, `invalid value [${o.value}] != "${o.expect}"`);
+                should(value).have.property('id', o.value, `invalid ID value [${o.value.id}] != "${o.value}"`);
+                should(value).have.property('txt', o.expect, `invalid TXT value [${o.value.txt}] != "${o.expect}"`);
             });
             return done();
         });
 
         it('field-value: currency', function (done) {
             let dataTest = [
-                {value: 10.013, expect: 10.013},
-                {value: '10.013', expect: 10.013},
-                {value: null, expect: 0}
+                {value: 1210.013, expect: '1.210,01'},
+                {value: '90.038', expect: '90,04'},
+                {value: null, expect: ''}
             ];
             dataTest.forEach(o => {
                 let opts = {
