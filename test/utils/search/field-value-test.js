@@ -58,8 +58,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
 
         it('field-value: currency', function (done) {
             let dataTest = [
-                {value: 1210.013, expect: '1.210,01'},
-                {value: '90.038', expect: '90,04'},
+                {value: 1210.013, expect: '1210.01'},
+                {value: '90.038', expect: '90.04'},
                 {value: null, expect: ''}
             ];
             dataTest.forEach(o => {
