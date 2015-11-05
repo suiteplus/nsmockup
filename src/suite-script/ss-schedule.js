@@ -7,7 +7,8 @@ var database = require('../database'),
  * NetSuite: Schedule mockup.
  *
  * @param opt {{
- *    name: String,
+ *    id: String,
+ *    [name]: String,
  *    files: [String],
  *    params: Object,
  *    func: String,
@@ -24,7 +25,7 @@ module.exports = (opt, cb) => {
     // save reference
     let context = database.createSuiteScript({
         type: 'schedule',
-        name: opt.name,
+        name: opt.id || opt.name,
         func: opt.func,
         files: opt.files,
         params: opt.params

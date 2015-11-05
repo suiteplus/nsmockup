@@ -8,7 +8,8 @@ var database = require('../database'),
  * NetSuite: RESTlet mockup.
  *
  * @param opt {{
- *    name: String,
+ *    id: String,
+ *    [name]: String,
  *    files: [String],
  *    params: Object,
  *    funcs: {
@@ -34,7 +35,7 @@ module.exports = (opt, cb) => {
     // save reference
     let context = database.createSuiteScript({
         type: 'restlet',
-        name: opt.name,
+        name: opt.id || opt.name,
         funcs: opt.funcs,
         files: opt.files,
         params: opt.params

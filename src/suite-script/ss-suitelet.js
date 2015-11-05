@@ -7,7 +7,8 @@ var database = require('../database'),
  * NetSuite: Suitelet mockup.
  *
  * @param opt {{
- *    name: String,
+ *    id: String,
+ *    [name]: String,
  *    files: [String],
  *    params: Object,
  *    func: String
@@ -23,7 +24,7 @@ module.exports = (opt, cb) => {
     // save reference and get new context
     let context = database.createSuiteScript({
         type: 'suitelet',
-        name: opt.name,
+        name: opt.id || opt.name,
         func: opt.func,
         files: opt.files,
         params: opt.params
