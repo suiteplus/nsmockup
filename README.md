@@ -50,7 +50,7 @@ var opt = {
     records: {
         "customrecord_my-record": __dirname + '/data/customrecord_my-record.json'
     },
-    metadatas: [
+    metadata: [
         __dirname + '/meta/metaData-customrecord_my-record.json'
     ],
     server: true
@@ -240,7 +240,7 @@ describe('<Unit Test - Netsuite API Simulation>', function () {
 
     before(function (done) {
         // map record types
-        let metadatas = [
+        let metadata = [
                 __dirname + '/record/meta/recordType-metaData-codeg.json',
                 __dirname + '/record/meta/recordType-metaData-codeg_ids.json'
             ],
@@ -250,7 +250,7 @@ describe('<Unit Test - Netsuite API Simulation>', function () {
             };
 
         // start database simulation
-        nsmockup.init({records, metadatas, server: true}, done);
+        nsmockup.init({records, metadata, server: true}, done);
     });
 
     it('simple load lib and execute function', function (done) {

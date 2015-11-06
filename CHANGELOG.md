@@ -1,5 +1,25 @@
 # nsmockup ChangeLog
 
+## 2015-11-05, Version 0.9.0 (unstable),
+
+### Notable changes
+  * add defaults NetSuite metadata.
+  * rename "opts.metadatas" to "opts.metadata" in `smockup.init`.
+  * add validations for principal functions for each SuiteScripts.
+  * fix reload general preferences with `ulp.watch`.
+  * add floder validation in `lapiSubmitFile`.
+  * improve field type parse in query results.
+  * implement **search operators** for `nlapiSearchRecord`.
+
+### Netsuite API:
+  * __Context APIs__
+    - `function nlapiGetDepartment()`
+    - `function nlapiGetSubsidiary()`
+    - `function nlapiGetUser()`
+  * __Currency APIs__
+    - `function nlapiFormatCurrency(str)`
+
+
 ## 2015-10-26, Version 0.8.0 (unstable),
 
 ### Notable changes
