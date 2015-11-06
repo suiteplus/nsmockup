@@ -8,6 +8,7 @@ var database = require('../database'),
  *
  * @param opt {{
  *    id: String,
+ *    [deployment]: String,
  *    [name]: String,
  *    files: [String],
  *    params: Object,
@@ -21,10 +22,15 @@ module.exports = (opt, cb) => {
         return ssValidate.throwError('principal function not def: "opt.func"');
     }
 
+    if (opt.deployment) {
+        opt.deployment = 'customdeploy' + opt.id.replace('customscript', '');
+    }
+
     // save reference and get new context
     let context = database.createSuiteScript({
         type: 'suitelet',
         name: opt.id || opt.name,
+        deployment: opt.deployment,
         func: opt.func,
         files: opt.files,
         params: opt.params

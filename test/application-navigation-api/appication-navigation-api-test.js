@@ -45,13 +45,13 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
     });
     parallel('SuiteScript API - nlapiResolveURL:', function () {
         it('resolve get internal URL from RESTlet', function (done) {
-            let url = nlapiResolveURL('RESTLET', ropts.name);
+            let url = nlapiResolveURL('RESTLET', ropts.name, '1');
             should(url).be.ok();
             return done();
         });
 
         it('resolve get internal URL from Suitelet', function (done) {
-            let url = nlapiResolveURL('SUITELET', sopts.name);
+            let url = nlapiResolveURL('SUITELET', sopts.name, '1');
             should(url).be.ok();
             return done();
         });
@@ -71,16 +71,27 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             try {
                 let o = nlapiResolveURL('RESTLET');
                 should(o).have.instanceOf(String);
-                return done('missing id: ' + o.getId());
+                return done('missing identifier: ' + o.getId());
             } catch (e) {
                 should(e).have.property('code', 'SSS_IDENTFIER_ARG_REQ');
                 return done();
             }
         });
 
+        it('resolve missing id', function (done) {
+            try {
+                let o = nlapiResolveURL('RESTLET', ropts.name);
+                should(o).have.instanceOf(String);
+                return done('missing id: ' + o.getId());
+            } catch (e) {
+                should(e).have.property('code', 'SSS_ID_ARG_REQ');
+                return done();
+            }
+        });
+
         it('resolve identifier not found', function (done) {
             try {
-                let o = nlapiResolveURL('SUITELET', 'customscript_japopop');
+                let o = nlapiResolveURL('SUITELET', 'customscript_japopop', '1');
                 should(o).have.instanceOf(String);
                 return done('missing id: ' + o.getId());
             } catch (e) {
@@ -103,7 +114,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
         it('resolve invalid type', function (done) {
             try {
                 let invalidRecType = 'japois';
-                let o = nlapiResolveURL(invalidRecType, 1);
+                let o = nlapiResolveURL(invalidRecType, 1, '1');
                 should(o).have.instanceOf(String);
                 return done('invalid record type: ' + o.getRecordType());
             } catch (e) {
@@ -115,7 +126,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
 
     describe('SuiteScript API - nlapiRequestURL:', function () {
         it('request only restlet URL', function (done) {
-            let url = nlapiResolveURL('RESTLET', ropts.name);
+            let url = nlapiResolveURL('RESTLET', ropts.name, '1');
             should(url).be.ok();
             let res = nlapiRequestURL(url + '&fake=12');
             should(res).be.ok();
@@ -125,7 +136,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
         });
 
         it('request only suitelet URL', function (done) {
-            let url = nlapiResolveURL('SUITELET', sopts.name);
+            let url = nlapiResolveURL('SUITELET', sopts.name, '1');
             should(url).be.ok();
             let res = nlapiRequestURL(url + '&fake=22');
             should(res).be.ok();
@@ -135,7 +146,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
         });
 
         it('request restlet URL method POST', function (done) {
-            let url = nlapiResolveURL('RESTLET', ropts.name);
+            let url = nlapiResolveURL('RESTLET', ropts.name, '1');
             should(url).be.ok();
             let res = nlapiRequestURL(url, {fake: 12}, null, 'POST');
             should(res).be.ok();

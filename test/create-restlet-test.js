@@ -28,7 +28,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
             nsmockup.createRESTlet(opts, (ctx) => {
                 should(ctx.FakeRestlet).be.ok();
 
-                let url = nlapiResolveURL('RESTLET', opts.name);
+                let url = nlapiResolveURL('RESTLET', opts.name, '1');
                 should(url).be.ok();
 
                 let res = nlapiRequestURL(url + '&fake=12', null, null, 'GET');

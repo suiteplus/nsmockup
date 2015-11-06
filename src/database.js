@@ -60,6 +60,7 @@ exports.load = (cb) => {
  *    id: number,
  *    name: string
  *    type: string,
+ *    deployment: string,
  *    files: [string],
  *    params: {}
  * }}
@@ -79,7 +80,7 @@ exports.createSuiteScript = (data) => {
 
     data.uri = URI[data.type]; // only suitelet and restlet
     if (data.uri) {
-        data.url = `http://localhost:${srvconf.port}${data.uri}?script=${data.id}`;
+        data.url = `http://localhost:${srvconf.port}${data.uri}?script=${data.id}&deploy=1`;
     }
 
     // create script in other context

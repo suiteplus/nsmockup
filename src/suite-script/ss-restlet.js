@@ -10,6 +10,7 @@ var database = require('../database'),
  * @param opt {{
  *    id: String,
  *    [name]: String,
+ *    [deployment]: String,
  *    files: [String],
  *    params: Object,
  *    funcs: {
@@ -32,10 +33,15 @@ module.exports = (opt, cb) => {
         return ssValidate.throwError('principal functions was empty: "opt.funcs"');
     }
 
+    if (opt.deployment) {
+        opt.deployment = 'customdeploy' + opt.id.replace('customscript', '');
+    }
+
     // save reference
     let context = database.createSuiteScript({
         type: 'restlet',
         name: opt.id || opt.name,
+        deployment: opt.deployment,
         funcs: opt.funcs,
         files: opt.files,
         params: opt.params

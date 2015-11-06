@@ -65,7 +65,8 @@ nsmockup.init(opt, function(err) {
 #### nsmockup.createSuitelet(cfg, cb)
 | Param  | Type                |Description  | 
 | ------ | ------------------- | ------------|
-| cfg.name | <code>string</code> | Custom ID of Suitelet. |
+| cfg.id | <code>string</code> | Custom ID of Suitelet. |
+| cfg.name | <code>string</code> | Name of Suitelet. |
 | cfg.func | <code>string</code> | Defines the function that should be called from the selected script file. |
 | cfg.files | <code>[string]</code> | Path to JavaScripts files that contains your implementation. |
 | cfg.params | <code>object</code> | Default parameters to run your implementation. |
@@ -73,7 +74,8 @@ nsmockup.init(opt, function(err) {
 
 ```javascript
     nsmockup.createSuitelet({
-        name: 'my_suitelet',
+        id: 'my_suitelet',
+        name: 'My Suitelet',
         func: 'MySuitelet.main',
         files: [
             __dirname + '/lib/my-suitelet.js'
@@ -96,7 +98,8 @@ nsmockup.init(opt, function(err) {
 #### nsmockup.createRESTlet(cfg, cb)
 | Param  | Type                |Description  | 
 | ------ | ------------------- | ------------|
-| cfg.name | <code>string</code> | Custom ID of Suitelet. |
+| cfg.id | <code>string</code> | Custom ID of RESTlet. |
+| cfg.name | <code>string</code> | Name of RESTlet. |
 | cfg.funcs.get | <code>string</code> | Sets the script function that should execute as the HTTP GET method. |
 | cfg.funcs.post | <code>string</code> | Sets the script function that should execute as the HTTP POST method. |
 | cfg.funcs.put | <code>string</code> | Sets the script function that should execute as the HTTP PUT method. |
@@ -107,7 +110,8 @@ nsmockup.init(opt, function(err) {
 
 ```javascript
     nsmockup.createRESTlet({
-        name: 'my_restlet',
+        id: 'my_restlet',
+        name: 'My RESTlet',
         funcs: {
             get: 'MyRestlet.get',
             post: 'MyRestlet.post'
@@ -133,7 +137,8 @@ nsmockup.init(opt, function(err) {
 #### nsmockup.createSchedule(cfg, cb)
 | Param  | Type                |Description  | 
 | ------ | ------------------- | ------------|
-| cfg.name | <code>string</code> | Custom ID of Suitelet. |
+| cfg.id | <code>string</code> | Custom ID of Schedule. |
+| cfg.name | <code>string</code> | Name of Schedule. |
 | cfg.func | <code>string</code> | Defines the function that should be called from the selected script file. |
 | cfg.files | <code>[string]</code> | Path to JavaScripts files that contains your implementation. |
 | cfg.params | <code>object</code> | Default parameters to run your implementation. |
@@ -142,7 +147,8 @@ nsmockup.init(opt, function(err) {
 
 ```javascript
     nsmockup.createSchedule({
-        name: 'my_schedule',
+        id: 'my_schedule',
+        name: 'My Schedule',
         func: 'MySchedule.main',
         files: [
             __dirname + '/lib/my-schedule.js'
@@ -165,7 +171,8 @@ nsmockup.init(opt, function(err) {
 #### nsmockup.createUserEvent(cfg, cb)
 | Param  | Type                |Description  | 
 | ------ | ------------------- | ------------|
-| cfg.name | <code>string</code> | Custom ID of Suitelet. |
+| cfg.id | <code>string</code> | Custom ID of User Event. |
+| cfg.name | <code>string</code> | Name of User Event. |
 | cfg.funcs.beforeLoad | <code>string</code> | Sets the script function that should execute whenever a read operation on a record occurs. |
 | cfg.funcs.beforeSubmit | <code>string</code> | Sets the function that should execute before the associated record is submitted |
 | cfg.funcs.afterSubmit | <code>string</code> | Sets the function that should execute after the associated record is submitted. |
@@ -176,7 +183,8 @@ nsmockup.init(opt, function(err) {
 
 ```javascript
     nsmockup.createUserEvent({
-        name: 'my_user-event',
+        id: 'my_user-event',
+        name: 'My User Event',
         funcs: {
             beforeLoad: 'MyUserEvent.beforeLoad',
             beforeSubmit: 'MyUserEvent.beforeSubmit',
