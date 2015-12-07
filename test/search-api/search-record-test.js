@@ -146,6 +146,31 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
+        it('search formula text', function (done) {
+            let columns = [
+                    ['custrecord_id_title_id', 'custrecord_type_id'],
+                    ['custrecord_code_id'],
+                    ['formulatext']
+                ].map(c => new nlobjSearchColumn(c[0], c[1])),
+                filters = [
+                    ['custrecord_id_title_id', 'custrecord_type_id', 'is', 'japo 266']
+                ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
+
+            columns[2].setFormula('{custrecord_code_id}||" - "||case {custrecord_type_id.custrecord_id_title_id} when "japo 266" then "legal" else "humm" end');
+
+            let codes = nlapiSearchRecord(recType, null, filters, columns);
+            should(codes).have.length(15);
+            let code = codes[0];
+            should(code).have.property('id', 11);
+            should(code).have.property('type', 'customrecord_codeg');
+            let code_id = code.getValue(columns[0]);
+            should(code_id).have.equal('japo 266');
+            let formula = code.getValue(columns[2]);
+            should(formula).have.equal('12 - legal');
+
+            return done();
+        });
+
         it('search missing "type"', function(done) {
             try {
                 nlapiSearchRecord();
