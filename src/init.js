@@ -129,7 +129,7 @@ module.exports = (opts, cb) => {
             }
         }
         try {
-            db.saveSync();
+            db.write();
         } catch (e) {
             console.error(e);
         }
@@ -191,7 +191,7 @@ module.exports = (opts, cb) => {
                                 return val;
                             });
                         }
-                        db.saveSync();
+                        db.write();
                     }
 
                     return verifySteps();
@@ -207,7 +207,7 @@ module.exports = (opts, cb) => {
                 // save record type data in lowdb database
                 if (!db.object[recName]) {
                     db.object[recName] = [];
-                    db.saveSync();
+                    db.write();
                 }
                 verifyDone();
                 continue;
@@ -234,7 +234,7 @@ module.exports = (opts, cb) => {
 
             // save record type data in lowdb database
             db.object[recName] = recVal;
-            db.saveSync();
+            db.write();
 
             //console.log('import record-type "' + recName + '" - total: ' + recVal.length);
             verifyDone();

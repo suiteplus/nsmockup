@@ -2,7 +2,9 @@
 var vmSim = require('./vm-sim'),
     srvconf = require('./server/server-config'),
     URI = srvconf.URI,
-    fs = require('fs');
+    fs = require('fs'),
+    low = require('lowdb'),
+    storage = require('lowdb/file-sync');
 
 // Default nsmockup directory
 const NS_DIR = '.nsmockup';
@@ -24,8 +26,7 @@ exports.load = (cb) => {
     // create JSON database
     !fs.existsSync(dbFile) && fs.writeFileSync(dbFile, '{}');
 
-    let low = require('lowdb'),
-        db = low(dbFile, {autosave: false, async: false});
+    let db = low(dbFile, { storage }, false);
 
     let change = false;
     // create default collections
@@ -36,7 +37,7 @@ exports.load = (cb) => {
         }
     });
     try {
-        change && db.saveSync();
+        change && db.write();
     } catch (e) {
         console.error(e);
     }
@@ -93,7 +94,7 @@ exports.createSuiteScript = (data) => {
     // save script reference in database
     scripts.push(data);
     try {
-        $db.saveSync();
+        $db.write();
         return context;
     } catch (e) {
         console.error(e);
