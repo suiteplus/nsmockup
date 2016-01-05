@@ -41,7 +41,7 @@
     "minimatch": "^3.0.0",
     "moment": "^2.10.6",
     "morgan": "^1.6.1",
-    "node-uuid": "^1.4.3",
+    "node-uuid": "^1.4.7",
     "ns-formula-parse": "^0.3.0",
     "sync-request": "^2.0.1",
     "xmldom": "^0.1.19",

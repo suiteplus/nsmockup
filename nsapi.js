@@ -1,6 +1,9 @@
 'use strict';
 var vmSim = require('./src/vm-sim');
 
+// load node-uuid before create window property in global
+require('node-uuid');
+
 var moment = require('moment');
 moment.createFromInputFallback = function(config) {
     // unreliable string magic, or
