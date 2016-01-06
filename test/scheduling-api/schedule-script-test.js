@@ -24,7 +24,7 @@ describe('<Unit Test - Netsuite Scheduling API>', function () {
         let ctx;
         before(function (done) {
             nsmockup.createSchedule({
-                name: 'customscript_my_schedule',
+                id: 'customscript_my_schedule',
                 files: [
                     __dirname + '/../_input-files/scripts/fake-schedule.js'
                 ],

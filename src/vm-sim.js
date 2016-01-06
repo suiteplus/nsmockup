@@ -90,28 +90,44 @@ exports.loadScriptConfig = (scriptName) => {
  * Import script code on speficic context in VM.
  *
  * @param script {{
- *    name: String,
- *    files: [String],
+ *    code: string,
+ *    bundle: {
+ *      main: string,
+ *      var: string
+ *    },
+ *    files: [string],
  *    params: {}
  * }}
  * @returns {} his context.
  */
 exports.importSuiteScript = (script) => {
-    if (!script && !script.name) {
-        throw new Error('invalid script ... I liked scripts with a name!!!');
+    if (!script && !script.code) {
+        throw new Error('invalid script ... I liked scripts with a code!!!');
     }
 
-    let cfg = exports.loadScriptConfig(script.name),
+    let cfg = exports.loadScriptConfig(script.code),
         context = cfg.context,
         files = script.files || [];
 
-    // load files
-    for (let i = 0; i < files.length; i++) {
-        let file = path.resolve(files[i]);
-        // verify if the file was cached
-        if (!~cfg.files.indexOf(file)) {
-            exports.addScript(file, context);
-            cfg.files.push(file);
+    if (script.bundle) {
+        let bundle = script.bundle,
+            mainPath = path.resolve(bundle.main),
+            val = require(mainPath),
+            key = bundle.var;
+        Object.defineProperty(context, key, {
+            enumerable: false,
+            configurable: false,
+            value: val
+        });
+    } else {
+        // load files
+        for (let i = 0; i < files.length; i++) {
+            let file = path.resolve(files[i]);
+            // verify if the file was cached
+            if (!~cfg.files.indexOf(file)) {
+                exports.addScript(file, context);
+                cfg.files.push(file);
+            }
         }
     }
 

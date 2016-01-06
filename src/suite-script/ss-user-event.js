@@ -8,16 +8,17 @@ var database = require('../database'),
  * NetSuite: User Event mockup.
  *
  * @param opt {{
- *    id: String,
- *    [name]: String,
- *    files: [String],
- *    params: Object,
+ *    [id]: string,
+ *    name: string,
+ *    [bundle]: boolean,
+ *    files: [string],
+ *    params: object,
  *    funcs: {
- *      beforeLoad: String,
- *      beforeSubmit: String,
- *      afterSubmit: String
+ *      beforeLoad: string,
+ *      beforeSubmit: string,
+ *      afterSubmit: string
  *    },
- *    record: String
+ *    record: string
  * }}
  */
 module.exports = (opt, cb) => {
@@ -36,7 +37,9 @@ module.exports = (opt, cb) => {
     // save reference and get new context
     let context = database.createSuiteScript({
         type: 'user-event',
-        name: opt.id || opt.name,
+        code: opt.id || opt.name,
+        name: opt.name,
+        bundle: opt.bundle,
         funcs: opt.funcs,
         files: opt.files,
         params: opt.params,

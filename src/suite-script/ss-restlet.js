@@ -8,16 +8,20 @@ var database = require('../database'),
  * NetSuite: RESTlet mockup.
  *
  * @param opt {{
- *    id: String,
- *    [name]: String,
- *    [deployment]: String,
- *    files: [String],
- *    params: Object,
+ *    [id]: string,
+ *    name: string,
+ *    [bundle]: {
+ *      main: string,
+ *      var: string
+ *    },
+ *    [deployment]: string,
+ *    files: [string],
+ *    params: object,
  *    funcs: {
- *      [post]: String,
- *      [get]: String,
- *      [delete]: String,
- *      [put]: String
+ *      [post]: string,
+ *      [get]: string,
+ *      [delete]: string,
+ *      [put]: string
  *    }
  * }}
  */
@@ -40,7 +44,9 @@ module.exports = (opt, cb) => {
     // save reference
     let context = database.createSuiteScript({
         type: 'restlet',
-        name: opt.id || opt.name,
+        code: opt.id || opt.name,
+        name: opt.name,
+        bundle: opt.bundle,
         deployment: opt.deployment,
         funcs: opt.funcs,
         files: opt.files,
