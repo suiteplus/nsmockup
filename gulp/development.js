@@ -47,7 +47,7 @@ gulp.task('dev:mocha', ['dev:jshint'], function () {
         }));
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', ['dev:mocha'], function () {
     gulp.watch(paths.js.concat(paths.jsTests), ['dev:jshint', 'dev:mocha'])
         .on('error', e => console.error(e));
 });

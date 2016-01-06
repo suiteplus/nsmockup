@@ -36,7 +36,7 @@ gulp.task('test:jshint', function () {
         .pipe(plugins.jshint.reporter('fail'));
 });
 
-gulp.task('test:coverage', function () {
+gulp.task('test:coverage', ['test:jshint'], function () {
     let executeTests = function () {
         let path = '/test/**/*' + (file ? file + '*' : '') + '-test.js';
         gulp.src([appRoot + path])
