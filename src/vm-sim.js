@@ -92,8 +92,7 @@ exports.loadScriptConfig = (scriptName) => {
  * @param script {{
  *    code: string,
  *    bundle: {
- *      main: string,
- *      var: string
+ *      alias: string
  *    },
  *    files: [string],
  *    params: {}
@@ -111,10 +110,10 @@ exports.importSuiteScript = (script) => {
 
     if (script.bundle) {
         let bundle = script.bundle,
-            mainPath = path.resolve(bundle.main),
+            mainPath = files[0],
             val = require(mainPath),
-            key = bundle.var;
-        Object.defineProperty(context, key, {
+            alias = bundle.alias;
+        Object.defineProperty(context, alias, {
             enumerable: false,
             configurable: false,
             value: val

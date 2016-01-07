@@ -25,6 +25,25 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
                 files: [
                     __dirname + '/_input-files/scripts/fake-schedule.js'
                 ],
+                function: 'ScheduleFake',
+                params: {
+                    'fake-param': 'customrecord_codeg_ids'
+                },
+                exec: true
+            }, (ctx) => {
+                should(ctx.context).be.ok();
+                should(ctx.ScheduleFake).be.ok();
+
+                return done();
+            });
+        });
+
+        it('schedule: create using "func"', function (done) {
+            nsmockup.createSchedule({
+                name: 'customscript_my_schedule',
+                files: [
+                    __dirname + '/_input-files/scripts/fake-schedule.js'
+                ],
                 func: 'ScheduleFake',
                 params: {
                     'fake-param': 'customrecord_codeg_ids'
@@ -76,9 +95,9 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
             return done();
         });
 
-        it('schedule: missing "opt.func"', function(done) {
-            const errorDone = 'missing "opt.func"',
-                errorMsg = 'principal function not def: "opt.func"',
+        it('schedule: missing "opt.function"', function(done) {
+            const errorDone = 'missing "opt.function"',
+                errorMsg = 'principal function not def: "opt.function"',
                 opts = {
                     files:[__dirname + '/_input-files/scripts/fake-schedule.js']
                 };
@@ -93,12 +112,12 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
             return done();
         });
 
-        it('schedule: invalid "opt.func"', function(done) {
-            const errorDone = 'invalid method "opt.funcs"',
-                errorMsg = 'invalid type of principal function, string only: "opt.func"',
+        it('schedule: invalid "opt.function"', function(done) {
+            const errorDone = 'invalid method "opt.function"',
+                errorMsg = 'invalid type of principal function, string only: "opt.function"',
                 opts = {
                     files:[__dirname + '/_input-files/scripts/fake-schedule.js'],
-                    func: {opa: 1}
+                    function: {opa: 1}
                 };
 
             try {

@@ -16,7 +16,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             files: [
                 __dirname + '/../_input-files/scripts/fake-restlet.js'
             ],
-            funcs: {
+            functions: {
                 get: 'FakeRestlet.get',
                 post: 'FakeRestlet.post'
             },
@@ -30,7 +30,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             files: [
                 __dirname + '/../_input-files/scripts/fake-suitelet.js'
             ],
-            func: 'main',
+            function: 'main',
             params: {
                 'fake-param': 23
             }

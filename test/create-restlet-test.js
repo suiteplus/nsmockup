@@ -18,6 +18,34 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
                 files: [
                     __dirname + '/_input-files/scripts/fake-restlet.js'
                 ],
+                functions: {
+                    get: 'FakeRestlet.post'
+                },
+                params: {
+                    'fake-param': 12
+                }
+            };
+            nsmockup.createRESTlet(opts, (ctx) => {
+                should(ctx.FakeRestlet).be.ok();
+
+                let url = nlapiResolveURL('RESTLET', opts.name, '1');
+                should(url).be.ok();
+
+                let res = nlapiRequestURL(url + '&fake=12', null, null, 'GET');
+                should(res).be.ok();
+
+                let body = res.getBody();
+                should(body).be.equal('12');
+                return done();
+            });
+        });
+
+        it('restlet: create using "funcs"', function (done) {
+            let opts = {
+                name: 'customscript_add_restlet',
+                files: [
+                    __dirname + '/_input-files/scripts/fake-restlet.js'
+                ],
                 funcs: {
                     get: 'FakeRestlet.post'
                 },
@@ -78,9 +106,9 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
             return done();
         });
 
-        it('restlet: missing "opt.funcs"', function(done) {
-            const errorDone = 'missing "opt.funcs"',
-                errorMsg = 'principal functions not def: "opt.funcs"',
+        it('restlet: missing "opt.functions"', function(done) {
+            const errorDone = 'missing "opt.functions"',
+                errorMsg = 'principal functions not def: "opt.functions"',
                 opts = {
                     files:[__dirname + '/_input-files/scripts/fake-restlet.js']
                 };
@@ -95,12 +123,12 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
             return done();
         });
 
-        it('restlet: empty "opt.funcs"', function(done) {
-            const errorDone = 'missing "opt.funcs"',
-                errorMsg = 'principal functions was empty: "opt.funcs"',
+        it('restlet: empty "opt.functions"', function(done) {
+            const errorDone = 'missing "opt.functions"',
+                errorMsg = 'principal functions was empty: "opt.functions"',
                 opts = {
                     files:[__dirname + '/_input-files/scripts/fake-restlet.js'],
-                    funcs: {}
+                    functions: {}
                 };
 
             try {
@@ -113,12 +141,12 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
             return done();
         });
 
-        it('restlet: invalid method "opt.funcs"', function(done) {
-            const errorDone = 'invalid method "opt.funcs"',
+        it('restlet: invalid method "opt.functions"', function(done) {
+            const errorDone = 'invalid method "opt.functions"',
                 errorMsg = 'invalid method opa',
                 opts = {
                     files:[__dirname + '/_input-files/scripts/fake-restlet.js'],
-                    funcs: {opa: 'legal'}
+                    functions: {opa: 'legal'}
                 };
 
             try {

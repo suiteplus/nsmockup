@@ -17,7 +17,13 @@ var database = require('../database'),
  *    [deployment]: string,
  *    files: [string],
  *    params: object,
- *    funcs: {
+ *    functions: {
+ *      [post]: string,
+ *      [get]: string,
+ *      [delete]: string,
+ *      [put]: string
+ *    },
+ *    [funcs]: {
  *      [post]: string,
  *      [get]: string,
  *      [delete]: string,
@@ -28,13 +34,17 @@ var database = require('../database'),
 module.exports = (opt, cb) => {
     if (!opt || !opt.files || opt.files.length === 0) {
         return ssValidate.throwError('script needs libraries: "opt.files"');
-    } else if (!opt.funcs) {
-        return ssValidate.throwError('principal functions not def: "opt.funcs"');
+    } else if (!opt.functions && !opt.funcs) {
+        return ssValidate.throwError('principal functions not def: "opt.functions"');
     }
 
-    let funcs = Object.keys(opt.funcs);
+    if (!opt.functions) {
+        opt.functions = opt.funcs;
+    }
+
+    let funcs = Object.keys(opt.functions);
     if (!funcs || funcs.length === 0) {
-        return ssValidate.throwError('principal functions was empty: "opt.funcs"');
+        return ssValidate.throwError('principal functions was empty: "opt.functions"');
     }
 
     if (opt.deployment) {
@@ -48,7 +58,7 @@ module.exports = (opt, cb) => {
         name: opt.name,
         bundle: opt.bundle,
         deployment: opt.deployment,
-        funcs: opt.funcs,
+        functions: opt.functions,
         files: opt.files,
         params: opt.params
     });
@@ -56,7 +66,7 @@ module.exports = (opt, cb) => {
     for (let i = 0; i < funcs.length; i++) {
         let method = funcs[i].toLowerCase();
         if (~['post', 'get', 'delete', 'put'].indexOf(method)) {
-            ssValidate.principalFunction(opt.funcs, method, context);
+            ssValidate.principalFunction(opt.functions, method, context);
         } else {
             should(method).be.equal(null, `invalid method ${method}`);
         }

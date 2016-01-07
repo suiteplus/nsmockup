@@ -18,6 +18,20 @@ describe('<Unit Test - Netsuite Create Suitelet>', function () {
                 files: [
                     __dirname + '/_input-files/scripts/add.js'
                 ],
+                function: 'addTest'
+            }, (ctx) => {
+                should(ctx.addTest).be.ok();
+
+                return done();
+            });
+        });
+
+        it('suitelet: create using "func"', function (done) {
+            nsmockup.createSuitelet({
+                name: '_add_suitlet',
+                files: [
+                    __dirname + '/_input-files/scripts/add.js'
+                ],
                 func: 'addTest'
             }, (ctx) => {
                 should(ctx.addTest).be.ok();
@@ -64,9 +78,9 @@ describe('<Unit Test - Netsuite Create Suitelet>', function () {
             return done();
         });
 
-        it('suitelet: missing "opt.func"', function(done) {
-            const errorDone = 'missing "opt.func"',
-                errorMsg = 'principal function not def: "opt.func"',
+        it('suitelet: missing "opt.function"', function(done) {
+            const errorDone = 'missing "opt.function"',
+                errorMsg = 'principal function not def: "opt.function"',
                 opts = {
                     files:[__dirname + '/_input-files/scripts/add.js']
                 };
@@ -81,12 +95,12 @@ describe('<Unit Test - Netsuite Create Suitelet>', function () {
             return done();
         });
 
-        it('suitelet: invalid "opt.func"', function(done) {
-            const errorDone = 'invalid method "opt.funcs"',
-                errorMsg = 'invalid type of principal function, string only: "opt.func"',
+        it('suitelet: invalid "opt.function"', function(done) {
+            const errorDone = 'invalid method "opt.functions"',
+                errorMsg = 'invalid type of principal function, string only: "opt.function"',
                 opts = {
                     files:[__dirname + '/_input-files/scripts/add.js'],
-                    func: {opa: 1}
+                    function: {opa: 1}
                 };
 
             try {

@@ -13,6 +13,11 @@ var database = require('../database'),
  *    [bundle]: boolean,
  *    files: [string],
  *    params: object,
+ *    functions: {
+ *      beforeLoad: string,
+ *      beforeSubmit: string,
+ *      afterSubmit: string
+ *    },
  *    funcs: {
  *      beforeLoad: string,
  *      beforeSubmit: string,
@@ -26,12 +31,17 @@ module.exports = (opt, cb) => {
         return ssValidate.throwError('script needs libraries: "opt.files"');
     } else if (!opt.record) {
         return ssValidate.throwError('user event needs one Record Type: "opt.record"');
-    } else if (!opt.funcs) {
-        return ssValidate.throwError('principal functions not def: "opt.funcs"');
+    } else if (!opt.functions && !opt.funcs) {
+        return ssValidate.throwError('principal functions not def: "opt.functions"');
     }
-    let funcs = Object.keys(opt.funcs);
+
+    if (!opt.functions) {
+        opt.functions = opt.funcs;
+    }
+
+    let funcs = Object.keys(opt.functions);
     if (!funcs || funcs.length === 0) {
-        return ssValidate.throwError('principal functions was empty: "opt.funcs"');
+        return ssValidate.throwError('principal functions was empty: "opt.functions"');
     }
 
     // save reference and get new context
@@ -40,13 +50,13 @@ module.exports = (opt, cb) => {
         code: opt.id || opt.name,
         name: opt.name,
         bundle: opt.bundle,
-        funcs: opt.funcs,
+        functions: opt.functions,
         files: opt.files,
         params: opt.params,
         events: {
-            beforeLoad: !!opt.funcs.beforeLoad,
-            beforeSubmit: !!opt.funcs.beforeSubmit,
-            afterSubmit: !!opt.funcs.afterSubmit
+            beforeLoad: !!opt.functions.beforeLoad,
+            beforeSubmit: !!opt.functions.beforeSubmit,
+            afterSubmit: !!opt.functions.afterSubmit
         },
         record: opt.record
     });
@@ -54,7 +64,7 @@ module.exports = (opt, cb) => {
     for (let i = 0; i < funcs.length; i++) {
         let step = funcs[i];
         if (~['beforeLoad', 'beforeSubmit', 'afterSubmit'].indexOf(step)) {
-            ssValidate.principalFunction(opt.funcs, step, context);
+            ssValidate.principalFunction(opt.functions, step, context);
         } else {
             should(step).be.equal(null, `invalid step ${step}`);
         }

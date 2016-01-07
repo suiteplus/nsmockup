@@ -17,12 +17,11 @@ describe('<Unit Test - Netsuite Bundle Script>', function () {
         it('bundle-script execute', function (done) {
             nsmockup.createSchedule({
                 id: 'customscript_my_schedule',
-                files: ['-ignore-'],
+                files: [`${base}/scripts/my-require.js`],
                 bundle: {
-                    main: `${base}/scripts/my-require.js`,
-                    var: 'MockVarFake'
+                    alias: 'MockVarFake'
                 },
-                func: 'MockVarFake.legal',
+                function: 'MockVarFake.legal',
                 exec: true
             }, (context) => {
                 should(context.MockVarFake).be.ok();

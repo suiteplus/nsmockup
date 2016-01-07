@@ -14,7 +14,7 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
         files: [
             __dirname + '/_input-files/scripts/fake-user-event.js'
         ],
-        funcs: {
+        functions: {
             beforeLoad: 'FakeUserEvent.beforeLoad',
             beforeSubmit: 'FakeUserEvent.beforeSubmit',
             afterSubmit: 'FakeUserEvent.afterSubmit'
@@ -83,6 +83,7 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
                 return done();
             });
         });
+
         it('user-event: type - "edit"', function (done) {
             nsmockup.createUserEvent(opts, (ctx) => {
                 should(ctx.FakeUserEvent).be.ok();
@@ -144,6 +145,32 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             });
         });
 
+        it('user-event: type - "create" using "funcs"', function (done) {
+            let _opts = JSON.parse(JSON.stringify(opts));
+            _opts.funcs = _opts.functions;
+            delete _opts.functions;
+            nsmockup.createUserEvent(_opts, (ctx) => {
+                should(ctx.FakeUserEvent).be.ok();
+
+                let init = {
+                        custrecord_id_code_id: 434,
+                        custrecord_id_title_id: 'japo 434'
+                    },
+                    record = nlapiCreateRecord('customrecord_codeg_ids', init);
+
+                nlapiSubmitRecord(record);
+
+                let context = ctx.nlapiGetContext();
+                should(context).be.ok();
+
+                let beforeSubmitType = context.getSessionObject('before-submit-type'),
+                    beforeSubmitParam = context.getSessionObject('before-submit-param');
+                should(beforeSubmitType).be.equal('create');
+                should(beforeSubmitParam).be.equal('23');
+                return done();
+            });
+        });
+
         it('user-event: missing "opt.files"', function(done) {
             const errorDone = 'missing "opt.files"',
                 errorMsg = 'script needs libraries: "opt.files"';
@@ -199,9 +226,9 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             return done();
         });
 
-        it('user-event: missing "opt.funcs"', function(done) {
-            const errorDone = 'missing "opt.funcs"',
-                errorMsg = 'principal functions not def: "opt.funcs"',
+        it('user-event: missing "opt.functions"', function(done) {
+            const errorDone = 'missing "opt.functions"',
+                errorMsg = 'principal functions not def: "opt.functions"',
                 opts = {
                     files:[__dirname + '/_input-files/scripts/fake-user-event.js'],
                     record: 'customrecord_codeg_ids'
@@ -217,13 +244,13 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             return done();
         });
 
-        it('user-event: empty "opt.funcs"', function(done) {
-            const errorDone = 'missing "opt.funcs"',
-                errorMsg = 'principal functions was empty: "opt.funcs"',
+        it('user-event: empty "opt.functions"', function(done) {
+            const errorDone = 'missing "opt.functions"',
+                errorMsg = 'principal functions was empty: "opt.functions"',
                 opts = {
                     files:[__dirname + '/_input-files/scripts/fake-user-event.js'],
                     record: 'customrecord_codeg_ids',
-                    funcs: {}
+                    functions: {}
                 };
 
             try {
@@ -236,13 +263,13 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             return done();
         });
 
-        it('user-event: invalid step "opt.funcs"', function(done) {
-            const errorDone = 'invalid step "opt.funcs"',
+        it('user-event: invalid step "opt.functions"', function(done) {
+            const errorDone = 'invalid step "opt.functions"',
                 errorMsg = 'invalid step opa',
                 opts = {
                     files:[__dirname + '/_input-files/scripts/fake-user-event.js'],
                     record: 'customrecord_codeg_ids',
-                    funcs: {opa: 'legal'}
+                    functions: {opa: 'legal'}
                 };
 
             try {

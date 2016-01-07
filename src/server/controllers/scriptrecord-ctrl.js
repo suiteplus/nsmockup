@@ -19,10 +19,10 @@ exports.exec = (req, res) => {
         }
 
         let execFunc;
-        if (script.funcs && method) {
-            execFunc = script.funcs[method];
+        if (script.functions && method) {
+            execFunc = script.functions[method];
         } else {
-            execFunc = script.func;
+            execFunc = script.function;
         }
         // load libs in specific context
         let context = vmSim.importSuiteScript(script);

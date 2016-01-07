@@ -28,7 +28,7 @@ describe('<Unit Test - Netsuite Scheduling API>', function () {
                 files: [
                     __dirname + '/../_input-files/scripts/fake-schedule.js'
                 ],
-                func: 'ScheduleFake',
+                function: 'ScheduleFake',
                 params: {
                     'fake-param': 'customrecord_codeg_ids'
                 },
