@@ -147,6 +147,7 @@
         // Netsuite Global Objects
         "nlobjContext": true,
         "nlobjError": true,
+        "nlobjField": true,
         "nlobjFile": true,
         "nlobjRecord": true,
         "nlobjRequest": true,

@@ -61,7 +61,7 @@
       "code": "custrecord_code_multiselect",
       "translations": {
         "en": {
-          "label": "Decimal"
+          "label": "Multi-Select"
         }
       },
       "id": 6,

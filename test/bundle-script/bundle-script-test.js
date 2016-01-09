@@ -1,8 +1,7 @@
 'use strict';
 
 var should = require('should'),
-    nsmockup = require('../../'),
-    path = require('path');
+    nsmockup = require('../../');
 
 var base = __dirname + '/../_input-files';
 /**

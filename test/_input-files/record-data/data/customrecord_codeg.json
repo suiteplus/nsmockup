@@ -34,8 +34,10 @@
     }
   },
   {
+    "internalid": 5,
     "custrecord_type_id": 282,
-    "custrecord_code_id": 23
+    "custrecord_code_id": 23,
+    "custrecord_code_multiselect": ["opa", "legal"]
   },
   {
     "custrecord_type_id": 223,
