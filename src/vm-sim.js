@@ -108,7 +108,8 @@ exports.importSuiteScript = (script) => {
 
     context.nsRequire = (libReq) => {
         return (mod) => {
-            return libReq[mod] || require(mod);
+            let alias = libReq[mod];
+            return (alias && context[alias]) || require(mod);
         };
     };
 
@@ -116,7 +117,7 @@ exports.importSuiteScript = (script) => {
     let nsify = (content, alias, libReq) => {
             let pre = `var ${alias} = (function(require, module, exports){`,
                 lstr = JSON.stringify(libReq),
-                pos = `return module.exports || exports;})(nsRequire(${lstr}), {}, {})`;
+                pos = `return module.exports || exports;})(nsRequire(${lstr}), {}, {});`;
             return new Buffer(`${pre}${content}${pos}`);
         },
         findRequire = (dir, alias, libReq) => {
@@ -138,7 +139,9 @@ exports.importSuiteScript = (script) => {
                         _libReq = {};
                     libReq[mod] = _alias;
                     content.replace(requireRe, findRequire(_dir, _alias, _libReq));
-                    libs[file] = nsify(content, _alias, _libReq);
+
+                    let idx = _alias.substr(_alias.indexOf('$')).replace(/\$/g,'');
+                    libs[`${file}$${idx}`] = nsify(content, _alias, _libReq);
                 }
                 return orig;
             };
