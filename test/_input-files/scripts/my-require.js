@@ -1,7 +1,8 @@
 'use strict';
-var opa = require('../scripts/lib/opa');
+var opa = require('../scripts/lib/opa'),
+    low = require('lowdb');
 module.exports = {
     legal: function() {
-        return opa.humm && true;
+        return low || opa.humm && true;
     }
 };

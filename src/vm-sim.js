@@ -106,12 +106,11 @@ exports.importSuiteScript = (script) => {
         files = script.files || [],
         libs = {};
 
-    libs['ns-require.js'] = 'var nsRequire = function(libReq){' +
-        'return function(mod){' +
-            'var alias = libReq[mod]; ' +
-            'return global[alias] || require(mod);' +
-        '};' +
-    '};';
+    context.nsRequire = (libReq) => {
+        return (mod) => {
+            return libReq[mod] || require(mod);
+        };
+    };
 
     const requireRe = /require\(\s*['"]([^'")]*)['"]\s*\)/g;
     let nsify = (content, alias, libReq) => {
@@ -138,7 +137,7 @@ exports.importSuiteScript = (script) => {
                         _alias = `${alias}$${count++}`,
                         _libReq = {};
                     libReq[mod] = _alias;
-                    content.replace(requireRe, findRequire(_dir, _libReq));
+                    content.replace(requireRe, findRequire(_dir, _alias, _libReq));
                     libs[file] = nsify(content, _alias, _libReq);
                 }
                 return orig;
