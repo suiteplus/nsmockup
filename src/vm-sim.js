@@ -104,7 +104,8 @@ exports.importSuiteScript = (script) => {
     let cfg = exports.loadScriptConfig(script.code),
         context = cfg.context,
         files = script.files || [],
-        libs = {};
+        libs = {},
+        refAlias = {};
 
     context.nsRequire = (libReq) => {
         return (mod) => {
@@ -140,8 +141,14 @@ exports.importSuiteScript = (script) => {
                     libReq[mod] = _alias;
                     content.replace(requireRe, findRequire(_dir, _alias, _libReq));
 
-                    let idx = _alias.substr(_alias.indexOf('$')).replace(/\$/g,'');
-                    libs[`${file}$${idx}`] = nsify(content, _alias, _libReq);
+                    if (libs[file]) {
+                        let orgAlias = refAlias[file],
+                            _file = `${file}${_alias}`;
+                        libs[_file] = new Buffer(`var ${_alias} = ${orgAlias}`);
+                    } else {
+                        libs[file] = nsify(content, _alias, _libReq);
+                        refAlias[file] = _alias;
+                    }
                 }
                 return orig;
             };
