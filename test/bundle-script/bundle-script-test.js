@@ -16,10 +16,9 @@ describe('<Unit Test - Netsuite Bundle Script>', function () {
         it('bundle-script execute', function (done) {
             nsmockup.createSchedule({
                 id: 'customscript_my_schedule',
-                files: [`${base}/scripts/my-require.js`],
-                bundle: {
-                    alias: 'MockVarFake'
-                },
+                files: [
+                    [`${base}/scripts/my-require.js`, 'MockVarFake']
+                ],
                 function: 'MockVarFake.legal',
                 exec: true
             }, (context) => {

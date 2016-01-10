@@ -31,11 +31,6 @@ exports.init = require('./src/init');
 exports.destroy = require('./src/destroy');
 
 /**
- *
- */
-exports.addScript = vmSim;
-
-/**
  * Suitelets are extensions of the SuiteScript API that give developers the ability to build custom NetSuite pages and backend logic. Suitelets are server-side scripts that operate in a request-response model. They are invoked by HTTP GET or POST requests to system generated URLs.
  *
  */

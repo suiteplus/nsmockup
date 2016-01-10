@@ -91,10 +91,7 @@ exports.loadScriptConfig = (scriptName) => {
  *
  * @param script {{
  *    code: string,
- *    bundle: {
- *      alias: string
- *    },
- *    files: [string],
+ *    files: [string | [string]],
  *    params: {}
  * }}
  * @returns {} his context.
@@ -106,40 +103,82 @@ exports.importSuiteScript = (script) => {
 
     let cfg = exports.loadScriptConfig(script.code),
         context = cfg.context,
-        files = script.files || [];
+        files = script.files || [],
+        libs = {};
 
-    if (script.bundle) {
-        let bundle = script.bundle,
-            mainPath = files[0],
-            val = require(mainPath),
-            alias = bundle.alias;
-        Object.defineProperty(context, alias, {
-            enumerable: false,
-            configurable: false,
-            value: val
-        });
-    } else {
-        // load files
-        for (let i = 0; i < files.length; i++) {
-            let file = path.resolve(files[i]);
-            // verify if the file was cached
-            if (!~cfg.files.indexOf(file)) {
-                exports.addScript(file, context);
-                cfg.files.push(file);
+    libs['ns-require.js'] = 'var nsRequire = function(libReq){' +
+        'return function(mod){' +
+            'var alias = libReq[mod]; ' +
+            'return global[alias] || require(mod);' +
+        '};' +
+    '};';
+
+    const requireRe = /require\(\s*['"]([^'")]*)['"]\s*\)/g;
+    let nsify = (content, alias, libReq) => {
+            let pre = `var ${alias} = (function(require, module, exports){`,
+                lstr = JSON.stringify(libReq),
+                pos = `return module.exports || exports;})(nsRequire(${lstr}), {}, {})`;
+            return new Buffer(`${pre}${content}${pos}`);
+        },
+        findRequire = (dir, alias, libReq) => {
+            let count = 0;
+            return (orig, mod) => {
+                let modPath = `${dir}/${mod}`;
+                !fs.existsSync(modPath) && ['.js', '.json'].forEach(ext => {
+                    if (fs.existsSync(`${modPath}${ext}`)) {
+                        modPath += ext;
+                    }
+                });
+
+                let file = path.resolve(modPath);
+                if (fs.existsSync(file)) {
+                    let code = fs.readFileSync(file),
+                        content = code.toString(),
+                        _dir = path.dirname(file),
+                        _alias = `${alias}$${count++}`,
+                        _libReq = {};
+                    libReq[mod] = _alias;
+                    content.replace(requireRe, findRequire(_dir, _libReq));
+                    libs[file] = nsify(content, _alias, _libReq);
+                }
+                return orig;
+            };
+        };
+
+    // load files
+    for (let i = 0; i < files.length; i++) {
+        let line = files[i],
+            isArray = Array.isArray(line),
+            file = path.resolve(isArray ? line[0] : line),
+            code = fs.readFileSync(file);
+        // verify if the file was cached
+        if (!~cfg.files.indexOf(file)) {
+            cfg.files.push(file);
+
+            if (isArray && line.length > 1) {
+                let dir = path.dirname(file),
+                    alias = line[1],
+                    libReq = {},
+                    content = code.toString();
+                content.replace(requireRe, findRequire(dir, alias, libReq));
+                libs[file] = nsify(code, alias, libReq);
+            } else {
+                libs[file] = code;
             }
         }
+    }
+
+    let lkeys = Object.keys(libs);
+    for (let i=0; i<lkeys.length; i++) {
+        let file = lkeys[i],
+            code = libs[file];
+        vmInclude(code, file, context);
     }
 
     // load params configurations
     ssParams.load(script.params, context);
 
     return context;
-};
-
-exports.addScript = (file, ctx) => {
-    let file_ = path.resolve(file),
-        code = fs.readFileSync(file_);
-    vmInclude(code, file_, ctx);
 };
 
 var execCount = 0;
