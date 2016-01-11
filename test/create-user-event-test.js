@@ -78,7 +78,7 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
 
                 should(afterSubmitOldCode).be.equal(null);
                 should(afterSubmitNewCode).be.equal('434');
-                should(afterSubmitRecId).be.equal('-1');
+                should(afterSubmitRecId).be.equal('90');
                 should(afterSubmitRecType).be.equal('customrecord_codeg_ids');
                 return done();
             });
