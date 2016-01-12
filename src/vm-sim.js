@@ -118,7 +118,7 @@ exports.importSuiteScript = (script) => {
     let nsify = (content, alias, libReq) => {
             let pre = `var ${alias} = (function(require, module, exports){`,
                 lstr = JSON.stringify(libReq),
-                pos = `return module.exports || exports;})(nsRequire(${lstr}), {}, {});`;
+                pos = `\nreturn module.exports || exports;})(nsRequire(${lstr}), {}, {});`;
             return new Buffer(`${pre}${content}${pos}`);
         },
         findRequire = (dir, alias, libReq) => {
