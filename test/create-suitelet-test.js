@@ -12,7 +12,7 @@ describe('<Unit Test - Netsuite Create Suitelet>', function () {
         nsmockup.init({server: false}, done);
     });
     describe('Create Script - Suitelet', () => {
-        it('suitelet: create', done => {
+        it('suitelet: createSuitelet', done => {
             nsmockup.createSuitelet({
                 name: '_add_suitlet',
                 files: [

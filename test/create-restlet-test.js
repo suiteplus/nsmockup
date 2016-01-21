@@ -12,7 +12,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
         nsmockup.init({server: true}, done);
     });
     describe('Create Script - Restlet', () => {
-        it('restlet: create', done => {
+        it('restlet: createRESTlet', done => {
             let opts = {
                 name: 'customscript_add_restlet',
                 files: [

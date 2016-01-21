@@ -36,7 +36,7 @@ describe('<Unit Test - Netsuite Create User Event>', function() {
         nsmockup.init({records, metadata}, done);
     });
     describe('Create Script - User Event', () => {
-        it('user-event: type - "create"', done => {
+        it('user-event: type - "createUserEvent"', done => {
             nsmockup.createUserEvent(opts, (ctx) => {
                 should(ctx.FakeUserEvent).be.ok();
 

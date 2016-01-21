@@ -55,3 +55,33 @@ exports.createSchedule = require('./src/suite-script/ss-schedule');
  *
  */
 exports.createUserEvent = require('./src/suite-script/ss-user-event');
+
+exports.createSuiteScript = (type, opt, cb) => {
+    switch(type) {
+        case 'client':
+        case 'mass-update':
+        case 'portlet':
+        case 'workflow':{
+            throw `Cannot simulate "${type}" in nsmockup yeat!`;
+        }
+        case 'restlet': {
+            exports.createRESTlet(opt, cb);
+            break;
+        }
+        case 'schedule': {
+            exports.createSchedule(opt, cb);
+            break;
+        }
+        case 'suitelet': {
+            exports.createSuitelet(opt, cb);
+            break;
+        }
+        case 'user-event': {
+            exports.createUserEvent(opt, cb);
+            break;
+        }
+        default: {
+            throw `Invalid SuiteScript type: ${type}`;
+        }
+    }
+};
