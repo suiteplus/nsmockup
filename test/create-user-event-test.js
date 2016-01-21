@@ -7,7 +7,7 @@ var base = __dirname + '/_input-files/record-data';
 /**
  * Test Suites
  */
-describe('<Unit Test - Netsuite Create User Event>', function () {
+describe('<Unit Test - Netsuite Create User Event>', function() {
     this.timeout(5000);
     let opts = {
         name: 'customscript_add_user-event',
@@ -26,7 +26,7 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
         record: 'customrecord_codeg_ids'
     };
 
-    beforeEach(function (done) {
+    beforeEach(done => {
         let metadata = [
                 base + '/meta/customrecord_codeg_ids.json'
             ],
@@ -35,8 +35,8 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             };
         nsmockup.init({records, metadata}, done);
     });
-    describe('Create Script - User Event', function () {
-        it('user-event: type - "create"', function (done) {
+    describe('Create Script - User Event', () => {
+        it('user-event: type - "create"', done => {
             nsmockup.createUserEvent(opts, (ctx) => {
                 should(ctx.FakeUserEvent).be.ok();
 
@@ -84,7 +84,7 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             });
         });
 
-        it('user-event: type - "edit"', function (done) {
+        it('user-event: type - "edit"', done => {
             nsmockup.createUserEvent(opts, (ctx) => {
                 should(ctx.FakeUserEvent).be.ok();
 
@@ -130,7 +130,7 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             });
         });
 
-        it('user-event: type - "create" using "funcs"', function (done) {
+        it('user-event: type - "create" using "funcs"', done => {
             let _opts = JSON.parse(JSON.stringify(opts));
             _opts.funcs = _opts.functions;
             delete _opts.functions;
@@ -156,7 +156,7 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             });
         });
 
-        it('user-event: missing "opt.files"', function(done) {
+        it('user-event: missing "opt.files"', done => {
             const errorDone = 'missing "opt.files"',
                 errorMsg = 'script needs libraries: "opt.files"';
 
@@ -194,9 +194,9 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             return done();
         });
 
-        it('user-event: missing "opt.record"', function(done) {
-            const errorDone = 'missing "opt.record"',
-                errorMsg = 'user event needs one Record Type: "opt.record"',
+        it('user-event: missing "opt.records"', done => {
+            const errorDone = 'missing "opt.records"',
+                errorMsg = 'user event needs one Record Type: "opt.records"',
                 opts = {
                     files:[__dirname + '/_input-files/scripts/fake-user-event.js']
                 };
@@ -211,7 +211,7 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             return done();
         });
 
-        it('user-event: missing "opt.functions"', function(done) {
+        it('user-event: missing "opt.functions"', done => {
             const errorDone = 'missing "opt.functions"',
                 errorMsg = 'principal functions not def: "opt.functions"',
                 opts = {
@@ -229,7 +229,7 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             return done();
         });
 
-        it('user-event: empty "opt.functions"', function(done) {
+        it('user-event: empty "opt.functions"', done => {
             const errorDone = 'missing "opt.functions"',
                 errorMsg = 'principal functions was empty: "opt.functions"',
                 opts = {
@@ -248,7 +248,7 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             return done();
         });
 
-        it('user-event: invalid step "opt.functions"', function(done) {
+        it('user-event: invalid step "opt.functions"', done => {
             const errorDone = 'invalid step "opt.functions"',
                 errorMsg = 'invalid step opa',
                 opts = {
@@ -267,7 +267,7 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             return done();
         });
     });
-    afterEach(function (done) {
+    afterEach(done => {
         nsmockup.destroy(done);
     });
 });

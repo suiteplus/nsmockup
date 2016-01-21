@@ -10,11 +10,7 @@ var database = require('../database'),
  *    [id]: string,
  *    name: string,
  *    [deployment]: string,
- *    [bundle]: {
- *      main: string,
- *      var: string
- *    },
- *    files: [string],
+ *    files: [string | [string]],
  *    params: object,
  *    function: string,
  *    [func]: string
@@ -40,7 +36,6 @@ module.exports = (opt, cb) => {
         type: 'suitelet',
         code: opt.id || opt.name,
         name: opt.name,
-        bundle: opt.bundle,
         deployment: opt.deployment,
         function: opt.function,
         files: opt.files,

@@ -8,11 +8,11 @@ var should = require('should'),
  */
 describe('<Unit Test - Netsuite Create Restlet>', function () {
     this.timeout(10000);
-    before(function (done) {
+    before(done => {
         nsmockup.init({server: true}, done);
     });
-    describe('Create Script - Restlet', function () {
-        it('restlet: create', function (done) {
+    describe('Create Script - Restlet', () => {
+        it('restlet: create', done => {
             let opts = {
                 name: 'customscript_add_restlet',
                 files: [
@@ -40,7 +40,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
             });
         });
 
-        it('restlet: create using "funcs"', function (done) {
+        it('restlet: create using "funcs"', done => {
             let opts = {
                 name: 'customscript_add_restlet',
                 files: [
@@ -68,7 +68,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
             });
         });
 
-        it('restlet: missing "opt.files"', function(done) {
+        it('restlet: missing "opt.files"', done => {
             const errorDone = 'missing "opt.files"',
                 errorMsg = 'script needs libraries: "opt.files"';
 
@@ -106,7 +106,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
             return done();
         });
 
-        it('restlet: missing "opt.functions"', function(done) {
+        it('restlet: missing "opt.functions"', done => {
             const errorDone = 'missing "opt.functions"',
                 errorMsg = 'principal functions not def: "opt.functions"',
                 opts = {
@@ -123,7 +123,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
             return done();
         });
 
-        it('restlet: empty "opt.functions"', function(done) {
+        it('restlet: empty "opt.functions"', done => {
             const errorDone = 'missing "opt.functions"',
                 errorMsg = 'principal functions was empty: "opt.functions"',
                 opts = {
@@ -141,7 +141,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
             return done();
         });
 
-        it('restlet: invalid method "opt.functions"', function(done) {
+        it('restlet: invalid method "opt.functions"', done => {
             const errorDone = 'invalid method "opt.functions"',
                 errorMsg = 'invalid method opa',
                 opts = {
@@ -159,7 +159,7 @@ describe('<Unit Test - Netsuite Create Restlet>', function () {
             return done();
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

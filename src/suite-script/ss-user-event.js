@@ -10,8 +10,7 @@ var database = require('../database'),
  * @param opt {{
  *    [id]: string,
  *    name: string,
- *    [bundle]: boolean,
- *    files: [string],
+ *    files: [string | [string]],
  *    params: object,
  *    functions: {
  *      beforeLoad: string,
@@ -23,20 +22,24 @@ var database = require('../database'),
  *      beforeSubmit: string,
  *      afterSubmit: string
  *    },
- *    record: string
+ *    records: [string],
+ *    [record]: string
  * }}
  */
 module.exports = (opt, cb) => {
     if (!opt || !opt.files || opt.files.length === 0) {
         return ssValidate.throwError('script needs libraries: "opt.files"');
-    } else if (!opt.record) {
-        return ssValidate.throwError('user event needs one Record Type: "opt.record"');
+    } else if ((!opt.records || opt.records.length) && !opt.record) {
+        return ssValidate.throwError('user event needs one Record Type: "opt.records"');
     } else if (!opt.functions && !opt.funcs) {
         return ssValidate.throwError('principal functions not def: "opt.functions"');
     }
 
     if (!opt.functions) {
         opt.functions = opt.funcs;
+    }
+    if (!opt.records && opt.record) {
+        opt.records = [opt.record];
     }
 
     let funcs = Object.keys(opt.functions);
@@ -49,7 +52,6 @@ module.exports = (opt, cb) => {
         type: 'user-event',
         code: opt.id || opt.name,
         name: opt.name,
-        bundle: opt.bundle,
         functions: opt.functions,
         files: opt.files,
         params: opt.params,
@@ -58,7 +60,7 @@ module.exports = (opt, cb) => {
             beforeSubmit: !!opt.functions.beforeSubmit,
             afterSubmit: !!opt.functions.afterSubmit
         },
-        record: opt.record
+        records: opt.records
     });
 
     for (let i = 0; i < funcs.length; i++) {

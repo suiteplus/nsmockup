@@ -10,12 +10,8 @@ var database = require('../database'),
  * @param opt {{
  *    [id]: string,
  *    name: string,
- *    [bundle]: {
- *      main: string,
- *      var: string
- *    },
  *    [deployment]: string,
- *    files: [string],
+ *    files: [string | [string]],
  *    params: object,
  *    functions: {
  *      [post]: string,
@@ -56,7 +52,6 @@ module.exports = (opt, cb) => {
         type: 'restlet',
         code: opt.id || opt.name,
         name: opt.name,
-        bundle: opt.bundle,
         deployment: opt.deployment,
         functions: opt.functions,
         files: opt.files,

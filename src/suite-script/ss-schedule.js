@@ -9,11 +9,7 @@ var database = require('../database'),
  * @param opt {{
  *    [id]: string,
  *    name: string,
- *    [bundle]: {
- *      main: string,
- *      var: string
- *    },
- *    files: [string],
+ *    files: [string | [string]],
  *    params: object,
  *    function: string,
  *    [func]: string,
@@ -36,7 +32,6 @@ module.exports = (opt, cb) => {
         type: 'schedule',
         code: opt.id || opt.name,
         name: opt.name,
-        bundle: opt.bundle,
         function: opt.function,
         files: opt.files,
         params: opt.params

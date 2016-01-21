@@ -8,11 +8,11 @@ var should = require('should'),
  */
 describe('<Unit Test - Netsuite Create Suitelet>', function () {
     this.timeout(5000);
-    before(function (done) {
+    before(done => {
         nsmockup.init({server: false}, done);
     });
-    describe('Create Script - Suitelet', function () {
-        it('suitelet: create', function (done) {
+    describe('Create Script - Suitelet', () => {
+        it('suitelet: create', done => {
             nsmockup.createSuitelet({
                 name: '_add_suitlet',
                 files: [
@@ -26,7 +26,7 @@ describe('<Unit Test - Netsuite Create Suitelet>', function () {
             });
         });
 
-        it('suitelet: create using "func"', function (done) {
+        it('suitelet: create using "func"', done => {
             nsmockup.createSuitelet({
                 name: '_add_suitlet',
                 files: [
@@ -40,7 +40,7 @@ describe('<Unit Test - Netsuite Create Suitelet>', function () {
             });
         });
 
-        it('suitelet: missing "opt.files"', function(done) {
+        it('suitelet: missing "opt.files"', done => {
             const errorDone = 'missing "opt.files"',
                 errorMsg = 'script needs libraries: "opt.files"';
 
@@ -78,7 +78,7 @@ describe('<Unit Test - Netsuite Create Suitelet>', function () {
             return done();
         });
 
-        it('suitelet: missing "opt.function"', function(done) {
+        it('suitelet: missing "opt.function"', done => {
             const errorDone = 'missing "opt.function"',
                 errorMsg = 'principal function not def: "opt.function"',
                 opts = {
@@ -95,7 +95,7 @@ describe('<Unit Test - Netsuite Create Suitelet>', function () {
             return done();
         });
 
-        it('suitelet: invalid "opt.function"', function(done) {
+        it('suitelet: invalid "opt.function"', done => {
             const errorDone = 'invalid method "opt.functions"',
                 errorMsg = 'invalid type of principal function, string only: "opt.function"',
                 opts = {
@@ -113,7 +113,7 @@ describe('<Unit Test - Netsuite Create Suitelet>', function () {
             return done();
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

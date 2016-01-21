@@ -9,7 +9,7 @@ var base = __dirname + '/_input-files/record-data';
  */
 describe('<Unit Test - Netsuite Create Schedule>', function () {
     this.timeout(5000);
-    before(function (done) {
+    before(done => {
         let metadata = [
                 base + '/meta/customrecord_codeg_ids.json'
             ],
@@ -18,8 +18,8 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
             };
         nsmockup.init({records, metadata}, done);
     });
-    describe('Create Script - Schedule', function () {
-        it('schedule: create', function (done) {
+    describe('Create Script - Schedule', () => {
+        it('schedule: create', done => {
             nsmockup.createSchedule({
                 name: 'customscript_my_schedule',
                 files: [
@@ -38,7 +38,7 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
             });
         });
 
-        it('schedule: create using "func"', function (done) {
+        it('schedule: create using "func"', done => {
             nsmockup.createSchedule({
                 name: 'customscript_my_schedule',
                 files: [
@@ -57,7 +57,7 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
             });
         });
 
-        it('schedule: missing "opt.files"', function(done) {
+        it('schedule: missing "opt.files"', done => {
             const errorDone = 'missing "opt.files"',
                 errorMsg = 'script needs libraries: "opt.files"';
 
@@ -95,7 +95,7 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
             return done();
         });
 
-        it('schedule: missing "opt.function"', function(done) {
+        it('schedule: missing "opt.function"', done => {
             const errorDone = 'missing "opt.function"',
                 errorMsg = 'principal function not def: "opt.function"',
                 opts = {
@@ -112,7 +112,7 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
             return done();
         });
 
-        it('schedule: invalid "opt.function"', function(done) {
+        it('schedule: invalid "opt.function"', done => {
             const errorDone = 'invalid method "opt.function"',
                 errorMsg = 'invalid type of principal function, string only: "opt.function"',
                 opts = {
@@ -130,7 +130,7 @@ describe('<Unit Test - Netsuite Create Schedule>', function () {
             return done();
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

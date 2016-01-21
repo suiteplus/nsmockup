@@ -21,7 +21,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
 
 ## Install [![Dependency Status][david-image]][david-url] [![devDependency Status][david-image-dev]][david-url-dev]
 ```bash
-    npm install nsmockup -save-dev
+    npm install nsmockup --save-dev
 ```
 
 ## Usage
@@ -178,7 +178,7 @@ nsmockup.init(opt, function(err) {
 | cfg.functions.afterSubmit | <code>string</code> | Sets the function that should execute after the associated record is submitted. |
 | cfg.files | <code>[string]</code> | Path to JavaScripts files that contains your implementation. |
 | cfg.params | <code>object</code> | Default parameters to run your implementation. |
-| cfg.record | <code>string</code> | Apply this event in this record. |
+| cfg.records | <code>[string]</code> | Apply this event in this records. |
 | cb   | <code>function</code> | Callback Function sent `ctx` (type: <code>object</code>) - the context *and* `exec` (type: <code>function</code>) invoke your code in side the context. |
 
 ```javascript
