@@ -29,7 +29,7 @@ var database = require('../database'),
 module.exports = (opt, cb) => {
     if (!opt || !opt.files || opt.files.length === 0) {
         return ssValidate.throwError('script needs libraries: "opt.files"');
-    } else if ((!opt.records || opt.records.length) && !opt.record) {
+    } else if ((!opt.records || !opt.records.length) && !opt.record) {
         return ssValidate.throwError('user event needs one Record Type: "opt.records"');
     } else if (!opt.functions && !opt.funcs) {
         return ssValidate.throwError('principal functions not def: "opt.functions"');

@@ -23,7 +23,7 @@ describe('<Unit Test - Netsuite Create User Event>', function() {
             'fake-param': 23,
             'field-param': 'custrecord_id_code_id'
         },
-        record: 'customrecord_codeg_ids'
+        records: ['customrecord_codeg_ids']
     };
 
     beforeEach(done => {
