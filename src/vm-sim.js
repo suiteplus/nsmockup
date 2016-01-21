@@ -64,7 +64,7 @@ exports.importAllNsApi = (ctx) => {
 exports.loadScriptConfig = (scriptName) => {
     let $scripts = $context.$db.$scripts;
     if (!$scripts[scriptName]) {
-        let context = vm.createContext({console, require, module, exports});
+        let context = vm.createContext({console, require, module, exports, window});
         context.$db = $context.$db;
         context.global = context;
         context.$$THIS_CONTEXT = scriptName;
