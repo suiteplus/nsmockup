@@ -6,12 +6,12 @@ var nsmockup = require('../../');
  * Test Suites
  */
 describe('<Unit Test - Netsuite Context API>', function () {
-    before(function (done) {
+    before(done => {
         nsmockup.init(done);
     });
 
-    describe('SuiteScript API - nlapiLogExecution:', function () {
-        it('just test netsuite log', function (done) {
+    describe('SuiteScript API - nlapiLogExecution:', () => {
+        it('just test netsuite log', done => {
             nlapiLogExecution('DEBUG', 'oaiaia', 'oaooaoaas');
             nlapiLogExecution('AUDIT', 'cuidaaa', new Date());
             nlapiLogExecution('ERROR', 'errouuu', new Error());
@@ -21,7 +21,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
         });
     });
 
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

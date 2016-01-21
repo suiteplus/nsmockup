@@ -7,9 +7,9 @@ var should = require('should'),
  * Test Suites
  */
 describe('<Unit Test - Netsuite Currency API>', function () {
-    describe('SuiteScript API - nlapiFormatCurrency:', function () {
+    describe('SuiteScript API - nlapiFormatCurrency:', () => {
 
-        it('format-currency default currency', function (done) {
+        it('format-currency default currency', done => {
             nsmockup.init((err) => {
                 if (err) return done(err);
                 else {
@@ -39,7 +39,7 @@ describe('<Unit Test - Netsuite Currency API>', function () {
             });
         });
 
-        it('format-currency brazilian currency', function (done) {
+        it('format-currency brazilian currency', done => {
 
             let localPrefs = {
                     currency: 'R$',
@@ -80,7 +80,7 @@ describe('<Unit Test - Netsuite Currency API>', function () {
             });
         });
     });
-    afterEach(function (done) {
+    afterEach(done => {
         nsmockup.destroy(done);
     });
 });

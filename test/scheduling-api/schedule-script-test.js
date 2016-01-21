@@ -9,7 +9,7 @@ var base = __dirname + '/../_input-files/record-data';
  */
 describe('<Unit Test - Netsuite Scheduling API>', function () {
     this.timeout(5000);
-    before(function (done) {
+    before(done => {
         let metadata = [
                 base + '/meta/customrecord_codeg.json',
                 base + '/meta/customrecord_codeg_ids.json'
@@ -20,9 +20,9 @@ describe('<Unit Test - Netsuite Scheduling API>', function () {
             };
         nsmockup.init({records, metadata}, done);
     });
-    describe('SuiteScript - nlapiScheduleScript', function () {
+    describe('SuiteScript - nlapiScheduleScript', () => {
         let ctx;
-        before(function (done) {
+        before(done => {
             nsmockup.createSchedule({
                 id: 'customscript_my_schedule',
                 files: [
@@ -42,13 +42,13 @@ describe('<Unit Test - Netsuite Scheduling API>', function () {
             });
         });
 
-        it('schedule-script execute with no params', function (done) {
+        it('schedule-script execute with no params', done => {
             let status = nlapiScheduleScript('customscript_my_schedule', 'customdeploy_my_schedule');
             should(status).be.equal('QUEUED');
             return done();
         });
 
-        it('schedule-script execute with params', function (done) {
+        it('schedule-script execute with params', done => {
             let params = {
                     'fake-param': 'customrecord_codeg'
                 },
@@ -57,19 +57,19 @@ describe('<Unit Test - Netsuite Scheduling API>', function () {
             return done();
         });
 
-        it('schedule-script execute by ID', function (done) {
+        it('schedule-script execute by ID', done => {
             let status = nlapiScheduleScript(1, {});
             should(status).be.equal('QUEUED');
             return done();
         });
 
-        it('schedule-script execute by string ID', function (done) {
+        it('schedule-script execute by string ID', done => {
             let status = nlapiScheduleScript('1', {});
             should(status).be.equal('QUEUED');
             return done();
         });
 
-        it('schedule-script missing script', function (done) {
+        it('schedule-script missing script', done => {
             try {
                 nlapiScheduleScript();
                 return done('missing id');
@@ -79,7 +79,7 @@ describe('<Unit Test - Netsuite Scheduling API>', function () {
             }
         });
 
-        it('schedule-script missing deploy', function (done) {
+        it('schedule-script missing deploy', done => {
             try {
                 nlapiScheduleScript('customscript_my_schedule');
                 return done('missing id');
@@ -89,7 +89,7 @@ describe('<Unit Test - Netsuite Scheduling API>', function () {
             }
         });
 
-        it('schedule-script invalid script', function (done) {
+        it('schedule-script invalid script', done => {
             try {
                 nlapiScheduleScript('customscript_my_schedule_japo', 'customdeploy_my_schedule');
                 return done('missing deploy');
@@ -99,7 +99,7 @@ describe('<Unit Test - Netsuite Scheduling API>', function () {
             }
         });
 
-        it('schedule-script invalid ID', function (done) {
+        it('schedule-script invalid ID', done => {
             try {
                 nlapiScheduleScript(2, {});
                 return done('missing deploy');
@@ -109,7 +109,7 @@ describe('<Unit Test - Netsuite Scheduling API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

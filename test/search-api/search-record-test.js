@@ -11,7 +11,7 @@ var base = __dirname + '/../_input-files/record-data';
 describe('<Unit Test - Netsuite Search API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
+    before(done => {
         let metadata = [
                 base + '/meta/customrecord_codeg.json',
                 base + '/meta/customrecord_codeg_ids.json'
@@ -22,10 +22,10 @@ describe('<Unit Test - Netsuite Search API>', function () {
             };
         nsmockup.init({records, metadata}, done);
     });
-    parallel('SuiteScript API - nlapiSearchRecord:', function () {
+    parallel('SuiteScript API - nlapiSearchRecord:', () => {
         let recType = 'customrecord_codeg';
 
-        it('search all', function (done) {
+        it('search all', done => {
             var columns = [
                 'custrecord_type_id',
                 'custrecord_code_id'
@@ -52,7 +52,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search by internalid', function (done) {
+        it('search by internalid', done => {
             let columns = [
                 'custrecord_type_id',
                 'custrecord_code_id'
@@ -63,7 +63,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field (using nlobjSearchFilter)', function (done) {
+        it('search one field (using nlobjSearchFilter)', done => {
             let columns = [
                     'custrecord_type_id',
                     'custrecord_code_id'
@@ -77,7 +77,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field (using array filter)', function (done) {
+        it('search one field (using array filter)', done => {
             let columns = [
                     'custrecord_type_id',
                     'custrecord_code_id'
@@ -91,7 +91,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field + join', function (done) {
+        it('search one field + join', done => {
             let columns = [
                     'custrecord_type_id',
                     'custrecord_code_id'
@@ -105,7 +105,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field + join and column join (raw params)', function (done) {
+        it('search one field + join and column join (raw params)', done => {
             let columns = [
                     ['custrecord_id_title_id', 'custrecord_type_id'],
                     ['custrecord_code_id']
@@ -126,7 +126,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field + join and column join (using nlobjSearchColumn)', function (done) {
+        it('search one field + join and column join (using nlobjSearchColumn)', done => {
             let columns = [
                     ['custrecord_id_title_id', 'custrecord_type_id'],
                     ['custrecord_code_id']
@@ -146,7 +146,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search formula text', function (done) {
+        it('search formula text', done => {
             let columns = [
                     ['custrecord_id_title_id', 'custrecord_type_id'],
                     ['custrecord_code_id'],
@@ -171,7 +171,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search missing "type"', function(done) {
+        it('search missing "type"', done => {
             try {
                 nlapiSearchRecord();
                 return done('missing type');
@@ -181,7 +181,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             }
         });
 
-        it('search ivalid "id"', function(done) {
+        it('search ivalid "id"', done => {
             try {
                 nlapiSearchRecord(recType, 'opa');
                 return done('invalid id');
@@ -191,7 +191,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

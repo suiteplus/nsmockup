@@ -10,7 +10,7 @@ var base = __dirname + '/../_input-files/record-data';
 describe('<Unit Test - Netsuite Record API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
+    before(done => {
         let metadata = [
                 base + '/meta/customrecord_codeg.json',
                 base + '/meta/customrecord_codeg_ids.json'
@@ -21,17 +21,17 @@ describe('<Unit Test - Netsuite Record API>', function () {
             };
         nsmockup.init({records, metadata}, done);
     });
-    describe('SuiteScript API - nlapiCreateRecord:', function () {
+    describe('SuiteScript API - nlapiCreateRecord:', () => {
         let recType = 'customrecord_codeg';
 
-        it('create new object', function (done) {
+        it('create new object', done => {
             let o = nlapiCreateRecord(recType);
             should(o).have.instanceOf(nlobjRecord);
 
             return done();
         });
 
-        it('create new object + initializeValues', function (done) {
+        it('create new object + initializeValues', done => {
             let iniValues = {
                     custrecord_type_id: '239',
                     custrecord_code_id: '19'
@@ -48,7 +48,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             return done();
         });
 
-        it('create missing record type', function (done) {
+        it('create missing record type', done => {
             try {
                 let o = nlapiCreateRecord();
                 should(o).have.instanceOf(nlobjRecord);
@@ -59,7 +59,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             }
         });
 
-        it('create invalid record type', function (done) {
+        it('create invalid record type', done => {
             try {
                 let invalidRecType = recType + 'japois';
                 let o = nlapiCreateRecord(invalidRecType);
@@ -71,7 +71,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             }
         });
 
-        it('create new object + invalid initializeValues', function (done) {
+        it('create new object + invalid initializeValues', done => {
             let initializeValues = {
                 custrecord_type_id_oba: 239,
                 custrecord_code_id: 19
@@ -87,7 +87,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

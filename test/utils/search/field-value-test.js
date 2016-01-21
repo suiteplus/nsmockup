@@ -14,7 +14,7 @@ var base = __dirname + '/../../_input-files/record-data';
 describe('<Unit Test - Netsuite Search API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
+    before(done => {
         let metadata = [
                 `${base}/meta/customlist_batchtype.json`,
                 `${base}/meta/customrecord_codeg.json`
@@ -39,8 +39,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
         nsmockup.init(opts, done);
     });
 
-    parallel('SuiteScript API - Search Utils - "field-value":', function () {
-        it('field-value: customlist', function (done) {
+    parallel('SuiteScript API - Search Utils - "field-value":', () => {
+        it('field-value: customlist', done => {
             let dataTest = [{value: 1, expect: 'DOC'}, {value: 3, expect: 3}];
             dataTest.forEach(o => {
                 let opts = {
@@ -56,7 +56,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('field-value: currency', function (done) {
+        it('field-value: currency', done => {
             let dataTest = [
                 {value: 1210.013, expect: '1210.01'},
                 {value: '90.038', expect: '90.04'},
@@ -75,7 +75,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('field-value: decimal', function (done) {
+        it('field-value: decimal', done => {
             let dataTest = [
                 {value: 10.013, expect: 10.013},
                 {value: '10.013', expect: 10.013},
@@ -94,7 +94,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('field-value: multiselect', function (done) {
+        it('field-value: multiselect', done => {
             let dataTest = [
                 {value: 1, expect: 1},
                 {value: '1', expect: '1'},
@@ -113,7 +113,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('field-value: date', function (done) {
+        it('field-value: date', done => {
             let date = moment.utc([2015, 10, 14, 22, 34, 23]),
                 dateStr = date.toJSON(),
                 dataTest = [
@@ -135,7 +135,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('field-value: datetime', function (done) {
+        it('field-value: datetime', done => {
             let date = moment.utc([2015, 10, 14, 22, 34, 23]),
                 dateStr = date.toJSON(),
                 dataTest = [
@@ -157,7 +157,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

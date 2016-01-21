@@ -9,8 +9,8 @@ var base = __dirname + '/../_input-files/record-data';
  * Test Suites
  */
 describe('<Unit Test - Netsuite Context API>', function () {
-    describe('SuiteScript API - nlapiGetContext:', function () {
-        it('get-context object', function (done) {
+    describe('SuiteScript API - nlapiGetContext:', () => {
+        it('get-context object', done => {
             nsmockup.init((err) => {
                 if (err) return done(err);
 
@@ -21,7 +21,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-context current "entity"', function (done) {
+        it('get-context current "entity"', done => {
             let opts = {
                 metadata: [':entity'],
                 records: {
@@ -47,7 +47,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-context current "employee"', function (done) {
+        it('get-context current "employee"', done => {
             let opts = {
                 metadata: [':employee'],
                 records: {
@@ -76,7 +76,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-context current "customer"', function (done) {
+        it('get-context current "customer"', done => {
             let opts = {
                 metadata: [':customer'],
                 records: {
@@ -105,7 +105,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-context current "vendor"', function (done) {
+        it('get-context current "vendor"', done => {
             let opts = {
                 metadata: [':vendor'],
                 records: {
@@ -134,7 +134,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-context current "partner"', function (done) {
+        it('get-context current "partner"', done => {
             let opts = {
                 metadata: [':partner'],
                 records: {

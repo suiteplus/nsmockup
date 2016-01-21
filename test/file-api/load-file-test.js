@@ -10,13 +10,13 @@ var path = require('path'),
 describe('<Unit Test - Netsuite File API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
+    before(done => {
         nsmockup.init(done);
     });
-    describe('SuiteScript API - nlapiLoadFile:', function () {
+    describe('SuiteScript API - nlapiLoadFile:', () => {
         let folderNames = ['opa', 'ebaa', 'hummm'],
             file, id;
-        before(function (done) {
+        before(done => {
             file = nlapiCreateFile('oba-load.txt', 'PLAINTEXT', 'uhuuu .. supimpa');
             should(file).have.instanceOf(nlobjFile);
 
@@ -36,7 +36,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             return done();
         });
 
-        it('load file', function (done) {
+        it('load file', done => {
             let data = nlapiLoadFile(id);
 
             should(file).have.instanceOf(nlobjFile);
@@ -52,7 +52,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             return done();
         });
 
-        it('load missing id', function (done) {
+        it('load missing id', done => {
             try {
                 nlapiLoadFile();
                 return done('missing id');
@@ -62,7 +62,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             }
         });
 
-        it('load invalid id', function (done) {
+        it('load invalid id', done => {
             try {
                 nlapiLoadFile('japo');
                 return done('invalid id');
@@ -72,7 +72,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

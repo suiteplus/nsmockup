@@ -16,7 +16,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
 
     let meta;
 
-    before(function (done) {
+    before(done => {
         let metadata = [
                 `${base}/meta/customrecord_codeg.json`,
                 `${base}/meta/customlist_batchtype.json`
@@ -38,8 +38,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
         });
     });
 
-    parallel('SuiteScript API - Search Utils - "validate-fields":', function () {
-        it('validate-fields: customlist', function (done) {
+    parallel('SuiteScript API - Search Utils - "validate-fields":', () => {
+        it('validate-fields: customlist', done => {
             //let opts = {
             //    type: 'customrecord_codeg',
             //    code: 'custrecord_code_batch',
@@ -51,7 +51,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('validate-fields: validateFilters - missing meta', function(done) {
+        it('validate-fields: validateFilters - missing meta', done => {
             try {
                 validateFields.validateFilters();
                 return done('missing meta');
@@ -61,7 +61,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             }
         });
 
-        it('validate-fields: validateColumns - missing meta', function(done) {
+        it('validate-fields: validateColumns - missing meta', done => {
             try {
                 validateFields.validateColumns();
                 return done('missing meta');
@@ -71,7 +71,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             }
         });
 
-        it('validate-fields: validateFilters - invalid filter name', function(done) {
+        it('validate-fields: validateFilters - invalid filter name', done => {
             try {
                 validateFields.validateFilters(meta, new nlobjSearchFilter('custrecord_code_invalid-col', null, 'is', 1));
                 return done('invalid filter name');
@@ -87,7 +87,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('validate-fields: validateFilters - invalid filter join', function(done) {
+        it('validate-fields: validateFilters - invalid filter join', done => {
             try {
                 validateFields.validateFilters(meta, new nlobjSearchFilter('legal', 'custrecord_code_invalid-col', 'is', 1));
                 return done('invalid filter join');
@@ -104,7 +104,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('validate-fields: validateColumns - invalid column name', function(done) {
+        it('validate-fields: validateColumns - invalid column name', done => {
             try {
                 validateFields.validateColumns(meta, new nlobjSearchColumn('custrecord_code_invalid-col'));
                 return done('invalid column name');
@@ -120,7 +120,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('validate-fields: validateColumns - invalid column join', function(done) {
+        it('validate-fields: validateColumns - invalid column join', done => {
             try {
                 validateFields.validateColumns(meta, new nlobjSearchColumn('legal', 'custrecord_code_invalid-col'));
                 return done('invalid column join');
@@ -136,7 +136,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

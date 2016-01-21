@@ -8,26 +8,26 @@ var should = require('should'),
  * Test Suites
  */
 describe('<Unit Test - Netsuite Scheduling API>', function () {
-    before(function (done) {
+    before(done => {
         nsmockup.init(done);
     });
-    parallel('Scheduling API:', function () {
-        describe('SuiteScript - nlapiSetRecoveryPoint', function () {
-            it('recovey-point execute', function (done) {
+    parallel('Scheduling API:', () => {
+        describe('SuiteScript - nlapiSetRecoveryPoint', () => {
+            it('recovey-point execute', done => {
                 let status = nlapiSetRecoveryPoint();
                 should(status).be.property('status', 'SUCCESS');
                 return done();
             });
         });
-        describe('SuiteScript - nlapiYieldScript', function () {
-            it('yeld-script execute', function (done) {
+        describe('SuiteScript - nlapiYieldScript', () => {
+            it('yeld-script execute', done => {
                 let status = nlapiYieldScript();
                 should(status).be.property('status', 'SUCCESS');
                 return done();
             });
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

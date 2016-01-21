@@ -8,7 +8,7 @@ var should = require('should'),
  * Test Suites
  */
 describe('<Unit Test - Netsuite Date API>', function () {
-    before(function (done) {
+    before(done => {
         let localPrefs = {
                 dateFormat: 'DD-MM-YYYY',
                 timeFormat: 'HH:mm:ss'
@@ -18,8 +18,8 @@ describe('<Unit Test - Netsuite Date API>', function () {
             };
         nsmockup.init(opts, done);
     });
-    parallel('SuiteScript API - nlapiStringToDate:', function () {
-        it('date no format', function (done) {
+    parallel('SuiteScript API - nlapiStringToDate:', () => {
+        it('date no format', done => {
             let now = new Date(),
                 str = now.toJSON(),
                 date = nlapiStringToDate(str);
@@ -35,7 +35,7 @@ describe('<Unit Test - Netsuite Date API>', function () {
             return done();
         });
 
-        it('date format "date"', function (done) {
+        it('date format "date"', done => {
             let str = '15-09-2015 08:58:12 -03:00',
                 date = nlapiStringToDate(str, 'date');
             should(date).have.instanceOf(Date);
@@ -50,7 +50,7 @@ describe('<Unit Test - Netsuite Date API>', function () {
             return done();
         });
 
-        it('date format "date" not timezone', function (done) {
+        it('date format "date" not timezone', done => {
             let str = '15-09-2015 08:58:12',
                 date = nlapiStringToDate(str, 'date');
             should(date).have.instanceOf(Date);
@@ -65,7 +65,7 @@ describe('<Unit Test - Netsuite Date API>', function () {
             return done();
         });
 
-        it('date format "datetime"', function (done) {
+        it('date format "datetime"', done => {
             let str = '15-09-2015 08:58:12',
                 date = nlapiStringToDate(str, 'datetime');
             should(date).have.instanceOf(Date);
@@ -80,7 +80,7 @@ describe('<Unit Test - Netsuite Date API>', function () {
             return done();
         });
 
-        it('date format "datetimetz"', function (done) {
+        it('date format "datetimetz"', done => {
             let str = '15-09-2015 08:58:12',
                 date = nlapiStringToDate(str, 'datetimetz');
             should(date).have.instanceOf(Date);
@@ -95,7 +95,7 @@ describe('<Unit Test - Netsuite Date API>', function () {
             return done();
         });
 
-        it('date format "timeofday"', function (done) {
+        it('date format "timeofday"', done => {
             let str = '08:58:12',
                 date = nlapiStringToDate(str, 'timeofday');
             should(date).have.instanceOf(Date);
@@ -106,7 +106,7 @@ describe('<Unit Test - Netsuite Date API>', function () {
             return done();
         });
 
-        it('date missing str', function (done) {
+        it('date missing str', done => {
             try {
                 nlapiStringToDate();
                 return done('missing str ');
@@ -116,7 +116,7 @@ describe('<Unit Test - Netsuite Date API>', function () {
             }
         });
 
-        it('date invalid format', function (done) {
+        it('date invalid format', done => {
             try {
                 nlapiStringToDate('10-10-2015', 'japo');
                 return done('invalid format');
@@ -126,7 +126,7 @@ describe('<Unit Test - Netsuite Date API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

@@ -9,9 +9,9 @@ var base = __dirname + '/../_input-files/record-data';
  * Test Suites
  */
 describe('<Unit Test - Netsuite Context API>', function () {
-    describe('SuiteScript API - nlapiGetSubsidiary:', function () {
+    describe('SuiteScript API - nlapiGetSubsidiary:', () => {
 
-        it('get-subsidiary current "entity"', function (done) {
+        it('get-subsidiary current "entity"', done => {
             let opts = {
                 metadata: [':entity'],
                 records: {
@@ -31,7 +31,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-subsidiary current "employee"', function (done) {
+        it('get-subsidiary current "employee"', done => {
             let opts = {
                 metadata: [':employee'],
                 records: {
@@ -55,7 +55,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-subsidiary current "customer"', function (done) {
+        it('get-subsidiary current "customer"', done => {
             let opts = {
                 metadata: [':customer'],
                 records: {
@@ -79,7 +79,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-subsidiary current "vendor"', function (done) {
+        it('get-subsidiary current "vendor"', done => {
             let opts = {
                 metadata: [':vendor'],
                 records: {
@@ -103,7 +103,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-subsidiary current "partner"', function (done) {
+        it('get-subsidiary current "partner"', done => {
             let opts = {
                 metadata: [':partner'],
                 records: {

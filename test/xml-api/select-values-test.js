@@ -12,12 +12,12 @@ const fileDir = __dirname + '/../_input-files/files';
  * Test Suites
  */
 describe('<Unit Test - Netsuite XML API>', function () {
-    before(function (done) {
+    before(done => {
         nsmockup.init(done);
     });
-    parallel('XML API - nlapiSelectValues:', function () {
+    parallel('XML API - nlapiSelectValues:', () => {
         let xmlDoc;
-        before(function (done) {
+        before(done => {
             let xmlPath = path.resolve(fileDir + '/help.xml'),
                 xml = fs.readFileSync(xmlPath, 'utf8');
             xmlDoc = nlapiStringToXML(xml);
@@ -25,7 +25,7 @@ describe('<Unit Test - Netsuite XML API>', function () {
             should(xmlDoc).be.ok();
             return done();
         });
-        it('select-values find by xpath', function (done) {
+        it('select-values find by xpath', done => {
             let values = nlapiSelectValues(xmlDoc, '//table');
 
             should(values).be.ok();
@@ -33,7 +33,7 @@ describe('<Unit Test - Netsuite XML API>', function () {
             return done();
         });
 
-        it('select-values missing node', function (done) {
+        it('select-values missing node', done => {
             try {
                 nlapiSelectValues();
                 return done('missing node');
@@ -43,7 +43,7 @@ describe('<Unit Test - Netsuite XML API>', function () {
             }
         });
 
-        it('select-values missing xpath', function (done) {
+        it('select-values missing xpath', done => {
             try {
                 nlapiSelectValues(xmlDoc);
                 return done('missing xpath');
@@ -53,7 +53,7 @@ describe('<Unit Test - Netsuite XML API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

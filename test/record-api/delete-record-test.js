@@ -10,7 +10,7 @@ var base = __dirname + '/../_input-files/record-data';
 describe('<Unit Test - Netsuite Record API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
+    before(done => {
         let metadata = [
                 base + '/meta/customrecord_codeg.json',
                 base + '/meta/customrecord_codeg_ids.json'
@@ -21,10 +21,10 @@ describe('<Unit Test - Netsuite Record API>', function () {
             };
         nsmockup.init({records, metadata}, done);
     });
-    describe('SuiteScript API - nlapiDeleteRecord:', function () {
+    describe('SuiteScript API - nlapiDeleteRecord:', () => {
         let recType = 'customrecord_codeg';
 
-        it('delete by id', function (done) {
+        it('delete by id', done => {
             var filters = [
                 ['custrecord_type_id', null, 'anyof', 241]
             ];
@@ -54,7 +54,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             return done();
         });
 
-        it('delete missing record type', function (done) {
+        it('delete missing record type', done => {
             try {
                 nlapiDeleteRecord();
                 return done('missing record type');
@@ -64,7 +64,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             }
         });
 
-        it('delete missing id', function (done) {
+        it('delete missing id', done => {
             try {
                 nlapiDeleteRecord(recType);
                 return done('missing id');
@@ -74,7 +74,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             }
         });
 
-        it('delete invalid record type', function (done) {
+        it('delete invalid record type', done => {
             try {
                 let invalidRecType = recType + 'japois';
                 nlapiDeleteRecord(invalidRecType, 1);
@@ -85,7 +85,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

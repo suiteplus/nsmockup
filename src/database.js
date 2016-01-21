@@ -61,10 +61,9 @@ exports.load = (cb) => {
  *    id: number,
  *    code: string,
  *    name: string,
- *    bundle: boolean,
  *    type: string,
  *    deployment: string,
- *    files: [string],
+ *    files: [string | [string]],
  *    params: {}
  * }}
  */
@@ -90,7 +89,6 @@ exports.createSuiteScript = (data) => {
     let context = vmSim.importSuiteScript({
         code: data.code,
         name: data.name,
-        bundle: data.bundle,
         files: data.files,
         params: data.params
     });

@@ -11,7 +11,7 @@ var base = __dirname + '/../../_input-files/record-data';
 describe('<Unit Test - Netsuite Search API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
+    before(done => {
         let metadata = [
                 ':customer',
                 ':subsidiary'
@@ -38,8 +38,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
             }
         });
     });
-    parallel('SuiteScript API - Search Utils - "operators" - STRING:', function () {
-        it('operator "is": folder by name', function (done) {
+    parallel('SuiteScript API - Search Utils - "operators" - STRING:', () => {
+        it('operator "is": folder by name', done => {
             let recType = 'folder',
                 columns = [
                     ['name', 'parent']
@@ -57,7 +57,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "haskeywords": folder by name', function (done) {
+        it('operator "haskeywords": folder by name', done => {
             let recType = 'folder',
                 columns = [
                     ['name', 'parent']
@@ -75,7 +75,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "isempty": folder by name', function (done) {
+        it('operator "isempty": folder by name', done => {
             let recType = 'folder',
                 filters = [
                     ['name', null, 'isempty', '@NONE@']
@@ -86,7 +86,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "isnot": folder by name', function (done) {
+        it('operator "isnot": folder by name', done => {
             let recType = 'folder',
                 filters = [
                     ['name', null, 'isnot', 'SuiteScripts']
@@ -100,7 +100,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "isnotempty": file by name', function (done) {
+        it('operator "isnotempty": file by name', done => {
             let recType = 'file',
                 columns = [
                     ['name', 'folder']
@@ -119,7 +119,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "any": customer by email', function (done) {
+        it('operator "any": customer by email', done => {
             let recType = 'customer',
                 columns = [
                     ['entityid']
@@ -137,7 +137,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "contains": file by name', function (done) {
+        it('operator "contains": file by name', done => {
             let recType = 'file',
                 columns = [
                     ['name', 'folder']
@@ -154,7 +154,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "doesnotcontain": file by name', function (done) {
+        it('operator "doesnotcontain": file by name', done => {
             let recType = 'file',
                 columns = [
                     ['name', 'folder']
@@ -173,7 +173,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "doesnotstartwith": file by name', function (done) {
+        it('operator "doesnotstartwith": file by name', done => {
             let recType = 'file',
                 columns = [
                     ['name', 'folder']
@@ -192,7 +192,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "startswith": file by name', function (done) {
+        it('operator "startswith": file by name', done => {
             let recType = 'file',
                 columns = [
                     ['name', 'folder']
@@ -211,7 +211,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

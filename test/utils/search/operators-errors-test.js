@@ -9,10 +9,10 @@ var should = require('should'),
  * Test Suites
  */
 describe('<Unit Test - Netsuite Search API>', function () {
-    before(function (done) {
+    before(done => {
         nsmockup.init(done);
     });
-    parallel('SuiteScript API - Search Utils - "operators" - validate error messages:', function () {
+    parallel('SuiteScript API - Search Utils - "operators" - validate error messages:', () => {
         it('operator validate missing errors', (done) => {
             try {
                 operator();
@@ -132,7 +132,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 

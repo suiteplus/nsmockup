@@ -19,7 +19,7 @@ var validateCustomer = (customers, msg) => {
 describe('<Unit Test - Netsuite Search API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
+    before(done => {
         let metadata = [
                 ':customer',
                 ':subsidiary'
@@ -44,8 +44,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
             ['email'],
             ['companynameforsupportmessages', 'subsidiary']
         ].map(c => new nlobjSearchColumn(c[0], c[1]));
-    parallel('SuiteScript API - Search Utils - "operators" - DATE:', function () {
-        it('operator "after": customer by datecreated', function (done) {
+    parallel('SuiteScript API - Search Utils - "operators" - DATE:', () => {
+        it('operator "after": customer by datecreated', done => {
             let filters = [
                     ['datecreated', null, 'after', '12-07-2015 12:34:23']
                 ];
@@ -61,7 +61,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "before": customer by datecreated', function (done) {
+        it('operator "before": customer by datecreated', done => {
             let filters = [
                     ['datecreated', null, 'before', '14-07-2015 12:34:23']
                 ];
@@ -77,7 +77,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "notwithin": customer by datecreated', function (done) {
+        it('operator "notwithin": customer by datecreated', done => {
             let filters = [
                     ['datecreated', null, 'notwithin', '16-07-2015 18:36:23']
                 ];
@@ -93,7 +93,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "notafter": customer by datecreated', function (done) {
+        it('operator "notafter": customer by datecreated', done => {
             let filters = [
                     ['datecreated', null, 'notafter', '14-07-2015']
                 ];
@@ -109,7 +109,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "notbefore": customer by datecreated', function (done) {
+        it('operator "notbefore": customer by datecreated', done => {
             let filters = [
                     ['datecreated', null, 'notbefore', '12-07-2015']
                 ];
@@ -125,7 +125,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "noton": customer by datecreated', function (done) {
+        it('operator "noton": customer by datecreated', done => {
             ['12-07-2015 18:36:23', '14-07-2015 06:36:23', '10-07-2016', '02-01-2014'].forEach(function(date) {
                 let filters = [
                     ['datecreated', null, 'noton', date]
@@ -143,7 +143,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "notonorafter": customer by datecreated', function (done) {
+        it('operator "notonorafter": customer by datecreated', done => {
             ['12-07-2015 18:36:23', '10-07-2015', '02-01-2014'].forEach(function(date) {
                 let filters = [
                     ['datecreated', null, 'notonorafter', date]
@@ -163,7 +163,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "notonorbefore": customer by datecreated', function (done) {
+        it('operator "notonorbefore": customer by datecreated', done => {
             ['14-07-2015 18:36:23', '17-07-2015', '02-01-2016'].forEach(function(date) {
                 let filters = [
                     ['datecreated', null, 'notonorbefore', date]
@@ -183,7 +183,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "on": customer by datecreated', function (done) {
+        it('operator "on": customer by datecreated', done => {
             let filters = [
                 ['datecreated', null, 'on', '13-07-2015 14:39:00']
             ];
@@ -200,7 +200,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "onorafter": customer by datecreated', function (done) {
+        it('operator "onorafter": customer by datecreated', done => {
             ['13-07-2015 14:39:00', '16-03-2015', '11-01-2012'].forEach(function(date) {
                 let filters = [
                     ['datecreated', null, 'onorafter', date]
@@ -217,7 +217,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "onorbefore": customer by datecreated', function (done) {
+        it('operator "onorbefore": customer by datecreated', done => {
             ['14-07-2015 18:36:23', '13-07-2015 14:39:00', '16-08-2016'].forEach(function(date) {
                 let filters = [
                     ['datecreated', null, 'onorbefore', date]
@@ -234,7 +234,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

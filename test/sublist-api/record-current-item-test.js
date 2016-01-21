@@ -10,7 +10,7 @@ var base = __dirname + '/../_input-files/record-data';
 describe('<Unit Test - Netsuite Sublist API>', function () {
     this.timeout(5000);
 
-    beforeEach(function (done) {
+    beforeEach(done => {
         let metadata = [
                 base + '/meta/customrecord_codeg.json'
             ],
@@ -19,11 +19,11 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             };
         nsmockup.init({records, metadata}, done);
     });
-    describe('SuiteScript API - nlapiSearchRecord:', function () {
+    describe('SuiteScript API - nlapiSearchRecord:', () => {
         let recType = 'customrecord_codeg',
             item = 'item_code';
 
-        it('record new line and commit', function (done) {
+        it('record new line and commit', done => {
             let o = nlapiLoadRecord(recType, 4);
             should(o).have.instanceOf(nlobjRecord);
             o.selectNewLineItem(item);
@@ -48,7 +48,7 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             return done();
         });
 
-        it('record new line and cancel', function (done) {
+        it('record new line and cancel', done => {
             let o = nlapiLoadRecord(recType, 4);
             should(o).have.instanceOf(nlobjRecord);
             o.selectNewLineItem(item);
@@ -71,7 +71,7 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             }
         });
 
-        it('record select line and commit', function (done) {
+        it('record select line and commit', done => {
             let o = nlapiLoadRecord(recType, 4);
             should(o).have.instanceOf(nlobjRecord);
             o.selectLineItem(item, 1);
@@ -109,7 +109,7 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             return done();
         });
 
-        it('record count lines and find line', function (done) {
+        it('record count lines and find line', done => {
             let o = nlapiLoadRecord(recType, 4);
             should(o).have.instanceOf(nlobjRecord);
 
@@ -139,7 +139,7 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             return done();
         });
 
-        it('record insert new line and commit', function (done) {
+        it('record insert new line and commit', done => {
             let o = nlapiLoadRecord(recType, 4);
             should(o).have.instanceOf(nlobjRecord);
             {
@@ -212,7 +212,7 @@ describe('<Unit Test - Netsuite Sublist API>', function () {
             return done();
         });
     });
-    afterEach(function (done) {
+    afterEach(done => {
         nsmockup.destroy(done);
     });
 });

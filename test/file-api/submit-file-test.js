@@ -7,12 +7,12 @@ var should = require('should'),
  * Test Suites
  */
 describe('<Unit Test - Netsuite File API>', function () {
-    before(function (done) {
+    before(done => {
         nsmockup.init(done);
     });
-    describe('SuiteScript API - nlapiSubmitFile:', function () {
+    describe('SuiteScript API - nlapiSubmitFile:', () => {
         let file;
-        before(function (done) {
+        before(done => {
             file = nlapiCreateFile('oba-load.txt', 'PLAINTEXT', 'uhuuu .. supimpa');
             should(file).have.instanceOf(nlobjFile);
 
@@ -27,7 +27,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             return done();
         });
 
-        it('submit file', function (done) {
+        it('submit file', done => {
             let id = nlapiSubmitFile(file);
 
             should(id).be.ok();
@@ -43,7 +43,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             return done();
         });
 
-        it('submit missing file', function (done) {
+        it('submit missing file', done => {
             try {
                 nlapiSubmitFile();
                 return done('missing file');
@@ -53,7 +53,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

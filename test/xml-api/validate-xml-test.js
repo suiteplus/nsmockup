@@ -12,12 +12,12 @@ const fileDir = __dirname + '/../_input-files/files';
  * Test Suites
  */
 describe('<Unit Test - Netsuite XML API>', function () {
-    before(function (done) {
+    before(done => {
         nsmockup.init(done);
     });
-    parallel('XML API - nlapiValidateXML:', function () {
+    parallel('XML API - nlapiValidateXML:', () => {
         let xmlDoc;
-        before(function (done) {
+        before(done => {
             let xmlPath = path.resolve(fileDir + '/help.xml'),
                 xml = fs.readFileSync(xmlPath, 'utf8');
             xmlDoc = nlapiStringToXML(xml);
@@ -25,14 +25,14 @@ describe('<Unit Test - Netsuite XML API>', function () {
             should(xmlDoc).be.ok();
             return done();
         });
-        it('validate-xml find by xpath', function (done) {
+        it('validate-xml find by xpath', done => {
             let valid = nlapiValidateXML(xmlDoc, {});
 
             should(valid).be.ok();
             return done();
         });
 
-        it('validate-xml missing document', function (done) {
+        it('validate-xml missing document', done => {
             try {
                 nlapiValidateXML();
                 return done('missing document');
@@ -42,7 +42,7 @@ describe('<Unit Test - Netsuite XML API>', function () {
             }
         });
 
-        it('validate-xml missing xpath', function (done) {
+        it('validate-xml missing xpath', done => {
             try {
                 nlapiValidateXML(xmlDoc);
                 return done('missing schema');
@@ -52,7 +52,7 @@ describe('<Unit Test - Netsuite XML API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

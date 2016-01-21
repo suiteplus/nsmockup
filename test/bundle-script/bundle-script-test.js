@@ -9,11 +9,11 @@ var base = __dirname + '/../_input-files';
  */
 describe('<Unit Test - Netsuite Bundle Script>', function () {
     this.timeout(5000);
-    before(function (done) {
+    before(done => {
         nsmockup.init(done);
     });
-    describe('SuiteScript - nlapiScheduleScript', function () {
-        it('bundle-script execute', function (done) {
+    describe('SuiteScript - nlapiScheduleScript', () => {
+        it('bundle-script execute', done => {
             nsmockup.createSchedule({
                 id: 'customscript_my_schedule',
                 files: [
@@ -28,7 +28,7 @@ describe('<Unit Test - Netsuite Bundle Script>', function () {
             });
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

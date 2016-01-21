@@ -36,27 +36,27 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             }
         };
 
-    before(function (done) {
+    before(done => {
         nsmockup.init({server: true}, () => {
             nsmockup.createRESTlet(ropts);
             nsmockup.createSuitelet(sopts);
             return done();
         });
     });
-    parallel('SuiteScript API - nlapiResolveURL:', function () {
-        it('resolve get internal URL from RESTlet', function (done) {
+    parallel('SuiteScript API - nlapiResolveURL:', () => {
+        it('resolve get internal URL from RESTlet', done => {
             let url = nlapiResolveURL('RESTLET', ropts.name, '1');
             should(url).be.ok();
             return done();
         });
 
-        it('resolve get internal URL from Suitelet', function (done) {
+        it('resolve get internal URL from Suitelet', done => {
             let url = nlapiResolveURL('SUITELET', sopts.name, '1');
             should(url).be.ok();
             return done();
         });
 
-        it('resolve missing type', function (done) {
+        it('resolve missing type', done => {
             try {
                 let o = nlapiResolveURL();
                 should(o).have.instanceOf(String);
@@ -67,7 +67,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             }
         });
 
-        it('resolve missing identifier', function (done) {
+        it('resolve missing identifier', done => {
             try {
                 let o = nlapiResolveURL('RESTLET');
                 should(o).have.instanceOf(String);
@@ -78,7 +78,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             }
         });
 
-        it('resolve missing id', function (done) {
+        it('resolve missing id', done => {
             try {
                 let o = nlapiResolveURL('RESTLET', ropts.name);
                 should(o).have.instanceOf(String);
@@ -89,7 +89,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             }
         });
 
-        it('resolve identifier not found', function (done) {
+        it('resolve identifier not found', done => {
             try {
                 let o = nlapiResolveURL('SUITELET', 'customscript_japopop', '1');
                 should(o).have.instanceOf(String);
@@ -100,7 +100,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             }
         });
 
-        it('resolve not supported', function (done) {
+        it('resolve not supported', done => {
             try {
                 let o = nlapiResolveURL('RECORD');
                 should(o).have.instanceOf(String);
@@ -111,7 +111,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             }
         });
 
-        it('resolve invalid type', function (done) {
+        it('resolve invalid type', done => {
             try {
                 let invalidRecType = 'japois';
                 let o = nlapiResolveURL(invalidRecType, 1, '1');
@@ -124,8 +124,8 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
         });
     });
 
-    describe('SuiteScript API - nlapiRequestURL:', function () {
-        it('request only restlet URL', function (done) {
+    describe('SuiteScript API - nlapiRequestURL:', () => {
+        it('request only restlet URL', done => {
             let url = nlapiResolveURL('RESTLET', ropts.name, '1');
             should(url).be.ok();
             let res = nlapiRequestURL(url + '&fake=12');
@@ -135,7 +135,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             return done();
         });
 
-        it('request only suitelet URL', function (done) {
+        it('request only suitelet URL', done => {
             let url = nlapiResolveURL('SUITELET', sopts.name, '1');
             should(url).be.ok();
             let res = nlapiRequestURL(url + '&fake=22');
@@ -145,7 +145,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
             return done();
         });
 
-        it('request restlet URL method POST', function (done) {
+        it('request restlet URL method POST', done => {
             let url = nlapiResolveURL('RESTLET', ropts.name, '1');
             should(url).be.ok();
             let res = nlapiRequestURL(url, {fake: 12}, null, 'POST');
@@ -156,7 +156,7 @@ describe('<Unit Test - Netsuite Application Navigation API>', function () {
         });
     });
 
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

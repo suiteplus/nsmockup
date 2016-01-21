@@ -7,24 +7,24 @@ var should = require('should'),
  * Test Suites
  */
 parallel('<Unit Test - Netsuite Communication API>', function () {
-    describe('SuiteScript API - nlapiSendEmail:', function () {
-        it('just test function', function (done) {
+    describe('SuiteScript API - nlapiSendEmail:', () => {
+        it('just test function', done => {
             should(nlapiSendEmail).be.ok();
             nlapiSendEmail();
             return done();
         });
     });
 
-    describe('SuiteScript API - nlapiSendCampaignEmail:', function () {
-        it('just test function', function (done) {
+    describe('SuiteScript API - nlapiSendCampaignEmail:', () => {
+        it('just test function', done => {
             should(nlapiSendCampaignEmail).be.ok();
             nlapiSendCampaignEmail();
             return done();
         });
     });
 
-    describe('SuiteScript API - nlapiSendFax:', function () {
-        it('just test function', function (done) {
+    describe('SuiteScript API - nlapiSendFax:', () => {
+        it('just test function', done => {
             should(nlapiSendFax).be.ok();
             nlapiSendFax();
             return done();

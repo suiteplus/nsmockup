@@ -9,13 +9,13 @@ var should = require('should'),
  */
 describe('<Unit Test - Netsuite Encryption API>', function () {
 
-    before(function (done) {
+    before(done => {
         nsmockup.init(done);
     });
-    parallel('Encription API - nlapiDecrypt:', function () {
+    parallel('Encription API - nlapiDecrypt:', () => {
         let strFinal = 'nsmockup - Test your Suitescripts before deploying to NetSuite.';
 
-        it('decrypt base64 to str', function (done) {
+        it('decrypt base64 to str', done => {
             let code = 'bnNtb2NrdXAgLSBUZXN0IHlvdXIgU3VpdGVzY3JpcHRzIGJlZm9yZSBkZXBsb3lpbmcgdG8gTmV0U3VpdGUu',
                 algorithm = 'base64',
                 str = nlapiDecrypt(code, algorithm);
@@ -23,7 +23,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
             return done();
         });
 
-        it('decrypt xor to str', function (done) {
+        it('decrypt xor to str', done => {
             let code = 'BRYUBAYSHhVZRkUtDhYNSxwWHhdZOBAQHwAKCBcQGxEKSwccDQoLDkUdDhUVBBwQBQJZHwpZJQANOBAQHwBX',
                 algorithm = 'xor',
                 str = nlapiDecrypt(code, algorithm);
@@ -31,7 +31,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
             return done();
         });
 
-        it('decrypt aes to str', function (done) {
+        it('decrypt aes to str', done => {
             let algorithm = 'aes',
                 key = '128-bit',
             //code = nlapiEncrypt(strFinal, algorithm, key),
@@ -42,7 +42,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
             return done();
         });
 
-        it('decrypt missing str', function (done) {
+        it('decrypt missing str', done => {
             try {
                 nlapiDecrypt();
                 return done('missing str');
@@ -52,7 +52,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
             }
         });
 
-        it('decrypt missing algorithm', function (done) {
+        it('decrypt missing algorithm', done => {
             try {
                 nlapiDecrypt('opa');
                 return done('missing algorithm');
@@ -62,7 +62,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
             }
         });
 
-        it('decrypt invalid algorithm', function (done) {
+        it('decrypt invalid algorithm', done => {
             try {
                 nlapiDecrypt('opa', 'des');
                 return done('missing algorithm');
@@ -72,7 +72,7 @@ describe('<Unit Test - Netsuite Encryption API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

@@ -10,7 +10,7 @@ var base = __dirname + '/../_input-files/record-data';
 describe('<Unit Test - Netsuite Record API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
+    before(done => {
         let metadata = [
                 base + '/meta/customrecord_codeg.json',
                 base + '/meta/customrecord_codeg_ids.json'
@@ -21,10 +21,10 @@ describe('<Unit Test - Netsuite Record API>', function () {
             };
         nsmockup.init({records, metadata}, done);
     });
-    describe('SuiteScript API - nlapiCopyRecord:', function () {
+    describe('SuiteScript API - nlapiCopyRecord:', () => {
         let recType = 'customrecord_codeg';
 
-        it('copy by id', function (done) {
+        it('copy by id', done => {
             let code = nlapiLoadRecord(recType, 2);
             should(code).have.instanceOf(nlobjRecord);
             should(code).have.property('id', 2);
@@ -44,7 +44,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             return done();
         });
 
-        it('copy missing record type', function (done) {
+        it('copy missing record type', done => {
             try {
                 let o = nlapiCopyRecord();
                 should(o).have.instanceOf(nlobjRecord);
@@ -55,7 +55,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             }
         });
 
-        it('copy missing id', function (done) {
+        it('copy missing id', done => {
             try {
                 let o = nlapiCopyRecord(recType);
                 should(o).have.instanceOf(nlobjRecord);
@@ -66,7 +66,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             }
         });
 
-        it('copy invalid record type', function (done) {
+        it('copy invalid record type', done => {
             try {
                 let invalidRecType = recType + 'japois';
                 let o = nlapiCopyRecord(invalidRecType, 1);
@@ -78,7 +78,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

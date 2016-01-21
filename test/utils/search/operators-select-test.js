@@ -11,7 +11,7 @@ var base = __dirname + '/../../_input-files/record-data';
 describe('<Unit Test - Netsuite Search API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
+    before(done => {
         let metadata = [],
             records = {
                 'folder': `${base}/data/folder.json`
@@ -19,8 +19,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
             opts = {metadata, records};
         nsmockup.init(opts, done);
     });
-    parallel('SuiteScript API - Search Utils - "operator" - SELECT:', function () {
-        it('operator "anyof": folder by parent', function (done) {
+    parallel('SuiteScript API - Search Utils - "operator" - SELECT:', () => {
+        it('operator "anyof": folder by parent', done => {
             let recType = 'folder',
                 columns = [
                     ['name'],
@@ -37,7 +37,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('operator "noneof": folder by parent', function (done) {
+        it('operator "noneof": folder by parent', done => {
             let recType = 'folder',
                 columns = [
                     ['name'],
@@ -64,7 +64,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

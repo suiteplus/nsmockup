@@ -13,11 +13,11 @@ const fileDir = __dirname + '/../_input-files/files';
  */
 describe('<Unit Test - Netsuite XML API>', function () {
 
-    before(function (done) {
+    before(done => {
         nsmockup.init(done);
     });
-    parallel('XML API - nlapiStringToXML:', function () {
-        it('xml convert string to xml document', function (done) {
+    parallel('XML API - nlapiStringToXML:', () => {
+        it('xml convert string to xml document', done => {
             let xmlPath = path.resolve(fileDir + '/help.xml'),
                 xml = fs.readFileSync(xmlPath, 'utf8'),
                 xmlDoc = nlapiStringToXML(xml);
@@ -30,13 +30,13 @@ describe('<Unit Test - Netsuite XML API>', function () {
             return done();
         });
 
-        it('xml missing str', function (done) {
+        it('xml missing str', done => {
             let xml = nlapiStringToXML();
             should(xml).not.be.ok();
             return done();
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

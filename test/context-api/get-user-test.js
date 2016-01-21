@@ -9,9 +9,9 @@ var base = __dirname + '/../_input-files/record-data';
  * Test Suites
  */
 describe('<Unit Test - Netsuite Context API>', function () {
-    describe('SuiteScript API - nlapiGetUser:', function () {
+    describe('SuiteScript API - nlapiGetUser:', () => {
 
-        it('get-user current "entity"', function (done) {
+        it('get-user current "entity"', done => {
             let opts = {
                 metadata: [':entity'],
                 records: {
@@ -31,7 +31,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-user current "employee"', function (done) {
+        it('get-user current "employee"', done => {
             let opts = {
                 metadata: [':employee'],
                 records: {
@@ -55,7 +55,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-user current "customer"', function (done) {
+        it('get-user current "customer"', done => {
             let opts = {
                 metadata: [':customer'],
                 records: {
@@ -79,7 +79,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-user current "vendor"', function (done) {
+        it('get-user current "vendor"', done => {
             let opts = {
                 metadata: [':vendor'],
                 records: {
@@ -103,7 +103,7 @@ describe('<Unit Test - Netsuite Context API>', function () {
             });
         });
 
-        it('get-user current "partner"', function (done) {
+        it('get-user current "partner"', done => {
             let opts = {
                 metadata: [':partner'],
                 records: {

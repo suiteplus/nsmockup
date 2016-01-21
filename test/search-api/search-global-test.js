@@ -11,7 +11,7 @@ var base = __dirname + '/../_input-files/record-data';
 describe('<Unit Test - Netsuite Search API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
+    before(done => {
         let metadata = [
                 base + '/meta/customrecord_codeg.json',
                 base + '/meta/customrecord_codeg_ids.json'
@@ -32,8 +32,8 @@ describe('<Unit Test - Netsuite Search API>', function () {
             }
         });
     });
-    describe('SuiteScript API - nlapiSearchGlobal:', function () {
-        it('global search record', function (done) {
+    describe('SuiteScript API - nlapiSearchGlobal:', () => {
+        it('global search record', done => {
             let records = nlapiSearchGlobal('japo 242');
             should(records).be.length(1);
             let record = records[0];
@@ -42,7 +42,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('global search file', function (done) {
+        it('global search file', done => {
             let records = nlapiSearchGlobal('help-tempalte.xml');
             should(records).be.length(1);
             let record = records[0];
@@ -51,7 +51,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

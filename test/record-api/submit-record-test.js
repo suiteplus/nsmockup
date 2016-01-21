@@ -9,7 +9,7 @@ var base = __dirname + '/../_input-files/record-data';
 describe('<Unit Test - Netsuite Record API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
+    before(done => {
         let metadata = [
                 base + '/meta/customrecord_codeg.json',
                 base + '/meta/customrecord_codeg_ids.json'
@@ -20,10 +20,10 @@ describe('<Unit Test - Netsuite Record API>', function () {
             };
         nsmockup.init({records, metadata}, done);
     });
-    describe('SuiteScript API - nlapiSubmitRecord:', function () {
+    describe('SuiteScript API - nlapiSubmitRecord:', () => {
         let recType = 'customrecord_codeg';
 
-        it('submit new record', function (done) {
+        it('submit new record', done => {
             let initValues = {
                     custrecord_type_id: '111',
                     custrecord_code_id: '194'
@@ -57,7 +57,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             return done();
         });
 
-        it('submit update record', function (done) {
+        it('submit update record', done => {
             let initValues = {
                     custrecord_type_id: '111',
                     custrecord_code_id: '194'
@@ -93,7 +93,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             return done();
         });
 
-        it('submit missing record', function (done) {
+        it('submit missing record', done => {
             try {
                 let o = nlapiSubmitRecord();
                 should(o).have.instanceOf(nlobjRecord);
@@ -104,7 +104,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             }
         });
 
-        it('submit missing record type', function (done) {
+        it('submit missing record type', done => {
             try {
                 let invalidRecType = recType + 'japoooo',
                     o = nlapiSubmitRecord(new nlobjRecord(invalidRecType));
@@ -116,7 +116,7 @@ describe('<Unit Test - Netsuite Record API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

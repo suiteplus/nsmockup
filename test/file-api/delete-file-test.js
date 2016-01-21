@@ -7,12 +7,12 @@ var should = require('should'),
  * Test Suites
  */
 describe('<Unit Test - Netsuite File API>', function () {
-    before(function (done) {
+    before(done => {
         nsmockup.init({}, done);
     });
-    describe('SuiteScript API - nlapiDeleteFile:', function () {
+    describe('SuiteScript API - nlapiDeleteFile:', () => {
         let file, id;
-        before(function (done) {
+        before(done => {
             file = nlapiCreateFile('oba-del.txt', 'PLAINTEXT', 'uhuuu .. supimpa');
             should(file).have.instanceOf(nlobjFile);
 
@@ -28,7 +28,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             return done();
         });
 
-        it('delete file', function (done) {
+        it('delete file', done => {
             let id_ = nlapiDeleteFile(id),
                 fc = $db.object.file[id - 1];
 
@@ -38,7 +38,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             return done();
         });
 
-        it('delete missing id', function (done) {
+        it('delete missing id', done => {
             try {
                 nlapiDeleteFile();
                 return done('missing id');
@@ -48,7 +48,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             }
         });
 
-        it('delete invalid id', function (done) {
+        it('delete invalid id', done => {
             try {
                 nlapiDeleteFile('japo');
                 return done('invalid id');
@@ -58,7 +58,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });
