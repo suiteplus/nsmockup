@@ -182,6 +182,11 @@ exports.importSuiteScript = (script) => {
         let file = lkeys[i],
             code = libs[file];
         vmInclude(code, file, context);
+
+        // add JavaScript to File Cabinet
+        let fileName = path.basename(file),
+            filejs = nlapiCreateFile(fileName, 'JAVASCRIPT', code);
+        nlapiSubmitFile(filejs);
     }
 
     // load params configurations
