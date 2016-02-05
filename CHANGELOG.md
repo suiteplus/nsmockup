@@ -1,5 +1,34 @@
 # nsmockup ChangeLog
 
+## 2016-02-05, Version 0.10.0 (stable),
+
+### Notable changes
+  * add support for [nsify](https://github.com/suitpelus/nsify).
+  * add formula text parse using [ns-formula-parse](https://github.com/suiteplus/ns-formula-parse).
+  * add generic function to create SuiteScripts: `nsmockup.createSuiteScript(type, opt, cb)`.
+  * improve search records with `equals` filters.
+  * fix `User Events` trigger on `nlapiLoadRecord`.
+  * change default configuration of functions in:
+    * `nsmockup.createRESTlet`
+    * `nsmockup.createSchedule`
+    * `nsmockup.createSuitelet`
+    * `nsmockup.createUserEvent`
+  * simulate add SuiteScripts libs intro File Cabinet.
+  * add field `isinactive` before save record in `nlapiSubmitRecord`.
+
+### Netsuite API:
+  * __Field APIs__
+    - `function nlapiGetFieldText(fldnam)`
+    - `function nlapiGetFieldTexts(fldnam)`
+    - `function nlapiGetFieldValue(fldnam)`
+    - `function nlapiGetFieldValues(fldnam)`
+    - `function nlapiGetField(fldnam)`
+    - `function nlapiSetFieldText(fldnam)`
+    - `function nlapiSetFieldTexts(fldnam)`
+    - `function nlapiSetFieldValue(fldnam)`
+    - `function nlapiSetFieldValues(fldnam)`
+    - `function nlobjField(name, type, subList)`
+
 ## 2015-11-05, Version 0.9.0 (unstable),
 
 ### Notable changes
@@ -31,7 +60,7 @@
   * __Encription APIs__
     - `function nlapiDecrypt(s, algorithm, key)`
     - `function nlapiEncrypt(s, algorithm, key)`
-  
+
 ## 2015-10-22, Version 0.7.0 (unstable),
 
 ### Notable changes
@@ -134,7 +163,7 @@
 #### Record API:
    * [[`ee6d52c`](https://github.com/suiteplus/nsmockup/commit/ee6d52c89f84af6aed9666faf7ce61ba781b4118)] fix columns join
    * [[`9252f19`](https://github.com/suiteplus/nsmockup/commit/9252f19c32f798b48ea6a88d3f759a40767234df)] fix order columns in nlobjSearchResult
-   * [[`3eecfca`](https://github.com/suiteplus/nsmockup/commit/3eecfca10d801eee0a42ca841923e3e6d5acca8b)] include stack on error log 
+   * [[`3eecfca`](https://github.com/suiteplus/nsmockup/commit/3eecfca10d801eee0a42ca841923e3e6d5acca8b)] include stack on error log
 
 #### Mockup news - Netsuite API:
   * __Search APIs__:
@@ -161,7 +190,7 @@
 
 ### Notable changes
 
-#### lowdb: 
+#### lowdb:
    - Use lowdb to simulate Netsuite database, its a simple solution to manager Record Types.
 
 #### Mockup news - Netsuite API:
