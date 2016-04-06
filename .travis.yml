@@ -5,10 +5,8 @@ os:
   - 'osx'
 
 node_js:
-  - '4.0.0'
-  - '4.1.2'
-  - '4.2.1'
-  - '5.0.0'
+  - '4'
+  - '5'
 
 install:
   # - npm config set registry http://23.251.144.68
