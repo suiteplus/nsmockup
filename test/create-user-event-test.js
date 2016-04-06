@@ -7,14 +7,14 @@ var base = __dirname + '/_input-files/record-data';
 /**
  * Test Suites
  */
-describe('<Unit Test - Netsuite Create User Event>', function () {
+describe('<Unit Test - Netsuite Create User Event>', function() {
     this.timeout(5000);
     let opts = {
         name: 'customscript_add_user-event',
         files: [
             __dirname + '/_input-files/scripts/fake-user-event.js'
         ],
-        funcs: {
+        functions: {
             beforeLoad: 'FakeUserEvent.beforeLoad',
             beforeSubmit: 'FakeUserEvent.beforeSubmit',
             afterSubmit: 'FakeUserEvent.afterSubmit'
@@ -23,20 +23,20 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
             'fake-param': 23,
             'field-param': 'custrecord_id_code_id'
         },
-        record: 'customrecord_codeg_ids'
+        records: ['customrecord_codeg_ids']
     };
 
-    beforeEach(function (done) {
-        let metadatas = [
-                base + '/meta/recordType-metaData-codeg_ids.json'
+    beforeEach(done => {
+        let metadata = [
+                base + '/meta/customrecord_codeg_ids.json'
             ],
             records = {
-                'customrecord_codeg_ids': base + '/data/recordType-codeg_ids.json'
+                'customrecord_codeg_ids': base + '/data/customrecord_codeg_ids.json'
             };
-        nsmockup.init({records, metadatas}, done);
+        nsmockup.init({records, metadata}, done);
     });
-    describe('Create Script - User Event', function () {
-        it('user event - type: "create"', function (done) {
+    describe('Create Script - User Event', () => {
+        it('user-event: type - "createUserEvent"', done => {
             nsmockup.createUserEvent(opts, (ctx) => {
                 should(ctx.FakeUserEvent).be.ok();
 
@@ -78,12 +78,13 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
 
                 should(afterSubmitOldCode).be.equal(null);
                 should(afterSubmitNewCode).be.equal('434');
-                should(afterSubmitRecId).be.equal('-1');
+                should(afterSubmitRecId).be.equal('90');
                 should(afterSubmitRecType).be.equal('customrecord_codeg_ids');
                 return done();
             });
         });
-        it('user event - type: "edit"', function (done) {
+
+        it('user-event: type - "edit"', done => {
             nsmockup.createUserEvent(opts, (ctx) => {
                 should(ctx.FakeUserEvent).be.ok();
 
@@ -94,21 +95,6 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
 
                 let context = ctx.nlapiGetContext();
                 should(context).be.ok();
-
-                let beforeLoadType = context.getSessionObject('before-load-type'),
-                    beforeLoadParam = context.getSessionObject('before-load-param');
-                should(beforeLoadType).be.equal('view');
-                should(beforeLoadParam).be.equal('23');
-
-                let beforeLoadOldCode = context.getSessionObject('before-load-old-code'),
-                    beforeLoadNewCode = context.getSessionObject('before-load-new-code'),
-                    beforeLoadRecId = context.getSessionObject('before-load-rec-id'),
-                    beforeLoadRecType = context.getSessionObject('before-load-rec-type');
-
-                should(beforeLoadOldCode).be.equal('219');
-                should(beforeLoadNewCode).be.equal('219');
-                should(beforeLoadRecId).be.equal('219');
-                should(beforeLoadRecType).be.equal('customrecord_codeg_ids');
 
                 let beforeSubmitType = context.getSessionObject('before-submit-type'),
                     beforeSubmitParam = context.getSessionObject('before-submit-param');
@@ -143,8 +129,145 @@ describe('<Unit Test - Netsuite Create User Event>', function () {
                 return done();
             });
         });
+
+        it('user-event: type - "create" using "funcs"', done => {
+            let _opts = JSON.parse(JSON.stringify(opts));
+            _opts.funcs = _opts.functions;
+            delete _opts.functions;
+            nsmockup.createUserEvent(_opts, (ctx) => {
+                should(ctx.FakeUserEvent).be.ok();
+
+                let init = {
+                        custrecord_id_code_id: 434,
+                        custrecord_id_title_id: 'japo 434'
+                    },
+                    record = nlapiCreateRecord('customrecord_codeg_ids', init);
+
+                nlapiSubmitRecord(record);
+
+                let context = ctx.nlapiGetContext();
+                should(context).be.ok();
+
+                let beforeSubmitType = context.getSessionObject('before-submit-type'),
+                    beforeSubmitParam = context.getSessionObject('before-submit-param');
+                should(beforeSubmitType).be.equal('create');
+                should(beforeSubmitParam).be.equal('23');
+                return done();
+            });
+        });
+
+        it('user-event: missing "opt.files"', done => {
+            const errorDone = 'missing "opt.files"',
+                errorMsg = 'script needs libraries: "opt.files"';
+
+            try {
+                nsmockup.createUserEvent(null, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+
+            try {
+                nsmockup.createUserEvent({}, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+
+            try {
+                nsmockup.createUserEvent({file: {}}, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+
+            try {
+                nsmockup.createUserEvent({files: []}, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+            return done();
+        });
+
+        it('user-event: missing "opt.records"', done => {
+            const errorDone = 'missing "opt.records"',
+                errorMsg = 'user event needs one Record Type: "opt.records"',
+                opts = {
+                    files:[__dirname + '/_input-files/scripts/fake-user-event.js']
+                };
+
+            try {
+                nsmockup.createUserEvent(opts, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+            return done();
+        });
+
+        it('user-event: missing "opt.functions"', done => {
+            const errorDone = 'missing "opt.functions"',
+                errorMsg = 'principal functions not def: "opt.functions"',
+                opts = {
+                    files:[__dirname + '/_input-files/scripts/fake-user-event.js'],
+                    record: 'customrecord_codeg_ids'
+                };
+
+            try {
+                nsmockup.createUserEvent(opts, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+            return done();
+        });
+
+        it('user-event: empty "opt.functions"', done => {
+            const errorDone = 'missing "opt.functions"',
+                errorMsg = 'principal functions was empty: "opt.functions"',
+                opts = {
+                    files:[__dirname + '/_input-files/scripts/fake-user-event.js'],
+                    record: 'customrecord_codeg_ids',
+                    functions: {}
+                };
+
+            try {
+                nsmockup.createUserEvent(opts, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+            return done();
+        });
+
+        it('user-event: invalid step "opt.functions"', done => {
+            const errorDone = 'invalid step "opt.functions"',
+                errorMsg = 'invalid step opa',
+                opts = {
+                    files:[__dirname + '/_input-files/scripts/fake-user-event.js'],
+                    record: 'customrecord_codeg_ids',
+                    functions: {opa: 'legal'}
+                };
+
+            try {
+                nsmockup.createUserEvent(opts, () => {
+                    return done(errorDone);
+                });
+            } catch (e) {
+                should(e).have.property('message', errorMsg);
+            }
+            return done();
+        });
     });
-    afterEach(function (done) {
+    afterEach(done => {
         nsmockup.destroy(done);
     });
 });

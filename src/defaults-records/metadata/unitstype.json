@@ -1,0 +1,260 @@
+{
+  "code": "unitstype",
+  "id": -201,
+  "translations": {
+    "en": "Units Type"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "abbreviation",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Abbreviation Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "baseunit",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Is Base Unit"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "conversionrate",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Rate"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "pluralabbreviation",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Abbreviation Name(Plural)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "pluralname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Unit Name(Plural)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "unitname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Unit Name"
+        }
+      },
+      "mandatory": false
+    }
+  ],
+  "subLists": [
+    {
+      "code": "uom",
+      "translations": {
+        "en": "Units"
+      },
+      "fields": [
+        {
+          "code": "abbreviation",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Abbreviation"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "baseunit",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Base Unit"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "conversionrate",
+          "type": "POSFLOAT",
+          "translations": {
+            "en": {
+              "label": "Conversion Rate  (/base)"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "internalid",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "internalid"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "pluralabbreviation",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Plural Abbreviation"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "pluralname",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Plural Name"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "unitname",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Name"
+            }
+          },
+          "mandatory": true
+        }
+      ]
+    }
+  ]
+}

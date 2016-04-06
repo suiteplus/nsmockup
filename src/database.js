@@ -2,7 +2,9 @@
 var vmSim = require('./vm-sim'),
     srvconf = require('./server/server-config'),
     URI = srvconf.URI,
-    fs = require('fs');
+    fs = require('fs'),
+    low = require('lowdb'),
+    storage = require('lowdb/file-sync');
 
 // Default nsmockup directory
 const NS_DIR = '.nsmockup';
@@ -24,20 +26,19 @@ exports.load = (cb) => {
     // create JSON database
     !fs.existsSync(dbFile) && fs.writeFileSync(dbFile, '{}');
 
-    let low = require('lowdb'),
-        db = low(dbFile, {autosave: false, async: false});
+    let db = low(dbFile, { storage }, false);
 
     let change = false;
     // create default collections
-    ['__metadata', '__scripts', '__file'].forEach(c => {
+    ['__metadata', '__scripts'].forEach(c => {
         if (!db.object[c]) {
             db.object[c] = [];
             !change && (change = true);
         }
     });
     try {
-        change && db.saveSync();
-    } catch(e) {
+        change && db.write();
+    } catch (e) {
         console.error(e);
     }
 
@@ -58,9 +59,11 @@ exports.load = (cb) => {
  *
  * @param data {{
  *    id: number,
- *    name: string
+ *    code: string,
+ *    name: string,
  *    type: string,
- *    files: [string],
+ *    deployment: string,
+ *    files: [string | [string]],
  *    params: {}
  * }}
  */
@@ -79,11 +82,12 @@ exports.createSuiteScript = (data) => {
 
     data.uri = URI[data.type]; // only suitelet and restlet
     if (data.uri) {
-        data.url = `http://localhost:${srvconf.port}${data.uri}?script=${data.id}`;
+        data.url = `http://localhost:${srvconf.port}${data.uri}?script=${data.id}&deploy=1`;
     }
 
     // create script in other context
     let context = vmSim.importSuiteScript({
+        code: data.code,
         name: data.name,
         files: data.files,
         params: data.params
@@ -92,7 +96,7 @@ exports.createSuiteScript = (data) => {
     // save script reference in database
     scripts.push(data);
     try {
-        $db.saveSync();
+        $db.write();
         return context;
     } catch (e) {
         console.error(e);

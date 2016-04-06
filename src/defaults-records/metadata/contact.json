@@ -1,0 +1,1559 @@
+{
+  "code": "contact",
+  "id": -6,
+  "translations": {
+    "en": "Contact"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "address",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "address1",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address 1"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "address2",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address 2"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "address3",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address 3"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "addressee",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Addressee"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "addressinternalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address Internal ID"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "addresslabel",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address Label"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "addressphone",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Address Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "altemail",
+      "type": "EMAIL",
+      "translations": {
+        "en": {
+          "label": "Alt. Email"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "altname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "altphone",
+      "type": "PHONE",
+      "translations": {
+        "en": {
+          "label": "Office Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "assistant",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Assistant",
+          "help": "This is a reference to an existing contact. In order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "assistantphone",
+      "type": "PHONE",
+      "translations": {
+        "en": {
+          "label": "Assist. Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "attention",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Attention"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "availableoffline",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Always Available Offline"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddr1",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "billaddr1"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddr2",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "billaddr2"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddr3",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "billaddr3"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddress1",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Address 1"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddress2",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Address 2"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddress3",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Address 3"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billaddressee",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Addressee"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billattention",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Attention"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billcity",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing City"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billcountry",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "billcountry"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billcountrycode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Country Code"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billphone",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billstate",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "billstate"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billzip",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "billzip"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billzipcode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Zip"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "campaignresponse",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Campaign Response"
+        }
+      },
+      "mandatory": false,
+      "recordType": "campaign"
+    },
+    {
+      "code": "category",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Category"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "city",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "City"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "comments",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Comments"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "company",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Organization",
+          "help": "Select the company this contact works for.\n&nbsp;\nThis contact appears in contact lists for this company."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "contactrole",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "contactrole"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "contactsource",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Lead Source"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "country",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Country"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "countrycode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Country Code"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "county",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "County/State"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "customer",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Customer"
+        }
+      },
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "customerprimary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Customer (Primary)"
+        }
+      },
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Custom Form"
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "datecreated",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Date Created"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "defaultaddress",
+      "type": "ADDRESS",
+      "translations": {
+        "en": {
+          "label": "Address (Display Type DISABLED)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "email",
+      "type": "EMAIL",
+      "translations": {
+        "en": {
+          "label": "Email"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "employer",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Employer"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "entityid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "entitynumber",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Number"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "fax",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Fax"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "firstname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "First Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "giveaccess",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Login Access"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "globalsubscriptionstatus",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Global Subscription Status"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "group",
+      "type": "MULTISELECT",
+      "translations": {
+        "en": {
+          "label": "Group"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "hasduplicates",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Duplicate"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "homephone",
+      "type": "PHONE",
+      "translations": {
+        "en": {
+          "label": "Home Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "image",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Image",
+          "help": "References an existing file in the file cabinet for your account.\nIn order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "isdefaultbilling",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Default Billing Address"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isdefaultshipping",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Default Shipping Address"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isprivate",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Is Private"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "job",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Job"
+        }
+      },
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "jobprimary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Job (Primary)"
+        }
+      },
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "language",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Language"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Last Modified"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "lastname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Last Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "lastviewed",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Last Viewed"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "level",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Level"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "messages",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Messages"
+        }
+      },
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagesfrom",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Messages From"
+        }
+      },
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "messagesto",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Messages To"
+        }
+      },
+      "mandatory": false,
+      "recordType": "message"
+    },
+    {
+      "code": "middlename",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Middle Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "mobilephone",
+      "type": "PHONE",
+      "translations": {
+        "en": {
+          "label": "Mobile Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "officephone",
+      "type": "PHONE",
+      "translations": {
+        "en": {
+          "label": "Office Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "onlineformdate",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Online Form History - Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "onlineformleadsource",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Online Form History - Lead Source"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "onlineformname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Online Form History - Form Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "otherrelationships",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Other Relationships"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "owner",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "owner"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "parentcustomer",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Parent Customer"
+        }
+      },
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "parentjob",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Parent Job"
+        }
+      },
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "parentpartner",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Parent Partner"
+        }
+      },
+      "mandatory": false,
+      "recordType": "partner"
+    },
+    {
+      "code": "parentvendor",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Parent Vendor"
+        }
+      },
+      "mandatory": false,
+      "recordType": "vendor"
+    },
+    {
+      "code": "partner",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Partner"
+        }
+      },
+      "mandatory": false,
+      "recordType": "partner"
+    },
+    {
+      "code": "partnerprimary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Partner (Primary)"
+        }
+      },
+      "mandatory": false,
+      "recordType": "partner"
+    },
+    {
+      "code": "permission",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Permission"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "phone",
+      "type": "PHONE",
+      "translations": {
+        "en": {
+          "label": "Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "phoneticname",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Phonetic Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "representingsubsidiary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Represents Subsidiary"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "salutation",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Mr./Mrs..."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress1",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Address 1"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress2",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Address 2"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipaddress3",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Address 3"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipaddressee",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Addressee"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipattention",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Attention"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipcity",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping City"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipcountry",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Shipping Country"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "shipcountrycode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Country Code"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipphone",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipstate",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping State/Province"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "shipzip",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Shipping Zip"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "state",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "State/Province"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "statedisplayname",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "State/Province Display Name"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subscription",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subscription"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subscriptiondate",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Subscription Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "subscriptionstatus",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Subscription Status"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subsidiary",
+          "help": "Select the subsidiary to associate with this contact. You cannot enter transactions for this contact unless a subsidiary is assigned.\n&nbsp;\nIf you select this contact on a transaction, the transaction is associated with this subsidiary. The contact is able to access only information associated with this subsidiary.\n&nbsp;\nNote: Once a transaction has posted for the contact, you are not able to change the subsidiary selected on the contact record."
+        }
+      },
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "subsidiarynohierarchy",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subsidiary (no hierarchy)"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "supervisor",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Supervisor",
+          "help": "References an existing contact. In order to retrieve a list of available values for this field, use the GetSelectValue operation. For more information, see getSelectValue of the Platform Guide."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "supervisorphone",
+      "type": "PHONE",
+      "translations": {
+        "en": {
+          "label": "Sup. Phone"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "task",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Task"
+        }
+      },
+      "mandatory": false,
+      "recordType": "task"
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Job Title"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "type",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Entity Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "unsubscribe",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Unsubscribe from Campaigns"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "vendor",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Vendor"
+        }
+      },
+      "mandatory": false,
+      "recordType": "vendor"
+    },
+    {
+      "code": "vendorprimary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Vendor (Primary)"
+        }
+      },
+      "mandatory": false,
+      "recordType": "vendor"
+    },
+    {
+      "code": "zipcode",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Zip Code"
+        }
+      },
+      "mandatory": false
+    }
+  ],
+  "subLists": [
+    {
+      "code": "addressbook",
+      "translations": {
+        "en": "Address Book"
+      },
+      "fields": [
+        {
+          "code": "addr1",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Address 1"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "addr2",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Address 2"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "addr3",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "addr3"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "addressee",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Addressee"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "addressid",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "addressid"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "addrtext",
+          "type": "ADDRESS",
+          "translations": {
+            "en": {
+              "label": "Address"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "attention",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Attention"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "city",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "City"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "country",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Country"
+            }
+          },
+          "mandatory": false,
+          "recordType": null
+        },
+        {
+          "code": "defaultbilling",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Default Billing"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "defaultshipping",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Default Shipping"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "displaystate",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "State/Province"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "id",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "ID"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "internalid",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "internalid"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "label",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Label"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "override",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Override"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "phone",
+          "type": "PHONE",
+          "translations": {
+            "en": {
+              "label": "Phone"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "state",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "State/Province"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "zip",
+          "type": "TEXT",
+          "translations": {
+            "en": {
+              "label": "Zip"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    }
+  ],
+  "tabs": [
+    {
+      "code": "address",
+      "translations": {
+        "en": "Address"
+      }
+    },
+    {
+      "code": "custom",
+      "translations": {
+        "en": "Custom"
+      }
+    },
+    {
+      "code": "general",
+      "translations": {
+        "en": "General"
+      }
+    },
+    {
+      "code": "info",
+      "translations": {
+        "en": "Info"
+      }
+    },
+    {
+      "code": "marketing",
+      "translations": {
+        "en": "Marketing"
+      }
+    },
+    {
+      "code": "support",
+      "translations": {
+        "en": "Support"
+      }
+    },
+    {
+      "code": "workflow",
+      "translations": {
+        "en": "Workflow"
+      }
+    }
+  ]
+}

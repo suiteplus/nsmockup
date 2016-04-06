@@ -1,0 +1,82 @@
+{
+  "code": "landedcost",
+  "id": 0,
+  "translations": {
+    "en": "Landed Cost"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Item"
+        }
+      },
+      "mandatory": false,
+      "recordType": "item"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "total",
+      "type": "CURRENCY2",
+      "translations": {
+        "en": {
+          "label": "Total"
+        }
+      },
+      "mandatory": false
+    }
+  ],
+  "subLists": [
+    {
+      "code": "landedcostdata",
+      "translations": {
+        "en": "Landed Cost"
+      },
+      "fields": [
+        {
+          "code": "amount",
+          "type": "POSCURRENCY",
+          "translations": {
+            "en": {
+              "label": "Amount"
+            }
+          },
+          "mandatory": true
+        },
+        {
+          "code": "costcategory",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Cost Category"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        }
+      ]
+    }
+  ]
+}

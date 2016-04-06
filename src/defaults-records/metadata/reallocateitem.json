@@ -1,0 +1,162 @@
+{
+  "code": "reallocateitem",
+  "id": 0,
+  "translations": {
+    "en": "Reallocate Items"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Item"
+        }
+      },
+      "mandatory": true,
+      "recordType": "item"
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Location"
+        }
+      },
+      "mandatory": true,
+      "recordType": "location"
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "quantitycommitted",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Quantity Committed"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "quantityonhand",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Quantity On Hand"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "quantitypicked",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Quantity Picked"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "quantityrequired",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Quantity Required"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "units",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Units"
+        }
+      },
+      "mandatory": false
+    }
+  ],
+  "subLists": [
+    {
+      "code": "order",
+      "translations": {
+        "en": "Orders"
+      },
+      "fields": [
+        {
+          "code": "commit",
+          "type": "CHECKBOX",
+          "translations": {
+            "en": {
+              "label": "Commit"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "numberedquantityremaining",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Numbered Quantity Remaining"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "quantitycommitted",
+          "type": "POSFLOAT",
+          "translations": {
+            "en": {
+              "label": "Quantity Committed"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "quantitypicked",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Quantity Picked"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "quantityremaining",
+          "type": "FLOAT",
+          "translations": {
+            "en": {
+              "label": "Quantity Remaining"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    }
+  ]
+}

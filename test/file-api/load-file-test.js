@@ -1,29 +1,42 @@
 'use strict';
 
-var should = require('should'),
+var path = require('path'),
+    should = require('should'),
     nsmockup = require('../../');
 
 /**
  * Test Suites
  */
 describe('<Unit Test - Netsuite File API>', function () {
-    before(function (done) {
+    this.timeout(5000);
+
+    before(done => {
         nsmockup.init(done);
     });
-    describe('SuiteScript API - nlapiLoadFile:', function () {
-        let file, id;
-        before(function (done) {
+    describe('SuiteScript API - nlapiLoadFile:', () => {
+        let folderNames = ['opa', 'ebaa', 'hummm'],
+            file, id;
+        before(done => {
             file = nlapiCreateFile('oba-load.txt', 'PLAINTEXT', 'uhuuu .. supimpa');
             should(file).have.instanceOf(nlobjFile);
 
+            let lastFolderId = '@NONE@';
+            for (let f = 0; f < folderNames.length; f++) {
+                let folderName = folderNames[f],
+                    folder = nlapiCreateRecord('folder');
+                folder.setFieldValue('name', folderName);
+                folder.setFieldValue('parent', lastFolderId);
+                lastFolderId = nlapiSubmitRecord(folder);
+            }
+
             file.setIsOnline(true);
-            file.setFolder('eba/humm');
+            file.setFolder(lastFolderId);
             file.setEncoding('utf8');
             id = nlapiSubmitFile(file);
             return done();
         });
 
-        it('load file', function (done) {
+        it('load file', done => {
             let data = nlapiLoadFile(id);
 
             should(file).have.instanceOf(nlobjFile);
@@ -32,10 +45,14 @@ describe('<Unit Test - Netsuite File API>', function () {
             should(data).have.property('content', file.content);
             should(data).have.property('encoding', file.encoding);
 
+            let fc = $db.object.file[id - 1];
+            should(fc).have.property('path', path.join('/', folderNames.join('/'), file.name));
+            should(fc).have.property('realPath', path.join($db.$pathCabinet, '' + file.folder, file.name));
+
             return done();
         });
 
-        it('load missing id', function (done) {
+        it('load missing id', done => {
             try {
                 nlapiLoadFile();
                 return done('missing id');
@@ -45,7 +62,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             }
         });
 
-        it('load invalid id', function (done) {
+        it('load invalid id', done => {
             try {
                 nlapiLoadFile('japo');
                 return done('invalid id');
@@ -55,7 +72,7 @@ describe('<Unit Test - Netsuite File API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

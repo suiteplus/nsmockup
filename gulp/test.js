@@ -36,7 +36,7 @@ gulp.task('test:jshint', function () {
         .pipe(plugins.jshint.reporter('fail'));
 });
 
-gulp.task('test:coverage', function () {
+gulp.task('test:coverage', ['test:jshint'], function () {
     let executeTests = function () {
         let path = '/test/**/*' + (file ? file + '*' : '') + '-test.js';
         gulp.src([appRoot + path])
@@ -51,8 +51,7 @@ gulp.task('test:coverage', function () {
     // instrumentation nsapi.js
     gulp.src(paths.js.concat(['!'+ appRoot + '/src/server/**/*.js']))
         .pipe(plugins.istanbul({
-            includeUntested: true,
-            instrumenter: require('isparta').Instrumenter
+            includeUntested: true
 
         })) // Covering files
         .pipe(plugins.istanbul.hookRequire())// Force `require` to return covered files

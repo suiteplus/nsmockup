@@ -1,6 +1,6 @@
 {
     "maxerr"        : 50,       // {int} Maximum error before stopping
-
+    "-W086"         : true,     //allow fall-through
     // Enforcing
     "bitwise"       : false,     // true: Prohibit bitwise operators (&, |, ^, etc.)
     "camelcase"     : false,    // true: Identifiers must be in camelCase
@@ -107,10 +107,16 @@
         "nlapiCreateSearch": true,
         "nlapiCopyRecord": true,
         "nlapiDateToString": true,
+        "nlapiDecrypt": true,
         "nlapiDeleteFile": true,
         "nlapiDeleteRecord": true,
+        "nlapiEncrypt": true,
         "nlapiEscapeXML": true,
+        "nlapiFormatCurrency": true,
         "nlapiGetContext": true,
+        "nlapiGetDepartment": true,
+        "nlapiGetSubsidiary": true,
+        "nlapiGetUser": true,
         "nlapiLoadFile": true,
         "nlapiLoadRecord": true,
         "nlapiLogExecution": true,
@@ -118,7 +124,9 @@
         "nlapiRequestURL": true,
         "nlapiResolveURL": true,
         "nlapiScheduleScript": true,
+        "nlapiSearchGlobal": true,
         "nlapiSearchRecord": true,
+        "nlapiSelectNewLineItem": true,
         "nlapiSelectNode": true,
         "nlapiSelectNodes": true,
         "nlapiSelectValue": true,
@@ -139,6 +147,7 @@
         // Netsuite Global Objects
         "nlobjContext": true,
         "nlobjError": true,
+        "nlobjField": true,
         "nlobjFile": true,
         "nlobjRecord": true,
         "nlobjRequest": true,

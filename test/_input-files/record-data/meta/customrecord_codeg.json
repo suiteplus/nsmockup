@@ -1,0 +1,131 @@
+{
+  "code": "customrecord_codeg",
+  "translations": {
+    "en": "Code Generic"
+  },
+  "id": 1,
+  "fields": [
+    {
+      "code": "custrecord_type_id",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
+      "id": 1,
+      "type": "SELECT",
+      "recordType": "customrecord_codeg_ids"
+    },
+    {
+      "code": "custrecord_code_id",
+      "translations": {
+        "en": {
+          "label": "Code"
+        }
+      },
+      "id": 2,
+      "type": "TEXT"
+    },
+    {
+      "code": "custrecord_code_batch",
+      "translations": {
+        "en": {
+          "label": "Batch"
+        }
+      },
+      "id": 3,
+      "type": "SELECT",
+      "recordType": "customlist_batchtype"
+    },
+    {
+      "code": "custrecord_code_currency",
+      "translations": {
+        "en": {
+          "label": "Currency"
+        }
+      },
+      "id": 4,
+      "type": "CURRENCY"
+    },
+    {
+      "code": "custrecord_code_decimal",
+      "translations": {
+        "en": {
+          "label": "Decimal"
+        }
+      },
+      "id": 5,
+      "type": "DECIMAL"
+    },
+    {
+      "code": "custrecord_code_multiselect",
+      "translations": {
+        "en": {
+          "label": "Multi-Select"
+        }
+      },
+      "id": 6,
+      "type": "MULTISELECT"
+    },
+    {
+      "code": "custrecord_code_date",
+      "translations": {
+        "en": {
+          "label": "Date"
+        }
+      },
+      "id": 7,
+      "type": "DATE"
+    },
+    {
+      "code": "custrecord_code_datetime",
+      "translations": {
+        "en": {
+          "label": "Datetime"
+        }
+      },
+      "id": 8,
+      "type": "DATETIME"
+    }
+  ],
+  "subLists": [
+    {
+      "code": "item_code",
+      "translations": {
+        "en": "Item Code"
+      },
+      "fields": [
+        {
+          "code": "item-id",
+          "translations": {
+            "en": {
+              "label": "Code"
+            }
+          },
+          "id": 2,
+          "type": "INTEGER"
+        },
+        {
+          "code": "item-title",
+          "translations": {
+            "en": {
+              "label": "Title"
+            }
+          },
+          "id": 2,
+          "type": "TEXT"
+        },
+        {
+          "code": "item-value",
+          "translations": {
+            "en": {
+              "label": "Value"
+            }
+          },
+          "id": 2,
+          "type": "TEXT"
+        }
+      ]
+    }
+  ]
+}

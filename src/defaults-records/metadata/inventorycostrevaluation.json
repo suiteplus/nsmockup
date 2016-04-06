@@ -1,0 +1,236 @@
+{
+  "code": "inventorycostrevaluation",
+  "id": 0,
+  "translations": {
+    "en": "Inventory Cost Revaluation"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "account",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Adjustment Account"
+        }
+      },
+      "mandatory": true,
+      "recordType": "account"
+    },
+    {
+      "code": "class",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Class"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "createddate"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Custom Form"
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "department",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Department"
+        }
+      },
+      "mandatory": false,
+      "recordType": "department"
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "inventoryvalue",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "New Inventory Value"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Item"
+        }
+      },
+      "mandatory": true,
+      "recordType": "item"
+    },
+    {
+      "code": "lastmodifieddate",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "lastmodifieddate"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Location"
+        }
+      },
+      "mandatory": true,
+      "recordType": "location"
+    },
+    {
+      "code": "memo",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Memo"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "postingperiod",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Posting Period"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subsidiary"
+        }
+      },
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "taxperiod",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "taxperiod"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "total",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Adjustment Amount"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "trandate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "tranid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Ref. No."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "unitcost",
+      "type": "CURRENCY2",
+      "translations": {
+        "en": {
+          "label": "New Unit Cost"
+        }
+      },
+      "mandatory": false
+    }
+  ],
+  "subLists": [
+    {
+      "code": "accountingbookdetail",
+      "translations": {
+        "en": "Accounting Books"
+      },
+      "fields": [
+        {
+          "code": "exchangerate",
+          "type": "CURRENCY2",
+          "translations": {
+            "en": {
+              "label": "Exchange Rate"
+            }
+          },
+          "mandatory": true
+        }
+      ]
+    }
+  ],
+  "tabs": [
+    {
+      "code": "costcomponents",
+      "translations": {
+        "en": "Cost Components"
+      }
+    }
+  ]
+}

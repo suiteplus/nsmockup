@@ -1,0 +1,71 @@
+{
+  "code": "vendorcategory",
+  "id": -110,
+  "translations": {
+    "en": "Vendor Category"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "istaxagency",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Tax Agency"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Vendor",
+          "help": "Enter the name for this category, group, method, message, status, type or term."
+        }
+      },
+      "mandatory": true
+    }
+  ]
+}

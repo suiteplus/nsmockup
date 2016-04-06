@@ -4,7 +4,7 @@ var URI = require('../server-config').URI;
 const uri = URI.scriptrecord;
 
 module.exports = (app) => {
-    let methods = ['GET', 'POST', 'PUT', 'DELETE'],
+    let methods = ['GET', 'POST'],
         route = app.route(uri);
 
     // middlewares

@@ -7,36 +7,41 @@ var database = require('../database'),
  * NetSuite: Schedule mockup.
  *
  * @param opt {{
- *    name: String,
- *    files: [String],
- *    params: Object,
- *    func: String,
- *    exec: Boolean
+ *    [id]: string,
+ *    name: string,
+ *    files: [string | [string]],
+ *    params: object,
+ *    function: string,
+ *    [func]: string,
+ *    exec: boolean
  * }}
  */
 module.exports = (opt, cb) => {
     if (!opt || !opt.files || opt.files.length === 0) {
         return ssValidate.throwError('script needs libraries: "opt.files"');
+    } else  if (!opt.function && !opt.func) {
+        return ssValidate.throwError('principal function not def: "opt.function"');
     }
 
-    if (!opt.func) {
-        return ssValidate.throwError('principal function not def: "opt.func"');
+    if(!opt.function) {
+        opt.function = opt.func;
     }
 
     // save reference
     let context = database.createSuiteScript({
         type: 'schedule',
+        code: opt.id || opt.name,
         name: opt.name,
-        func: opt.func,
+        function: opt.function,
         files: opt.files,
         params: opt.params
     });
 
-    let func = opt.func;
+    let func = opt.function;
     if (typeof func === 'string') {
         ssValidate.principalFunction(func, null, context);
     } else {
-        return ssValidate.throwError('invalid type of principal function, string only: "opt.func"');
+        return ssValidate.throwError('invalid type of principal function, string only: "opt.function"');
     }
 
     if (opt.exec) {

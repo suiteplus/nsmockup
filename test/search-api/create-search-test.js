@@ -10,21 +10,21 @@ var base = __dirname + '/../_input-files/record-data';
 describe('<Unit Test - Netsuite Search API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
-        let metadatas = [
-                base + '/meta/recordType-metaData-codeg.json',
-                base + '/meta/recordType-metaData-codeg_ids.json'
+    before(done => {
+        let metadata = [
+                base + '/meta/customrecord_codeg.json',
+                base + '/meta/customrecord_codeg_ids.json'
             ],
             records = {
-                'customrecord_codeg': base + '/data/recordType-codeg.json',
-                'customrecord_codeg_ids': base + '/data/recordType-codeg_ids.json'
+                'customrecord_codeg': base + '/data/customrecord_codeg.json',
+                'customrecord_codeg_ids': base + '/data/customrecord_codeg_ids.json'
             };
-        nsmockup.init({records, metadatas}, done);
+        nsmockup.init({records, metadata}, done);
     });
-    describe('SuiteScript API - nlapiCreateRecord:', function () {
+    describe('SuiteScript API - nlapiCreateSearch:', () => {
         let recType = 'customrecord_codeg_ids';
 
-        it('create new search', function (done) {
+        it('create new search', done => {
             let search = nlapiCreateSearch(recType);
             should(search).be.instanceOf(nlobjSearch);
 
@@ -38,7 +38,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('create new search - all columns', function (done) {
+        it('create new search - all columns', done => {
             let columns = [
                     'custrecord_id_code_id',
                     'custrecord_id_title_id'
@@ -57,7 +57,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('create new search - filter by id', function (done) {
+        it('create new search - filter by id', done => {
             let columns = [
                     'custrecord_id_code_id',
                     'custrecord_id_title_id'
@@ -78,7 +78,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

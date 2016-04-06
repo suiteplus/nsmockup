@@ -1,0 +1,240 @@
+{
+  "code": "manufacturingcosttemplate",
+  "id": 0,
+  "translations": {
+    "en": "Manufacturing Cost Template"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Custom Form"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Item"
+        }
+      },
+      "mandatory": false,
+      "recordType": "item"
+    },
+    {
+      "code": "memo",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Memo"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "subsidiary",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Subsidiary"
+        }
+      },
+      "mandatory": true,
+      "recordType": "subsidiary"
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "User"
+        }
+      },
+      "mandatory": false,
+      "recordType": "employee"
+    }
+  ],
+  "subLists": [
+    {
+      "code": "costdetail",
+      "translations": {
+        "en": "Costs"
+      },
+      "fields": [
+        {
+          "code": "costcategory",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Cost Category"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        },
+        {
+          "code": "fixedrate",
+          "type": "CURRENCY2",
+          "translations": {
+            "en": {
+              "label": "Fixed Rate"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "item",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Item"
+            }
+          },
+          "mandatory": true,
+          "recordType": "item"
+        },
+        {
+          "code": "runrate",
+          "type": "CURRENCY2",
+          "translations": {
+            "en": {
+              "label": "Run Rate"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    }
+  ],
+  "tabs": [
+    {
+      "code": "costdetails",
+      "translations": {
+        "en": "Cost Details"
+      }
+    },
+    {
+      "code": "workflow",
+      "translations": {
+        "en": "Workflow"
+      }
+    }
+  ]
+}

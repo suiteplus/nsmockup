@@ -10,21 +10,21 @@ var base = __dirname + '/../_input-files/record-data';
 describe('<Unit Test - Netsuite Field API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
-        let metadatas = [
-                base + '/meta/recordType-metaData-codeg.json',
-                base + '/meta/recordType-metaData-codeg_ids.json'
+    before(done => {
+        let metadata = [
+                base + '/meta/customrecord_codeg.json',
+                base + '/meta/customrecord_codeg_ids.json'
             ],
             records = {
-                'customrecord_codeg': base + '/data/recordType-codeg.json',
-                'customrecord_codeg_ids': base + '/data/recordType-codeg_ids.json'
+                'customrecord_codeg': base + '/data/customrecord_codeg.json',
+                'customrecord_codeg_ids': base + '/data/customrecord_codeg_ids.json'
             };
-        nsmockup.init({records, metadatas}, done);
+        nsmockup.init({records, metadata}, done);
     });
-    describe('SuiteScript API - nlapiSubmitField:', function () {
+    describe('SuiteScript API - nlapiSubmitField:', () => {
         let recType = 'customrecord_codeg';
 
-        it('submit array fields', function (done) {
+        it('submit array fields', done => {
             let fields = [
                 'custrecord_type_id.custrecord_id_title_id',
                 'custrecord_type_id.custrecord_id_code_id',
@@ -54,7 +54,7 @@ describe('<Unit Test - Netsuite Field API>', function () {
             return done();
         });
 
-        it('submit missing record type', function (done) {
+        it('submit missing record type', done => {
             try {
                 nlapiSubmitField();
                 return done('missing record type ');
@@ -64,7 +64,7 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('submit missing id', function (done) {
+        it('submit missing id', done => {
             try {
                 nlapiSubmitField(recType);
                 return done('missing id ');
@@ -74,7 +74,7 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('submit missing fields', function (done) {
+        it('submit missing fields', done => {
             try {
                 nlapiSubmitField(recType, 5);
                 return done('missing id ');
@@ -84,7 +84,7 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('submit missing fields - []', function (done) {
+        it('submit missing fields - []', done => {
             try {
                 nlapiSubmitField(recType, 5, []);
                 return done('missing id ');
@@ -94,7 +94,7 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('submit missing values', function (done) {
+        it('submit missing values', done => {
             try {
                 nlapiSubmitField(recType, 5, 'opa');
                 return done('missing id ');
@@ -104,7 +104,7 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('submit missing values - []', function (done) {
+        it('submit missing values - []', done => {
             try {
                 nlapiSubmitField(recType, 5, 'opa', []);
                 return done('missing id ');
@@ -114,18 +114,18 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('submit invalid record type', function (done) {
+        it('submit invalid record type', done => {
             try {
                 let invalidRecType = recType + 'japois';
                 nlapiSubmitField(invalidRecType, 1, 'custrecord_code_id', 'opa', 'legal');
-                return done('invalid record type: '+invalidRecType);
+                return done('invalid record type: ' + invalidRecType);
             } catch (e) {
                 should(e).have.property('code', 'SSS_INVALID_RECORD_TYPE');
                 return done();
             }
         });
 
-        it('submit invalid id - {}', function (done) {
+        it('submit invalid id - {}', done => {
             try {
                 nlapiSubmitField(recType, {}, 'opa', 'legal');
                 return done('invalid id ');
@@ -135,7 +135,7 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('submit invalid id - "opa"', function (done) {
+        it('submit invalid id - "opa"', done => {
             try {
                 nlapiSubmitField(recType, 'opa', 'opa', 'legal');
                 return done('invalid id ');
@@ -145,7 +145,7 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
 
-        it('submit invalid id - 10000', function (done) {
+        it('submit invalid id - 10000', done => {
             try {
                 nlapiSubmitField(recType, '10000', 'custrecord_code_id', '14');
                 return done('invalid id ');
@@ -155,7 +155,7 @@ describe('<Unit Test - Netsuite Field API>', function () {
             }
         });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

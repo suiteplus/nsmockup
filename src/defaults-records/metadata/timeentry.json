@@ -1,0 +1,677 @@
+{
+  "code": "timeentry",
+  "id": 0,
+  "translations": {
+    "en": "Time Entry"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "approvalstatus",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "approvalstatus"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "billable",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Billable"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billingclass",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Class"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billingstatus",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Billing Status"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "break",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Break"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "casetaskevent",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Case/Task/Event"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "chargebillingrunid",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Charge Billing Run ID"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "class",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Class",
+          "help": "References a value from a user defined list at Setup > Company > Classifications > Classes. This field is required when the Make Classes Mandatory preference is enabled at Setup > Accounting > Accounting Preferences."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "classnohierarchy",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Class (no hierarchy)"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "createddate",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "createddate"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "customer",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Customer",
+          "help": "References an existing customer. If you select a customer or job, you must also select a service item."
+        }
+      },
+      "mandatory": false,
+      "recordType": "customer"
+    },
+    {
+      "code": "date",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "datecreated",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date Created"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "day",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "department",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Department",
+          "help": "References a value from a user defined list at Setup > Company > Departments.\nThis field is required when Make Departments Mandatory is enabled at Setup > Accounting > Accounting Preferences."
+        }
+      },
+      "mandatory": false,
+      "recordType": "department"
+    },
+    {
+      "code": "departmentnohierarchy",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Department (no hierarchy)"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "duration",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Duration"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "durationdecimal",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Duration (Decimal)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "employee",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Employee"
+        }
+      },
+      "mandatory": true,
+      "recordType": "employee"
+    },
+    {
+      "code": "endtime",
+      "type": "TIMEOFDAY",
+      "translations": {
+        "en": {
+          "label": "End Time"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "exempt",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Exempt"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "hours",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Duration"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isbillable",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Billable"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "ischarged",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Charged"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isexempt",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Exempt"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isproductive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Productive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isutilized",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Utilized"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Item"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "job",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Job"
+        }
+      },
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "lastmodified",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Last Modified"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Location",
+          "help": "References a value in a user-defined list at Setup > Company > Classifications > Locations.\nThis field is required when Make Locations Mandatory is enabled at Setup > Accounting > Accounting Preferences."
+        }
+      },
+      "mandatory": true,
+      "recordType": "location"
+    },
+    {
+      "code": "locationnohierarchy",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Location (no hierarchy)"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "memo",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Note"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "nextapprover",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Next Approver"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "overriderate",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Lock this Rate"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "paidbypayroll",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Paid by Payroll"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "paidexternally",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Paid Externally"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "payitem",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Payroll Item"
+        }
+      },
+      "mandatory": false,
+      "recordType": "payrollitem"
+    },
+    {
+      "code": "payrolldate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Payroll Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "payrollitem",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Payroll Item"
+        }
+      },
+      "mandatory": false,
+      "recordType": "payrollitem"
+    },
+    {
+      "code": "price",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Price Level",
+          "help": "If you've set up a custom price level for your customer, it appears here. Otherwise, Sales Price 1 on the service item's record appears.If you want to change the price level, select one from the list. Select Custom to enter a new price in the Rate field. If you're entering time for a payroll item like vacation time, leave this field blank."
+        }
+      },
+      "mandatory": false,
+      "recordType": "pricelevel"
+    },
+    {
+      "code": "productive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Productive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "projecttask",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Project Task"
+        }
+      },
+      "mandatory": false,
+      "recordType": "projecttask"
+    },
+    {
+      "code": "projecttaskassignment",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "projecttaskassignment"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "rate",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Rate"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "starttime",
+      "type": "TIMEOFDAY",
+      "translations": {
+        "en": {
+          "label": "Start Time"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "subsidiary",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Subsidiary"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "subsidiarynohierarchy",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Subsidiary (no hierarchy)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "task",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Task"
+        }
+      },
+      "mandatory": false,
+      "recordType": "task"
+    },
+    {
+      "code": "timesheet",
+      "type": "URL",
+      "translations": {
+        "en": {
+          "label": "Timesheet"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "timetype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "type",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "User"
+        }
+      },
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "utilized",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Utilized"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "vendor",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Vendor"
+        }
+      },
+      "mandatory": false,
+      "recordType": "vendor"
+    }
+  ]
+}

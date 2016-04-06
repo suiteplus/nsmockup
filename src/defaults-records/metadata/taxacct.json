@@ -1,0 +1,93 @@
+{
+  "code": "taxacct",
+  "id": 0,
+  "translations": {
+    "en": "Tax Account"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "country",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "country"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "description",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Description",
+          "help": "Enter a description for this account."
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isinactive",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Inactive"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name",
+          "help": "Enter a name for this account."
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "nexus",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "nexus"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "taxaccttype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Tax Account Type"
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    }
+  ]
+}

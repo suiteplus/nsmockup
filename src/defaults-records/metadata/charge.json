@@ -1,0 +1,401 @@
+{
+  "code": "charge",
+  "id": 0,
+  "translations": {
+    "en": "Charge"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "amount",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Amount"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "billingitem",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Billing Item"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "billto",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Customer:Project"
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "chargedate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "chargetype",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Charge Type"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "class",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Class"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "createddate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date Created"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "currency",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Currency",
+          "help": "The currency of this charge is shown here."
+        }
+      },
+      "mandatory": false,
+      "recordType": "currency"
+    },
+    {
+      "code": "department",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Department"
+        }
+      },
+      "mandatory": false,
+      "recordType": "department"
+    },
+    {
+      "code": "description",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Description"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "External ID"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "id",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Charge ID"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "invoice",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Invoice",
+          "help": "If the sales order has been billed, the invoice is shown here.\nCharges that have been billed cannot be edited."
+        }
+      },
+      "mandatory": false,
+      "recordType": "invoice"
+    },
+    {
+      "code": "invoiceline",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Invoice Line"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "job",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Job"
+        }
+      },
+      "mandatory": false,
+      "recordType": "job"
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Location"
+        }
+      },
+      "mandatory": false,
+      "recordType": "location"
+    },
+    {
+      "code": "modifieddate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date Modified"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "projecttask",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Project Task"
+        }
+      },
+      "mandatory": false,
+      "recordType": "projecttask"
+    },
+    {
+      "code": "quantity",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Quantity"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "rate",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Rate"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "rule",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Charge Rule",
+          "help": "If this is a project charge, the charge rule used to generate this charge is shown here."
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "runid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Charge Run ID"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "salesorder",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Sales Order Id"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "salesorderline",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Sales Order Line"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "stage",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Charge Stage"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "timerecord",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Time Entry"
+        }
+      },
+      "mandatory": false,
+      "recordType": "timeentry"
+    },
+    {
+      "code": "use",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Charge Use"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "User"
+        }
+      },
+      "mandatory": false,
+      "recordType": "employee"
+    }
+  ],
+  "tabs": [
+    {
+      "code": "historytab",
+      "translations": {
+        "en": "System Notes"
+      }
+    },
+    {
+      "code": "source",
+      "translations": {
+        "en": "Source"
+      }
+    }
+  ]
+}

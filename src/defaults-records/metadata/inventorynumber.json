@@ -1,0 +1,214 @@
+{
+  "code": "inventorynumber",
+  "id": -266,
+  "translations": {
+    "en": "Inventory Number"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "expirationdate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Expiration Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "External ID"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "inventorynumber",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Number"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "isonhand",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Is On Hand"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "item",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Item"
+        }
+      },
+      "mandatory": false,
+      "recordType": "item"
+    },
+    {
+      "code": "location",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Location"
+        }
+      },
+      "mandatory": false,
+      "recordType": "location"
+    },
+    {
+      "code": "memo",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Memo"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "quantityavailable",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Available"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "quantityintransit",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "In Transit"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "quantityonhand",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "On Hand"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "quantityonorder",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "On Order"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "User"
+        }
+      },
+      "mandatory": false,
+      "recordType": "employee"
+    }
+  ]
+}

@@ -12,8 +12,6 @@ exports.exec = (req, res) => {
             method = req.method.toLowerCase();
         if (script.type === 'suitelet') {
             methods = ['get', 'post'];
-        } else if (script.type === 'restlet') {
-            methods = ['get', 'post', 'put', 'delete'];
         }
 
         if (!methods || !~methods.indexOf(method)) {
@@ -21,10 +19,10 @@ exports.exec = (req, res) => {
         }
 
         let execFunc;
-        if (script.funcs && method) {
-            execFunc = script.funcs[method];
+        if (script.functions && method) {
+            execFunc = script.functions[method];
         } else {
-            execFunc = script.func;
+            execFunc = script.function;
         }
         // load libs in specific context
         let context = vmSim.importSuiteScript(script);

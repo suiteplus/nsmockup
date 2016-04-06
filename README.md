@@ -21,7 +21,7 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
 
 ## Install [![Dependency Status][david-image]][david-url] [![devDependency Status][david-image-dev]][david-url-dev]
 ```bash
-    npm install nsmockup -save-dev
+    npm install nsmockup --save-dev
 ```
 
 ## Usage
@@ -30,11 +30,18 @@ To improve our development process SuitePlus idealized the **nsmockup**, so deve
 #### nsmockup.init(opt, cb)
 | Param  | Type                |Description  | 
 | ------ | ------------------- | ------------|
-| opt.records | <code>[string]</code> | Data list of Records, generate that with [ns-export][nsexport-url]. | 
-| opt.metadatas | <code>[string]</code> | List of Records Types Metadatas, generate that with [ns-export][nsexport-url]. |
+| opt.current.company | <code>string</code> | Define company of the current NetSuite user. Default `NSMOCKUPVxxx`.|
+| opt.current.user.id | <code>number</code> | Define the ID of the current NetSuite user. Default `-4` for anonymous. Default `null`. |
+| opt.current.user.type | <code>string</code> | Define the type of the current NetSuite user, see options: `"employee"`, `"customer"`, `"vendor"` or `"partner"`. Default `"entity"` |
+| opt.general.currency | <code>string</code> | Set currency. Default `$`.|
 | opt.general.dateFormat | <code>string</code> | Global Preferences: `dateformat`, default `"MM/DD/YYYY"`. |
+| opt.general.numberFormat.decimal | <code>string</code> | Set decimal format. Default `"."`.|
+| opt.general.numberFormat.precision | <code>string</code> | Set number format precision. Default `2`.|
+| opt.general.numberFormat.thousand | <code>string</code> | Set thousand format. Default `","`.|
 | opt.general.timeFormat | <code>string</code> | Global Preferences: `timeFormat`, default `"hh:mm A"`. |
 | opt.general.lang | <code>string</code> | Global Preferences: `lang`, default `"en"`. |
+| opt.metadata | <code>[string]</code> | List of Records Types Metadata, generate that with [ns-export][nsexport-url]. |
+| opt.records | <code>[string]</code> | Data list of Records, generate that with [ns-export][nsexport-url]. | 
 | opt.server | <code>boolean</code> | Set `true` and start server on port `3030`. Used for Suitelet and RESTlet simulations. |
 | cb   | <code>function</code> | Callback Function. |
 
@@ -43,7 +50,7 @@ var opt = {
     records: {
         "customrecord_my-record": __dirname + '/data/customrecord_my-record.json'
     },
-    metadatas: [
+    metadata: [
         __dirname + '/meta/metaData-customrecord_my-record.json'
     ],
     server: true
@@ -58,16 +65,18 @@ nsmockup.init(opt, function(err) {
 #### nsmockup.createSuitelet(cfg, cb)
 | Param  | Type                |Description  | 
 | ------ | ------------------- | ------------|
-| cfg.name | <code>string</code> | Custom ID of Suitelet. |
-| cfg.func | <code>string</code> | Defines the function that should be called from the selected script file. |
+| cfg.id | <code>string</code> | Custom ID of Suitelet. |
+| cfg.name | <code>string</code> | Name of Suitelet. |
+| cfg.function | <code>string</code> | Defines the function that should be called from the selected script file. |
 | cfg.files | <code>[string]</code> | Path to JavaScripts files that contains your implementation. |
 | cfg.params | <code>object</code> | Default parameters to run your implementation. |
 | cb   | <code>function</code> | Callback Function sent `ctx` (type: <code>object</code>) - the context *and* `exec` (type: <code>function</code>) invoke your code in side the context. |
 
 ```javascript
     nsmockup.createSuitelet({
-        name: 'my_suitelet',
-        func: 'MySuitelet.main',
+        id: 'my_suitelet',
+        name: 'My Suitelet',
+        function: 'MySuitelet.main',
         files: [
             __dirname + '/lib/my-suitelet.js'
         ]
@@ -89,19 +98,21 @@ nsmockup.init(opt, function(err) {
 #### nsmockup.createRESTlet(cfg, cb)
 | Param  | Type                |Description  | 
 | ------ | ------------------- | ------------|
-| cfg.name | <code>string</code> | Custom ID of Suitelet. |
-| cfg.funcs.get | <code>string</code> | Sets the script function that should execute as the HTTP GET method. |
-| cfg.funcs.post | <code>string</code> | Sets the script function that should execute as the HTTP POST method. |
-| cfg.funcs.put | <code>string</code> | Sets the script function that should execute as the HTTP PUT method. |
-| cfg.funcs.delete | <code>string</code> | Sets the script function that should execute as the HTTP DELETE method. |
+| cfg.id | <code>string</code> | Custom ID of RESTlet. |
+| cfg.name | <code>string</code> | Name of RESTlet. |
+| cfg.functions.get | <code>string</code> | Sets the script function that should execute as the HTTP GET method. |
+| cfg.functions.post | <code>string</code> | Sets the script function that should execute as the HTTP POST method. |
+| cfg.functions.put | <code>string</code> | Sets the script function that should execute as the HTTP PUT method. |
+| cfg.functions.delete | <code>string</code> | Sets the script function that should execute as the HTTP DELETE method. |
 | cfg.files | <code>[string]</code> | Path to JavaScripts files that contains your implementation. |
 | cfg.params | <code>object</code> | Default parameters to run your implementation. |
 | cb   | <code>function</code> | Callback Function sent `ctx` (type: <code>object</code>) - the context *and* `exec` (type: <code>function</code>) invoke your code in side the context. |
 
 ```javascript
     nsmockup.createRESTlet({
-        name: 'my_restlet',
-        funcs: {
+        id: 'my_restlet',
+        name: 'My RESTlet',
+        functions: {
             get: 'MyRestlet.get',
             post: 'MyRestlet.post'
         },
@@ -126,8 +137,9 @@ nsmockup.init(opt, function(err) {
 #### nsmockup.createSchedule(cfg, cb)
 | Param  | Type                |Description  | 
 | ------ | ------------------- | ------------|
-| cfg.name | <code>string</code> | Custom ID of Suitelet. |
-| cfg.func | <code>string</code> | Defines the function that should be called from the selected script file. |
+| cfg.id | <code>string</code> | Custom ID of Schedule. |
+| cfg.name | <code>string</code> | Name of Schedule. |
+| cfg.function | <code>string</code> | Defines the function that should be called from the selected script file. |
 | cfg.files | <code>[string]</code> | Path to JavaScripts files that contains your implementation. |
 | cfg.params | <code>object</code> | Default parameters to run your implementation. |
 | cfg.exec | <code>boolean</code> | If `true`, **nsmockup** will run de ScheduleScript before the callback function was called. |
@@ -135,8 +147,9 @@ nsmockup.init(opt, function(err) {
 
 ```javascript
     nsmockup.createSchedule({
-        name: 'my_schedule',
-        func: 'MySchedule.main',
+        id: 'my_schedule',
+        name: 'My Schedule',
+        function: 'MySchedule.main',
         files: [
             __dirname + '/lib/my-schedule.js'
         ],
@@ -158,19 +171,21 @@ nsmockup.init(opt, function(err) {
 #### nsmockup.createUserEvent(cfg, cb)
 | Param  | Type                |Description  | 
 | ------ | ------------------- | ------------|
-| cfg.name | <code>string</code> | Custom ID of Suitelet. |
-| cfg.funcs.beforeLoad | <code>string</code> | Sets the script function that should execute whenever a read operation on a record occurs. |
-| cfg.funcs.beforeSubmit | <code>string</code> | Sets the function that should execute before the associated record is submitted |
-| cfg.funcs.afterSubmit | <code>string</code> | Sets the function that should execute after the associated record is submitted. |
+| cfg.id | <code>string</code> | Custom ID of User Event. |
+| cfg.name | <code>string</code> | Name of User Event. |
+| cfg.functions.beforeLoad | <code>string</code> | Sets the script function that should execute whenever a read operation on a record occurs. |
+| cfg.functions.beforeSubmit | <code>string</code> | Sets the function that should execute before the associated record is submitted |
+| cfg.functions.afterSubmit | <code>string</code> | Sets the function that should execute after the associated record is submitted. |
 | cfg.files | <code>[string]</code> | Path to JavaScripts files that contains your implementation. |
 | cfg.params | <code>object</code> | Default parameters to run your implementation. |
-| cfg.record | <code>string</code> | Apply this event in this record. |
+| cfg.records | <code>[string]</code> | Apply this event in this records. |
 | cb   | <code>function</code> | Callback Function sent `ctx` (type: <code>object</code>) - the context *and* `exec` (type: <code>function</code>) invoke your code in side the context. |
 
 ```javascript
     nsmockup.createUserEvent({
-        name: 'my_user-event',
-        funcs: {
+        id: 'my_user-event',
+        name: 'My User Event',
+        functions: {
             beforeLoad: 'MyUserEvent.beforeLoad',
             beforeSubmit: 'MyUserEvent.beforeSubmit',
             afterSubmit: 'MyUserEvent.afterSubmit',
@@ -225,7 +240,7 @@ describe('<Unit Test - Netsuite API Simulation>', function () {
 
     before(function (done) {
         // map record types
-        let metadatas = [
+        let metadata = [
                 __dirname + '/record/meta/recordType-metaData-codeg.json',
                 __dirname + '/record/meta/recordType-metaData-codeg_ids.json'
             ],
@@ -235,13 +250,13 @@ describe('<Unit Test - Netsuite API Simulation>', function () {
             };
 
         // start database simulation
-        nsmockup.init({records, metadatas, server: true}, done);
+        nsmockup.init({records, metadata, server: true}, done);
     });
 
     it('simple load lib and execute function', function (done) {
         nsmockup.createReslet({
             name: 'my_restlet',
-            funcs: {
+            functions: {
                 get: 'MyRestlet.get',
                 post: 'MyRestlet.post'
             },

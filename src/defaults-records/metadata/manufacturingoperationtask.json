@@ -1,0 +1,703 @@
+{
+  "code": "manufacturingoperationtask",
+  "id": 0,
+  "translations": {
+    "en": "Manufacturing Operation Task"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "actualruntime",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Actual Run Time"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "actualsetuptime",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Actual Setup Time"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "actualwork",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Actual Hours"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "company",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Project"
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "completedquantity",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Completed Quantity"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "constrainttype",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Type"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "contact",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Contact"
+        }
+      },
+      "mandatory": false,
+      "recordType": "contact"
+    },
+    {
+      "code": "customform",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Custom Form"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "enddate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "End Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "enddatebaseline",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "End Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "estimatedwork",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Estimated Work"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "estimatedworkbaseline",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Hours"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "eventid",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "ID"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalidstring",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "External ID (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "fxrate",
+      "type": "CURRENCY2",
+      "translations": {
+        "en": {
+          "label": "Exchange Rate"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "id",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "ID"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "inputquantity",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Input Quantity"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "laborresources",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Labor Resources"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "machineresources",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Machine Resources"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "manufacturingcosttemplate",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Manufacturing Cost Template"
+        }
+      },
+      "mandatory": true,
+      "recordType": "manufacturingcosttemplate"
+    },
+    {
+      "code": "manufacturingworkcenter",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Manufacturing Work Center"
+        }
+      },
+      "mandatory": true,
+      "recordType": null
+    },
+    {
+      "code": "message",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Notes"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Operation Name"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "operationsequence",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Operation Sequence"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "order",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Order"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "owner",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Owner"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "percenttimecomplete",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Percent Complete"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "predecessor",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Predecessor"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "predecessortype",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Predecessor Type"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "priority",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Priority"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "remainingquantity",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Remaining Quantity"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "remainingwork",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Remaining Hours"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "runrate",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Run Rate (Min/Unit)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "runtime",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Run Time"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "sequence",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Operation Sequence"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "setuptime",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Setup Time (Min)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "startdate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Start Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "startdatebaseline",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Start Date"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "starttime",
+      "type": "TIMEOFDAY",
+      "translations": {
+        "en": {
+          "label": "Start Time"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "status",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "Status"
+        }
+      },
+      "mandatory": false,
+      "recordType": null
+    },
+    {
+      "code": "title",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Operation Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "user",
+      "type": "SELECT",
+      "translations": {
+        "en": {
+          "label": "User"
+        }
+      },
+      "mandatory": false,
+      "recordType": "employee"
+    },
+    {
+      "code": "workorder",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Work Order"
+        }
+      },
+      "mandatory": false
+    }
+  ],
+  "subLists": [
+    {
+      "code": "costdetail",
+      "translations": {
+        "en": "Costs"
+      },
+      "fields": [
+        {
+          "code": "account",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "account"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "costcategory",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Cost Category"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        },
+        {
+          "code": "fixedrate",
+          "type": "CURRENCY2",
+          "translations": {
+            "en": {
+              "label": "Fixed Rate"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "id",
+          "type": "INTEGER",
+          "translations": {
+            "en": {
+              "label": "id"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "item",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Item"
+            }
+          },
+          "mandatory": true,
+          "recordType": "item"
+        },
+        {
+          "code": "runrate",
+          "type": "CURRENCY2",
+          "translations": {
+            "en": {
+              "label": "Run Rate"
+            }
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    {
+      "code": "predecessor",
+      "translations": {
+        "en": "Predecessors"
+      },
+      "fields": [
+        {
+          "code": "enddate",
+          "type": "DATETIME",
+          "translations": {
+            "en": {
+              "label": "End Date"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "startdate",
+          "type": "DATETIME",
+          "translations": {
+            "en": {
+              "label": "Start Date"
+            }
+          },
+          "mandatory": false
+        },
+        {
+          "code": "task",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Task"
+            }
+          },
+          "mandatory": true,
+          "recordType": "task"
+        },
+        {
+          "code": "type",
+          "type": "SELECT",
+          "translations": {
+            "en": {
+              "label": "Type"
+            }
+          },
+          "mandatory": true,
+          "recordType": null
+        }
+      ]
+    }
+  ],
+  "tabs": [
+    {
+      "code": "assignees",
+      "translations": {
+        "en": "Assignees"
+      }
+    },
+    {
+      "code": "communication",
+      "translations": {
+        "en": "Communication"
+      }
+    },
+    {
+      "code": "costdetails",
+      "translations": {
+        "en": "Cost Details"
+      }
+    },
+    {
+      "code": "custom",
+      "translations": {
+        "en": "Custom"
+      }
+    },
+    {
+      "code": "messagetab",
+      "translations": {
+        "en": "Message"
+      }
+    },
+    {
+      "code": "predecessors",
+      "translations": {
+        "en": "Predecessors"
+      }
+    },
+    {
+      "code": "s_sysinfo",
+      "translations": {
+        "en": "System Information"
+      }
+    },
+    {
+      "code": "workflow",
+      "translations": {
+        "en": "Workflow"
+      }
+    }
+  ]
+}

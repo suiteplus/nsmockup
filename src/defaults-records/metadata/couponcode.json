@@ -1,0 +1,160 @@
+{
+  "code": "couponcode",
+  "id": 0,
+  "translations": {
+    "en": "Coupon Code"
+  },
+  "inactive": false,
+  "fields": [
+    {
+      "code": "code",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Code"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "datesent",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Date Sent"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "externalid",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "ExternalId"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulacurrency",
+      "type": "CURRENCY",
+      "translations": {
+        "en": {
+          "label": "Formula (Currency)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladate",
+      "type": "DATE",
+      "translations": {
+        "en": {
+          "label": "Formula (Date)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formuladatetime",
+      "type": "DATETIME",
+      "translations": {
+        "en": {
+          "label": "Formula (Date/Time)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulanumeric",
+      "type": "FLOAT",
+      "translations": {
+        "en": {
+          "label": "Formula (Numeric)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulapercent",
+      "type": "PERCENT",
+      "translations": {
+        "en": {
+          "label": "Formula (Percent)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "formulatext",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Formula (Text)"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "id",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "ID"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "name",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Name"
+        }
+      },
+      "mandatory": true
+    },
+    {
+      "code": "promotion",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Promotion"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "recipient",
+      "type": "TEXT",
+      "translations": {
+        "en": {
+          "label": "Recipient"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "usecount",
+      "type": "INTEGER",
+      "translations": {
+        "en": {
+          "label": "Use Count"
+        }
+      },
+      "mandatory": false
+    },
+    {
+      "code": "used",
+      "type": "CHECKBOX",
+      "translations": {
+        "en": {
+          "label": "Used"
+        }
+      },
+      "mandatory": false
+    }
+  ]
+}

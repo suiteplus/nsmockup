@@ -1,6 +1,7 @@
 'use strict';
 
 var should = require('should'),
+    parallel = require('mocha.parallel'),
     nsmockup = require('../../');
 
 var base = __dirname + '/../_input-files/record-data';
@@ -10,21 +11,21 @@ var base = __dirname + '/../_input-files/record-data';
 describe('<Unit Test - Netsuite Search API>', function () {
     this.timeout(5000);
 
-    before(function (done) {
-        let metadatas = [
-                base + '/meta/recordType-metaData-codeg.json',
-                base + '/meta/recordType-metaData-codeg_ids.json'
+    before(done => {
+        let metadata = [
+                base + '/meta/customrecord_codeg.json',
+                base + '/meta/customrecord_codeg_ids.json'
             ],
             records = {
-                'customrecord_codeg': base + '/data/recordType-codeg.json',
-                'customrecord_codeg_ids': base + '/data/recordType-codeg_ids.json'
+                'customrecord_codeg': base + '/data/customrecord_codeg.json',
+                'customrecord_codeg_ids': base + '/data/customrecord_codeg_ids.json'
             };
-        nsmockup.init({records, metadatas}, done);
+        nsmockup.init({records, metadata}, done);
     });
-    describe('SuiteScript API - nlapiSearchRecord:', function () {
+    parallel('SuiteScript API - nlapiSearchRecord:', () => {
         let recType = 'customrecord_codeg';
-        
-        it('search all', function (done) {
+
+        it('search all', done => {
             var columns = [
                 'custrecord_type_id',
                 'custrecord_code_id'
@@ -51,24 +52,24 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search by internalid', function(done) {
+        it('search by internalid', done => {
             let columns = [
-                    'custrecord_type_id',
-                    'custrecord_code_id'
-                ].map(c => new nlobjSearchColumn(c));
+                'custrecord_type_id',
+                'custrecord_code_id'
+            ].map(c => new nlobjSearchColumn(c));
 
             var codes = nlapiSearchRecord(recType, 5, null, columns);
             should(codes).have.length(1);
             return done();
         });
 
-        it('search one field (using nlobjSearchFilter)', function(done) {
+        it('search one field (using nlobjSearchFilter)', done => {
             let columns = [
                     'custrecord_type_id',
                     'custrecord_code_id'
                 ].map(c => new nlobjSearchColumn(c)),
                 filters = [
-                    ['custrecord_type_id', null, 'is', 237]
+                    ['custrecord_type_id', null, 'anyof', 237]
                 ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
 
             var codes = nlapiSearchRecord(recType, null, filters, columns);
@@ -76,13 +77,13 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field (using array filter)', function(done) {
+        it('search one field (using array filter)', done => {
             let columns = [
                     'custrecord_type_id',
                     'custrecord_code_id'
                 ].map(c => new nlobjSearchColumn(c)),
                 filters = [
-                    ['custrecord_type_id', null, 'is', 237]
+                    ['custrecord_type_id', null, 'anyof', 237]
                 ];
 
             var codes = nlapiSearchRecord(recType, null, filters, columns);
@@ -90,7 +91,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field + join', function(done) {
+        it('search one field + join', done => {
             let columns = [
                     'custrecord_type_id',
                     'custrecord_code_id'
@@ -104,12 +105,13 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field + join and column join (raw params)', function(done) {
+        it('search one field + join and column join (raw params)', done => {
             let columns = [
                     ['custrecord_id_title_id', 'custrecord_type_id'],
                     ['custrecord_code_id']
                 ].map(c => new nlobjSearchColumn(c[0], c[1])),
                 filters = [
+                    ['internalid', 'custrecord_type_id', 'is', '266'],
                     ['custrecord_id_title_id', 'custrecord_type_id', 'is', 'japo 266']
                 ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
 
@@ -124,7 +126,7 @@ describe('<Unit Test - Netsuite Search API>', function () {
             return done();
         });
 
-        it('search one field + join and column join (using nlobjSearchColumn)', function(done) {
+        it('search one field + join and column join (using nlobjSearchColumn)', done => {
             let columns = [
                     ['custrecord_id_title_id', 'custrecord_type_id'],
                     ['custrecord_code_id']
@@ -143,8 +145,53 @@ describe('<Unit Test - Netsuite Search API>', function () {
 
             return done();
         });
+
+        it('search formula text', done => {
+            let columns = [
+                    ['custrecord_id_title_id', 'custrecord_type_id'],
+                    ['custrecord_code_id'],
+                    ['formulatext']
+                ].map(c => new nlobjSearchColumn(c[0], c[1])),
+                filters = [
+                    ['custrecord_id_title_id', 'custrecord_type_id', 'is', 'japo 266']
+                ].map(f => new nlobjSearchFilter(f[0], f[1], f[2], f[3]));
+
+            columns[2].setFormula('{custrecord_code_id}||" - "||case {custrecord_type_id.custrecord_id_title_id} when "japo 266" then "legal" else "humm" end');
+
+            let codes = nlapiSearchRecord(recType, null, filters, columns);
+            should(codes).have.length(15);
+            let code = codes[0];
+            should(code).have.property('id', 11);
+            should(code).have.property('type', 'customrecord_codeg');
+            let code_id = code.getValue(columns[0]);
+            should(code_id).have.equal('japo 266');
+            let formula = code.getValue(columns[2]);
+            should(formula).have.equal('12 - legal');
+
+            return done();
+        });
+
+        it('search missing "type"', done => {
+            try {
+                nlapiSearchRecord();
+                return done('missing type');
+            } catch (e) {
+                should(e).have.property('code', 'SSS_TYPE_ARG_REQD');
+                return done();
+            }
+        });
+
+        it('search ivalid "id"', done => {
+            try {
+                nlapiSearchRecord(recType, 'opa');
+                return done('invalid id');
+            } catch (e) {
+                should(e).have.property('code', 'SSS_INVALID_INTERNAL_ID');
+                return done();
+            }
+        });
     });
-    after(function (done) {
+    after(done => {
         nsmockup.destroy(done);
     });
 });

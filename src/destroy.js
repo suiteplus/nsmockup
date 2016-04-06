@@ -24,7 +24,7 @@ module.exports = (cb) => {
         // ##############################
         try {
             db.object = {}; // reset db object
-            db.saveSync(); // save reset
+            db.write(); // save reset
         } catch (e) {
             console.error(e);
         }
