@@ -5,7 +5,7 @@ var server = require('./server'),
     path = require('path'),
     glob = require('glob'),
     _ = require('lodash'),
-    uuid = require('node-uuid');
+    uuid = require('uuid');
 
 /**
  * Alternative a cache created by 'require(path)'.

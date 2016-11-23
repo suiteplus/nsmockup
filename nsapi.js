@@ -2,7 +2,7 @@
 var vmSim = require('./src/vm-sim');
 
 // load node-uuid before create window property in global
-require('node-uuid');
+require('uuid');
 
 var moment = require('moment');
 moment.createFromInputFallback = function(config) {
